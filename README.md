@@ -1,4 +1,4 @@
-# Distro
+# Distro [![Build Status](https://travis-ci.org/cloudposse/distro.svg?branch=master)](https://travis-ci.org/cloudposse/distro)
 
 Cloud Posse distribution of native apps
 
