@@ -2,6 +2,7 @@ ARCH ?= amd64
 OS ?= $(shell uname -s | tr '[:upper:]' '[:lower:'])
 INSTALL_PATH ?= /usr/local/bin
 CURL ?= curl --fail -sSL
+TMP ?= /tmp
 
 # Macro to download a github binary release
 # $(call github_download_binary_release,version,repo,asset)
@@ -28,3 +29,43 @@ export GOMPLATE_VERSION ?= 2.4.0
 ## Install gomplate
 gomplate:
 	$(call github_download_binary_release,hairyhenderson,v$(GOMPLATE_VERSION),$@_$(OS)-$(ARCH)-slim)
+
+export HELM_VERSION ?= 2.8.2
+## Install helm
+helm:
+	mkdir -p $(TMP)/$@
+	$(CURL) -o - http://storage.googleapis.com/kubernetes-helm/helm-v${HELM_VERSION}-$(OS)-$(ARCH).tar.gz | tar -C $(TMP)/$@ -zx $(OS)-$(ARCH)/helm
+	mv $(TMP)/$@/$(OS)-$(ARCH)/helm $(INSTALL_PATH)/$@
+	rm -rf $(TMP)/$@
+	chmod +x $(INSTALL_PATH)/helm
+
+export TERRAFORM_VERSION ?= 0.11.5
+## Install Terraform
+terraform:
+	mkdir -p $(TMP)/$@
+	$(CURL) -o $(TMP)/$@/terraform.zip https://releases.hashicorp.com/terraform/${TERRAFORM_VERSION}/terraform_${TERRAFORM_VERSION}_$(OS)_$(ARCH).zip
+	unzip -d $(TMP)/$@ $(TMP)/$@/terraform.zip
+	mv $(TMP)/$@/terraform $(INSTALL_PATH)/$@
+	chmod +x $(INSTALL_PATH)/$@
+
+## Install kubectl
+export KUBECTL_VERSION ?= 1.8.7
+kubectl:
+	$(CURL) -o $(INSTALL_PATH)/$@ https://storage.googleapis.com/kubernetes-release/release/v${KUBECTL_VERSION}/bin/$(OS)/$(ARCH)/kubectl
+	chmod +x $(INSTALL_PATH)/$@
+
+.PHONY : help
+help:
+	@printf "Available targets:\n\n"
+	@awk '/^[a-zA-Z\-\_0-9%:\\\/]+:/ { \
+	  helpMessage = match(lastLine, /^## (.*)/); \
+	  if (helpMessage) { \
+	    helpCommand = $$1; \
+	    helpMessage = substr(lastLine, RSTART + 3, RLENGTH); \
+      gsub("\\\\", "", helpCommand); \
+      gsub(":+$$", "", helpCommand); \
+	    printf "  \x1b[32;01m%-35s\x1b[0m %s\n", helpCommand, helpMessage; \
+	  } \
+	} \
+	{ lastLine = $$0 }' $(MAKEFILE_LIST) | sort -u
+	@printf "\n"
