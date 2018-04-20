@@ -1,0 +1,17 @@
+#
+# CI/CD configuration for https://travis-ci.org/cloudposse/distro/
+#
+sudo: required
+addons:
+  apt:
+    packages:
+    - git
+    - make
+    - curl
+env:
+  - INSTALL_PATH=/tmp
+install:
+- make -C install all
+
+script:
+- true
