@@ -63,7 +63,7 @@ In general, PRs are welcome. We follow the typical "fork-and-pull" Git workflow.
 
 ## License
 
-[APACHE 2.0](LICENSE) © 2017-2018 [Cloud Posse, LLC](https://cloudposse.com)
+[APACHE 2.0](LICENSE) © 2018 [Cloud Posse, LLC](https://cloudposse.com)
 
 See [LICENSE](LICENSE) for full details.
 
@@ -78,3 +78,38 @@ See [LICENSE](LICENSE) for full details.
       http://www.apache.org/licenses/LICENSE-2.0
 
     Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+    KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+
+
+## About
+
+`distro` is maintained and funded by [Cloud Posse, LLC][website].
+
+![Cloud Posse](https://cloudposse.com/logo-300x69.png)
+
+
+Like it? Please let us know at <hello@cloudposse.com>
+
+We love [Open Source Software](https://github.com/cloudposse/)!
+
+See [our other projects][community]
+or [hire us][hire] to help build your next cloud-platform.
+
+  [website]: http://cloudposse.com/
+  [community]: https://github.com/cloudposse/
+  [hire]: http://cloudposse.com/contact/
+
+### Contributors
+
+
+| [![Erik Osterman][erik_img]][erik_web]<br/>[Erik Osterman][erik_web] | [![Andriy Knysh][andriy_img]][andriy_web]<br/>[Andriy Knysh][andriy_web] |
+|-------------------------------------------------------|------------------------------------------------------------------|
+
+  [erik_img]: http://s.gravatar.com/avatar/88c480d4f73b813904e00a5695a454cb?s=144
+  [erik_web]: https://github.com/osterman/
+  [andriy_img]: https://avatars0.githubusercontent.com/u/7356997?v=4&u=ed9ce1c9151d552d985bdf5546772e14ef7ab617&s=144
+  [andriy_web]: https://github.com/aknysh/
