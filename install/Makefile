@@ -62,7 +62,7 @@ helmfile:
 export KOPS_VERSION ?= 1.8.0
 ## Install kops
 kops:
-	$(call github_download_binary_release,kubernetes,v$(KOPS_VERSION),$@-$(OS)-$(ARCH))
+	$(call github_download_binary_release,kubernetes,$(KOPS_VERSION),$@-$(OS)-$(ARCH))
 
 ## Install kubectl
 export KUBECTL_VERSION ?= 1.8.7
