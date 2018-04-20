@@ -18,4 +18,3 @@ Install to a specific folder:
 ```
 make -C install aws-vault INSTALL_PATH=/usr/bin
 ```
-
