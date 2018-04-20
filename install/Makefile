@@ -57,7 +57,7 @@ helm:
 export HELMFILE_VERSION ?= 0.11
 ## Install helmfile
 helmfile:
-	$(call github_download_binary_release,roboll,v$(HELMFILE_VERSION),$@_$(OS)-$(ARCH))
+	$(call github_download_binary_release,roboll,v$(HELMFILE_VERSION),$@_$(OS)_$(ARCH))
 
 export KOPS_VERSION ?= 1.8.0
 ## Install kops
