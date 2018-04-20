@@ -8,7 +8,7 @@ TMP ?= /tmp
 # $(call github_download_binary_release,version,repo,asset)
 github_download_binary_release = $(CURL) -o $(INSTALL_PATH)/$@ https://github.com/$(1)/$@/releases/download/$(2)/$(3) && chmod +x $(INSTALL_PATH)/$@
 
-all: aws-vault chamber github-commenter gomplate
+all: aws-vault chamber github-commenter gomplate helm kubectl terraform
 
 export AWS_VAULT_VERSION ?= 4.2.0
 ## Install aws-vault to easily assume roles (not related to HashiCorp Vault)
@@ -39,6 +39,12 @@ helm:
 	rm -rf $(TMP)/$@
 	chmod +x $(INSTALL_PATH)/helm
 
+## Install kubectl
+export KUBECTL_VERSION ?= 1.8.7
+kubectl:
+	$(CURL) -o $(INSTALL_PATH)/$@ https://storage.googleapis.com/kubernetes-release/release/v${KUBECTL_VERSION}/bin/$(OS)/$(ARCH)/kubectl
+	chmod +x $(INSTALL_PATH)/$@
+
 export TERRAFORM_VERSION ?= 0.11.5
 ## Install Terraform
 terraform:
@@ -46,12 +52,6 @@ terraform:
 	$(CURL) -o $(TMP)/$@/terraform.zip https://releases.hashicorp.com/terraform/${TERRAFORM_VERSION}/terraform_${TERRAFORM_VERSION}_$(OS)_$(ARCH).zip
 	unzip -d $(TMP)/$@ $(TMP)/$@/terraform.zip
 	mv $(TMP)/$@/terraform $(INSTALL_PATH)/$@
-	chmod +x $(INSTALL_PATH)/$@
-
-## Install kubectl
-export KUBECTL_VERSION ?= 1.8.7
-kubectl:
-	$(CURL) -o $(INSTALL_PATH)/$@ https://storage.googleapis.com/kubernetes-release/release/v${KUBECTL_VERSION}/bin/$(OS)/$(ARCH)/kubectl
 	chmod +x $(INSTALL_PATH)/$@
 
 .PHONY : help

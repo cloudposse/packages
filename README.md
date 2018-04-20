@@ -4,6 +4,11 @@ Cloud Posse distribution of native apps
 
 ## Usage
 
+See all available packages:
+```
+make -C install help
+```
+
 Install everything...
 ```
 make -C install all
