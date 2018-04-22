@@ -38,6 +38,33 @@ Uninstall to a specific package
 make -C uninstall yq
 ```
 
+## Makefile Inclusion
+
+Here's a stub you can include into a `Makefile` to make it easier to install binary dependencies/
+
+```
+export DISTRO_VERSION ?= master
+export DISTRO_PATH ?= distro/
+export INSTALL_PATH ?= $(DISTRO_PATH)/vendor
+
+## Install distro
+distro/install:
+        @if [ ! -d $(DISTRO_PATH) ]; then \
+          echo "Installing distro $(DISTRO_VERSION)..."; \
+          rm -rf $(DISTRO_PATH); \
+          git clone --depth=1 -b $(DISTRO_VERSION) git@github.com:cloudposse/distro.git $(DISTRO_PATH); \
+          rm -rf $(DISTRO_PATH)/.git; \
+        fi
+
+## Install package (e.g. helm, helmfile, kubectl)
+distro/install/%: distro/install
+        @make -C $(DISTRO_PATH)/install $(subst distro/install/,,$@)
+
+## Uninstall package (e.g. helm, helmfile, kubectl)
+distro/uninstall/%:
+        @make -C $(DISTRO_PATH)/uninstall $(subst distro/uninstall/,,$@)
+```
+
 
 ## Help
 
