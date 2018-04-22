@@ -40,7 +40,10 @@ make -C uninstall yq
 
 ## Makefile Inclusion
 
-Here's a stub you can include into a `Makefile` to make it easier to install binary dependencies/
+Sometimes it's necessary to install some binary dependencies when building projects. For example, we frequently 
+rely on `gomplate` or `helm` to build chart packages.
+
+Here's a stub you can include into a `Makefile` to make it easier to install binary dependencies.
 
 ```
 export DISTRO_VERSION ?= master
