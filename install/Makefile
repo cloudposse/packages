@@ -18,7 +18,8 @@ all: aws-vault \
 	 kops \
 	 kubectl \
 	 sops \
-	 terraform
+	 terraform \
+	 yq
 
 export AWS_VAULT_VERSION ?= 4.2.0
 ## Install aws-vault to easily assume roles (not related to HashiCorp Vault)
@@ -84,6 +85,10 @@ export SOPS_VERSION ?= 3.0.3
 sops:
 	$(call github_download_binary_release,mozilla,$(SOPS_VERSION),$@-$(SOPS_VERSION).$(OS))
 
+export YQ_VERSION ?= 1.14.1
+## Install YQ to manipulte YAML
+yq:
+	$(call github_download_binary_release,mikefarah,$(YQ_VERSION),$@_$(OS)_$(ARCH))
 
 .PHONY : help
 help:
