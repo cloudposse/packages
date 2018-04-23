@@ -55,7 +55,7 @@ helm:
 	rm -rf $(TMP)/$@
 	chmod +x $(INSTALL_PATH)/helm
 
-export HELMFILE_VERSION ?= 0.11
+export HELMFILE_VERSION ?= 0.12.0
 ## Install helmfile
 helmfile:
 	$(call github_download_binary_release,roboll,v$(HELMFILE_VERSION),$@_$(OS)_$(ARCH))
