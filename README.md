@@ -1,4 +1,4 @@
-# Distro [![Build Status](https://travis-ci.org/cloudposse/distro.svg?branch=master)](https://travis-ci.org/cloudposse/distro)
+# Packages [![Build Status](https://travis-ci.org/cloudposse/packages.svg?branch=master)](https://travis-ci.org/cloudposse/packages)
 
 Cloud Posse distribution of native apps.
 
@@ -28,9 +28,9 @@ make -C install aws-vault INSTALL_PATH=/usr/bin
 
 Add this to a `Dockerfile` to easily install packages:
 ```
-RUN git clone --depth=1 -b master https://github.com/cloudposse/distro.git /distro && \
-    rm -rf /distro/.git && \
-    make -C /distro/install kubectl
+RUN git clone --depth=1 -b master https://github.com/cloudposse/packages.git /packages && \
+    rm -rf /packages/.git && \
+    make -C /packages/install kubectl
 ```
 
 Uninstall a specific package
@@ -46,26 +46,26 @@ rely on `gomplate` or `helm` to build chart packages.
 Here's a stub you can include into a `Makefile` to make it easier to install binary dependencies.
 
 ```
-export DISTRO_VERSION ?= master
-export DISTRO_PATH ?= distro/
-export INSTALL_PATH ?= $(DISTRO_PATH)/vendor
+export PACKAGES_VERSION ?= master
+export PACKAGES_PATH ?= packages/
+export INSTALL_PATH ?= $(PACKAGES_PATH)/vendor
 
-## Install distro
-distro/install:
-        @if [ ! -d $(DISTRO_PATH) ]; then \
-          echo "Installing distro $(DISTRO_VERSION)..."; \
-          rm -rf $(DISTRO_PATH); \
-          git clone --depth=1 -b $(DISTRO_VERSION) https://github.com/cloudposse/distro.git $(DISTRO_PATH); \
-          rm -rf $(DISTRO_PATH)/.git; \
+## Install packages
+packages/install:
+        @if [ ! -d $(PACKAGES_PATH) ]; then \
+          echo "Installing packages $(PACKAGES_VERSION)..."; \
+          rm -rf $(PACKAGES_PATH); \
+          git clone --depth=1 -b $(PACKAGES_VERSION) https://github.com/cloudposse/packages.git $(PACKAGES_PATH); \
+          rm -rf $(PACKAGES_PATH)/.git; \
         fi
 
 ## Install package (e.g. helm, helmfile, kubectl)
-distro/install/%: distro/install
-        @make -C $(DISTRO_PATH)/install $(subst distro/install/,,$@)
+packages/install/%: packages/install
+        @make -C $(PACKAGES_PATH)/install $(subst packages/install/,,$@)
 
 ## Uninstall package (e.g. helm, helmfile, kubectl)
-distro/uninstall/%:
-        @make -C $(DISTRO_PATH)/uninstall $(subst distro/uninstall/,,$@)
+packages/uninstall/%:
+        @make -C $(PACKAGES_PATH)/uninstall $(subst packages/uninstall/,,$@)
 ```
 
 
@@ -73,18 +73,18 @@ distro/uninstall/%:
 
 **Got a question?**
 
-File a GitHub [issue](https://github.com/cloudposse/distro/issues), send us an [email](mailto:hello@cloudposse.com) or reach out to us on [Gitter](https://gitter.im/cloudposse/).
+File a GitHub [issue](https://github.com/cloudposse/packages/issues), send us an [email](mailto:hello@cloudposse.com) or reach out to us on [Gitter](https://gitter.im/cloudposse/).
 
 
 ## Contributing
 
 ### Bug Reports & Feature Requests
 
-Please use the [issue tracker](https://github.com/cloudposse/distro/issues) to report any bugs or file feature requests.
+Please use the [issue tracker](https://github.com/cloudposse/packages/issues) to report any bugs or file feature requests.
 
 ### Developing
 
-If you are interested in being a contributor and want to get involved in developing `distro`, we would love to hear from you! Shoot us an [email](mailto:hello@cloudposse.com).
+If you are interested in being a contributor and want to get involved in developing `packages`, we would love to hear from you! Shoot us an [email](mailto:hello@cloudposse.com).
 
 In general, PRs are welcome. We follow the typical "fork-and-pull" Git workflow.
 
@@ -123,7 +123,7 @@ See [LICENSE](LICENSE) for full details.
 
 ## About
 
-`distro` is maintained and funded by [Cloud Posse, LLC][website].
+`packages` is maintained and funded by [Cloud Posse, LLC][website].
 
 ![Cloud Posse](https://cloudposse.com/logo-300x69.png)
 
