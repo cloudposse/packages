@@ -1,5 +1,5 @@
 #
-# CI/CD configuration for https://travis-ci.org/cloudposse/distro/
+# CI/CD configuration for https://travis-ci.org/cloudposse/packages/
 #
 sudo: required
 addons:
