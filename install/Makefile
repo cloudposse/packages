@@ -10,6 +10,7 @@ github_download_binary_release = $(CURL) -o $(INSTALL_PATH)/$@ https://github.co
 
 all: aws-vault \
 	 chamber \
+	 fetch \
 	 github-commenter \
 	 gomplate \
 	 goofys \
@@ -30,6 +31,11 @@ export CHAMBER_VERSION ?= 2.0.0
 ## Install Chamber to manage secrets with SSM+KMS
 chamber:
 	$(call github_download_binary_release,segmentio,v$(CHAMBER_VERSION),$@-v$(CHAMBER_VERSION)-$(OS)-$(ARCH))
+
+export FETCH_VERSION ?= 0.2.0
+## Install fetch to easily download files, folders, and release assets from a specific git commit, branch, or tag
+fetch:
+	$(call github_download_binary_release,gruntwork-io,v$(FETCH_VERSION),$@_$(OS)_$(ARCH))
 
 export GITHUB_COMMENTER_VERSION ?= 0.1.0
 ## Install github-commenter
