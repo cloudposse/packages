@@ -33,7 +33,7 @@ RUN git clone --depth=1 -b master https://github.com/cloudposse/distro.git /dist
     make -C /distro/install kubectl
 ```
 
-Uninstall to a specific package
+Uninstall a specific package
 ```
 make -C uninstall yq
 ```

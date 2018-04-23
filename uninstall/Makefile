@@ -1,6 +1,6 @@
 INSTALL_PATH ?= /usr/local/bin
 
-## Uninstall package
+## Uninstall a specific package
 %:
 	@if [ -f $(INSTALL_PATH)/$@ ]; then \
 	  rm -f $(INSTALL_PATH)/$@; \
