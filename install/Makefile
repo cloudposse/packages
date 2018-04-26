@@ -22,6 +22,7 @@ all: aws-vault \
 	 kubens \
 	 sops \
 	 terraform \
+	 terragrunt \
 	 yq
 
 export AWS_VAULT_VERSION ?= 4.2.0
@@ -53,6 +54,7 @@ export GOOFYS_VERSION ?= 0.19.0
 ## Install goofys
 goofys:
 	$(call github_download_binary_release,kahing,v$(GOOFYS_VERSION),$@)
+
 
 export HELM_VERSION ?= 2.8.2
 ## Install helm
@@ -92,6 +94,11 @@ kubens:
 	$(CURL) -o $(INSTALL_PATH)/$@ https://raw.githubusercontent.com/ahmetb/kubectx/v$(KUBECTX_VERSION)/$@
 	chmod +x $(INSTALL_PATH)/$@
 
+export SOPS_VERSION ?= 3.0.3
+## Install sops (required by `helm-secrets`)
+sops:
+	$(call github_download_binary_release,mozilla,$(SOPS_VERSION),$@-$(SOPS_VERSION).$(OS))
+
 
 export TERRAFORM_VERSION ?= 0.11.5
 ## Install Terraform
@@ -102,10 +109,10 @@ terraform:
 	mv $(TMP)/$@/terraform $(INSTALL_PATH)/$@
 	chmod +x $(INSTALL_PATH)/$@
 
-export SOPS_VERSION ?= 3.0.3
-## Install sops (required by `helm-secrets`)
-sops:
-	$(call github_download_binary_release,mozilla,$(SOPS_VERSION),$@-$(SOPS_VERSION).$(OS))
+export TERRAGRUNT_VERSION ?= 0.14.7
+## Install terragrunt for tools that make it easier to work with multiple Terraform modules
+terragrunt:
+	$(call github_download_binary_release,gruntwork-io,v$(TERRAGRUNT_VERSION),$@_$(OS)_$(ARCH))
 
 export YQ_VERSION ?= 1.14.1
 ## Install YQ to manipulte YAML
