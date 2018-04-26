@@ -4,6 +4,28 @@ Cloud Posse distribution of native apps.
 
 Use this repo to easily install binary releases of popular apps. This is useful for inclusion into a `Dockerfile` to install dependencies.
 
+## Manifest
+
+```
+Available targets:
+
+  aws-vault                           Install aws-vault to easily assume roles (not related to HashiCorp Vault)
+  chamber                             Install Chamber to manage secrets with SSM+KMS
+  fetch                               Install fetch to easily download files, folders, and release assets from a specific git commit, branch, or tag
+  github-commenter                    Install github-commenter
+  gomplate                            Install gomplate
+  goofys                              Install goofys
+  helm                                Install helm
+  helmfile                            Install helmfile
+  kops                                Install kops
+  kubectl                             Install kubectl
+  kubectx                             Install kubectx
+  kubens                              Install kubens
+  sops                                Install sops (required by `helm-secrets`)
+  terraform                           Install Terraform
+  yq                                  Install YQ to manipulte YAML
+```
+
 ## Usage
 
 See all available packages:
