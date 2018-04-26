@@ -18,6 +18,8 @@ all: aws-vault \
 	 helmfile \
 	 kops \
 	 kubectl \
+	 kubectx \
+	 kubens \
 	 sops \
 	 terraform \
 	 yq
@@ -71,11 +73,24 @@ export KOPS_VERSION ?= 1.8.0
 kops:
 	$(call github_download_binary_release,kubernetes,$(KOPS_VERSION),$@-$(OS)-$(ARCH))
 
-## Install kubectl
 export KUBECTL_VERSION ?= 1.8.7
+## Install kubectl
 kubectl:
 	$(CURL) -o $(INSTALL_PATH)/$@ https://storage.googleapis.com/kubernetes-release/release/v${KUBECTL_VERSION}/bin/$(OS)/$(ARCH)/kubectl
 	chmod +x $(INSTALL_PATH)/$@
+
+export KUBECTX_VERSION ?= 0.5.0
+## Install kubectx
+kubectx:
+	$(CURL) -o $(INSTALL_PATH)/$@ https://raw.githubusercontent.com/ahmetb/$@/v$(KUBECTX_VERSION)/$@
+	chmod +x $(INSTALL_PATH)/$@
+
+export KUBENS_VERSION ?= 0.5.0
+## Install kubens
+kubens:
+	$(CURL) -o $(INSTALL_PATH)/$@ https://raw.githubusercontent.com/ahmetb/kubectx/v$(KUBECTX_VERSION)/$@
+	chmod +x $(INSTALL_PATH)/$@
+
 
 export TERRAFORM_VERSION ?= 0.11.5
 ## Install Terraform
