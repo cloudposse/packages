@@ -63,10 +63,11 @@ helm:
 	rm -rf $(TMP)/$@
 	chmod +x $(INSTALL_PATH)/helm
 
-export HELMFILE_VERSION ?= 0.12.0
+export HELMFILE_VENDOR ?= cloudposse
+export HELMFILE_VERSION ?= 0.13.0-cloudposse
 ## Install helmfile
 helmfile:
-	$(call github_download_binary_release,roboll,v$(HELMFILE_VERSION),$@_$(OS)_$(ARCH))
+	$(call github_download_binary_release,$(HELMFILE_VENDOR),v$(HELMFILE_VERSION),$@_$(OS)_$(ARCH))
 
 export KOPS_VERSION ?= 1.8.0
 ## Install kops
