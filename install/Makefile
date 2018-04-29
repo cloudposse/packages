@@ -71,6 +71,21 @@ export HELMFILE_VERSION ?= 0.13.0
 helmfile:
 	$(call github_download_binary_release,$(HELMFILE_VENDOR),v$(HELMFILE_VERSION),$@_$(OS)_$(ARCH))
 
+## Install hugo framework for building static websites (darwin)
+hugo-darwin:
+	$(CURL) -o - https://github.com/gohugoio/hugo/releases/download/v$(HUGO_VERSION)/hugo_$(HUGO_VERSION)_macOS-64bit.tar.gz | tar -zxO  hugo > $(INSTALL_PATH)/hugo
+	chmod +x $(INSTALL_PATH)/hugo
+
+## Install hugo framework for building static websites (linux)
+hugo-linux:
+	$(CURL) -o - https://github.com/gohugoio/hugo/releases/download/v$(HUGO_VERSION)/hugo_$(HUGO_VERSION)_Linux-64bit.tar.gz | tar -zxO  hugo > $(INSTALL_PATH)/hugo
+	chmod +x $(INSTALL_PATH)/hugo
+
+export HUGO_VERSION ?= 0.40.1
+## Install hugo framework for building static websites.
+hugo: hugo-$(OS)
+	@exit 0
+
 export KOPS_VERSION ?= 1.8.0
 ## Install kops
 kops:
