@@ -16,6 +16,7 @@ all: aws-vault \
 	 goofys \
 	 helm \
 	 helmfile \
+	 htmltest \
 	 kops \
 	 kubectl \
 	 kubectx \
@@ -70,6 +71,22 @@ export HELMFILE_VERSION ?= 0.13.0
 ## Install helmfile to easily deploy collections of helm charts
 helmfile:
 	$(call github_download_binary_release,$(HELMFILE_VENDOR),v$(HELMFILE_VERSION),$@_$(OS)_$(ARCH))
+
+export HTMLTEST_VERSION ?= 0.9.1
+## Install htmltest (darwin)
+htmltest-darwin:
+	mkdir -p $(TMP)/$@
+	$(CURL) -o - https://github.com/wjdp/htmltest/releases/download/v$(HTMLTEST_VERSION)/htmltest_$(HTMLTEST_VERSION)_osx_$(ARCH).tar.gz | tar -C $(INSTALL_PATH) -zx htmltest
+	chmod +x $(INSTALL_PATH)/htmltest
+
+## Install htmltest (linux)
+htmltest-linux:
+	$(CURL) -o - https://github.com/wjdp/htmltest/releases/download/v$(HTMLTEST_VERSION)/htmltest_$(HTMLTEST_VERSION)_$(OS)_$(ARCH).tar.gz | tar -C $(INSTALL_PATH) -zx htmltest 
+	chmod +x $(INSTALL_PATH)/htmltest
+
+## Install htmltest
+htmltest: htmltest-$(OS)
+	@exit 0
 
 ## Install hugo framework for building static websites (darwin)
 hugo-darwin:
