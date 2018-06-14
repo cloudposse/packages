@@ -46,7 +46,7 @@ export GITHUB_COMMENTER_VERSION ?= 0.1.0
 github-commenter:
 	$(call github_download_binary_release,cloudposse,$(GITHUB_COMMENTER_VERSION),$@_$(OS)_$(ARCH))
 
-export GOMPLATE_VERSION ?= 2.4.0
+export GOMPLATE_VERSION ?= 2.6.0
 ## Install gomplate
 gomplate:
 	$(call github_download_binary_release,hairyhenderson,v$(GOMPLATE_VERSION),$@_$(OS)-$(ARCH)-slim)
