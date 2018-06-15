@@ -48,7 +48,14 @@ Install to a specific folder:
 make -C install aws-vault INSTALL_PATH=/usr/bin
 ```
 
-Add this to a `Dockerfile` to easily install packages:
+Add this to a `Dockerfile` to install packages using a multi-stage build process:
+```
+FROM cloudposse/packages:latest AS packages
+
+COPY --from=packages /packages/bin/kubectl /usr/local/bin/
+```
+
+Or... add this to a `Dockerfile` to easily install packages on-demand:
 ```
 RUN git clone --depth=1 -b master https://github.com/cloudposse/packages.git /packages && \
     rm -rf /packages/.git && \
