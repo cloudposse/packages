@@ -143,7 +143,7 @@ terraform:
 	chmod +x $(INSTALL_PATH)/$@
 
 export TERRAFORM_DOCS_VERSION ?= 0.3.0
-## Install terragrunt for tools that make it easier to work with multiple Terraform modules
+## Install terraform-docs to generate docs from terraform modules
 terraform-docs:
 	$(call github_download_binary_release,segmentio,v$(TERRAFORM_DOCS_VERSION),$@_$(OS)_$(ARCH))
 
