@@ -1,0 +1,10 @@
+.git
+.gitignore
+.editorconfig
+**/.terraform
+*.tfstate
+*.tfstate.*
+.idea
+*.iml
+.build-harness
+build-harness
