@@ -2,7 +2,7 @@
 
 [![Cloud Posse](https://cloudposse.com/logo-300x69.png)](https://cloudposse.com)
 
-# Packages  [![TravisCI Build Status](https://travis-ci.org/cloudposse/packages.svg?branch=master)](https://travis-ci.org/cloudposse/packages) [![Codefresh Build Status](https://g.codefresh.io/api/badges/build?repoOwner=cloudposse&repoName=packages&branch=master&pipelineName=docs&accountName=cloudposse&type=cf-1)](https://g.codefresh.io/repositories/cloudposse/packages/builds?filter=trigger:build;branch:master;service:5af3ac6d081c8d00016aee46~docs) [![Latest Release](https://img.shields.io/github/release/cloudposse/packages.svg)](https://github.com/cloudposse/packages/releases) [![Slack Community](https://slack.cloudposse.com/badge.svg)](https://slack.cloudposse.com)
+# Packages  [![TravisCI Build Status](https://travis-ci.org/cloudposse/packages.svg?branch=master)](https://travis-ci.org/cloudposse/packages) [![Codefresh Build Status](https://g.codefresh.io/api/badges/build?repoOwner=cloudposse&repoName=packages&branch=master&pipelineName=packages&accountName=cloudposse&type=cf-1)](https://g.codefresh.io/repositories/cloudposse/packages/builds?filter=trigger:build;branch:master;service:5b234974667ab79287990636~packages) [![Latest Release](https://img.shields.io/github/release/cloudposse/packages.svg)](https://github.com/cloudposse/packages/releases) [![Slack Community](https://slack.cloudposse.com/badge.svg)](https://slack.cloudposse.com)
 
 
 Cloud Posse distribution of native apps.
