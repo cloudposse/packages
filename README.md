@@ -22,8 +22,6 @@ It's 100% Open Source and licensed under the [APACHE2](LICENSE).
 
 ## Usage
 
-## Usage
-
 See all available packages:
 ```
 make -C install help
@@ -44,12 +42,26 @@ Install to a specific folder:
 make -C install aws-vault INSTALL_PATH=/usr/bin
 ```
 
+Uninstall a specific package
+```
+make -C uninstall yq
+```
+
+
+
+
+## Examples
+
+### Docker Multi-stage Build
+
 Add this to a `Dockerfile` to install packages using a multi-stage build process:
 ```
 FROM cloudposse/packages:latest AS packages
 
 COPY --from=packages /packages/bin/kubectl /usr/local/bin/
 ```
+
+### Docker with Git Clone
 
 Or... add this to a `Dockerfile` to easily install packages on-demand:
 ```
@@ -58,12 +70,7 @@ RUN git clone --depth=1 -b master https://github.com/cloudposse/packages.git /pa
     make -C /packages/install kubectl
 ```
 
-Uninstall a specific package
-```
-make -C uninstall yq
-```
-
-## Makefile Inclusion
+### Makefile Inclusion
 
 Sometimes it's necessary to install some binary dependencies when building projects. For example, we frequently 
 rely on `gomplate` or `helm` to build chart packages.
@@ -92,9 +99,6 @@ packages/install/%: packages/install
 packages/uninstall/%:
         @make -C $(PACKAGES_PATH)/uninstall $(subst packages/uninstall/,,$@)
 ```
-
-
-
 
 
 
