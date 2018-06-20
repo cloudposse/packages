@@ -22,6 +22,7 @@ all: aws-vault \
 	 kubectx \
 	 kubens \
 	 sops \
+	 stern \
 	 terraform \
 	 terraform-docs \
 	 terragrunt \
@@ -132,6 +133,10 @@ export SOPS_VERSION ?= 3.0.3
 sops:
 	$(call github_download_binary_release,mozilla,$(SOPS_VERSION),$@-$(SOPS_VERSION).$(OS))
 
+export STERN_VERSION ?= 1.7.0
+## Install stern multi pod and container log tailing for Kubernetes
+stern:
+	$(call github_download_binary_release,wercker,$(STERN_VERSION),$@_$(OS)_$(ARCH))
 
 export TERRAFORM_VERSION ?= 0.11.5
 ## Install Terraform
