@@ -121,6 +121,7 @@ Available targets:
   kubectx                             Install kubectx
   kubens                              Install kubens
   sops                                Install sops (required by `helm-secrets`)
+  stern                               Install stern multi pod and container log tailing for Kubernetes
   terraform                           Install Terraform
   terraform-docs                      Install terraform-docs to generate docs from terraform modules
   terragrunt                          Install terragrunt for tools that make it easier to work with multiple Terraform modules
