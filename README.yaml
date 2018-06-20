@@ -1,0 +1,114 @@
+name: Packages 
+
+description: |-
+  Cloud Posse distribution of native apps.
+
+  Use this repo to easily install binary releases of popular apps. This is useful for inclusion into a `Dockerfile` to install dependencies.
+
+# License of this project
+license: "APACHE2"
+
+# Canonical GitHub repo 
+github_repo: cloudposse/packages
+
+# Badges to display
+badges:
+  - name: "Build Status"
+    image: "https://travis-ci.org/cloudposse/packages.svg?branch=master"
+    url: "https://travis-ci.org/cloudposse/packages"
+  - name: "Latest Release"
+    image: "https://img.shields.io/github/release/cloudposse/packages.svg"
+    url: "https://github.com/cloudposse/packages/releases"
+  - name: "Slack Community"
+    image: "https://slack.cloudposse.com/badge.svg"
+    url: "https://slack.cloudposse.com"
+
+related:
+  - name: "build-harness"
+    description: "Collection of Makefiles to facilitate building Golang projects, Dockerfiles, Helm charts, and more"
+    url: "https://github.com/cloudposse/build-harness"
+  - name: "geodesic"
+    description: "Geodesic is the fastest way to get up and running with a rock solid, production grade cloud platform built on strictly Open Source tools."
+    url: "https://github.com/cloudposse/geodesic"
+
+# Other files to include in this README from the project folder
+include:
+  - "docs/targets.md"
+
+usage: |-
+  See all available packages:
+  ```
+  make -C install help
+  ```
+
+  Install everything...
+  ```
+  make -C install all
+  ```
+
+  Install specific packages:
+  ```
+  make -C install aws-vault chamber
+  ```
+
+  Install to a specific folder:
+  ```
+  make -C install aws-vault INSTALL_PATH=/usr/bin
+  ```
+
+  Uninstall a specific package
+  ```
+  make -C uninstall yq
+  ```
+
+examples: |-
+  ### Docker Multi-stage Build
+
+  Add this to a `Dockerfile` to install packages using a multi-stage build process:
+  ```
+  FROM cloudposse/packages:latest AS packages
+
+  COPY --from=packages /packages/bin/kubectl /usr/local/bin/
+  ```
+
+  ### Docker with Git Clone
+  
+  Or... add this to a `Dockerfile` to easily install packages on-demand:
+  ```
+  RUN git clone --depth=1 -b master https://github.com/cloudposse/packages.git /packages && \
+      rm -rf /packages/.git && \
+      make -C /packages/install kubectl
+  ```
+
+  ### Makefile Inclusion
+
+  Sometimes it's necessary to install some binary dependencies when building projects. For example, we frequently 
+  rely on `gomplate` or `helm` to build chart packages.
+
+  Here's a stub you can include into a `Makefile` to make it easier to install binary dependencies.
+
+  ```
+  export PACKAGES_VERSION ?= master
+  export PACKAGES_PATH ?= packages/
+  export INSTALL_PATH ?= $(PACKAGES_PATH)/vendor
+
+  ## Install packages
+  packages/install:
+          @if [ ! -d $(PACKAGES_PATH) ]; then \
+            echo "Installing packages $(PACKAGES_VERSION)..."; \
+            rm -rf $(PACKAGES_PATH); \
+            git clone --depth=1 -b $(PACKAGES_VERSION) https://github.com/cloudposse/packages.git $(PACKAGES_PATH); \
+            rm -rf $(PACKAGES_PATH)/.git; \
+          fi
+
+  ## Install package (e.g. helm, helmfile, kubectl)
+  packages/install/%: packages/install
+          @make -C $(PACKAGES_PATH)/install $(subst packages/install/,,$@)
+
+  ## Uninstall package (e.g. helm, helmfile, kubectl)
+  packages/uninstall/%:
+          @make -C $(PACKAGES_PATH)/uninstall $(subst packages/uninstall/,,$@)
+  ```
+
+
+
