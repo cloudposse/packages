@@ -13,9 +13,12 @@ github_repo: cloudposse/packages
 
 # Badges to display
 badges:
-  - name: "Build Status"
+  - name: "TravisCI Build Status"
     image: "https://travis-ci.org/cloudposse/packages.svg?branch=master"
     url: "https://travis-ci.org/cloudposse/packages"
+  - name: "Codefresh Build Status"
+    image: "https://g.codefresh.io/api/badges/build?repoOwner=cloudposse&repoName=packages&branch=master&pipelineName=docs&accountName=cloudposse&type=cf-1"
+    url: "https://g.codefresh.io/repositories/cloudposse/packages/builds?filter=trigger:build;branch:master;service:5af3ac6d081c8d00016aee46~docs"
   - name: "Latest Release"
     image: "https://img.shields.io/github/release/cloudposse/packages.svg"
     url: "https://github.com/cloudposse/packages/releases"
