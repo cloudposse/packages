@@ -68,7 +68,7 @@ goofys:
 	$(call github_download_binary_release,kahing,v$(GOOFYS_VERSION),$@)
 
 
-export HELM_VERSION ?= 2.8.2
+export HELM_VERSION ?= 2.9.1
 ## Install helm
 helm:
 	mkdir -p $(TMP)/$@
