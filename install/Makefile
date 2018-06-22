@@ -6,7 +6,7 @@ TMP ?= /tmp
 
 # Macro to download a github binary release
 # $(call github_download_binary_release,version,repo,asset)
-github_download_binary_release = $(CURL) -o $(INSTALL_PATH)/$@ https://github.com/$(1)/$@/releases/download/$(2)/$(3) && chmod +x $(INSTALL_PATH)/$@
+github_download_binary_release = [ -f $(INSTALL_PATH)/$@ ] || $(CURL) -o $(INSTALL_PATH)/$@ https://github.com/$(1)/$@/releases/download/$(2)/$(3) && chmod +x $(INSTALL_PATH)/$@
 
 all: aws-vault \
 	 chamber \
