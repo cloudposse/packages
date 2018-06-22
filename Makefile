@@ -2,7 +2,7 @@ export DOCKER_ORG ?= cloudposse
 export DOCKER_IMAGE ?= $(DOCKER_ORG)/packages
 export DOCKER_TAG ?= latest
 export DOCKER_IMAGE_NAME ?= $(DOCKER_IMAGE):$(DOCKER_TAG)
-export DOCKER_BUILD_FLAGS = 
+export DOCKER_BUILD_FLAGS =  --no-cache
 
 export DEFAULT_HELP_TARGET := help/install
 export README_DEPS ?= docs/targets.md
