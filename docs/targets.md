@@ -6,6 +6,7 @@ Available targets:
   chamber                             Install Chamber to manage secrets with SSM+KMS
   fetch                               Install fetch to easily download files, folders, and release assets from a specific git commit, branch, or tag
   github-commenter                    Install github-commenter
+  github-release                      Install github-release to create and edit releases on Github (and upload artifacts)
   gomplate                            Install gomplate
   goofys                              Install goofys
   helm                                Install helm
