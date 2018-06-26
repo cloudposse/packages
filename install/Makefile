@@ -48,6 +48,15 @@ export GITHUB_COMMENTER_VERSION ?= 0.1.0
 github-commenter:
 	$(call github_download_binary_release,cloudposse,$(GITHUB_COMMENTER_VERSION),$@_$(OS)_$(ARCH))
 
+export GITHUB_RELEASE_VERSION ?= 0.7.2
+## Install github-release to create and edit releases on Github (and upload artifacts)
+github-release:
+	mkdir -p $(TMP)/$@
+	$(CURL) -o - https://github.com/aktau/$@/releases/download/v$(GITHUB_RELEASE_VERSION)/$(OS)-$(ARCH)-$@.tar.bz2 | tar -C $(TMP)/$@ -zx bin/$(OS)/$(ARCH)/$@
+	mv $(TMP)/$@/bin/$(OS)/$(ARCH)/$@ $(INSTALL_PATH)/$@
+	rm -rf $(TMP)/$@
+	chmod +x $(INSTALL_PATH)/$@
+
 export GOMPLATE_VERSION ?= 2.6.0
 ## Install gomplate
 gomplate:
@@ -59,7 +68,7 @@ goofys:
 	$(call github_download_binary_release,kahing,v$(GOOFYS_VERSION),$@)
 
 
-export HELM_VERSION ?= 2.8.2
+export HELM_VERSION ?= 2.9.1
 ## Install helm
 helm:
 	mkdir -p $(TMP)/$@
