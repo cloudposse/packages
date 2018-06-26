@@ -6,7 +6,7 @@ TMP ?= /tmp
 
 # Macro to download a github binary release
 # $(call github_download_binary_release,version,repo,asset)
-github_download_binary_release = $(CURL) -o $(INSTALL_PATH)/$@ https://github.com/$(1)/$@/releases/download/$(2)/$(3) && chmod +x $(INSTALL_PATH)/$@
+github_download_binary_release = [ -f $(INSTALL_PATH)/$@ ] || $(CURL) -o $(INSTALL_PATH)/$@ https://github.com/$(1)/$@/releases/download/$(2)/$(3) && chmod +x $(INSTALL_PATH)/$@
 
 all: awless \
 	 aws-vault \
@@ -88,7 +88,7 @@ helm:
 	chmod +x $(INSTALL_PATH)/helm
 
 export HELMFILE_VENDOR ?= roboll
-export HELMFILE_VERSION ?= 0.13.0
+export HELMFILE_VERSION ?= 0.19.0
 ## Install helmfile to easily deploy collections of helm charts
 helmfile:
 	$(call github_download_binary_release,$(HELMFILE_VENDOR),v$(HELMFILE_VERSION),$@_$(OS)_$(ARCH))
