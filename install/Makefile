@@ -9,6 +9,7 @@ TMP ?= /tmp
 github_download_binary_release = $(CURL) -o $(INSTALL_PATH)/$@ https://github.com/$(1)/$@/releases/download/$(2)/$(3) && chmod +x $(INSTALL_PATH)/$@
 
 all: aws-vault \
+	 cfssl \
 	 chamber \
 	 fetch \
 	 github-commenter \
@@ -17,6 +18,7 @@ all: aws-vault \
 	 helm \
 	 helmfile \
 	 htmltest \
+	 hugo \
 	 kops \
 	 kubectl \
 	 kubectx \
@@ -32,6 +34,12 @@ export AWS_VAULT_VERSION ?= 4.2.0
 ## Install aws-vault to easily assume roles (not related to HashiCorp Vault)
 aws-vault:
 	$(call github_download_binary_release,99designs,v$(AWS_VAULT_VERSION),$@-$(OS)-$(ARCH))
+
+export CFSSL_VERSION ?= 1.1
+## Install cfssl - Cloudflare's PKI and TLS toolkit 
+cfssl:
+	$(CURL) -o $(INSTALL_PATH)/$@ https://pkg.cfssl.org/R${CFSSL_VERSION}/$@_$(OS)-$(ARCH)
+	chmod +x $(INSTALL_PATH)/$@
 
 export CHAMBER_VERSION ?= 2.0.0
 ## Install Chamber to manage secrets with SSM+KMS
