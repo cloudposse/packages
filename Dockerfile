@@ -4,7 +4,7 @@
 
 # Build Helmfile
 FROM golang:1.10 as helmfile
-ARG HELMFILE_VERSION=master
+ARG HELMFILE_VERSION=af1914c57530eb0a33ea4710bf7e0659a6eb2469
 WORKDIR /go/src/github.com/roboll/helmfile 
 RUN git clone -b ${HELMFILE_VERSION} https://github.com/roboll/helmfile.git .
 RUN make static-linux
