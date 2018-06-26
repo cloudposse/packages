@@ -35,11 +35,10 @@ export AWS_VAULT_VERSION ?= 4.2.0
 aws-vault:
 	$(call github_download_binary_release,99designs,v$(AWS_VAULT_VERSION),$@-$(OS)-$(ARCH))
 
-export CFSSL_VERSION ?= 1.1
+export CFSSL_VERSION ?= 1.3.2
 ## Install cfssl - Cloudflare's PKI and TLS toolkit 
 cfssl:
-	$(CURL) -o $(INSTALL_PATH)/$@ https://pkg.cfssl.org/R${CFSSL_VERSION}/$@_$(OS)-$(ARCH)
-	chmod +x $(INSTALL_PATH)/$@
+	@echo "The '$@' package is only availble in cloudposse/packages docker image"
 
 export CHAMBER_VERSION ?= 2.0.0
 ## Install Chamber to manage secrets with SSM+KMS
