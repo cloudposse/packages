@@ -8,7 +8,8 @@ TMP ?= /tmp
 # $(call github_download_binary_release,version,repo,asset)
 github_download_binary_release = $(CURL) -o $(INSTALL_PATH)/$@ https://github.com/$(1)/$@/releases/download/$(2)/$(3) && chmod +x $(INSTALL_PATH)/$@
 
-all: aws-vault \
+all: awless \
+	 aws-vault \
 	 cfssl \
 	 chamber \
 	 fetch \
@@ -29,6 +30,15 @@ all: aws-vault \
 	 terraform-docs \
 	 terragrunt \
 	 yq
+
+export AWLESS_VERSION ?= 0.1.11
+## Install awless a powerful, innovative and small surface command line interface (CLI) to manage Amazon Web Services
+awless:
+	mkdir -p $(TMP)/$@
+	$(CURL) -o - https://github.com/wallix/$@/releases/download/v$(AWLESS_VERSION)/$@-$(OS)-$(ARCH).tar.gz | tar -C $(TMP)/$@ -zx $@
+	mv $(TMP)/$@/$@ $(INSTALL_PATH)/$@
+	rm -rf $(TMP)/$@
+	chmod +x $(INSTALL_PATH)/$@
 
 export AWS_VAULT_VERSION ?= 4.2.0
 ## Install aws-vault to easily assume roles (not related to HashiCorp Vault)
