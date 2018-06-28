@@ -7,12 +7,21 @@ export DOCKER_BUILD_FLAGS =
 export DEFAULT_HELP_TARGET := help/install
 export README_DEPS ?= docs/targets.md
 
+export DIST_CMD ?= cp -a
+export DIST_PATH ?= /dist
+export INSTALL_PATH ?= /packages/bin
+
 -include $(shell curl -sSL -o .build-harness "https://git.io/build-harness"; echo .build-harness)
 
 all: init deps build install run
 
 deps:
 	@exit 0
+
+## Create a distribution by coping $PACKAGES from $INSTALL_PATH to $DIST_PATH
+dist:
+	cd $(INSTALL_PATH)
+	$(DIST_CMD) $(PACKAGES) $(DIST_PATH)
 
 build:
 	@make --no-print-directory docker:build
