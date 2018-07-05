@@ -2,7 +2,9 @@
 ```
 Available targets:
 
+  awless                              Install awless a powerful, innovative and small surface command line interface (CLI) to manage Amazon Web Services
   aws-vault                           Install aws-vault to easily assume roles (not related to HashiCorp Vault)
+  cfssl                               Install cfssl - Cloudflare's PKI and TLS toolkit 
   chamber                             Install Chamber to manage secrets with SSM+KMS
   fetch                               Install fetch to easily download files, folders, and release assets from a specific git commit, branch, or tag
   github-commenter                    Install github-commenter
