@@ -21,7 +21,7 @@ badges:
     url: "https://g.codefresh.io/repositories/cloudposse/packages/builds?filter=trigger:build;branch:master;service:5b234974667ab79287990636~packages"
   - name: "Latest Release"
     image: "https://img.shields.io/github/release/cloudposse/packages.svg"
-    url: "https://github.com/cloudposse/packages/releases"
+    url: "https://github.com/cloudposse/packages/releases/latest"
   - name: "Slack Community"
     image: "https://slack.cloudposse.com/badge.svg"
     url: "https://slack.cloudposse.com"
