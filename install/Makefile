@@ -102,7 +102,7 @@ helm:
 	chmod +x $(INSTALL_PATH)/helm
 
 export HELMFILE_VENDOR ?= roboll
-export HELMFILE_VERSION ?= 0.20.0
+export HELMFILE_VERSION ?= 0.21.0
 # Releases: https://github.com/roboll/helmfile/releases
 ## Install helmfile to easily deploy collections of helm charts
 helmfile:
