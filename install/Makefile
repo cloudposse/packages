@@ -3,6 +3,13 @@ OS ?= $(shell uname -s | tr '[:upper:]' '[:lower:'])
 INSTALL_PATH ?= /usr/local/bin
 CURL ?= curl --fail -sSL
 TMP ?= /tmp
+EXTENSION=""
+
+ifeq ($(OS),darwin)
+  EXTENSION := .zip
+else ifeq ($(OS),linux)
+  EXTENSION := .tar.gz
+endif
 
 # Macro to download a github binary release
 # $(call github_download_binary_release,version,repo,asset)
@@ -203,6 +210,12 @@ export YQ_VERSION ?= 1.14.1
 ## Install YQ to manipulte YAML
 yq:
 	$(call github_download_binary_release,mikefarah,$(YQ_VERSION),$@_$(OS)_$(ARCH))
+
+export GHR_VERSION ?= 0.10.1
+# Releases: https://github.com/tcnksm/ghr/releases
+## Install ghr to easily upload multiple artifacts to GitHub Release
+ghr:
+	$(call github_download_binary_release,tcnksm,v$(GHR_VERSION),$@_v$(GHR_VERSION)_$(OS)_$(ARCH)$(EXTENSION))
 
 .PHONY : help
 help:
