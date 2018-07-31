@@ -65,7 +65,7 @@ export FETCH_VERSION ?= 0.2.0
 fetch:
 	$(call github_download_binary_release,gruntwork-io,v$(FETCH_VERSION),$@_$(OS)_$(ARCH))
 
-export GITHUB_COMMENTER_VERSION ?= 0.1.0
+export GITHUB_COMMENTER_VERSION ?= 0.1.2
 ## Install github-commenter
 github-commenter:
 	$(call github_download_binary_release,cloudposse,$(GITHUB_COMMENTER_VERSION),$@_$(OS)_$(ARCH))
@@ -135,13 +135,13 @@ hugo-linux:
 	$(CURL) -o - https://github.com/gohugoio/hugo/releases/download/v$(HUGO_VERSION)/hugo_$(HUGO_VERSION)_Linux-64bit.tar.gz | tar -zxO  hugo > $(INSTALL_PATH)/hugo
 	chmod +x $(INSTALL_PATH)/hugo
 
-export HUGO_VERSION ?= 0.40.2
+export HUGO_VERSION ?= 0.45.1
 # Releases: https://github.com/gohugoio/hugo/releases
 ## Install hugo framework for building static websites.
 hugo: hugo-$(OS)
 	@exit 0
 
-export KOPS_VERSION ?= 1.9.1
+export KOPS_VERSION ?= 1.9.2
 # Releases: https://github.com/kubernetes/kops/releases
 ## Install kops
 kops:
@@ -167,7 +167,7 @@ kubens:
 	$(CURL) -o $(INSTALL_PATH)/$@ https://raw.githubusercontent.com/ahmetb/kubectx/v$(KUBECTX_VERSION)/$@
 	chmod +x $(INSTALL_PATH)/$@
 
-export SOPS_VERSION ?= 3.0.3
+export SOPS_VERSION ?= 3.0.5
 ## Install sops (required by `helm-secrets`)
 sops:
 	$(call github_download_binary_release,mozilla,$(SOPS_VERSION),$@-$(SOPS_VERSION).$(OS))
@@ -193,13 +193,13 @@ export TERRAFORM_DOCS_VERSION ?= 0.3.0
 terraform-docs:
 	$(call github_download_binary_release,segmentio,v$(TERRAFORM_DOCS_VERSION),$@_$(OS)_$(ARCH))
 
-export TERRAGRUNT_VERSION ?= 0.14.11
+export TERRAGRUNT_VERSION ?= 0.16.3
 # Releases: https://github.com/gruntwork-io/terragrunt/releases
 ## Install terragrunt for tools that make it easier to work with multiple Terraform modules
 terragrunt:
 	$(call github_download_binary_release,gruntwork-io,v$(TERRAGRUNT_VERSION),$@_$(OS)_$(ARCH))
 
-export YQ_VERSION ?= 1.14.1
+export YQ_VERSION ?= 2.1.1
 ## Install YQ to manipulte YAML
 yq:
 	$(call github_download_binary_release,mikefarah,$(YQ_VERSION),$@_$(OS)_$(ARCH))
