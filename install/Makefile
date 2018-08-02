@@ -218,6 +218,9 @@ ghr-linux:
 	$(CURL) -o - https://github.com/tcnksm/ghr/releases/download/v$(GHR_VERSION)/ghr_v$(GHR_VERSION)_linux_$(ARCH).tar.gz | tar --wildcards -zxO */ghr > $(INSTALL_PATH)/ghr
 	chmod +x $(INSTALL_PATH)/ghr
 
+ghr: ghr-$(OS)
+	@exit 0
+
 .PHONY : help
 help:
 	@printf "Available targets:\n\n"
