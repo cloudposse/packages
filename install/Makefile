@@ -29,7 +29,8 @@ all: awless \
 	 terraform \
 	 terraform-docs \
 	 terragrunt \
-	 yq
+	 yq \
+	 shellcheck
 
 export AWLESS_VERSION ?= 0.1.11
 # Releases: https://github.com/wallix/awless/releases
@@ -140,6 +141,13 @@ export HUGO_VERSION ?= 0.45.1
 ## Install hugo framework for building static websites.
 hugo: hugo-$(OS)
 	@exit 0
+
+export SHELLCHECK_VERSION ?= 0.5.0
+# Releases: https://github.com/koalaman/shellcheck/releasess
+## ShellCheck, a static analysis tool for shell scripts 
+shellcheck: 
+	$(CURL) -o - https://storage.googleapis.com/shellcheck/shellcheck-v${SHELLCHECK_VERSION}.linux.x86_64.tar.xz | tar -xOJ   shellcheck-v${SHELLCHECK_VERSION}/shellcheck > $(INSTALL_PATH)/shellcheck
+	chmod +x $(INSTALL_PATH)/shellcheck
 
 export KOPS_VERSION ?= 1.9.2
 # Releases: https://github.com/kubernetes/kops/releases
