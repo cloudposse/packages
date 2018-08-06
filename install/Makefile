@@ -29,7 +29,8 @@ all: awless \
 	 terraform \
 	 terraform-docs \
 	 terragrunt \
-	 yq
+	 yq \
+	 figurine
 
 export AWLESS_VERSION ?= 0.1.11
 # Releases: https://github.com/wallix/awless/releases
