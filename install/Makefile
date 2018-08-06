@@ -29,7 +29,8 @@ all: awless \
 	 terraform \
 	 terraform-docs \
 	 terragrunt \
-	 yq
+	 yq \
+	 shfmt
 
 export AWLESS_VERSION ?= 0.1.11
 # Releases: https://github.com/wallix/awless/releases
@@ -140,6 +141,13 @@ export HUGO_VERSION ?= 0.45.1
 ## Install hugo framework for building static websites.
 hugo: hugo-$(OS)
 	@exit 0
+
+export SHFMT_VERSION ?= 2.5.1
+# Releases: https://github.com/mvdan/sh/releases
+## Install shfmt - shell parser, formatter and interpreter
+shfmt:
+	$(CURL) -o - https://github.com/mvdan/sh/releases/download/v$(SHFMT_VERSION)/shfmt_v$(SHFMT_VERSION)_${OS}_${ARCH} > $(INSTALL_PATH)/shfmt
+	chmod +x $(INSTALL_PATH)/shfmt 
 
 export KOPS_VERSION ?= 1.9.2
 # Releases: https://github.com/kubernetes/kops/releases
