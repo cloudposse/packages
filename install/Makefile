@@ -29,7 +29,8 @@ all: awless \
 	 terraform \
 	 terraform-docs \
 	 terragrunt \
-	 yq
+	 yq \
+	 lectl
 
 export AWLESS_VERSION ?= 0.1.11
 # Releases: https://github.com/wallix/awless/releases
@@ -140,6 +141,13 @@ export HUGO_VERSION ?= 0.45.1
 ## Install hugo framework for building static websites.
 hugo: hugo-$(OS)
 	@exit 0
+
+export LECTL_VERSION ?= 0.16
+# Releases: https://github.com/sahsanu/lectl/releases
+## Install lectl script to check issued certificates by Let's Encrypt on CTL
+lectl:
+	$(CURL) -o - https://github.com/sahsanu/lectl/archive/v$(LECTL_VERSION).tar.gz | tar -zxO  lectl-${LECTL_VERSION}/lectl > $(INSTALL_PATH)/lectl
+	chmod +x $(INSTALL_PATH)/lectl
 
 export KOPS_VERSION ?= 1.9.2
 # Releases: https://github.com/kubernetes/kops/releases
