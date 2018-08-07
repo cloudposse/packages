@@ -23,6 +23,7 @@ Available targets:
   kubectl                             Install kubectl
   kubectx                             Install kubectx
   kubens                              Install kubens
+  shfmt                               Install shfmt - shell parser, formatter and interpreter
   sops                                Install sops (required by `helm-secrets`)
   stern                               Install stern multi pod and container log tailing for Kubernetes
   terraform                           Install Terraform
