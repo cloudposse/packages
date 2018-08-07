@@ -204,6 +204,24 @@ export YQ_VERSION ?= 2.1.1
 yq:
 	$(call github_download_binary_release,mikefarah,$(YQ_VERSION),$@_$(OS)_$(ARCH))
 
+export GHR_VERSION ?= 0.10.1
+# Releases: https://github.com/tcnksm/ghr/releases
+## Install ghr to easily upload multiple artifacts to GitHub Release (Darwin)
+ghr-darwin:
+	$(CURL) -o - https://github.com/tcnksm/ghr/releases/download/v$(GHR_VERSION)/ghr_v$(GHR_VERSION)_darwin_$(ARCH).zip > $(INSTALL_PATH)/ghr.zip
+	unzip -p $(INSTALL_PATH)/ghr.zip */ghr > $(INSTALL_PATH)/ghr
+	rm $(INSTALL_PATH)/ghr.zip
+	chmod +x $(INSTALL_PATH)/ghr
+
+## Install ghr to easily upload multiple artifacts to GitHub Release (Linux)
+ghr-linux:
+	$(CURL) -o - https://github.com/tcnksm/ghr/releases/download/v$(GHR_VERSION)/ghr_v$(GHR_VERSION)_linux_$(ARCH).tar.gz | tar --wildcards -zxO */ghr > $(INSTALL_PATH)/ghr
+	chmod +x $(INSTALL_PATH)/ghr
+
+## Install ghr to easily upload multiple artifacts to GitHub Release
+ghr: ghr-$(OS)
+	@exit 0
+
 .PHONY : help
 help:
 	@printf "Available targets:\n\n"
