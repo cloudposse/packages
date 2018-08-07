@@ -23,6 +23,7 @@ Available targets:
   kubectl                             Install kubectl
   kubectx                             Install kubectx
   kubens                              Install kubens
+  shellcheck                          ShellCheck, a static analysis tool for shell scripts 
   sops                                Install sops (required by `helm-secrets`)
   stern                               Install stern multi pod and container log tailing for Kubernetes
   terraform                           Install Terraform
