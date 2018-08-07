@@ -118,6 +118,9 @@ Available targets:
   chamber                             Install Chamber to manage secrets with SSM+KMS
   fetch                               Install fetch to easily download files, folders, and release assets from a specific git commit, branch, or tag
   figurine                            Install figurine foir printing your name in style
+  ghr                                 Install ghr to easily upload multiple artifacts to GitHub Release
+  ghr-darwin                          Install ghr to easily upload multiple artifacts to GitHub Release (Darwin)
+  ghr-linux                           Install ghr to easily upload multiple artifacts to GitHub Release (Linux)
   github-commenter                    Install github-commenter
   github-release                      Install github-release to create and edit releases on Github (and upload artifacts)
   gomplate                            Install gomplate
