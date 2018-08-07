@@ -6,6 +6,7 @@ Available targets:
   aws-vault                           Install aws-vault to easily assume roles (not related to HashiCorp Vault)
   cfssl                               Install cfssl - Cloudflare's PKI and TLS toolkit 
   chamber                             Install Chamber to manage secrets with SSM+KMS
+  cloudflared                         Install cloudflared which offers an easy way to expose web servers securely to the internet(Argo Tunnel)
   fetch                               Install fetch to easily download files, folders, and release assets from a specific git commit, branch, or tag
   github-commenter                    Install github-commenter
   github-release                      Install github-release to create and edit releases on Github (and upload artifacts)

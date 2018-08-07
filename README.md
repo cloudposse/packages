@@ -21,6 +21,11 @@ It's 100% Open Source and licensed under the [APACHE2](LICENSE).
 
 
 
+
+
+
+
+
 ## Usage
 
 See all available packages:
@@ -111,6 +116,7 @@ Available targets:
   aws-vault                           Install aws-vault to easily assume roles (not related to HashiCorp Vault)
   cfssl                               Install cfssl - Cloudflare's PKI and TLS toolkit 
   chamber                             Install Chamber to manage secrets with SSM+KMS
+  cloudflared                         Install cloudflared which offers an easy way to expose web servers securely to the internet(Argo Tunnel)
   fetch                               Install fetch to easily download files, folders, and release assets from a specific git commit, branch, or tag
   github-commenter                    Install github-commenter
   github-release                      Install github-release to create and edit releases on Github (and upload artifacts)
@@ -154,11 +160,11 @@ Check out these related projects.
 
 File a GitHub [issue](https://github.com/cloudposse/packages/issues), send us an [email][email] or join our [Slack Community][slack].
 
-## Commerical Support
+## Commercial Support
 
 Work directly with our team of DevOps experts via email, slack, and video conferencing. 
 
-We provide *commercial support* for all of our [Open Source][github] projects. As a *Dedicated Support* customer, you have access to our team of subject matter experts at a fraction of the cost of a fulltime engineer. 
+We provide [*commercial support*][commercial_support] for all of our [Open Source][github] projects. As a *Dedicated Support* customer, you have access to our team of subject matter experts at a fraction of the cost of a full-time engineer. 
 
 [![E-Mail](https://img.shields.io/badge/email-hello@cloudposse.com-blue.svg)](mailto:hello@cloudposse.com)
 
@@ -168,7 +174,7 @@ We provide *commercial support* for all of our [Open Source][github] projects. A
 - **Bug Fixes.** We'll rapidly work to fix any bugs in our projects.
 - **Build New Terraform Modules.** We'll develop original modules to provision infrastructure.
 - **Cloud Architecture.** We'll assist with your cloud strategy and design.
-- **Implementation.** We'll provide hands on support to implement our reference architectures. 
+- **Implementation.** We'll provide hands-on support to implement our reference architectures. 
 
 
 ## Community Forum
@@ -226,6 +232,13 @@ See [LICENSE](LICENSE) for full details.
     under the License.
 
 
+
+
+
+
+
+
+
 ## Trademarks
 
 All other trademarks referenced herein are the property of their respective owners.
@@ -245,6 +258,7 @@ Check out [our other projects][github], [apply for a job][jobs], or [hire us][hi
   [docs]: https://docs.cloudposse.com/
   [website]: https://cloudposse.com/
   [github]: https://github.com/cloudposse/
+  [commercial_support]: https://github.com/orgs/cloudposse/projects
   [jobs]: https://cloudposse.com/jobs/
   [hire]: https://cloudposse.com/contact/
   [slack]: https://slack.cloudposse.com/
