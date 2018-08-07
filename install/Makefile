@@ -143,20 +143,11 @@ hugo: hugo-$(OS)
 	@exit 0
 
 export FIGURINE_VERSION ?= 0.2.2
-## Install figurine foir printing your name in style (darwin)
-figurine-darwin:
-	$(CURL) -o - https://github.com/arsham/figurine/releases/download/v$(FIGURINE_VERSION)/figurine_darwin_v$(FIGURINE_VERSION).tar.gz | tar -zxO  figurine > $(INSTALL_PATH)/figurine
-	chmod +x $(INSTALL_PATH)/figurine
-
-## Install figurine foir printing your name in style (linux)
-figurine-linux:
-	$(CURL) -o - https://github.com/arsham/figurine/releases/download/v$(FIGURINE_VERSION)/figurine_linux_v$(FIGURINE_VERSION).tar.gz | tar -zxO  figurine > $(INSTALL_PATH)/figurine
-	chmod +x $(INSTALL_PATH)/figurine
-
 # Releases: https://github.com/arsham/figurine/releases
 ## Install figurine foir printing your name in style
-figurine: figurine-$(OS)
-	@exit 0
+figurine: 
+	$(CURL) -o - https://github.com/arsham/figurine/releases/download/v$(FIGURINE_VERSION)/figurine_$(OS)_v$(FIGURINE_VERSION).tar.gz | tar -zxO  figurine > $(INSTALL_PATH)/figurine
+	chmod +x $(INSTALL_PATH)/figurine
 
 export KOPS_VERSION ?= 1.9.2
 # Releases: https://github.com/kubernetes/kops/releases
