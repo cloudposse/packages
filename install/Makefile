@@ -30,7 +30,8 @@ all: awless \
 	 terraform-docs \
 	 terragrunt \
 	 yq \
-	 shfmt
+	 shfmt \
+	 cloudflared
 
 export AWLESS_VERSION ?= 0.1.11
 # Releases: https://github.com/wallix/awless/releases
@@ -148,6 +149,12 @@ export SHFMT_VERSION ?= 2.5.1
 shfmt:
 	$(CURL) -o - https://github.com/mvdan/sh/releases/download/v$(SHFMT_VERSION)/shfmt_v$(SHFMT_VERSION)_${OS}_${ARCH} > $(INSTALL_PATH)/shfmt
 	chmod +x $(INSTALL_PATH)/shfmt 
+
+# Releases: https://developers.cloudflare.com/argo-tunnel/downloads/
+## Install cloudflared which offers an easy way to expose web servers securely to the internet(Argo Tunnel)
+cloudflared:
+	$(CURL) -o - https://bin.equinox.io/c/VdrWdbjqyF/cloudflared-stable-$(OS)-$(ARCH).tgz | tar -zxO  cloudflared > $(INSTALL_PATH)/cloudflared
+	chmod +x $(INSTALL_PATH)/cloudflared
 
 export KOPS_VERSION ?= 1.9.2
 # Releases: https://github.com/kubernetes/kops/releases
