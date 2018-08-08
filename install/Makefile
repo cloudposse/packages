@@ -30,7 +30,8 @@ all: awless \
 	 terraform-docs \
 	 terragrunt \
 	 yq \
-	 shellcheck
+	 shellcheck \
+	 cloudflared
 
 export AWLESS_VERSION ?= 0.1.11
 # Releases: https://github.com/wallix/awless/releases
@@ -149,6 +150,12 @@ shellcheck:
 	$(CURL) -o - https://storage.googleapis.com/shellcheck/shellcheck-v${SHELLCHECK_VERSION}.linux.x86_64.tar.xz | tar -xOJ   shellcheck-v${SHELLCHECK_VERSION}/shellcheck > $(INSTALL_PATH)/shellcheck
 	chmod +x $(INSTALL_PATH)/shellcheck
 
+# Releases: https://developers.cloudflare.com/argo-tunnel/downloads/
+## Install cloudflared which offers an easy way to expose web servers securely to the internet(Argo Tunnel)
+cloudflared:
+	$(CURL) -o - https://bin.equinox.io/c/VdrWdbjqyF/cloudflared-stable-$(OS)-$(ARCH).tgz | tar -zxO  cloudflared > $(INSTALL_PATH)/cloudflared
+	chmod +x $(INSTALL_PATH)/cloudflared
+
 export KOPS_VERSION ?= 1.9.2
 # Releases: https://github.com/kubernetes/kops/releases
 ## Install kops
@@ -211,6 +218,24 @@ export YQ_VERSION ?= 2.1.1
 ## Install YQ to manipulte YAML
 yq:
 	$(call github_download_binary_release,mikefarah,$(YQ_VERSION),$@_$(OS)_$(ARCH))
+
+export GHR_VERSION ?= 0.10.1
+# Releases: https://github.com/tcnksm/ghr/releases
+## Install ghr to easily upload multiple artifacts to GitHub Release (Darwin)
+ghr-darwin:
+	$(CURL) -o - https://github.com/tcnksm/ghr/releases/download/v$(GHR_VERSION)/ghr_v$(GHR_VERSION)_darwin_$(ARCH).zip > $(INSTALL_PATH)/ghr.zip
+	unzip -p $(INSTALL_PATH)/ghr.zip */ghr > $(INSTALL_PATH)/ghr
+	rm $(INSTALL_PATH)/ghr.zip
+	chmod +x $(INSTALL_PATH)/ghr
+
+## Install ghr to easily upload multiple artifacts to GitHub Release (Linux)
+ghr-linux:
+	$(CURL) -o - https://github.com/tcnksm/ghr/releases/download/v$(GHR_VERSION)/ghr_v$(GHR_VERSION)_linux_$(ARCH).tar.gz | tar --wildcards -zxO */ghr > $(INSTALL_PATH)/ghr
+	chmod +x $(INSTALL_PATH)/ghr
+
+## Install ghr to easily upload multiple artifacts to GitHub Release
+ghr: ghr-$(OS)
+	@exit 0
 
 .PHONY : help
 help:
