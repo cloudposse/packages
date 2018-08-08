@@ -30,7 +30,8 @@ all: awless \
 	 terraform-docs \
 	 terragrunt \
 	 yq \
-	 figurine
+	 figurine \
+	 cloudflared
 
 export AWLESS_VERSION ?= 0.1.11
 # Releases: https://github.com/wallix/awless/releases
@@ -148,6 +149,12 @@ export FIGURINE_VERSION ?= 0.2.2
 figurine: 
 	$(CURL) -o - https://github.com/arsham/figurine/releases/download/v$(FIGURINE_VERSION)/figurine_$(OS)_v$(FIGURINE_VERSION).tar.gz | tar -zxO  figurine > $(INSTALL_PATH)/figurine
 	chmod +x $(INSTALL_PATH)/figurine
+
+# Releases: https://developers.cloudflare.com/argo-tunnel/downloads/
+## Install cloudflared which offers an easy way to expose web servers securely to the internet(Argo Tunnel)
+cloudflared:
+	$(CURL) -o - https://bin.equinox.io/c/VdrWdbjqyF/cloudflared-stable-$(OS)-$(ARCH).tgz | tar -zxO  cloudflared > $(INSTALL_PATH)/cloudflared
+	chmod +x $(INSTALL_PATH)/cloudflared
 
 export KOPS_VERSION ?= 1.9.2
 # Releases: https://github.com/kubernetes/kops/releases
