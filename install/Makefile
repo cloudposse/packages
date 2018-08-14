@@ -146,12 +146,9 @@ hugo: hugo-$(OS)
 export SHFMT_VERSION ?= 2.5.1
 # Releases: https://github.com/mvdan/sh/releases
 ## Install shfmt - shell parser, formatter and interpreter
-shfmt: sh
-	@exit 0
-
-# For overriding $@
-sh: 
-	$(call github_download_binary_release,mvdan,v$(SHFMT_VERSION)/shfmt_v$(SHFMT_VERSION)_$(OS)_$(ARCH))
+shfmt:
+	$(CURL) -o - https://github.com/mvdan/sh/releases/download/v$(SHFMT_VERSION)/shfmt_v$(SHFMT_VERSION)_$(OS)_$(ARCH) > $(INSTALL_PATH)/shfmt
+	chmod +x $(INSTALL_PATH)/shfmt
 
 # Releases: https://developers.cloudflare.com/argo-tunnel/downloads/
 ## Install cloudflared which offers an easy way to expose web servers securely to the internet(Argo Tunnel)
