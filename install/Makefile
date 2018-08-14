@@ -231,7 +231,7 @@ ghr: ghr-$(OS)
 
 export GITLEAKS_VERSION ?= 1.2.0
 # Releases: https://github.com/zricethezav/gitleaks/releases
-## Install library, which audit git repos for secrets
+## Install audit git repos for secrets
 gitleaks:
 	$(call github_download_binary_release,zricethezav,v$(GITLEAKS_VERSION),$@-$(OS)-$(ARCH))
 
