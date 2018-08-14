@@ -145,7 +145,7 @@ hugo: hugo-$(OS)
 
 export FIGURINE_VERSION ?= 0.2.2
 # Releases: https://github.com/arsham/figurine/releases
-## Install figurine foir printing your name in style
+## Install figurine for generate fancy colorized ASCII banners
 figurine: 
 	$(CURL) -o - https://github.com/arsham/figurine/releases/download/v$(FIGURINE_VERSION)/figurine_$(OS)_v$(FIGURINE_VERSION).tar.gz | tar -zxO  figurine > $(INSTALL_PATH)/figurine
 	chmod +x $(INSTALL_PATH)/figurine
