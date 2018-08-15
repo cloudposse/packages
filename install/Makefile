@@ -80,7 +80,7 @@ github-release:
 	rm -rf $(TMP)/$@
 	chmod +x $(INSTALL_PATH)/$@
 
-export GOMPLATE_VERSION ?= 2.6.0
+export GOMPLATE_VERSION ?= 2.7.0
 # Releases: https://github.com/hairyhenderson/gomplate/releases
 ## Install gomplate
 gomplate:
