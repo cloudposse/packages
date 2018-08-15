@@ -30,6 +30,7 @@ all: awless \
 	 terraform-docs \
 	 terragrunt \
 	 yq \
+	 lectl \
 	 cloudflared
 
 export AWLESS_VERSION ?= 0.1.11
@@ -141,6 +142,13 @@ export HUGO_VERSION ?= 0.45.1
 ## Install hugo framework for building static websites.
 hugo: hugo-$(OS)
 	@exit 0
+
+export LECTL_VERSION ?= 0.16
+# Releases: https://github.com/sahsanu/lectl/releases
+## Install lectl script to check issued certificates by Let's Encrypt on CTL
+lectl:
+	$(CURL) -o - https://raw.githubusercontent.com/sahsanu/lectl/v$(LECTL_VERSION)/lectl > $(INSTALL_PATH)/lectl
+	chmod +x $(INSTALL_PATH)/lectl
 
 # Releases: https://developers.cloudflare.com/argo-tunnel/downloads/
 ## Install cloudflared which offers an easy way to expose web servers securely to the internet(Argo Tunnel)
