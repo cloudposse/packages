@@ -138,6 +138,7 @@ Available targets:
   kubectx                             Install kubectx
   kubens                              Install kubens
   shfmt                               Install shfmt - shell parser, formatter and interpreter
+  lectl                               Install lectl script to check issued certificates by Let's Encrypt on CTL
   sops                                Install sops (required by `helm-secrets`)
   stern                               Install stern multi pod and container log tailing for Kubernetes
   terraform                           Install Terraform

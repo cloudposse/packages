@@ -31,6 +31,7 @@ all: awless \
 	 terragrunt \
 	 yq \
 	 shfmt \
+	 lectl \
 	 cloudflared
 
 export AWLESS_VERSION ?= 0.1.11
@@ -149,6 +150,13 @@ export SHFMT_VERSION ?= 2.5.1
 shfmt:
 	$(CURL) -o - https://github.com/mvdan/sh/releases/download/v$(SHFMT_VERSION)/shfmt_v$(SHFMT_VERSION)_$(OS)_$(ARCH) > $(INSTALL_PATH)/shfmt
 	chmod +x $(INSTALL_PATH)/shfmt
+  
+export LECTL_VERSION ?= 0.16
+# Releases: https://github.com/sahsanu/lectl/releases
+## Install lectl script to check issued certificates by Let's Encrypt on CTL
+lectl:
+	$(CURL) -o - https://raw.githubusercontent.com/sahsanu/lectl/v$(LECTL_VERSION)/lectl > $(INSTALL_PATH)/lectl
+	chmod +x $(INSTALL_PATH)/lectl
 
 # Releases: https://developers.cloudflare.com/argo-tunnel/downloads/
 ## Install cloudflared which offers an easy way to expose web servers securely to the internet(Argo Tunnel)
