@@ -123,6 +123,7 @@ Available targets:
   ghr-linux                           Install ghr to easily upload multiple artifacts to GitHub Release (Linux)
   github-commenter                    Install github-commenter
   github-release                      Install github-release to create and edit releases on Github (and upload artifacts)
+  gitleaks                            Install gitleaks to audit git repos for secrets
   gomplate                            Install gomplate
   goofys                              Install goofys
   helm                                Install helm
