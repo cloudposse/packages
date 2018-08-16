@@ -245,6 +245,12 @@ ghr-linux:
 ghr: ghr-$(OS)
 	@exit 0
 
+export GITLEAKS_VERSION ?= 1.2.0
+# Releases: https://github.com/zricethezav/gitleaks/releases
+## Install gitleaks to audit git repos for secrets
+gitleaks:
+	$(call github_download_binary_release,zricethezav,v$(GITLEAKS_VERSION),$@-$(OS)-$(ARCH))
+
 .PHONY : help
 help:
 	@printf "Available targets:\n\n"
