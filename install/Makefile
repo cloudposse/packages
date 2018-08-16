@@ -31,6 +31,7 @@ all: awless \
 	 terragrunt \
 	 yq \
 	 figurine \
+	 lectl \
 	 cloudflared
 
 export AWLESS_VERSION ?= 0.1.11
@@ -149,6 +150,13 @@ export FIGURINE_VERSION ?= 0.2.2
 figurine: 
 	$(CURL) -o - https://github.com/arsham/figurine/releases/download/v$(FIGURINE_VERSION)/figurine_$(OS)_v$(FIGURINE_VERSION).tar.gz | tar -zxO  figurine > $(INSTALL_PATH)/figurine
 	chmod +x $(INSTALL_PATH)/figurine
+  
+export LECTL_VERSION ?= 0.16
+# Releases: https://github.com/sahsanu/lectl/releases
+## Install lectl script to check issued certificates by Let's Encrypt on CTL
+lectl:
+	$(CURL) -o - https://raw.githubusercontent.com/sahsanu/lectl/v$(LECTL_VERSION)/lectl > $(INSTALL_PATH)/lectl
+	chmod +x $(INSTALL_PATH)/lectl
 
 # Releases: https://developers.cloudflare.com/argo-tunnel/downloads/
 ## Install cloudflared which offers an easy way to expose web servers securely to the internet(Argo Tunnel)
