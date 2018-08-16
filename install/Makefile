@@ -31,6 +31,7 @@ all: awless \
 	 terragrunt \
 	 yq \
 	 shellcheck \
+	 lectl \
 	 cloudflared
 
 export AWLESS_VERSION ?= 0.1.11
@@ -149,6 +150,13 @@ export SHELLCHECK_VERSION ?= 0.5.0
 shellcheck: 
 	$(CURL) -o - https://storage.googleapis.com/shellcheck/shellcheck-v$(SHELLCHECK_VERSION).$(OS).x86_64.tar.xz | tar -xOJ shellcheck-v$(SHELLCHECK_VERSION)/shellcheck > $(INSTALL_PATH)/shellcheck
 	chmod +x $(INSTALL_PATH)/shellcheck
+
+export LECTL_VERSION ?= 0.16
+# Releases: https://github.com/sahsanu/lectl/releases
+## Install lectl script to check issued certificates by Let's Encrypt on CTL
+lectl:
+	$(CURL) -o - https://raw.githubusercontent.com/sahsanu/lectl/v$(LECTL_VERSION)/lectl > $(INSTALL_PATH)/lectl
+	chmod +x $(INSTALL_PATH)/lectl
 
 # Releases: https://developers.cloudflare.com/argo-tunnel/downloads/
 ## Install cloudflared which offers an easy way to expose web servers securely to the internet(Argo Tunnel)
