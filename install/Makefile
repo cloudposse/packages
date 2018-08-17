@@ -31,6 +31,7 @@ all: awless \
 	 terragrunt \
 	 yq \
 	 shellcheck \
+	 figurine \
 	 lectl \
 	 cloudflared
 
@@ -94,7 +95,6 @@ export GOOFYS_VERSION ?= 0.19.0
 goofys:
 	$(call github_download_binary_release,kahing,v$(GOOFYS_VERSION),$@)
 
-
 export HELM_VERSION ?= 2.9.1
 ## Install helm
 helm:
@@ -150,6 +150,15 @@ export SHELLCHECK_VERSION ?= 0.5.0
 shellcheck: 
 	$(CURL) -o - https://storage.googleapis.com/shellcheck/shellcheck-v$(SHELLCHECK_VERSION).$(OS).x86_64.tar.xz | tar -xOJ shellcheck-v$(SHELLCHECK_VERSION)/shellcheck > $(INSTALL_PATH)/shellcheck
 	chmod +x $(INSTALL_PATH)/shellcheck
+
+
+export FIGURINE_VERSION ?= 0.2.2
+# Releases: https://github.com/arsham/figurine/releases
+## Install figurine to generate fancy colorized ASCII banners
+figurine: 
+	$(CURL) -o - https://github.com/arsham/figurine/releases/download/v$(FIGURINE_VERSION)/figurine_$(OS)_v$(FIGURINE_VERSION).tar.gz | tar -zxO  figurine > $(INSTALL_PATH)/figurine
+	chmod +x $(INSTALL_PATH)/figurine
+  
 
 export LECTL_VERSION ?= 0.16
 # Releases: https://github.com/sahsanu/lectl/releases
