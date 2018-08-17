@@ -29,8 +29,8 @@ Available targets:
   kubectl                             Install kubectl
   kubectx                             Install kubectx
   kubens                              Install kubens
-  shellcheck                          Install shellcheck static analysis tool for shell scripts 
   lectl                               Install lectl script to check issued certificates by Let's Encrypt on CTL
+  shellcheck                          Install shellcheck static analysis tool for shell scripts 
   sops                                Install sops (required by `helm-secrets`)
   stern                               Install stern multi pod and container log tailing for Kubernetes
   terraform                           Install Terraform
