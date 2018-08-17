@@ -9,31 +9,31 @@ TMP ?= /tmp
 github_download_binary_release = $(CURL) -o $(INSTALL_PATH)/$@ https://github.com/$(1)/$@/releases/download/$(2)/$(3) && chmod +x $(INSTALL_PATH)/$@
 
 all: awless \
-	 aws-vault \
-	 cfssl \
-	 chamber \
-	 fetch \
-	 github-commenter \
-	 gomplate \
-	 goofys \
-	 helm \
-	 helmfile \
-	 htmltest \
-	 hugo \
-	 kops \
-	 kubectl \
-	 kubectx \
-	 kubens \
-	 sops \
-	 stern \
-	 terraform \
-	 terraform-docs \
-	 terragrunt \
-	 yq \
-	 shellcheck \
-	 figurine \
-	 lectl \
-	 cloudflared
+	aws-vault \
+	cfssl \
+	chamber \
+	cloudflared
+	fetch \
+	figurine \
+	github-commenter \
+	gomplate \
+	goofys \
+	helm \
+	helmfile \
+	htmltest \
+	hugo \
+	kops \
+	kubectl \
+	kubectx \
+	kubens \
+	lectl \
+	shellcheck \
+	sops \
+	stern \
+	terraform \
+	terraform-docs \
+	terragrunt \
+	yq \
 
 export AWLESS_VERSION ?= 0.1.11
 # Releases: https://github.com/wallix/awless/releases
@@ -63,11 +63,24 @@ export CHAMBER_VERSION ?= 2.1.0
 chamber:
 	$(call github_download_binary_release,segmentio,v$(CHAMBER_VERSION),$@-v$(CHAMBER_VERSION)-$(OS)-$(ARCH))
 
+# Releases: https://developers.cloudflare.com/argo-tunnel/downloads/
+## Install cloudflared which offers an easy way to expose web servers securely to the internet(Argo Tunnel)
+cloudflared:
+	$(CURL) -o - https://bin.equinox.io/c/VdrWdbjqyF/cloudflared-stable-$(OS)-$(ARCH).tgz | tar -zxO  cloudflared > $(INSTALL_PATH)/cloudflared
+	chmod +x $(INSTALL_PATH)/cloudflared
+
 export FETCH_VERSION ?= 0.2.0
 # Releases: https://github.com/gruntwork-io/fetch/releases
 ## Install fetch to easily download files, folders, and release assets from a specific git commit, branch, or tag
 fetch:
 	$(call github_download_binary_release,gruntwork-io,v$(FETCH_VERSION),$@_$(OS)_$(ARCH))
+
+export FIGURINE_VERSION ?= 0.2.2
+# Releases: https://github.com/arsham/figurine/releases
+## Install figurine to generate fancy colorized ASCII banners
+figurine: 
+	$(CURL) -o - https://github.com/arsham/figurine/releases/download/v$(FIGURINE_VERSION)/figurine_$(OS)_v$(FIGURINE_VERSION).tar.gz | tar -zxO  figurine > $(INSTALL_PATH)/figurine
+	chmod +x $(INSTALL_PATH)/figurine
 
 export GITHUB_COMMENTER_VERSION ?= 0.1.2
 ## Install github-commenter
@@ -144,35 +157,6 @@ export HUGO_VERSION ?= 0.45.1
 hugo: hugo-$(OS)
 	@exit 0
 
-export SHELLCHECK_VERSION ?= 0.5.0
-# Releases: https://github.com/koalaman/shellcheck/releasess
-## Install shellcheck static analysis tool for shell scripts 
-shellcheck: 
-	$(CURL) -o - https://storage.googleapis.com/shellcheck/shellcheck-v$(SHELLCHECK_VERSION).$(OS).x86_64.tar.xz | tar -xOJ shellcheck-v$(SHELLCHECK_VERSION)/shellcheck > $(INSTALL_PATH)/shellcheck
-	chmod +x $(INSTALL_PATH)/shellcheck
-
-
-export FIGURINE_VERSION ?= 0.2.2
-# Releases: https://github.com/arsham/figurine/releases
-## Install figurine to generate fancy colorized ASCII banners
-figurine: 
-	$(CURL) -o - https://github.com/arsham/figurine/releases/download/v$(FIGURINE_VERSION)/figurine_$(OS)_v$(FIGURINE_VERSION).tar.gz | tar -zxO  figurine > $(INSTALL_PATH)/figurine
-	chmod +x $(INSTALL_PATH)/figurine
-  
-
-export LECTL_VERSION ?= 0.16
-# Releases: https://github.com/sahsanu/lectl/releases
-## Install lectl script to check issued certificates by Let's Encrypt on CTL
-lectl:
-	$(CURL) -o - https://raw.githubusercontent.com/sahsanu/lectl/v$(LECTL_VERSION)/lectl > $(INSTALL_PATH)/lectl
-	chmod +x $(INSTALL_PATH)/lectl
-
-# Releases: https://developers.cloudflare.com/argo-tunnel/downloads/
-## Install cloudflared which offers an easy way to expose web servers securely to the internet(Argo Tunnel)
-cloudflared:
-	$(CURL) -o - https://bin.equinox.io/c/VdrWdbjqyF/cloudflared-stable-$(OS)-$(ARCH).tgz | tar -zxO  cloudflared > $(INSTALL_PATH)/cloudflared
-	chmod +x $(INSTALL_PATH)/cloudflared
-
 export KOPS_VERSION ?= 1.9.2
 # Releases: https://github.com/kubernetes/kops/releases
 ## Install kops
@@ -198,6 +182,20 @@ export KUBENS_VERSION ?= 0.5.0
 kubens:
 	$(CURL) -o $(INSTALL_PATH)/$@ https://raw.githubusercontent.com/ahmetb/kubectx/v$(KUBECTX_VERSION)/$@
 	chmod +x $(INSTALL_PATH)/$@
+
+export LECTL_VERSION ?= 0.16
+# Releases: https://github.com/sahsanu/lectl/releases
+## Install lectl script to check issued certificates by Let's Encrypt on CTL
+lectl:
+	$(CURL) -o - https://raw.githubusercontent.com/sahsanu/lectl/v$(LECTL_VERSION)/lectl > $(INSTALL_PATH)/lectl
+	chmod +x $(INSTALL_PATH)/lectl
+
+export SHELLCHECK_VERSION ?= 0.5.0
+# Releases: https://github.com/koalaman/shellcheck/releasess
+## Install shellcheck static analysis tool for shell scripts 
+shellcheck: 
+	$(CURL) -o - https://storage.googleapis.com/shellcheck/shellcheck-v$(SHELLCHECK_VERSION).$(OS).x86_64.tar.xz | tar -xOJ shellcheck-v$(SHELLCHECK_VERSION)/shellcheck > $(INSTALL_PATH)/shellcheck
+	chmod +x $(INSTALL_PATH)/shellcheck
 
 export SOPS_VERSION ?= 3.0.5
 ## Install sops (required by `helm-secrets`)
