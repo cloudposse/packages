@@ -28,6 +28,7 @@ all: awless \
 	kubens \
 	lectl \
 	shellcheck \
+	shfmt \
 	sops \
 	stern \
 	terraform \
@@ -196,6 +197,13 @@ export SHELLCHECK_VERSION ?= 0.5.0
 shellcheck: 
 	$(CURL) -o - https://storage.googleapis.com/shellcheck/shellcheck-v$(SHELLCHECK_VERSION).$(OS).x86_64.tar.xz | tar -xOJ shellcheck-v$(SHELLCHECK_VERSION)/shellcheck > $(INSTALL_PATH)/shellcheck
 	chmod +x $(INSTALL_PATH)/shellcheck
+
+export SHFMT_VERSION ?= 2.5.1
+# Releases: https://github.com/mvdan/sh/releases
+## Install shfmt - shell parser, formatter and interpreter
+shfmt:
+	$(CURL) -o - https://github.com/mvdan/sh/releases/download/v$(SHFMT_VERSION)/shfmt_v$(SHFMT_VERSION)_$(OS)_$(ARCH) > $(INSTALL_PATH)/shfmt
+	chmod +x $(INSTALL_PATH)/shfmt
 
 export SOPS_VERSION ?= 3.0.5
 ## Install sops (required by `helm-secrets`)
