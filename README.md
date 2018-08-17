@@ -118,6 +118,7 @@ Available targets:
   chamber                             Install Chamber to manage secrets with SSM+KMS
   cloudflared                         Install cloudflared which offers an easy way to expose web servers securely to the internet(Argo Tunnel)
   fetch                               Install fetch to easily download files, folders, and release assets from a specific git commit, branch, or tag
+  figurine                            Install figurine to generate fancy colorized ASCII banners
   ghr                                 Install ghr to easily upload multiple artifacts to GitHub Release
   ghr-darwin                          Install ghr to easily upload multiple artifacts to GitHub Release (Darwin)
   ghr-linux                           Install ghr to easily upload multiple artifacts to GitHub Release (Linux)
@@ -139,6 +140,7 @@ Available targets:
   kubectx                             Install kubectx
   kubens                              Install kubens
   shfmt                               Install shfmt - shell parser, formatter and interpreter
+  shellcheck                          Install shellcheck static analysis tool for shell scripts 
   lectl                               Install lectl script to check issued certificates by Let's Encrypt on CTL
   sops                                Install sops (required by `helm-secrets`)
   stern                               Install stern multi pod and container log tailing for Kubernetes
