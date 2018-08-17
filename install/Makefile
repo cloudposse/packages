@@ -12,7 +12,7 @@ all: awless \
 	aws-vault \
 	cfssl \
 	chamber \
-	cloudflared
+	cloudflared \
 	fetch \
 	figurine \
 	github-commenter \
@@ -34,7 +34,7 @@ all: awless \
 	terraform \
 	terraform-docs \
 	terragrunt \
-	yq \
+	yq 
 
 export AWLESS_VERSION ?= 0.1.11
 # Releases: https://github.com/wallix/awless/releases
