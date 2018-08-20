@@ -18,6 +18,7 @@ all: awless \
 	github-commenter \
 	gomplate \
 	goofys \
+	gotop \
 	helm \
 	helmfile \
 	htmltest \
@@ -108,6 +109,13 @@ export GOOFYS_VERSION ?= 0.19.0
 ## Install goofys
 goofys:
 	$(call github_download_binary_release,kahing,v$(GOOFYS_VERSION),$@)
+
+export GOTOP_VERSION ?= 1.4.1
+# Releases: https://github.com/cjbassi/gotop/releases
+## Install gotop which offers a terminal based graphical activity monitor inspired by gtop and vtop
+gotop:
+	$(CURL) -o - https://github.com/cjbassi/gotop/releases/download/$(GOTOP_VERSION)/$@_$(GOTOP_VERSION)_$(OS)_$(ARCH).tgz | tar -zxO  gotop > $(INSTALL_PATH)/gotop
+	chmod +x $(INSTALL_PATH)/gotop
 
 export HELM_VERSION ?= 2.9.1
 ## Install helm
