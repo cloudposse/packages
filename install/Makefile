@@ -13,6 +13,7 @@ all: awless \
 	cfssl \
 	chamber \
 	cloudflared \
+	ctop \
 	fetch \
 	figurine \
 	github-commenter \
@@ -69,6 +70,13 @@ chamber:
 cloudflared:
 	$(CURL) -o - https://bin.equinox.io/c/VdrWdbjqyF/cloudflared-stable-$(OS)-$(ARCH).tgz | tar -zxO  cloudflared > $(INSTALL_PATH)/cloudflared
 	chmod +x $(INSTALL_PATH)/cloudflared
+
+export CTOP_VERSION ?= 0.7.1
+# Releases: https://github.com/bcicen/ctop/releases
+## Install ctop which offers a top-like interface for container metrics
+ctop:
+	$(call github_download_binary_release,bcicen,v$(CTOP_VERSION),$@-$(CTOP_VERSION)-$(OS)-$(ARCH))
+	chmod +x $(INSTALL_PATH)/ctop
 
 export FETCH_VERSION ?= 0.2.0
 # Releases: https://github.com/gruntwork-io/fetch/releases
