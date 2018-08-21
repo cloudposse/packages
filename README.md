@@ -117,6 +117,7 @@ Available targets:
   cfssl                               Install cfssl - Cloudflare's PKI and TLS toolkit 
   chamber                             Install Chamber to manage secrets with SSM+KMS
   cloudflared                         Install cloudflared which offers an easy way to expose web servers securely to the internet(Argo Tunnel)
+  ctop                                Install ctop which offers a top-like interface for container metrics
   fetch                               Install fetch to easily download files, folders, and release assets from a specific git commit, branch, or tag
   figurine                            Install figurine to generate fancy colorized ASCII banners
   ghr                                 Install ghr to easily upload multiple artifacts to GitHub Release
