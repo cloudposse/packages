@@ -1,7 +1,5 @@
 ## Makefile Targets
 ```
-Available targets:
-
   awless                              Install awless a powerful, innovative and small surface command line interface (CLI) to manage Amazon Web Services
   aws-vault                           Install aws-vault to easily assume roles (not related to HashiCorp Vault)
   cfssl                               Install cfssl - Cloudflare's PKI and TLS toolkit 
