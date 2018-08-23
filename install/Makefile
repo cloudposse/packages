@@ -24,6 +24,7 @@ all: awless \
 	helmfile \
 	htmltest \
 	hugo \
+	json2hcl \
 	kops \
 	kubectl \
 	kubectx \
@@ -174,6 +175,12 @@ export HUGO_VERSION ?= 0.45.1
 ## Install hugo framework for building static websites.
 hugo: hugo-$(OS)
 	@exit 0
+
+export JSON2HCL_VERSION ?= 0.0.6
+# Releases: https://github.com/kvz/json2hcl/releases
+## Install json2hcl which can convert JSON to HCL, and vice versa
+json2hcl:
+	$(call github_download_binary_release,kvz,v$(JSON2HCL_VERSION),$@_v$(JSON2HCL_VERSION)_$(OS)_$(ARCH))
 
 export KOPS_VERSION ?= 1.9.2
 # Releases: https://github.com/kubernetes/kops/releases
