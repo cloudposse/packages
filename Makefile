@@ -9,7 +9,7 @@ export README_DEPS ?= docs/targets.md
 
 export DIST_CMD ?= cp -a
 export DIST_PATH ?= /dist
-export INSTALL_PATH ?= /packages/bin
+export INSTALL_PATH ?= /usr/local/bin
 
 -include $(shell curl -sSL -o .build-harness "https://git.io/build-harness"; echo .build-harness)
 
