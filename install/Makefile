@@ -29,6 +29,7 @@ all: awless \
 	kubectx \
 	kubens \
 	lectl \
+	packer \
 	shellcheck \
 	shfmt \
 	sops \
@@ -207,6 +208,15 @@ lectl:
 	$(CURL) -o - https://raw.githubusercontent.com/sahsanu/lectl/v$(LECTL_VERSION)/lectl > $(INSTALL_PATH)/lectl
 	chmod +x $(INSTALL_PATH)/lectl
 
+export PACKER_VERSION ?= 1.2.5
+# Releases: https://github.com/hashicorp/packer/releases
+## Install packer - a tool for creating identical machine images for multiple platforms from a single source configuration.
+packer:
+	$(CURL) -o - https://releases.hashicorp.com/$@/$(PACKER_VERSION)/$@_$(PACKER_VERSION)_$(OS)_$(ARCH).zip > $(INSTALL_PATH)/$@.zip
+	unzip -p $(INSTALL_PATH)/$@.zip $@ > $(INSTALL_PATH)/$@
+	rm $(INSTALL_PATH)/$@.zip
+	chmod +x $(INSTALL_PATH)/$@
+	
 export SHELLCHECK_VERSION ?= 0.5.0
 # Releases: https://github.com/koalaman/shellcheck/releasess
 ## Install shellcheck static analysis tool for shell scripts 

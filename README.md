@@ -140,6 +140,7 @@ packages/uninstall/%:
   kubectx                             Install kubectx
   kubens                              Install kubens
   lectl                               Install lectl script to check issued certificates by Let's Encrypt on CTL
+  packer                              Install packer - a tool for creating identical machine images for multiple platforms from a single source configuration.
   shellcheck                          Install shellcheck static analysis tool for shell scripts 
   shfmt                               Install shfmt - shell parser, formatter and interpreter
   sops                                Install sops (required by `helm-secrets`)
