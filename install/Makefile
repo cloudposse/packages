@@ -243,7 +243,7 @@ export SOPS_VERSION ?= 3.0.5
 sops:
 	$(call github_download_binary_release,mozilla,$(SOPS_VERSION),$@-$(SOPS_VERSION).$(OS))
 
-export STERN_VERSION ?= 1.7.0
+export STERN_VERSION ?= 1.8.0
 ## Install stern multi pod and container log tailing for Kubernetes
 stern:
 	$(call github_download_binary_release,wercker,$(STERN_VERSION),$@_$(OS)_$(ARCH))
