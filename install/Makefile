@@ -108,11 +108,11 @@ github-release:
 	rm -rf $(TMP)/$@
 	chmod +x $(INSTALL_PATH)/$@
 
-export GOMPLATE_VERSION ?= 2.7.0
+export GOMPLATE_VERSION ?= 2.8.0
 # Releases: https://github.com/hairyhenderson/gomplate/releases
 ## Install gomplate
 gomplate:
-	$(call github_download_binary_release,hairyhenderson,v$(GOMPLATE_VERSION),$@_$(OS)-$(ARCH)-slim)
+	$(call github_download_binary_release,hairyhenderson,$(GOMPLATE_VERSION),$@_$(OS)-$(ARCH)-slim)
 
 export GOOFYS_VERSION ?= 0.19.0
 # Releases: https://github.com/kahing/goofys/releases
