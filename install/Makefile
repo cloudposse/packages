@@ -127,7 +127,7 @@ gotop:
 	$(CURL) -o - https://github.com/cjbassi/gotop/releases/download/$(GOTOP_VERSION)/$@_$(GOTOP_VERSION)_$(OS)_$(ARCH).tgz | tar -zxO  gotop > $(INSTALL_PATH)/gotop
 	chmod +x $(INSTALL_PATH)/gotop
 
-export HELM_VERSION ?= 2.9.1
+export HELM_VERSION ?= 2.10.0
 ## Install helm
 helm:
 	mkdir -p $(TMP)/$@
@@ -137,7 +137,7 @@ helm:
 	chmod +x $(INSTALL_PATH)/helm
 
 export HELMFILE_VENDOR ?= roboll
-export HELMFILE_VERSION ?= 0.23.1
+export HELMFILE_VERSION ?= 0.25.0
 # Releases: https://github.com/roboll/helmfile/releases
 ## Install helmfile to easily deploy collections of helm charts
 helmfile:
