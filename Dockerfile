@@ -7,7 +7,7 @@ FROM alpine:3.8
 ENV INSTALL_PATH=/packages/bin
 ENV PATH=${INSTALL_PATH}:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 RUN mkdir -p ${INSTALL_PATH}
-RUN apk add --update --no-cache bash make curl coreutils libc6-compat
+RUN apk add --update --no-cache bash make curl coreutils libc6-compat tar
 
 COPY --from=cfssl /go/bin/ ${INSTALL_PATH}/
 
