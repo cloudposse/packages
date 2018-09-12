@@ -35,6 +35,7 @@ all: awless \
 	shfmt \
 	sops \
 	stern \
+	teleport \
 	terraform \
 	terraform-docs \
 	terragrunt \
@@ -247,6 +248,12 @@ export STERN_VERSION ?= 1.8.0
 ## Install stern multi pod and container log tailing for Kubernetes
 stern:
 	$(call github_download_binary_release,wercker,$(STERN_VERSION),$@_$(OS)_$(ARCH))
+
+export TELEPORT_VERSION ?= 2.7.4
+# Releases: https://github.com/gravitational/teleport
+## Install Teleport
+teleport:
+	$(CURL) https://get.gravitational.com/teleport/$(TELEPORT_VERSION)/teleport-v$(TELEPORT_VERSION)-${OS}-$(ARCH)-bin.tar.gz -o - | tar -C $(INSTALL_PATH) -zvx --wildcards --strip-components=1 --overwrite --mode='+x'  */tsh */tctl */teleport
 
 export TERRAFORM_VERSION ?= 0.11.7
 # Releases: https://github.com/hashicorp/terraform/releases
