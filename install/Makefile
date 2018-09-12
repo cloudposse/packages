@@ -229,7 +229,7 @@ export SHELLCHECK_VERSION ?= 0.5.0
 # Releases: https://github.com/koalaman/shellcheck/releasess
 ## Install shellcheck static analysis tool for shell scripts 
 shellcheck: 
-	$(CURL) -o - https://storage.googleapis.com/shellcheck/shellcheck-v$(SHELLCHECK_VERSION).$(OS).x86_64.tar.xz | tar -xOJ shellcheck-v$(SHELLCHECK_VERSION)/shellcheck > $(INSTALL_PATH)/shellcheck
+	$(CURL) -o - https://storage.googleapis.com/shellcheck/shellcheck-v$(SHELLCHECK_VERSION).$(OS).x86_64.tar.xz | tar -xJO shellcheck-v$(SHELLCHECK_VERSION)/shellcheck > $(INSTALL_PATH)/shellcheck
 	chmod +x $(INSTALL_PATH)/shellcheck
 
 export SHFMT_VERSION ?= 2.5.1
@@ -253,7 +253,7 @@ export TELEPORT_VERSION ?= 2.7.4
 # Releases: https://github.com/gravitational/teleport/releases
 ## Install Teleport
 teleport:
-	$(CURL) https://get.gravitational.com/teleport/$(TELEPORT_VERSION)/teleport-v$(TELEPORT_VERSION)-${OS}-$(ARCH)-bin.tar.gz -o - | tar -C $(INSTALL_PATH) -zvx --wildcards --strip-components=1 --overwrite --mode='+x'  */tsh */tctl */teleport
+	$(CURL) https://get.gravitational.com/teleport/$(TELEPORT_VERSION)/teleport-v$(TELEPORT_VERSION)-${OS}-$(ARCH)-bin.tar.gz -o - | tar -C $(INSTALL_PATH) -zx --wildcards --strip-components=1 --overwrite --mode='+x'  */tsh */tctl */teleport
 
 export TERRAFORM_VERSION ?= 0.11.7
 # Releases: https://github.com/hashicorp/terraform/releases
