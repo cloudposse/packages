@@ -250,7 +250,7 @@ stern:
 	$(call github_download_binary_release,wercker,$(STERN_VERSION),$@_$(OS)_$(ARCH))
 
 export TELEPORT_VERSION ?= 2.7.4
-# Releases: https://github.com/gravitational/teleport
+# Releases: https://github.com/gravitational/teleport/releases
 ## Install Teleport
 teleport:
 	$(CURL) https://get.gravitational.com/teleport/$(TELEPORT_VERSION)/teleport-v$(TELEPORT_VERSION)-${OS}-$(ARCH)-bin.tar.gz -o - | tar -C $(INSTALL_PATH) -zvx --wildcards --strip-components=1 --overwrite --mode='+x'  */tsh */tctl */teleport
