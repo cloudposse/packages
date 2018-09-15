@@ -183,7 +183,7 @@ export JSON2HCL_VERSION ?= 0.0.6
 json2hcl:
 	$(call github_download_binary_release,kvz,v$(JSON2HCL_VERSION),$@_v$(JSON2HCL_VERSION)_$(OS)_$(ARCH))
 
-export KOPS_VERSION ?= 1.9.2
+export KOPS_VERSION ?= 1.10.0
 # Releases: https://github.com/kubernetes/kops/releases
 ## Install kops
 kops:
