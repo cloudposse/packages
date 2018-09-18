@@ -10,6 +10,7 @@ github_download_binary_release = $(CURL) -o $(INSTALL_PATH)/$@ https://github.co
 
 all: awless \
 	aws-vault \
+	aws-iam-authenticator \
 	cfssl \
 	chamber \
 	cloudflared \
