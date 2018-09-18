@@ -10,6 +10,7 @@ github_download_binary_release = $(CURL) -o $(INSTALL_PATH)/$@ https://github.co
 
 all: awless \
 	aws-vault \
+	aws-iam-authenticator \
 	cfssl \
 	chamber \
 	cloudflared \
@@ -56,6 +57,12 @@ export AWS_VAULT_VERSION ?= 4.2.1
 ## Install aws-vault to easily assume roles (not related to HashiCorp Vault)
 aws-vault:
 	$(call github_download_binary_release,99designs,v$(AWS_VAULT_VERSION),$@-$(OS)-$(ARCH))
+
+export AWS_IAM_AUTHENTICATOR_VERSION ?= 0.3.0
+# Releases: https://github.com/kubernetes-sigs/aws-iam-authenticator/releases
+## Install aws-iam-authenticator
+aws-iam-authenticator:
+	$(call github_download_binary_release,kubernetes-sigs,v$(AWS_IAM_AUTHENTICATOR_VERSION),heptio-authenticator-aws_$(AWS_IAM_AUTHENTICATOR_VERSION)_$(OS)_$(ARCH))
 
 export CFSSL_VERSION ?= 1.3.2
 # Releases: https://github.com/cloudflare/cfssl/releases
