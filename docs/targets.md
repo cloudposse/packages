@@ -1,6 +1,7 @@
 ## Makefile Targets
 ```
   awless                              Install awless a powerful, innovative and small surface command line interface (CLI) to manage Amazon Web Services
+  aws-iam-authenticator               Install aws-iam-authenticator
   aws-vault                           Install aws-vault to easily assume roles (not related to HashiCorp Vault)
   cfssl                               Install cfssl - Cloudflare's PKI and TLS toolkit 
   chamber                             Install Chamber to manage secrets with SSM+KMS
@@ -25,6 +26,7 @@
   hugo                                Install hugo framework for building static websites.
   hugo-darwin                         Install hugo framework for building static websites (darwin)
   hugo-linux                          Install hugo framework for building static websites (linux)
+  json2hcl                            Install json2hcl which can convert JSON to HCL, and vice versa
   kops                                Install kops
   kubectl                             Install kubectl
   kubectx                             Install kubectx
@@ -35,6 +37,7 @@
   shfmt                               Install shfmt - shell parser, formatter and interpreter
   sops                                Install sops (required by `helm-secrets`)
   stern                               Install stern multi pod and container log tailing for Kubernetes
+  teleport                            Install Teleport
   terraform                           Install Terraform
   terraform-docs                      Install terraform-docs to generate docs from terraform modules
   terragrunt                          Install terragrunt for tools that make it easier to work with multiple Terraform modules
