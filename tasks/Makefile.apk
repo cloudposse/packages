@@ -19,7 +19,7 @@ apk/build:
 
 apk/clean:
 	rm -f APKBUILD 
-	find $(APK_PACKAGES_PATH) -type f -name APKINDEX.tar.gz -delete
+	@find $(APK_PACKAGES_PATH) -type f -name APKINDEX.tar.gz -delete
 
 apk: apk/prepare apk/checksum apk/build apk/clean
 	@exit 0
