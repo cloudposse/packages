@@ -17,5 +17,6 @@ steps:
       - echo "${{KEY_RSA_PUB}}" | base64 -d > key.rsa.pub
       - apk add alpine-sdk
       - make -C vendor build
+      - find ${APK_PACKAGES_PATH} -type f -name '*.apk' | xargs ls -l 
 
 # sync files to S3 bucket
