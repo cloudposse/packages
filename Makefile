@@ -13,6 +13,8 @@ export INSTALL_PATH ?= /usr/local/bin
 
 -include $(shell curl -sSL -o .build-harness "https://git.io/build-harness"; echo .build-harness)
 
+include tasks/Makefile.git
+
 all: init deps build install run
 
 deps:

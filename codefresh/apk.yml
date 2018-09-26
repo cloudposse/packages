@@ -1,0 +1,20 @@
+version: '1.0'
+
+steps:
+  init_variables:
+    title: Init variables
+    image: alpine
+    commands:
+      - cf_export SOURCE_BRANCH=${{CF_BRANCH}}
+
+build:
+    title: Build alpine packages
+    image: alpine:3.8
+    working_directory: .
+    commands:
+      - apk add alpine-sdk
+      - echo "${{KEY_RSA}}" | base64 -d > key.rsa
+      - echo "${{KEY_RSA_PUB}}" | base64 -d > key.rsa.pub
+      - make -C vendor build
+
+# sync files to S3 bucket
