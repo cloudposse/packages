@@ -7,7 +7,7 @@ steps:
     commands:
       - cf_export SOURCE_BRANCH=${{CF_BRANCH}}
 
-build:
+  build:
     title: Build alpine packages
     image: alpine:3.8
     working_directory: .
