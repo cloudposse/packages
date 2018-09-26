@@ -13,10 +13,11 @@ steps:
     image: alpine:3.8
     working_directory: .
     commands:
+      - rm -rf "${APK_PACKAGES_PATH}"
       - echo "${{KEY_RSA}}" | base64 -d > key.rsa
       - echo "${{KEY_RSA_PUB}}" | base64 -d > key.rsa.pub
       - apk add alpine-sdk
       - make -C vendor build
-      - find ${APK_PACKAGES_PATH} -type f -name '*.apk' | xargs ls -l 
+      - find "${APK_PACKAGES_PATH}" -type f -name '*.apk' | xargs ls -l 
 
 # sync files to S3 bucket
