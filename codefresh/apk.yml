@@ -6,6 +6,7 @@ steps:
     image: alpine
     commands:
       - cf_export CURRENT_BRANCH=${{CF_BRANCH}}
+      - cf_export APK_PACKAGES_PATH=${{CF_VOLUME_PATH}}/packages/
 
   build:
     title: Build alpine packages
