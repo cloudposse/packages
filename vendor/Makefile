@@ -12,5 +12,5 @@ list/updated:
 
 ## Build all updated packages
 build:
-	$(MAKE) -s list/updated  | xargs -t -r -I'{}' make -s -C '{}' apk
+	$(MAKE) --no-print-directory -s list/updated | xargs -n 1 -I{} -- make --no-print-directory -C {} apk
 
