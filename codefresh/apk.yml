@@ -5,7 +5,7 @@ steps:
     title: Init variables
     image: alpine
     commands:
-      - cf_export SOURCE_BRANCH=${{CF_BRANCH}}
+      - cf_export CURRENT_BRANCH=${{CF_BRANCH}}
 
   build:
     title: Build alpine packages

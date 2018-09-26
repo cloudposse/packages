@@ -1,5 +1,5 @@
 TARGET_BRANCH ?= master
-CURRENT_BRANCH ?= apk
+CURRENT_BRANCH ?= 
 
 ## List all packages which have been updated relative to `master`
 list/updated:
@@ -10,7 +10,8 @@ list/updated:
 		sed 's,vendor/,,' | \
 		grep -E '.+'
 
-## Build all updated packages
+## Build all updated alpine packages
 build:
-	$(MAKE) --no-print-directory -s list/updated | xargs -n 1 -I{} -- make --no-print-directory -C {} apk
+	$(MAKE) --no-print-directory -s list/updated | \
+		xargs -n 1 -I{} -- make --no-print-directory -C {} apk
 
