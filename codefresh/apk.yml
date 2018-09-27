@@ -16,7 +16,7 @@ steps:
     image: alpine:3.7
     working_directory: .
     environment:
-      - APK_PACKAGES_PATH=${{APK_PACKAGES_PAGE}}/3.7
+      - APK_PACKAGES_PATH=${{APK_PACKAGES_PATH}}/3.7
     commands:
       - apk add alpine-sdk
       - rm -rf "${APK_PACKAGES_PATH}"
@@ -28,7 +28,7 @@ steps:
     image: alpine:3.8
     working_directory: .
     environment:
-      - APK_PACKAGES_PATH=${{APK_PACKAGES_PAGE}}/3.8
+      - APK_PACKAGES_PATH=${{APK_PACKAGES_PATH}}/3.8
     commands:
       - apk add alpine-sdk
       - rm -rf "${APK_PACKAGES_PATH}"
