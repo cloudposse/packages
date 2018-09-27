@@ -1,6 +1,7 @@
 # Build Environment
 export ARCH ?= amd64
 export OS ?= $(shell uname -s | tr '[:upper:]' '[:lower:'])
+export OS_ARCH ?= $(shell uname -m)
 export INSTALL_PATH ?= /usr/local/bin
 export CURL ?= curl --fail -sSL
 export PATH := $(PATH):../../bin/
@@ -9,9 +10,10 @@ export TMP ?= /tmp
 
 # Package details
 export NAME ?= $(notdir $(CURDIR))
-export DESCRIPTION ?= $(shell cat DESCRIPTION)
-export VERSION ?= $(shell cat VERSION)
-export LICENSE ?= $(shell cat LICENSE)
+export DESCRIPTION ?= $(shell cat DESCRIPTION 2>/dev/null)
+export VERSION ?= $(shell cat VERSION 2>/dev/null)
+export RELEASE ?= $(shell cat RELEASE 2>/dev/null)
+export LICENSE ?= $(shell cat LICENSE 2>/dev/null)
 export HOMEPAGE_URL ?= https://github.com/$(VENDOR)/$(PACKAGE)
 export DOWNLOAD_URL ?= $(REPO_URL)/releases/download/$(VERSION)/$(NAME)_$(OS)-$(ARCH)-slim
 export REPO_URL ?= https://github.com/$(VENDOR)/$(NAME)
@@ -26,12 +28,22 @@ update/description:
 	@github-repo-metadata $(VENDOR) $(NAME) "index" .description | tee DESCRIPTION
 
 update/version:
-	@github-repo-metadata $(VENDOR) $(NAME) "releases/latest" .tag_name | tee VERSION
+	@github-repo-metadata $(VENDOR) $(NAME) "releases/latest" .tag_name | sed 's/^v//' | tee VERSION
 
 update/license:
 	@github-repo-metadata $(VENDOR) $(NAME) "license" .license.spdx_id | tr '[:lower:]' '[:upper:]' | tee LICENSE
 
-update: update/version update/license update/description
+update/release:
+	@if [ ! -f RELEASE ]; then \
+		echo "0" | tee RELEASE; \
+	elif [ -n "$$(git status -s `pwd` | grep -v RELEASE)" ]; then \
+		if [ -z "$$(git status -s `pwd` | grep RELEASE)" ]; then \
+			echo "$$(($${RELEASE}+1))" | tee RELEASE; \
+			git add RELEASE; \
+		fi; \
+	fi
+
+update: update/version update/license update/description update/release
 	@exit 0
 
 info:

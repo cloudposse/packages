@@ -2,7 +2,7 @@
 # Maintainer: Cloud Posse, LLC <hello@cloudposse.com>
 pkgname=${NAME}
 pkgver=${VERSION}
-pkgrel=0
+pkgrel=${RELEASE}
 pkgdesc="${DESCRIPTION}"
 builddir="$srcdir"
 exe=$(basename ${DOWNLOAD_URL})
@@ -15,13 +15,14 @@ url=${HOMEPAGE_URL}
 
 # Can be one of: x86, x86_64, armhf, aarch64, ppc64le, s390x, all, or noarch
 #arch=noarch
-arch=x86_64
+arch=${OS_ARCH}
 
 # https://wiki.alpinelinux.org/wiki/APKBUILD_Reference#license
 license=${LICENSE}
 
 depends=
 #depends_dev=curl make
+
 options="!strip" 
 
 # The source variable is not only used to list the remote source files to fetch, it is also used to list the local files that abuild will need in order to build the apk.

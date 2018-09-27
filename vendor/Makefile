@@ -15,3 +15,6 @@ build:
 	$(MAKE) --no-print-directory -s list/updated | \
 		xargs -n 1 -I{} -- make --no-print-directory -C {} apk
 
+## Update all packages
+update:
+	find . -mindepth 1 -maxdepth 1 -type d | xargs -I{} make -C {} update

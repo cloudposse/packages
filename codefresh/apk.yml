@@ -4,20 +4,43 @@ steps:
   init_variables:
     title: Init variables
     image: alpine
+    working_directory: .
     commands:
       - cf_export CURRENT_BRANCH=${{CF_BRANCH}}
       - cf_export APK_PACKAGES_PATH=${{CF_VOLUME_PATH}}/artifacts
+      - echo "${{KEY_RSA}}" | base64 -d > key.rsa
+      - echo "${{KEY_RSA_PUB}}" | base64 -d > key.rsa.pub
 
-  build:
-    title: Build alpine packages
+  build_3_7:
+    title: Build alpine 3.7 packages
+    image: alpine:3.7
+    working_directory: .
+    environment:
+      - APK_PACKAGES_PATH=${{APK_PACKAGES_PAGE}}/3.7
+    commands:
+      - apk add alpine-sdk
+      - rm -rf "${APK_PACKAGES_PATH}"
+      - make -C vendor build
+      - find "${APK_PACKAGES_PATH}" -type f -name '*.apk' | xargs ls -l 
+
+  build_3_8:
+    title: Build alpine 3.8 packages
+    image: alpine:3.8
+    working_directory: .
+    environment:
+      - APK_PACKAGES_PATH=${{APK_PACKAGES_PAGE}}/3.8
+    commands:
+      - apk add alpine-sdk
+      - rm -rf "${APK_PACKAGES_PATH}"
+      - make -C vendor build
+      - find "${APK_PACKAGES_PATH}" -type f -name '*.apk' | xargs ls -l 
+
+  push:
+    title: Push all apk artifacts to S3
     image: alpine:3.8
     working_directory: .
     commands:
-      - rm -rf "${APK_PACKAGES_PATH}"
-      - echo "${{KEY_RSA}}" | base64 -d > key.rsa
-      - echo "${{KEY_RSA_PUB}}" | base64 -d > key.rsa.pub
-      - apk add alpine-sdk
-      - make -C vendor build
       - find "${APK_PACKAGES_PATH}" -type f -name '*.apk' | xargs ls -l 
+
 
 # sync files to S3 bucket
