@@ -13,7 +13,7 @@ list/updated:
 ## Build all updated alpine packages
 build:
 	$(MAKE) --no-print-directory -s list/updated | \
-		xargs -n 1 -I{} -- make --no-print-directory -C {} apk
+		xargs -n 1 -I{} -- make --no-print-directory -C {} info apk
 
 ## Update all packages
 update:

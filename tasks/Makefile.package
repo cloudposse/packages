@@ -15,7 +15,6 @@ export VERSION ?= $(shell cat VERSION 2>/dev/null)
 export RELEASE ?= $(shell cat RELEASE 2>/dev/null)
 export LICENSE ?= $(shell cat LICENSE 2>/dev/null)
 export HOMEPAGE_URL ?= https://github.com/$(VENDOR)/$(PACKAGE)
-export DOWNLOAD_URL ?= $(REPO_URL)/releases/download/$(VERSION)/$(NAME)_$(OS)-$(ARCH)-slim
 export REPO_URL ?= https://github.com/$(VENDOR)/$(NAME)
 
 # Macro to download a github binary release
