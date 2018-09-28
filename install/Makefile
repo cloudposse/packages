@@ -40,7 +40,7 @@ all: awless \
 	terraform \
 	terraform-docs \
 	terragrunt \
-	yq 
+	yq
 
 export AWLESS_VERSION ?= 0.1.11
 # Releases: https://github.com/wallix/awless/releases
@@ -66,7 +66,7 @@ aws-iam-authenticator:
 
 export CFSSL_VERSION ?= 1.3.2
 # Releases: https://github.com/cloudflare/cfssl/releases
-## Install cfssl - Cloudflare's PKI and TLS toolkit 
+## Install cfssl - Cloudflare's PKI and TLS toolkit
 cfssl:
 	@echo "The '$@' package is only availble in cloudposse/packages docker image"
 
@@ -98,7 +98,7 @@ fetch:
 export FIGURINE_VERSION ?= 0.2.2
 # Releases: https://github.com/arsham/figurine/releases
 ## Install figurine to generate fancy colorized ASCII banners
-figurine: 
+figurine:
 	$(CURL) -o - https://github.com/arsham/figurine/releases/download/v$(FIGURINE_VERSION)/figurine_$(OS)_v$(FIGURINE_VERSION).tar.gz | tar -zxO  figurine > $(INSTALL_PATH)/figurine
 	chmod +x $(INSTALL_PATH)/figurine
 
@@ -160,7 +160,7 @@ htmltest-darwin:
 
 ## Install htmltest (linux)
 htmltest-linux:
-	$(CURL) -o - https://github.com/wjdp/htmltest/releases/download/v$(HTMLTEST_VERSION)/htmltest_$(HTMLTEST_VERSION)_$(OS)_$(ARCH).tar.gz | tar -C $(INSTALL_PATH) -zx htmltest 
+	$(CURL) -o - https://github.com/wjdp/htmltest/releases/download/v$(HTMLTEST_VERSION)/htmltest_$(HTMLTEST_VERSION)_$(OS)_$(ARCH).tar.gz | tar -C $(INSTALL_PATH) -zx htmltest
 	chmod +x $(INSTALL_PATH)/htmltest
 
 # Releases: https://github.com/wjdp/htmltest/releases
@@ -196,7 +196,7 @@ export KOPS_VERSION ?= 1.10.0
 kops:
 	$(call github_download_binary_release,kubernetes,$(KOPS_VERSION),$@-$(OS)-$(ARCH))
 
-export KUBECTL_VERSION ?= 1.9.1
+export KUBECTL_VERSION ?= 1.12.0
 # Releases: https://github.com/kubernetes/kubernetes/releases
 ## Install kubectl
 kubectl:
@@ -231,11 +231,11 @@ packer:
 	unzip -p $(INSTALL_PATH)/$@.zip $@ > $(INSTALL_PATH)/$@
 	rm $(INSTALL_PATH)/$@.zip
 	chmod +x $(INSTALL_PATH)/$@
-	
+
 export SHELLCHECK_VERSION ?= 0.5.0
 # Releases: https://github.com/koalaman/shellcheck/releasess
-## Install shellcheck static analysis tool for shell scripts 
-shellcheck: 
+## Install shellcheck static analysis tool for shell scripts
+shellcheck:
 	$(CURL) -o - https://storage.googleapis.com/shellcheck/shellcheck-v$(SHELLCHECK_VERSION).$(OS).x86_64.tar.xz | tar -xJO shellcheck-v$(SHELLCHECK_VERSION)/shellcheck > $(INSTALL_PATH)/shellcheck
 	chmod +x $(INSTALL_PATH)/shellcheck
 
