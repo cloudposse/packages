@@ -5,10 +5,13 @@ steps:
     title: Init variables
     image: alpine
     working_directory: .
+    environment:
+      - APK_PACKAGES_PATH=${{CF_VOLUME_PATH}}/artifacts
     commands:
       - cf_export CURRENT_BRANCH=${{CF_BRANCH}}
       - echo "${{KEY_RSA}}" | base64 -d > key.rsa
       - echo "${{KEY_RSA_PUB}}" | base64 -d > key.rsa.pub
+      - rm -rf "${APK_PACKAGES_PATH}"
 
   build_3_7:
     title: Build alpine 3.7 packages
@@ -17,9 +20,7 @@ steps:
     environment:
       - APK_PACKAGES_PATH=${{CF_VOLUME_PATH}}/artifacts/3.7
     commands:
-      - export | grep APK
       - apk add alpine-sdk
-      - rm -rf "${APK_PACKAGES_PATH}"
       - make -C vendor build
       - find "${APK_PACKAGES_PATH}" -type f -name '*.apk' | xargs ls -l 
 
@@ -30,9 +31,7 @@ steps:
     environment:
       - APK_PACKAGES_PATH=${{CF_VOLUME_PATH}}/artifacts/3.8
     commands:
-      - export | grep APK
       - apk add alpine-sdk
-      - rm -rf "${APK_PACKAGES_PATH}"
       - make -C vendor build
       - find "${APK_PACKAGES_PATH}" -type f -name '*.apk' | xargs ls -l 
 
