@@ -18,6 +18,7 @@ steps:
     environment:
       - APK_PACKAGES_PATH=${APK_PACKAGES_PATH}/3.7
     commands:
+      - export | grep APK
       - apk add alpine-sdk
       - rm -rf "${APK_PACKAGES_PATH}"
       - make -C vendor build
@@ -30,6 +31,7 @@ steps:
     environment:
       - APK_PACKAGES_PATH=${APK_PACKAGES_PATH}/3.8
     commands:
+      - export | grep APK
       - apk add alpine-sdk
       - rm -rf "${APK_PACKAGES_PATH}"
       - make -C vendor build
