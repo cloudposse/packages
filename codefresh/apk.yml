@@ -7,7 +7,6 @@ steps:
     working_directory: .
     commands:
       - cf_export CURRENT_BRANCH=${{CF_BRANCH}}
-      - cf_export APK_PACKAGES_PATH=${{CF_VOLUME_PATH}}/artifacts
       - echo "${{KEY_RSA}}" | base64 -d > key.rsa
       - echo "${{KEY_RSA_PUB}}" | base64 -d > key.rsa.pub
 
@@ -16,7 +15,7 @@ steps:
     image: alpine:3.7
     working_directory: .
     environment:
-      - APK_PACKAGES_PATH=${APK_PACKAGES_PATH}/3.7
+      - APK_PACKAGES_PATH=${{CF_VOLUME_PATH}}/artifacts/3.7
     commands:
       - export | grep APK
       - apk add alpine-sdk
@@ -29,7 +28,7 @@ steps:
     image: alpine:3.8
     working_directory: .
     environment:
-      - APK_PACKAGES_PATH=${APK_PACKAGES_PATH}/3.8
+      - APK_PACKAGES_PATH=${{CF_VOLUME_PATH}}/artifacts/3.8
     commands:
       - export | grep APK
       - apk add alpine-sdk
@@ -42,6 +41,8 @@ steps:
     title: Push all apk artifacts to S3 bucket
     image: cloudposse/build-harness:${{BUILD_HARNESS_VERSION}}
     working_directory: ./
+    environment:
+      - APK_PACKAGES_PATH=${{CF_VOLUME_PATH}}/artifacts
     commands:
       - find "${APK_PACKAGES_PATH}" -type f -name '*.apk' | xargs ls -l 
 #      - aws s3 sync --delete --acl public-read --exact-timestamps "${APK_PACKAGES_PATH}/" "s3://$(S3_BUCKET_NAME)/"
