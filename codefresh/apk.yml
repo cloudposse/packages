@@ -44,7 +44,7 @@ steps:
       - APK_PACKAGES_PATH=${{CF_VOLUME_PATH}}/artifacts
     commands:
       - find "${APK_PACKAGES_PATH}" -type f -name '*.apk' | xargs ls -l 
-#      - aws s3 sync --delete --acl public-read --exact-timestamps "${APK_PACKAGES_PATH}/" "s3://$(S3_BUCKET_NAME)/"
+      - aws s3 sync --delete --acl public-read --exact-timestamps "${APK_PACKAGES_PATH}/" "s3://$(S3_BUCKET_NAME)/"
     when:
       condition:
         all:
