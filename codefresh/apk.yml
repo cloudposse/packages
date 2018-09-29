@@ -16,7 +16,7 @@ steps:
     image: alpine:3.7
     working_directory: .
     environment:
-      - APK_PACKAGES_PATH=${{APK_PACKAGES_PATH}}/3.7
+      - APK_PACKAGES_PATH=${APK_PACKAGES_PATH}/3.7
     commands:
       - apk add alpine-sdk
       - rm -rf "${APK_PACKAGES_PATH}"
@@ -28,19 +28,22 @@ steps:
     image: alpine:3.8
     working_directory: .
     environment:
-      - APK_PACKAGES_PATH=${{APK_PACKAGES_PATH}}/3.8
+      - APK_PACKAGES_PATH=${APK_PACKAGES_PATH}/3.8
     commands:
       - apk add alpine-sdk
       - rm -rf "${APK_PACKAGES_PATH}"
       - make -C vendor build
       - find "${APK_PACKAGES_PATH}" -type f -name '*.apk' | xargs ls -l 
 
-  push:
-    title: Push all apk artifacts to S3
-    image: alpine:3.8
-    working_directory: .
+  # Only deploy on tagged releases
+  deploy:
+    title: Push all apk artifacts to S3 bucket
+    image: cloudposse/build-harness:${{BUILD_HARNESS_VERSION}}
+    working_directory: ./
     commands:
       - find "${APK_PACKAGES_PATH}" -type f -name '*.apk' | xargs ls -l 
-
-
-# sync files to S3 bucket
+#      - aws s3 sync --delete --acl public-read --exact-timestamps "${APK_PACKAGES_PATH}/" "s3://$(S3_BUCKET_NAME)/"
+    when:
+      condition:
+        all:
+          executeForTag: "'${{BRANCH}}' == 'apk'"
