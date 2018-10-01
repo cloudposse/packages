@@ -48,4 +48,4 @@ steps:
     when:
       condition:
         all:
-          executeForTag: "'${{CF_BRANCH}}' == 'apk'"
+          executeForTag: "'${{CF_BRANCH}}' == 'master'"
