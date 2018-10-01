@@ -63,12 +63,12 @@ usage: |-
 
   You can use version pinning:
   ```
-  apk add gomplate==3.0.0
+  apk add gomplate==3.0.0-r0
   ```
 
   And even repository pinning:
   ```
-  apk add gomplate@cloudposse==3.0.0
+  apk add gomplate@cloudposse==3.0.0-r0
   ```
 
   ### Makefile Interface

@@ -3,7 +3,7 @@
   awless                              Install awless a powerful, innovative and small surface command line interface (CLI) to manage Amazon Web Services
   aws-iam-authenticator               Install aws-iam-authenticator
   aws-vault                           Install aws-vault to easily assume roles (not related to HashiCorp Vault)
-  cfssl                               Install cfssl - Cloudflare's PKI and TLS toolkit 
+  cfssl                               Install cfssl - Cloudflare's PKI and TLS toolkit
   chamber                             Install Chamber to manage secrets with SSM+KMS
   cloudflared                         Install cloudflared which offers an easy way to expose web servers securely to the internet(Argo Tunnel)
   ctop                                Install ctop which offers a top-like interface for container metrics
@@ -33,7 +33,7 @@
   kubens                              Install kubens
   lectl                               Install lectl script to check issued certificates by Let's Encrypt on CTL
   packer                              Install packer - a tool for creating identical machine images for multiple platforms from a single source configuration.
-  shellcheck                          Install shellcheck static analysis tool for shell scripts 
+  shellcheck                          Install shellcheck static analysis tool for shell scripts
   shfmt                               Install shfmt - shell parser, formatter and interpreter
   sops                                Install sops (required by `helm-secrets`)
   stern                               Install stern multi pod and container log tailing for Kubernetes
