@@ -16,10 +16,8 @@ export RELEASE ?= $(shell cat RELEASE 2>/dev/null)
 export LICENSE ?= $(shell cat LICENSE 2>/dev/null)
 export HOMEPAGE_URL ?= https://github.com/$(VENDOR)/$(PACKAGE)
 export REPO_URL ?= https://github.com/$(VENDOR)/$(NAME)
-<<<<<<< HEAD
-=======
 export CHECK_COMMAND_ARGUMENTS ?= --version
->>>>>>> 1c8cea5... refactor(*): rename variable, silence output
+export CHECK_COMMAND_ENV ?= 
 
 # Macro to download a github binary release
 # $(call github_download_binary_release,version,repo,asset)
