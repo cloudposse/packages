@@ -120,7 +120,7 @@ export GOMPLATE_VERSION ?= 3.0.0
 # Releases: https://github.com/hairyhenderson/gomplate/releases
 ## Install gomplate
 gomplate:
-	$(call github_download_binary_release,hairyhenderson,$(GOMPLATE_VERSION),$@_$(OS)-$(ARCH)-slim)
+	$(call github_download_binary_release,hairyhenderson,v$(GOMPLATE_VERSION),$@_$(OS)-$(ARCH)-slim)
 
 export GOOFYS_VERSION ?= 0.19.0
 # Releases: https://github.com/kahing/goofys/releases
