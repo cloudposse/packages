@@ -13,6 +13,7 @@ all: awless \
 	aws-iam-authenticator \
 	cfssl \
 	chamber \
+	cli53 \
 	cloudflared \
 	ctop \
 	fetch \
@@ -75,6 +76,15 @@ export CHAMBER_VERSION ?= 2.1.0
 ## Install Chamber to manage secrets with SSM+KMS
 chamber:
 	$(call github_download_binary_release,segmentio,v$(CHAMBER_VERSION),$@-v$(CHAMBER_VERSION)-$(OS)-$(ARCH))
+
+export CLI53_VERSION ?= 0.8.12
+# Releases: https://github.com/barnybug/cli53/releases
+## Install cli53 - command line tool for Amazon Route 53
+cli53:
+    ifeq ($(OS), darwin)
+	  $(eval OS := mac)
+    endif
+	$(call github_download_binary_release,barnybug,$(CLI53_VERSION),$@-$(OS)-$(ARCH))
 
 # Releases: https://developers.cloudflare.com/argo-tunnel/downloads/
 ## Install cloudflared which offers an easy way to expose web servers securely to the internet(Argo Tunnel)
