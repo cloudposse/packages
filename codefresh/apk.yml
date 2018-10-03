@@ -1,0 +1,51 @@
+version: '1.0'
+
+steps:
+  init_variables:
+    title: Init variables
+    image: alpine
+    working_directory: .
+    environment:
+      - APK_PACKAGES_PATH=${{CF_VOLUME_PATH}}/artifacts
+    commands:
+      - cf_export CURRENT_BRANCH=${{CF_BRANCH}}
+      - echo "${{KEY_RSA}}" | base64 -d > key.rsa
+      - echo "${{KEY_RSA_PUB}}" | base64 -d > key.rsa.pub
+      - rm -rf "${APK_PACKAGES_PATH}"
+
+  build_3_7:
+    title: Build alpine 3.7 packages
+    image: alpine:3.7
+    working_directory: .
+    environment:
+      - APK_PACKAGES_PATH=${{CF_VOLUME_PATH}}/artifacts/3.7
+    commands:
+      - apk add alpine-sdk
+      - make -C vendor build
+      - find "${APK_PACKAGES_PATH}" -type f -name '*.apk' | xargs ls -l 
+
+  build_3_8:
+    title: Build alpine 3.8 packages
+    image: alpine:3.8
+    working_directory: .
+    environment:
+      - APK_PACKAGES_PATH=${{CF_VOLUME_PATH}}/artifacts/3.8
+    commands:
+      - apk add alpine-sdk
+      - make -C vendor build
+      - find "${APK_PACKAGES_PATH}" -type f -name '*.apk' | xargs ls -l 
+
+  # Only deploy on tagged releases
+  deploy:
+    title: Push all apk artifacts to S3 bucket
+    image: cloudposse/build-harness:${{BUILD_HARNESS_VERSION}}
+    working_directory: ./
+    environment:
+      - APK_PACKAGES_PATH=${{CF_VOLUME_PATH}}/artifacts
+    commands:
+      - find "${APK_PACKAGES_PATH}" -type f -name '*.apk' | xargs ls -l 
+      - aws s3 sync --acl public-read --exact-timestamps "${APK_PACKAGES_PATH}/" "s3://${S3_BUCKET_NAME}/"
+    when:
+      condition:
+        all:
+          executeForTag: "'${{CF_BRANCH}}' == 'master'"
