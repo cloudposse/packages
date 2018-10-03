@@ -73,7 +73,7 @@ usage: |-
 
   ### Makefile Interface
   
-  The `Makefile` interface works on OSX and Linux. It's a great way to distribute binaries in a OS-agnostic way which does not depend on a package manager.
+  The `Makefile` interface works on OSX and Linux. It's a great way to distribute binaries in an OS-agnostic way which does not depend on a package manager.
 
   See all available packages:
   ```

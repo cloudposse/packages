@@ -36,7 +36,7 @@ prepare() {
 }
 
 # This is the compilation stage. 
-# This function will be called as the current use
+# Function will be called as the current user
 build() {
   cd "$builddir"
   ls -l
