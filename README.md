@@ -152,6 +152,7 @@ packages/uninstall/%:
   aws-vault                           Install aws-vault to easily assume roles (not related to HashiCorp Vault)
   cfssl                               Install cfssl - Cloudflare's PKI and TLS toolkit
   chamber                             Install Chamber to manage secrets with SSM+KMS
+  cli53                               Install cli53 - command line tool for Amazon Route 53
   cloudflared                         Install cloudflared which offers an easy way to expose web servers securely to the internet(Argo Tunnel)
   ctop                                Install ctop which offers a top-like interface for container metrics
   fetch                               Install fetch to easily download files, folders, and release assets from a specific git commit, branch, or tag
