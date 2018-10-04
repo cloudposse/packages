@@ -12,11 +12,11 @@ apk/prepare:
 	chmod 777 .
 
 apk/checksum:
-	sudo -E -u nobody abuild checksum
+	sudo -E -H -s -u nobody abuild checksum
 
 apk/build:
 	addgroup nobody abuild
-	sudo -E -u nobody abuild -c -r -P $(APK_PACKAGES_PATH)
+	sudo -E -H -s -u nobody abuild -c -r -P $(APK_PACKAGES_PATH)
 
 apk/clean:
 	rm -f APKBUILD 
