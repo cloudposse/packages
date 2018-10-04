@@ -32,5 +32,13 @@ push:
 run:
 	docker run -it ${DOCKER_IMAGE_NAME} sh
 
+## Build alpine packages for testing
+docker/build/apk:
+	docker run \
+		-e CURRENT_BRANCH=$$(git rev-parse --abbrev-ref HEAD) \
+		-v $$(pwd):/packages alpine:3.8 \
+		sh -c "apk add alpine-sdk && make -C /packages/vendor build"
+
+
 help/install:
 	@$(SELF) help/generate MAKEFILE_LIST=install/Makefile
