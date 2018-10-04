@@ -10,6 +10,7 @@ export TMP ?= /tmp
 
 # Package details
 export NAME ?= $(notdir $(CURDIR))
+export EXE ?= $(NAME)
 export DESCRIPTION ?= $(shell cat DESCRIPTION 2>/dev/null)
 export VERSION ?= $(shell cat VERSION 2>/dev/null)
 export RELEASE ?= $(shell cat RELEASE 2>/dev/null)

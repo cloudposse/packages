@@ -45,7 +45,7 @@ build() {
 # This function is called right after the build stage. 
 # It should check that the packaged thing is actually working
 check() {
-  "$srcdir"/$exe --version
+  make --no-print-directory -s test EXE=$srcdir/$exe >/dev/null
 }
 
 # This is the packaging stage. 
