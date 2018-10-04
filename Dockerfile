@@ -1,6 +1,5 @@
 # Install CFSSL from official cfssl.org binaries
-ARG CFSSL_VERSION=1.3.2
-FROM cfssl/cfssl:${CFSSL_VERSION} as cfssl
+FROM cfssl/cfssl:1.3.2 as cfssl
 
 # Install remaining packages
 FROM alpine:3.8
