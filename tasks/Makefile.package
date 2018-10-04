@@ -10,14 +10,13 @@ export TMP ?= /tmp
 
 # Package details
 export NAME ?= $(notdir $(CURDIR))
+export EXE ?= $(NAME)
 export DESCRIPTION ?= $(shell cat DESCRIPTION 2>/dev/null)
 export VERSION ?= $(shell cat VERSION 2>/dev/null)
 export RELEASE ?= $(shell cat RELEASE 2>/dev/null)
 export LICENSE ?= $(shell cat LICENSE 2>/dev/null)
 export HOMEPAGE_URL ?= https://github.com/$(VENDOR)/$(PACKAGE)
 export REPO_URL ?= https://github.com/$(VENDOR)/$(NAME)
-export CHECK_COMMAND_ARGUMENTS ?= --version
-export CHECK_COMMAND_ENV ?= 
 
 # Macro to download a github binary release
 # $(call github_download_binary_release,version,repo,asset)

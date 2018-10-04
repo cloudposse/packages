@@ -8,12 +8,14 @@ list/updated:
 		sort -u | \
 		grep -E '^vendor/' | \
 		sed 's,vendor/,,' | \
+		cut -d/ -f1 | \
+		sort -u | \
 		grep -E '.+'
 
 ## Build all updated alpine packages
 build:
 	$(MAKE) --no-print-directory -s list/updated | \
-		xargs -n 1 -I{} -- make --no-print-directory -C {} info apk
+		xargs -n 1 -I{} -- /bin/sh -c 'make --no-print-directory -C {} info apk || exit 255'
 
 ## Update all packages
 update:

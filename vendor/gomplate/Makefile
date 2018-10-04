@@ -9,3 +9,6 @@ export APK_BUILD_TEMPLATE ?= APKBUILD.github-binary
 install:
 	$(call download_binary)
 
+test:
+	$(EXE) --version
+
