@@ -12,9 +12,12 @@ list/updated:
 		sort -u | \
 		grep -E '.+'
 
+list/all:
+	find . -mindepth 1 -maxdepth 1 -type d | cut -d/ -f2
+
 ## Build all updated alpine packages
 build:
-	$(MAKE) --no-print-directory -s list/updated | \
+	$(MAKE) --no-print-directory -s list/all | \
 		xargs -n 1 -I{} -- /bin/sh -c 'make --no-print-directory -C {} info apk || exit 255'
 
 ## Update all packages
