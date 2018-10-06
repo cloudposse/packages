@@ -31,7 +31,10 @@ source="${DOWNLOAD_URL}"
 # Used for build preparation: patches, etc, should be applied here. 
 prepare() {
   default_prepare
-  chmod 755 ${exe}
+  if [ ! -f ${pkgname} ]; then
+    chmod 755 ${exe}
+    mv -f ${exe} ${pkgname}
+  fi
 }
 
 # This is the compilation stage. 
@@ -51,6 +54,6 @@ check() {
 # The built application and support files should be installed into $pkgdir.
 package() {
   mkdir -p "$pkgdir"/usr/bin
-  install -m 755 "$(realpath "$srcdir"/$exe)" "$pkgdir"/usr/bin/"$pkgname"
+  install -m 755 "$(realpath "$srcdir"/$pkgname)" "$pkgdir"/usr/bin/"$pkgname"
   ls -l "$pkgdir"/usr/bin
 }
