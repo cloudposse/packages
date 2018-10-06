@@ -23,6 +23,7 @@ all: \
 	github-commenter \
 	gomplate \
 	goofys \
+	gosu \
 	gotop \
 	helm \
 	helmfile \
@@ -148,6 +149,12 @@ export GOOFYS_VERSION ?= 0.19.0
 ## Install goofys
 goofys:
 	$(call github_download_binary_release,kahing,v$(GOOFYS_VERSION),$@)
+
+export GOSU_VERSION ?= 1.10
+# Releases: https://github.com/tianon/gosu/releases
+## Install gosu - Simple Go-based setuid+setgid+setgroups+exec
+gosu:
+	$(call github_download_binary_release,tianon,$(GOSU_VERSION),$@-$(ARCH))
 
 export GOTOP_VERSION ?= 1.4.1
 # Releases: https://github.com/cjbassi/gotop/releases
