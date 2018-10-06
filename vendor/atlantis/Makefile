@@ -10,5 +10,5 @@ install:
 	$(call download_binary)
 
 test:
-	$(EXE) --version
+	$(EXE) version
 
