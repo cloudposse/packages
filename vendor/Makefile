@@ -13,7 +13,7 @@ list/updated:
 		grep -E '.+'
 
 list/all:
-	find . -mindepth 1 -maxdepth 1 -type d | cut -d/ -f2
+	@find . -mindepth 1 -maxdepth 1 -type d | cut -d/ -f2
 
 ## Build all updated alpine packages
 build:
