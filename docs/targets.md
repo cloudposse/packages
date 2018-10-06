@@ -19,6 +19,7 @@
   gitleaks                            Install gitleaks to audit git repos for secrets
   gomplate                            Install gomplate
   goofys                              Install goofys
+  gosu                                Install gosu - Simple Go-based setuid+setgid+setgroups+exec
   gotop                               Install gotop which offers a terminal based graphical activity monitor inspired by gtop and vtop
   helm                                Install helm
   helmfile                            Install helmfile to easily deploy collections of helm charts
