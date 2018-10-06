@@ -47,7 +47,7 @@ all: \
 
 export ATLANTIS_VERSION ?= 0.4.10
 # Releases: https://github.com/runatlantis/atlantis/releases
-## Install atlantis - Terrform for Teams
+## Install atlantis - Terraform for Teams
 atlantis:
 	$(CURL) -o - https://github.com/runatlantis/$@/releases/download/v$(ATLANTIS_VERSION)/$@_$(OS)_$(ARCH).zip > $(TMP)/$@.zip
 	unzip -p $(TMP)/$@.zip $@ > $(INSTALL_PATH)/$@
