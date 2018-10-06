@@ -37,7 +37,7 @@ docker/build/apk:
 	docker run \
 		-e CURRENT_BRANCH=$$(git rev-parse --abbrev-ref HEAD) \
 		-v $$(pwd):/packages alpine:3.8 \
-		sh -c "apk add alpine-sdk && make -C /packages/vendor build"
+		sh -c "apk add alpine-sdk shadow && make -C /packages/vendor build"
 
 
 help/install:

@@ -63,7 +63,7 @@ apk add gomplate@cloudposse==3.0.0-r0
 
 ### Makefile Interface
 
-The `Makefile` interface works on OSX and Linux. It's a great way to distribute binaries in a OS-agnostic way which does not depend on a package manager.
+The `Makefile` interface works on OSX and Linux. It's a great way to distribute binaries in an OS-agnostic way which does not depend on a package manager.
 
 See all available packages:
 ```
@@ -147,6 +147,7 @@ packages/uninstall/%:
 
 ## Makefile Targets
 ```
+  atlantis                            Install atlantis - Terraform for Teams
   awless                              Install awless a powerful, innovative and small surface command line interface (CLI) to manage Amazon Web Services
   aws-iam-authenticator               Install aws-iam-authenticator
   aws-vault                           Install aws-vault to easily assume roles (not related to HashiCorp Vault)

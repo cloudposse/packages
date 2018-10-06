@@ -8,7 +8,9 @@ TMP ?= /tmp
 # $(call github_download_binary_release,version,repo,asset)
 github_download_binary_release = $(CURL) -o $(INSTALL_PATH)/$@ https://github.com/$(1)/$@/releases/download/$(2)/$(3) && chmod +x $(INSTALL_PATH)/$@
 
-all: awless \
+all: \
+	atlantis \
+	awless \
 	aws-vault \
 	aws-iam-authenticator \
 	cfssl \
@@ -42,6 +44,15 @@ all: awless \
 	terraform-docs \
 	terragrunt \
 	yq
+
+export ATLANTIS_VERSION ?= 0.4.10
+# Releases: https://github.com/runatlantis/atlantis/releases
+## Install atlantis - Terraform for Teams
+atlantis:
+	$(CURL) -o - https://github.com/runatlantis/$@/releases/download/v$(ATLANTIS_VERSION)/$@_$(OS)_$(ARCH).zip > $(TMP)/$@.zip
+	unzip -p $(TMP)/$@.zip $@ > $(INSTALL_PATH)/$@
+	rm $(TMP)/$@.zip
+	chmod +x $(INSTALL_PATH)/$@
 
 export AWLESS_VERSION ?= 0.1.11
 # Releases: https://github.com/wallix/awless/releases

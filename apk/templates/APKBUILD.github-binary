@@ -28,7 +28,6 @@ options="!strip"
 # The source variable is not only used to list the remote source files to fetch, it is also used to list the local files that abuild will need in order to build the apk.
 source="${DOWNLOAD_URL}"
 
-
 # Used for build preparation: patches, etc, should be applied here. 
 prepare() {
   default_prepare
@@ -45,7 +44,7 @@ build() {
 # This function is called right after the build stage. 
 # It should check that the packaged thing is actually working
 check() {
-  make --no-print-directory -s test EXE=$srcdir/$exe >/dev/null
+  make --no-print-directory -s test PATH=$PATH:$srcdir >/dev/null
 }
 
 # This is the packaging stage. 
