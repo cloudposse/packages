@@ -1,5 +1,6 @@
 ## Makefile Targets
 ```
+  atlantis                            Install atlantis - Terrform for Teams
   awless                              Install awless a powerful, innovative and small surface command line interface (CLI) to manage Amazon Web Services
   aws-iam-authenticator               Install aws-iam-authenticator
   aws-vault                           Install aws-vault to easily assume roles (not related to HashiCorp Vault)
