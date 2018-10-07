@@ -1,5 +1,6 @@
 TARGET_BRANCH ?= master
 CURRENT_BRANCH ?= 
+BUILD_LIST_TARGET ?= list/all
 
 ## List all packages which have been updated relative to `master`
 list/updated:
@@ -17,7 +18,7 @@ list/all:
 
 ## Build all updated alpine packages
 build:
-	$(MAKE) --no-print-directory -s list/all | \
+	$(MAKE) --no-print-directory -s $(BUILD_LIST_TARGET) | \
 		xargs -n 1 -I{} -- /bin/sh -c 'make --no-print-directory -C {} info apk || exit 255'
 
 ## Update all packages
