@@ -12,7 +12,6 @@ export APKBUILD_DEPENDS += libc6-compat
 ## Install cloudflared which offers an easy way to expose web servers securely to the internet(Argo Tunnel)
 install:
 	$(call download_tarball)
-	chmod +x $(INSTALL_PATH)/cloudflared
 
 test:
 	$(EXE) --version
