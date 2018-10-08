@@ -5,7 +5,14 @@ pkgver=${VERSION}
 pkgrel=${RELEASE}
 pkgdesc="${DESCRIPTION}"
 builddir="$srcdir"
-exe=$(basename ${DOWNLOAD_URL})
+case $DOWNLOAD_URL in
+    *gz)
+      exe=$pkgname
+      ;;
+    *)
+      exe=$(basename ${DOWNLOAD_URL})
+      ;;
+esac
 
 # https://wiki.alpinelinux.org/wiki/APKBUILD_examples
 

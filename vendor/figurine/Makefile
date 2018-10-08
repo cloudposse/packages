@@ -10,7 +10,7 @@ export APKBUILD_DEPENDS += libc6-compat
 # Releases: https://github.com/arsham/figurine/releases
 ## Install figurine to generate fancy colorized ASCII banners
 install:
-	$(CURL) -o - $(DOWNLOAD_URL) | tar -zxO  figurine > $(INSTALL_PATH)/figurine
+	$(call download_tarball)
 	chmod +x $(INSTALL_PATH)/figurine
 
 test:
