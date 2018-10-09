@@ -163,7 +163,7 @@ gotop:
 	$(CURL) -o - https://github.com/cjbassi/gotop/releases/download/$(GOTOP_VERSION)/$@_$(GOTOP_VERSION)_$(OS)_$(ARCH).tgz | tar -zxO  gotop > $(INSTALL_PATH)/gotop
 	chmod +x $(INSTALL_PATH)/gotop
 
-export HELM_VERSION ?= 2.10.0
+export HELM_VERSION ?= 2.11.0
 ## Install helm
 helm:
 	mkdir -p $(TMP)/$@
