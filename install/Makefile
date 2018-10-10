@@ -39,6 +39,7 @@ all: \
 	shellcheck \
 	shfmt \
 	sops \
+	slack-notifier \
 	stern \
 	teleport \
 	terraform \
