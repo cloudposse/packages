@@ -20,7 +20,7 @@ steps:
     environment:
       - APK_PACKAGES_PATH=${{CF_VOLUME_PATH}}/artifacts/3.7
     commands:
-      - apk add alpine-sdk shadow
+      - apk add alpine-sdk shadow bash
       - make -C vendor build
       - find "${APK_PACKAGES_PATH}" -type f -name '*.apk' | xargs ls -l 
 
@@ -31,7 +31,7 @@ steps:
     environment:
       - APK_PACKAGES_PATH=${{CF_VOLUME_PATH}}/artifacts/3.8
     commands:
-      - apk add alpine-sdk shadow
+      - apk add alpine-sdk shadow bash
       - make -C vendor build
       - find "${APK_PACKAGES_PATH}" -type f -name '*.apk' | xargs ls -l 
 
