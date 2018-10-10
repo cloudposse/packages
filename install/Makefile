@@ -279,6 +279,12 @@ export SOPS_VERSION ?= 3.0.5
 sops:
 	$(call github_download_binary_release,mozilla,$(SOPS_VERSION),$@-$(SOPS_VERSION).$(OS))
 
+export SLACK_NOTIFIER_VERSION ?= 0.1.3
+# Releases: https://github.com/cloudposse/slack-notifier/releases
+## Install Slack notifier to send messages with attachments to Slack channels via Incoming Webhooks.
+slack-notifier:
+	$(call github_download_binary_release,cloudposse,$(SLACK_NOTIFIER_VERSION),$@_$(OS)_$(ARCH))
+
 export STERN_VERSION ?= 1.8.0
 ## Install stern multi pod and container log tailing for Kubernetes
 stern:
