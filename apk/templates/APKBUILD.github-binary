@@ -38,8 +38,8 @@ source="${DOWNLOAD_URL}"
 # Used for build preparation: patches, etc, should be applied here. 
 prepare() {
   default_prepare
+  chmod 755 ${exe}
   if [ ! -f ${pkgname} ]; then
-    chmod 755 ${exe}
     mv -f ${exe} ${pkgname}
   fi
 }
