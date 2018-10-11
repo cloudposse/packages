@@ -26,5 +26,5 @@ apk/clean:
 apk: apk/prepare apk/checksum apk/build apk/clean
 	@exit 0
 
-package/prepare: 
+package/prepare::
 	@exit 0

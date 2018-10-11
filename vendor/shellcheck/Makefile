@@ -12,5 +12,5 @@ install:
 test:
 	$(EXE) --version
 
-package/prepare:
+package/prepare::
 	mv src/shellcheck-v$(VERSION)/shellcheck src
