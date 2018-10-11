@@ -2,10 +2,9 @@ include ../../tasks/Makefile.package
 include ../../tasks/Makefile.apk
 
 # Package details
-export VENDOR ?= sahsanu
-export DOWNLOAD_URL ?= https://raw.githubusercontent.com/sahsanu/lectl/v$(VERSION)/lectl
+export VENDOR ?= mozilla
+export DOWNLOAD_URL ?= $(REPO_URL)/releases/download/$(VERSION)/$(NAME)-$(VERSION).$(OS)
 export APK_BUILD_TEMPLATE ?= APKBUILD.github-binary
-export APKBUILD_DEPENDS += util-linux
 
 install:
 	$(call download_binary)
