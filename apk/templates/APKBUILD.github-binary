@@ -38,6 +38,7 @@ source="${DOWNLOAD_URL}"
 # Used for build preparation: patches, etc, should be applied here. 
 prepare() {
   default_prepare
+  make --no-print-directory -s -C .. package/prepare
   chmod 755 ${exe}
   if [ ! -f ${pkgname} ]; then
     mv -f ${exe} ${pkgname}
