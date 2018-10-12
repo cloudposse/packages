@@ -5,7 +5,7 @@ include ../../tasks/Makefile.apk
 export VENDOR ?= sahsanu
 export DOWNLOAD_URL ?= https://raw.githubusercontent.com/sahsanu/lectl/v$(VERSION)/lectl
 export APK_BUILD_TEMPLATE ?= APKBUILD.github-binary
-export APKBUILD_DEPENDS += util-linux
+export APKBUILD_DEPENDS += util-linux bash
 
 install:
 	$(call download_binary)
