@@ -185,6 +185,7 @@ packages/uninstall/%:
   packer                              Install packer - a tool for creating identical machine images for multiple platforms from a single source configuration.
   shellcheck                          Install shellcheck static analysis tool for shell scripts
   shfmt                               Install shfmt - shell parser, formatter and interpreter
+  slack-notifier                      Install Slack notifier to send messages with attachments to Slack channels via Incoming Webhooks.
   sops                                Install sops (required by `helm-secrets`)
   stern                               Install stern multi pod and container log tailing for Kubernetes
   teleport                            Install Teleport
