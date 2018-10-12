@@ -5,7 +5,14 @@ pkgver=${VERSION}
 pkgrel=${RELEASE}
 pkgdesc="${DESCRIPTION}"
 builddir="$srcdir"
-exe=$(basename ${DOWNLOAD_URL})
+case $DOWNLOAD_URL in
+    *gz)
+      exe=$pkgname
+      ;;
+    *)
+      exe=$(basename ${DOWNLOAD_URL})
+      ;;
+esac
 
 # https://wiki.alpinelinux.org/wiki/APKBUILD_examples
 
@@ -20,7 +27,7 @@ arch=${OS_ARCH}
 # https://wiki.alpinelinux.org/wiki/APKBUILD_Reference#license
 license=${LICENSE}
 
-depends=
+depends=${APKBUILD_DEPENDS}
 #depends_dev=curl make
 
 options="!strip" 
@@ -31,8 +38,9 @@ source="${DOWNLOAD_URL}"
 # Used for build preparation: patches, etc, should be applied here. 
 prepare() {
   default_prepare
+  make --no-print-directory -s -C .. package/prepare
+  chmod 755 ${exe}
   if [ ! -f ${pkgname} ]; then
-    chmod 755 ${exe}
     mv -f ${exe} ${pkgname}
   fi
 }

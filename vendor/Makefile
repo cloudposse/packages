@@ -1,9 +1,10 @@
 TARGET_BRANCH ?= master
 CURRENT_BRANCH ?= 
+BUILD_LIST_TARGET ?= list/all
 
 ## List all packages which have been updated relative to `master`
 list/updated:
-	@git --no-pager diff --name-only origin/$(CURRENT_BRANCH) `git merge-base origin/$(CURRENT_BRANCH) origin/$(TARGET_BRANCH)` | \
+	@git --no-pager diff --name-only $(CURRENT_BRANCH) `git merge-base $(CURRENT_BRANCH) origin/$(TARGET_BRANCH)` | \
 		xargs -n 1 -r dirname | \
 		sort -u | \
 		grep -E '^vendor/' | \
@@ -17,7 +18,7 @@ list/all:
 
 ## Build all updated alpine packages
 build:
-	$(MAKE) --no-print-directory -s list/all | \
+	$(MAKE) --no-print-directory -s $(BUILD_LIST_TARGET) | \
 		xargs -n 1 -I{} -- /bin/sh -c 'make --no-print-directory -C {} info apk || exit 255'
 
 ## Update all packages
