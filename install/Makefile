@@ -39,6 +39,7 @@ all: \
 	shellcheck \
 	shfmt \
 	sops \
+	slack-notifier \
 	stern \
 	teleport \
 	terraform \
@@ -163,7 +164,7 @@ gotop:
 	$(CURL) -o - https://github.com/cjbassi/gotop/releases/download/$(GOTOP_VERSION)/$@_$(GOTOP_VERSION)_$(OS)_$(ARCH).tgz | tar -zxO  gotop > $(INSTALL_PATH)/gotop
 	chmod +x $(INSTALL_PATH)/gotop
 
-export HELM_VERSION ?= 2.10.0
+export HELM_VERSION ?= 2.11.0
 ## Install helm
 helm:
 	mkdir -p $(TMP)/$@
@@ -278,6 +279,12 @@ export SOPS_VERSION ?= 3.0.5
 ## Install sops (required by `helm-secrets`)
 sops:
 	$(call github_download_binary_release,mozilla,$(SOPS_VERSION),$@-$(SOPS_VERSION).$(OS))
+
+export SLACK_NOTIFIER_VERSION ?= 0.1.3
+# Releases: https://github.com/cloudposse/slack-notifier/releases
+## Install Slack notifier to send messages with attachments to Slack channels via Incoming Webhooks.
+slack-notifier:
+	$(call github_download_binary_release,cloudposse,$(SLACK_NOTIFIER_VERSION),$@_$(OS)_$(ARCH))
 
 export STERN_VERSION ?= 1.8.0
 ## Install stern multi pod and container log tailing for Kubernetes
