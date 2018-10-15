@@ -1,8 +1,21 @@
 version: '1.0'
-
+stages:
+  - Prepare
+  - Build
+  - Publish
 steps:
+  main_clone:
+    title: "Clone respository"
+    type: git-clone
+    stage: Prepare
+    description: "Initialize"
+    repo: ${{CF_REPO_OWNER}}/${{CF_REPO_NAME}}
+    git: CF-default
+    revision: ${{CF_REVISION}}
+
   init_variables:
     title: Init variables
+    stage: Prepare
     image: alpine
     working_directory: .
     environment:
@@ -13,31 +26,56 @@ steps:
       - echo "${{KEY_RSA_PUB}}" | base64 -d > key.rsa.pub
       - rm -rf "${APK_PACKAGES_PATH}"
 
+  alpine_3_7:
+    title: Building Docker Image for alpine 3.7
+    stage: Prepare
+    type: build
+    image_name: cloudposse/apkbuild-3.7
+    working_directory: ./
+    tag: '3.7'
+    dockerfile:
+      content: |-
+        FROM alpine:3.7
+        RUN apk add make alpine-sdk shadow
+
+  alpine_3_8:
+    title: Building Docker Image for alpine 3.8
+    stage: Prepare
+    type: build
+    image_name: cloudposse/apkbuild-3.8
+    working_directory: ./
+    tag: '3.8'
+    dockerfile:
+      content: |-
+        FROM alpine:3.8
+        RUN apk add make alpine-sdk shadow
+
   build_3_7:
     title: Build alpine 3.7 packages
-    image: alpine:3.7
+    stage: Build
+    image: ${{alpine_3_7}}
     working_directory: .
     environment:
       - APK_PACKAGES_PATH=${{CF_VOLUME_PATH}}/artifacts/3.7
     commands:
-      - apk add alpine-sdk shadow
       - make -C vendor build
       - find "${APK_PACKAGES_PATH}" -type f -name '*.apk' | xargs ls -l 
 
   build_3_8:
     title: Build alpine 3.8 packages
-    image: alpine:3.8
+    stage: Build
+    image: ${{alpine_3_8}}
     working_directory: .
     environment:
       - APK_PACKAGES_PATH=${{CF_VOLUME_PATH}}/artifacts/3.8
     commands:
-      - apk add alpine-sdk shadow
       - make -C vendor build
       - find "${APK_PACKAGES_PATH}" -type f -name '*.apk' | xargs ls -l 
 
-  # Only deploy on tagged releases
-  deploy:
+  # Only deploy on merge to master
+  publish:
     title: Push all apk artifacts to S3 bucket
+    stage: Publish
     image: cloudposse/build-harness:${{BUILD_HARNESS_VERSION}}
     working_directory: ./
     environment:

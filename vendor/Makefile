@@ -2,6 +2,10 @@ TARGET_BRANCH ?= master
 CURRENT_BRANCH ?= 
 BUILD_LIST_TARGET ?= list/all
 
+## Install alpine build deps
+deps:
+	apk add alpine-sdk shadow
+
 ## List all packages which have been updated relative to `master`
 list/updated:
 	@git --no-pager diff --name-only $(CURRENT_BRANCH) `git merge-base $(CURRENT_BRANCH) origin/$(TARGET_BRANCH)` | \
