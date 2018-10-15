@@ -30,7 +30,7 @@ steps:
     title: Building Docker Image for alpine 3.7
     stage: Prepare
     type: build
-    image_name: cloudposse/apkbuild
+    image_name: cloudposse/apkbuild-3.7
     working_directory: ./
     tag: '3.7'
     dockerfile:
@@ -42,7 +42,7 @@ steps:
     title: Building Docker Image for alpine 3.8
     stage: Prepare
     type: build
-    image_name: cloudposse/apkbuild
+    image_name: cloudposse/apkbuild-3.8
     working_directory: ./
     tag: '3.8'
     dockerfile:
