@@ -34,9 +34,11 @@ steps:
     working_directory: ./
     tag: '3.7'
     dockerfile:
-      content: >-
+      content: |-
         FROM alpine:3.7 AS builder
         RUN apk add make
+        COPY . /packages
+        WORKDIR /packages
         RUN make -C vendor deps
 
   alpine_3_8:
