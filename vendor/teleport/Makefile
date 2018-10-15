@@ -17,6 +17,6 @@ test:
 	tctl version
 
 package/prepare::
-	echo "make package/prepare ($(EXE))"
+	@echo "make package/prepare ($(EXE))"
 	mv src/teleport src/dist
 	echo $(EXE) | tr ' ' '\n' | xargs -t -I{} -n1 mv -f src/dist/{} src/
