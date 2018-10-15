@@ -46,7 +46,7 @@ steps:
     working_directory: ./
     tag: '3.8'
     dockerfile:
-      content: >-
+      content: |-
         FROM alpine:3.8
         RUN apk add make alpine-sdk shadow
 
