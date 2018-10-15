@@ -30,7 +30,7 @@ steps:
     title: Building Docker Image for alpine 3.7
     stage: Prepare
     type: build
-    image_name: cloudposse/apkbuild:3.7
+    image_name: cloudposse/apkbuild
     working_directory: ./
     tag: '3.7'
     dockerfile:
@@ -43,7 +43,7 @@ steps:
     title: Building Docker Image for alpine 3.8
     stage: Prepare
     type: build
-    image_name: cloudposse/apkbuild:3.8
+    image_name: cloudposse/apkbuild
     working_directory: ./
     tag: '3.8'
     dockerfile:
@@ -78,6 +78,7 @@ steps:
   # Only deploy on merge to master
   publish:
     title: Push all apk artifacts to S3 bucket
+    stage: Publish
     image: cloudposse/build-harness:${{BUILD_HARNESS_VERSION}}
     working_directory: ./
     environment:
