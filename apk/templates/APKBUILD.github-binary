@@ -5,14 +5,7 @@ pkgver=${VERSION}
 pkgrel=${RELEASE}
 pkgdesc="${DESCRIPTION}"
 builddir="$srcdir"
-case $DOWNLOAD_URL in
-    *gz)
-      exe=$pkgname
-      ;;
-    *)
-      exe=$(basename ${DOWNLOAD_URL})
-      ;;
-esac
+exe=$EXE
 
 # https://wiki.alpinelinux.org/wiki/APKBUILD_examples
 
@@ -35,21 +28,39 @@ options="!strip"
 # The source variable is not only used to list the remote source files to fetch, it is also used to list the local files that abuild will need in order to build the apk.
 source="${DOWNLOAD_URL}"
 
+unpack() {
+  default_unpack
+  echo "Unpack"
+  echo " buildir: $builddir"
+  echo " srcdir: $srcdir"
+  ls -l $srcdir
+}
+
 # Used for build preparation: patches, etc, should be applied here. 
 prepare() {
+  echo "Prepare"
+  echo " pkgname: $pkgname"
+  echo " buildir: $builddir"
+  echo " srcdir: $srcdir"
+  echo " exit: $exe"
+  echo " pwd: $(pwd)"
   default_prepare
   make --no-print-directory -s -C .. package/prepare
-  chmod 755 ${exe}
+  ls -l
   if [ ! -f ${pkgname} ]; then
-    mv -f ${exe} ${pkgname}
+    pkg=${exe}*
+    echo "Renaming $pkg to ${pkgname}"
+    mv -f ${pkg} ${pkgname}
   fi
+  chmod 755 ${exe}
 }
 
 # This is the compilation stage. 
 # Function will be called as the current user
 build() {
   cd "$builddir"
-  ls -l
+  echo "Build dir"
+  ls -l $(pwd)
 }
 
 # This function is called right after the build stage. 
@@ -62,6 +73,8 @@ check() {
 # The built application and support files should be installed into $pkgdir.
 package() {
   mkdir -p "$pkgdir"/usr/bin
-  install -m 755 "$(realpath "$srcdir"/$pkgname)" "$pkgdir"/usr/bin/"$pkgname"
+  for cmd in ${exe}; do 
+    install -m 755 "$(realpath "$srcdir"/$cmd)" "$pkgdir"/usr/bin/"$cmd"
+  done
   ls -l "$pkgdir"/usr/bin
 }
