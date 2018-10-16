@@ -2,9 +2,9 @@ include ../../tasks/Makefile.package
 include ../../tasks/Makefile.apk
 
 ifeq ($(OS), darwin)
-  $(eval EXTENSION := zip)
+	EXTENSION=zip
 else
-  $(eval EXTENSION := tar.gz)
+  EXTENSION=tar.gz
 endif
 
 # Package details

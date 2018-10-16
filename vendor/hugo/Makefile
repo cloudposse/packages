@@ -2,9 +2,9 @@ include ../../tasks/Makefile.package
 include ../../tasks/Makefile.apk
 
 ifeq ($(OS), darwin)
-  $(eval OS := macOS)
+  OS=macOS
 else
-  $(eval OS := Linux)
+  OS=Linux
 endif
 
 # Package details
