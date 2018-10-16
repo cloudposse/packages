@@ -7,7 +7,7 @@ export DOWNLOAD_URL ?= https://releases.hashicorp.com/$(NAME)/$(VERSION)/$(NAME)
 export APK_BUILD_TEMPLATE ?= APKBUILD.github-binary
 
 install:
-	$(CURL) -o - https://releases.hashicorp.com/$(NAME)/$(PACKER_VERSION)/$(NAME)_$(PACKER_VERSION)_$(OS)_$(ARCH).zip > $(INSTALL_PATH)/$(NAME).zip
+	$(CURL) -o - $(DOWNLOAD_URL) > $(INSTALL_PATH)/$(NAME).zip
 	unzip -p $(INSTALL_PATH)/$(NAME).zip $(NAME) > $(INSTALL_PATH)/$(NAME)
 	rm $(INSTALL_PATH)/$(NAME).zip
 	chmod +x $(INSTALL_PATH)/$(NAME)

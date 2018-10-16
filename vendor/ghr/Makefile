@@ -16,13 +16,13 @@ install: install-$(OS)
 	@exit 0
 
 install-darwin:
-	$(CURL) -o - https://github.com/tcnksm/ghr/releases/download/v$(VERSION)/ghr_v$(VERSION)_darwin_$(ARCH).zip > $(INSTALL_PATH)/ghr.zip
+	$(CURL) -o - $(DOWNLOAD_URL) > $(INSTALL_PATH)/ghr.zip
 	unzip -p $(INSTALL_PATH)/ghr.zip */ghr > $(INSTALL_PATH)/ghr
 	rm $(INSTALL_PATH)/ghr.zip
 	chmod +x $(INSTALL_PATH)/ghr
 
 install-linux:
-	$(CURL) -o - https://github.com/tcnksm/ghr/releases/download/v$(VERSION)/ghr_v$(VERSION)_linux_$(ARCH).tar.gz | tar --wildcards -zxO */ghr > $(INSTALL_PATH)/ghr
+	$(CURL) -o - $(DOWNLOAD_URL) | tar --wildcards -zxO */ghr > $(INSTALL_PATH)/ghr
 	chmod +x $(INSTALL_PATH)/ghr
 
 test:
