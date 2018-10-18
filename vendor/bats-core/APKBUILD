@@ -1,0 +1,84 @@
+# Contributor: Cloud Posse, LLC <hello@cloudposse.com>
+# Maintainer: Cloud Posse, LLC <hello@cloudposse.com>
+pkgname=${NAME}
+pkgver=${VERSION}
+pkgrel=${RELEASE}
+pkgdesc="${DESCRIPTION}"
+builddir="$srcdir"
+exe=$EXE
+
+# https://wiki.alpinelinux.org/wiki/APKBUILD_examples
+
+# The homepage for the package. 
+# This is to help users find upstream documentation and other information regarding the package.
+url=${HOMEPAGE_URL}
+
+# Can be one of: x86, x86_64, armhf, aarch64, ppc64le, s390x, all, or noarch
+#arch=noarch
+arch=${OS_ARCH}
+
+# https://wiki.alpinelinux.org/wiki/APKBUILD_Reference#license
+license=${LICENSE}
+
+depends=${APKBUILD_DEPENDS}
+#depends_dev=curl make
+
+options="!strip" 
+
+# The source variable is not only used to list the remote source files to fetch, it is also used to list the local files that abuild will need in order to build the apk.
+source="${DOWNLOAD_URL}"
+
+unpack() {
+  default_unpack
+  echo "Unpack"
+  echo " buildir: $builddir"
+  echo " srcdir: $srcdir"
+  ls -l $srcdir
+}
+
+# Used for build preparation: patches, etc, should be applied here. 
+prepare() {
+  echo "Prepare"
+  echo " pkgname: $pkgname"
+  echo " buildir: $builddir"
+  echo " srcdir: $srcdir"
+  echo " exit: $exe"
+  echo " pwd: $(pwd)"
+  default_prepare
+  make --no-print-directory -s -C .. package/prepare
+  ls -l
+  if [ ! -f ${pkgname} ]; then
+    pkg=${exe}*
+    echo "Renaming $pkg to ${pkgname}"
+    mv -f ${pkg} ${pkgname}
+  fi
+  chmod 755 ${exe}
+}
+sanitycheck(){
+  echo alllah
+}
+
+# This is the compilation stage. 
+# Function will be called as the current user
+build() {
+  cd "$builddir"
+  echo "Build dir"
+  ls -l $(pwd)
+}
+
+# This function is called right after the build stage. 
+# It should check that the packaged thing is actually working
+check() {
+  make --no-print-directory -s test PATH=$PATH:$srcdir >/dev/null
+}
+
+# This is the packaging stage. 
+# The built application and support files should be installed into $pkgdir.
+package() {
+  mkdir -p "$pkgdir"/usr/bin
+  for cmd in ${exe}; do 
+    install -m 755 "$(realpath "$srcdir"/$cmd)" "$pkgdir"/usr/bin/"$cmd"
+  done
+  ls -l "$pkgdir"/usr/bin
+}
+sha512sums="a0776002c79915343e8fb56fa02414b96619338c86bd35e8522fe49c0e2b3e6e9f7d445de9d3782a2c87c044708571d69327716035250c2927ac4803bdd54031  v1.1.0.tar.gz"
