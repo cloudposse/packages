@@ -6,6 +6,7 @@ export NAME ?= bats
 
 include ../../tasks/Makefile.package
 include ../../tasks/Makefile.apk
+export APKBUILD_DEPENDS += bash
 
 
 install: 
