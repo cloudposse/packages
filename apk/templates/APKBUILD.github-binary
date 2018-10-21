@@ -27,6 +27,7 @@ options="!strip"
 
 # The source variable is not only used to list the remote source files to fetch, it is also used to list the local files that abuild will need in order to build the apk.
 source="${DOWNLOAD_URL}"
+source_filename=$(basename $DOWNLOAD_URL)
 
 unpack() {
   default_unpack
@@ -39,19 +40,30 @@ unpack() {
 # Used for build preparation: patches, etc, should be applied here. 
 prepare() {
   echo "Prepare"
+  echo " source_filename: $source_filename"
   echo " pkgname: $pkgname"
   echo " buildir: $builddir"
   echo " srcdir: $srcdir"
-  echo " exit: $exe"
+  echo " exe: $exe"
   echo " pwd: $(pwd)"
   default_prepare
   make --no-print-directory -s -C .. package/prepare
   ls -l
-  if [ ! -f ${pkgname} ]; then
-    pkg=${exe}*
-    echo "Renaming $pkg to ${pkgname}"
-    mv -f ${pkg} ${pkgname}
-  fi
+
+  case "${exe}" in 
+  *" "*)
+    echo "Not renaming ${source_filename} => ${exe}..."
+    ;;
+  *)
+    if [ "${source_filename}" != "${exe}" ]; then
+      if [ ! -f "${exe}" ]; then
+        echo "Renaming ${source_filename} to ${exe}"
+        mv -f "${source_filename}" "${exe}"
+      fi
+    fi
+    ;;
+  esac
+
   chmod 755 ${exe}
 }
 
