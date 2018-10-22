@@ -19,7 +19,7 @@ apk/build:
 	addgroup nobody abuild
 	sudo -E -H -u nobody abuild -c -r -P $(APK_PACKAGES_PATH)
 
-apk/clean:
+apk/clean::
 	rm -f APKBUILD 
 	@find $(APK_PACKAGES_PATH) -type f -name APKINDEX.tar.gz -delete
 
@@ -27,4 +27,7 @@ apk: apk/prepare apk/checksum apk/build apk/clean
 	@exit 0
 
 package/prepare::
+	@exit 0
+
+package/install::
 	@exit 0

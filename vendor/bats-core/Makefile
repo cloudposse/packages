@@ -6,8 +6,6 @@ export NAME ?= bats
 
 include ../../tasks/Makefile.package
 include ../../tasks/Makefile.apk
-export APKBUILD_DEPENDS += bash
-
 
 install: 
 	$(CURL) -O $(REPO_URL)/archive/v$(VERSION).tar.gz
@@ -22,3 +20,14 @@ test:
 package/prepare::
 	src/bats-core-$(VERSION)/install.sh src
 	mv src/bin/bats src
+	mv src/libexec . 
+
+package/install::
+	for file in libexec/bats-core/* ; do \
+		install -m 755 $$file /usr/libexec/bats-core ; \
+	done
+
+apk/clean::
+	rm -f APKBUILD 
+	rm -rf $(PWD)/bats-core/libexec
+	@find $(APK_PACKAGES_PATH) -type f -name APKINDEX.tar.gz -delete
