@@ -76,6 +76,6 @@ package() {
   for cmd in ${exe}; do 
     install -m 755 "$(realpath "$srcdir"/$cmd)" "$pkgdir"/usr/bin/"$cmd"
   done
-  make --no-print-directory package/install
+  make --no-print-directory package/install pkgdir=$pkgdir
   ls -l "$pkgdir"/usr/bin
 }

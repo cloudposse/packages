@@ -23,8 +23,9 @@ package/prepare::
 	mv src/libexec . 
 
 package/install::
+	mkdir $(pkgdir)/usr/libexec
 	for file in libexec/bats-core/* ; do \
-		install -m 755 $$file /usr/libexec/bats-core ; \
+		install -m 755 $$file $$pkgdir/usr/libexec/bats-core ; \
 	done
 
 apk/clean::
