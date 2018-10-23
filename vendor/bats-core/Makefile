@@ -3,6 +3,7 @@ export VENDOR ?= bats-core
 export DOWNLOAD_URL ?= bats-core.tar.gz::$(REPO_URL)/archive/v$(VERSION).tar.gz
 export APK_BUILD_TEMPLATE ?= APKBUILD.github-binary
 export NAME ?= bats
+export APKBUILD_DEPENDS += bash
 
 include ../../tasks/Makefile.package
 include ../../tasks/Makefile.apk
