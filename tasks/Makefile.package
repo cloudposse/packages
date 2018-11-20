@@ -29,6 +29,8 @@ endif
 # $(call github_download_binary_release,version,repo,asset)
 download_binary = $(CURL) -o $(INSTALL_PATH)/$(NAME) $(DOWNLOAD_URL) && chmod +x $(INSTALL_PATH)/$(NAME)
 download_tarball = $(CURL) -o - $(DOWNLOAD_URL) | tar --wildcards -zxO *$(NAME) > $(INSTALL_PATH)/$(NAME) && chmod +x $(INSTALL_PATH)/$(NAME)
+download_tar_bz2 = $(CURL) -o - $(DOWNLOAD_URL) | tar --wildcards -jxO *$(NAME) > $(INSTALL_PATH)/$(NAME) && chmod +x $(INSTALL_PATH)/$(NAME)
+download_tar_xz = $(CURL) -o - $(DOWNLOAD_URL) | tar --wildcards -JxO *$(NAME) > $(INSTALL_PATH)/$(NAME) && chmod +x $(INSTALL_PATH)/$(NAME)
 
 default: info
 

@@ -7,11 +7,7 @@ export DOWNLOAD_URL ?= $(REPO_URL)/releases/download/v$(VERSION)/$(OS)-$(ARCH)-$
 export APK_BUILD_TEMPLATE ?= APKBUILD.github-binary
 
 install:
-	mkdir -p $(TMP)/$(NAME)
-	$(CURL) -o - $(DOWNLOAD_URL) | tar -C $(TMP)/$(NAME) -jx bin/$(OS)/$(ARCH)/$(NAME)
-	mv $(TMP)/$(NAME)/bin/$(OS)/$(ARCH)/$(NAME) $(INSTALL_PATH)/$(NAME)
-	rm -rf $(TMP)/$(NAME)
-	chmod +x $(INSTALL_PATH)/$(NAME)
+	$(call download_tar_bz2)
 
 test:
 	$(EXE) --version
