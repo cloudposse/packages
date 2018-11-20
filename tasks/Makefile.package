@@ -25,7 +25,7 @@ ifneq ($($(VERSION_ENV)),)
 	VERSION=$($(VERSION_ENV))
 endif
 
-# Macro to download a github binary release
+# Macros to download a binary release from GitHub and install it
 # $(call github_download_binary_release,version,repo,asset)
 download_binary = $(CURL) -o $(INSTALL_PATH)/$(NAME) $(DOWNLOAD_URL) && chmod +x $(INSTALL_PATH)/$(NAME)
 download_tarball = $(CURL) -o - $(DOWNLOAD_URL) | tar --wildcards -zxO *$(NAME) > $(INSTALL_PATH)/$(NAME) && chmod +x $(INSTALL_PATH)/$(NAME)
