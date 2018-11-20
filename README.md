@@ -40,7 +40,7 @@ It's 100% Open Source and licensed under the [APACHE2](LICENSE).
 
 Use this repo to easily install releases of popular Open Source apps. We provide a few ways to use it.
 
-1. `Makefile` based installer which downloads packages directly from their source and installs them
+1. `Makefile` based installer which downloads packages directly from their source and installs them (cross-platform, architecture)
 2. Alpine Linux package repository (`apk.cloudposse.com`) which installs prebuilt packages using original source binary (where possible)
 3. Docker image (`cloudposse/packages`) which distributes an image with all linux binaries for `x86_64`
 
@@ -51,7 +51,11 @@ See examples below for usage.
 
 ### Alpine Repository (recommended)
 
-Configure the alpine repository
+[Cloud Posse](https://cloudposse.com) hosts a public Alpine repository on Amazon S3 and fronted by CloudFlare's CDN. This ensures insane availability and low-cost hosting. This is ultimately more reliable than relying on [GitHub for availability](https://twitter.com/githubstatus). 
+
+The repository itself is managed using [`alpinist`](https://github.com/cloudposse/alpinist), which takes care of the heavy lifting of building repository indexes. You can self-host your own Alpine repository using this strategy.
+
+Configure the alpine repository:
 
 ```
 curl -sSL https://apk.cloudposse.com/install.sh | sudo bash
@@ -74,7 +78,9 @@ apk add gomplate@cloudposse==3.0.0-r0
 
 ### Makefile Interface
 
-The `Makefile` interface works on OSX and Linux. It's a great way to distribute binaries in an OS-agnostic way which does not depend on a package manager.
+The `Makefile` interface works on OSX and Linux. It's a great way to distribute binaries in an OS-agnostic way which does not depend on a package manager (e.g. no `brew` or `apt-get`). 
+
+This method is ideal for [local development environments](https://docs.cloudposse.com/local-dev-environments/) (which is how we use it) where you need the dependencies installed natively for your OS/architecture, such as installing a package on OSX.
 
 See all available packages:
 ```
