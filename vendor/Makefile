@@ -31,5 +31,5 @@ update:
 
 ## Show available packages
 help:
-	@find . -mindepth 1 -maxdepth 1 -type d | xargs -I{} make --no-print-directory -s -C {} info/short
+	@find . -mindepth 1 -maxdepth 1 -type d | sort -u | xargs -I{} make --no-print-directory -s -C {} info/short
 
