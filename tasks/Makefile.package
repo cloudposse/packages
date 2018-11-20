@@ -19,10 +19,18 @@ export LICENSE ?= $(shell cat LICENSE 2>/dev/null)
 export HOMEPAGE_URL ?= https://github.com/$(VENDOR)/$(PACKAGE)
 export REPO_URL ?= https://github.com/$(VENDOR)/$(REPO_NAME)
 
-# Macro to download a github binary release
+# Permit version to be overridden on the command line using PACKAGE_VERSION (e.g. FIGURINE_VERSION=0.3.0)
+VERSION_ENV = $(shell basename $$(pwd) | tr '[:lower:]' '[:upper:]')_VERSION
+ifneq ($($(VERSION_ENV)),) 
+	VERSION=$($(VERSION_ENV))
+endif
+
+# Macros to download a binary release from GitHub and install it
 # $(call github_download_binary_release,version,repo,asset)
 download_binary = $(CURL) -o $(INSTALL_PATH)/$(NAME) $(DOWNLOAD_URL) && chmod +x $(INSTALL_PATH)/$(NAME)
-download_tarball = $(CURL) -o - $(DOWNLOAD_URL) | tar -zxO *$(NAME) > $(INSTALL_PATH)/$(NAME) && chmod +x $(INSTALL_PATH)/$(NAME)
+download_tarball = $(CURL) -o - $(DOWNLOAD_URL) | tar --wildcards -zxO *$(NAME) > $(INSTALL_PATH)/$(NAME) && chmod +x $(INSTALL_PATH)/$(NAME)
+download_tar_bz2 = $(CURL) -o - $(DOWNLOAD_URL) | tar --wildcards -jxO *$(NAME) > $(INSTALL_PATH)/$(NAME) && chmod +x $(INSTALL_PATH)/$(NAME)
+download_tar_xz = $(CURL) -o - $(DOWNLOAD_URL) | tar --wildcards -JxO *$(NAME) > $(INSTALL_PATH)/$(NAME) && chmod +x $(INSTALL_PATH)/$(NAME)
 
 default: info
 
@@ -60,3 +68,6 @@ info:
 	@printf "%-20s %s\n" "Repo URL:" "$(REPO_URL)"
 	@printf "%-20s %s\n" "Download URL:" "$(DOWNLOAD_URL)"
 	@printf "%-20s %s\n" "Install Path:" "$(INSTALL_PATH)"
+
+info/short:
+	@printf "%-25s %-10s %s\n" "$(NAME)" "$(VERSION)" "$(DESCRIPTION)"

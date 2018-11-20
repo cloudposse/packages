@@ -7,7 +7,7 @@ export DOWNLOAD_URL ?= https://storage.googleapis.com/shellcheck/shellcheck-v$(V
 export APK_BUILD_TEMPLATE ?= APKBUILD.github-binary
 
 install:
-	$(call download_tarball)
+	$(call download_tar_xz)
 
 test:
 	$(EXE) --version
