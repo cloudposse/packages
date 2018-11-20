@@ -21,4 +21,4 @@ install:
 	$(call download_tarball)
 
 test:
-	$(EXE) --version
+	$(EXE) version
