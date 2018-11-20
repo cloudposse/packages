@@ -68,3 +68,6 @@ info:
 	@printf "%-20s %s\n" "Repo URL:" "$(REPO_URL)"
 	@printf "%-20s %s\n" "Download URL:" "$(DOWNLOAD_URL)"
 	@printf "%-20s %s\n" "Install Path:" "$(INSTALL_PATH)"
+
+info/short:
+	@printf "%-25s %-10s %s\n" "$(NAME)" "$(VERSION)" "$(DESCRIPTION)"
