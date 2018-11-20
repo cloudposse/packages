@@ -1,4 +1,11 @@
 # Package details
+export OS ?= $(shell uname -s | tr '[:upper:]' '[:lower:'])
+
+ifeq ($(OS),darwin)
+	OS=macos
+endif
+
+export REPO_NAME ?= cli
 export VENDOR ?= codefresh-io
 export REPO_NAME ?= cli
 export NAME ?= codefresh
@@ -7,17 +14,11 @@ export DOWNLOAD_URL ?= $(REPO_URL)/releases/download/v$(VERSION)/codefresh-v$(VE
 export APKBUILD_DEPENDS += ca-certificates
 export EXE = codefresh
 
-ifeq ($(ARCH), darwin)
-  OS=macos
-else
-  OS=linux
-endif
-
 include ../../tasks/Makefile.package
 include ../../tasks/Makefile.apk
 
 install:
-	$(call download_binary)
+	$(call download_tarball)
 
 test:
 	$(EXE) --version
