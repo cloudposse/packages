@@ -5,7 +5,6 @@ ifeq ($(OS),darwin)
 	OS=macos
 endif
 
-export REPO_NAME ?= cli
 export VENDOR ?= codefresh-io
 export REPO_NAME ?= cli
 export NAME ?= codefresh
