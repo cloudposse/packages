@@ -1,9 +1,13 @@
 INSTALL_PATH ?= /usr/local/bin
+VENDOR_PATH ?= ../vendor
+
+all: $(shell find $(VENDOR_PATH) -maxdepth 1 -mindepth 1 -type d -printf '%f\n' | sort )
+	@exit 0
 
 ## Uninstall a specific package
 %:
-	@if [ -d ../vendor/$@ ]; then \
-	  make -C ../vendor/$@ install; \
+	@if [ -d $(VENDOR_PATH)/$@ ]; then \
+	  make -C $(VENDOR_PATH)/$@ install; \
 	else \
 	  echo "$@ not available"; \
 	  exit 1; \
