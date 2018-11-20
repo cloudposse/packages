@@ -51,7 +51,7 @@ See examples below for usage.
 
 ### Alpine Repository (recommended)
 
-[Cloud Posse](https://cloudposse.com) hosts a public Alpine repository on Amazon S3 and fronted by CloudFlare's CDN. This ensures insane availability and low-cost hosting. This is ultimately more reliable than relying on [GitHub for availability](https://twitter.com/githubstatus). 
+[Cloud Posse](https://cloudposse.com) provides a public Alpine repository that is hosted on Amazon S3 and fronted by [CloudFlare's CDN](http://cloudflare.com) with end-to-end TLS. This ensures insane availability with DDoS mitigation and low-cost hosting. This is ultimately more reliable than depending on [GitHub for availability](https://twitter.com/githubstatus) and provides an easier way to manage dependencies pinned at multiple versions. 
 
 The repository itself is managed using [`alpinist`](https://github.com/cloudposse/alpinist), which takes care of the heavy lifting of building repository indexes. You can self-host your own Alpine repository using this strategy.
 
