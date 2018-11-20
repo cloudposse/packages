@@ -19,6 +19,12 @@ export LICENSE ?= $(shell cat LICENSE 2>/dev/null)
 export HOMEPAGE_URL ?= https://github.com/$(VENDOR)/$(PACKAGE)
 export REPO_URL ?= https://github.com/$(VENDOR)/$(REPO_NAME)
 
+# Permit version to be overridden on the command line using PACKAGE_VERSION (e.g. FIGURINE_VERSION=0.3.0)
+VERSION_ENV = $(shell basename $$(pwd) | tr '[:lower:]' '[:upper:]')_VERSION
+ifneq ($($(VERSION_ENV)),) 
+	VERSION=$($(VERSION_ENV))
+endif
+
 # Macro to download a github binary release
 # $(call github_download_binary_release,version,repo,asset)
 download_binary = $(CURL) -o $(INSTALL_PATH)/$(NAME) $(DOWNLOAD_URL) && chmod +x $(INSTALL_PATH)/$(NAME)
