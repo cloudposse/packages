@@ -7,6 +7,7 @@ aws-vault                 4.4.1      A vault for securely storing and accessing 
 chamber                   2.2.0      CLI for managing secrets
 cli53                     0.8.12     Command line tool for Amazon Route 53
 cloudflared               2018.8.0   Argo Tunnel client
+codefresh                 0.8.83     Codefresh CLI provides a full and flexible interface to interact with Codefresh.
 ctop                      0.7.1      Top-like interface for container metrics
 emailcli                  1.0.3      Command line email sending client written in Go.
 fargate                   0.2.3      CLI for AWS Fargate
@@ -21,7 +22,7 @@ gomplate                  3.0.0      A flexible commandline tool for template re
 goofys                    0.19.0     a high-performance, POSIX-ish Amazon S3 file system written in Go
 gosu                      1.10       Simple Go-based setuid+setgid+setgroups+exec
 gotop                     1.5.0      A terminal based graphical activity monitor inspired by gtop and vtop
-helm                      2.10.0     The Kubernetes Package Manager
+helm                      2.11.0     The Kubernetes Package Manager
 helmfile                  0.40.1     Deploy Kubernetes Helm Charts
 htmltest                  0.10.1     :white_check_mark: Test generated HTML for problems
 hugo                      0.49.2     The world’s fastest framework for building websites.
