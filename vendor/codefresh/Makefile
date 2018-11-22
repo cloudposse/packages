@@ -26,7 +26,7 @@ include ../../tasks/Makefile.package
 include ../../tasks/Makefile.apk
 
 install:
-	$(call download_tarball)
+	$(CURL) -o - $(DOWNLOAD_URL) | tar -zxO $(NAME)-$(OS) > $(INSTALL_PATH)/$(NAME) && chmod +x $(INSTALL_PATH)/$(NAME)
 
 test:
 	$(EXE) version
