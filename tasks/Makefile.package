@@ -28,9 +28,33 @@ endif
 # Macros to download a binary release from GitHub and install it
 # $(call github_download_binary_release,version,repo,asset)
 download_binary = $(CURL) -o $(INSTALL_PATH)/$(NAME) $(DOWNLOAD_URL) && chmod +x $(INSTALL_PATH)/$(NAME)
-download_tarball = $(CURL) -o - $(DOWNLOAD_URL) | tar -zxO $(NAME) > $(INSTALL_PATH)/$(NAME) && chmod +x $(INSTALL_PATH)/$(NAME)
-download_tar_bz2 = $(CURL) -o - $(DOWNLOAD_URL) | tar -jxO $(NAME) > $(INSTALL_PATH)/$(NAME) && chmod +x $(INSTALL_PATH)/$(NAME)
-download_tar_xz = $(CURL) -o - $(DOWNLOAD_URL) | tar -JxO $(NAME) > $(INSTALL_PATH)/$(NAME) && chmod +x $(INSTALL_PATH)/$(NAME)
+define download_tarball
+	rm -rf $(TMP)/$(NAME)
+	mkdir -p $(TMP)/$(NAME)
+	$(CURL) -o - $(DOWNLOAD_URL) | tar -zx -C $(TMP)/$(NAME)
+	cp $(TMP)/$(NAME)/$(NAME) $(INSTALL_PATH)/$(NAME)
+	chmod +x $(INSTALL_PATH)/$(NAME)
+	rm -rf $(TMP)/$(NAME)
+endef
+
+define download_tar_bz2
+	rm -rf $(TMP)/$(NAME)
+	mkdir -p $(TMP)/$(NAME)
+	$(CURL) -o - $(DOWNLOAD_URL) | tar -jx -C $(TMP)/$(NAME)
+	cp $(TMP)/$(NAME)/$(NAME) $(INSTALL_PATH)/$(NAME)
+	chmod +x $(INSTALL_PATH)/$(NAME)
+	rm -rf $(TMP)/$(NAME)
+endef
+
+define download_tar_xz
+	rm -rf $(TMP)/$(NAME)
+	mkdir -p $(TMP)/$(NAME)
+	$(CURL) -o - $(DOWNLOAD_URL) | tar -Jx -C $(TMP)/$(NAME)
+	cp $(TMP)/$(NAME)/$(NAME) $(INSTALL_PATH)/$(NAME)
+	chmod +x $(INSTALL_PATH)/$(NAME)
+	rm -rf $(TMP)/$(NAME)
+endef
+
 
 default: info
 
