@@ -28,9 +28,9 @@ endif
 # Macros to download a binary release from GitHub and install it
 # $(call github_download_binary_release,version,repo,asset)
 download_binary = $(CURL) -o $(INSTALL_PATH)/$(NAME) $(DOWNLOAD_URL) && chmod +x $(INSTALL_PATH)/$(NAME)
-download_tarball = $(CURL) -o - $(DOWNLOAD_URL) | tar -zxO -T $(NAME) > $(INSTALL_PATH)/$(NAME) && chmod +x $(INSTALL_PATH)/$(NAME)
-download_tar_bz2 = $(CURL) -o - $(DOWNLOAD_URL) | tar -jxO -T $(NAME) > $(INSTALL_PATH)/$(NAME) && chmod +x $(INSTALL_PATH)/$(NAME)
-download_tar_xz = $(CURL) -o - $(DOWNLOAD_URL) | tar -JxO -T $(NAME) > $(INSTALL_PATH)/$(NAME) && chmod +x $(INSTALL_PATH)/$(NAME)
+download_tarball = $(CURL) -o - $(DOWNLOAD_URL) | tar -zxO $(NAME) > $(INSTALL_PATH)/$(NAME) && chmod +x $(INSTALL_PATH)/$(NAME)
+download_tar_bz2 = $(CURL) -o - $(DOWNLOAD_URL) | tar -jxO $(NAME) > $(INSTALL_PATH)/$(NAME) && chmod +x $(INSTALL_PATH)/$(NAME)
+download_tar_xz = $(CURL) -o - $(DOWNLOAD_URL) | tar -JxO $(NAME) > $(INSTALL_PATH)/$(NAME) && chmod +x $(INSTALL_PATH)/$(NAME)
 
 default: info
 
