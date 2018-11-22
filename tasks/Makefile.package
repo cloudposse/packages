@@ -32,7 +32,7 @@ define download_tarball
 	rm -rf $(TMP)/$(NAME)
 	mkdir -p $(TMP)/$(NAME)
 	$(CURL) -o - $(DOWNLOAD_URL) | tar -zx -C $(TMP)/$(NAME)
-	cp $(TMP)/$(NAME)/$(NAME) $(INSTALL_PATH)/$(NAME)
+	find $(TMP)/$(NAME) -type f -name $(NAME) -exec cp -f {} $(INSTALL_PATH)/$(NAME)
 	chmod +x $(INSTALL_PATH)/$(NAME)
 	rm -rf $(TMP)/$(NAME)
 endef
@@ -41,7 +41,7 @@ define download_tar_bz2
 	rm -rf $(TMP)/$(NAME)
 	mkdir -p $(TMP)/$(NAME)
 	$(CURL) -o - $(DOWNLOAD_URL) | tar -jx -C $(TMP)/$(NAME)
-	cp $(TMP)/$(NAME)/$(NAME) $(INSTALL_PATH)/$(NAME)
+	find $(TMP)/$(NAME) -type f -name $(NAME) -exec cp -f {} $(INSTALL_PATH)/$(NAME)
 	chmod +x $(INSTALL_PATH)/$(NAME)
 	rm -rf $(TMP)/$(NAME)
 endef
@@ -50,7 +50,7 @@ define download_tar_xz
 	rm -rf $(TMP)/$(NAME)
 	mkdir -p $(TMP)/$(NAME)
 	$(CURL) -o - $(DOWNLOAD_URL) | tar -Jx -C $(TMP)/$(NAME)
-	cp $(TMP)/$(NAME)/$(NAME) $(INSTALL_PATH)/$(NAME)
+	find $(TMP)/$(NAME) -type f -name $(NAME) -exec cp -f {} $(INSTALL_PATH)/$(NAME)
 	chmod +x $(INSTALL_PATH)/$(NAME)
 	rm -rf $(TMP)/$(NAME)
 endef
