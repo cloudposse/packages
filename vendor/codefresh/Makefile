@@ -7,7 +7,7 @@ ifeq ($(OS),darwin)
 endif
 
 ifeq ($(DISTR),alpine)
-	FLAVOR=alpine
+	FLAVOR=$(DISTR)
 else
 	FLAVOR=$(OS)
 endif
