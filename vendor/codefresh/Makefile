@@ -12,7 +12,6 @@ endif
 
 export VENDOR ?= codefresh-io
 export REPO_NAME ?= cli
-export NAME ?= codefresh
 export APK_BUILD_TEMPLATE ?= APKBUILD.github-binary
 export DOWNLOAD_URL ?= $(REPO_URL)/releases/download/v$(VERSION)/codefresh-v$(VERSION)-$(OS)-x64.tar.gz
 export APKBUILD_DEPENDS += ca-certificates

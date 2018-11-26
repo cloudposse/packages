@@ -9,7 +9,7 @@ export PATH := $(PATH):../../bin/
 export TMP ?= /tmp
 
 # Package details
-export NAME ?= $(notdir $(CURDIR))
+export NAME = $(notdir $(CURDIR))
 export REPO_NAME ?= $(NAME)
 export EXE ?= $(NAME)
 export DESCRIPTION ?= $(shell cat DESCRIPTION 2>/dev/null)
