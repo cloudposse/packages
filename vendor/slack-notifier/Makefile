@@ -8,7 +8,6 @@ export APK_BUILD_TEMPLATE ?= APKBUILD.github-binary
 export APKBUILD_DEPENDS += libc6-compat
 
 install:
-	echo $(DOWNLOAD_URL)
 	$(call download_binary)
 
 test:
