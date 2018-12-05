@@ -3,7 +3,7 @@ include ../../tasks/Makefile.apk
 
 # Package details
 export VENDOR ?= ahmetb
-export DOWNLOAD_URL ?= https://raw.githubusercontent.com/ahmetb/$(NAME)/v$(VERSION)/$(NAME)
+export DOWNLOAD_URL ?= https://raw.githubusercontent.com/ahmetb/$(PACKAGE_NAME)/v$(VERSION)/$(PACKAGE_NAME)
 export APK_BUILD_TEMPLATE ?= APKBUILD.github-binary
 export APKBUILD_DEPENDS += bash
 
