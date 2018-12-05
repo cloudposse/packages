@@ -9,7 +9,7 @@ export PATH := $(PATH):../../bin/
 export TMP ?= /tmp
 
 # Package details
-export NAME = $(notdir $(CURDIR))
+export NAME ?= $(notdir $(CURDIR))
 export REPO_NAME ?= $(NAME)
 export EXE ?= $(NAME)
 export DESCRIPTION ?= $(shell cat DESCRIPTION 2>/dev/null)
@@ -29,30 +29,30 @@ endif
 # $(call github_download_binary_release,version,repo,asset)
 download_binary = $(CURL) -o $(INSTALL_PATH)/$(NAME) $(DOWNLOAD_URL) && chmod +x $(INSTALL_PATH)/$(NAME)
 define download_tarball
-	rm -rf $(TMP)/$(NAME)
+	[ -n "$(TMP)" ] && [ -n "$(NAME)" ] && rm -rf "$(TMP)/$(NAME)"
 	mkdir -p $(TMP)/$(NAME)
 	$(CURL) -o - $(DOWNLOAD_URL) | tar -zx -C $(TMP)/$(NAME)
 	find $(TMP)/$(NAME) -type f -name $(NAME) | xargs -I {} cp -f {} $(INSTALL_PATH)/$(NAME)
 	chmod +x $(INSTALL_PATH)/$(NAME)
-	rm -rf $(TMP)/$(NAME)
+	[ -n "$(TMP)" ] && [ -n "$(NAME)" ] && rm -rf "$(TMP)/$(NAME)"
 endef
 
 define download_tar_bz2
-	rm -rf $(TMP)/$(NAME)
+	[ -n "$(TMP)" ] && [ -n "$(NAME)" ] && rm -rf "$(TMP)/$(NAME)"
 	mkdir -p $(TMP)/$(NAME)
 	$(CURL) -o - $(DOWNLOAD_URL) | tar -jx -C $(TMP)/$(NAME)
 	find $(TMP)/$(NAME) -type f -name $(NAME) | xargs -I {} cp -f {} $(INSTALL_PATH)/$(NAME)
 	chmod +x $(INSTALL_PATH)/$(NAME)
-	rm -rf $(TMP)/$(NAME)
+	[ -n "$(TMP)" ] && [ -n "$(NAME)" ] && rm -rf "$(TMP)/$(NAME)"
 endef
 
 define download_tar_xz
-	rm -rf $(TMP)/$(NAME)
+	[ -n "$(TMP)" ] && [ -n "$(NAME)" ] && rm -rf "$(TMP)/$(NAME)"
 	mkdir -p $(TMP)/$(NAME)
 	$(CURL) -o - $(DOWNLOAD_URL) | tar -Jx -C $(TMP)/$(NAME)
 	find $(TMP)/$(NAME) -type f -name $(NAME) | xargs -I {} cp -f {} $(INSTALL_PATH)/$(NAME)
 	chmod +x $(INSTALL_PATH)/$(NAME)
-	rm -rf $(TMP)/$(NAME)
+	[ -n "$(TMP)" ] && [ -n "$(NAME)" ] && rm -rf "$(TMP)/$(NAME)"
 endef
 
 
