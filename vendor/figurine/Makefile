@@ -7,7 +7,7 @@ export DOWNLOAD_URL ?= $(PACKAGE_REPO_URL)/releases/download/v$(PACKAGE_VERSION)
 export APK_BUILD_TEMPLATE ?= APKBUILD.github-binary
 export APKBUILD_DEPENDS += libc6-compat
 
-# releases: https://github.com/arsham/figurine/releases
+# Releases: https://github.com/arsham/figurine/releases
 ## Install figurine to generate fancy colorized ASCII banners
 install:
 	$(call download_tarball)
