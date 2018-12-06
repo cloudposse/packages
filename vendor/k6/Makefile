@@ -12,7 +12,7 @@ endif
 
 # Package details
 export VENDOR ?= loadimpact
-export DOWNLOAD_URL ?= $(REPO_URL)/releases/download/v$(VERSION)/$(PACKAGE_NAME)-v$(VERSION)-$(OS).$(EXT)
+export DOWNLOAD_URL ?= $(PACKAGE_REPO_URL)/PACKAGE_RELEASEs/download/v$(PACKAGE_VERSION)/$(PACKAGE_NAME)-v$(PACKAGE_VERSION)-$(OS).$(EXT)
 export APK_BUILD_TEMPLATE ?= AP KBUILD.github-binary
 export APKBUILD_DEPENDS += libc6-compat
 
@@ -30,7 +30,7 @@ install: install-$(OS)
 	@exit 0
 
 test:
-	$(EXE) version
+	$(PACKAGE_EXE) version
 
 package/prepare::
-	mv src/$(PACKAGE_NAME)-v$(VERSION)-$(OS)/$(PACKAGE_NAME) src/$(PACKAGE_NAME)
+	mv src/$(PACKAGE_NAME)-v$(PACKAGE_VERSION)-$(OS)/$(PACKAGE_NAME) src/$(PACKAGE_NAME)

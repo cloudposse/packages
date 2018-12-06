@@ -9,7 +9,7 @@ steps:
     type: git-clone
     stage: Prepare
     description: "Initialize"
-    repo: ${{CF_REPO_OWNER}}/${{CF_REPO_NAME}}
+    repo: ${{CF_REPO_OWNER}}/${{CF_PACKAGE_REPO_NAME}}
     git: CF-default
     revision: ${{CF_REVISION}}
 
