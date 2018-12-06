@@ -16,4 +16,4 @@ install:
 	$(call download_tarball)
 
 test:
-	$(EXE) version
+	$(EXE) -f /dev/null
