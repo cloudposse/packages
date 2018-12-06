@@ -1,6 +1,6 @@
 # Contributor: Cloud Posse, LLC <hello@cloudposse.com>
 # Maintainer: Cloud Posse, LLC <hello@cloudposse.com>
-pkgname=${NAME}
+pkgname=${PACKAGE_NAME}
 pkgver=${VERSION}
 pkgrel=${RELEASE}
 pkgdesc="${DESCRIPTION}"

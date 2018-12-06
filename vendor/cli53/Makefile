@@ -9,7 +9,7 @@ endif
 
 # Package details
 export VENDOR ?= barnybug
-export DOWNLOAD_URL ?= $(REPO_URL)/releases/download/$(VERSION)/$(NAME)-$(OS)-$(ARCH)
+export DOWNLOAD_URL ?= $(REPO_URL)/releases/download/$(VERSION)/$(PACKAGE_NAME)-$(OS)-$(ARCH)
 export APK_BUILD_TEMPLATE ?= APKBUILD.github-binary
 export APKBUILD_DEPENDS += libc6-compat
 
