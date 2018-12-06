@@ -10,19 +10,19 @@ export TMP ?= /tmp
 
 # Package details
 export PACKAGE_NAME ?= $(notdir $(CURDIR))
-export REPO_NAME ?= $(PACKAGE_NAME)
-export EXE ?= $(PACKAGE_NAME)
-export DESCRIPTION ?= $(shell cat DESCRIPTION 2>/dev/null)
-export VERSION ?= $(shell cat VERSION 2>/dev/null)
-export RELEASE ?= $(shell cat RELEASE 2>/dev/null)
-export LICENSE ?= $(shell cat LICENSE 2>/dev/null)
-export HOMEPAGE_URL ?= https://github.com/$(VENDOR)/$(PACKAGE)
-export REPO_URL ?= https://github.com/$(VENDOR)/$(REPO_NAME)
+export PACKAGE_REPO_NAME ?= $(PACKAGE_NAME)
+export PACKAGE_EXE ?= $(PACKAGE_NAME)
+export PACKAGE_DESCRIPTION ?= $(shell cat DESCRIPTION 2>/dev/null)
+export PACKAGE_VERSION ?= $(shell cat VERSION 2>/dev/null)
+export PACKAGE_RELEASE ?= $(shell cat RELEASE 2>/dev/null)
+export PACKAGE_LICENSE ?= $(shell cat LICENSE 2>/dev/null)
+export PACKAGE_HOMEPAGE_URL ?= https://github.com/$(VENDOR)/$(PACKAGE)
+export PACKAGE_REPO_URL ?= https://github.com/$(VENDOR)/$(PACKAGE_REPO_NAME)
 
 # Permit version to be overridden on the command line using PACKAGE_VERSION (e.g. FIGURINE_VERSION=0.3.0)
 VERSION_ENV = $(shell basename $$(pwd) | tr '[:lower:]' '[:upper:]')_VERSION
 ifneq ($($(VERSION_ENV)),) 
-	VERSION=$($(VERSION_ENV))
+	PACKAGE_VERSION=$($(VERSION_ENV))
 endif
 
 # Macros to download a binary release from GitHub and install it
@@ -59,13 +59,13 @@ endef
 default: info
 
 update/description:
-	@github-repo-metadata $(VENDOR) $(REPO_NAME) "index" .description | tee DESCRIPTION
+	@github-repo-metadata $(VENDOR) $(PACKAGE_REPO_NAME) "index" .description | tee DESCRIPTION
 
 update/version:
-	@github-repo-metadata $(VENDOR) $(REPO_NAME) "releases/latest" .tag_name | sed 's/^v//' | tee VERSION
+	@github-repo-metadata $(VENDOR) $(PACKAGE_REPO_NAME) "releases/latest" .tag_name | sed 's/^v//' | tee VERSION
 
 update/license:
-	@github-repo-metadata $(VENDOR) $(REPO_NAME) "license" .license.spdx_id | tr '[:lower:]' '[:upper:]' | tee LICENSE
+	@github-repo-metadata $(VENDOR) $(PACKAGE_REPO_NAME) "license" .license.spdx_id | tr '[:lower:]' '[:upper:]' | tee LICENSE
 
 update/release:
 	@if [ ! -f RELEASE ]; then \
@@ -84,14 +84,14 @@ update: update/version update/license update/description update/release
 info:
 	@printf "%-20s %s\n" "Vendor:" "$(VENDOR)"
 	@printf "%-20s %s\n" "Package:" "$(PACKAGE_NAME)"
-	@printf "%-20s %s\n" "Version:" "$(VERSION)"
+	@printf "%-20s %s\n" "Version:" "$(PACKAGE_VERSION)"
 	@printf "%-20s %s\n" "License:" "$(LICENSE)"
 	@printf "%-20s %s\n" "Arch:" "$(ARCH)"
 	@printf "%-20s %s\n" "OS:" "$(OS)"
-	@printf "%-20s %s\n" "Homepage URL:" "$(HOMEPAGE_URL)"
-	@printf "%-20s %s\n" "Repo URL:" "$(REPO_URL)"
+	@printf "%-20s %s\n" "Homepage URL:" "$(PACKAGE_HOMEPAGE_URL)"
+	@printf "%-20s %s\n" "Repo URL:" "$(PACKAGE_REPO_URL)"
 	@printf "%-20s %s\n" "Download URL:" "$(DOWNLOAD_URL)"
 	@printf "%-20s %s\n" "Install Path:" "$(INSTALL_PATH)"
 
 info/short:
-	@printf "%-25s %-10s %s\n" "$(PACKAGE_NAME)" "$(VERSION)" "$(DESCRIPTION)"
+	@printf "%-25s %-10s %s\n" "$(PACKAGE_NAME)" "$(PACKAGE_VERSION)" "$(PACKAGE_DESCRIPTION)"

@@ -9,11 +9,11 @@ endif
 
 # Package details
 export VENDOR ?= gohugoio
-export DOWNLOAD_URL ?= $(REPO_URL)/releases/download/v$(VERSION)/$(PACKAGE_NAME)_$(VERSION)_$(OS)-64bit.tar.gz
+export DOWNLOAD_URL ?= $(PACKAGE_REPO_URL)/releases/download/v$(PACKAGE_VERSION)/$(PACKAGE_NAME)_$(PACKAGE_VERSION)_$(OS)-64bit.tar.gz
 export APK_BUILD_TEMPLATE ?= APKBUILD.github-binary
 
 install:
 	$(call download_tarball)
 
 test:
-	$(EXE) version
+	$(PACKAGE_EXE) version

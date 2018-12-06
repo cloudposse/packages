@@ -1,24 +1,24 @@
 # Contributor: Cloud Posse, LLC <hello@cloudposse.com>
 # Maintainer: Cloud Posse, LLC <hello@cloudposse.com>
 pkgname=${PACKAGE_NAME}
-pkgver=${VERSION}
-pkgrel=${RELEASE}
-pkgdesc="${DESCRIPTION}"
+pkgver=${PACKAGE_VERSION}
+pkgrel=${PACKAGE_RELEASE}
+pkgdesc="${PACKAGE_DESCRIPTION}"
 builddir="$srcdir"
-exe=$EXE
+exe=$PACKAGE_EXE
 
 # https://wiki.alpinelinux.org/wiki/APKBUILD_examples
 
 # The homepage for the package. 
 # This is to help users find upstream documentation and other information regarding the package.
-url=${HOMEPAGE_URL}
+url=${PACKAGE_HOMEPAGE_URL}
 
 # Can be one of: x86, x86_64, armhf, aarch64, ppc64le, s390x, all, or noarch
 #arch=noarch
 arch=${OS_ARCH}
 
 # https://wiki.alpinelinux.org/wiki/APKBUILD_Reference#license
-license=${LICENSE}
+license=${PACKAGE_LICENSE}
 
 depends=${APKBUILD_DEPENDS}
 #depends_dev=curl make

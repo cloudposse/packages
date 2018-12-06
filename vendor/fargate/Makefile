@@ -3,7 +3,7 @@ include ../../tasks/Makefile.apk
 
 # Package details
 export VENDOR ?= jpignata
-export DOWNLOAD_URL ?= $(REPO_URL)/releases/download/v$(VERSION)/$(PACKAGE_NAME)-$(VERSION)-$(OS)-$(ARCH).zip
+export DOWNLOAD_URL ?= $(PACKAGE_REPO_URL)/releases/download/v$(PACKAGE_VERSION)/$(PACKAGE_NAME)-$(PACKAGE_VERSION)-$(OS)-$(ARCH).zip
 export APK_BUILD_TEMPLATE ?= APKBUILD.github-binary
 
 install:
@@ -13,5 +13,5 @@ install:
 	chmod +x $(INSTALL_PATH)/$(PACKAGE_NAME)
 
 test:
-	$(EXE) --version
+	$(PACKAGE_EXE) --version
 

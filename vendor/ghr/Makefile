@@ -9,7 +9,7 @@ endif
 
 # Package details
 export VENDOR ?= tcnksm
-export DOWNLOAD_URL ?= $(REPO_URL)/releases/download/v$(VERSION)/$(PACKAGE_NAME)_v$(VERSION)_$(OS)_$(ARCH).$(EXTENSION)
+export DOWNLOAD_URL ?= $(PACKAGE_REPO_URL)/releases/download/v$(PACKAGE_VERSION)/$(PACKAGE_NAME)_v$(PACKAGE_VERSION)_$(OS)_$(ARCH).$(EXTENSION)
 export APK_BUILD_TEMPLATE ?= APKBUILD.github-binary
 
 install: install-$(OS)
@@ -26,7 +26,7 @@ install-linux:
 	chmod +x $(INSTALL_PATH)/ghr
 
 test:
-	$(EXE) --version
+	$(PACKAGE_EXE) --version
 
 package/prepare::
-	mv src/ghr_v$(VERSION)_$(OS)_$(ARCH)/$(EXE) src
+	mv src/ghr_v$(PACKAGE_VERSION)_$(OS)_$(ARCH)/$(PACKAGE_EXE) src

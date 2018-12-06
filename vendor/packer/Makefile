@@ -3,7 +3,7 @@ include ../../tasks/Makefile.apk
 
 # Package details
 export VENDOR ?= hashicorp
-export DOWNLOAD_URL ?= https://releases.hashicorp.com/$(PACKAGE_NAME)/$(VERSION)/$(PACKAGE_NAME)_$(VERSION)_$(OS)_$(ARCH).zip
+export DOWNLOAD_URL ?= https://releases.hashicorp.com/$(PACKAGE_NAME)/$(PACKAGE_VERSION)/$(PACKAGE_NAME)_$(PACKAGE_VERSION)_$(OS)_$(ARCH).zip
 export APK_BUILD_TEMPLATE ?= APKBUILD.github-binary
 
 install:
@@ -13,4 +13,4 @@ install:
 	chmod +x $(INSTALL_PATH)/$(PACKAGE_NAME)
 
 test:
-	$(EXE) --version
+	$(PACKAGE_EXE) --version

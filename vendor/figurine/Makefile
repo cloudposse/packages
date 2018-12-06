@@ -3,7 +3,7 @@ include ../../tasks/Makefile.apk
 
 # Package details
 export VENDOR ?= arsham
-export DOWNLOAD_URL ?= $(REPO_URL)/releases/download/v$(VERSION)/$(PACKAGE_NAME)_$(OS)_v$(VERSION).tar.gz
+export DOWNLOAD_URL ?= $(PACKAGE_REPO_URL)/releases/download/v$(PACKAGE_VERSION)/$(PACKAGE_NAME)_$(OS)_v$(PACKAGE_VERSION).tar.gz
 export APK_BUILD_TEMPLATE ?= APKBUILD.github-binary
 export APKBUILD_DEPENDS += libc6-compat
 
@@ -13,5 +13,5 @@ install:
 	$(call download_tarball)
 
 test:
-	$(EXE) --help
+	$(PACKAGE_EXE) --help
 
