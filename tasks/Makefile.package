@@ -62,7 +62,7 @@ update/description:
 	@github-repo-metadata $(VENDOR) $(PACKAGE_REPO_NAME) "index" .description | tee DESCRIPTION
 
 update/version:
-	@github-repo-metadata $(VENDOR) $(PACKAGE_REPO_NAME) "PACKAGE_RELEASEs/latest" .tag_name | sed 's/^v//' | tee VERSION
+	@github-repo-metadata $(VENDOR) $(PACKAGE_REPO_NAME) "releases/latest" .tag_name | sed 's/^v//' | tee VERSION
 
 update/license:
 	@github-repo-metadata $(VENDOR) $(PACKAGE_REPO_NAME) "license" .license.spdx_id | tr '[:lower:]' '[:upper:]' | tee LICENSE

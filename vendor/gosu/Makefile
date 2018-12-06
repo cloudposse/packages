@@ -3,7 +3,7 @@ include ../../tasks/Makefile.apk
 
 # Package details
 export VENDOR ?= tianon
-export DOWNLOAD_URL ?= $(PACKAGE_REPO_URL)/PACKAGE_RELEASEs/download/$(PACKAGE_VERSION)/$(PACKAGE_NAME)-$(ARCH)
+export DOWNLOAD_URL ?= $(PACKAGE_REPO_URL)/releases/download/$(PACKAGE_VERSION)/$(PACKAGE_NAME)-$(ARCH)
 export APK_BUILD_TEMPLATE ?= APKBUILD.github-binary
 
 install:

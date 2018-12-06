@@ -7,7 +7,7 @@ endif
 
 # Package details
 export VENDOR ?= client9
-export DOWNLOAD_URL ?= $(PACKAGE_REPO_URL)/PACKAGE_RELEASEs/download/v$(PACKAGE_VERSION)/$(PACKAGE_NAME)_$(PACKAGE_VERSION)_$(OS)_64bit.tar.gz
+export DOWNLOAD_URL ?= $(PACKAGE_REPO_URL)/releases/download/v$(PACKAGE_VERSION)/$(PACKAGE_NAME)_$(PACKAGE_VERSION)_$(OS)_64bit.tar.gz
 export APK_BUILD_TEMPLATE ?= APKBUILD.github-binary
 
 install:

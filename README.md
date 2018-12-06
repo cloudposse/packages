@@ -3,7 +3,7 @@
 
 [![Cloud Posse][logo]](https://cpco.io/homepage)
 
-# Packages [![TravisCI Build Status](https://travis-ci.org/cloudposse/packages.svg?branch=master)](https://travis-ci.org/cloudposse/packages) [![Codefresh Build Status](https://g.codefresh.io/api/badges/build?repoOwner=cloudposse&repoName=packages&branch=master&pipelineName=packages&accountName=cloudposse&type=cf-1)](https://g.codefresh.io/repositories/cloudposse/packages/builds?filter=trigger:build;branch:master;service:5b234974667ab79287990636~packages) [![Latest PACKAGE_RELEASE](https://img.shields.io/github/PACKAGE_RELEASE/cloudposse/packages.svg)](https://github.com/cloudposse/packages/PACKAGE_RELEASEs/latest) [![Slack Community](https://slack.cloudposse.com/badge.svg)](https://slack.cloudposse.com)
+# Packages [![TravisCI Build Status](https://travis-ci.org/cloudposse/packages.svg?branch=master)](https://travis-ci.org/cloudposse/packages) [![Codefresh Build Status](https://g.codefresh.io/api/badges/build?repoOwner=cloudposse&repoName=packages&branch=master&pipelineName=packages&accountName=cloudposse&type=cf-1)](https://g.codefresh.io/repositories/cloudposse/packages/builds?filter=trigger:build;branch:master;service:5b234974667ab79287990636~packages) [![Latest PACKAGE_RELEASE](https://img.shields.io/github/PACKAGE_RELEASE/cloudposse/packages.svg)](https://github.com/cloudposse/packages/releases/latest) [![Slack Community](https://slack.cloudposse.com/badge.svg)](https://slack.cloudposse.com)
 
 
 Cloud Posse distribution of awesome apps.
@@ -38,10 +38,10 @@ It's 100% Open Source and licensed under the [APACHE2](LICENSE).
 ## Introduction
 
 
-Use this repo to easily install PACKAGE_RELEASEs of popular Open Source apps. We provide a few ways to use it.
+Use this repo to easily install releases of popular Open Source apps. We provide a few ways to use it.
 
 1. **Make Based Installer.** This installer works regardless of your OS and distribution. It downloads packages directly from their GitHub source repos and installs them to your `INSTALL_PATH`. 
-2. **Alpine Linux Packages.** Use our Alpine repository to install prebuilt packages that use the original source binary (where possible) from the maintainers' official GitHub repo PACKAGE_RELEASEs. 
+2. **Alpine Linux Packages.** Use our Alpine repository to install prebuilt packages that use the original source binary (where possible) from the maintainers' official GitHub repo releases. 
 3. **Docker Image.** Use our docker image as a base-image or as part of a multi-stage docker build. The docker image always distributes the latest linux binaries for `x86_64` architectures.
 
 See examples below for usage.
@@ -202,7 +202,7 @@ fetch                     0.3.1      fetch makes it easy to download files, fold
 figurine                  0.2.2      Print your name in style
 ghr                       0.12.0     Upload multiple artifacts to GitHub PACKAGE_RELEASE in parallel
 github-commenter          0.1.2      Command line utility for creating GitHub comments on Commits, Pull Request Reviews or Issues
-github-PACKAGE_RELEASE            0.7.2      Commandline app to create and edit PACKAGE_RELEASEs on Github (and upload artifacts)
+github-PACKAGE_RELEASE            0.7.2      Commandline app to create and edit releases on Github (and upload artifacts)
 gitleaks                  1.2.0      Audit git repos for secrets 🔑
 gometalinter              2.0.11     Concurrently run Go lint tools and normalise their output
 gomplate                  3.0.0      A flexible commandline tool for template rendering. Supports lots of local and remote datasources.

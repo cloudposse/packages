@@ -3,7 +3,7 @@ include ../../tasks/Makefile.apk
 
 # Package details
 export VENDOR ?= aktau
-export DOWNLOAD_URL ?= $(PACKAGE_REPO_URL)/PACKAGE_RELEASEs/download/v$(PACKAGE_VERSION)/$(OS)-$(ARCH)-$(PACKAGE_NAME).tar.bz2
+export DOWNLOAD_URL ?= $(PACKAGE_REPO_URL)/releases/download/v$(PACKAGE_VERSION)/$(OS)-$(ARCH)-$(PACKAGE_NAME).tar.bz2
 export APK_BUILD_TEMPLATE ?= APKBUILD.github-binary
 
 install:

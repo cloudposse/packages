@@ -8,7 +8,7 @@ export DOWNLOAD_URL ?= https://bin.equinox.io/c/VdrWdbjqyF/$(PACKAGE_NAME)-stabl
 export APK_BUILD_TEMPLATE ?= APKBUILD.github-binary
 export APKBUILD_DEPENDS += libc6-compat
 
-# PACKAGE_RELEASEs: https://developers.cloudflare.com/argo-tunnel/downloads/
+# releases: https://developers.cloudflare.com/argo-tunnel/downloads/
 ## Install cloudflared which offers an easy way to expose web servers securely to the internet(Argo Tunnel)
 install:
 	$(call download_tarball)

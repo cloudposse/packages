@@ -28,7 +28,7 @@ if [ $# -eq 4 ]; then
 else
   echo "Usage: $0 [org] [repo] [api] [jq path]"
   echo "  e.g. $0 cloudposse geodesic license .license.spdx_id"
-  echo "       $0 cloudposse geodesic PACKAGE_RELEASEs/latest .tag_name"
+  echo "       $0 cloudposse geodesic releases/latest .tag_name"
   echo "       $0 cloudposse geodesic '' .description"
   exit 1
 fi

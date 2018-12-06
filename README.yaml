@@ -5,10 +5,10 @@ description: |-
 
 introduction: |-
 
-  Use this repo to easily install PACKAGE_RELEASEs of popular Open Source apps. We provide a few ways to use it.
+  Use this repo to easily install releases of popular Open Source apps. We provide a few ways to use it.
   
   1. **Make Based Installer.** This installer works regardless of your OS and distribution. It downloads packages directly from their GitHub source repos and installs them to your `INSTALL_PATH`. 
-  2. **Alpine Linux Packages.** Use our Alpine repository to install prebuilt packages that use the original source binary (where possible) from the maintainers' official GitHub repo PACKAGE_RELEASEs.
+  2. **Alpine Linux Packages.** Use our Alpine repository to install prebuilt packages that use the original source binary (where possible) from the maintainers' official GitHub repo releases.
   3. **Docker Image.** Use our docker image as a base-image or as part of a multi-stage docker build. The docker image always distributes the latest linux binaries for `x86_64` architectures.
 
   See examples below for usage.
@@ -33,7 +33,7 @@ badges:
     url: "https://g.codefresh.io/repositories/cloudposse/packages/builds?filter=trigger:build;branch:master;service:5b234974667ab79287990636~packages"
   - name: "Latest PACKAGE_RELEASE"
     image: "https://img.shields.io/github/PACKAGE_RELEASE/cloudposse/packages.svg"
-    url: "https://github.com/cloudposse/packages/PACKAGE_RELEASEs/latest"
+    url: "https://github.com/cloudposse/packages/releases/latest"
   - name: "Slack Community"
     image: "https://slack.cloudposse.com/badge.svg"
     url: "https://slack.cloudposse.com"
