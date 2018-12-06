@@ -3,7 +3,7 @@ include ../../tasks/Makefile.apk
 
 # Package details
 export VENDOR ?= cloudposse
-export DOWNLOAD_URL ?= $(REPO_URL)/releases/download/$(VERSION)/$(NAME)_$(OS)_$(ARCH)
+export DOWNLOAD_URL ?= $(REPO_URL)/releases/download/$(VERSION)/$(PACKAGE_NAME)_$(OS)_$(ARCH)
 export APK_BUILD_TEMPLATE ?= APKBUILD.github-binary
 export APKBUILD_DEPENDS += libc6-compat
 

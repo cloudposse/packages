@@ -9,7 +9,7 @@ export APKBUILD_DEPENDS += libc6-compat musl
 export EXE = teleport tctl tsh
 
 install:
-	$(CURL) -o - $(DOWNLOAD_URL) | tar --wildcards -zxO $(addprefix teleport/,$(EXE)) > $(INSTALL_PATH)/$(NAME) && chmod +x $(INSTALL_PATH)/$(NAME)
+	$(CURL) -o - $(DOWNLOAD_URL) | tar --wildcards -zxO $(addprefix teleport/,$(EXE)) > $(INSTALL_PATH)/$(PACKAGE_NAME) && chmod +x $(INSTALL_PATH)/$(PACKAGE_NAME)
 
 test:
 	teleport version

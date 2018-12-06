@@ -21,7 +21,8 @@ deps:
 ## Create a distribution by coping $PACKAGES from $INSTALL_PATH to $DIST_PATH
 dist:
 	mkdir -p $(DIST_PATH)
-	cd $(INSTALL_PATH) && $(DIST_CMD) $(PACKAGES) $(DIST_PATH)
+	[ -z "$(PACKAGES)" ] || \
+		( cd $(INSTALL_PATH) && $(DIST_CMD) $(PACKAGES) $(DIST_PATH) )
 
 build:
 	@make --no-print-directory docker:build
