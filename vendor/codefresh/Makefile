@@ -1,6 +1,6 @@
 # Package details
 export OS ?= $(shell uname -s | tr '[:upper:]' '[:lower:'])
-export DISTR ?= $(shell grep ^ID= /etc/os-PACKAGE_RELEASE 2>/dev/null | cut -d= -f2 | tr '[:upper:]' '[:lower:'])
+export DISTR ?= $(shell grep ^ID= /etc/os-release 2>/dev/null | cut -d= -f2 | tr '[:upper:]' '[:lower:'])
 
 ifeq ($(OS),darwin)
 	OS=macos

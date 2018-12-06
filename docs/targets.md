@@ -11,11 +11,11 @@ codefresh                 0.8.83     Codefresh CLI provides a full and flexible 
 ctop                      0.7.1      Top-like interface for container metrics
 emailcli                  1.0.3      Command line email sending client written in Go.
 fargate                   0.2.3      CLI for AWS Fargate
-fetch                     0.3.1      fetch makes it easy to download files, folders, and PACKAGE_RELEASE assets from a specific git commit, branch, or tag of public andssss
+fetch                     0.3.1      fetch makes it easy to download files, folders, and release assets from a specific git commit, branch, or tag of public andssss
 figurine                  0.2.2      Print your name in style
-ghr                       0.12.0     Upload multiple artifacts to GitHub PACKAGE_RELEASE in parallel
+ghr                       0.12.0     Upload multiple artifacts to GitHub release in parallel
 github-commenter          0.1.2      Command line utility for creating GitHub comments on Commits, Pull Request Reviews or Issues
-github-PACKAGE_RELEASE            0.7.2      Commandline app to create and edit releases on Github (and upload artifacts)
+github-release            0.7.2      Commandline app to create and edit releases on Github (and upload artifacts)
 gitleaks                  1.2.0      Audit git repos for secrets 🔑
 gometalinter              2.0.11     Concurrently run Go lint tools and normalise their output
 gomplate                  3.0.0      A flexible commandline tool for template rendering. Supports lots of local and remote datasources.

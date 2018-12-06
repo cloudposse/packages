@@ -14,7 +14,7 @@ export PACKAGE_REPO_NAME ?= $(PACKAGE_NAME)
 export PACKAGE_EXE ?= $(PACKAGE_NAME)
 export PACKAGE_DESCRIPTION ?= $(shell cat DESCRIPTION 2>/dev/null)
 export PACKAGE_VERSION ?= $(shell cat VERSION 2>/dev/null)
-export PACKAGE_RELEASE ?= $(shell cat PACKAGE_RELEASE 2>/dev/null)
+export PACKAGE_RELEASE ?= $(shell cat RELEASE 2>/dev/null)
 export PACKAGE_LICENSE ?= $(shell cat LICENSE 2>/dev/null)
 export PACKAGE_HOMEPAGE_URL ?= https://github.com/$(VENDOR)/$(PACKAGE)
 export PACKAGE_REPO_URL ?= https://github.com/$(VENDOR)/$(PACKAGE_REPO_NAME)
@@ -25,8 +25,8 @@ ifneq ($($(VERSION_ENV)),)
 	PACKAGE_VERSION=$($(VERSION_ENV))
 endif
 
-# Macros to download a binary PACKAGE_RELEASE from GitHub and install it
-# $(call github_download_binary_PACKAGE_RELEASE,version,repo,asset)
+# Macros to download a binary release from GitHub and install it
+# $(call github_download_binary_release,version,repo,asset)
 download_binary = $(CURL) -o $(INSTALL_PATH)/$(PACKAGE_NAME) $(DOWNLOAD_URL) && chmod +x $(INSTALL_PATH)/$(PACKAGE_NAME)
 define download_tarball
 	[ -n "$(TMP)" ] && [ -n "$(PACKAGE_NAME)" ] && rm -rf "$(TMP)/$(PACKAGE_NAME)"
@@ -67,18 +67,18 @@ update/version:
 update/license:
 	@github-repo-metadata $(VENDOR) $(PACKAGE_REPO_NAME) "license" .license.spdx_id | tr '[:lower:]' '[:upper:]' | tee LICENSE
 
-update/PACKAGE_RELEASE:
-	@if [ ! -f PACKAGE_RELEASE ]; then \
-		echo "0" | tee PACKAGE_RELEASE; \
-		git add PACKAGE_RELEASE; \
-	elif [ -n "$$(git status -s `pwd` | grep -v PACKAGE_RELEASE)" ]; then \
-		if [ -z "$$(git status -s `pwd` | grep PACKAGE_RELEASE)" ]; then \
-			echo "$$(($${PACKAGE_RELEASE}+1))" | tee PACKAGE_RELEASE; \
-			git add PACKAGE_RELEASE; \
+update/release:
+	@if [ ! -f RELEASE ]; then \
+		echo "0" | tee RELEASE; \
+		git add RELEASE; \
+	elif [ -n "$$(git status -s `pwd` | grep -v RELEASE)" ]; then \
+		if [ -z "$$(git status -s `pwd` | grep RELEASE)" ]; then \
+			echo "$$(($${RELEASE}+1))" | tee RELEASE; \
+			git add RELEASE; \
 		fi; \
 	fi
 
-update: update/version update/license update/description update/PACKAGE_RELEASE
+update: update/version update/license update/description update/release
 	@exit 0
 
 info:
