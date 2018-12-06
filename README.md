@@ -41,7 +41,7 @@ It's 100% Open Source and licensed under the [APACHE2](LICENSE).
 Use this repo to easily install releases of popular Open Source apps. We provide a few ways to use it.
 
 1. **Make Based Installer.** This installer works regardless of your OS and distribution. It downloads packages directly from their GitHub source repos and installs them to your `INSTALL_PATH`. 
-2. **Alpine Linux Packages.** Use our Alpine repository to install prebuilt packages that use the original source binary (where possible) from the maintainer's official GitHub repo releases. 
+2. **Alpine Linux Packages.** Use our Alpine repository to install prebuilt packages that use the original source binary (where possible) from the maintainers' official GitHub repo releases. 
 3. **Docker Image.** Use our docker image as a base-image or as part of a multi-stage docker build. The docker image always distributes the latest linux binaries for `x86_64` architectures.
 
 See examples below for usage.
