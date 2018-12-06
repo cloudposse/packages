@@ -7,10 +7,10 @@ export DOWNLOAD_URL ?= http://storage.googleapis.com/kubernetes-helm/helm-v$(VER
 export APK_BUILD_TEMPLATE ?= APKBUILD.github-binary
 
 install:
-	mkdir -p $(TMP)/$(NAME)
-	$(CURL) -o - $(DOWNLOAD_URL) | tar -C $(TMP)/$(NAME) -zx $(OS)-$(ARCH)/helm
-	mv $(TMP)/$(NAME)/$(OS)-$(ARCH)/helm $(INSTALL_PATH)/$(NAME)
-	rm -rf $(TMP)/$(NAME)
+	mkdir -p $(TMP)/$(PACKAGE_NAME)
+	$(CURL) -o - $(DOWNLOAD_URL) | tar -C $(TMP)/$(PACKAGE_NAME) -zx $(OS)-$(ARCH)/helm
+	mv $(TMP)/$(PACKAGE_NAME)/$(OS)-$(ARCH)/helm $(INSTALL_PATH)/$(PACKAGE_NAME)
+	rm -rf $(TMP)/$(PACKAGE_NAME)
 	chmod +x $(INSTALL_PATH)/helm
 
 test:
