@@ -14,4 +14,4 @@ install:
 	$(call download_binary)
 
 test:
-	($(PACKAGE_EXE) || true) 2>&1 | grep token
+	$(PACKAGE_EXE) version
