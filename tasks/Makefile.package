@@ -74,7 +74,10 @@ update/release:
 		echo "0" | tee RELEASE; \
 		git add RELEASE; \
 	elif [ -n "$$(git status -s `pwd` | grep -v RELEASE)" ]; then \
-		if [ -z "$$(git status -s `pwd` | grep RELEASE)" ]; then \
+		if [ -n "$$(git status -s `pwd` | grep VERSION)" ]; then \
+			echo "0" | tee RELEASE; \
+			git add RELEASE; \
+		elif [ -z "$$(git status -s `pwd` | grep RELEASE)" ]; then \
 			echo "$$(($${RELEASE}+1))" | tee RELEASE; \
 			git add RELEASE; \
 		fi; \
