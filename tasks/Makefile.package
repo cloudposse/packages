@@ -3,7 +3,7 @@ export ARCH ?= amd64
 export OS ?= $(shell uname -s | tr '[:upper:]' '[:lower:'])
 export OS_ARCH ?= $(shell uname -m)
 export INSTALL_PATH ?= /usr/local/bin
-export CURL ?= curl --fail -sSL
+export CURL ?= curl --retry 3 --retry-delay 5 --fail -sSL
 export PATH := $(PATH):../../bin/
 
 export TMP ?= /tmp
