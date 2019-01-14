@@ -1,1 +1,1 @@
-Transform environment variables for use with Terraform (e.g. `TF_VAR_lower_case`)
+Transform environment variables for use with Terraform (e.g. `HOSTNAME` ⇨ `TF_VAR_hostname`)
