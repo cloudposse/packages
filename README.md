@@ -226,6 +226,7 @@ lectl                     0.17       Script to check issued certificates by Let'
 misspell                  0.3.4      Correct commonly misspelled English words in source files
 packer                    1.3.1      Packer is a tool for creating identical machine images for multiple platforms from a single source configuration.
 retry                     3.3.0      ♻️ Functional mechanism based on channels to perform actions repetitively until successful.
+scenery                   0.1.0      A Terraform plan output prettifier
 shellcheck                0.5.0      ShellCheck, a static analysis tool for shell scripts
 shfmt                     2.5.1      A shell parser, formatter and interpreter (POSIX/Bash/mksh)
 slack-notifier            0.1.3      Command line utility to send messages with attachments to Slack channels via Incoming Webhooks
