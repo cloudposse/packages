@@ -97,4 +97,4 @@ info:
 	@printf "%-20s %s\n" "Install Path:" "$(INSTALL_PATH)"
 
 info/short:
-	@printf "%-25s %-10s %s\n" "$(PACKAGE_NAME)" "$(PACKAGE_VERSION)" "$(PACKAGE_DESCRIPTION)"
+	@printf "%-25s %-10s %s\n" "$${PACKAGE_NAME}" "$${PACKAGE_VERSION}" "$${PACKAGE_DESCRIPTION}"
