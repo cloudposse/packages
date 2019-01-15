@@ -1,0 +1,1 @@
+aws-vault like tool for Okta authentication. Allows to authenticate with AWS using Okta credentials
