@@ -52,7 +52,7 @@ terraform-docs            0.4.5      Generate docs from terraform modules
 terragrunt                0.17.0     Terragrunt is a thin wrapper for Terraform that provides extra tools for working with multiple Terraform modules.
 terrahelp                 0.6.3      Terrahelp is as a command line utility that provides useful tricks like masking of terraform output.
 tfenv                     0.3.0      Transform environment variables for use with Terraform (e.g. `HOSTNAME` ⇨ `TF_VAR_hostname`)
-tfmask                    0.1.0      Transform environment variables for use with Terraform (e.g. `HOSTNAME` ⇨ `TF_VAR_hostname`)
+tfmask                    0.1.0      Terraform utility to mask select output from `terraform plan` and `terraform apply`
 variant                   0.12.0     Variant is a Universal CLI tool that works like a task runner
 yq                        2.1.1      yq is a portable command-line YAML processor
 ```
