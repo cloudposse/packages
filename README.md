@@ -188,7 +188,7 @@ packages/uninstall/%:
 ## Makefile Targets
 ```
 assume-role               0.3.2      Easily assume AWS roles in your terminal.
-atlantis                  0.4.10     Terraform For Teams
+atlantis                  0.4.13     Terraform For Teams
 awless                    0.1.11     A Mighty CLI for AWS
 aws-iam-authenticator     0.3.0      A tool to use AWS IAM credentials to authenticate to a Kubernetes cluster
 aws-okta                  0.19.4     aws-okta allows users to authenticate with AWS using Okta credentials
