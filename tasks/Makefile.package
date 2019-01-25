@@ -55,6 +55,15 @@ define download_tar_xz
 	[ -n "$(TMP)" ] && [ -n "$(PACKAGE_NAME)" ] && rm -rf "$(TMP)/$(PACKAGE_NAME)"
 endef
 
+define download_zip
+	[ -n "$(TMP)" ] && [ -n "$(PACKAGE_NAME)" ] && rm -rf "$(TMP)/$(PACKAGE_NAME)"
+	mkdir -p $(TMP)/$(PACKAGE_NAME)
+	$(CURL) -L -o $(TMP)/$(PACKAGE_NAME)/$(PACKAGE_NAME).zip $(DOWNLOAD_URL)
+	unzip $(TMP)/$(PACKAGE_NAME)/$(PACKAGE_NAME).zip -d $(TMP)/$(PACKAGE_NAME)
+	find $(TMP)/$(PACKAGE_NAME) -type f -name $(PACKAGE_NAME) | xargs -I {} cp -f {} $(INSTALL_PATH)/$(PACKAGE_NAME)
+	chmod +x $(INSTALL_PATH)/$(PACKAGE_NAME)
+	[ -n "$(TMP)" ] && [ -n "$(PACKAGE_NAME)" ] && rm -rf "$(TMP)/$(PACKAGE_NAME)"
+endef
 
 default: info
 
