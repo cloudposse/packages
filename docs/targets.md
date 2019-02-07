@@ -1,7 +1,7 @@
 ## Makefile Targets
 ```
 assume-role               0.3.2      Easily assume AWS roles in your terminal.
-atlantis                  0.4.10     Terraform For Teams
+atlantis                  0.4.13     Terraform For Teams
 awless                    0.1.11     A Mighty CLI for AWS
 aws-iam-authenticator     0.3.0      A tool to use AWS IAM credentials to authenticate to a Kubernetes cluster
 aws-okta                  0.19.4     aws-okta allows users to authenticate with AWS using Okta credentials
@@ -9,7 +9,7 @@ aws-vault                 4.4.1      A vault for securely storing and accessing 
 chamber                   2.3.2      CLI for managing secrets
 cli53                     0.8.12     Command line tool for Amazon Route 53
 cloudflared               2018.8.0   Argo Tunnel client
-codefresh                 0.9.14     Codefresh CLI provides a full and flexible interface to interact with Codefresh.
+codefresh                 0.11.1     Codefresh CLI
 ctop                      0.7.1      Top-like interface for container metrics
 direnv                    2.18.2     Unclutter your .profile
 emailcli                  1.0.3      Command line email sending client written in Go.
@@ -33,6 +33,7 @@ hugo                      0.49.2     The world’s fastest framework for buildin
 json2hcl                  0.0.6      Convert JSON to HCL, and vice versa
 k6                        0.22.1     A modern load testing tool, using Go and JavaScript - https://k6.io
 kops                      1.10.0     Kubernetes Operations (kops) - Production Grade K8s Installation, Upgrades, and Management
+kubecron                  1.0.2      Utilities to manage kubernetes cronjobs. Run a CronJob manually for test purposes. Suspend/unsuspend a CronJob
 kubectl                   1.13.0     Production-Grade Container Scheduling and Management
 kubectx                   0.6.1      Fast way to switch between clusters and namespaces in kubectl – [✩Star] if you're using it!
 kubens                    0.6.1      Fast way to switch between clusters and namespaces in kubectl – [✩Star] if you're using it!
@@ -47,12 +48,12 @@ slack-notifier            0.1.3      Command line utility to send messages with 
 sops                      3.1.1      Secrets management stinks, use some sops!
 stern                     1.8.0      ⎈ Multi pod and container log tailing for Kubernetes
 teleport                  3.0.0      Privileged access management for elastic infrastructure.
-terraform                 0.11.10    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
+terraform                 0.11.11    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-docs            0.4.5      Generate docs from terraform modules
 terragrunt                0.17.0     Terragrunt is a thin wrapper for Terraform that provides extra tools for working with multiple Terraform modules.
 terrahelp                 0.6.3      Terrahelp is as a command line utility that provides useful tricks like masking of terraform output.
 tfenv                     0.3.0      Transform environment variables for use with Terraform (e.g. `HOSTNAME` ⇨ `TF_VAR_hostname`)
-tfmask                    0.1.0      Terraform utility to mask select output from `terraform plan` and `terraform apply`
-variant                   0.12.0     Variant is a Universal CLI tool that works like a task runner
+tfmask                    0.2.0      Terraform utility to mask select output from `terraform plan` and `terraform apply`
+variant                   0.18.2     Variant is a Universal CLI tool that works like a task runner
 yq                        2.1.1      yq is a portable command-line YAML processor
 ```
