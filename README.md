@@ -244,6 +244,7 @@ terrahelp                 0.6.3      Terrahelp is as a command line utility that
 tfenv                     0.3.0      Transform environment variables for use with Terraform (e.g. `HOSTNAME` ⇨ `TF_VAR_hostname`)
 tfmask                    0.2.0      Terraform utility to mask select output from `terraform plan` and `terraform apply`
 variant                   0.21.2     Variant is a Universal CLI tool that works like a task runner
+venona                    0.13.0     Codefresh runtime-environment agent
 yq                        2.1.1      yq is a portable command-line YAML processor
 ```
 
