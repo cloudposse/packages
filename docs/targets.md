@@ -27,7 +27,7 @@ goofys                    0.19.0     a high-performance, POSIX-ish Amazon S3 fil
 gosu                      1.10       Simple Go-based setuid+setgid+setgroups+exec
 gotop                     1.5.0      A terminal based graphical activity monitor inspired by gtop and vtop
 helm                      2.11.0     The Kubernetes Package Manager
-helmfile                  0.40.1     Deploy Kubernetes Helm Charts
+helmfile                  0.45.3     Deploy Kubernetes Helm Charts
 htmltest                  0.10.1     :white_check_mark: Test generated HTML for problems
 hugo                      0.49.2     The world’s fastest framework for building websites.
 json2hcl                  0.0.6      Convert JSON to HCL, and vice versa
