@@ -31,6 +31,28 @@ source_filename=$(basename $DOWNLOAD_URL)
 
 unpack() {
   default_unpack
+
+  ## default_unpack does not handle gzipped binaries
+  ## Copy liberally from https://github.com/alpinelinux/abuild/blob/v3.1.0/abuild.in#L403-L442
+  ## to preserve invariants
+	local u
+	for u in $source; do
+		local s
+		if is_remote "$u"; then
+			s="$SRCDEST/$(filename_from_uri $u)"
+		else
+			s="$startdir/$u"
+		fi
+		case "$s" in
+			*.gz)
+				msg "Unpacking $s..."
+				gunzip -q "$srcdir/$s" || return 1;;
+		esac
+	done
+}
+
+  ## End of copying
+
   echo "Unpack"
   echo " buildir: $builddir"
   echo " srcdir: $srcdir"
