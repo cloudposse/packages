@@ -49,8 +49,6 @@ unpack() {
 				gunzip -q "$srcdir/$s" || return 1;;
 		esac
 	done
-}
-
   ## End of copying
 
   echo "Unpack"
