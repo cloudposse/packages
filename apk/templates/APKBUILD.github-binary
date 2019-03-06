@@ -47,6 +47,7 @@ unpack() {
 		    *tar.gz) ;;  # Do not re-process tar.gz files
 			*.gz)
 				msg "Unpacking $s..."
+				options="!strip !tracedeps"
 				gunzip -q "$srcdir/$s" || return 1;;
 		esac
 	done
