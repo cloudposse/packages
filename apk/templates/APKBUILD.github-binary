@@ -47,10 +47,14 @@ unpack() {
 		    *tar.gz) do_default=true
 		      ;;
 			*.gz)
-				msg "Unpacking $s..."
-     			mkdir -p "$srcdir"
+				echo "Unzipping $s, expecting ${s%.gz} to be executable"
+				echo " pwd: $(pwd)"
+				mkdir -p "$srcdir"
 				options="!strip !tracedeps"
-				gunzip -q "$srcdir/$s" || return 1;;
+				gunzip -f -k -q "$s" || return 1
+				echo "Renaming/moving "${s%.gz}" to "$srcdir/$exe"
+				mv "${s%.gz}" "$srcdir/$exe"
+				;;
 			*) do_default=true
 		esac
 	done
