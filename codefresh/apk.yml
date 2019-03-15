@@ -33,10 +33,7 @@ steps:
     image_name: cloudposse/apkbuild-3.7
     working_directory: ./
     tag: '3.7'
-    dockerfile:
-      content: |-
-        FROM alpine:3.7
-        RUN apk add make alpine-sdk shadow
+    dockerfile: "apk/Dockerfile-3.7"
 
   alpine_3_8:
     title: Building Docker Image for alpine 3.8
@@ -45,10 +42,7 @@ steps:
     image_name: cloudposse/apkbuild-3.8
     working_directory: ./
     tag: '3.8'
-    dockerfile:
-      content: |-
-        FROM alpine:3.8
-        RUN apk add make alpine-sdk shadow
+    dockerfile: "apk/Dockerfile-3.8
 
   build_3_7:
     title: Build alpine 3.7 packages
