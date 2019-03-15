@@ -53,7 +53,7 @@ steps:
       apk_build_3_7:
         title: Build alpine 3.7 packages
         stage: Build
-        image: ${{alpine_3_7}}
+        image: ${{docker_build_3_7}}
         working_directory: .
         environment:
           - APK_PACKAGES_PATH=${{CF_VOLUME_PATH}}/artifacts/3.7
@@ -64,7 +64,7 @@ steps:
       apk_build_3_8:
         title: Build alpine 3.8 packages
         stage: Build
-        image: ${{alpine_3_8}}
+        image: ${{docker_build_3_8}}
         working_directory: .
         environment:
           - APK_PACKAGES_PATH=${{CF_VOLUME_PATH}}/artifacts/3.8
