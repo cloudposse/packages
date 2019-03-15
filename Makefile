@@ -38,7 +38,9 @@ run:
 docker/build/apk:
 	docker build -t cloudposse/apkbuild:$(ALPINE_VERSION) -f apk/Dockerfile-$(ALPINE_VERSION) .
 	docker run \
+		--name apkbuild \
 		-e CURRENT_BRANCH=$$(git rev-parse --abbrev-ref HEAD) \
+		-e APK_PACKAGES_PATH=/tmp/artifacts/$(ALPINE_VERSION) \
 		-e BUILD_LIST_TARGET=list/updated \
 		-v $$(pwd):/packages cloudposse/apkbuild:$(ALPINE_VERSION) \
 		sh -c "make -C /packages/vendor build"
@@ -46,8 +48,8 @@ docker/build/apk:
 docker/build/apk/all:
 	docker build -t cloudposse/apkbuild:$(ALPINE_VERSION) -f apk/Dockerfile-$(ALPINE_VERSION) .
 	docker run \
-		-e CURRENT_BRANCH=$$(git rev-parse --abbrev-ref HEAD) \
-		-e BUILD_LIST_TARGET=list/all \
+		--name apkbuild \
+		-e APK_PACKAGES_PATH=/tmp/artifacts/$(ALPINE_VERSION) \
 		-v $$(pwd):/packages cloudposse/apkbuild:$(ALPINE_VERSION) \
 		sh -c "make -C /packages/vendor build"
 
@@ -56,8 +58,10 @@ docker/build/apk/all:
 docker/build/apk/shell:
 	docker build -t cloudposse/apkbuild:$(ALPINE_VERSION) -f apk/Dockerfile-$(ALPINE_VERSION) .
 	docker run \
+		--name apkbuild \
 		-it \
 		-e CURRENT_BRANCH=$$(git rev-parse --abbrev-ref HEAD) \
+		-e APK_PACKAGES_PATH=/tmp/artifacts/$(ALPINE_VERSION) \
 		-e BUILD_LIST_TARGET=list/updated \
 		--privileged \
 		-w /packages \
