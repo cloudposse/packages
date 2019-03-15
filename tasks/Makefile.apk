@@ -11,6 +11,7 @@ apk/prepare:
 	cp -a $(APK_TEMPLATE_PATH)/$(APK_BUILD_TEMPLATE) $(APK_TMP_DIR)/APKBUILD
 	cp -a . "$(APK_TMP_DIR)"
 	chsh -s /bin/sh nobody
+	chown nobody -R $(APK_TMP_DIR)
 	chmod 777 /var/cache/distfiles
 
 apk/checksum:
