@@ -1,6 +1,7 @@
 TARGET_BRANCH ?= master
 CURRENT_BRANCH ?= 
 BUILD_LIST_TARGET ?= list/all
+export APK_TMP_DIR := $(realpath $(shell mktemp -p ../tmp -d))
 
 ## Install alpine build deps
 deps:
