@@ -7,7 +7,7 @@ include ../../tasks/Makefile.package
 include ../../tasks/Makefile.apk
 
 install:
-	$(call download_gz)
+	$(call download_binary_gz)
 
 test:
 	$(PACKAGE_EXE) version
