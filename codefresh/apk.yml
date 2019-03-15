@@ -38,7 +38,7 @@ steps:
         tag: '3.7'
         dockerfile: "apk/Dockerfile-3.7"
 
-      docker_build__3_8:
+      docker_build_3_8:
         title: Building Docker Image for alpine 3.8
         stage: Prepare
         type: build
