@@ -10,6 +10,7 @@ export README_DEPS ?= docs/targets.md
 export DIST_CMD ?= cp -a
 export DIST_PATH ?= /dist
 export INSTALL_PATH ?= /usr/local/bin
+export ALPINE_VERSION ?= 3.8
 
 -include $(shell curl -sSL -o .build-harness "https://git.io/build-harness"; echo .build-harness)
 
@@ -35,31 +36,39 @@ run:
 
 ## Build alpine packages for testing
 docker/build/apk:
+	docker build -t cloudposse/apkbuild:$(ALPINE_VERSION) -f apk/Dockerfile-$(ALPINE_VERSION) .
 	docker run \
+		--name apkbuild \
+		--rm \
 		-e CURRENT_BRANCH=$$(git rev-parse --abbrev-ref HEAD) \
+		-e APK_PACKAGES_PATH=/tmp/artifacts/$(ALPINE_VERSION) \
 		-e BUILD_LIST_TARGET=list/updated \
-		-v $$(pwd):/packages alpine:3.8 \
-		sh -c "apk add alpine-sdk shadow && make -C /packages/vendor build"
+		-v $$(pwd):/packages cloudposse/apkbuild:$(ALPINE_VERSION) \
+		sh -c "make -C /packages/vendor build"
 
 docker/build/apk/all:
+	docker build -t cloudposse/apkbuild:$(ALPINE_VERSION) -f apk/Dockerfile-$(ALPINE_VERSION) .
 	docker run \
-		-e CURRENT_BRANCH=$$(git rev-parse --abbrev-ref HEAD) \
-		-e BUILD_LIST_TARGET=list/all \
-		-v $$(pwd):/packages alpine:3.8 \
-		sh -c "apk add alpine-sdk shadow && make -C /packages/vendor build"
+		--name apkbuild \
+		--rm \
+		-e APK_PACKAGES_PATH=/tmp/artifacts/$(ALPINE_VERSION) \
+		-v $$(pwd):/packages cloudposse/apkbuild:$(ALPINE_VERSION) \
+		sh -c "make -C /packages/vendor build"
 
 
 ## Build alpine packages for testing
 docker/build/apk/shell:
+	docker build -t cloudposse/apkbuild:$(ALPINE_VERSION) -f apk/Dockerfile-$(ALPINE_VERSION) .
 	docker run \
+		--name apkbuild \
+		--rm \
 		-it \
 		-e CURRENT_BRANCH=$$(git rev-parse --abbrev-ref HEAD) \
+		-e APK_PACKAGES_PATH=/tmp/artifacts/$(ALPINE_VERSION) \
 		-e BUILD_LIST_TARGET=list/updated \
 		--privileged \
 		-w /packages \
-		-v $$(pwd):/packages alpine:3.8
-
-
+		-v $$(pwd):/packages cloudposse/apkbuild:$(ALPINE_VERSION)
 
 help/vendor:
 	@$(MAKE) --no-print-directory -s -C vendor help

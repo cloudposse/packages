@@ -23,7 +23,7 @@ list/all:
 ## Build all updated alpine packages
 build:
 	$(MAKE) --no-print-directory -s $(BUILD_LIST_TARGET) | \
-		xargs -n 1 -I{} -- /bin/sh -c 'make --no-print-directory -C {} info apk || exit 255'
+		xargs -t -n 1 -I{} -- /bin/sh -c 'make --no-print-directory -C {} info apk || exit 255'
 
 ## Update all packages
 update:
