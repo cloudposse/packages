@@ -56,7 +56,6 @@ steps:
         tag: '3.9'
         dockerfile: "apk/Dockerfile-3.9"
 
-
   apk_build:
     type: "parallel"
     steps:
@@ -92,7 +91,6 @@ steps:
         commands:
           - make -C vendor build
           - find "${APK_PACKAGES_PATH}" -type f -name '*.apk' | xargs ls -l 
-
  
     # Only deploy on merge to master
   publish:
