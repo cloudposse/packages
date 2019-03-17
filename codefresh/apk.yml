@@ -26,53 +26,53 @@ steps:
       - echo "${{KEY_RSA_PUB}}" | base64 -d > key.rsa.pub
       - rm -rf "${APK_PACKAGES_PATH}"
 
-  alpine_3_7:
-    title: Building Docker Image for alpine 3.7
-    stage: Prepare
-    type: build
-    image_name: cloudposse/apkbuild-3.7
-    working_directory: ./
-    tag: '3.7'
-    dockerfile:
-      content: |-
-        FROM alpine:3.7
-        RUN apk add make alpine-sdk shadow
+  docker_build:
+    type: "parallel"
+    steps:
+      docker_build_3_7:
+        title: Building Docker Image for alpine 3.7
+        stage: Prepare
+        type: build
+        image_name: cloudposse/apkbuild-3.7
+        working_directory: ./
+        tag: '3.7'
+        dockerfile: "apk/Dockerfile-3.7"
 
-  alpine_3_8:
-    title: Building Docker Image for alpine 3.8
-    stage: Prepare
-    type: build
-    image_name: cloudposse/apkbuild-3.8
-    working_directory: ./
-    tag: '3.8'
-    dockerfile:
-      content: |-
-        FROM alpine:3.8
-        RUN apk add make alpine-sdk shadow
+      docker_build_3_8:
+        title: Building Docker Image for alpine 3.8
+        stage: Prepare
+        type: build
+        image_name: cloudposse/apkbuild-3.8
+        working_directory: ./
+        tag: '3.8'
+        dockerfile: "apk/Dockerfile-3.8"
 
-  build_3_7:
-    title: Build alpine 3.7 packages
-    stage: Build
-    image: ${{alpine_3_7}}
-    working_directory: .
-    environment:
-      - APK_PACKAGES_PATH=${{CF_VOLUME_PATH}}/artifacts/3.7
-    commands:
-      - make -C vendor build
-      - find "${APK_PACKAGES_PATH}" -type f -name '*.apk' | xargs ls -l 
+  apk_build:
+    type: "parallel"
+    steps:
+      apk_build_3_7:
+        title: Build alpine 3.7 packages
+        stage: Build
+        image: ${{docker_build_3_7}}
+        working_directory: .
+        environment:
+          - APK_PACKAGES_PATH=${{CF_VOLUME_PATH}}/artifacts/3.7
+        commands:
+          - make -C vendor build
+          - find "${APK_PACKAGES_PATH}" -type f -name '*.apk' | xargs ls -l 
 
-  build_3_8:
-    title: Build alpine 3.8 packages
-    stage: Build
-    image: ${{alpine_3_8}}
-    working_directory: .
-    environment:
-      - APK_PACKAGES_PATH=${{CF_VOLUME_PATH}}/artifacts/3.8
-    commands:
-      - make -C vendor build
-      - find "${APK_PACKAGES_PATH}" -type f -name '*.apk' | xargs ls -l 
+      apk_build_3_8:
+        title: Build alpine 3.8 packages
+        stage: Build
+        image: ${{docker_build_3_8}}
+        working_directory: .
+        environment:
+          - APK_PACKAGES_PATH=${{CF_VOLUME_PATH}}/artifacts/3.8
+        commands:
+          - make -C vendor build
+          - find "${APK_PACKAGES_PATH}" -type f -name '*.apk' | xargs ls -l 
 
-  # Only deploy on merge to master
+    # Only deploy on merge to master
   publish:
     title: Push all apk artifacts to S3 bucket
     stage: Publish
