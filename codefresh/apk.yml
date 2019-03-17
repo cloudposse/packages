@@ -47,6 +47,16 @@ steps:
         tag: '3.8'
         dockerfile: "apk/Dockerfile-3.8"
 
+      docker_build_3_9:
+        title: Building Docker Image for alpine 3.9
+        stage: Prepare
+        type: build
+        image_name: cloudposse/apkbuild-3.9
+        working_directory: ./
+        tag: '3.9'
+        dockerfile: "apk/Dockerfile-3.9"
+
+
   apk_build:
     type: "parallel"
     steps:
@@ -72,6 +82,18 @@ steps:
           - make -C vendor build
           - find "${APK_PACKAGES_PATH}" -type f -name '*.apk' | xargs ls -l 
 
+      apk_build_3_9:
+        title: Build alpine 3.9 packages
+        stage: Build
+        image: ${{docker_build_3_9}}
+        working_directory: .
+        environment:
+          - APK_PACKAGES_PATH=${{CF_VOLUME_PATH}}/artifacts/3.9
+        commands:
+          - make -C vendor build
+          - find "${APK_PACKAGES_PATH}" -type f -name '*.apk' | xargs ls -l 
+
+ 
     # Only deploy on merge to master
   publish:
     title: Push all apk artifacts to S3 bucket
