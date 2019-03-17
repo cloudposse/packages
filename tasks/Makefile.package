@@ -28,6 +28,13 @@ endif
 # Macros to download a binary release from GitHub and install it
 # $(call github_download_binary_release,version,repo,asset)
 download_binary = $(CURL) -o $(INSTALL_PATH)/$(PACKAGE_NAME) $(DOWNLOAD_URL) && chmod +x $(INSTALL_PATH)/$(PACKAGE_NAME)
+
+define download_binary_gz
+	$(CURL) -o $(INSTALL_PATH)/$(PACKAGE_NAME).gz $(DOWNLOAD_URL)
+	gunzip -f -k -q $(INSTALL_PATH)/$(PACKAGE_NAME).gz
+	chmod +x $(INSTALL_PATH)/$(PACKAGE_NAME)
+endef
+
 define download_tarball
 	[ -n "$(TMP)" ] && [ -n "$(PACKAGE_NAME)" ] && rm -rf "$(TMP)/$(PACKAGE_NAME)"
 	mkdir -p $(TMP)/$(PACKAGE_NAME)
@@ -60,6 +67,16 @@ define download_zip
 	mkdir -p $(TMP)/$(PACKAGE_NAME)
 	$(CURL) -L -o $(TMP)/$(PACKAGE_NAME)/$(PACKAGE_NAME).zip $(DOWNLOAD_URL)
 	unzip $(TMP)/$(PACKAGE_NAME)/$(PACKAGE_NAME).zip -d $(TMP)/$(PACKAGE_NAME)
+	find $(TMP)/$(PACKAGE_NAME) -type f -name $(PACKAGE_NAME) | xargs -I {} cp -f {} $(INSTALL_PATH)/$(PACKAGE_NAME)
+	chmod +x $(INSTALL_PATH)/$(PACKAGE_NAME)
+	[ -n "$(TMP)" ] && [ -n "$(PACKAGE_NAME)" ] && rm -rf "$(TMP)/$(PACKAGE_NAME)"
+endef
+
+define download_gz
+	[ -n "$(TMP)" ] && [ -n "$(PACKAGE_NAME)" ] && rm -rf "$(TMP)/$(PACKAGE_NAME)"
+	mkdir -p $(TMP)/$(PACKAGE_NAME)
+	$(CURL) -L -o $(TMP)/$(PACKAGE_NAME)/$(PACKAGE_NAME).gz $(DOWNLOAD_URL)
+	gunzip $(TMP)/$(PACKAGE_NAME)/$(PACKAGE_NAME).gz
 	find $(TMP)/$(PACKAGE_NAME) -type f -name $(PACKAGE_NAME) | xargs -I {} cp -f {} $(INSTALL_PATH)/$(PACKAGE_NAME)
 	chmod +x $(INSTALL_PATH)/$(PACKAGE_NAME)
 	[ -n "$(TMP)" ] && [ -n "$(PACKAGE_NAME)" ] && rm -rf "$(TMP)/$(PACKAGE_NAME)"
