@@ -1,4 +1,4 @@
-FROM alpine:3.8
+FROM alpine:3.9
 RUN apk update
 RUN apk add make curl alpine-sdk shadow
 RUN echo "auth       sufficient   pam_shells.so" > /etc/pam.d/chsh
