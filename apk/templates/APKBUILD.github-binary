@@ -53,6 +53,7 @@ unpack() {
 			;;
 		# Decompress non-tarballs and treat as a binary executable
 		*.gz)
+			do_default=false
 			echo "Unzipping $s, expecting ${s%.gz} to be executable"
 			echo " pwd: $(pwd)"
 			mkdir -p "${srcdir}"
@@ -69,7 +70,7 @@ unpack() {
 	done
 
 	## End of copying
-	if [ -n "$do_default" ]; then
+	if [ "$do_default" == "true" ]; then
 		default_unpack
 	fi
 
@@ -89,7 +90,7 @@ prepare() {
 	echo " exe: $exe"
 	echo " pwd: $(pwd)"
 	default_prepare
-	make --no-print-directory -s -C .. package/prepare
+	make --no-print-directory -s -C ${APK_TMP_DIR} package/prepare
 	ls -l
 
 	case "${exe}" in 
@@ -128,9 +129,11 @@ check() {
 # This is the packaging stage. 
 # The built application and support files should be installed into $pkgdir.
 package() {
+	echo "Installing packges to ${pkgdir}"
 	mkdir -p "${pkgdir}/usr/bin"
 	for cmd in ${exe}; do 
-	  echo install -m 755 "$(realpath "${srcdir}/${cmd}")" "${pkgdir}/usr/bin/${cmd}"
+	  install -m 755 "$(realpath "${srcdir}/${cmd}")" "${pkgdir}/usr/bin/${cmd}"
 	done
-	ls -l "${pkgdir}"/usr/bin
+	echo "=> Binaries in ${pkgdir}"
+	ls -lR "${pkgdir}"
 }
