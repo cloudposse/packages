@@ -124,7 +124,7 @@ build() {
 # This function is called right after the build stage. 
 # It should check that the packaged thing is actually working
 check() {
-	make --no-print-directory -s test PATH=$PATH:$srcdir >/dev/null
+	make -C ${APK_TMP_DIR} --no-print-directory -s test PATH=$PATH:$srcdir >/dev/null
 }
 
 # This is the packaging stage. 
@@ -135,6 +135,6 @@ package() {
 	for cmd in ${exe}; do 
 	  install -m 755 "$(realpath "${srcdir}/${cmd}")" "${pkgdir}/usr/bin/${cmd}"
 	done
-	echo "=> Binaries in ${pkgdir}"
-	ls -lR "${pkgdir}"
+	echo "Binaries staged for installation in ${pkgdir}"
+	find "${pkgdir}"
 }
