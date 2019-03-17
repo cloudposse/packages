@@ -22,6 +22,7 @@ list/all:
 
 ## Build all updated alpine packages
 build:
+	chmod 777 ../tmp
 	$(MAKE) --no-print-directory -s $(BUILD_LIST_TARGET) | \
 		xargs -t -n 1 -I{} -- /bin/sh -c 'make --no-print-directory -C {} info apk || exit 255'
 
