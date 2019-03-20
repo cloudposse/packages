@@ -67,6 +67,9 @@ steps:
         environment:
           - APK_PACKAGES_PATH=${{CF_VOLUME_PATH}}/artifacts/3.7
         commands:
+          - echo "git status" && git status
+          - echo "git branch" && git branch
+          - git fetch "${CURRENT_BRANCH}"
           - make -C vendor build/updated
           - find "${APK_PACKAGES_PATH}" -type f -name '*.apk' | xargs ls -l 
 
