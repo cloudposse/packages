@@ -13,8 +13,7 @@ env:
 
 install:
 - make init
-- echo "INSTALL_PATH: ${INSTALL_PATH}"
-- make readme/deps
+- INSTALL_PATH=/usr/local/bin make readme/deps
 - make readme/lint
 - mkdir -p /tmp/bin
 - make -C install all
