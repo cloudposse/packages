@@ -13,6 +13,7 @@ env:
 
 install:
 - make init
+- make readme/deps
 - make readme/lint
 - mkdir -p /tmp/bin
 - make -C install all
