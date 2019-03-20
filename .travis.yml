@@ -13,8 +13,7 @@ env:
 
 install:
 - make init
-- make go/deps-build
-- make go/deps-dev
+- echo "INSTALL_PATH: ${INSTALL_PATH}"
 - make readme/deps
 - make readme/lint
 - mkdir -p /tmp/bin
