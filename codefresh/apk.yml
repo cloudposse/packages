@@ -67,7 +67,7 @@ steps:
         environment:
           - APK_PACKAGES_PATH=${{CF_VOLUME_PATH}}/artifacts/3.7
         commands:
-          - make -C vendor build
+          - make -C vendor build/updated
           - find "${APK_PACKAGES_PATH}" -type f -name '*.apk' | xargs ls -l 
 
       apk_build_3_8:
@@ -78,7 +78,7 @@ steps:
         environment:
           - APK_PACKAGES_PATH=${{CF_VOLUME_PATH}}/artifacts/3.8
         commands:
-          - make -C vendor build
+          - make -C vendor build/updated
           - find "${APK_PACKAGES_PATH}" -type f -name '*.apk' | xargs ls -l 
 
       apk_build_3_9:
@@ -89,7 +89,7 @@ steps:
         environment:
           - APK_PACKAGES_PATH=${{CF_VOLUME_PATH}}/artifacts/3.9
         commands:
-          - make -C vendor build
+          - make -C vendor build/updated
           - find "${APK_PACKAGES_PATH}" -type f -name '*.apk' | xargs ls -l 
  
     # Only deploy on merge to master

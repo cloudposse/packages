@@ -34,3 +34,12 @@ update:
 help:
 	@find . -mindepth 1 -maxdepth 1 -type d | sort -u | xargs -I{} make --no-print-directory -s -C {} info/short
 
+## Build only updated packages or all if apk, codefresh or tasks was updated
+build/updated:
+	@git --no-pager diff --name-only $(CURRENT_BRANCH) `git merge-base $(CURRENT_BRANCH) origin/$(TARGET_BRANCH)` | \
+		xargs -n 1 -r dirname | \
+		sort -u | \
+		cut -d/ -f1 | \
+		sort -u | \
+		grep -E '.+' | \
+		grep -E '(apk|tasks|codefresh)' && ($(MAKE) build ) || (BUILD_LIST_TARGET=list/updated $(MAKE) build ; exit 0 )
