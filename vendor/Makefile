@@ -8,7 +8,7 @@ deps:
 
 ## List all packages which have been updated relative to `master`
 list/updated:
-	git --no-pager diff --name-only $(CURRENT_BRANCH) `git merge-base $(CURRENT_BRANCH) origin/$(TARGET_BRANCH)` | \
+	@git --no-pager diff --name-only $(CURRENT_BRANCH) `git merge-base $(CURRENT_BRANCH) origin/$(TARGET_BRANCH)` | \
 		xargs -n 1 -r dirname | \
 		sort -u | \
 		grep -E '^vendor/' | \
@@ -36,7 +36,7 @@ help:
 
 ## Build only updated packages or all if apk, codefresh or tasks was updated
 build/updated:
-	@git --no-pager diff --name-only $(CURRENT_BRANCH) `git merge-base $(CURRENT_BRANCH) origin/$(TARGET_BRANCH)` | \
+	git --no-pager diff --name-only $(CURRENT_BRANCH) `git merge-base $(CURRENT_BRANCH) origin/$(TARGET_BRANCH)` | \
 		xargs -n 1 -r dirname | \
 		sort -u | \
 		cut -d/ -f1 | \
