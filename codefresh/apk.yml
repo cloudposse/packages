@@ -69,7 +69,7 @@ steps:
         commands:
           - echo "git status" && git status
           - echo "git branch" && git branch
-          - echo "git show" && `git show -s --pretty=%D HEAD | tr -s ', ' '\n' | grep -v HEAD | head -n1
+          - echo "git show" && git show -s --pretty=%D HEAD | tr -s ', ' '\n' | grep -v HEAD | head -n1
           - git fetch `git show -s --pretty=%D HEAD | tr -s ', ' '\n' | grep -v HEAD | head -n1`
           - make -C vendor build/updated
           - find "${APK_PACKAGES_PATH}" -type f -name '*.apk' | xargs ls -l 
