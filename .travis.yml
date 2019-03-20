@@ -13,6 +13,7 @@ env:
 
 install:
 - make init
+- mkdir -p /usr/local/bin
 - INSTALL_PATH=/usr/local/bin make readme/deps
 - make readme/lint
 - mkdir -p /tmp/bin
