@@ -8,7 +8,7 @@ export APK_TMP_DIR := $(realpath $(shell mktemp -d ../../tmp/build.XXXXXX))
 apk/prepare: 
 	mkdir -p $(APK_PACKAGES_PATH) $(APK_TMP_DIR)
 	chmod 777 $(APK_PACKAGES_PATH) $(APK_TMP_DIR)
-	cp -a $(APK_TEMPLATE_PATH)/$(APK_BUILD_TEMPLATE) $(APK_TMP_DIR)/APKBUILD
+	[ -f $(APK_TMP_DIR)/APKBUILD ] || cp -a $(APK_TEMPLATE_PATH)/$(APK_BUILD_TEMPLATE) $(APK_TMP_DIR)/APKBUILD
 	cp -a . "$(APK_TMP_DIR)"
 	chsh -s /bin/sh nobody
 	chown nobody -R $(APK_TMP_DIR)
