@@ -107,7 +107,7 @@ update/release:
 		fi; \
 	fi
 
-update: update/version update/license update/description update/release
+update:: update/version update/license update/description update/release
 	@exit 0
 
 info:

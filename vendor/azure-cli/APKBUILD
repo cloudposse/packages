@@ -1,5 +1,5 @@
 pkgname="py3-azure-cli"
-pkgver=2.0.50
+pkgver=2.0.60
 pkgrel=0
 pkgdesc="Microsoft Azure Command-Line Tools"
 url="https://docs.microsoft.com/en-us/cli/azure/install-azure-cli"
