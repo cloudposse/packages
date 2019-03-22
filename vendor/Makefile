@@ -6,16 +6,14 @@ BUILD_LIST_TARGET ?= list/all
 deps:
 	apk add alpine-sdk shadow
 
-## List all packages which have been updated relative to `master`
+## List only updated packages or all if apk, codefresh or tasks folders was updated
 list/updated:
-	@git --no-pager diff --name-only $(CURRENT_BRANCH) `git merge-base $(CURRENT_BRANCH) origin/$(TARGET_BRANCH)` | \
-		xargs -n 1 -r dirname | \
-		sort -u | \
-		grep -E '^vendor/' | \
-		sed 's,vendor/,,' | \
-		cut -d/ -f1 | \
-		sort -u | \
-		grep -E '.+'
+	$(eval CHANGES=$(shell git --no-pager diff --name-only origin/$(TARGET_BRANCH) | \
+	 xargs -n 1 -r dirname | \
+	 sort -u | grep -E '.+'))
+	@echo $(CHANGES) | tr ' ' '\n' | grep -E '(apk|tasks|codefresh)' \
+	 && ($(MAKE) list/all) \
+	 || (echo $(CHANGES) | tr ' ' '\n' | grep -E '^vendor/' | sed 's,vendor/,,' ; exit 0)
 
 list/all:
 	@find . -mindepth 1 -maxdepth 1 -type d | cut -d/ -f2
@@ -34,12 +32,6 @@ update:
 help:
 	@find . -mindepth 1 -maxdepth 1 -type d | sort -u | xargs -I{} make --no-print-directory -s -C {} info/short
 
-## Build only updated packages or all if apk, codefresh or tasks was updated
+## Build only updated packages or all if sensitive folders affected
 build/updated:
-	git --no-pager diff --name-only origin/$(TARGET_BRANCH) | \
-		xargs -n 1 -r dirname | \
-		sort -u | \
-		cut -d/ -f1 | \
-		sort -u | \
-		grep -E '.+' | \
-		grep -E '(apk|tasks|codefresh)' && ($(MAKE) build ) || (BUILD_LIST_TARGET=list/updated $(MAKE) build ; exit 0 )
+	@BUILD_LIST_TARGET=list/updated $(MAKE) build
