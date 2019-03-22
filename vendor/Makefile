@@ -6,7 +6,7 @@ BUILD_LIST_TARGET ?= list/all
 deps:
 	apk add alpine-sdk shadow
 
-## List only updated packages or all if apk, codefresh or tasks folders was updated
+## List only updated packages or all if apk, tasks or codefresh folders was updated
 list/updated:
 	$(eval CHANGES=$(shell git --no-pager diff --name-only origin/$(TARGET_BRANCH) | \
 	 xargs -n 1 -r dirname | \
