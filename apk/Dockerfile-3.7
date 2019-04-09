@@ -1,0 +1,4 @@
+FROM alpine:3.7
+RUN apk update
+RUN apk add make alpine-sdk shadow
+RUN echo "auth       sufficient   pam_shells.so" > /etc/pam.d/chsh

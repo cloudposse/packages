@@ -1,0 +1,126 @@
+# Build Environment
+export ARCH ?= amd64
+export OS ?= $(shell uname -s | tr '[:upper:]' '[:lower:'])
+export OS_ARCH ?= $(shell uname -m)
+export INSTALL_PATH ?= /usr/local/bin
+export CURL ?= curl --retry 3 --retry-delay 5 --fail -sSL
+export PATH := $(PATH):../../bin/
+
+export TMP ?= /tmp
+
+# Package details
+export PACKAGE_NAME ?= $(notdir $(CURDIR))
+export PACKAGE_REPO_NAME ?= $(PACKAGE_NAME)
+export PACKAGE_EXE ?= $(PACKAGE_NAME)
+export PACKAGE_DESCRIPTION ?= $(shell cat DESCRIPTION 2>/dev/null)
+export PACKAGE_VERSION ?= $(shell cat VERSION 2>/dev/null)
+export PACKAGE_RELEASE ?= $(shell cat RELEASE 2>/dev/null)
+export PACKAGE_LICENSE ?= $(shell cat LICENSE 2>/dev/null)
+export PACKAGE_HOMEPAGE_URL ?= https://github.com/$(VENDOR)/$(PACKAGE)
+export PACKAGE_REPO_URL ?= https://github.com/$(VENDOR)/$(PACKAGE_REPO_NAME)
+
+# Permit version to be overridden on the command line using PACKAGE_VERSION (e.g. FIGURINE_VERSION=0.3.0)
+VERSION_ENV = $(shell basename $$(pwd) | tr '[:lower:]' '[:upper:]')_VERSION
+ifneq ($($(VERSION_ENV)),) 
+	PACKAGE_VERSION=$($(VERSION_ENV))
+endif
+
+# Macros to download a binary release from GitHub and install it
+# $(call github_download_binary_release,version,repo,asset)
+download_binary = $(CURL) -o $(INSTALL_PATH)/$(PACKAGE_NAME) $(DOWNLOAD_URL) && chmod +x $(INSTALL_PATH)/$(PACKAGE_NAME)
+
+define download_binary_gz
+	$(CURL) -o $(INSTALL_PATH)/$(PACKAGE_NAME).gz $(DOWNLOAD_URL)
+	gunzip -f -k -q $(INSTALL_PATH)/$(PACKAGE_NAME).gz
+	chmod +x $(INSTALL_PATH)/$(PACKAGE_NAME)
+endef
+
+define download_tarball
+	[ -n "$(TMP)" ] && [ -n "$(PACKAGE_NAME)" ] && rm -rf "$(TMP)/$(PACKAGE_NAME)"
+	mkdir -p $(TMP)/$(PACKAGE_NAME)
+	$(CURL) -o - $(DOWNLOAD_URL) | tar -zx -C $(TMP)/$(PACKAGE_NAME)
+	find $(TMP)/$(PACKAGE_NAME) -type f -name $(PACKAGE_NAME) | xargs -I {} cp -f {} $(INSTALL_PATH)/$(PACKAGE_NAME)
+	chmod +x $(INSTALL_PATH)/$(PACKAGE_NAME)
+	[ -n "$(TMP)" ] && [ -n "$(PACKAGE_NAME)" ] && rm -rf "$(TMP)/$(PACKAGE_NAME)"
+endef
+
+define download_tar_bz2
+	[ -n "$(TMP)" ] && [ -n "$(PACKAGE_NAME)" ] && rm -rf "$(TMP)/$(PACKAGE_NAME)"
+	mkdir -p $(TMP)/$(PACKAGE_NAME)
+	$(CURL) -o - $(DOWNLOAD_URL) | tar -jx -C $(TMP)/$(PACKAGE_NAME)
+	find $(TMP)/$(PACKAGE_NAME) -type f -name $(PACKAGE_NAME) | xargs -I {} cp -f {} $(INSTALL_PATH)/$(PACKAGE_NAME)
+	chmod +x $(INSTALL_PATH)/$(PACKAGE_NAME)
+	[ -n "$(TMP)" ] && [ -n "$(PACKAGE_NAME)" ] && rm -rf "$(TMP)/$(PACKAGE_NAME)"
+endef
+
+define download_tar_xz
+	[ -n "$(TMP)" ] && [ -n "$(PACKAGE_NAME)" ] && rm -rf "$(TMP)/$(PACKAGE_NAME)"
+	mkdir -p $(TMP)/$(PACKAGE_NAME)
+	$(CURL) -o - $(DOWNLOAD_URL) | tar -Jx -C $(TMP)/$(PACKAGE_NAME)
+	find $(TMP)/$(PACKAGE_NAME) -type f -name $(PACKAGE_NAME) | xargs -I {} cp -f {} $(INSTALL_PATH)/$(PACKAGE_NAME)
+	chmod +x $(INSTALL_PATH)/$(PACKAGE_NAME)
+	[ -n "$(TMP)" ] && [ -n "$(PACKAGE_NAME)" ] && rm -rf "$(TMP)/$(PACKAGE_NAME)"
+endef
+
+define download_zip
+	[ -n "$(TMP)" ] && [ -n "$(PACKAGE_NAME)" ] && rm -rf "$(TMP)/$(PACKAGE_NAME)"
+	mkdir -p $(TMP)/$(PACKAGE_NAME)
+	$(CURL) -L -o $(TMP)/$(PACKAGE_NAME)/$(PACKAGE_NAME).zip $(DOWNLOAD_URL)
+	unzip $(TMP)/$(PACKAGE_NAME)/$(PACKAGE_NAME).zip -d $(TMP)/$(PACKAGE_NAME)
+	find $(TMP)/$(PACKAGE_NAME) -type f -name $(PACKAGE_NAME) | xargs -I {} cp -f {} $(INSTALL_PATH)/$(PACKAGE_NAME)
+	chmod +x $(INSTALL_PATH)/$(PACKAGE_NAME)
+	[ -n "$(TMP)" ] && [ -n "$(PACKAGE_NAME)" ] && rm -rf "$(TMP)/$(PACKAGE_NAME)"
+endef
+
+define download_gz
+	[ -n "$(TMP)" ] && [ -n "$(PACKAGE_NAME)" ] && rm -rf "$(TMP)/$(PACKAGE_NAME)"
+	mkdir -p $(TMP)/$(PACKAGE_NAME)
+	$(CURL) -L -o $(TMP)/$(PACKAGE_NAME)/$(PACKAGE_NAME).gz $(DOWNLOAD_URL)
+	gunzip $(TMP)/$(PACKAGE_NAME)/$(PACKAGE_NAME).gz
+	find $(TMP)/$(PACKAGE_NAME) -type f -name $(PACKAGE_NAME) | xargs -I {} cp -f {} $(INSTALL_PATH)/$(PACKAGE_NAME)
+	chmod +x $(INSTALL_PATH)/$(PACKAGE_NAME)
+	[ -n "$(TMP)" ] && [ -n "$(PACKAGE_NAME)" ] && rm -rf "$(TMP)/$(PACKAGE_NAME)"
+endef
+
+default: info
+
+update/description:
+	@github-repo-metadata $(VENDOR) $(PACKAGE_REPO_NAME) "index" .description | tee DESCRIPTION
+
+update/version:
+	@github-repo-metadata $(VENDOR) $(PACKAGE_REPO_NAME) "releases/latest" .tag_name | sed 's/^v//' | tee VERSION
+
+update/license:
+	@github-repo-metadata $(VENDOR) $(PACKAGE_REPO_NAME) "license" .license.spdx_id | tr '[:lower:]' '[:upper:]' | tee LICENSE
+
+update/release:
+	@if [ ! -f RELEASE ]; then \
+		echo "0" | tee RELEASE; \
+		git add RELEASE; \
+	elif [ -n "$$(git status -s `pwd` | grep -v RELEASE)" ]; then \
+		if [ -n "$$(git status -s `pwd` | grep VERSION)" ]; then \
+			echo "0" | tee RELEASE; \
+			git add RELEASE; \
+		elif [ -z "$$(git status -s `pwd` | grep RELEASE)" ]; then \
+			echo "$$(($${RELEASE}+1))" | tee RELEASE; \
+			git add RELEASE; \
+		fi; \
+	fi
+
+update: update/version update/license update/description update/release
+	@exit 0
+
+info:
+	@printf "%-20s %s\n" "Vendor:" "$(VENDOR)"
+	@printf "%-20s %s\n" "Package:" "$(PACKAGE_NAME)"
+	@printf "%-20s %s\n" "Version:" "$(PACKAGE_VERSION)"
+	@printf "%-20s %s\n" "License:" "$(LICENSE)"
+	@printf "%-20s %s\n" "Arch:" "$(ARCH)"
+	@printf "%-20s %s\n" "OS:" "$(OS)"
+	@printf "%-20s %s\n" "Homepage URL:" "$(PACKAGE_HOMEPAGE_URL)"
+	@printf "%-20s %s\n" "Repo URL:" "$(PACKAGE_REPO_URL)"
+	@printf "%-20s %s\n" "Download URL:" "$(DOWNLOAD_URL)"
+	@printf "%-20s %s\n" "Install Path:" "$(INSTALL_PATH)"
+
+info/short:
+	@printf "%-25s %-10s %s\n" "$${PACKAGE_NAME}" "$${PACKAGE_VERSION}" "$${PACKAGE_DESCRIPTION}"

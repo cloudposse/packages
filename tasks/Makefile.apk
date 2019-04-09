@@ -1,0 +1,35 @@
+# APK
+export PACKAGER_PRIVKEY = $(CURDIR)/../../key.rsa
+export APK_TEMPLATE_PATH ?= ../../apk/templates/
+export APK_BUILD_TEMPLATE ?= APKBUILD.github-binary
+export APK_PACKAGES_PATH ?= /tmp/packages
+export APK_TMP_DIR := $(realpath $(shell mktemp -d ../../tmp/build.XXXXXX))
+
+apk/prepare: 
+	mkdir -p $(APK_PACKAGES_PATH) $(APK_TMP_DIR)
+	chmod 777 $(APK_PACKAGES_PATH) $(APK_TMP_DIR)
+	cp -a $(APK_TEMPLATE_PATH)/$(APK_BUILD_TEMPLATE) $(APK_TMP_DIR)/APKBUILD
+	cp -a . "$(APK_TMP_DIR)"
+	chsh -s /bin/sh nobody
+	chown nobody -R $(APK_TMP_DIR)
+	chmod 777 /var/cache/distfiles
+
+apk/checksum:
+	cd $(APK_TMP_DIR) && \
+		sudo -E -H -u nobody abuild checksum
+
+apk/build:
+	addgroup nobody abuild
+	cd $(APK_TMP_DIR) && \
+		sudo -E -H -u nobody abuild -c -r -P $(APK_PACKAGES_PATH)
+
+apk/clean:
+	@find $(APK_PACKAGES_PATH) -type f -name APKINDEX.tar.gz -delete
+	rm -rf $(APK_TMP_DIR)
+	mkdir -p $(APK_TMP_DIR)
+
+apk: apk/prepare apk/checksum apk/build apk/clean
+	@exit 0
+
+package/prepare::
+	@exit 0
