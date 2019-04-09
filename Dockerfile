@@ -12,5 +12,5 @@ COPY --from=cfssl /go/bin/ ${INSTALL_PATH}/
 
 COPY . /packages
 RUN mkdir -p /packages/tmp
-RUN make -C /packages/install/ terraform
+RUN make -C /packages/install/ all
 WORKDIR /packages
