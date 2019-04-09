@@ -8,4 +8,5 @@
 *.iml
 .build-harness
 build-harness
-tmp
+# We are relying on tmp and must include it
+tmp/**
