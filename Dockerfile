@@ -10,6 +10,7 @@ RUN apk add --update --no-cache bash make curl coreutils libc6-compat tar xz
 
 COPY --from=cfssl /go/bin/ ${INSTALL_PATH}/
 
-ADD . /packages
-RUN make -C /packages/install/ all
+COPY . /packages
+RUN mkdir -p /packages/tmp
+RUN make -C /packages/install/ terraform
 WORKDIR /packages
