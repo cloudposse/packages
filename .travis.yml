@@ -12,6 +12,7 @@ env:
   - INSTALL_PATH=/tmp/bin
 
 install:
+- make init
 - make readme/lint
 - mkdir -p /tmp/bin
 - make -C install all
