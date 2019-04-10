@@ -27,7 +27,7 @@ gomplate                  3.1.0      A flexible commandline tool for template re
 goofys                    0.19.0     a high-performance, POSIX-ish Amazon S3 file system written in Go
 gosu                      1.10       Simple Go-based setuid+setgid+setgroups+exec
 gotop                     1.5.0      A terminal based graphical activity monitor inspired by gtop and vtop
-helm                      2.13.1     The Kubernetes Package Manager
+helm                      2.11.0     The Kubernetes Package Manager
 helmfile                  0.54.0     Deploy Kubernetes Helm Charts
 htmltest                  0.10.1     :white_check_mark: Test generated HTML for problems
 hugo                      0.49.2     The world’s fastest framework for building websites.
@@ -44,7 +44,7 @@ packer                    1.3.1      Packer is a tool for creating identical mac
 rakkess                   0.2.0      Review Access - kubectl plugin to show an access matrix for all available resources
 rbac-lookup               0.3.0      Find Kubernetes roles and cluster roles bound to any user, service account, or group name.
 retry                     3.3.0      ♻️ Functional mechanism based on channels to perform actions repetitively until successful.
-scenery                   0.1.0      A Terraform plan output prettifier
+scenery                   0.1.4      A Terraform plan output prettifier
 shellcheck                0.5.0      ShellCheck, a static analysis tool for shell scripts
 shfmt                     2.5.1      A shell parser, formatter and interpreter (POSIX/Bash/mksh)
 slack-notifier            0.1.3      Command line utility to send messages with attachments to Slack channels via Incoming Webhooks
