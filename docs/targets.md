@@ -18,7 +18,7 @@ fetch                     0.3.1      fetch makes it easy to download files, fold
 figurine                  0.2.2      Print your name in style
 fzf                       0.18.0     A command-line fuzzy finder
 ghr                       0.12.0     Upload multiple artifacts to GitHub Releases in parallel
-github-commenter          0.1.2      Command line utility for creating GitHub comments on Commits, Pull Request Reviews or Issues
+github-commenter          0.4.1      Command line utility for creating GitHub comments on Commits, Pull Request Reviews or Issues
 github-release            0.7.2      Commandline app to create and edit releases on Github (and upload artifacts)
 github-status-updater     0.2.0      Command line utility for updating GitHub commit statuses and enabling required status checks for pull requests
 gitleaks                  1.2.0      Audit git repos for secrets 🔑
@@ -27,7 +27,7 @@ gomplate                  3.1.0      A flexible commandline tool for template re
 goofys                    0.19.0     a high-performance, POSIX-ish Amazon S3 file system written in Go
 gosu                      1.10       Simple Go-based setuid+setgid+setgroups+exec
 gotop                     1.5.0      A terminal based graphical activity monitor inspired by gtop and vtop
-helm                      2.13.1     The Kubernetes Package Manager
+helm                      2.11.0     The Kubernetes Package Manager
 helmfile                  0.54.0     Deploy Kubernetes Helm Charts
 htmltest                  0.10.1     :white_check_mark: Test generated HTML for problems
 hugo                      0.49.2     The world’s fastest framework for building websites.
