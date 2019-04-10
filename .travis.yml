@@ -14,7 +14,7 @@ env:
 install:
 - mkdir -p /tmp/bin
 - make init
-- make readme/deps readme/lint
+- make readme/deps readme/lint PATH=${PATH}:${INSTALL_PATH}
 - make -C install all
 
 script:
