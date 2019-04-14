@@ -3,7 +3,7 @@ export PACKAGER_PRIVKEY = $(CURDIR)/../../key.rsa
 export APK_TEMPLATE_PATH ?= ../../apk/templates/
 export APK_BUILD_TEMPLATE ?= APKBUILD.github-binary
 export APK_PACKAGES_PATH ?= /tmp/packages
-export APK_TMP_DIR := $(realpath $(shell mktemp -p ../../tmp -d))
+export APK_TMP_DIR := $(realpath $(shell mktemp -d ../../tmp/build.XXXXXX))
 
 apk/prepare::
 	mkdir -p $(APK_PACKAGES_PATH) $(APK_TMP_DIR)
@@ -26,6 +26,7 @@ apk/build:
 apk/clean:
 	@find $(APK_PACKAGES_PATH) -type f -name APKINDEX.tar.gz -delete
 	rm -rf $(APK_TMP_DIR)
+	mkdir -p $(APK_TMP_DIR)
 
 apk: apk/prepare apk/checksum apk/build apk/clean
 	@exit 0
