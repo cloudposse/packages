@@ -2,6 +2,7 @@
 export VENDOR ?= digitalocean
 export PACKAGE_REPO_NAME ?= doctl
 export APK_BUILD_TEMPLATE ?= APKBUILD.github-binary
+export APKBUILD_DEPENDS += libc6-compat
 
 include ../../tasks/Makefile.package
 include ../../tasks/Makefile.apk
