@@ -13,6 +13,7 @@ cloudflared               2018.8.0   Argo Tunnel client
 codefresh                 0.11.1     Codefresh CLI
 ctop                      0.7.1      Top-like interface for container metrics
 direnv                    2.18.2     Unclutter your .profile
+doctl                     1.15.0     A command line tool for DigitalOcean services
 emailcli                  1.0.3      Command line email sending client written in Go.
 fargate                   0.2.3      CLI for AWS Fargate
 fetch                     0.3.1      fetch makes it easy to download files, folders, and release assets from a specific git commit, branch, or tag of public andssss
