@@ -53,6 +53,8 @@ Open up an [issue](https://github.com/cloudposse/packages/issues) or submit a PR
 ## Usage
 
 
+
+
 ### Alpine Repository (recommended)
 
 A public Alpine repository is provided by [Cloud Posse](https://cloudposse.com). The repository is hosted on Amazon S3 and fronted by [CloudFlare's CDN](http://cloudflare.com) with end-to-end TLS. This ensures insane availability with DDoS mitigation and low-cost hosting. Using this alpine repository is ultimately more reliable than depending on [GitHub for availability](https://twitter.com/githubstatus) and provides an easier way to manage dependencies pinned at multiple versions. 
@@ -238,7 +240,7 @@ shfmt                     2.5.1      A shell parser, formatter and interpreter (
 slack-notifier            0.1.3      Command line utility to send messages with attachments to Slack channels via Incoming Webhooks
 sops                      3.1.1      Secrets management stinks, use some sops!
 stern                     1.8.0      ⎈ Multi pod and container log tailing for Kubernetes
-teleport                  3.2.1      Privileged access management for elastic infrastructure.
+teleport                  3.2.2      Privileged access management for elastic infrastructure.
 terraform                 0.11.13    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-docs            0.4.5      Generate docs from terraform modules
 terragrunt                0.18.3     Terragrunt is a thin wrapper for Terraform that provides extra tools for working with multiple Terraform modules.
