@@ -51,7 +51,7 @@ shfmt                     2.5.1      A shell parser, formatter and interpreter (
 slack-notifier            0.1.3      Command line utility to send messages with attachments to Slack channels via Incoming Webhooks
 sops                      3.1.1      Secrets management stinks, use some sops!
 stern                     1.8.0      ⎈ Multi pod and container log tailing for Kubernetes
-teleport                  3.2.2      Privileged access management for elastic infrastructure.
+teleport                  3.2.4      Privileged access management for elastic infrastructure.
 terraform                 0.11.13    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-docs            0.4.5      Generate docs from terraform modules
 terragrunt                0.18.3     Terragrunt is a thin wrapper for Terraform that provides extra tools for working with multiple Terraform modules.
