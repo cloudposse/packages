@@ -42,6 +42,7 @@ kubens                    0.6.1      Fast way to switch between clusters and nam
 lectl                     0.17       Script to check issued certificates by Let's Encrypt on CTL (Certificate Transparency Log) using https://crt.sh
 misspell                  0.3.4      Correct commonly misspelled English words in source files
 packer                    1.3.1      Packer is a tool for creating identical machine images for multiple platforms from a single source configuration.
+pandoc                    2.7.2      Universal markup converter
 rakkess                   0.2.0      Review Access - kubectl plugin to show an access matrix for all available resources
 rbac-lookup               0.3.0      Find Kubernetes roles and cluster roles bound to any user, service account, or group name.
 retry                     3.3.0      ♻️ Functional mechanism based on channels to perform actions repetitively until successful.
