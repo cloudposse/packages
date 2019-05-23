@@ -23,7 +23,6 @@ github-commenter          0.5.0      Command line utility for creating GitHub co
 github-release            0.7.2      Commandline app to create and edit releases on Github (and upload artifacts)
 github-status-updater     0.2.0      Command line utility for updating GitHub commit statuses and enabling required status checks for pull requests
 gitleaks                  1.2.0      Audit git repos for secrets 🔑
-gometalinter              2.0.11     Concurrently run Go lint tools and normalise their output
 gomplate                  3.1.0      A flexible commandline tool for template rendering. Supports lots of local and remote datasources.
 goofys                    0.19.0     a high-performance, POSIX-ish Amazon S3 file system written in Go
 gosu                      1.10       Simple Go-based setuid+setgid+setgroups+exec
