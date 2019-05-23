@@ -3,7 +3,7 @@
 assume-role               0.3.2      Easily assume AWS roles in your terminal.
 atlantis                  0.4.13     Terraform For Teams
 awless                    0.1.11     A Mighty CLI for AWS
-aws-iam-authenticator     0.3.0      A tool to use AWS IAM credentials to authenticate to a Kubernetes cluster
+aws-iam-authenticator     0.4.0      A tool to use AWS IAM credentials to authenticate to a Kubernetes cluster
 aws-okta                  0.19.4     aws-okta allows users to authenticate with AWS using Okta credentials
 aws-vault                 4.4.1      A vault for securely storing and accessing AWS credentials in development environments
 chamber                   2.3.2      CLI for managing secrets
@@ -28,8 +28,8 @@ gomplate                  3.1.0      A flexible commandline tool for template re
 goofys                    0.19.0     a high-performance, POSIX-ish Amazon S3 file system written in Go
 gosu                      1.10       Simple Go-based setuid+setgid+setgroups+exec
 gotop                     1.5.0      A terminal based graphical activity monitor inspired by gtop and vtop
-helm                      2.13.1     The Kubernetes Package Manager
-helmfile                  0.54.0     Deploy Kubernetes Helm Charts
+helm                      2.14.0     The Kubernetes Package Manager
+helmfile                  0.64.1     Deploy Kubernetes Helm Charts
 htmltest                  0.10.1     :white_check_mark: Test generated HTML for problems
 hugo                      0.49.2     The world’s fastest framework for building websites.
 json2hcl                  0.0.6      Convert JSON to HCL, and vice versa
@@ -37,8 +37,8 @@ k6                        0.22.1     A modern load testing tool, using Go and Ja
 kops                      1.12.1     Kubernetes Operations (kops) - Production Grade K8s Installation, Upgrades, and Management
 kubecron                  1.0.2      Utilities to manage kubernetes cronjobs. Run a CronJob manually for test purposes. Suspend/unsuspend a CronJob
 kubectl                   1.14.2     Production-Grade Container Scheduling and Management
-kubectx                   0.6.1      Fast way to switch between clusters and namespaces in kubectl – [✩Star] if you're using it!
-kubens                    0.6.1      Fast way to switch between clusters and namespaces in kubectl – [✩Star] if you're using it!
+kubectx                   0.6.3      Fast way to switch between clusters and namespaces in kubectl – [✩Star] if you're using it!
+kubens                    0.6.3      Fast way to switch between clusters and namespaces in kubectl – [✩Star] if you're using it!
 lectl                     0.17       Script to check issued certificates by Let's Encrypt on CTL (Certificate Transparency Log) using https://crt.sh
 misspell                  0.3.4      Correct commonly misspelled English words in source files
 packer                    1.3.1      Packer is a tool for creating identical machine images for multiple platforms from a single source configuration.
