@@ -198,7 +198,7 @@ aws-vault                 4.4.1      A vault for securely storing and accessing 
 chamber                   2.3.2      CLI for managing secrets
 cli53                     0.8.12     Command line tool for Amazon Route 53
 cloudflared               2018.8.0   Argo Tunnel client
-codefresh                 0.11.1     Codefresh CLI
+codefresh                 0.19.5     Codefresh CLI
 ctop                      0.7.1      Top-like interface for container metrics
 direnv                    2.18.2     Unclutter your .profile
 doctl                     1.15.0     A command line tool for DigitalOcean services
