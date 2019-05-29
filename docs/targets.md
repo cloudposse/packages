@@ -53,6 +53,7 @@ sops                      3.2.0      Secrets management stinks, use some sops!
 stern                     1.8.0      ⎈ Multi pod and container log tailing for Kubernetes
 teleport                  3.2.4      Privileged access management for elastic infrastructure.
 terraform                 0.11.13    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
+terraform-0.11            0.11.14    Terraform enables you to safely and predictably create, change, and improve infrastructure. It is an open source tool that codifies APIs into declarative configuration files that can be shared amongst team members, treated as code, edited, reviewed, and versioned.
 terraform-docs            0.4.5      Generate docs from terraform modules
 terragrunt                0.18.3     Terragrunt is a thin wrapper for Terraform that provides extra tools for working with multiple Terraform modules.
 terrahelp                 0.6.3      Terrahelp is as a command line utility that provides useful tricks like masking of terraform output.
