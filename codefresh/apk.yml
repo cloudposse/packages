@@ -28,6 +28,9 @@ steps:
 
   docker_build:
     type: "parallel"
+    title: "Build Docker Images"
+    description: "Build Docker images for all recent alpine releases"
+    stage: Prepare
     steps:
       docker_build_3_7:
         title: Building Docker Image for alpine 3.7
