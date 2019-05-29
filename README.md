@@ -53,6 +53,8 @@ Open up an [issue](https://github.com/cloudposse/packages/issues) or submit a PR
 ## Usage
 
 
+
+
 ### Alpine Repository (recommended)
 
 A public Alpine repository is provided by [Cloud Posse](https://cloudposse.com). The repository is hosted on Amazon S3 and fronted by [CloudFlare's CDN](http://cloudflare.com) with end-to-end TLS. This ensures insane availability with DDoS mitigation and low-cost hosting. Using this alpine repository is ultimately more reliable than depending on [GitHub for availability](https://twitter.com/githubstatus) and provides an easier way to manage dependencies pinned at multiple versions. 
@@ -197,7 +199,7 @@ azure-cli                 azure-cli-2.0.60 Command-line tools for Azure.
 chamber                   2.3.2      CLI for managing secrets
 cli53                     0.8.12     Command line tool for Amazon Route 53
 cloudflared               2018.8.0   Argo Tunnel client
-codefresh                 0.11.1     Codefresh CLI
+codefresh                 0.19.5     Codefresh CLI
 ctop                      0.7.1      Top-like interface for container metrics
 direnv                    2.18.2     Unclutter your .profile
 doctl                     1.15.0     A command line tool for DigitalOcean services
@@ -222,14 +224,15 @@ htmltest                  0.10.1     :white_check_mark: Test generated HTML for 
 hugo                      0.49.2     The world’s fastest framework for building websites.
 json2hcl                  0.0.6      Convert JSON to HCL, and vice versa
 k6                        0.22.1     A modern load testing tool, using Go and JavaScript - https://k6.io
-kops                      1.11.1     Kubernetes Operations (kops) - Production Grade K8s Installation, Upgrades, and Management
+kops                      1.12.1     Kubernetes Operations (kops) - Production Grade K8s Installation, Upgrades, and Management
 kubecron                  1.0.2      Utilities to manage kubernetes cronjobs. Run a CronJob manually for test purposes. Suspend/unsuspend a CronJob
-kubectl                   1.13.0     Production-Grade Container Scheduling and Management
+kubectl                   1.14.2     Production-Grade Container Scheduling and Management
 kubectx                   0.6.1      Fast way to switch between clusters and namespaces in kubectl – [✩Star] if you're using it!
 kubens                    0.6.1      Fast way to switch between clusters and namespaces in kubectl – [✩Star] if you're using it!
 lectl                     0.17       Script to check issued certificates by Let's Encrypt on CTL (Certificate Transparency Log) using https://crt.sh
 misspell                  0.3.4      Correct commonly misspelled English words in source files
 packer                    1.3.1      Packer is a tool for creating identical machine images for multiple platforms from a single source configuration.
+pandoc                    2.7.2      Universal markup converter
 rakkess                   0.2.0      Review Access - kubectl plugin to show an access matrix for all available resources
 rbac-lookup               0.3.0      Find Kubernetes roles and cluster roles bound to any user, service account, or group name.
 retry                     3.3.0      ♻️ Functional mechanism based on channels to perform actions repetitively until successful.
@@ -237,16 +240,17 @@ scenery                   0.1.4      A Terraform plan output prettifier
 shellcheck                0.5.0      ShellCheck, a static analysis tool for shell scripts
 shfmt                     2.5.1      A shell parser, formatter and interpreter (POSIX/Bash/mksh)
 slack-notifier            0.1.3      Command line utility to send messages with attachments to Slack channels via Incoming Webhooks
-sops                      3.1.1      Secrets management stinks, use some sops!
+sops                      3.2.0      Secrets management stinks, use some sops!
 stern                     1.8.0      ⎈ Multi pod and container log tailing for Kubernetes
-teleport                  3.2.1      Privileged access management for elastic infrastructure.
+teleport                  3.2.4      Privileged access management for elastic infrastructure.
 terraform                 0.11.13    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
+terraform-0.11            0.11.14    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-docs            0.4.5      Generate docs from terraform modules
 terragrunt                0.18.3     Terragrunt is a thin wrapper for Terraform that provides extra tools for working with multiple Terraform modules.
 terrahelp                 0.6.3      Terrahelp is as a command line utility that provides useful tricks like masking of terraform output.
 tfenv                     0.3.0      Transform environment variables for use with Terraform (e.g. `HOSTNAME` ⇨ `TF_VAR_hostname`)
 tfmask                    0.2.0      Terraform utility to mask select output from `terraform plan` and `terraform apply`
-variant                   0.26.0     Variant is a Universal CLI tool that works like a task runner
+variant                   0.28.0     Variant is a Universal CLI tool that works like a task runner
 venona                    0.20.0     Codefresh runtime-environment agent
 yq                        2.1.1      yq is a portable command-line YAML processor
 ```
