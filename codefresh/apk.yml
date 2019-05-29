@@ -61,6 +61,9 @@ steps:
 
   apk_build:
     type: "parallel"
+    title: "Build Alpine Packages"
+    description: "Build alpine packages for each release"
+    stage: Build
     steps:
       apk_build_3_7:
         title: Build alpine 3.7 packages
