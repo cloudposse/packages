@@ -198,7 +198,7 @@ aws-vault                 4.4.1      A vault for securely storing and accessing 
 chamber                   2.3.2      CLI for managing secrets
 cli53                     0.8.12     Command line tool for Amazon Route 53
 cloudflared               2018.8.0   Argo Tunnel client
-codefresh                 0.11.1     Codefresh CLI
+codefresh                 0.19.5     Codefresh CLI
 ctop                      0.7.1      Top-like interface for container metrics
 direnv                    2.18.2     Unclutter your .profile
 doctl                     1.15.0     A command line tool for DigitalOcean services
@@ -242,7 +242,9 @@ slack-notifier            0.1.3      Command line utility to send messages with 
 sops                      3.2.0      Secrets management stinks, use some sops!
 stern                     1.8.0      ⎈ Multi pod and container log tailing for Kubernetes
 teleport                  3.2.4      Privileged access management for elastic infrastructure.
-terraform                 0.11.13    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
+terraform                 0.11.14    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
+terraform-0.11            0.11.14    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
+terraform-0.12            0.12.0     Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-docs            0.4.5      Generate docs from terraform modules
 terragrunt                0.18.3     Terragrunt is a thin wrapper for Terraform that provides extra tools for working with multiple Terraform modules.
 terrahelp                 0.6.3      Terrahelp is as a command line utility that provides useful tricks like masking of terraform output.

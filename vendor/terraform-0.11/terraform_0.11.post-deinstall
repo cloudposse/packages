@@ -1,0 +1,6 @@
+#!/bin/sh
+# This is an Alpine `deinstall` hook that removes the alternative
+MAJOR_VERSION=0.11
+INSTALL_DIR=/usr/local/terraform/${MAJOR_VERSION}/bin
+update-alternatives --remove terraform-${MAJOR_VERSION} ${INSTALL_DIR}/terraform --quiet
+exit 0
