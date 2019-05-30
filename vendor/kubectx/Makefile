@@ -5,7 +5,7 @@ include ../../tasks/Makefile.apk
 export VENDOR ?= ahmetb
 export DOWNLOAD_URL ?= https://raw.githubusercontent.com/ahmetb/$(PACKAGE_NAME)/v$(PACKAGE_VERSION)/$(PACKAGE_NAME)
 export APK_BUILD_TEMPLATE ?= APKBUILD.github-binary
-export APKBUILD_DEPENDS += bash kubectl
+export APKBUILD_DEPENDS += bash kubectl@cloudposse
 
 install:
 	$(call download_binary)
