@@ -7,6 +7,7 @@ pkgrel="${PACKAGE_RELEASE}"
 mjrver=${pkgver%.*}
 pkgname="terraform_${mjrver}"
 pkgdesc="${PACKAGE_DESCRIPTION}"
+repo=vendor
 arch="x86_64"
 url="https://releases.hashicorp.com/terraform/${pkgver}/terraform_${pkgver}_linux_amd64.zip"
 license="MPL-2.0"
