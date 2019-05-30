@@ -1,0 +1,1 @@
+Shell wrapper to run a login shell with `sudo` as the current user for the purpose of audit logging
