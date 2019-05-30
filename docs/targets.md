@@ -37,7 +37,7 @@ k6                        0.22.1     A modern load testing tool, using Go and Ja
 kops                      1.12.1     Kubernetes Operations (kops) - Production Grade K8s Installation, Upgrades, and Management
 kubecron                  1.0.2      Utilities to manage kubernetes cronjobs. Run a CronJob manually for test purposes. Suspend/unsuspend a CronJob
 kubectl                   1.14.2     Production-Grade Container Scheduling and Management
-kubectx                   0.6.1      Fast way to switch between clusters and namespaces in kubectl – [✩Star] if you're using it!
+kubectx                   0.6.3      Switch faster between clusters and namespaces in kubectl
 kubens                    0.6.3      Switch faster between clusters and namespaces in kubectl
 lectl                     0.17       Script to check issued certificates by Let's Encrypt on CTL (Certificate Transparency Log) using https://crt.sh
 misspell                  0.3.4      Correct commonly misspelled English words in source files
