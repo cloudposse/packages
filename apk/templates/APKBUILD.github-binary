@@ -22,7 +22,7 @@ arch=${OS_ARCH}
 # https://wiki.alpinelinux.org/wiki/APKBUILD_Reference#license
 license=${PACKAGE_LICENSE}
 
-depends=${APKBUILD_DEPENDS}
+depends="${APKBUILD_DEPENDS}"
 #depends_dev=curl make
 
 options="!strip" 

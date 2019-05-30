@@ -11,4 +11,4 @@ install:
 	$(call download_binary)
 
 test:
-	$(PACKAGE_EXE) true
+	$(PACKAGE_EXE) true 2>&1 | grep "nobody is not in the sudoers file"
