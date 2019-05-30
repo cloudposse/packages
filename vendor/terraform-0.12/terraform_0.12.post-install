@@ -1,0 +1,6 @@
+#!/bin/sh
+MAJOR_VERSION=0.12
+INSTALL_DIR=/usr/local/terraform/${MAJOR_VERSION}/bin
+mkdir -p ${INSTALL_DIR}
+update-alternatives --install ${INSTALL_DIR}/terraform terraform-${MAJOR_VERSION} /usr/bin/terraform-${MAJOR_VERSION} 1
+exit 0
