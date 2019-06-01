@@ -9,7 +9,7 @@ aws-vault                 4.4.1      A vault for securely storing and accessing 
 chamber                   2.3.2      CLI for managing secrets
 cli53                     0.8.12     Command line tool for Amazon Route 53
 cloudflared               2018.8.0   Argo Tunnel client
-codefresh                 0.11.1     Codefresh CLI
+codefresh                 0.19.5     Codefresh CLI
 ctop                      0.7.1      Top-like interface for container metrics
 direnv                    2.18.2     Unclutter your .profile
 doctl                     1.15.0     A command line tool for DigitalOcean services
@@ -28,7 +28,7 @@ goofys                    0.19.0     a high-performance, POSIX-ish Amazon S3 fil
 gosu                      1.10       Simple Go-based setuid+setgid+setgroups+exec
 gotop                     1.5.0      A terminal based graphical activity monitor inspired by gtop and vtop
 helm                      2.14.0     The Kubernetes Package Manager
-helmfile                  0.64.1     Deploy Kubernetes Helm Charts
+helmfile                  0.68.0     Deploy Kubernetes Helm Charts
 htmltest                  0.10.1     :white_check_mark: Test generated HTML for problems
 hugo                      0.49.2     The world’s fastest framework for building websites.
 json2hcl                  0.0.6      Convert JSON to HCL, and vice versa
@@ -37,8 +37,8 @@ kfctl                     0.5.1      Quickly get running with your ML Workflow
 kops                      1.12.1     Kubernetes Operations (kops) - Production Grade K8s Installation, Upgrades, and Management
 kubecron                  1.0.2      Utilities to manage kubernetes cronjobs. Run a CronJob manually for test purposes. Suspend/unsuspend a CronJob
 kubectl                   1.14.2     Production-Grade Container Scheduling and Management
-kubectx                   0.6.3      Fast way to switch between clusters and namespaces in kubectl – [✩Star] if you're using it!
-kubens                    0.6.3      Fast way to switch between clusters and namespaces in kubectl – [✩Star] if you're using it!
+kubectx                   0.6.3      Switch faster between clusters and namespaces in kubectl
+kubens                    0.6.3      Switch faster between clusters and namespaces in kubectl
 lectl                     0.17       Script to check issued certificates by Let's Encrypt on CTL (Certificate Transparency Log) using https://crt.sh
 misspell                  0.3.4      Correct commonly misspelled English words in source files
 packer                    1.3.1      Packer is a tool for creating identical machine images for multiple platforms from a single source configuration.
@@ -52,8 +52,11 @@ shfmt                     2.5.1      A shell parser, formatter and interpreter (
 slack-notifier            0.1.3      Command line utility to send messages with attachments to Slack channels via Incoming Webhooks
 sops                      3.2.0      Secrets management stinks, use some sops!
 stern                     1.8.0      ⎈ Multi pod and container log tailing for Kubernetes
+sudosh                    0.1.4      Shell wrapper to run a login shell with `sudo` as the current user for the purpose of audit logging
 teleport                  3.2.4      Privileged access management for elastic infrastructure.
-terraform                 0.11.13    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
+terraform                 0.12.0     Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
+terraform-0.11            0.11.14    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
+terraform-0.12            0.12.0     Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-docs            0.4.5      Generate docs from terraform modules
 terragrunt                0.18.3     Terragrunt is a thin wrapper for Terraform that provides extra tools for working with multiple Terraform modules.
 terrahelp                 0.6.3      Terrahelp is as a command line utility that provides useful tricks like masking of terraform output.

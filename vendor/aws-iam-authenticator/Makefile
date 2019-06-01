@@ -9,9 +9,5 @@ include ../../tasks/Makefile.apk
 install:
 	$(call download_binary)
 
-package/prepare::
-	@echo "make package/prepare ($(PACKAGE_EXE))"
-	mv src/heptio-authenticator-aws* src/$(PACKAGE_EXE)
-
 test:
 	$(PACKAGE_EXE) --help
