@@ -33,6 +33,7 @@ htmltest                  0.10.1     :white_check_mark: Test generated HTML for 
 hugo                      0.49.2     The world’s fastest framework for building websites.
 json2hcl                  0.0.6      Convert JSON to HCL, and vice versa
 k6                        0.22.1     A modern load testing tool, using Go and JavaScript - https://k6.io
+kfctl                     0.5.1      Quickly get running with your ML Workflow
 kops                      1.12.1     Kubernetes Operations (kops) - Production Grade K8s Installation, Upgrades, and Management
 kubecron                  1.0.2      Utilities to manage kubernetes cronjobs. Run a CronJob manually for test purposes. Suspend/unsuspend a CronJob
 kubectl                   1.14.2     Production-Grade Container Scheduling and Management
