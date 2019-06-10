@@ -11,5 +11,3 @@ install:
 
 test:
 	$(PACKAGE_EXE) --version
-
-
