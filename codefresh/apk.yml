@@ -24,7 +24,6 @@ steps:
       - cf_export CURRENT_BRANCH=${{CF_BRANCH}}
       - echo "${{KEY_RSA}}" | base64 -d > key.rsa
       - echo "${{KEY_RSA_PUB}}" | base64 -d > key.rsa.pub
-      - rm -rf "${APK_PACKAGES_PATH}"
 
   docker_build:
     type: "parallel"
