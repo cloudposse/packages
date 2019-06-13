@@ -115,7 +115,7 @@ info:
 	@printf "%-20s %s\n" "Vendor:" "$(VENDOR)"
 	@printf "%-20s %s\n" "Package:" "$(PACKAGE_NAME)"
 	@printf "%-20s %s\n" "Version:" "$(PACKAGE_VERSION)"
-	@printf "%-20s %s\n" "License:" "$(LICENSE)"
+	@printf "%-20s %s\n" "License:" "$(PACKAGE_LICENSE)"
 	@printf "%-20s %s\n" "Arch:" "$(ARCH)"
 	@printf "%-20s %s\n" "OS:" "$(OS)"
 	@printf "%-20s %s\n" "Homepage URL:" "$(PACKAGE_HOMEPAGE_URL)"
