@@ -13,7 +13,7 @@ prepare:
 build: $(PACKAGES)
 
 $(PACKAGES): prepare
-	make --no-print-directory -C $@ info apk
+	make --no-print-directory -C $@ apk
 
 ## Update all packages
 update:
