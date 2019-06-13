@@ -6,3 +6,4 @@ build-harness
 .idea
 *.iml
 *.rsa*
+artifacts/
