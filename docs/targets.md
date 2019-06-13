@@ -53,11 +53,11 @@ sops                      3.2.0      Secrets management stinks, use some sops!
 stern                     1.8.0      ⎈ Multi pod and container log tailing for Kubernetes
 sudosh                    0.1.4      Shell wrapper to run a login shell with `sudo` as the current user for the purpose of audit logging
 teleport                  3.2.4      Privileged access management for elastic infrastructure.
-terraform                 0.12.0     Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
+terraform                 0.12.2     Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-0.11            0.11.14    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
-terraform-0.12            0.12.0     Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
+terraform-0.12            0.12.2     Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-docs            0.4.5      Generate docs from terraform modules
-terragrunt                0.18.3     Terragrunt is a thin wrapper for Terraform that provides extra tools for working with multiple Terraform modules.
+terragrunt                0.19.2     Terragrunt is a thin wrapper for Terraform that provides extra tools for working with multiple Terraform modules.
 terrahelp                 0.6.3      Terrahelp is as a command line utility that provides useful tricks like masking of terraform output.
 tfenv                     0.3.0      Transform environment variables for use with Terraform (e.g. `HOSTNAME` ⇨ `TF_VAR_hostname`)
 tfmask                    0.2.0      Terraform utility to mask select output from `terraform plan` and `terraform apply`
