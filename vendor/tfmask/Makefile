@@ -11,4 +11,4 @@ install:
 	$(call download_binary)
 
 test:
-	$(PACKAGE_EXE) true
+	$(PACKAGE_EXE) < /dev/null

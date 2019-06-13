@@ -4,7 +4,8 @@ export APK_TEMPLATE_PATH ?= ../../apk/templates/
 export APK_BUILD_TEMPLATE ?= APKBUILD.github-binary
 export APK_PACKAGES_PATH ?= /tmp/packages
 export APK_TMP_DIR := $(realpath $(shell mktemp -d ../../tmp/build.XXXXXX))
-export APK_PACKAGE ?= $(APK_PACKAGES_PATH)/vendor/x86_64/$(PACKAGE_NAME)-$(PACKAGE_VERSION)-r$(PACKAGE_RELEASE).apk
+export APK_PACKAGE_NAME ?= $(PACKAGE_NAME)
+export APK_PACKAGE ?= $(APK_PACKAGES_PATH)/vendor/x86_64/$(APK_PACKAGE_NAME)-$(PACKAGE_VERSION)-r$(PACKAGE_RELEASE).apk
 
 apk/prepare::
 	mkdir -p $(APK_PACKAGES_PATH) $(APK_TMP_DIR)
@@ -38,6 +39,7 @@ apk: $(APK_PACKAGE)
 
 # Rebuild the `.apk` when it's older than the Makefile, VERSION, or RELEASE files
 $(APK_PACKAGE): Makefile VERSION RELEASE
+	@echo "Building $@"
 	$(MAKE) apk/prepare apk/checksum apk/build apk/clean
 
 package/prepare::

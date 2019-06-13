@@ -1,30 +1,19 @@
-TARGET_BRANCH ?= master
-CURRENT_BRANCH ?= 
-BUILD_LIST_TARGET ?= list/all
+PACKAGES  = $(sort $(dir $(wildcard */)))
+
+default: build
 
 ## Install alpine build deps
 deps:
 	apk add alpine-sdk shadow
 
-## List all packages which have been updated relative to `master`
-list/updated:
-	@git --no-pager diff --name-only $(CURRENT_BRANCH) `git merge-base $(CURRENT_BRANCH) origin/$(TARGET_BRANCH)` | \
-		xargs -n 1 -r dirname | \
-		sort -u | \
-		grep -E '^vendor/' | \
-		sed 's,vendor/,,' | \
-		cut -d/ -f1 | \
-		sort -u | \
-		grep -E '.+'
-
-list/all:
-	@find . -mindepth 1 -maxdepth 1 -type d | cut -d/ -f2
+prepare:
+	chmod 777 ../tmp
 
 ## Build all updated alpine packages
-build:
-	chmod 777 ../tmp
-	$(MAKE) --no-print-directory -s $(BUILD_LIST_TARGET) | \
-		xargs -t -n 1 -I{} -- /bin/sh -c 'make --no-print-directory -C {} info apk || exit 255'
+build: $(PACKAGES)
+
+$(PACKAGES): prepare
+	make --no-print-directory -C $@ info apk
 
 ## Update all packages
 update:
@@ -33,4 +22,3 @@ update:
 ## Show available packages
 help:
 	@find . -mindepth 1 -maxdepth 1 -type d | sort -u | xargs -I{} make --no-print-directory -s -C {} info/short
-
