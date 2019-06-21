@@ -78,9 +78,9 @@ Add the following to your `Dockerfile` near the top.
 ```
 # Install the cloudposse alpine repository
 ADD https://apk.cloudposse.com/ops@cloudposse.com.rsa.pub /etc/apk/keys/
-RUN echo "@cloudposse https://apk.cloudposse.com/3.9/vendor" >> /etc/apk/repositories
+RUN echo "@cloudposse https://apk.cloudposse.com/3.10/vendor" >> /etc/apk/repositories
 ```
-__NOTE__: we support alpine `3.7`, `3.8`, and `3.9` packages at this time
+__NOTE__: we support alpine `3.7`, `3.8`, `3.9`, and `3.10` packages at this time
 
 ### Installing Alpine Packages
 

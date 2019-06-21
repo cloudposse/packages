@@ -106,8 +106,19 @@ steps:
         commands:
           - make -C vendor build
           - find "${APK_PACKAGES_PATH}" -type f -name '*.apk' | xargs ls -l 
+
+      apk_build_3_10:
+        title: Build alpine 3.10 packages
+        stage: Build
+        image: ${{docker_build_3_10}}
+        working_directory: .
+        environment:
+          - APK_PACKAGES_PATH=${{CF_VOLUME_PATH}}/artifacts/3.10
+        commands:
+          - make -C vendor build
+          - find "${APK_PACKAGES_PATH}" -type f -name '*.apk' | xargs ls -l 
  
-    # Only deploy on merge to master
+  # Only deploy on merge to master
   publish:
     title: Push all apk artifacts to S3 bucket
     stage: Publish
