@@ -69,3 +69,8 @@ docker/build/apk/shell:
 
 help/vendor:
 	@$(MAKE) --no-print-directory -s -C vendor help
+
+update/%:
+	rm -f vendor/$(subst update/,,$@)/VERSION
+	make -C vendor/$(subst update/,,$@) VERSION
+	make readme
