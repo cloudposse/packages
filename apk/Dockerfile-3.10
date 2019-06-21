@@ -2,7 +2,8 @@ FROM alpine:3.10
 
 # Install the cloudposse alpine repository
 ADD https://apk.cloudposse.com/ops@cloudposse.com.rsa.pub /etc/apk/keys/
-RUN echo "https://apk.cloudposse.com/3.10/vendor" >> /etc/apk/repositories
+# Due to a cold-start problem of adding a new distro, we pin to 3.9 so we can satisfy deps
+RUN echo "https://apk.cloudposse.com/3.9/vendor" >> /etc/apk/repositories
 RUN echo "https://alpine.global.ssl.fastly.net/alpine/edge/testing" >> /etc/apk/repositories
 RUN echo "https://alpine.global.ssl.fastly.net/alpine/edge/community" >> /etc/apk/repositories
 
