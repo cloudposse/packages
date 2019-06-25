@@ -14,7 +14,7 @@ steps:
     git: CF-default
     revision: ${{CF_REVISION}}
 
-  main_clone:
+  main_env:
     type: "parallel"
     title: "Prepare Build Environment"
     stage: Prepare
