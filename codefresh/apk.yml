@@ -6,19 +6,19 @@ stages:
 steps:
 
   main_clone:
+    title: "Clone respository"
+    type: git-clone
+    stage: Prepare
+    description: "Initialize"
+    repo: ${{CF_REPO_OWNER}}/${{CF_REPO_NAME}}
+    git: CF-default
+    revision: ${{CF_REVISION}}
+
+  main_clone:
     type: "parallel"
     title: "Prepare Build Environment"
     stage: Prepare
     steps:
-      git_clone:
-        title: "Clone respository"
-        type: git-clone
-        stage: Prepare
-        description: "Initialize"
-        repo: ${{CF_REPO_OWNER}}/${{CF_REPO_NAME}}
-        git: CF-default
-        revision: ${{CF_REVISION}}
-
       init_variables:
         title: Init variables
         stage: Prepare
@@ -39,7 +39,7 @@ steps:
         environment:
           - APK_PACKAGES_PATH=${{CF_VOLUME_PATH}}/artifacts
         commands:
-          - aws s3 sync --acl public-read --exact-timestamps "s3://${S3_BUCKET_NAME}/" "${APK_PACKAGES_PATH}/"
+          - aws s3 sync --include '*.apk' --exclude '*' --exact-timestamps "s3://${S3_BUCKET_NAME}/" "${APK_PACKAGES_PATH}/"
 
   docker_build:
     type: "parallel"
