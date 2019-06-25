@@ -24,6 +24,7 @@ steps:
     commands:
       - make -C codefresh export
       - aws s3 sync --exclude '*' --include '*.apk' --exact-timestamps "s3://${S3_BUCKET_NAME}/" "${APK_PACKAGES_PATH}/"
+      - chown -R nobody "${APK_PACKAGES_PATH}"
 
   docker_build:
     type: "parallel"
