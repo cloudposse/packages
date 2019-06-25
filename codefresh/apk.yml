@@ -71,6 +71,7 @@ steps:
         working_directory: .
         environment:
           - APK_PACKAGES_PATH=${{CF_VOLUME_PATH}}/artifacts/3.7
+          - PACKAGER_PRIVKEY=/dev/shm/key.rsa
         commands:
           - make -C vendor build
           - make -C vendor index
@@ -83,6 +84,7 @@ steps:
         working_directory: .
         environment:
           - APK_PACKAGES_PATH=${{CF_VOLUME_PATH}}/artifacts/3.8
+          - PACKAGER_PRIVKEY=/dev/shm/key.rsa
         commands:
           - make -C vendor build
           - make -C vendor index
@@ -95,6 +97,7 @@ steps:
         working_directory: .
         environment:
           - APK_PACKAGES_PATH=${{CF_VOLUME_PATH}}/artifacts/3.9
+          - PACKAGER_PRIVKEY=/dev/shm/key.rsa
         commands:
           - make -C vendor build
           - make -C vendor index
