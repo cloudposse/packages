@@ -14,32 +14,16 @@ steps:
     git: CF-default
     revision: ${{CF_REVISION}}
 
-  main_env:
-    type: "parallel"
-    title: "Prepare Build Environment"
+  stage:
+    title: Pull down all existing packages from S3 bucket
     stage: Prepare
-    steps:
-      init_variables:
-        title: Init variables
-        stage: Prepare
-        image: alpine
-        working_directory: .
-        environment:
-          - APK_PACKAGES_PATH=${{CF_VOLUME_PATH}}/artifacts
-        commands:
-          - cf_export CURRENT_BRANCH=${{CF_BRANCH}}
-          - echo "${{KEY_RSA}}" | base64 -d > key.rsa
-          - echo "${{KEY_RSA_PUB}}" | base64 -d > key.rsa.pub
-
-      pull:
-        title: Pull down all existing packages from S3 bucket
-        stage: Prepare
-        image: cloudposse/build-harness:${{BUILD_HARNESS_VERSION}}
-        working_directory: ./
-        environment:
-          - APK_PACKAGES_PATH=${{CF_VOLUME_PATH}}/artifacts
-        commands:
-          - aws s3 sync --exclude '*' --include '*.apk' --exact-timestamps "s3://${S3_BUCKET_NAME}/" "${APK_PACKAGES_PATH}/"
+    image: cloudposse/build-harness:${{BUILD_HARNESS_VERSION}}
+    working_directory: ./
+    environment:
+      - APK_PACKAGES_PATH=${{CF_VOLUME_PATH}}/artifacts
+    commands:
+      - make -C codefresh export
+      - aws s3 sync --exclude '*' --include '*.apk' --exact-timestamps "s3://${S3_BUCKET_NAME}/" "${APK_PACKAGES_PATH}/"
 
   docker_build:
     type: "parallel"
