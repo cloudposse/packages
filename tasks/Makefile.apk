@@ -41,6 +41,7 @@ apk: $(APK_PACKAGE)
 $(APK_PACKAGE): Makefile VERSION RELEASE
 	@echo "Building $@"
 	ls -l $@ || true
+	ls -l Makefile VERSION RELEASE
 #	$(MAKE) info apk/prepare apk/checksum apk/build apk/clean
 
 package/prepare::
