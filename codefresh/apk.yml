@@ -100,7 +100,7 @@ steps:
         commands:
           - make -C vendor build
           - make -C vendor index
-          - find "${APK_PACKAGES_PATH}" -type f -name '*.apk' | xargs ls -l 
+           - find "${APK_PACKAGES_PATH}" -type f -name '*.apk' -exec ls -l {} +
  
   # Only deploy on merge to master
   publish:
