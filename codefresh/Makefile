@@ -1,7 +1,8 @@
+export PACKAGER_PRIVKEY=$(CF_VOLUME_PATH)/key.rsa
 export:
-	@echo "$(KEY_RSA)" | base64 -d > /dev/shm/key.rsa
-	@echo "$(KEY_RSA_PUB)" | base64 -d > /dev/shm/key.rsa.pub
-	@echo PACKAGER_PRIVKEY=/dev/shm/key.rsa >> $(CF_VOLUME_PATH)/env_vars_to_export
+	@echo "$(KEY_RSA)" | base64 -d > $(PACKAGER_PRIVKEY)
+	@echo "$(KEY_RSA_PUB)" | base64 -d > $(PACKAGER_PRIVKEY).pub
+	@echo PACKAGER_PRIVKEY=$(PACKAGER_PRIVKEY) >> $(CF_VOLUME_PATH)/env_vars_to_export
 
 ## Restore mtime
 mtime:
