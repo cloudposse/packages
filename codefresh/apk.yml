@@ -111,7 +111,7 @@ steps:
     environment:
       - APK_PACKAGES_PATH=${{CF_VOLUME_PATH}}/artifacts
     commands:
-      - find "${APK_PACKAGES_PATH}" -type f -name '*.apk' | xargs ls -l 
+      - find "${APK_PACKAGES_PATH}" -type f -name '*.apk' -exec ls -l {} \;
       - aws s3 sync --acl public-read --exact-timestamps "${APK_PACKAGES_PATH}/" "s3://${S3_BUCKET_NAME}/"
     when:
       condition:
