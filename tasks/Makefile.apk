@@ -1,5 +1,5 @@
 # APK
-export PACKAGER_PRIVKEY = $(CURDIR)/../../key.rsa
+export PACKAGER_PRIVKEY ?= $(CURDIR)/../../key.rsa
 export APK_TEMPLATE_PATH ?= ../../apk/templates/
 export APK_BUILD_TEMPLATE ?= APKBUILD.github-binary
 export APK_PACKAGES_PATH ?= /tmp/packages
