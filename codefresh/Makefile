@@ -1,5 +1,9 @@
-export PACKAGER_PRIVKEY=$(CF_VOLUME_PATH)/key.rsa
-export PACKAGER_PUBKEY=$(APK_PACKAGES_PATH)/ops@cloudposse.com.rsa.pub
+# Important filenames must be of the email@host.com pattern and use the `.rsa` and `.rsa.pub` suffixes
+# Not doing this will lead to something like "WARNING: Ignoring .../APKINDEX.tar.gz: UNTRUSTED signature"
+#
+export PACKAGER=ops@cloudposse.com
+export PACKAGER_PRIVKEY=$(CF_VOLUME_PATH)/$(PACKAGER).rsa
+export PACKAGER_PUBKEY=$(APK_PACKAGES_PATH)/$(PACKAGER).rsa.pub
 
 export:
 	@echo "$(KEY_RSA)" | base64 -d > $(PACKAGER_PRIVKEY)
