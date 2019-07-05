@@ -22,8 +22,10 @@ steps:
     environment:
       - APK_PACKAGES_PATH=${{CF_VOLUME_PATH}}/artifacts
     commands:
+      - apk add openssl
       - make -C codefresh export mtime
       - aws s3 sync --exclude '*' --include '*.apk' --exact-timestamps "s3://${S3_BUCKET_NAME}/" "${APK_PACKAGES_PATH}/"
+      - cp contrib/install.sh "${APK_PACKAGES_PATH}"
       - make -C vendor deindex
       - chown -R nobody "${APK_PACKAGES_PATH}"
 
