@@ -62,6 +62,10 @@ docker/build/apk/shell:
 		--name apkbuild \
 		--rm \
 		-it \
+		-e AWS_SECRET_ACCESS_KEY \
+		-e AWS_ACCESS_KEY_ID \
+		-e AWS_SESSION_TOKEN \
+		-e AWS_SECURITY_TOKEN \
 		-e APK_PACKAGES_PATH=/packages/artifacts/$(ALPINE_VERSION) \
 		--privileged \
 		-w /packages \
