@@ -4,6 +4,7 @@ stages:
   - Build
   - Publish
 steps:
+
   main_clone:
     title: "Clone respository"
     type: git-clone
@@ -13,17 +14,20 @@ steps:
     git: CF-default
     revision: ${{CF_REVISION}}
 
-  init_variables:
-    title: Init variables
+  stage:
+    title: Pull down all existing packages from S3 bucket
     stage: Prepare
-    image: alpine
-    working_directory: .
+    image: cloudposse/build-harness:${{BUILD_HARNESS_VERSION}}
+    working_directory: ./
     environment:
       - APK_PACKAGES_PATH=${{CF_VOLUME_PATH}}/artifacts
     commands:
-      - cf_export CURRENT_BRANCH=${{CF_BRANCH}}
-      - echo "${{KEY_RSA}}" | base64 -d > key.rsa
-      - echo "${{KEY_RSA_PUB}}" | base64 -d > key.rsa.pub
+      - apk add openssl
+      - make -C codefresh export mtime
+      - aws s3 sync --exclude '*' --include '*.apk' --exact-timestamps "s3://${S3_BUCKET_NAME}/" "${APK_PACKAGES_PATH}/"
+      - cp contrib/install.sh "${APK_PACKAGES_PATH}"
+      - make -C vendor deindex
+      - chown -R nobody "${APK_PACKAGES_PATH}"
 
   docker_build:
     type: "parallel"
@@ -73,7 +77,8 @@ steps:
           - APK_PACKAGES_PATH=${{CF_VOLUME_PATH}}/artifacts/3.7
         commands:
           - make -C vendor build
-          - find "${APK_PACKAGES_PATH}" -type f -name '*.apk' | xargs ls -l 
+          - make -C vendor index
+          - find "${APK_PACKAGES_PATH}" -type f -name '*.apk' -exec ls -l {} \;
 
       apk_build_3_8:
         title: Build alpine 3.8 packages
@@ -84,7 +89,8 @@ steps:
           - APK_PACKAGES_PATH=${{CF_VOLUME_PATH}}/artifacts/3.8
         commands:
           - make -C vendor build
-          - find "${APK_PACKAGES_PATH}" -type f -name '*.apk' | xargs ls -l 
+          - make -C vendor index
+          - find "${APK_PACKAGES_PATH}" -type f -name '*.apk' -exec ls -l {} \;
 
       apk_build_3_9:
         title: Build alpine 3.9 packages
@@ -95,9 +101,10 @@ steps:
           - APK_PACKAGES_PATH=${{CF_VOLUME_PATH}}/artifacts/3.9
         commands:
           - make -C vendor build
-          - find "${APK_PACKAGES_PATH}" -type f -name '*.apk' | xargs ls -l 
+          - make -C vendor index
+          - find "${APK_PACKAGES_PATH}" -type f -name '*.apk' -exec ls -l {} \;
  
-    # Only deploy on merge to master
+  # Only deploy on merge to master
   publish:
     title: Push all apk artifacts to S3 bucket
     stage: Publish
@@ -106,7 +113,7 @@ steps:
     environment:
       - APK_PACKAGES_PATH=${{CF_VOLUME_PATH}}/artifacts
     commands:
-      - find "${APK_PACKAGES_PATH}" -type f -name '*.apk' | xargs ls -l 
+      - find "${APK_PACKAGES_PATH}" -type f -name '*.apk' -exec ls -l {} \;
       - aws s3 sync --acl public-read --exact-timestamps "${APK_PACKAGES_PATH}/" "s3://${S3_BUCKET_NAME}/"
     when:
       condition:
