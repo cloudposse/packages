@@ -1,5 +1,5 @@
 # APK
-export PACKAGER_PRIVKEY = $(CURDIR)/../../key.rsa
+export PACKAGER_PRIVKEY ?= $(CURDIR)/../../key.rsa
 export APK_TEMPLATE_PATH ?= ../../apk/templates/
 export APK_BUILD_TEMPLATE ?= APKBUILD.github-binary
 export APK_PACKAGES_PATH ?= /tmp/packages
@@ -40,6 +40,7 @@ apk: $(APK_PACKAGE)
 # Rebuild the `.apk` when it's older than the Makefile, VERSION, or RELEASE files
 $(APK_PACKAGE): Makefile VERSION RELEASE
 	@echo "Building $@"
+	ls -l $@ Makefile VERSION RELEASE || true
 	$(MAKE) info apk/prepare apk/checksum apk/build apk/clean
 
 package/prepare::
