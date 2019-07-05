@@ -62,6 +62,16 @@ steps:
         tag: '3.9'
         dockerfile: "apk/Dockerfile-3.9"
 
+      docker_build_3_10:
+        title: Building Docker Image for alpine 3.10
+        stage: Prepare
+        type: build
+        image_name: cloudposse/apkbuild-3.10
+        working_directory: ./
+        tag: '3.10'
+        dockerfile: "apk/Dockerfile-3.10"
+
+
   apk_build:
     type: "parallel"
     title: "Build Alpine Packages"
@@ -99,6 +109,18 @@ steps:
         working_directory: .
         environment:
           - APK_PACKAGES_PATH=${{CF_VOLUME_PATH}}/artifacts/3.9
+        commands:
+          - make -C vendor build
+          - make -C vendor index
+          - find "${APK_PACKAGES_PATH}" -type f -name '*.apk' -exec ls -l {} \;
+
+      apk_build_3_10:
+        title: Build alpine 3.10 packages
+        stage: Build
+        image: ${{docker_build_3_10}}
+        working_directory: .
+        environment:
+          - APK_PACKAGES_PATH=${{CF_VOLUME_PATH}}/artifacts/3.10
         commands:
           - make -C vendor build
           - make -C vendor index
