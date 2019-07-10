@@ -54,7 +54,7 @@ sops                      3.2.0      Secrets management stinks, use some sops!
 stern                     1.8.0      ⎈ Multi pod and container log tailing for Kubernetes
 sudosh                    0.1.4      Shell wrapper to run a login shell with `sudo` as the current user for the purpose of audit logging
 teleport                  3.2.4      Privileged access management for elastic infrastructure.
-terraform                 0.12.2     Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
+terraform                 0.12.3     Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-0.11            0.11.14    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-0.12            0.12.3     Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-docs            0.4.5      Generate docs from terraform modules

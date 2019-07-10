@@ -6,6 +6,7 @@ export PACKAGER_PRIVKEY=$(CF_VOLUME_PATH)/$(PACKAGER).rsa
 export PACKAGER_PUBKEY=$(APK_PACKAGES_PATH)/$(PACKAGER).rsa.pub
 
 export:
+	@mkdir -p $(APK_PACKAGES_PATH)
 	@echo "$(KEY_RSA)" | base64 -d > $(PACKAGER_PRIVKEY)
 	@openssl rsa -in $(PACKAGER_PRIVKEY) -pubout > $(PACKAGER_PUBKEY)
 	@echo PACKAGER_PRIVKEY=$(PACKAGER_PRIVKEY) >> $(CF_VOLUME_PATH)/env_vars_to_export
