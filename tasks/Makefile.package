@@ -109,7 +109,10 @@ RELEASE: VERSION LICENSE DESCRIPTION
 
 init: VERSION LICENSE DESCRIPTION RELEASE
 
-update: VERSION RELEASE
+reset:
+	rm -f VERSION RELEASE
+
+update: reset VERSION RELEASE
 
 info:
 	@printf "%-20s %s\n" "Vendor:" "$(VENDOR)"
