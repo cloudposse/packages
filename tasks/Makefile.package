@@ -109,7 +109,20 @@ RELEASE: VERSION LICENSE DESCRIPTION
 
 init: VERSION LICENSE DESCRIPTION RELEASE
 
-update: VERSION RELEASE
+update: CURRENT_VERSION RELEASE
+
+# The only way to tell if VERSION is up to date is to query the source via the internet
+.PHONY: CURRENT_VERSION
+
+# Update the VERSION file only if it would change, to avoid triggering unnecessary builds
+CURRENT_VERSION:
+	@local_version=$$(cat VERSION || echo 0); \
+	current_version=$$(env PATH=$(PATH) github-repo-metadata $(VENDOR) $(PACKAGE_REPO_NAME) "releases/latest" .tag_name | sed 's/^v//'); \
+	if [ "$${local_version}" != "$${current_version}" ]; then \
+		echo Upgrading $(PACKAGE_NAME) from $${local_version} to $${current_version}; \
+		echo $${current_version} > VERSION; \
+	fi
+
 
 info:
 	@printf "%-20s %s\n" "Vendor:" "$(VENDOR)"
