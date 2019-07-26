@@ -42,7 +42,7 @@ steps:
 
   push_image_commit:
     title: Push image with commit based semver tags
-    stage: Build
+    stage: Publish
     type: push
     candidate: ${{build_image}}
     tags:
