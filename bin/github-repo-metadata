@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+# Use bash to keep this from accidentally running under Alpine/Codefresh
+# Switch to sh to allow use in Alpine. The script works either way.
 
 function fetch() {
   local org=$1
