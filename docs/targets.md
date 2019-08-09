@@ -41,9 +41,9 @@ kubectx                   0.6.3      Switch faster between clusters and namespac
 kubens                    0.6.3      Switch faster between clusters and namespaces in kubectl
 lectl                     0.17       Script to check issued certificates by Let's Encrypt on CTL (Certificate Transparency Log) using https://crt.sh
 misspell                  0.3.4      Correct commonly misspelled English words in source files
-packer                    1.3.1      Packer is a tool for creating identical machine images for multiple platforms from a single source configuration.
+packer                    1.4.2      Packer is a tool for creating identical machine images for multiple platforms from a single source configuration.
 pandoc                    2.7.2      Universal markup converter
-rakkess                   0.2.0      Review Access - kubectl plugin to show an access matrix for all available resources
+rakkess                   0.4.1      Review Access - kubectl plugin to show an access matrix for all available resources
 rbac-lookup               0.3.0      Find Kubernetes roles and cluster roles bound to any user, service account, or group name.
 retry                     3.3.0      ♻️ Functional mechanism based on channels to perform actions repetitively until successful.
 scenery                   0.1.4      A Terraform plan output prettifier
@@ -54,9 +54,9 @@ sops                      3.2.0      Secrets management stinks, use some sops!
 stern                     1.8.0      ⎈ Multi pod and container log tailing for Kubernetes
 sudosh                    0.1.4      Shell wrapper to run a login shell with `sudo` as the current user for the purpose of audit logging
 teleport                  4.0.2      Privileged access management for elastic infrastructure.
-terraform                 0.12.3     Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
+terraform                 0.12.6     Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-0.11            0.11.14    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
-terraform-0.12            0.12.3     Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
+terraform-0.12            0.12.6     Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-docs            0.4.5      Generate docs from terraform modules
 terragrunt                0.19.2     Terragrunt is a thin wrapper for Terraform that provides extra tools for working with multiple Terraform modules.
 terrahelp                 0.6.3      Terrahelp is as a command line utility that provides useful tricks like masking of terraform output.
