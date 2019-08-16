@@ -1,0 +1,8 @@
+#!/bin/sh
+# This is an Alpine Package `post-install` hook that installs an alternative into `/usr/local/${PACKAGE_NAME}/$version/bin`
+PACKAGE_NAME=kops
+MAJOR_VERSION=1.12
+INSTALL_DIR=/usr/local/${PACKAGE_NAME}/${MAJOR_VERSION}/bin
+mkdir -p ${INSTALL_DIR}
+update-alternatives --install ${INSTALL_DIR}/${PACKAGE_NAME} ${PACKAGE_NAME}-${MAJOR_VERSION} /usr/bin/${PACKAGE_NAME}-${MAJOR_VERSION} 1
+exit 0
