@@ -27,14 +27,15 @@ gomplate                  3.1.0      A flexible commandline tool for template re
 goofys                    0.19.0     a high-performance, POSIX-ish Amazon S3 file system written in Go
 gosu                      1.10       Simple Go-based setuid+setgid+setgroups+exec
 gotop                     1.5.0      A terminal based graphical activity monitor inspired by gtop and vtop
-helm                      2.14.1     The Kubernetes Package Manager
-helmfile                  0.80.1     Deploy Kubernetes Helm Charts
+helm                      2.14.3     The Kubernetes Package Manager
+helmfile                  0.81.0     Deploy Kubernetes Helm Charts
 htmltest                  0.10.1     :white_check_mark: Test generated HTML for problems
 hugo                      0.49.2     The world’s fastest framework for building websites.
 json2hcl                  0.0.6      Convert JSON to HCL, and vice versa
 k6                        0.22.1     A modern load testing tool, using Go and JavaScript - https://k6.io
 kfctl                     0.5.1      Machine Learning Toolkit for Kubernetes
-kops                      1.12.1     Kubernetes Operations (kops) - Production Grade K8s Installation, Upgrades, and Management
+kops                      1.13.0     Kubernetes Operations (kops) - Production Grade K8s Installation, Upgrades, and Management
+kops-1.12                 1.12.3     Kubernetes Operations (kops) - Production Grade K8s Installation, Upgrades, and Management
 kubecron                  1.0.2      Utilities to manage kubernetes cronjobs. Run a CronJob manually for test purposes. Suspend/unsuspend a CronJob
 kubectl                   1.14.2     Production-Grade Container Scheduling and Management
 kubectx                   0.6.3      Switch faster between clusters and namespaces in kubectl
