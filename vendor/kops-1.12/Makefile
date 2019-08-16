@@ -1,4 +1,3 @@
-export PACKAGE_NAME = kops
 export APK_PACKAGE_NAME = kops_1.12
 
 include ../../tasks/Makefile.package
