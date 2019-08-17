@@ -2,6 +2,7 @@ include ../../tasks/Makefile.package
 include ../../tasks/Makefile.apk
 
 # Package details
+# This package tracks the most advanced production-ready version of kops
 export VENDOR ?= kubernetes
 export DOWNLOAD_URL ?= $(PACKAGE_REPO_URL)/releases/download/$(PACKAGE_VERSION)/$(PACKAGE_NAME)-$(OS)-$(ARCH)
 export APK_BUILD_TEMPLATE ?= APKBUILD.github-binary
