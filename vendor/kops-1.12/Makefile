@@ -1,5 +1,5 @@
 export APK_PACKAGE_NAME = kops_1.12
-export DOWNLOAD_URL ?= https://github.com/kubernetes/kops/releases/download/1.12.3/kops-$(OS)-$(ARCH)
+export DOWNLOAD_URL ?= https://github.com/kubernetes/kops/releases/download/$(PACKAGE_VERSION)/kops-$(OS)-$(ARCH)
 
 include ../../tasks/Makefile.package
 include ../../tasks/Makefile.apk
