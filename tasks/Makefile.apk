@@ -6,15 +6,16 @@ export APK_PACKAGES_PATH ?= /tmp/packages
 export APK_TMP_DIR := $(realpath $(shell mktemp -d ../../tmp/build.XXXXXX))
 export APK_PACKAGE_NAME ?= $(PACKAGE_NAME)
 export APK_PACKAGE ?= $(APK_PACKAGES_PATH)/vendor/x86_64/$(APK_PACKAGE_NAME)-$(PACKAGE_VERSION)-r$(PACKAGE_RELEASE).apk
+export SRCDEST := $(APK_TMP_DIR)/cache
 
 apk/prepare::
-	mkdir -p $(APK_PACKAGES_PATH) $(APK_TMP_DIR)
+	mkdir -p $(APK_PACKAGES_PATH) $(APK_TMP_DIR) $(SRCDEST)
 	chmod 777 $(APK_PACKAGES_PATH) $(APK_TMP_DIR)
 	cp -a $(APK_TEMPLATE_PATH)/$(APK_BUILD_TEMPLATE) $(APK_TMP_DIR)/APKBUILD
 	cp -a . "$(APK_TMP_DIR)"
 	chsh -s /bin/sh nobody
 	chown nobody -R $(APK_TMP_DIR)
-	chmod 777 /var/cache/distfiles
+	chmod 777 $(SRCDEST)
 
 apk/checksum:
 	cd $(APK_TMP_DIR) && \
