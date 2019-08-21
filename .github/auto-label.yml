@@ -24,6 +24,7 @@ vendor/awless: vendor/awless/**
 vendor/aws-iam-authenticator: vendor/aws-iam-authenticator/**
 vendor/aws-okta: vendor/aws-okta/**
 vendor/aws-vault: vendor/aws-vault/**
+vendor/awsping: vendor/awsping/**
 vendor/cfssl: vendor/cfssl/**
 vendor/cfssljson: vendor/cfssljson/**
 vendor/chamber: vendor/chamber/**

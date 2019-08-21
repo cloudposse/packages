@@ -8,6 +8,7 @@ atlantis                  0.15.0     Terraform For Teams
 awless                    0.1.11     A Mighty CLI for AWS
 aws-iam-authenticator     0.5.1      A tool to use AWS IAM credentials to authenticate to a Kubernetes cluster
 aws-okta                  0.19.4     aws-okta allows users to authenticate with AWS using Okta credentials
+<<<<<<< HEAD
 aws-vault                 6.1.0      A vault for securely storing and accessing AWS credentials in development environments
 cfssl                     1.4.1      Cloudflare's PKI and TLS toolkit
 cfssljson                 1.4.1      Cloudflare's PKI and TLS toolkit json parser
@@ -21,6 +22,17 @@ ctop                      0.7.3      Top-like interface for container metrics
 direnv                    2.22.0     Unclutter your .profile
 doctl                     1.46.0     A command line tool for DigitalOcean services
 duffle                    0.3.5b1    CNAB installer
+=======
+awsping                   0.5.2      Upload multiple artifacts to GitHub Releases in parallel
+aws-vault                 4.6.3      A vault for securely storing and accessing AWS credentials in development environments
+chamber                   2.3.2      CLI for managing secrets
+cli53                     0.8.12     Command line tool for Amazon Route 53
+cloudflared               2018.8.0   Argo Tunnel client
+codefresh                 0.19.5     Codefresh CLI
+ctop                      0.7.1      Top-like interface for container metrics
+direnv                    2.18.2     Unclutter your .profile
+doctl                     1.15.0     A command line tool for DigitalOcean services
+>>>>>>> Add awsping
 emailcli                  1.0.3      Command line email sending client written in Go.
 fargate                   0.3.2      CLI for AWS Fargate
 fetch                     0.3.10     fetch makes it easy to download files, folders, and release assets from a specific public git commit, branch, or tag
