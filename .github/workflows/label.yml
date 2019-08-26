@@ -12,7 +12,7 @@ jobs:
         repo-token: "${{ secrets.GITHUB_TOKEN }}"
         configuration-path: '.github/labeler.yml'
     - uses: actions/checkout@master
-    - run: "make -C vendor labler"
+    - run: "make -C vendor labeler"
     - uses: actions/labeler@v2.1.0
       with:
         repo-token: "${{ secrets.GITHUB_TOKEN }}"
