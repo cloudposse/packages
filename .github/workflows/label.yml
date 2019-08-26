@@ -13,6 +13,10 @@ jobs:
         configuration-path: '.github/labeler.yml'
     - uses: actions/checkout@master
     - run: "make -C vendor labeler"
+    - uses: cloudposse/actions/git-push@init
+      env:
+        GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+        GIT_COMMIT_MESSAGE: "Updated .github/vendor.yml labels"
     - uses: actions/labeler@v2.1.0
       with:
         repo-token: "${{ secrets.GITHUB_TOKEN }}"
