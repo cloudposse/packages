@@ -2,7 +2,7 @@ name: Labeler
 on: [pull_request]
 
 jobs:
-  label:
+  autolabel:
 
     runs-on: ubuntu-latest
 
@@ -11,6 +11,7 @@ jobs:
       with:
         repo-token: "${{ secrets.GITHUB_TOKEN }}"
         configuration-path: '.github/labeler.yml'
+    - uses: actions/checkout@master
     - run: "make -C vendor labler"
     - uses: actions/labeler@v2.1.0
       with:
