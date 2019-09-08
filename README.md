@@ -217,7 +217,7 @@ goofys                    0.19.0     a high-performance, POSIX-ish Amazon S3 fil
 gosu                      1.10       Simple Go-based setuid+setgid+setgroups+exec
 gotop                     1.5.0      A terminal based graphical activity monitor inspired by gtop and vtop
 helm                      2.14.3     The Kubernetes Package Manager
-helmfile                  0.81.3     Deploy Kubernetes Helm Charts
+helmfile                  0.82.0     Deploy Kubernetes Helm Charts
 htmltest                  0.10.1     :white_check_mark: Test generated HTML for problems
 hugo                      0.49.2     The world’s fastest framework for building websites.
 json2hcl                  0.0.6      Convert JSON to HCL, and vice versa
@@ -392,11 +392,11 @@ Check out [our other projects][github], [follow us on twitter][twitter], [apply 
 |---|---|---|
 
   [osterman_homepage]: https://github.com/osterman
-  [osterman_avatar]: https://github.com/osterman.png?size=150
+  [osterman_avatar]: https://img.cloudposse.com/150x150/https://github.com/osterman.png
   [goruha_homepage]: https://github.com/goruha
-  [goruha_avatar]: https://github.com/goruha.png?size=150
+  [goruha_avatar]: https://img.cloudposse.com/150x150/https://github.com/goruha.png
   [aknysh_homepage]: https://github.com/aknysh
-  [aknysh_avatar]: https://github.com/aknysh.png?size=150
+  [aknysh_avatar]: https://img.cloudposse.com/150x150/https://github.com/aknysh.png
 
 
 
