@@ -5,13 +5,13 @@ atlantis                  0.4.13     Terraform For Teams
 awless                    0.1.11     A Mighty CLI for AWS
 aws-iam-authenticator     0.4.0      A tool to use AWS IAM credentials to authenticate to a Kubernetes cluster
 aws-okta                  0.19.4     aws-okta allows users to authenticate with AWS using Okta credentials
-aws-vault                 4.6.3      A vault for securely storing and accessing AWS credentials in development environments
-chamber                   2.3.2      CLI for managing secrets
+aws-vault                 4.6.4      A vault for securely storing and accessing AWS credentials in development environments
+chamber                   2.4.0      CLI for managing secrets
 cli53                     0.8.12     Command line tool for Amazon Route 53
-cloudflared               2018.8.0   Argo Tunnel client
-codefresh                 0.31.1     Codefresh CLI
+cloudflared               2019.9.0   Argo Tunnel client
+codefresh                 0.32.1     Codefresh CLI
 ctop                      0.7.1      Top-like interface for container metrics
-direnv                    2.18.2     Unclutter your .profile
+direnv                    2.20.0     Unclutter your .profile
 doctl                     1.15.0     A command line tool for DigitalOcean services
 emailcli                  1.0.3      Command line email sending client written in Go.
 fargate                   0.2.3      CLI for AWS Fargate
@@ -24,7 +24,7 @@ github-release            0.7.2      Commandline app to create and edit releases
 github-status-updater     0.2.0      Command line utility for updating GitHub commit statuses and enabling required status checks for pull requests
 gitleaks                  1.2.0      Audit git repos for secrets 🔑
 gomplate                  3.1.0      A flexible commandline tool for template rendering. Supports lots of local and remote datasources.
-goofys                    0.19.0     a high-performance, POSIX-ish Amazon S3 file system written in Go
+goofys                    0.21.0     a high-performance, POSIX-ish Amazon S3 file system written in Go
 gosu                      1.10       Simple Go-based setuid+setgid+setgroups+exec
 gotop                     1.5.0      A terminal based graphical activity monitor inspired by gtop and vtop
 helm                      2.14.3     The Kubernetes Package Manager
@@ -37,7 +37,7 @@ kfctl                     0.5.1      Machine Learning Toolkit for Kubernetes
 kops                      1.13.0     Kubernetes Operations (kops) - Production Grade K8s Installation, Upgrades, and Management
 kops-1.12                 1.12.3     Kubernetes Operations (kops) - Production Grade K8s Installation, Upgrades, and Management
 kubecron                  1.0.2      Utilities to manage kubernetes cronjobs. Run a CronJob manually for test purposes. Suspend/unsuspend a CronJob
-kubectl                   1.14.6     Production-Grade Container Scheduling and Management
+kubectl                   1.13.10    Production-Grade Container Scheduling and Management
 kubectx                   0.6.3      Switch faster between clusters and namespaces in kubectl
 kubens                    0.6.3      Switch faster between clusters and namespaces in kubectl
 lectl                     0.17       Script to check issued certificates by Let's Encrypt on CTL (Certificate Transparency Log) using https://crt.sh
@@ -47,14 +47,14 @@ pandoc                    2.7.2      Universal markup converter
 rakkess                   0.4.1      Review Access - kubectl plugin to show an access matrix for all available resources
 rbac-lookup               0.3.2      Find Kubernetes roles and cluster roles bound to any user, service account, or group name.
 retry                     3.3.0      ♻️ Functional mechanism based on channels to perform actions repetitively until successful.
-scenery                   0.1.4      A Terraform plan output prettifier
-shellcheck                0.5.0      ShellCheck, a static analysis tool for shell scripts
+scenery                   0.1.5      A Terraform plan output prettifier
+shellcheck                0.7.0      ShellCheck, a static analysis tool for shell scripts
 shfmt                     2.6.4      A shell parser, formatter and interpreter (POSIX/Bash/mksh)
-slack-notifier            0.1.3      Command line utility to send messages with attachments to Slack channels via Incoming Webhooks
-sops                      3.2.0      Secrets management stinks, use some sops!
-stern                     1.8.0      ⎈ Multi pod and container log tailing for Kubernetes
+slack-notifier            0.2.0      Command line utility to send messages with attachments to Slack channels via Incoming Webhooks
+sops                      3.3.1      Secrets management stinks, use some sops!
+stern                     1.11.0     ⎈ Multi pod and container log tailing for Kubernetes
 sudosh                    0.1.4      Shell wrapper to run a login shell with `sudo` as the current user for the purpose of audit logging
-teleport                  4.0.4      Privileged access management for elastic infrastructure.
+teleport                  4.0.6      Privileged access management for elastic infrastructure.
 terraform                 0.12.7     Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-0.11            0.11.14    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-0.12            0.12.7     Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
@@ -63,7 +63,7 @@ terragrunt                0.19.2     Terragrunt is a thin wrapper for Terraform 
 terrahelp                 0.6.3      Terrahelp is as a command line utility that provides useful tricks like masking of terraform output.
 tfenv                     0.4.0      Transform environment variables for use with Terraform (e.g. `HOSTNAME` ⇨ `TF_VAR_hostname`)
 tfmask                    0.2.0      Terraform utility to mask select output from `terraform plan` and `terraform apply`
-variant                   0.33.0     Variant is a Universal CLI tool that works like a task runner
-venona                    0.20.0     Codefresh runtime-environment agent
+variant                   0.34.0     Variant is a Universal CLI tool that works like a task runner
+venona                    0.25.1     Codefresh runtime-environment agent
 yq                        2.4.0      yq is a portable command-line YAML processor
 ```
