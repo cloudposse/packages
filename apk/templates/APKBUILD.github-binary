@@ -8,6 +8,7 @@ pkgdesc="${PACKAGE_DESCRIPTION}"
 builddir="$srcdir"
 exe=$PACKAGE_EXE
 repo=vendor
+installdir=${INSTALL_DIR:-/usr/bin/}
 
 # https://wiki.alpinelinux.org/wiki/APKBUILD_examples
 
@@ -133,9 +134,9 @@ check() {
 # The built application and support files should be installed into $pkgdir.
 package() {
 	echo "Installing packges to ${pkgdir}"
-	mkdir -p "${pkgdir}/usr/bin"
+	mkdir -p "${pkgdir}/${installdir}"
 	for cmd in ${exe}; do 
-	  install -m 755 "$(realpath "${srcdir}/${cmd}")" "${pkgdir}/usr/bin/${cmd}"
+	  install -m 755 "$(realpath "${srcdir}/${cmd}")" "${pkgdir}/${installdir}/${cmd}"
 	done
 	echo "Binaries staged for installation in ${pkgdir}"
 	find "${pkgdir}"

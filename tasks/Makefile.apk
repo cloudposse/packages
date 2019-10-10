@@ -1,5 +1,27 @@
 # APK
-export PACKAGER_PRIVKEY ?= $(CURDIR)/../../key.rsa
+
+
+ifeq ($(CI),)
+export PACKAGER_PRIVKEY_DIR ?= /packages/apk
+export PACKAGER ?= buildtest@cloudposse.com
+export PACKAGER_PRIVKEY ?= $(PACKAGER_PRIVKEY_DIR)/$(PACKAGER).rsa
+export PACKAGER_PUBKEY ?= $(APK_PACKAGES_PATH)/$(PACKAGER).rsa.pub
+export PACKAGER_PUBKEY_INSTALLED ?= /etc/apk/keys/$(PACKAGER).rsa.pub
+
+$(PACKAGER_PRIVKEY) localkey:
+	openssl genrsa -out $(PACKAGER_PRIVKEY) 2048
+
+$(PACKAGER_PUBKEY): $(PACKAGER_PRIVKEY)
+	mkdir -p $(APK_PACKAGES_PATH)
+	chmod 777 $(APK_PACKAGES_PATH)
+	openssl rsa -in $(PACKAGER_PRIVKEY) -pubout > $(PACKAGER_PUBKEY)
+
+$(PACKAGER_PUBKEY_INSTALLED): $(PACKAGER_PUBKEY)
+	chmod 666 $(PACKAGER_PRIVKEY)  $(PACKAGER_PUBKEY)
+	cp  $(PACKAGER_PUBKEY) $(PACKAGER_PUBKEY_INSTALLED)
+
+endif
+
 export APK_TEMPLATE_PATH ?= ../../apk/templates/
 export APK_BUILD_TEMPLATE ?= APKBUILD.github-binary
 export APK_PACKAGES_PATH ?= /tmp/packages
@@ -28,14 +50,20 @@ apk/build:
 
 apk/clean:
 	@find $(APK_PACKAGES_PATH) -type f -name APKINDEX.tar.gz -delete
+	apk del buildtest || true
 	rm -rf $(APK_TMP_DIR) 
 	mkdir -p $(APK_TMP_DIR)
 
 apk/reset:
+	apk del buildtest || true
 	rm -rf $(APK_PACKAGE)
 
 .PHONY : apk
-apk: $(APK_PACKAGE)
+apk: $(PACKAGER_PRIVKEY) $(PACKAGER_PUBKEY_INSTALLED) $(APK_PACKAGE)
+	@echo '* Verify package can be installed:'
+	apk add --virtual buildtest $(APK_PACKAGE)
+	@echo '* Verify package can be uninstalled:'
+	apk del buildtest
 	@exit 0
 
 # Rebuild the `.apk` when it's older than the Makefile, VERSION, or RELEASE files

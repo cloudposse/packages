@@ -5,8 +5,6 @@ APK_PACKAGE_REPOS ?= $(addprefix $(APK_PACKAGES_PATH)/,$(REPOS))
 APK_PACKAGE_INDEX ?= $(addsuffix /APKINDEX.tar.gz,$(APK_PACKAGE_REPOS))
 APK_PACKAGES ?= $(wildcard $(addsuffix /*.apk,$(APK_PACKAGE_REPOS)))
 
-export PACKAGER_PRIVKEY ?= $(CURDIR)/../key.rsa
-
 default: build
 
 ## Install alpine build deps

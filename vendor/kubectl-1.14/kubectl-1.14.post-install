@@ -1,9 +1,12 @@
 #!/bin/sh
-# This is an Alpine Package `post-install` hook that installs an alternative into `/usr/local/${PACKAGE_NAME}/$version/bin`
-PACKAGE_NAME=kubectl
+# This is an Alpine Package `post-install` hook that links
+# an alternative from `/usr/share/${PACKAGE_NAME}/$version/bin` into `/usr/bin/`
+MASTER_PACKAGE_NAME=kubectl
 MAJOR_VERSION=1.14
-INSTALL_DIR=/usr/local/${PACKAGE_NAME}/${MAJOR_VERSION}/bin
+PACKAGE_NAME=${MASTER_PACKAGE_NAME}-${MAJOR_VERSION}
+INSTALL_DIR=/usr/share/${MASTER_PACKAGE_NAME}/${MAJOR_VERSION}/bin
+
 mkdir -p ${INSTALL_DIR}
-update-alternatives --install /usr/bin/${PACKAGE_NAME}-${MAJOR_VERSION} ${PACKAGE_NAME}-${MAJOR_VERSION} ${INSTALL_DIR}/${PACKAGE_NAME} 1
-update-alternatives --install /usr/bin/${PACKAGE_NAME} ${PACKAGE_NAME} ${INSTALL_DIR}/${PACKAGE_NAME} 14
+update-alternatives --install /usr/bin/${PACKAGE_NAME} ${PACKAGE_NAME} ${INSTALL_DIR}/${PACKAGE_NAME} 1
+update-alternatives --install /usr/bin/${MASTER_PACKAGE_NAME} ${MASTER_PACKAGE_NAME} ${INSTALL_DIR}/${PACKAGE_NAME} 14
 exit 0
