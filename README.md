@@ -223,10 +223,12 @@ hugo                      0.49.2     The world’s fastest framework for buildin
 json2hcl                  0.0.6      Convert JSON to HCL, and vice versa
 k6                        0.22.1     A modern load testing tool, using Go and JavaScript - https://k6.io
 kfctl                     0.5.1      Machine Learning Toolkit for Kubernetes
-kops                      1.13.0     Kubernetes Operations (kops) - Production Grade K8s Installation, Upgrades, and Management
+kops                      1.14.0     Kubernetes Operations (kops) - Production Grade K8s Installation, Upgrades, and Management
 kops-1.12                 1.12.3     Kubernetes Operations (kops) - Production Grade K8s Installation, Upgrades, and Management
 kubecron                  1.0.2      Utilities to manage kubernetes cronjobs. Run a CronJob manually for test purposes. Suspend/unsuspend a CronJob
-kubectl                   1.13.10    Production-Grade Container Scheduling and Management
+kubectl                   1.14.7     Production-Grade Container Scheduling and Management
+kubectl-1.13              1.13.11    Production-Grade Container Scheduling and Management
+kubectl-1.14              1.14.7     Production-Grade Container Scheduling and Management
 kubectx                   0.6.3      Switch faster between clusters and namespaces in kubectl
 kubens                    0.6.3      Switch faster between clusters and namespaces in kubectl
 lectl                     0.17       Script to check issued certificates by Let's Encrypt on CTL (Certificate Transparency Log) using https://crt.sh
@@ -244,9 +246,9 @@ sops                      3.3.1      Secrets management stinks, use some sops!
 stern                     1.11.0     ⎈ Multi pod and container log tailing for Kubernetes
 sudosh                    0.1.4      Shell wrapper to run a login shell with `sudo` as the current user for the purpose of audit logging
 teleport                  4.0.6      Privileged access management for elastic infrastructure.
-terraform                 0.12.7     Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
+terraform                 0.12.10    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-0.11            0.11.14    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
-terraform-0.12            0.12.7     Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
+terraform-0.12            0.12.10    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-docs            0.4.5      Generate docs from terraform modules
 terragrunt                0.19.2     Terragrunt is a thin wrapper for Terraform that provides extra tools for working with multiple Terraform modules.
 terrahelp                 0.6.3      Terrahelp is as a command line utility that provides useful tricks like masking of terraform output.
