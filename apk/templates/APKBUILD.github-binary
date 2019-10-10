@@ -25,6 +25,8 @@ license=${PACKAGE_LICENSE}
 depends="${APKBUILD_DEPENDS}"
 #depends_dev=curl make
 
+install="${APKBUILD_INSTALL_SCRIPTS}"
+
 options="!strip" 
 
 # The source variable is not only used to list the remote source files to fetch, it is also used to list the local files that abuild will need in order to build the apk.
