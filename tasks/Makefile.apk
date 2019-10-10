@@ -48,6 +48,12 @@ apk/build:
 	cd $(APK_TMP_DIR) && \
 		sudo -E -H -u nobody abuild -c -r -P $(APK_PACKAGES_PATH)
 
+apk/testinstall:
+	@echo '* Verify package can be installed:'
+	apk add --virtual buildtest $(APK_PACKAGE)
+	@echo '* Verify package can be uninstalled:'
+	apk del buildtest
+
 apk/clean:
 	@find $(APK_PACKAGES_PATH) -type f -name APKINDEX.tar.gz -delete
 	apk del buildtest || true
@@ -60,17 +66,13 @@ apk/reset:
 
 .PHONY : apk
 apk: $(PACKAGER_PRIVKEY) $(PACKAGER_PUBKEY_INSTALLED) $(APK_PACKAGE)
-	@echo '* Verify package can be installed:'
-	apk add --virtual buildtest $(APK_PACKAGE)
-	@echo '* Verify package can be uninstalled:'
-	apk del buildtest
 	@exit 0
 
 # Rebuild the `.apk` when it's older than the Makefile, VERSION, or RELEASE files
 $(APK_PACKAGE): Makefile VERSION RELEASE
 	@echo "Building $@"
 	ls -l $@ Makefile VERSION RELEASE || true
-	$(MAKE) info apk/prepare apk/checksum apk/build apk/clean
+	$(MAKE) info apk/prepare apk/checksum apk/build apk/testinstall apk/clean
 
 package/prepare::
 	@exit 0
