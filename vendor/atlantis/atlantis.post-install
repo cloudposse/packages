@@ -1,0 +1,10 @@
+#!/bin/sh
+# This is an Alpine Package `post-install` hook that links
+# an alternative from `/usr/share/${PACKAGE_NAME}/$version/bin` into `/usr/bin/`
+MASTER_PACKAGE_NAME=atlantis
+PACKAGE_NAME=atlantis
+VENDOR=runatlantis
+INSTALL_DIR=/usr/share/${MASTER_PACKAGE_NAME}/${VENDOR}/bin
+mkdir -p ${INSTALL_DIR}
+update-alternatives --install /usr/bin/${MASTER_PACKAGE_NAME} ${MASTER_PACKAGE_NAME} ${INSTALL_DIR}/${PACKAGE_NAME} 1
+exit 0
