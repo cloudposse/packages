@@ -13,7 +13,7 @@ export APKBUILD_INSTALL_SCRIPTS = $(PACKAGE_NAME).post-install $(PACKAGE_NAME).p
 export INSTALL_DIR = /usr/share/${MASTER_PACKAGE_NAME}/${VENDOR}/bin
 
 install:
-	$(call download_zip)
+	$(call download_binary)
 
 test:
 	$(PACKAGE_EXE) version
