@@ -56,7 +56,8 @@ docker/build/apk/all:
 
 ## Build alpine packages for testing
 docker/build/apk/shell:
-	sudo rm -rf tmp/*
+	rm -rf tmp/*
+	[ -n "$(ls tmp/)" ] && sudo rm -rf tmp/* || true
 	docker build -t cloudposse/apkbuild:$(ALPINE_VERSION) -f apk/Dockerfile-$(ALPINE_VERSION) .
 	docker run \
 		--name apkbuild \
