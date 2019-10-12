@@ -190,7 +190,7 @@ packages/uninstall/%:
 ## Makefile Targets
 ```
 assume-role               0.3.2      Easily assume AWS roles in your terminal.
-atlantis                  0.8.3      Terraform For Teams
+atlantis                  0.9.0      Terraform For Teams
 awless                    0.1.11     A Mighty CLI for AWS
 aws-iam-authenticator     0.4.0      A tool to use AWS IAM credentials to authenticate to a Kubernetes cluster
 aws-okta                  0.19.4     aws-okta allows users to authenticate with AWS using Okta credentials
@@ -198,7 +198,7 @@ aws-vault                 4.6.4      A vault for securely storing and accessing 
 chamber                   2.4.0      CLI for managing secrets
 cli53                     0.8.12     Command line tool for Amazon Route 53
 cloudflared               2019.9.0   Argo Tunnel client
-cloudposse-atlantis       0.8.0      Terraform For Teams, enhanced by Cloud Posse
+cloudposse-atlantis       0.9.0      Terraform For Teams, enhanced by Cloud Posse
 codefresh                 0.32.1     Codefresh CLI
 ctop                      0.7.1      Top-like interface for container metrics
 direnv                    2.20.0     Unclutter your .profile
