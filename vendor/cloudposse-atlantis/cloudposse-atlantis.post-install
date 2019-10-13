@@ -1,6 +1,6 @@
 #!/bin/sh
-# This is an Alpine Package `post-install` hook that links
-# an alternative from `/usr/share/${PACKAGE_NAME}/$version/bin` into `/usr/bin/`
+# This is an Alpine Package `post-install` hook that links an alternative
+# from `/usr/share/${PACKAGE_NAME}/$version/bin` into `/usr/bin/`
 MASTER_PACKAGE_NAME=atlantis
 PACKAGE_NAME=cloudposse-atlantis
 VENDOR=cloudposse
