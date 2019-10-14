@@ -1,5 +1,5 @@
 #!/bin/sh
-# This is an Alpine `deinstall` hook that removes the alternative
+# This is an Alpine `deinstall` hook that removes this alternative
 MASTER_PACKAGE_NAME=atlantis
 PACKAGE_NAME=cloudposse-atlantis
 VENDOR=cloudposse
