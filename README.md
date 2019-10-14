@@ -198,7 +198,7 @@ aws-vault                 4.6.4      A vault for securely storing and accessing 
 chamber                   2.4.0      CLI for managing secrets
 cli53                     0.8.12     Command line tool for Amazon Route 53
 cloudflared               2019.9.0   Argo Tunnel client
-cloudposse-atlantis       0.9.0      Terraform For Teams, enhanced by Cloud Posse
+cloudposse-atlantis       0.9.0.2    Terraform For Teams, enhanced by Cloud Posse
 codefresh                 0.32.1     Codefresh CLI
 ctop                      0.7.1      Top-like interface for container metrics
 direnv                    2.20.0     Unclutter your .profile
