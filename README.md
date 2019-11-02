@@ -214,7 +214,7 @@ github-release            0.7.2      Commandline app to create and edit releases
 github-status-updater     0.2.0      Command line utility for updating GitHub commit statuses and enabling required status checks for pull requests
 gitleaks                  1.2.0      Audit git repos for secrets 🔑
 gomplate                  3.1.0      A flexible commandline tool for template rendering. Supports lots of local and remote datasources.
-goofys                    0.20.0     a high-performance, POSIX-ish Amazon S3 file system written in Go
+goofys                    0.22.0     a high-performance, POSIX-ish Amazon S3 file system written in Go
 gosu                      1.10       Simple Go-based setuid+setgid+setgroups+exec
 gotop                     1.5.0      A terminal based graphical activity monitor inspired by gtop and vtop
 helm                      2.14.3     The Kubernetes Package Manager
