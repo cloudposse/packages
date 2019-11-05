@@ -20,6 +20,11 @@ build: $(PACKAGES)
 $(PACKAGES): prepare
 	make --no-print-directory -C $@ apk
 
+labeler:
+	for vendor in $(PACKAGES); do \
+		echo "vendor/$${vendor%/}: vendor/$${vendor}**"; \
+	done > ../.github/vendor.yml
+
 ## Update all packages
 update:
 	find . -mindepth 1 -maxdepth 1 -type d | xargs -I{} make -C {} update
