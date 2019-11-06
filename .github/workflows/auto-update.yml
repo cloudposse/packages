@@ -9,6 +9,8 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - name: Update packages
+        env:
+          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
         id: vars
         run: |
           make -C vendor update RATE_LIMIT=0.5

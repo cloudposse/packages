@@ -9,7 +9,6 @@ export README_DEPS ?= vendor/labeler docs/targets.md
 
 export DIST_CMD ?= cp -a
 export DIST_PATH ?= /dist
-export INSTALL_PATH ?= /usr/local/bin
 export ALPINE_VERSION ?= 3.10
 
 -include $(shell curl -sSL -o .build-harness "https://git.io/build-harness"; echo .build-harness)
@@ -20,6 +19,7 @@ deps:
 	@exit 0
 
 ## Create a distribution by coping $PACKAGES from $INSTALL_PATH to $DIST_PATH
+dist: INSTALL_PATH=/usr/local/bin
 dist:
 	mkdir -p $(DIST_PATH)
 	[ -z "$(PACKAGES)" ] || \
