@@ -1,10 +1,10 @@
-name: Automatically Update Vendor Packages
+name: Auto Updater
 on: [pull_request]
 #on:
 #  schedule:
 #    - cron:  '0 0 * * *'
 jobs:
-  update-deps:
+  update-packages:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
@@ -14,7 +14,7 @@ jobs:
           make -C vendor update
           make readme
       - name: Create Pull Request
-        uses: cloudposse/actions/github/create-pull-request@3.0.0
+        uses: cloudposse/actions/github/create-pull-request@0.3.0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           COMMIT_MESSAGE: update packages
