@@ -5,7 +5,7 @@ export DOCKER_IMAGE_NAME ?= $(DOCKER_IMAGE):$(DOCKER_TAG)
 export DOCKER_BUILD_FLAGS = 
 
 export DEFAULT_HELP_TARGET := help/vendor
-export README_DEPS ?= docs/targets.md
+export README_DEPS ?= vendor/labeler docs/targets.md
 
 export DIST_CMD ?= cp -a
 export DIST_PATH ?= /dist
@@ -33,6 +33,9 @@ push:
 
 run:
 	docker run -it ${DOCKER_IMAGE_NAME} sh
+
+vendor/labeler:
+	$(MAKE) -C vendor labeler
 
 ## Build alpine packages for testing
 docker/build/apk:

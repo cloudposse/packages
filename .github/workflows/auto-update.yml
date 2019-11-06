@@ -1,0 +1,23 @@
+name: update vendor packages
+on:
+  schedule:
+    - cron:  '0 0 * * *'
+jobs:
+  update-deps:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Update packages
+        id: vars
+        run: |
+          make -C vendor update
+          make readme
+      - name: Create Pull Request
+        uses: cloudposse/actions/github/create-pull-request@3.0.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          COMMIT_MESSAGE: update packages
+          PULL_REQUEST_TITLE: Automated Package Updates
+          PULL_REQUEST_BODY: This is an auto-generated PR with dependency updates.
+          PULL_REQUEST_BRANCH: package-updates
+          BRANCH_SUFFIX: none
