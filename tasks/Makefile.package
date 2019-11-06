@@ -19,6 +19,8 @@ export PACKAGE_LICENSE ?= $(shell cat LICENSE 2>/dev/null)
 export PACKAGE_HOMEPAGE_URL ?= https://github.com/$(VENDOR)/$(PACKAGE)
 export PACKAGE_REPO_URL ?= https://github.com/$(VENDOR)/$(PACKAGE_REPO_NAME)
 
+export AUTOMATIC_UPDATES_ENABLED ?= true
+
 # Permit version to be overridden on the command line using PACKAGE_VERSION (e.g. FIGURINE_VERSION=0.3.0)
 VERSION_ENV = $(shell basename $$(pwd) | tr '[:lower:]' '[:upper:]')_VERSION
 ifneq ($($(VERSION_ENV)),) 
@@ -111,6 +113,14 @@ init: VERSION LICENSE DESCRIPTION RELEASE
 
 update: CURRENT_VERSION RELEASE
 
+auto-update:
+	@if [ "$${AUTO_UPDATE_ENABLED}" == "true" ]; then \
+		$(MAKE) update; \
+	else \
+		echo "Automatic updates disabled for $${PACKAGE_NAME}"; \
+		exit 0; \
+	fi
+
 # The only way to tell if VERSION is up to date is to query the source via the internet
 .PHONY: CURRENT_VERSION
 
@@ -119,12 +129,8 @@ CURRENT_VERSION:
 	@local_version=$$(cat VERSION || echo 0); \
 	current_version=$$(env PATH=$(PATH) github-repo-metadata $(VENDOR) $(PACKAGE_REPO_NAME) "releases/latest" .tag_name | sed 's/^v//'); \
 	if [ "$${local_version}" != "$${current_version}" ]; then \
-		if [ "$${VERSION_LOCK}" == "true" ]; then \
-			echo "Version locked. Not upgrading $(PACKAGE_NAME) from $${local_version} to $${current_version}"; \
-		else \
-			echo "Upgrading $(PACKAGE_NAME) from $${local_version} to $${current_version}"; \
-			echo "$${current_version}" > VERSION; \
-		fi; \
+		echo "Upgrading $(PACKAGE_NAME) from $${local_version} to $${current_version}"; \
+		echo "$${current_version}" > VERSION; \
 	fi
 
 
