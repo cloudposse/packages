@@ -90,8 +90,11 @@ DESCRIPTION:
 	@github-repo-metadata $(VENDOR) $(PACKAGE_REPO_NAME) "index" .description | tee DESCRIPTION
 
 VERSION:
-	@version=$$(github-repo-metadata $(VENDOR) $(PACKAGE_REPO_NAME) "releases/latest" .tag_name | sed 's/^v//'); \
-	if [ "$${version}" == "null" ]; then \
+	@version=$$(github-repo-metadata $(VENDOR) $(PACKAGE_REPO_NAME) "releases/latest" .tag_name | sed 's/^v//' | tr -d '\n'); \
+	if [ $$? -ne 0 ]; then \
+		exit 1; \
+	fi; \
+	if [ "$${version}" == "null" ] || [ "$${version}" == "" ]; then \
 		echo "ERROR: failed to obtain current version"; \
 		exit 1; \
 	else \
@@ -134,11 +137,15 @@ auto-update:
 CURRENT_VERSION:
 	@local_version=$$(cat VERSION || echo 0); \
 	current_version=$$(env PATH=$(PATH) github-repo-metadata $(VENDOR) $(PACKAGE_REPO_NAME) "releases/latest" .tag_name | sed 's/^v//'); \
-	if [ "$${local_version}" != "$${current_version}" ]; then \
+	if [ $$? -ne 0 ]; then \
+		exit 1; \
+	elif [ "$${current_version}" == "null" ] || [ "$${current_version}" == "" ]; then \
+		echo "ERROR: failed to obtain current version (got: $${current_version})"; \
+		exit 1; \
+	elif [ "$${local_version}" != "$${current_version}" ]; then \
 		echo "Upgrading $(PACKAGE_NAME) from $${local_version} to $${current_version}"; \
 		echo "$${current_version}" > VERSION; \
 	fi
-
 
 info:
 	@printf "%-20s %s\n" "Vendor:" "$(VENDOR)"
