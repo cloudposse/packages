@@ -11,7 +11,9 @@ jobs:
       - name: Update packages
         id: vars
         run: |
-          make -C vendor update
+          make -C vendor update RATE_LIMIT=0.5
+          make init
+          make readme/deps
           make readme
       - name: Create Pull Request
         uses: cloudposse/actions/github/create-pull-request@0.4.0

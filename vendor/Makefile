@@ -27,7 +27,11 @@ labeler:
 
 ## Update all packages
 update:
-	find . -mindepth 1 -maxdepth 1 -type d | xargs -I{} make -C {} update
+	find . -mindepth 1 -maxdepth 1 -type d | xargs -I{} make -C {} update sleep
+
+sleep: RATE_LIMIT=0
+sleep:
+	sleep $(RATE_LIMIT)
 
 # Rebuild the APKINDEX if it's older than any of the *.apk files
 $(APK_PACKAGE_INDEX): $(APK_PACKAGES)
