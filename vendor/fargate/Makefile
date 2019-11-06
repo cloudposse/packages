@@ -3,7 +3,7 @@ include ../../tasks/Makefile.apk
 
 # Package details
 export VENDOR ?= awslabs
-export DOWNLOAD_URL ?= $(PACKAGE_REPO_URL)/releases/download/$(PACKAGE_VERSION)/fargate-$(PACKAGE_VERSION)-$(OS)-$(ARCH).zip
+export DOWNLOAD_URL ?= https://github.com/$(VENDOR)/fargatecli/releases/download/$(PACKAGE_VERSION)/$(PACKAGE_NAME)-$(PACKAGE_VERSION)-$(OS)-$(ARCH).zip
 export APK_BUILD_TEMPLATE ?= APKBUILD.github-binary
 
 install:

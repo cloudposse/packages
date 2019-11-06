@@ -204,7 +204,7 @@ ctop                      0.7.1      Top-like interface for container metrics
 direnv                    2.20.0     Unclutter your .profile
 doctl                     1.15.0     A command line tool for DigitalOcean services
 emailcli                  1.0.3      Command line email sending client written in Go.
-fargate                   0.2.3      CLI for AWS Fargate
+fargate                   0.3.2      CLI for AWS Fargate
 fetch                     0.3.1      fetch makes it easy to download files, folders, and release assets from a specific git commit, branch, or tag of public andssss
 figurine                  0.2.2      Print your name in style
 fzf                       0.18.0     A command-line fuzzy finder
@@ -395,11 +395,11 @@ Check out [our other projects][github], [follow us on twitter][twitter], [apply 
 |---|---|---|
 
   [osterman_homepage]: https://github.com/osterman
-  [osterman_avatar]: https://img.cloudposse.com/150x150/https://github.com/osterman.png
+  [osterman_avatar]: https://github.com/osterman.png?size=150
   [goruha_homepage]: https://github.com/goruha
-  [goruha_avatar]: https://img.cloudposse.com/150x150/https://github.com/goruha.png
+  [goruha_avatar]: https://github.com/goruha.png?size=150
   [aknysh_homepage]: https://github.com/aknysh
-  [aknysh_avatar]: https://img.cloudposse.com/150x150/https://github.com/aknysh.png
+  [aknysh_avatar]: https://github.com/aknysh.png?size=150
 
 
 
