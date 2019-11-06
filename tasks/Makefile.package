@@ -90,7 +90,13 @@ DESCRIPTION:
 	@github-repo-metadata $(VENDOR) $(PACKAGE_REPO_NAME) "index" .description | tee DESCRIPTION
 
 VERSION:
-	@github-repo-metadata $(VENDOR) $(PACKAGE_REPO_NAME) "releases/latest" .tag_name | sed 's/^v//' | tee VERSION
+	@version=$$(github-repo-metadata $(VENDOR) $(PACKAGE_REPO_NAME) "releases/latest" .tag_name | sed 's/^v//'); \
+	if [ "$${version}" == "null" ]; then \
+		echo "ERROR: failed to obtain current version"; \
+		exit 1; \
+	else \
+		echo "$${version}" | tee VERSION; \
+	fi
 
 LICENSE:
 	@github-repo-metadata $(VENDOR) $(PACKAGE_REPO_NAME) "license" .license.spdx_id | tr '[:lower:]' '[:upper:]' | tee LICENSE
