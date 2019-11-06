@@ -13,7 +13,7 @@ vendor/ctop: vendor/ctop/**
 vendor/direnv: vendor/direnv/**
 vendor/doctl: vendor/doctl/**
 vendor/emailcli: vendor/emailcli/**
-vendor/fargatecli: vendor/fargatecli/**
+vendor/fargate: vendor/fargate/**
 vendor/fetch: vendor/fetch/**
 vendor/figurine: vendor/figurine/**
 vendor/fzf: vendor/fzf/**
