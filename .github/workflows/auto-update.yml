@@ -1,7 +1,8 @@
-name: update vendor packages
-on:
-  schedule:
-    - cron:  '0 0 * * *'
+name: Automatically Update Vendor Packages
+on: [pull_request]
+#on:
+#  schedule:
+#    - cron:  '0 0 * * *'
 jobs:
   update-deps:
     runs-on: ubuntu-latest
