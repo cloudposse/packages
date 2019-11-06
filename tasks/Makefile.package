@@ -119,8 +119,12 @@ CURRENT_VERSION:
 	@local_version=$$(cat VERSION || echo 0); \
 	current_version=$$(env PATH=$(PATH) github-repo-metadata $(VENDOR) $(PACKAGE_REPO_NAME) "releases/latest" .tag_name | sed 's/^v//'); \
 	if [ "$${local_version}" != "$${current_version}" ]; then \
-		echo Upgrading $(PACKAGE_NAME) from $${local_version} to $${current_version}; \
-		echo $${current_version} > VERSION; \
+		if [ "$${VERSION_LOCK}" == "true" ]; then \
+			echo "Version locked. Not upgrading $(PACKAGE_NAME) from $${local_version} to $${current_version}"; \
+		else \
+			echo "Upgrading $(PACKAGE_NAME) from $${local_version} to $${current_version}"; \
+			echo "$${current_version}" > VERSION; \
+		fi; \
 	fi
 
 
