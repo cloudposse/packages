@@ -111,6 +111,10 @@ init: VERSION LICENSE DESCRIPTION RELEASE
 
 update: CURRENT_VERSION RELEASE
 
+sleep: RATE_LIMIT=0
+sleep:
+	sleep $(RATE_LIMIT)
+
 # The only way to tell if VERSION is up to date is to query the source via the internet
 .PHONY: CURRENT_VERSION
 
