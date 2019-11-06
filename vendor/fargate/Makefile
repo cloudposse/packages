@@ -5,6 +5,7 @@ include ../../tasks/Makefile.apk
 export VENDOR ?= awslabs
 export DOWNLOAD_URL ?= https://github.com/$(VENDOR)/fargatecli/releases/download/$(PACKAGE_VERSION)/$(PACKAGE_NAME)-$(PACKAGE_VERSION)-$(OS)-$(ARCH).zip
 export APK_BUILD_TEMPLATE ?= APKBUILD.github-binary
+export APKBUILD_DEPENDS += libc6-compat
 
 install:
 	$(CURL) -o - $(DOWNLOAD_URL) > $(TMP)/$(PACKAGE_NAME).zip
