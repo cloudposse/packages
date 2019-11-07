@@ -26,8 +26,8 @@ labeler:
 	done > ../.github/vendor.yml
 
 ## Update all packages
-update:
-	find . -mindepth 1 -maxdepth 1 -type d | xargs -I{} make -C {} update sleep
+auto-update:
+	find . -mindepth 1 -maxdepth 1 -type d | xargs -I{} bash -c 'make -C {} auto-update || exit 255'
 
 # Rebuild the APKINDEX if it's older than any of the *.apk files
 $(APK_PACKAGE_INDEX): $(APK_PACKAGES)
