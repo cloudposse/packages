@@ -49,7 +49,7 @@ packer                    1.4.4      Packer is a tool for creating identical mac
 pandoc                    2.7.3      Universal markup converter
 rakkess                   0.4.1      Review Access - kubectl plugin to show an access matrix for all available resources
 rbac-lookup               0.5.0      Find Kubernetes roles and cluster roles bound to any user, service account, or group name.
-retry                     4.0.0-rc4  ♻️ Functional mechanism based on channels to perform actions repetitively until successful.
+retry                     3.3.0      ♻️ Functional mechanism based on channels to perform actions repetitively until successful.
 scenery                   0.1.5      A Terraform plan output prettifier
 shellcheck                0.7.0      ShellCheck, a static analysis tool for shell scripts
 shfmt                     2.6.4      A shell parser, formatter and interpreter (POSIX/Bash/mksh)
