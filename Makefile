@@ -11,7 +11,7 @@ export DIST_CMD ?= cp -a
 export DIST_PATH ?= /dist
 export ALPINE_VERSION ?= 3.10
 
-export SHELL := /bin/bash
+SHELL := /bin/bash
 
 -include $(shell curl -sSL -o .build-harness "https://git.io/build-harness"; echo .build-harness)
 
