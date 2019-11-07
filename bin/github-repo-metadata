@@ -2,6 +2,8 @@
 # Use bash to keep this from accidentally running under Alpine/Codefresh
 # Switch to sh to allow use in Alpine. The script works either way.
 
+set -o pipefail
+
 function fetch() {
   local org=$1
   local repo=$2
@@ -19,10 +21,12 @@ function fetch() {
     api="/${api}"
   fi
 
-  local ref=$(curl -fsSL -H "$header" "https://api.github.com/repos/$org/${repo}${api}" | jq -r "$path")
+  local url="https://api.github.com/repos/$org/${repo}${api}"
+  local ref=$(curl -fsSL -H "$header" "${url}" | jq -r "$path")
   if [ $? -eq 0 ]; then
     echo $ref
   else
+    echo "ERROR: Failed to retrieve ${url}" >&2
     exit 1
   fi
 }

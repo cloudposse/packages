@@ -90,8 +90,10 @@ default: info
 DESCRIPTION:
 	@github-repo-metadata $(VENDOR) $(PACKAGE_REPO_NAME) "index" .description | tee DESCRIPTION
 
+VERSION: API=releases/latest
+VERSION: QUERY=.tag_name
 VERSION:
-	@version=$$(github-repo-metadata $(VENDOR) $(PACKAGE_REPO_NAME) "releases/latest" .tag_name | sed 's/^v//' | tr -d '\n'); \
+	@version=$$(github-repo-metadata $(VENDOR) $(PACKAGE_REPO_NAME) '$(API)' '$(QUERY)' | sed 's/^v//' | tr -d '\n'); \
 	if [ $$? -ne 0 ]; then \
 		exit 1; \
 	fi; \
@@ -140,9 +142,11 @@ auto-update:
 .PHONY: CURRENT_VERSION
 
 # Update the VERSION file only if it would change, to avoid triggering unnecessary builds
+CURRENT_VERSION: API=releases/latest
+CURRENT_VERSOIN: QUERY=.tag_name
 CURRENT_VERSION:
 	@local_version=$$(cat VERSION || echo 0); \
-	current_version=$$(env PATH=$(PATH) github-repo-metadata $(VENDOR) $(PACKAGE_REPO_NAME) "releases/latest" .tag_name | sed 's/^v//'); \
+	current_version=$$(env PATH=$(PATH) github-repo-metadata $(VENDOR) $(PACKAGE_REPO_NAME) '$(API)' '$(QUERY)' | sed 's/^v//'); \
 	if [ $$? -ne 0 ]; then \
 		exit 1; \
 	elif [ "$${current_version}" == "null" -o -z "$${current_version}" ]; then \
