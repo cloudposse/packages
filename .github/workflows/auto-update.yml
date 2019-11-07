@@ -13,7 +13,7 @@ jobs:
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
         id: vars
         run: |
-          make -C vendor update RATE_LIMIT=0.5
+          make -C vendor auto-update RATE_LIMIT=0.5
           make init
           make readme/deps
           make readme
