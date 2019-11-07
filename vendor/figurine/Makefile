@@ -11,9 +11,10 @@ export APKBUILD_DEPENDS += libc6-compat
 ## Install figurine to generate fancy colorized ASCII banners
 install:
 	$(call download_tarball)
-	
+
 package/prepare::
 	mv src/deploy/$(PACKAGE_EXE) src
+
 test:
 	$(PACKAGE_EXE) --help
 
