@@ -127,7 +127,7 @@ sleep:
 	sleep $(RATE_LIMIT)
 
 auto-update:
-	@if [ "$${AUTO_UPDATE_ENABLED}" == "true" ]; then \
+	@if [ "$${AUTO_UPDATE_ENABLED:-true}" == "true" ]; then \
 		$(MAKE) --quiet --silent --no-print-directory update; \
 		exit $?; \
 	else \

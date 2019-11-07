@@ -36,4 +36,3 @@ else
   echo "       $0 cloudposse geodesic '' .description"
   exit 1
 fi
-
