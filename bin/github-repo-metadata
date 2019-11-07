@@ -5,10 +5,10 @@
 set -o pipefail
 
 function fetch() {
-  local org=$1
-  local repo=$2
-  local api=$3
-  local path=$4
+  local org="$1"
+  local repo="$2"
+  local api="$3"
+  local path="$4"
   local header=""
 
   if [ -n "$GITHUB_TOKEN" ] ; then
