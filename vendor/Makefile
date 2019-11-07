@@ -20,9 +20,14 @@ build: $(PACKAGES)
 $(PACKAGES): prepare
 	make --no-print-directory -C $@ apk
 
+labeler:
+	for vendor in $(PACKAGES); do \
+		echo "vendor/$${vendor%/}: vendor/$${vendor}**"; \
+	done > ../.github/vendor.yml
+
 ## Update all packages
-update:
-	find . -mindepth 1 -maxdepth 1 -type d | xargs -I{} make -C {} update
+auto-update:
+	find . -mindepth 1 -maxdepth 1 -type d | xargs -I{} bash -c 'make -C {} auto-update || exit 255'
 
 # Rebuild the APKINDEX if it's older than any of the *.apk files
 $(APK_PACKAGE_INDEX): $(APK_PACKAGES)

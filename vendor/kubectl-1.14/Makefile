@@ -13,6 +13,7 @@ export APK_BUILD_TEMPLATE = APKBUILD.github-binary
 export APKBUILD_DEPENDS += dpkg
 export APKBUILD_INSTALL_SCRIPTS = $(PACKAGE_NAME).post-install $(PACKAGE_NAME).post-deinstall
 export INSTALL_DIR = /usr/share/${MASTER_PACKAGE_NAME}/${MAJOR_VERSION}/bin
+export AUTO_UPDATE_ENABLED = false
 
 install:
 	$(call download_binary)

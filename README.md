@@ -204,9 +204,9 @@ ctop                      0.7.1      Top-like interface for container metrics
 direnv                    2.20.0     Unclutter your .profile
 doctl                     1.15.0     A command line tool for DigitalOcean services
 emailcli                  1.0.3      Command line email sending client written in Go.
-fargate                   0.2.3      CLI for AWS Fargate
+fargate                   0.3.2      CLI for AWS Fargate
 fetch                     0.3.1      fetch makes it easy to download files, folders, and release assets from a specific git commit, branch, or tag of public andssss
-figurine                  0.2.2      Print your name in style
+figurine                  1.0.1      Print your name in style
 fzf                       0.18.0     A command-line fuzzy finder
 ghr                       0.12.0     Upload multiple artifacts to GitHub Releases in parallel
 github-commenter          0.5.0      Command line utility for creating GitHub comments on Commits, Pull Request Reviews or Issues
@@ -214,7 +214,7 @@ github-release            0.7.2      Commandline app to create and edit releases
 github-status-updater     0.2.0      Command line utility for updating GitHub commit statuses and enabling required status checks for pull requests
 gitleaks                  1.2.0      Audit git repos for secrets 🔑
 gomplate                  3.1.0      A flexible commandline tool for template rendering. Supports lots of local and remote datasources.
-goofys                    0.20.0     a high-performance, POSIX-ish Amazon S3 file system written in Go
+goofys                    0.22.0     a high-performance, POSIX-ish Amazon S3 file system written in Go
 gosu                      1.10       Simple Go-based setuid+setgid+setgroups+exec
 gotop                     1.5.0      A terminal based graphical activity monitor inspired by gtop and vtop
 helm                      2.14.3     The Kubernetes Package Manager

@@ -19,6 +19,8 @@ export PACKAGE_LICENSE ?= $(shell cat LICENSE 2>/dev/null)
 export PACKAGE_HOMEPAGE_URL ?= https://github.com/$(VENDOR)/$(PACKAGE)
 export PACKAGE_REPO_URL ?= https://github.com/$(VENDOR)/$(PACKAGE_REPO_NAME)
 
+export AUTO_UPDATE_ENABLED ?= true
+
 # Permit version to be overridden on the command line using PACKAGE_VERSION (e.g. FIGURINE_VERSION=0.3.0)
 VERSION_ENV = $(shell basename $$(pwd) | tr '[:lower:]' '[:upper:]')_VERSION
 ifneq ($($(VERSION_ENV)),) 
@@ -88,7 +90,16 @@ DESCRIPTION:
 	@github-repo-metadata $(VENDOR) $(PACKAGE_REPO_NAME) "index" .description | tee DESCRIPTION
 
 VERSION:
-	@github-repo-metadata $(VENDOR) $(PACKAGE_REPO_NAME) "releases/latest" .tag_name | sed 's/^v//' | tee VERSION
+	@version=$$(github-repo-metadata $(VENDOR) $(PACKAGE_REPO_NAME) "releases/latest" .tag_name | sed 's/^v//' | tr -d '\n'); \
+	if [ $$? -ne 0 ]; then \
+		exit 1; \
+	fi; \
+	if [ "$${version}" == "null" ] || [ "$${version}" == "" ]; then \
+		echo "ERROR: failed to obtain current version"; \
+		exit 1; \
+	else \
+		echo "$${version}" | tee VERSION; \
+	fi
 
 LICENSE:
 	@github-repo-metadata $(VENDOR) $(PACKAGE_REPO_NAME) "license" .license.spdx_id | tr '[:lower:]' '[:upper:]' | tee LICENSE
@@ -111,6 +122,15 @@ init: VERSION LICENSE DESCRIPTION RELEASE
 
 update: CURRENT_VERSION RELEASE
 
+auto-update:
+	@if [ "$${AUTO_UPDATE_ENABLED}" == "true" ]; then \
+		$(MAKE) update; \
+		exit $?; \
+	else \
+		echo "Automatic updates disabled for $${PACKAGE_NAME}"; \
+		exit 0; \
+	fi
+
 # The only way to tell if VERSION is up to date is to query the source via the internet
 .PHONY: CURRENT_VERSION
 
@@ -118,11 +138,15 @@ update: CURRENT_VERSION RELEASE
 CURRENT_VERSION:
 	@local_version=$$(cat VERSION || echo 0); \
 	current_version=$$(env PATH=$(PATH) github-repo-metadata $(VENDOR) $(PACKAGE_REPO_NAME) "releases/latest" .tag_name | sed 's/^v//'); \
-	if [ "$${local_version}" != "$${current_version}" ]; then \
-		echo Upgrading $(PACKAGE_NAME) from $${local_version} to $${current_version}; \
-		echo $${current_version} > VERSION; \
+	if [ $$? -ne 0 ]; then \
+		exit 1; \
+	elif [ "$${current_version}" == "null" ] || [ "$${current_version}" == "" ]; then \
+		echo "ERROR: failed to obtain current version (got: $${current_version})"; \
+		exit 1; \
+	elif [ "$${local_version}" != "$${current_version}" ]; then \
+		echo "Upgrading $(PACKAGE_NAME) from $${local_version} to $${current_version}"; \
+		echo "$${current_version}" > VERSION; \
 	fi
-
 
 info:
 	@printf "%-20s %s\n" "Vendor:" "$(VENDOR)"
