@@ -17,4 +17,3 @@ package/prepare::
 
 test:
 	$(PACKAGE_EXE) --help
-
