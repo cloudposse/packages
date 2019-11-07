@@ -125,6 +125,7 @@ update: CURRENT_VERSION RELEASE
 auto-update:
 	@if [ "$${AUTO_UPDATE_ENABLED}" == "true" ]; then \
 		$(MAKE) update; \
+		exit $?; \
 	else \
 		echo "Automatic updates disabled for $${PACKAGE_NAME}"; \
 		exit 0; \
