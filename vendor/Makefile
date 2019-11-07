@@ -5,6 +5,8 @@ APK_PACKAGE_REPOS ?= $(addprefix $(APK_PACKAGES_PATH)/,$(REPOS))
 APK_PACKAGE_INDEX ?= $(addsuffix /APKINDEX.tar.gz,$(APK_PACKAGE_REPOS))
 APK_PACKAGES ?= $(wildcard $(addsuffix /*.apk,$(APK_PACKAGE_REPOS)))
 
+SHELL := /bin/bash
+
 default: build
 
 ## Install alpine build deps
@@ -27,7 +29,7 @@ labeler:
 
 ## Update all packages
 auto-update:
-	find . -mindepth 1 -maxdepth 1 -type d | xargs -I{} bash -c 'make -C {} auto-update || exit 255'
+	find . -mindepth 1 -maxdepth 1 -type d | xargs -I{} bash -c 'make --no-print-directory --quiet --silent -C {} auto-update || exit 255'
 
 # Rebuild the APKINDEX if it's older than any of the *.apk files
 $(APK_PACKAGE_INDEX): $(APK_PACKAGES)

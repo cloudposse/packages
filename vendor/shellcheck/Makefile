@@ -1,6 +1,9 @@
 include ../../tasks/Makefile.package
 include ../../tasks/Makefile.apk
 
+CURRENT_VERSION: QUERY=first(.[] | .name)
+CURRENT_VERSION: API=tags
+
 # Package details
 export VENDOR ?= koalaman
 export DOWNLOAD_URL ?= https://storage.googleapis.com/shellcheck/shellcheck-v$(PACKAGE_VERSION).$(OS).x86_64.tar.xz

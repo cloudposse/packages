@@ -5,6 +5,7 @@ export OS_ARCH ?= $(shell uname -m)
 export INSTALL_PATH ?= /usr/local/bin
 export CURL ?= curl --retry 3 --retry-delay 5 --fail -sSL
 export PATH := $(PATH):../../bin/
+export SHELL := /bin/bash
 
 export TMP ?= /tmp
 
@@ -89,13 +90,15 @@ default: info
 DESCRIPTION:
 	@github-repo-metadata $(VENDOR) $(PACKAGE_REPO_NAME) "index" .description | tee DESCRIPTION
 
+VERSION: API=releases/latest
+VERSION: QUERY=.tag_name
 VERSION:
-	@version=$$(github-repo-metadata $(VENDOR) $(PACKAGE_REPO_NAME) "releases/latest" .tag_name | sed 's/^v//' | tr -d '\n'); \
+	@version=$$(github-repo-metadata $(VENDOR) $(PACKAGE_REPO_NAME) '$(API)' '$(QUERY)' | sed 's/^v//' | tr -d '\n'); \
 	if [ $$? -ne 0 ]; then \
 		exit 1; \
 	fi; \
-	if [ "$${version}" == "null" ] || [ "$${version}" == "" ]; then \
-		echo "ERROR: failed to obtain current version"; \
+	if [ "$${version}" == "null" -o "$${version}" == "" ]; then \
+		echo "ERROR: failed to obtain current version for $(VENDOR)/$(PACKAGE_REPO_NAME)"; \
 		exit 1; \
 	else \
 		echo "$${version}" | tee VERSION; \
@@ -122,9 +125,13 @@ init: VERSION LICENSE DESCRIPTION RELEASE
 
 update: CURRENT_VERSION RELEASE
 
+sleep: RATE_LIMIT=0
+sleep:
+	sleep $(RATE_LIMIT)
+
 auto-update:
-	@if [ "$${AUTO_UPDATE_ENABLED}" == "true" ]; then \
-		$(MAKE) update; \
+	@if [ "$${AUTO_UPDATE_ENABLED:-true}" == "true" ]; then \
+		$(MAKE) --quiet --silent --no-print-directory update; \
 		exit $?; \
 	else \
 		echo "Automatic updates disabled for $${PACKAGE_NAME}"; \
@@ -135,13 +142,15 @@ auto-update:
 .PHONY: CURRENT_VERSION
 
 # Update the VERSION file only if it would change, to avoid triggering unnecessary builds
+CURRENT_VERSION: API=releases/latest
+CURRENT_VERSION: QUERY=.tag_name
 CURRENT_VERSION:
 	@local_version=$$(cat VERSION || echo 0); \
-	current_version=$$(env PATH=$(PATH) github-repo-metadata $(VENDOR) $(PACKAGE_REPO_NAME) "releases/latest" .tag_name | sed 's/^v//'); \
+	current_version=$$(env PATH=$(PATH) github-repo-metadata $(VENDOR) $(PACKAGE_REPO_NAME) '$(API)' '$(QUERY)' | sed 's/^v//'); \
 	if [ $$? -ne 0 ]; then \
 		exit 1; \
-	elif [ "$${current_version}" == "null" ] || [ "$${current_version}" == "" ]; then \
-		echo "ERROR: failed to obtain current version (got: $${current_version})"; \
+	elif [ "$${current_version}" == "null" -o -z "$${current_version}" ]; then \
+		echo "ERROR: failed to obtain current version for $(VENDOR)/$(PACKAGE_REPO_NAME) (got: $${current_version})"; \
 		exit 1; \
 	elif [ "$${local_version}" != "$${current_version}" ]; then \
 		echo "Upgrading $(PACKAGE_NAME) from $${local_version} to $${current_version}"; \
