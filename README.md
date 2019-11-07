@@ -240,6 +240,7 @@ rakkess                   0.4.1      Review Access - kubectl plugin to show an a
 rbac-lookup               0.3.2      Find Kubernetes roles and cluster roles bound to any user, service account, or group name.
 retry                     3.3.0      ♻️ Functional mechanism based on channels to perform actions repetitively until successful.
 scenery                   0.1.5      A Terraform plan output prettifier
+sentry-cli                1.49.0     A command line utility to work with Sentry.
 shellcheck                0.7.0      ShellCheck, a static analysis tool for shell scripts
 shfmt                     2.6.4      A shell parser, formatter and interpreter (POSIX/Bash/mksh)
 slack-notifier            0.2.0      Command line utility to send messages with attachments to Slack channels via Incoming Webhooks
