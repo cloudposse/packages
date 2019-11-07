@@ -11,6 +11,7 @@ jobs:
       - name: Update packages
         env:
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+          SHELL: "/bin/bash"
         id: vars
         run: |
           make -C vendor auto-update RATE_LIMIT=0.5
