@@ -94,7 +94,7 @@ VERSION:
 	if [ $$? -ne 0 ]; then \
 		exit 1; \
 	fi; \
-	if [ "$${version}" == "null" ] || [ "$${version}" == "" ]; then \
+	if [ "$${version}" == "null" -o "$${version}" == "" ]; then \
 		echo "ERROR: failed to obtain current version for $(VENDOR)/$(PACKAGE_REPO_NAME)"; \
 		exit 1; \
 	else \
@@ -144,7 +144,7 @@ CURRENT_VERSION:
 	current_version=$$(env PATH=$(PATH) github-repo-metadata $(VENDOR) $(PACKAGE_REPO_NAME) "releases/latest" .tag_name | sed 's/^v//'); \
 	if [ $$? -ne 0 ]; then \
 		exit 1; \
-	elif [ "$${current_version}" == "null" ] || [ "$${current_version}" == "" ]; then \
+	elif [ "$${current_version}" == "null" -o "$${current_version}" == "" ]; then \
 		echo "ERROR: failed to obtain current version for $(VENDOR)/$(PACKAGE_REPO_NAME) (got: $${current_version})"; \
 		exit 1; \
 	elif [ "$${local_version}" != "$${current_version}" ]; then \
