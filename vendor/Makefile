@@ -27,7 +27,7 @@ labeler:
 
 ## Update all packages
 auto-update:
-	find . -mindepth 1 -maxdepth 1 -type d | xargs -I{} bash -c 'make -C {} auto-update || exit 255'
+	find . -mindepth 1 -maxdepth 1 -type d | xargs -I{} bash -c 'make --no-print-directory --quiet --silent -C {} auto-update || exit 255'
 
 # Rebuild the APKINDEX if it's older than any of the *.apk files
 $(APK_PACKAGE_INDEX): $(APK_PACKAGES)

@@ -19,9 +19,11 @@ function fetch() {
     api="/${api}"
   fi
 
-  local ref=$(curl -sSL -H "$header" "https://api.github.com/repos/$org/${repo}${api}" | jq -r "$path")
+  local ref=$(curl -fsSL -H "$header" "https://api.github.com/repos/$org/${repo}${api}" | jq -r "$path")
   if [ $? -eq 0 ]; then
     echo $ref
+  else
+    exit 1
   fi
 }
 

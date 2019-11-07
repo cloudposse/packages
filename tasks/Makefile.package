@@ -95,7 +95,7 @@ VERSION:
 		exit 1; \
 	fi; \
 	if [ "$${version}" == "null" ] || [ "$${version}" == "" ]; then \
-		echo "ERROR: failed to obtain current version"; \
+		echo "ERROR: failed to obtain current version for $(VENDOR)/$(PACKAGE_REPO_NAME)"; \
 		exit 1; \
 	else \
 		echo "$${version}" | tee VERSION; \
@@ -128,7 +128,7 @@ sleep:
 
 auto-update:
 	@if [ "$${AUTO_UPDATE_ENABLED}" == "true" ]; then \
-		$(MAKE) update; \
+		$(MAKE) --quiet --silent --no-print-directory update; \
 		exit $?; \
 	else \
 		echo "Automatic updates disabled for $${PACKAGE_NAME}"; \
@@ -145,7 +145,7 @@ CURRENT_VERSION:
 	if [ $$? -ne 0 ]; then \
 		exit 1; \
 	elif [ "$${current_version}" == "null" ] || [ "$${current_version}" == "" ]; then \
-		echo "ERROR: failed to obtain current version (got: $${current_version})"; \
+		echo "ERROR: failed to obtain current version for $(VENDOR)/$(PACKAGE_REPO_NAME) (got: $${current_version})"; \
 		exit 1; \
 	elif [ "$${local_version}" != "$${current_version}" ]; then \
 		echo "Upgrading $(PACKAGE_NAME) from $${local_version} to $${current_version}"; \
