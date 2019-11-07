@@ -27,4 +27,5 @@ jobs:
           PULL_REQUEST_TITLE: Automated Package Updates
           PULL_REQUEST_BODY: This is an auto-generated PR with dependency updates.
           PULL_REQUEST_BRANCH: package-updates
+          PULL_REQUEST_BASE: master
           BRANCH_SUFFIX: none
