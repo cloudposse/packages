@@ -195,7 +195,7 @@ awless                    0.1.11     A Mighty CLI for AWS
 aws-iam-authenticator     0.4.0      A tool to use AWS IAM credentials to authenticate to a Kubernetes cluster
 aws-okta                  0.19.4     aws-okta allows users to authenticate with AWS using Okta credentials
 aws-vault                 4.6.4      A vault for securely storing and accessing AWS credentials in development environments
-chamber                   2.4.0      CLI for managing secrets
+chamber                   2.7.2      CLI for managing secrets
 cli53                     0.8.12     Command line tool for Amazon Route 53
 cloudflared               2019.9.0   Argo Tunnel client
 cloudposse-atlantis       0.9.0.2    Terraform For Teams, enhanced by Cloud Posse
