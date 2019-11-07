@@ -1,8 +1,13 @@
 name: Auto Updater
-on: [pull_request]
-#on:
-#  schedule:
-#    - cron:  '0 0 * * *'
+
+# Enable `pull_request` for debugging
+#on: [pull_request]
+
+on:
+  schedule:
+    # Update packages nightly
+    - cron:  '0 0 * * *'
+
 jobs:
   update-packages:
     runs-on: ubuntu-latest
