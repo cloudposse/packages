@@ -49,6 +49,7 @@ vendor/rakkess: vendor/rakkess/**
 vendor/rbac-lookup: vendor/rbac-lookup/**
 vendor/retry: vendor/retry/**
 vendor/scenery: vendor/scenery/**
+vendor/sentry-cli: vendor/sentry-cli/**
 vendor/shellcheck: vendor/shellcheck/**
 vendor/shfmt: vendor/shfmt/**
 vendor/slack-notifier: vendor/slack-notifier/**
