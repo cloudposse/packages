@@ -128,8 +128,7 @@ sleep:
 	sleep $(RATE_LIMIT)
 
 auto-update:
-	@set -x ; \
-	if [ "$${AUTO_UPDATE_ENABLED:-true}" == "true" ]; then \
+	@if [ "$${AUTO_UPDATE_ENABLED:-true}" == "true" ]; then \
 		$(MAKE) --quiet --silent --no-print-directory update; \
 		exit $?; \
 	else \
@@ -142,8 +141,7 @@ auto-update:
 
 # Update the VERSION file only if it would change, to avoid triggering unnecessary builds
 CURRENT_VERSION:
-	@set -x; \
-	local_version=$$(cat VERSION || echo 0); \
+	@local_version=$$(cat VERSION || echo 0); \
 	current_version=$$(env PATH=$(PATH) github-repo-metadata $(VENDOR) $(PACKAGE_REPO_NAME) "releases/latest" .tag_name | sed 's/^v//'); \
 	if [ $$? -ne 0 ]; then \
 		exit 1; \
