@@ -1,12 +1,12 @@
 name: 'auto-update'
 
 # Enable `pull_request` for debugging
-on: [pull_request]
+#on: [pull_request]
 
-#on:
-#  schedule:
-#    # Update packages nightly
-#    - cron:  '0 0 * * *'
+on:
+  schedule:
+    # Update packages nightly
+    - cron:  '0 0 * * *'
 
 jobs:
   update-packages:
