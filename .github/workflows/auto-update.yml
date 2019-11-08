@@ -16,7 +16,7 @@ jobs:
       - name: Update packages
         shell: bash
         env:
-          GITHUB_TOKEN: "${{ secrets.BOT_GITHUB_TOKEN }}"
+          GITHUB_TOKEN: "${{ secrets.GITHUB_BOT_TOKEN }}"
         id: vars
         run: |
           make -C vendor auto-update RATE_LIMIT=0.5
@@ -26,7 +26,7 @@ jobs:
       - name: Create Pull Request
         uses: cloudposse/actions/github/create-pull-request@0.4.0
         env:
-          GITHUB_TOKEN: ${{ secrets.BOT_GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_BOT_TOKEN }}
           COMMIT_MESSAGE: update packages
           PULL_REQUEST_TITLE: Automated Package Updates
           PULL_REQUEST_BODY: This is an auto-generated PR with dependency updates.
