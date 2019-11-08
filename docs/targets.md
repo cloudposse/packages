@@ -35,7 +35,7 @@ hugo                      0.59.1     The world’s fastest framework for buildin
 json2hcl                  0.0.6      Convert JSON to HCL, and vice versa
 k6                        0.25.1     A modern load testing tool, using Go and JavaScript - https://k6.io
 kfctl                     0.7.0      Machine Learning Toolkit for Kubernetes
-kops                      1.14.0     Kubernetes Operations (kops) - Production Grade K8s Installation, Upgrades, and Management
+kops                      1.14.1     Kubernetes Operations (kops) - Production Grade K8s Installation, Upgrades, and Management
 kops-1.12                 1.12.3     Kubernetes Operations (kops) - Production Grade K8s Installation, Upgrades, and Management
 kubecron                  1.0.2      Utilities to manage kubernetes cronjobs. Run a CronJob manually for test purposes. Suspend/unsuspend a CronJob
 kubectl                   1.16.2     Production-Grade Container Scheduling and Management
