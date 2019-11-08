@@ -1,4 +1,4 @@
-name: Labeler
+name: auto-label
 on: [pull_request]
 
 jobs:
