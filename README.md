@@ -205,7 +205,7 @@ direnv                    2.20.0     Unclutter your .profile
 doctl                     1.33.1     A command line tool for DigitalOcean services
 emailcli                  1.0.3      Command line email sending client written in Go.
 fargate                   0.3.2      CLI for AWS Fargate
-fetch                     0.3.7      fetch makes it easy to download files, folders, and release assets from a specific git commit, branch, or tag of public andssss
+fetch                     0.3.7      fetch makes it easy to download files, folders, and release assets from a specific git commit, branch, or tag
 figurine                  1.0.1      Print your name in style
 fzf                       0.18.0     A command-line fuzzy finder
 ghr                       0.13.0     Upload multiple artifacts to GitHub Releases in parallel
