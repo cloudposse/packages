@@ -204,8 +204,8 @@ Here's a stub you can include into a `Makefile` to make it easier to install bin
 ```
 THIS_PATH := $(abspath $(patsubst %/,%,$(dir $(abspath $(lastword $(MAKEFILE_LIST))))))
 export PACKAGES_VERSION ?= master
-export PACKAGES_PATH ?= $(THIS_PATH)/packages
-export INSTALL_PATH ?= $(THIS_PATH)/$(PACKAGES_PATH)/vendor
+export PACKAGES_PATH ?= packages/
+export INSTALL_PATH ?= $(PACKAGES_PATH)/bin
 
 ## Install packages
 packages/install:
