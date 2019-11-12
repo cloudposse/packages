@@ -25,6 +25,8 @@ jobs:
           make readme
       - name: Create Pull Request
         uses: cloudposse/actions/github/create-pull-request@0.4.0
+        with: 
+          labels: automated pr
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_BOT_TOKEN }}
           COMMIT_MESSAGE: Update README.md
