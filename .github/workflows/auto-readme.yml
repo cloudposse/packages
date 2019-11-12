@@ -1,11 +1,14 @@
 name: 'auto-readme'
 
-# Open a PR to update README (as necessary)
-on: [pull_request]
-
 on:
+  # Open a PR to update README (as necessary)
+  pull_request:
+    - opened
+    - synchronize
+    - reopened
+    
+  # Update README nightly
   schedule:
-    # Update README nightly
     - cron:  '0 0 * * *'
 
 jobs:
