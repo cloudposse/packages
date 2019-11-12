@@ -204,7 +204,7 @@ Here's a stub you can include into a `Makefile` to make it easier to install bin
 ```
 export PACKAGES_VERSION ?= master
 export PACKAGES_PATH ?= packages/
-export INSTALL_PATH ?= $(PACKAGES_PATH)/vendor
+export INSTALL_PATH ?= $(PACKAGES_PATH)/bin
 
 ## Install packages
 packages/install:
