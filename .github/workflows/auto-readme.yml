@@ -15,12 +15,12 @@ jobs:
   update:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
+      - name: checkout
+        uses: actions/checkout@v1
       - name: readme/update
         shell: bash
         env:
           GITHUB_TOKEN: "${{ secrets.GITHUB_BOT_TOKEN }}"
-        id: vars
         run: |
           make init
           make readme/deps
