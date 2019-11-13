@@ -202,7 +202,6 @@ rely on `gomplate` or `helm` to build chart packages.
 Here's a stub you can include into a `Makefile` to make it easier to install binary dependencies.
 
 ```
-THIS_PATH := $(abspath $(patsubst %/,%,$(dir $(abspath $(lastword $(MAKEFILE_LIST))))))
 export PACKAGES_VERSION ?= master
 export PACKAGES_PATH ?= packages/
 export INSTALL_PATH ?= $(PACKAGES_PATH)/bin
