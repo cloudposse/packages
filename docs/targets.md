@@ -28,7 +28,7 @@ gomplate                  3.5.0      A flexible commandline tool for template re
 goofys                    0.22.0     a high-performance, POSIX-ish Amazon S3 file system written in Go
 gosu                      1.11       Simple Go-based setuid+setgid+setgroups+exec
 gotop                     3.0.0      A terminal based graphical activity monitor inspired by gtop and vtop
-helm                      2.16.0     The Kubernetes Package Manager
+helm                      2.16.1     The Kubernetes Package Manager
 helmfile                  0.90.8     Deploy Kubernetes Helm Charts
 htmltest                  0.10.3     :white_check_mark: Test generated HTML for problems
 hugo                      0.59.1     The world’s fastest framework for building websites.
