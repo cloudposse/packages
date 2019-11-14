@@ -204,7 +204,7 @@ Here's a stub you can include into a `Makefile` to make it easier to install bin
 ```
 export PACKAGES_VERSION ?= master
 export PACKAGES_PATH ?= packages/
-export INSTALL_PATH ?= $(PACKAGES_PATH)/vendor
+export INSTALL_PATH ?= $(PACKAGES_PATH)/bin
 
 ## Install packages
 packages/install:
@@ -253,10 +253,10 @@ github-release            0.7.2      Commandline app to create and edit releases
 github-status-updater     0.2.0      Command line utility for updating GitHub commit statuses and enabling required status checks for pull requests
 gitleaks                  1.2.0      Audit git repos for secrets 🔑
 gomplate                  3.5.0      A flexible commandline tool for template rendering. Supports lots of local and remote datasources.
-goofys                    0.22.0     a high-performance, POSIX-ish Amazon S3 file system written in Go
+goofys                    0.23.0     a high-performance, POSIX-ish Amazon S3 file system written in Go
 gosu                      1.11       Simple Go-based setuid+setgid+setgroups+exec
 gotop                     3.0.0      A terminal based graphical activity monitor inspired by gtop and vtop
-helm                      2.16.1     The Kubernetes Package Manager
+helm                      3.0.0      The Kubernetes Package Manager
 helmfile                  0.90.8     Deploy Kubernetes Helm Charts
 htmltest                  0.10.3     :white_check_mark: Test generated HTML for problems
 hugo                      0.59.1     The world’s fastest framework for building websites.
@@ -266,7 +266,7 @@ kfctl                     0.7.0      Machine Learning Toolkit for Kubernetes
 kops                      1.14.1     Kubernetes Operations (kops) - Production Grade K8s Installation, Upgrades, and Management
 kops-1.12                 1.12.3     Kubernetes Operations (kops) - Production Grade K8s Installation, Upgrades, and Management
 kubecron                  1.0.2      Utilities to manage kubernetes cronjobs. Run a CronJob manually for test purposes. Suspend/unsuspend a CronJob
-kubectl                   1.16.2     Production-Grade Container Scheduling and Management
+kubectl                   1.14.9     Production-Grade Container Scheduling and Management
 kubectl-1.13              1.13.11    Production-Grade Container Scheduling and Management
 kubectl-1.14              1.14.7     Production-Grade Container Scheduling and Management
 kubectx                   0.7.1      Switch faster between clusters and namespaces in kubectl
@@ -287,11 +287,11 @@ sops                      3.4.0      Secrets management stinks, use some sops!
 stern                     1.11.0     ⎈ Multi pod and container log tailing for Kubernetes
 sudosh                    0.2.0      Shell wrapper to run a login shell with `sudo` as the current user for the purpose of audit logging
 teleport                  4.1.4      Privileged access management for elastic infrastructure.
-terraform                 0.12.13    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
+terraform                 0.12.14    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-0.11            0.11.14    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-0.12            0.12.10    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-docs            0.6.0      Generate docs from terraform modules
-terragrunt                0.21.5     Terragrunt is a thin wrapper for Terraform that provides extra tools for working with multiple Terraform modules.
+terragrunt                0.21.6     Terragrunt is a thin wrapper for Terraform that provides extra tools for working with multiple Terraform modules.
 terrahelp                 0.7.1      Terrahelp is as a command line utility that provides useful tricks like masking of terraform output.
 tfenv                     0.4.0      Transform environment variables for use with Terraform (e.g. `HOSTNAME` ⇨ `TF_VAR_hostname`)
 tfmask                    0.3.0      Terraform utility to mask select output from `terraform plan` and `terraform apply`
