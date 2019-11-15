@@ -224,6 +224,14 @@ packages/uninstall/%:
         @make -C $(PACKAGES_PATH)/uninstall $(subst packages/uninstall/,,$@)
 ```
 
+### Contributing Additional Packages
+In addition to following the Contributing section, the following steps can be used to add new packages for review (via a PR).
+1. Clone an existing, similar, package within the vendors directory. Name the new folder with the same name as the binary package being installed.
+2. At a minimum, update the VERSION, DESCRIPTION, and Makefile to reflect the binary being installed. Ensure that a test section exists and works.
+3. Test the install and ensure that it downloads and runs as expected (`make -C install <your_package> INSTALL_PATH=/tmp`)
+4. Test the build (`make all`)
+5. Update the README.md (`make readme/build`)
+
 
 
 ## Makefile Targets
@@ -245,7 +253,7 @@ direnv                    2.20.0     Unclutter your .profile
 doctl                     1.33.1     A command line tool for DigitalOcean services
 emailcli                  1.0.3      Command line email sending client written in Go.
 fargate                   0.3.2      CLI for AWS Fargate
-fetch                     0.3.7      fetch makes it easy to download files, folders, and release assets from a specific git commit, branch, or tag of public andssss
+fetch                     0.3.7      fetch makes it easy to download files, folders, and release assets from a specific public git commit, branch, or tag
 figurine                  1.0.1      Print your name in style
 fzf                       0.18.0     A command-line fuzzy finder
 ghr                       0.13.0     Upload multiple artifacts to GitHub Releases in parallel
@@ -264,6 +272,7 @@ hugo                      0.59.1     The world’s fastest framework for buildin
 json2hcl                  0.0.6      Convert JSON to HCL, and vice versa
 k6                        0.25.1     A modern load testing tool, using Go and JavaScript - https://k6.io
 kfctl                     0.7.0      Machine Learning Toolkit for Kubernetes
+kind                      0.5.1      A tool for running local Kubernetes clusters using Docker
 kops                      1.14.1     Kubernetes Operations (kops) - Production Grade K8s Installation, Upgrades, and Management
 kops-1.12                 1.12.3     Kubernetes Operations (kops) - Production Grade K8s Installation, Upgrades, and Management
 kubecron                  1.0.2      Utilities to manage kubernetes cronjobs. Run a CronJob manually for test purposes. Suspend/unsuspend a CronJob
@@ -469,6 +478,7 @@ Check out [our other projects][github], [follow us on twitter][twitter], [apply 
   [email]: https://cpco.io/email?utm_source=github&utm_medium=readme&utm_campaign=cloudposse/packages&utm_content=email
   [commercial_support]: https://cpco.io/commercial-support?utm_source=github&utm_medium=readme&utm_campaign=cloudposse/packages&utm_content=commercial_support
   [we_love_open_source]: https://cpco.io/we-love-open-source?utm_source=github&utm_medium=readme&utm_campaign=cloudposse/packages&utm_content=we_love_open_source
+  [terraform_modules]: https://cpco.io/terraform-modules?utm_source=github&utm_medium=readme&utm_campaign=cloudposse/packages&utm_content=terraform_modules
   [readme_header_img]: https://cloudposse.com/readme/header/img
   [readme_header_link]: https://cloudposse.com/readme/header/link?utm_source=github&utm_medium=readme&utm_campaign=cloudposse/packages&utm_content=readme_header_link
   [readme_footer_img]: https://cloudposse.com/readme/footer/img
