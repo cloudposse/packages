@@ -58,7 +58,6 @@ docker/build/apk/all:
 		-v $$(pwd):/packages cloudposse/apkbuild:$(ALPINE_VERSION) \
 		sh -c "make -C /packages/vendor build"
 
-
 ## Build alpine packages for testing
 docker/build/apk/shell:
 	rm -rf tmp/*
