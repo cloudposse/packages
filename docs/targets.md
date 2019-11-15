@@ -29,7 +29,7 @@ goofys                    0.23.0     a high-performance, POSIX-ish Amazon S3 fil
 gosu                      1.11       Simple Go-based setuid+setgid+setgroups+exec
 gotop                     3.0.0      A terminal based graphical activity monitor inspired by gtop and vtop
 helm                      3.0.0      The Kubernetes Package Manager
-helmfile                  0.90.8     Deploy Kubernetes Helm Charts
+helmfile                  0.92.0     Deploy Kubernetes Helm Charts
 htmltest                  0.10.3     :white_check_mark: Test generated HTML for problems
 hugo                      0.59.1     The world’s fastest framework for building websites.
 json2hcl                  0.0.6      Convert JSON to HCL, and vice versa
@@ -59,7 +59,7 @@ sops                      3.4.0      Secrets management stinks, use some sops!
 stern                     1.11.0     ⎈ Multi pod and container log tailing for Kubernetes
 sudosh                    0.2.0      Shell wrapper to run a login shell with `sudo` as the current user for the purpose of audit logging
 teleport                  4.1.4      Privileged access management for elastic infrastructure.
-terraform                 0.12.14    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
+terraform                 0.12.15    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-0.11            0.11.14    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-0.12            0.12.10    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-docs            0.6.0      Generate docs from terraform modules
