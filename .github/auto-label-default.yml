@@ -12,9 +12,6 @@ docs:
 github:
 - .github/**
 
-vendor:
-- vendor/**
-
 scripts:
 - bin/**
 - tasks/**
