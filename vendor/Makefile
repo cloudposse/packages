@@ -22,12 +22,6 @@ build: $(PACKAGES)
 $(PACKAGES): prepare
 	make --no-print-directory -C $@ apk
 
-auto-label:
-	cp ../.github/$@-default.yml ../.github/$@.yml
-	for vendor in $(PACKAGES); do \
-		echo "vendor/$${vendor%/}: vendor/$${vendor}**"; \
-	done >> ../.github/$@
-
 ## Update all packages
 auto-update:
 	find . -mindepth 1 -maxdepth 1 -type d | xargs -I{} bash -c 'make --no-print-directory --quiet --silent -C {} auto-update || exit 255'
