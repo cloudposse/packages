@@ -22,11 +22,10 @@ build: $(PACKAGES)
 $(PACKAGES): prepare
 	make --no-print-directory -C $@ apk
 
-auto-label:
-	cp ../.github/$@-default.yml ../.github/$@.yml
+labeler:
 	for vendor in $(PACKAGES); do \
 		echo "vendor/$${vendor%/}: vendor/$${vendor}**"; \
-	done >> ../.github/$@
+	done > ../.github/vendor.yml
 
 ## Update all packages
 auto-update:
