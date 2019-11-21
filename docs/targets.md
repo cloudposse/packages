@@ -36,7 +36,7 @@ json2hcl                  0.0.6      Convert JSON to HCL, and vice versa
 k6                        0.25.1     A modern load testing tool, using Go and JavaScript - https://k6.io
 kfctl                     0.7.0      Machine Learning Toolkit for Kubernetes
 kind                      0.6.0      A tool for running local Kubernetes clusters using Docker
-kops                      1.14.1     Kubernetes Operations (kops) - Production Grade K8s Installation, Upgrades, and Management
+kops                      1.15.0     Kubernetes Operations (kops) - Production Grade K8s Installation, Upgrades, and Management
 kops-1.12                 1.12.3     Kubernetes Operations (kops) - Production Grade K8s Installation, Upgrades, and Management
 kubecron                  1.0.2      Utilities to manage kubernetes cronjobs. Run a CronJob manually for test purposes. Suspend/unsuspend a CronJob
 kubectl                   1.14.9     Production-Grade Container Scheduling and Management
@@ -59,7 +59,7 @@ slack-notifier            0.2.0      Command line utility to send messages with 
 sops                      3.4.0      Secrets management stinks, use some sops!
 stern                     1.11.0     ⎈ Multi pod and container log tailing for Kubernetes
 sudosh                    0.2.0      Shell wrapper to run a login shell with `sudo` as the current user for the purpose of audit logging
-teleport                  4.1.4      Privileged access management for elastic infrastructure.
+teleport                  3.2.14     Privileged access management for elastic infrastructure.
 terraform                 0.12.16    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-0.11            0.11.14    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-0.12            0.12.10    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
