@@ -10,7 +10,7 @@ chamber                   2.7.5      CLI for managing secrets
 cli53                     0.8.16     Command line tool for Amazon Route 53
 cloudflared               2019.9.0   Argo Tunnel client
 cloudposse-atlantis       0.9.0.3    Terraform For Teams, enhanced by Cloud Posse
-codefresh                 0.35.0     Codefresh CLI
+codefresh                 0.36.0     Codefresh CLI
 ctop                      0.7.2      Top-like interface for container metrics
 direnv                    2.20.0     Unclutter your .profile
 doctl                     1.34.0     A command line tool for DigitalOcean services
@@ -47,7 +47,7 @@ kubens                    0.7.1      Switch faster between clusters and namespac
 lectl                     0.17       Script to check issued certificates by Let's Encrypt on CTL (Certificate Transparency Log) using https://crt.sh
 misspell                  0.3.4      Correct commonly misspelled English words in source files
 packer                    1.4.4      Packer is a tool for creating identical machine images for multiple platforms from a single source configuration.
-pandoc                    2.7.3      Universal markup converter
+pandoc                    2.8        Universal markup converter
 rakkess                   0.4.2      Review Access - kubectl plugin to show an access matrix for all available resources
 rbac-lookup               0.5.0      Find Kubernetes roles and cluster roles bound to any user, service account, or group name.
 retry                     3.3.0      ♻️ Functional mechanism based on channels to perform actions repetitively until successful.
