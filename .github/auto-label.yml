@@ -1,3 +1,21 @@
+codefresh:
+- codefresh/**
+- codefresh.yml
+
+docker:
+- Dockerfile
+- apk/Dockerfile.*
+
+docs:
+- docs/**
+
+github:
+- .github/**
+
+scripts:
+- bin/**
+- tasks/**
+vendor: vendor/**
 vendor/assume-role: vendor/assume-role/**
 vendor/atlantis: vendor/atlantis/**
 vendor/awless: vendor/awless/**
@@ -33,6 +51,7 @@ vendor/hugo: vendor/hugo/**
 vendor/json2hcl: vendor/json2hcl/**
 vendor/k6: vendor/k6/**
 vendor/kfctl: vendor/kfctl/**
+vendor/kind: vendor/kind/**
 vendor/kops-1.12: vendor/kops-1.12/**
 vendor/kops: vendor/kops/**
 vendor/kubecron: vendor/kubecron/**

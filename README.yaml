@@ -158,7 +158,7 @@ examples: |-
   ```
   export PACKAGES_VERSION ?= master
   export PACKAGES_PATH ?= packages/
-  export INSTALL_PATH ?= $(PACKAGES_PATH)/vendor
+  export INSTALL_PATH ?= $(PACKAGES_PATH)/bin
 
   ## Install packages
   packages/install:
@@ -178,6 +178,13 @@ examples: |-
           @make -C $(PACKAGES_PATH)/uninstall $(subst packages/uninstall/,,$@)
   ```
 
+  ### Contributing Additional Packages
+  In addition to following the Contributing section, the following steps can be used to add new packages for review (via a PR).
+  1. Clone an existing, similar, package within the vendors directory. Name the new folder with the same name as the binary package being installed.
+  2. At a minimum, update the `VERSION`, `DESCRIPTION`, and `Makefile` to reflect the binary being installed. Ensure that a test section exists and works.
+  3. Test the install and ensure that it downloads and runs as expected (`make -C install <your_package> INSTALL_PATH=/tmp`)
+  4. Test the build (`make all`)
+  5. Update the `README.md` (`make readme/build`)
 
 # Contributors to this project
 contributors:

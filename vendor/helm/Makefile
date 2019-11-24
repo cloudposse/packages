@@ -3,7 +3,7 @@ include ../../tasks/Makefile.apk
 
 # Package details
 export VENDOR ?= helm
-export DOWNLOAD_URL ?= http://storage.googleapis.com/kubernetes-helm/helm-v$(PACKAGE_VERSION)-$(OS)-$(ARCH).tar.gz
+export DOWNLOAD_URL ?= https://get.helm.sh/helm-v$(PACKAGE_VERSION)-$(OS)-$(ARCH).tar.gz
 export APK_BUILD_TEMPLATE ?= APKBUILD.github-binary
 
 install:
