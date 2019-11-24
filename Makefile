@@ -84,3 +84,6 @@ update/%:
 	rm -f vendor/$(subst update/,,$@)/VERSION
 	make -C vendor/$(subst update/,,$@) VERSION
 	make readme
+
+new/package:
+	helpers/new-package.sh
