@@ -247,7 +247,7 @@ chamber                   2.7.5      CLI for managing secrets
 cli53                     0.8.16     Command line tool for Amazon Route 53
 cloudflared               2019.9.0   Argo Tunnel client
 cloudposse-atlantis       0.9.0.3    Terraform For Teams, enhanced by Cloud Posse
-codefresh                 0.35.0     Codefresh CLI
+codefresh                 0.36.0     Codefresh CLI
 ctop                      0.7.2      Top-like interface for container metrics
 direnv                    2.20.0     Unclutter your .profile
 doctl                     1.34.0     A command line tool for DigitalOcean services
@@ -266,14 +266,14 @@ goofys                    0.23.1     a high-performance, POSIX-ish Amazon S3 fil
 gosu                      1.11       Simple Go-based setuid+setgid+setgroups+exec
 gotop                     3.0.0      A terminal based graphical activity monitor inspired by gtop and vtop
 helm                      3.0.0      The Kubernetes Package Manager
-helmfile                  0.92.3     Deploy Kubernetes Helm Charts
+helmfile                  0.93.2     Deploy Kubernetes Helm Charts
 htmltest                  0.10.3     :white_check_mark: Test generated HTML for problems
 hugo                      0.59.1     The world’s fastest framework for building websites.
 json2hcl                  0.0.6      Convert JSON to HCL, and vice versa
 k6                        0.25.1     A modern load testing tool, using Go and JavaScript - https://k6.io
 kfctl                     0.7.0      Machine Learning Toolkit for Kubernetes
 kind                      0.6.0      A tool for running local Kubernetes clusters using Docker
-kops                      1.14.1     Kubernetes Operations (kops) - Production Grade K8s Installation, Upgrades, and Management
+kops                      1.15.0     Kubernetes Operations (kops) - Production Grade K8s Installation, Upgrades, and Management
 kops-1.12                 1.12.3     Kubernetes Operations (kops) - Production Grade K8s Installation, Upgrades, and Management
 kubecron                  1.0.2      Utilities to manage kubernetes cronjobs. Run a CronJob manually for test purposes. Suspend/unsuspend a CronJob
 kubectl                   1.14.9     Production-Grade Container Scheduling and Management
@@ -284,7 +284,7 @@ kubens                    0.7.1      Switch faster between clusters and namespac
 lectl                     0.17       Script to check issued certificates by Let's Encrypt on CTL (Certificate Transparency Log) using https://crt.sh
 misspell                  0.3.4      Correct commonly misspelled English words in source files
 packer                    1.4.4      Packer is a tool for creating identical machine images for multiple platforms from a single source configuration.
-pandoc                    2.7.3      Universal markup converter
+pandoc                    2.8        Universal markup converter
 rakkess                   0.4.2      Review Access - kubectl plugin to show an access matrix for all available resources
 rbac-lookup               0.5.0      Find Kubernetes roles and cluster roles bound to any user, service account, or group name.
 retry                     3.3.0      ♻️ Functional mechanism based on channels to perform actions repetitively until successful.
@@ -293,10 +293,10 @@ sentry-cli                1.49.0     A command line utility to work with Sentry.
 shellcheck                0.7.0      ShellCheck, a static analysis tool for shell scripts
 shfmt                     2.6.4      A shell parser, formatter and interpreter (POSIX/Bash/mksh)
 slack-notifier            0.2.0      Command line utility to send messages with attachments to Slack channels via Incoming Webhooks
-sops                      3.4.0      Secrets management stinks, use some sops!
+sops                      3.5.0      Secrets management stinks, use some sops!
 stern                     1.11.0     ⎈ Multi pod and container log tailing for Kubernetes
 sudosh                    0.2.0      Shell wrapper to run a login shell with `sudo` as the current user for the purpose of audit logging
-teleport                  4.1.4      Privileged access management for elastic infrastructure.
+teleport                  3.2.14     Privileged access management for elastic infrastructure.
 terraform                 0.12.16    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-0.11            0.11.14    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-0.12            0.12.10    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
