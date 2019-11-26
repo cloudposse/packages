@@ -186,6 +186,17 @@ examples: |-
   4. Test the build (`make all`)
   5. Update the `README.md` (`make readme/build`)
 
+  The package must install via standard download and also as an apk package. To validate your apk package test locally
+
+  ```bash
+  make docker/build/apk/shell
+  make -C vendor/<appname> apk
+  # Some temp build files in the volume mount set user/group to nouser/nogroup for apk building.
+  # It is easier to remove them while within the docker container.
+  rm -rf ./tmp/*
+  exit
+  ```
+
 # Contributors to this project
 contributors:
   - name: "Erik Osterman"
