@@ -1,3 +1,20 @@
+codefresh:
+- codefresh/**
+- codefresh.yml
+
+docker:
+- Dockerfile
+- apk/Dockerfile.*
+
+docs:
+- docs/**
+
+github:
+- .github/**
+
+scripts:
+- bin/**
+- tasks/**
 vendor: vendor/**
 vendor/assume-role: vendor/assume-role/**
 vendor/atlantis: vendor/atlantis/**

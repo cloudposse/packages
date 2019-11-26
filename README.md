@@ -229,8 +229,21 @@ In addition to following the Contributing section, the following steps can be us
 1. Clone an existing, similar, package within the vendors directory. Name the new folder with the same name as the binary package being installed.
 2. At a minimum, update the `VERSION`, `DESCRIPTION`, and `Makefile` to reflect the binary being installed. Ensure that a test section exists and works.
 3. Test the install and ensure that it downloads and runs as expected (`make -C install <your_package> INSTALL_PATH=/tmp`)
-4. Test the build (`make all`)
+4. Test the apk build (see below)
 5. Update the `README.md` (`make readme/build`)
+
+### Testing the apk build
+
+To validate that a new package will build into an apk you can use the following steps;
+
+```bash
+make docker/build/apk/shell
+make -C vendor/<appname> apk
+# Some temp build files in the volume mount set user/group to nobody/nobody for apk building.
+# It is easier to remove them while within the docker container.
+rm -rf ./tmp/build.*
+exit
+```
 
 
 
@@ -478,7 +491,6 @@ Check out [our other projects][github], [follow us on twitter][twitter], [apply 
   [email]: https://cpco.io/email?utm_source=github&utm_medium=readme&utm_campaign=cloudposse/packages&utm_content=email
   [commercial_support]: https://cpco.io/commercial-support?utm_source=github&utm_medium=readme&utm_campaign=cloudposse/packages&utm_content=commercial_support
   [we_love_open_source]: https://cpco.io/we-love-open-source?utm_source=github&utm_medium=readme&utm_campaign=cloudposse/packages&utm_content=we_love_open_source
-  [terraform_modules]: https://cpco.io/terraform-modules?utm_source=github&utm_medium=readme&utm_campaign=cloudposse/packages&utm_content=terraform_modules
   [readme_header_img]: https://cloudposse.com/readme/header/img
   [readme_header_link]: https://cloudposse.com/readme/header/link?utm_source=github&utm_medium=readme&utm_campaign=cloudposse/packages&utm_content=readme_header_link
   [readme_footer_img]: https://cloudposse.com/readme/footer/img
