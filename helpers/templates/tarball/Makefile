@@ -3,11 +3,12 @@
 ## Package details 
 export VENDOR = {{ .Env.VENDOR }}
 export PACKAGE_NAME = {{ .Env.APP }}
+# Folder which package is extracted into
 export PACKAGE_REPO_NAME = {{ .Env.APP }}
-export DOWNLOAD_URL = {{ .Env.URL }}
+export DOWNLOAD_URL ?= {{ .Env.URL }}
 
 ## APK build specific requirements
-export APK_BUILD_TEMPLATE = APKBUILD.github-binary
+export APK_BUILD_TEMPLATE ?= APKBUILD.github-binary
 ## Uncomment only if you need additional libraries
 #export APKBUILD_DEPENDS += libc6-compat musl
 
@@ -15,7 +16,7 @@ include ../../tasks/Makefile.package
 include ../../tasks/Makefile.apk
 
 install:
-	$(call download_binary)
+	$(call download_tarball)
 
 test:
 	$(PACKAGE_EXE) --version

@@ -1,9 +1,13 @@
 #!/bin/bash
 # Creates a new package based on templates
+# Author: Zachary Loeber
 
 HEIGHT=15
 WIDTH=80
+BINPATH=${_BINPATH:-"tmp/build.helpers"}
 
+echo BINPATH=${BINPATH}
+read
 APP=$(whiptail --inputbox "Application Name" 8 78 "newapp" --title "Application Info" 3>&1 1>&2 2>&3)
 
 if [ $? -ne 0 ]; then
@@ -16,9 +20,8 @@ if [ -d "vendor/${APP}" ]; then
 fi
 
 OPTIONS=(bin "github binary"
-         targz "github tar.gz"
-         custom_bin "custom binary"
-         custom_targz "custom tar.gz")
+         tarball "github tarball"
+         custom_tarball "custom tarball")
 
 packageType=$(whiptail \
     --clear \
@@ -52,14 +55,11 @@ case $packageType in
     bin)
         URL="\$(PACKAGE_REPO_URL)/releases/download/v${VERSION}/${APP}-\$(OS)-\$(ARCH).tar.gz"
         ;;
-    targz)
+    tarball)
         URL="\$(PACKAGE_REPO_URL)/releases/download/v${VERSION}/${APP}-\$(OS)-\$(ARCH).tar.gz"
         ;;
-    custom_bin)
-        URL="http://website.name/website.path/v${VERSION}/${APP}-\$(OS)-\$(ARCH).tar.gz"
-        ;;
-    custom_targz)
-        URL="http://website.name/website.path/v${VERSION}/${APP}-\$(OS)-\$(ARCH).tar.gz"
+    custom_tarball)
+        URL="http://<website.name>/website.path/v${VERSION}/${APP}-\$(OS)-\$(ARCH).tar.gz"
         ;;
 esac
 URL=$(whiptail --inputbox "Appcation URL" 8 78 "${URL}" --title "Application Info" 3>&1 1>&2 2>&3)
@@ -72,6 +72,15 @@ export VENDOR APP DESC VERSION URL
 echo "Template path for new application: ./vendor/${APP}"
 mkdir -p vendor/${APP}
 
-gomplate \
+$(BINPATH)/gomplate \
   --input-dir helpers/templates/${packageType} \
   --output-dir vendor/${APP} || rm -rf vendor/${APP}
+
+if [ -e vendor/${APP} ]; then
+  echo "New package template created!"
+  echo "New package path: vendor/${APP}"
+  echo "Review and update all files within the new package path."
+  echo "Test your app install with the following:"
+  echo "  make -C install ${APP}"
+  echo ""
+ 

@@ -1,12 +1,18 @@
-## Installer for non-github binary
+## Package template for non-github tarball
+
+## Package details 
+export VENDOR = {{ .Env.VENDOR }}
+export PACKAGE_NAME = {{ .Env.APP }}
+export PACKAGE_REPO_NAME = {{ .Env.APP }}
+export DOWNLOAD_URL = {{ .Env.URL }}
+
+## APK build specific requirements
+export APK_BUILD_TEMPLATE = APKBUILD.github-binary
+## Uncomment only if you need additional libraries
+#export APKBUILD_DEPENDS += libc6-compat musl
+
 include ../../tasks/Makefile.package
 include ../../tasks/Makefile.apk
-
-# Package name defaults to the current working directory name
-export PACKAGE_NAME = {{ .Env.APP }}
-export VENDOR = {{ .Env.VENDOR }}
-export DOWNLOAD_URL = {{ .Env.URL }}
-export APK_BUILD_TEMPLATE = APKBUILD.github-binary
 
 ## Package specific install code
 install:
@@ -21,5 +27,6 @@ test:
 	($(PACKAGE_EXE) || true) 2>&1 | grep version
 
 # Custom post-package processing (Note the double colon to append to current inherited package/prepare task)
+## This may be required for apk building
 #package/prepare::
-#	mv src/$(OS)-$(ARCH)/helm src
+#	mv src/{{ .Env.APP }}-$(OS).$(ARCH)/{{ .Env.APP }} src
