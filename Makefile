@@ -36,8 +36,8 @@ push:
 run:
 	docker run -it ${DOCKER_IMAGE_NAME} sh
 
-.github/auto-label.yml:: PACKAGES=$(sort $(dir $(wildcard vendor/*/)))
-.github/auto-label.yml::
+.github/auto-label.yml: PACKAGES=$(sort $(dir $(wildcard vendor/*/)))
+.github/auto-label.yml:
 	cp .github/auto-label-default.yml $@
 	for vendor in $(PACKAGES); do \
 		echo "$${vendor%/}: $${vendor}**"; \
@@ -89,7 +89,7 @@ update/%:
 	make readme
 
 new/package:
-	rm -rf tmp/build.helper || true
-	mkdir -p tmp/build.helper
-	make -C install gomplate INSTALL_PATH=tmp/build.helper
-	BINPATH=tmp/build.helper; helpers/new-package.sh
+	rm -rf $$(pwd)/tmp/build.helpers
+	mkdir -p $$(pwd)/tmp/build.helpers
+	make -C install INSTALL_PATH=$$(pwd)/tmp/build.helpers gomplate
+	BINPATH=$$(pwd)/tmp/build.helpers $$(pwd)/helpers/new-package.sh

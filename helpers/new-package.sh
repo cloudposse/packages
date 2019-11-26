@@ -4,10 +4,8 @@
 
 HEIGHT=15
 WIDTH=80
-BINPATH=${_BINPATH:-"tmp/build.helpers"}
+BINPATH=${BINPATH:-"tmp/build.helpers"}
 
-echo BINPATH=${BINPATH}
-read
 APP=$(whiptail --inputbox "Application Name" 8 78 "newapp" --title "Application Info" 3>&1 1>&2 2>&3)
 
 if [ $? -ne 0 ]; then
@@ -72,15 +70,16 @@ export VENDOR APP DESC VERSION URL
 echo "Template path for new application: ./vendor/${APP}"
 mkdir -p vendor/${APP}
 
-$(BINPATH)/gomplate \
+${BINPATH}/gomplate \
   --input-dir helpers/templates/${packageType} \
   --output-dir vendor/${APP} || rm -rf vendor/${APP}
 
-if [ -e vendor/${APP} ]; then
+if [ -d vendor/${APP} ]; then
   echo "New package template created!"
   echo "New package path: vendor/${APP}"
   echo "Review and update all files within the new package path."
   echo "Test your app install with the following:"
   echo "  make -C install ${APP}"
   echo ""
+fi
  
