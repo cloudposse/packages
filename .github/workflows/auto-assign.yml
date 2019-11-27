@@ -1,5 +1,7 @@
-name: 'auto-assign'
-on: pull_request
+name: auto-assign
+on:
+  pull_request: 
+    types: [opened, reopened]
 
 jobs:
   reviewers:
@@ -8,3 +10,4 @@ jobs:
       - uses: cloudposse/actions/github/auto-assign@0.5.0
         with:
           repo-token: "${{ secrets.GITHUB_TOKEN }}"
+          configuration-path: '.github/auto-assign.yml'
