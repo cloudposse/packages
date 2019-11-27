@@ -7,7 +7,6 @@ WIDTH=80
 BINPATH=${BINPATH:-"tmp/build.helpers"}
 
 APP=$(whiptail --inputbox "Application Name" 8 78 "newapp" --title "Application Info" 3>&1 1>&2 2>&3)
-
 if [ $? -ne 0 ]; then
     exit 0
 fi
@@ -51,13 +50,13 @@ fi
 # Construct a generic url to use based on selections
 case $packageType in
     bin)
-        URL="\$(PACKAGE_REPO_URL)/releases/download/v${VERSION}/${APP}-\$(OS)-\$(ARCH).tar.gz"
+        URL="\$(PACKAGE_REPO_URL)/releases/download/v$(PACKAGE_VERSION)/${APP}-$(PACKAGE_VERSION).\$(OS)-\$(ARCH).tar.gz"
         ;;
     tarball)
-        URL="\$(PACKAGE_REPO_URL)/releases/download/v${VERSION}/${APP}-\$(OS)-\$(ARCH).tar.gz"
+        URL="\$(PACKAGE_REPO_URL)/releases/download/v$(PACKAGE_VERSION)/${APP}-$(PACKAGE_VERSION).\$(OS)-\$(ARCH).tar.gz"
         ;;
     custom_tarball)
-        URL="http://<website.name>/website.path/v${VERSION}/${APP}-\$(OS)-\$(ARCH).tar.gz"
+        URL="http://<website.name>/website.path/v$(PACKAGE_VERSION)/${APP}-$(PACKAGE_VERSION).\$(OS)-\$(ARCH).tar.gz"
         ;;
 esac
 URL=$(whiptail --inputbox "Appcation URL" 8 78 "${URL}" --title "Application Info" 3>&1 1>&2 2>&3)
@@ -75,11 +74,17 @@ ${BINPATH}/gomplate \
   --output-dir vendor/${APP} || rm -rf vendor/${APP}
 
 if [ -d vendor/${APP} ]; then
-  echo "New package template created!"
+## Uncomment to enable auto-update of .github/auto-label.yml
+#   LABEL="vendor/${APP}: vendor/${APP}/**"
+#   if grep -q "${LABEL}" .github/auto-label.yml; then
+#     echo "${APP} already found in .github/auto-label.yml!"
+#   else
+#     echo "${LABEL}" >> .github/auto-label.yml
+#     echo "${APP} added to .github/auto-label.yml!"
+#   fi
+  echo ""
   echo "New package path: vendor/${APP}"
-  echo "Review and update all files within the new package path."
-  echo "Test your app install with the following:"
-  echo "  make -C install ${APP}"
+  echo "NOTE: Review and update all files within the new package path. Then test your app install with the following:"
+  echo "  make -C install ${APP} INSTALL_PATH=/tmp"
   echo ""
 fi
- 
