@@ -5,7 +5,7 @@ export DOCKER_IMAGE_NAME ?= $(DOCKER_IMAGE):$(DOCKER_TAG)
 export DOCKER_BUILD_FLAGS = 
 
 export DEFAULT_HELP_TARGET := help/vendor
-export README_DEPS ?=.github/auto-label.yml docs/targets.md
+export README_DEPS ?= .github/auto-label.yml docs/targets.md
 
 export DIST_CMD ?= cp -a
 export DIST_PATH ?= /dist
@@ -36,8 +36,8 @@ push:
 run:
 	docker run -it ${DOCKER_IMAGE_NAME} sh
 
-.github/auto-label.yml: PACKAGES=$(sort $(dir $(wildcard vendor/*/)))
-.github/auto-label.yml:
+.github/auto-label.yml:: PACKAGES=$(sort $(dir $(wildcard vendor/*/)))
+.github/auto-label.yml::
 	cp .github/auto-label-default.yml $@
 	for vendor in $(PACKAGES); do \
 		echo "$${vendor%/}: $${vendor}**"; \
