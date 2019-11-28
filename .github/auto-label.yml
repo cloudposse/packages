@@ -14,7 +14,8 @@ github:
 
 scripts:
 - bin/**
-- tasks/**vendor: vendor/**
+- tasks/**
+vendor: vendor/**
 vendor/amtool: vendor/amtool/**
 vendor/assume-role: vendor/assume-role/**
 vendor/atlantis: vendor/atlantis/**
