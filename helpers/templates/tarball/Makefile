@@ -4,7 +4,7 @@
 export VENDOR = {{ .Env.VENDOR }}
 export PACKAGE_NAME = {{ .Env.APP }}
 # Folder which package is extracted into
-export PACKAGE_REPO_NAME = {{ .Env.APP }}
+export PACKAGE_REPO_NAME = {{ .Env.REPO }}
 export DOWNLOAD_URL ?= {{ .Env.URL }}
 
 ## APK build specific requirements
