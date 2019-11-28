@@ -50,13 +50,13 @@ fi
 # Construct a generic url to use based on selections
 case $packageType in
     bin)
-        URL="\$(PACKAGE_REPO_URL)/releases/download/v$(PACKAGE_VERSION)/${APP}-$(PACKAGE_VERSION).\$(OS)-\$(ARCH).tar.gz"
+        URL="\$(PACKAGE_REPO_URL)/releases/download/v\$(PACKAGE_VERSION)/${APP}-\$(PACKAGE_VERSION).\$(OS)-\$(ARCH).tar.gz"
         ;;
     tarball)
-        URL="\$(PACKAGE_REPO_URL)/releases/download/v$(PACKAGE_VERSION)/${APP}-$(PACKAGE_VERSION).\$(OS)-\$(ARCH).tar.gz"
+        URL="\$(PACKAGE_REPO_URL)/releases/download/v\$(PACKAGE_VERSION)/${APP}-\$(PACKAGE_VERSION).\$(OS)-\$(ARCH).tar.gz"
         ;;
     custom_tarball)
-        URL="http://<website.name>/website.path/v$(PACKAGE_VERSION)/${APP}-$(PACKAGE_VERSION).\$(OS)-\$(ARCH).tar.gz"
+        URL="http://<website.name>/website.path/v\$(PACKAGE_VERSION)/${APP}-\$(PACKAGE_VERSION).\$(OS)-\$(ARCH).tar.gz"
         ;;
 esac
 URL=$(whiptail --inputbox "Appcation URL" 8 78 "${URL}" --title "Application Info" 3>&1 1>&2 2>&3)

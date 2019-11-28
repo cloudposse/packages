@@ -36,8 +36,8 @@ push:
 run:
 	docker run -it ${DOCKER_IMAGE_NAME} sh
 
-.github/auto-label.yml: PACKAGES=$(sort $(dir $(wildcard vendor/*/)))
-.github/auto-label.yml:
+.github/auto-label.yml:: PACKAGES=$(sort $(dir $(wildcard vendor/*/)))
+.github/auto-label.yml::
 	cp .github/auto-label-default.yml $@
 	for vendor in $(PACKAGES); do \
 		echo "$${vendor%/}: $${vendor}**"; \
