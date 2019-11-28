@@ -274,6 +274,7 @@ kfctl                     0.7.0      Machine Learning Toolkit for Kubernetes
 kind                      0.6.0      A tool for running local Kubernetes clusters using Docker
 kops                      1.15.0     Kubernetes Operations (kops) - Production Grade K8s Installation, Upgrades, and Management
 kops-1.12                 1.12.3     Kubernetes Operations (kops) - Production Grade K8s Installation, Upgrades, and Management
+krew                      0.3.2      Kubectl plugin manager
 kubecron                  1.0.2      Utilities to manage kubernetes cronjobs. Run a CronJob manually for test purposes. Suspend/unsuspend a CronJob
 kubectl                   1.14.9     Production-Grade Container Scheduling and Management
 kubectl-1.13              1.13.11    Production-Grade Container Scheduling and Management

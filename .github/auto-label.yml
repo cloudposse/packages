@@ -54,6 +54,7 @@ vendor/kfctl: vendor/kfctl/**
 vendor/kind: vendor/kind/**
 vendor/kops-1.12: vendor/kops-1.12/**
 vendor/kops: vendor/kops/**
+vendor/krew: vendor/krew/**
 vendor/kubecron: vendor/kubecron/**
 vendor/kubectl-1.13: vendor/kubectl-1.13/**
 vendor/kubectl-1.14: vendor/kubectl-1.14/**
