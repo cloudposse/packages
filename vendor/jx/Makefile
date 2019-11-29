@@ -4,7 +4,7 @@
 export VENDOR = jenkins-x
 export PACKAGE_NAME = jx
 export PACKAGE_REPO_NAME = jx
-export DOWNLOAD_URL = $(PACKAGE_REPO_URL)/releases/download/v$(PACKAGE_VERSION)039/jx-$(OS)-$(ARCH).tar.gz
+export DOWNLOAD_URL = $(PACKAGE_REPO_URL)/releases/download/v$(PACKAGE_VERSION)/jx-$(OS)-$(ARCH).tar.gz
 
 ## APK build specific requirements
 export APK_BUILD_TEMPLATE = APKBUILD.github-binary
@@ -15,7 +15,7 @@ include ../../tasks/Makefile.package
 include ../../tasks/Makefile.apk
 
 install:
-	$(call download_binary)
+	$(call download_tarball)
 
 test:
 	$(PACKAGE_EXE) --version
