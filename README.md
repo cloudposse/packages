@@ -287,6 +287,7 @@ misspell                  0.3.4      Correct commonly misspelled English words i
 packer                    1.4.4      Packer is a tool for creating identical machine images for multiple platforms from a single source configuration.
 pandoc                    2.8        Universal markup converter
 rakkess                   0.4.2      Review Access - kubectl plugin to show an access matrix for all available resources
+rancher                   2.3.2      Rancher CLI
 rbac-lookup               0.5.0      Find Kubernetes roles and cluster roles bound to any user, service account, or group name.
 retry                     3.3.0      ♻️ Functional mechanism based on channels to perform actions repetitively until successful.
 scenery                   0.1.5      A Terraform plan output prettifier
