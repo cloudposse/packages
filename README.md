@@ -269,6 +269,7 @@ helmfile                  0.93.2     Deploy Kubernetes Helm Charts
 htmltest                  0.10.3     :white_check_mark: Test generated HTML for problems
 hugo                      0.60.0     The world’s fastest framework for building websites.
 json2hcl                  0.0.6      Convert JSON to HCL, and vice versa
+jx                        2.0.1      Jenkins-X
 k6                        0.25.1     A modern load testing tool, using Go and JavaScript - https://k6.io
 kfctl                     0.7.0      Machine Learning Toolkit for Kubernetes
 kind                      0.6.0      A tool for running local Kubernetes clusters using Docker
@@ -286,6 +287,7 @@ misspell                  0.3.4      Correct commonly misspelled English words i
 packer                    1.4.4      Packer is a tool for creating identical machine images for multiple platforms from a single source configuration.
 pandoc                    2.8.0.1    Universal markup converter
 rakkess                   0.4.2      Review Access - kubectl plugin to show an access matrix for all available resources
+rancher                   2.3.2      Rancher CLI
 rbac-lookup               0.5.0      Find Kubernetes roles and cluster roles bound to any user, service account, or group name.
 retry                     3.3.0      ♻️ Functional mechanism based on channels to perform actions repetitively until successful.
 scenery                   0.1.5      A Terraform plan output prettifier

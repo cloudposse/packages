@@ -49,6 +49,7 @@ vendor/helmfile: vendor/helmfile/**
 vendor/htmltest: vendor/htmltest/**
 vendor/hugo: vendor/hugo/**
 vendor/json2hcl: vendor/json2hcl/**
+vendor/jx: vendor/jx/**
 vendor/k6: vendor/k6/**
 vendor/kfctl: vendor/kfctl/**
 vendor/kind: vendor/kind/**
@@ -66,6 +67,7 @@ vendor/misspell: vendor/misspell/**
 vendor/packer: vendor/packer/**
 vendor/pandoc: vendor/pandoc/**
 vendor/rakkess: vendor/rakkess/**
+vendor/rancher: vendor/rancher/**
 vendor/rbac-lookup: vendor/rbac-lookup/**
 vendor/retry: vendor/retry/**
 vendor/scenery: vendor/scenery/**
