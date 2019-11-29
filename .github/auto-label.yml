@@ -66,6 +66,7 @@ vendor/misspell: vendor/misspell/**
 vendor/packer: vendor/packer/**
 vendor/pandoc: vendor/pandoc/**
 vendor/rakkess: vendor/rakkess/**
+vendor/rancher: vendor/rancher/**
 vendor/rbac-lookup: vendor/rbac-lookup/**
 vendor/retry: vendor/retry/**
 vendor/scenery: vendor/scenery/**
