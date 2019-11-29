@@ -1,5 +1,6 @@
 ## Makefile Targets
 ```
+amtool                    0.19.0     Tool for interacting with the Alertmanager API
 assume-role               0.3.2      Easily assume AWS roles in your terminal.
 atlantis                  0.10.2     Terraform For Teams
 awless                    0.1.11     A Mighty CLI for AWS
