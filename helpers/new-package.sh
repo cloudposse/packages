@@ -6,7 +6,7 @@ eval `resize`
 HEIGHT=15
 WIDTH=80
 BINPATH=${BINPATH:-"tmp/build.helpers"}
-IGNORED_EXT='(.tar.gz.asc|.txt)'
+IGNORED_EXT='(.tar.gz.asc|.txt|.tar.xz)'
 OS="${OS:-"linux"}"
 ARCH="${ARCH:-"amd64"}"
 
@@ -70,7 +70,7 @@ if [ $? -ne 0 ]; then
     exit 0
 fi
 
-latesturl=`get_latest_download_urls_by_platform "${VENDOR}/${REPO}"`
+latesturl=`get_latest_download_urls_by_platform "${VENDOR}/${REPO}" | grep -v -E "${IGNORED_EXT}"`
 latestversion=`get_latest_version_by_tag "${VENDOR}/${REPO}" | grep -o -E '[0-9]+.[0-9]+.[0-9]+'`
 if [ -z $latestversion ]; then
     latestversion=`echo "${latesturl}" | grep -o -E '[0-9]+.[0-9]+.[0-9]+' | head -1`
