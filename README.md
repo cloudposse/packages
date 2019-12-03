@@ -263,7 +263,7 @@ cloudposse-atlantis       0.9.0.3    Terraform For Teams, enhanced by Cloud Poss
 codefresh                 0.36.0     Codefresh CLI
 ctop                      0.7.2      Top-like interface for container metrics
 direnv                    2.20.0     Unclutter your .profile
-doctl                     1.34.0     A command line tool for DigitalOcean services
+doctl                     1.35.0     A command line tool for DigitalOcean services
 emailcli                  1.0.3      Command line email sending client written in Go.
 fargate                   0.3.2      CLI for AWS Fargate
 fetch                     0.3.7      fetch makes it easy to download files, folders, and release assets from a specific public git commit, branch, or tag
@@ -283,13 +283,13 @@ helmfile                  0.94.1     Deploy Kubernetes Helm Charts
 htmltest                  0.10.3     :white_check_mark: Test generated HTML for problems
 hugo                      0.60.1     The world’s fastest framework for building websites.
 json2hcl                  0.0.6      Convert JSON to HCL, and vice versa
-jx                        2.0.1040   Jenkins-X
+jx                        2.0.1042   Jenkins-X
 k6                        0.25.1     A modern load testing tool, using Go and JavaScript - https://k6.io
 kfctl                     0.7.0      Machine Learning Toolkit for Kubernetes
 kind                      0.6.0      A tool for running local Kubernetes clusters using Docker
 kops                      1.15.0     Kubernetes Operations (kops) - Production Grade K8s Installation, Upgrades, and Management
 kops-1.12                 1.12.3     Kubernetes Operations (kops) - Production Grade K8s Installation, Upgrades, and Management
-krew                      0.3.2      Kubectl plugin manager
+krew                      0.3.3      Kubectl plugin manager
 kubecron                  1.0.2      Utilities to manage kubernetes cronjobs. Run a CronJob manually for test purposes. Suspend/unsuspend a CronJob
 kubectl                   1.14.9     Production-Grade Container Scheduling and Management
 kubectl-1.13              1.13.11    Production-Grade Container Scheduling and Management
@@ -313,7 +313,7 @@ sops                      3.5.0      Secrets management stinks, use some sops!
 stern                     1.11.0     ⎈ Multi pod and container log tailing for Kubernetes
 sudosh                    0.2.0      Shell wrapper to run a login shell with `sudo` as the current user for the purpose of audit logging
 teleport                  3.2.14     Privileged access management for elastic infrastructure.
-terraform                 0.12.16    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
+terraform                 0.12.17    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-0.11            0.11.14    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-0.12            0.12.10    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-docs            0.6.0      Generate docs from terraform modules
