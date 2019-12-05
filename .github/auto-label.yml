@@ -1,3 +1,22 @@
+codefresh:
+- codefresh/**
+- codefresh.yml
+
+docker:
+- Dockerfile
+- apk/Dockerfile.*
+
+docs:
+- docs/**
+
+github:
+- .github/**
+
+scripts:
+- bin/**
+- tasks/**
+vendor: vendor/**
+vendor/amtool: vendor/amtool/**
 vendor/assume-role: vendor/assume-role/**
 vendor/atlantis: vendor/atlantis/**
 vendor/awless: vendor/awless/**
@@ -31,11 +50,13 @@ vendor/helmfile: vendor/helmfile/**
 vendor/htmltest: vendor/htmltest/**
 vendor/hugo: vendor/hugo/**
 vendor/json2hcl: vendor/json2hcl/**
+vendor/jx: vendor/jx/**
 vendor/k6: vendor/k6/**
 vendor/kfctl: vendor/kfctl/**
 vendor/kind: vendor/kind/**
 vendor/kops-1.12: vendor/kops-1.12/**
 vendor/kops: vendor/kops/**
+vendor/krew: vendor/krew/**
 vendor/kubecron: vendor/kubecron/**
 vendor/kubectl-1.13: vendor/kubectl-1.13/**
 vendor/kubectl-1.14: vendor/kubectl-1.14/**
@@ -47,6 +68,7 @@ vendor/misspell: vendor/misspell/**
 vendor/packer: vendor/packer/**
 vendor/pandoc: vendor/pandoc/**
 vendor/rakkess: vendor/rakkess/**
+vendor/rancher: vendor/rancher/**
 vendor/rbac-lookup: vendor/rbac-lookup/**
 vendor/retry: vendor/retry/**
 vendor/scenery: vendor/scenery/**
