@@ -90,4 +90,5 @@ vendor/tfenv: vendor/tfenv/**
 vendor/tfmask: vendor/tfmask/**
 vendor/variant: vendor/variant/**
 vendor/venona: vendor/venona/**
+vendor/vert: vendor/vert/**
 vendor/yq: vendor/yq/**
