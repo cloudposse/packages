@@ -285,6 +285,7 @@ hugo                      0.60.1     The world’s fastest framework for buildin
 json2hcl                  0.0.6      Convert JSON to HCL, and vice versa
 jx                        2.0.1042   Jenkins-X
 k6                        0.25.1     A modern load testing tool, using Go and JavaScript - https://k6.io
+k9s                       0.9.3      Kubernetes CLI To Manage Your Clusters In Style
 kfctl                     0.7.0      Machine Learning Toolkit for Kubernetes
 kind                      0.6.0      A tool for running local Kubernetes clusters using Docker
 kops                      1.15.0     Kubernetes Operations (kops) - Production Grade K8s Installation, Upgrades, and Management
