@@ -23,6 +23,7 @@ vendor/awless: vendor/awless/**
 vendor/aws-iam-authenticator: vendor/aws-iam-authenticator/**
 vendor/aws-okta: vendor/aws-okta/**
 vendor/aws-vault: vendor/aws-vault/**
+vendor/cfssl: vendor/cfssl/**
 vendor/chamber: vendor/chamber/**
 vendor/cli53: vendor/cli53/**
 vendor/cloudflared: vendor/cloudflared/**
