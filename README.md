@@ -256,6 +256,7 @@ awless                    0.1.11     A Mighty CLI for AWS
 aws-iam-authenticator     0.4.0      A tool to use AWS IAM credentials to authenticate to a Kubernetes cluster
 aws-okta                  0.19.4     aws-okta allows users to authenticate with AWS using Okta credentials
 aws-vault                 4.7.1      A vault for securely storing and accessing AWS credentials in development environments
+cfssl                     1.4.1      Cloudflare's PKI and TLS toolkit
 chamber                   2.7.5      CLI for managing secrets
 cli53                     0.8.16     Command line tool for Amazon Route 53
 cloudflared               2019.9.0   Argo Tunnel client
@@ -286,6 +287,7 @@ hugo                      0.60.1     The world’s fastest framework for buildin
 json2hcl                  0.0.6      Convert JSON to HCL, and vice versa
 jx                        2.0.1042   Jenkins-X
 k6                        0.25.1     A modern load testing tool, using Go and JavaScript - https://k6.io
+k9s                       0.9.3      Kubernetes CLI To Manage Your Clusters In Style
 kfctl                     0.7.0      Machine Learning Toolkit for Kubernetes
 kind                      0.6.0      A tool for running local Kubernetes clusters using Docker
 kops                      1.15.0     Kubernetes Operations (kops) - Production Grade K8s Installation, Upgrades, and Management
@@ -301,6 +303,7 @@ lectl                     0.17       Script to check issued certificates by Let'
 misspell                  0.3.4      Correct commonly misspelled English words in source files
 packer                    1.4.4      Packer is a tool for creating identical machine images for multiple platforms from a single source configuration.
 pandoc                    2.8.0.1    Universal markup converter
+pgmetrics                 1.7.1      Postgres metrics
 rakkess                   0.4.2      Review Access - kubectl plugin to show an access matrix for all available resources
 rancher                   2.3.2      Rancher CLI
 rbac-lookup               0.5.0      Find Kubernetes roles and cluster roles bound to any user, service account, or group name.
