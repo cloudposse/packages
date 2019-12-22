@@ -50,11 +50,13 @@ kubectl-1.13              1.13.11    Production-Grade Container Scheduling and M
 kubectl-1.14              1.14.7     Production-Grade Container Scheduling and Management
 kubectx                   0.7.1      Switch faster between clusters and namespaces in kubectl
 kubens                    0.7.1      Switch faster between clusters and namespaces in kubectl
+lazydocker                0.7.6      The lazier way to manage everything docker
 lectl                     0.17       Script to check issued certificates by Let's Encrypt on CTL (Certificate Transparency Log) using https://crt.sh
 misspell                  0.3.4      Correct commonly misspelled English words in source files
 packer                    1.4.4      Packer is a tool for creating identical machine images for multiple platforms from a single source configuration.
 pandoc                    2.8.1      Universal markup converter
 pgmetrics                 1.7.1      Postgres metrics
+promtool                  2.14.0     Prometheus CLI tool
 rakkess                   0.4.2      Review Access - kubectl plugin to show an access matrix for all available resources
 rancher                   2.3.2      Rancher CLI
 rbac-lookup               0.5.0      Find Kubernetes roles and cluster roles bound to any user, service account, or group name.
