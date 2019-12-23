@@ -65,11 +65,13 @@ vendor/kubectl-1.14: vendor/kubectl-1.14/**
 vendor/kubectl: vendor/kubectl/**
 vendor/kubectx: vendor/kubectx/**
 vendor/kubens: vendor/kubens/**
+vendor/lazydocker: vendor/lazydocker/**
 vendor/lectl: vendor/lectl/**
 vendor/misspell: vendor/misspell/**
 vendor/packer: vendor/packer/**
 vendor/pandoc: vendor/pandoc/**
 vendor/pgmetrics: vendor/pgmetrics/**
+vendor/promtool: vendor/promtool/**
 vendor/rakkess: vendor/rakkess/**
 vendor/rancher: vendor/rancher/**
 vendor/rbac-lookup: vendor/rbac-lookup/**
