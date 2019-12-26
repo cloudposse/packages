@@ -32,6 +32,7 @@ vendor/codefresh: vendor/codefresh/**
 vendor/ctop: vendor/ctop/**
 vendor/direnv: vendor/direnv/**
 vendor/doctl: vendor/doctl/**
+vendor/duffle: vendor/duffle/**
 vendor/emailcli: vendor/emailcli/**
 vendor/fargate: vendor/fargate/**
 vendor/fetch: vendor/fetch/**
@@ -72,6 +73,7 @@ vendor/misspell: vendor/misspell/**
 vendor/packer: vendor/packer/**
 vendor/pandoc: vendor/pandoc/**
 vendor/pgmetrics: vendor/pgmetrics/**
+vendor/popeye: vendor/popeye/**
 vendor/promtool: vendor/promtool/**
 vendor/rakkess: vendor/rakkess/**
 vendor/rancher: vendor/rancher/**

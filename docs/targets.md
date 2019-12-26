@@ -16,6 +16,7 @@ codefresh                 0.37.2     Codefresh CLI
 ctop                      0.7.2      Top-like interface for container metrics
 direnv                    2.20.0     Unclutter your .profile
 doctl                     1.36.0     A command line tool for DigitalOcean services
+duffle                    0.3.5      CNAB installer
 emailcli                  1.0.3      Command line email sending client written in Go.
 fargate                   0.3.2      CLI for AWS Fargate
 fetch                     0.3.7      fetch makes it easy to download files, folders, and release assets from a specific public git commit, branch, or tag
@@ -56,6 +57,7 @@ misspell                  0.3.4      Correct commonly misspelled English words i
 packer                    1.4.4      Packer is a tool for creating identical machine images for multiple platforms from a single source configuration.
 pandoc                    2.8.1      Universal markup converter
 pgmetrics                 1.7.1      Postgres metrics
+popeye                    0.5.0      A Kubernetes cluster resource sanitizer
 promtool                  2.14.0     Prometheus CLI tool
 rakkess                   0.4.2      Review Access - kubectl plugin to show an access matrix for all available resources
 rancher                   2.3.2      Rancher CLI
