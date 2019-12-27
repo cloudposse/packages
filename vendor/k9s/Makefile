@@ -19,6 +19,9 @@ export DOWNLOAD_URL = $(PACKAGE_REPO_URL)/releases/download/$(PACKAGE_VERSION)/$
 ## APK build specific requirements
 export APK_BUILD_TEMPLATE = APKBUILD.github-binary
 
+CURRENT_VERSION: QUERY=first(.[] | .name)
+CURRENT_VERSION: API=releases
+
 install:
 	$(call download_tarball)
 
