@@ -53,6 +53,7 @@ vendor/htmltest: vendor/htmltest/**
 vendor/hugo: vendor/hugo/**
 vendor/json2hcl: vendor/json2hcl/**
 vendor/jx: vendor/jx/**
+vendor/k3d: vendor/k3d/**
 vendor/k6: vendor/k6/**
 vendor/k9s: vendor/k9s/**
 vendor/katafygio: vendor/katafygio/**
