@@ -32,6 +32,7 @@ vendor/codefresh: vendor/codefresh/**
 vendor/ctop: vendor/ctop/**
 vendor/direnv: vendor/direnv/**
 vendor/doctl: vendor/doctl/**
+vendor/duffle: vendor/duffle/**
 vendor/emailcli: vendor/emailcli/**
 vendor/fargate: vendor/fargate/**
 vendor/fetch: vendor/fetch/**
@@ -52,8 +53,10 @@ vendor/htmltest: vendor/htmltest/**
 vendor/hugo: vendor/hugo/**
 vendor/json2hcl: vendor/json2hcl/**
 vendor/jx: vendor/jx/**
+vendor/k3d: vendor/k3d/**
 vendor/k6: vendor/k6/**
 vendor/k9s: vendor/k9s/**
+vendor/katafygio: vendor/katafygio/**
 vendor/kfctl: vendor/kfctl/**
 vendor/kind: vendor/kind/**
 vendor/kops-1.12: vendor/kops-1.12/**
