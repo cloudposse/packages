@@ -283,10 +283,10 @@ gotop                     3.0.0      A terminal based graphical activity monitor
 helm                      3.0.2      The Kubernetes Package Manager
 helmfile                  0.98.1     Deploy Kubernetes Helm Charts
 htmltest                  0.11.0     :white_check_mark: Test generated HTML for problems
-hugo                      0.62.1     The world’s fastest framework for building websites.
+hugo                      0.62.2     The world’s fastest framework for building websites.
 json2hcl                  0.0.6      Convert JSON to HCL, and vice versa
-jx                        2.0.1101   Jenkins-X
-k3d                       1.4.0      Little helper to run Rancher Lab's k3s in Docker
+jx                        2.0.1102   Jenkins-X
+k3d                       3.0.0-alpha.0 Little helper to run Rancher Lab's k3s in Docker
 k6                        0.26.0     A modern load testing tool, using Go and JavaScript - https://k6.io
 k9s                       0.11.0     Kubernetes CLI To Manage Your Clusters In Style
 katafygio                 0.8.1      K8s continuous backup to git
