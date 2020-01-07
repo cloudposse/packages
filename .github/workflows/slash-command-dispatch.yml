@@ -1,0 +1,13 @@
+name: Slash Command Dispatch
+on:
+issue_comment:
+  types: [created]
+jobs:
+  slashCommandDispatch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Slash Command Dispatch
+        uses: cloudposse/actions/github/slash-command-dispatch@0.8.0
+        with:
+          token: ${{ secrets.GITHUB_BOT_TOKEN }}
+          commands: rebuild-readme
