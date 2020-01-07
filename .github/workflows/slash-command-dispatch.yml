@@ -12,6 +12,6 @@ jobs:
       - name: Slash Command Dispatch
         uses: cloudposse/actions/github/slash-command-dispatch@0.8.0
         with:
-          token: ${{ secrets.GITHUB_BOT_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
           commands: rebuild-readme
           permission: none
