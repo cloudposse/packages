@@ -4,7 +4,7 @@ on:
     types: [rebuild-readme-command]
 
 jobs:
-  example:
+  rebuild_readme:
     runs-on: ubuntu-latest
     steps:
       - name: Add reaction

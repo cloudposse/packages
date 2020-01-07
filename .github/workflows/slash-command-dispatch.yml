@@ -13,5 +13,8 @@ jobs:
         uses: cloudposse/actions/github/slash-command-dispatch@0.8.0
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
+          reaction-token: ${{ secrets.GITHUB_TOKEN }}
+          repository: cloudposse/packages@add-readme-build-action
           commands: rebuild-readme
           permission: none
+          issue-type: both
