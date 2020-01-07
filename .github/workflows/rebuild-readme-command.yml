@@ -1,7 +1,8 @@
 name: rebuild-readme-command
 on:
-repository_dispatch:
-  types: [rebuild-readme-command]
+  repository_dispatch:
+    types: [rebuild-readme-command]
+
 jobs:
   example:
     runs-on: ubuntu-latest
