@@ -261,7 +261,7 @@ chamber                   2.7.5      CLI for managing secrets
 cli53                     0.8.16     Command line tool for Amazon Route 53
 cloudflared               2019.9.0   Argo Tunnel client
 cloudposse-atlantis       0.9.0.3    Terraform For Teams, enhanced by Cloud Posse
-codefresh                 0.40.1     Codefresh CLI
+codefresh                 0.41.0     Codefresh CLI
 ctop                      0.7.3      Top-like interface for container metrics
 direnv                    2.20.0     Unclutter your .profile
 doctl                     1.36.0     A command line tool for DigitalOcean services
@@ -286,11 +286,11 @@ htmltest                  0.11.0     :white_check_mark: Test generated HTML for 
 hugo                      0.62.2     The world’s fastest framework for building websites.
 json2hcl                  0.0.6      Convert JSON to HCL, and vice versa
 jx                        2.0.1102   Jenkins-X
-k3d                       3.0.0-alpha.0 Little helper to run Rancher Lab's k3s in Docker
+k3d                       1.4.0      Little helper to run Rancher Lab's k3s in Docker
 k6                        0.26.0     A modern load testing tool, using Go and JavaScript - https://k6.io
-k9s                       0.11.0     Kubernetes CLI To Manage Your Clusters In Style
+k9s                       0.11.2     Kubernetes CLI To Manage Your Clusters In Style
 katafygio                 0.8.1      K8s continuous backup to git
-kfctl                     0.7.0      Machine Learning Toolkit for Kubernetes
+kfctl                     0.7.1      Machine Learning Toolkit for Kubernetes
 kind                      0.6.1      A tool for running local Kubernetes clusters using Docker
 kops                      1.15.0     Kubernetes Operations (kops) - Production Grade K8s Installation, Upgrades, and Management
 kops-1.12                 1.12.3     Kubernetes Operations (kops) - Production Grade K8s Installation, Upgrades, and Management
@@ -305,10 +305,10 @@ lazydocker                0.7.6      The lazier way to manage everything docker
 lectl                     0.17       Script to check issued certificates by Let's Encrypt on CTL (Certificate Transparency Log) using https://crt.sh
 misspell                  0.3.4      Correct commonly misspelled English words in source files
 packer                    1.5.0      Packer is a tool for creating identical machine images for multiple platforms from a single source configuration.
-pandoc                    2.9.1      Universal markup converter
-pgmetrics                 1.7.1      Postgres metrics
+pandoc                    2.9.1.1    Universal markup converter
+pgmetrics                 1.8.0      Postgres metrics
 popeye                    0.5.0      A Kubernetes cluster resource sanitizer
-promtool                  2.15.1     Prometheus CLI tool
+promtool                  2.15.2     Prometheus CLI tool
 rakkess                   0.4.2      Review Access - kubectl plugin to show an access matrix for all available resources
 rancher                   2.3.2      Rancher CLI
 rbac-lookup               0.5.0      Find Kubernetes roles and cluster roles bound to any user, service account, or group name.
@@ -321,7 +321,7 @@ slack-notifier            0.2.0      Command line utility to send messages with 
 sops                      3.5.0      Secrets management stinks, use some sops!
 stern                     1.11.0     ⎈ Multi pod and container log tailing for Kubernetes
 sudosh                    0.2.0      Shell wrapper to run a login shell with `sudo` as the current user for the purpose of audit logging
-teleport                  4.2.0      Privileged access management for elastic infrastructure.
+teleport                  4.2.1      Privileged access management for elastic infrastructure.
 terraform                 0.12.18    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-0.11            0.11.14    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-0.12            0.12.10    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
