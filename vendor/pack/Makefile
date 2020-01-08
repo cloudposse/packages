@@ -15,7 +15,7 @@ include ../../tasks/Makefile.package
 include ../../tasks/Makefile.apk
 
 install:
-	$(call download_binary)
+	$(call download_tarball)
 
 test:
 	$(PACKAGE_EXE) --version
