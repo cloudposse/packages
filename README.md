@@ -281,11 +281,11 @@ goofys                    0.23.1     a high-performance, POSIX-ish Amazon S3 fil
 gosu                      1.11       Simple Go-based setuid+setgid+setgroups+exec
 gotop                     3.0.0      A terminal based graphical activity monitor inspired by gtop and vtop
 helm                      3.0.2      The Kubernetes Package Manager
-helmfile                  0.98.1     Deploy Kubernetes Helm Charts
+helmfile                  0.98.2     Deploy Kubernetes Helm Charts
 htmltest                  0.11.0     :white_check_mark: Test generated HTML for problems
 hugo                      0.62.2     The world’s fastest framework for building websites.
 json2hcl                  0.0.6      Convert JSON to HCL, and vice versa
-jx                        2.0.1102   Jenkins-X
+jx                        2.0.1107   Jenkins-X
 k3d                       1.4.0      Little helper to run Rancher Lab's k3s in Docker
 k6                        0.26.0     A modern load testing tool, using Go and JavaScript - https://k6.io
 k9s                       0.11.2     Kubernetes CLI To Manage Your Clusters In Style
@@ -307,7 +307,7 @@ misspell                  0.3.4      Correct commonly misspelled English words i
 packer                    1.5.0      Packer is a tool for creating identical machine images for multiple platforms from a single source configuration.
 pandoc                    2.9.1.1    Universal markup converter
 pgmetrics                 1.8.0      Postgres metrics
-popeye                    0.5.0      A Kubernetes cluster resource sanitizer
+popeye                    0.6.0      A Kubernetes cluster resource sanitizer
 promtool                  2.15.2     Prometheus CLI tool
 rakkess                   0.4.2      Review Access - kubectl plugin to show an access matrix for all available resources
 rancher                   2.3.2      Rancher CLI
