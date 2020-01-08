@@ -301,6 +301,7 @@ kubens                    0.7.1      Switch faster between clusters and namespac
 lazydocker                0.7.6      The lazier way to manage everything docker
 lectl                     0.17       Script to check issued certificates by Let's Encrypt on CTL (Certificate Transparency Log) using https://crt.sh
 misspell                  0.3.4      Correct commonly misspelled English words in source files
+pack                      0.6.0      Create cloud native Buildpacks
 packer                    1.4.4      Packer is a tool for creating identical machine images for multiple platforms from a single source configuration.
 pandoc                    2.8.1      Universal markup converter
 pgmetrics                 1.7.1      Postgres metrics
@@ -416,7 +417,7 @@ In general, PRs are welcome. We follow the typical "fork-and-pull" Git workflow.
 
 ## Copyright
 
-Copyright © 2017-2019 [Cloud Posse, LLC](https://cpco.io/copyright)
+Copyright © 2017-2020 [Cloud Posse, LLC](https://cpco.io/copyright)
 
 
 
