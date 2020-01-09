@@ -8,6 +8,16 @@ export APK_BUILD_TEMPLATE ?= APKBUILD.github-binary
 export APKBUILD_DEPENDS += libc6-compat musl
 export PACKAGE_EXE = teleport tctl tsh
 
+ifeq (3.7.,$(findstring 3.7.,$(shell cat /etc/alpine-release 2>/dev/null)))
+export AUTO_UPDATE_ENABLED = false
+eifeq (3.8.,$(findstring 3.8.,$(shell cat /etc/alpine-release 2>/dev/null)))
+export AUTO_UPDATE_ENABLED = false
+eifeq (3.9.,$(findstring 3.9.,$(shell cat /etc/alpine-release 2>/dev/null)))
+export AUTO_UPDATE_ENABLED = false
+else
+export AUTO_UPDATE_ENABLED = true
+endif
+
 install:
 	$(CURL) -o - $(DOWNLOAD_URL) | tar --wildcards -zxO $(addprefix teleport/,$(PACKAGE_EXE)) > $(INSTALL_PATH)/$(PACKAGE_NAME) && chmod +x $(INSTALL_PATH)/$(PACKAGE_NAME)
 
