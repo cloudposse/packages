@@ -31,6 +31,7 @@ export APK_PACKAGE ?= $(APK_PACKAGES_PATH)/vendor/x86_64/$(APK_PACKAGE_NAME)-$(P
 export SRCDEST := $(APK_TMP_DIR)/cache
 
 apk/prepare::
+	@apk version --check --quiet $(PACKAGE_VERSION) || (echo "$(PACKAGE_VERSION) is not a valid version for alpine linux"; exit 1)
 	mkdir -p $(APK_PACKAGES_PATH) $(APK_TMP_DIR) $(SRCDEST)
 	chmod 777 $(APK_PACKAGES_PATH) $(APK_TMP_DIR)
 	cp -a $(APK_TEMPLATE_PATH)/$(APK_BUILD_TEMPLATE) $(APK_TMP_DIR)/APKBUILD
@@ -65,8 +66,14 @@ apk/reset:
 	rm -rf $(APK_PACKAGE)
 
 .PHONY : apk
+ifeq ($(PACKAGED_ENABLED),true)
 apk: $(PACKAGER_PRIVKEY) $(PACKAGER_PUBKEY_INSTALLED) $(APK_PACKAGE)
 	@exit 0
+else
+apk:
+	@echo $(PACKAGE_NAME) is disabled for alpine $(shell cat /etc/alpine-release 2>/dev/null).
+	@exit 0
+endif
 
 # Rebuild the `.apk` when it's older than the Makefile, VERSION, or RELEASE files
 $(APK_PACKAGE): Makefile VERSION RELEASE $(wildcard *.post-install) $(wildcard *.post-deinstall)
