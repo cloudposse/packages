@@ -255,7 +255,7 @@ atlantis                  0.10.2     Terraform For Teams
 awless                    0.1.11     A Mighty CLI for AWS
 aws-iam-authenticator     0.4.0      A tool to use AWS IAM credentials to authenticate to a Kubernetes cluster
 aws-okta                  0.19.4     aws-okta allows users to authenticate with AWS using Okta credentials
-aws-vault                 5.0.1      A vault for securely storing and accessing AWS credentials in development environments
+aws-vault                 5.1.0      A vault for securely storing and accessing AWS credentials in development environments
 cfssl                     1.4.1      Cloudflare's PKI and TLS toolkit
 chamber                   2.7.5      CLI for managing secrets
 cli53                     0.8.16     Command line tool for Amazon Route 53
@@ -288,7 +288,7 @@ json2hcl                  0.0.6      Convert JSON to HCL, and vice versa
 jx                        2.0.1107   Jenkins-X
 k3d                       1.4.0      Little helper to run Rancher Lab's k3s in Docker
 k6                        0.26.0     A modern load testing tool, using Go and JavaScript - https://k6.io
-k9s                       0.11.2     Kubernetes CLI To Manage Your Clusters In Style
+k9s                       0.11.3     Kubernetes CLI To Manage Your Clusters In Style
 katafygio                 0.8.1      K8s continuous backup to git
 kfctl                     0.7.1      Machine Learning Toolkit for Kubernetes
 kind                      0.6.1      A tool for running local Kubernetes clusters using Docker
@@ -307,7 +307,7 @@ misspell                  0.3.4      Correct commonly misspelled English words i
 packer                    1.5.0      Packer is a tool for creating identical machine images for multiple platforms from a single source configuration.
 pandoc                    2.9.1.1    Universal markup converter
 pgmetrics                 1.8.0      Postgres metrics
-popeye                    0.6.0      A Kubernetes cluster resource sanitizer
+popeye                    0.6.1      A Kubernetes cluster resource sanitizer
 promtool                  2.15.2     Prometheus CLI tool
 rakkess                   0.4.2      Review Access - kubectl plugin to show an access matrix for all available resources
 rancher                   2.3.2      Rancher CLI
@@ -322,7 +322,7 @@ sops                      3.5.0      Secrets management stinks, use some sops!
 stern                     1.11.0     ⎈ Multi pod and container log tailing for Kubernetes
 sudosh                    0.2.0      Shell wrapper to run a login shell with `sudo` as the current user for the purpose of audit logging
 teleport                  4.2.1      Privileged access management for elastic infrastructure.
-terraform                 0.12.18    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
+terraform                 0.12.19    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-0.11            0.11.14    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-0.12            0.12.10    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-docs            0.7.0      Generate docs from terraform modules
