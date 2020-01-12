@@ -67,7 +67,7 @@ retry                     3.3.0      ♻️ Functional mechanism based on channe
 scenery                   0.1.5      A Terraform plan output prettifier
 sentry-cli                1.49.0     A command line utility to work with Sentry.
 shellcheck                0.7.0      ShellCheck, a static analysis tool for shell scripts
-shfmt                     3.0.0      A shell parser, formatter and interpreter (POSIX/Bash/mksh)
+shfmt                     3.0.1      A shell parser, formatter and interpreter (POSIX/Bash/mksh)
 slack-notifier            0.2.0      Command line utility to send messages with attachments to Slack channels via Incoming Webhooks
 sops                      3.5.0      Secrets management stinks, use some sops!
 stern                     1.11.0     ⎈ Multi pod and container log tailing for Kubernetes
