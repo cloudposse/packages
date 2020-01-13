@@ -6,15 +6,25 @@ eval `resize`
 HEIGHT=15
 WIDTH=80
 BINPATH=${BINPATH:-"tmp/build.helpers"}
-IGNORED_EXT='(.tar.gz.asc|.txt|.tar.xz)'
+IGNORED_EXT='(.tar.gz.asc|.txt|.tar.xz|.asc|.MD|.hsm|+ent.hsm)'
 OS="${OS:-"linux"}"
 ARCH="${ARCH:-"amd64"}"
+VENDORPATH=${VENDORPATH:-"../vendor"}
 
-function get_latest_download_urls_by_platform {
+# Scrapes the Hashicorp release endpoint for valid versions
+# Usage: get_hashicorp_version <app>
+function get_hashicorp_version () {
+	local vendorapp="${1?"Usage: $0 app"}"
+	echo "Available versions for ${vendorapp}"
+	
+	# Scrape HTML from release page for binary versions, which are 
+	# given as ${binary}_<version>. We just use sed to extract.
+	curl -s "https://releases.hashicorp.com/${vendorapp}/" | grep -v -E "${IGNORED_EXT}" | sed -n "s|.*${vendorapp}_\([0-9\.]*\).*|\1|p" | sed -n 2p
+}
+
+function get_github_urls_by_platform {
     # Description: Scrape github releases for most recent release of a project based on:
     # vendor, repo, os, and arch
-    # Author: Zachary Loeber
-
     local vendorapp="${1?"Usage: $0 vendor/app"}"
     OS="${OS:-"linux"}"
     ARCH="${ARCH:-"amd64"}"
@@ -23,7 +33,7 @@ function get_latest_download_urls_by_platform {
         '.assets[] | select(.browser_download_url | contains($OS)) | select(.browser_download_url | contains($ARCH)) | .browser_download_url'
 }
 
-function get_latest_version_by_tag {
+function get_github_version_by_tag {
     # Attempt to get the latest version of a release by release tag
     local vendorapp="${1?"Usage: $0 vendor/app"}"
     curl -s "https://api.github.com/repos/${vendorapp}/releases/latest" | \
@@ -31,18 +41,26 @@ function get_latest_version_by_tag {
         grep -o '[[:digit:]].[[:digit:]].[[:digit:]]'
 }
 
-APP=$(whiptail --inputbox "Application Name" 8 78 "newapp" --title "Application Info" 3>&1 1>&2 2>&3)
+APP=$(whiptail --inputbox "Application Name" 8 78 --title "Application Info" 3>&1 1>&2 2>&3)
 if [ $? -ne 0 ]; then
     exit 0
 fi
 
-if [ -d "vendor/${APP}" ]; then
-    echo  "vendor/${APP} already exists!"
+if [ -d "${VENDORPATH}/${APP}" ]; then
+    echo  "${VENDORPATH}/${APP} already exists!"
     exit 1
+else
+    echo  "${VENDORPATH}/${APP} is new, continuing.."
+fi
+
+DESC=$(whiptail --inputbox "Appcation Description" 8 78 "A short description" --title "Application Info" 3>&1 1>&2 2>&3)
+if [ $? -ne 0 ]; then
+    exit 0
 fi
 
 OPTIONS=(bin "github binary"
-         tarball "github tarball")
+         tarball "github tarball"
+         hashicorp "Hashicorp app")
 
 packageType=$(whiptail \
     --clear \
@@ -55,61 +73,64 @@ if [ $? -ne 0 ]; then
     exit 0
 fi
 
-VENDOR=$(whiptail --inputbox "Github Vendor" 8 78 "vendor" --title "Application Info" 3>&1 1>&2 2>&3)
-if [ $? -ne 0 ]; then
-    exit 0
-fi
+if [ $packageType -ne "hashicorp" ]; then
+    VENDOR=$(whiptail --inputbox "Github Vendor" 8 78 "vendor" --title "Application Info" 3>&1 1>&2 2>&3)
+    if [ $? -ne 0 ]; then
+        exit 0
+    fi
 
-REPO=$(whiptail --inputbox "Github Repo" 8 78 "repo" --title "Application Info" 3>&1 1>&2 2>&3)
-if [ $? -ne 0 ]; then
-    exit 0
-fi
+    REPO=$(whiptail --inputbox "Github Repo" 8 78 "repo" --title "Application Info" 3>&1 1>&2 2>&3)
+    if [ $? -ne 0 ]; then
+        exit 0
+    fi
 
-DESC=$(whiptail --inputbox "Appcation Description" 8 78 "A short description" --title "Application Info" 3>&1 1>&2 2>&3)
-if [ $? -ne 0 ]; then
-    exit 0
-fi
+    latesturl=`get_github_urls_by_platform "${VENDOR}/${REPO}" | grep -v -E "${IGNORED_EXT}"`
+    latestversion=`get_github_version_by_tag "${VENDOR}/${REPO}" | grep -o -E '[0-9]+.[0-9]+.[0-9]+'`
+    if [ -z $latestversion ]; then
+        latestversion=`echo "${latesturl}" | grep -o -E '[0-9]+.[0-9]+.[0-9]+' | head -1`
+    fi
 
-latesturl=`get_latest_download_urls_by_platform "${VENDOR}/${REPO}" | grep -v -E "${IGNORED_EXT}"`
-latestversion=`get_latest_version_by_tag "${VENDOR}/${REPO}" | grep -o -E '[0-9]+.[0-9]+.[0-9]+'`
-if [ -z $latestversion ]; then
-    latestversion=`echo "${latesturl}" | grep -o -E '[0-9]+.[0-9]+.[0-9]+' | head -1`
-fi
+    VERSION=$(whiptail --inputbox "Latest Github Release Version" 8 78 "${latestversion}" --title "Application Info" 3>&1 1>&2 2>&3)
+    if [ $? -ne 0 ]; then
+        exit 0
+    fi
 
-VERSION=$(whiptail --inputbox "Latest Github Release Version" 8 78 "${latestversion}" --title "Application Info" 3>&1 1>&2 2>&3)
-if [ $? -ne 0 ]; then
-    exit 0
-fi
+    # Construct a generic url to use based on selections
+    PACKAGE_REPO_URL="https://github.com/${VENDOR}/${REPO}"
+    latesturl=${latesturl/${PACKAGE_REPO_URL}/\$(PACKAGE_REPO_URL)}
+    latesturl=${latesturl//${VERSION}/\$(PACKAGE_VERSION)}
+    latesturl=${latesturl//${OS}/\$(OS)}
+    latesturl=${latesturl//${ARCH}/\$(ARCH)}
 
-# Construct a generic url to use based on selections
-PACKAGE_REPO_URL="https://github.com/${VENDOR}/${REPO}"
-latesturl=${latesturl/${PACKAGE_REPO_URL}/\$(PACKAGE_REPO_URL)}
-latesturl=${latesturl//${VERSION}/\$(PACKAGE_VERSION)}
-latesturl=${latesturl//${OS}/\$(OS)}
-latesturl=${latesturl//${ARCH}/\$(ARCH)}
+    URL=$(whiptail --inputbox "Appcation URL" 8 78 "${latesturl}" --title "Application Info" 3>&1 1>&2 2>&3)
+    if [ $? -ne 0 ]; then
+        exit 0
+    fi
 
-URL=$(whiptail --inputbox "Appcation URL" 8 78 "${latesturl}" --title "Application Info" 3>&1 1>&2 2>&3)
-if [ $? -ne 0 ]; then
-    exit 0
+else
+    latestversion=`get_hashicorp_version "${APP}" | grep -o -E '[0-9]+.[0-9]+.[0-9]+'`
+    VERSION=$(whiptail --inputbox "Latest ${APP} Release Version" 8 78 "${latestversion}" --title "Application Info" 3>&1 1>&2 2>&3)
+    if [ $? -ne 0 ]; then
+        exit 0
+    fi
 fi
 
 export VENDOR APP DESC VERSION URL REPO
-
-echo "Template path for new application: ./vendor/${APP}"
-mkdir -p vendor/${APP}
+echo "Template path for new application: ./${VENDORPATH}/${APP}"
+mkdir -p ${VENDORPATH}/${APP}
 
 ${BINPATH}/gomplate \
-  --input-dir helpers/templates/${packageType} \
-  --output-dir vendor/${APP} || rm -rf vendor/${APP}
+--input-dir $(pwd)/templates/${packageType} \
+--output-dir ${VENDORPATH}/${APP} || rm -rf ${VENDORPATH}/${APP}
 
-if [ -d vendor/${APP} ]; then
+if [ -d ${VENDORPATH}/${APP} ]; then
   echo "** Overview **"
   echo "VENDOR: ${VENDOR}"
   echo "REPO: ${REPO}"
   echo "APP: ${APP}"
   echo "VERSION: ${VERSION}"
   echo "URL: ${URL}"
-  echo "Path: vendor/${APP}"
+  echo "Path: ${VENDORPATH}/${APP}"
   echo "Type: ${packageType}"
   echo ""
   echo "NOTE: Review and update all files within the new package path."
@@ -121,7 +142,7 @@ if [ -d vendor/${APP} ]; then
   echo ""
   echo "Test your package apk build with the following:"
   echo "  make docker/build/apk/shell"
-  echo "  make -c vendor/${APP} apk"
+  echo "  make -c ${VENDORPATH}/${APP} apk"
   echo "  rm -rf /tmp/build.*"
   echo ""
   echo "Update documentation and package listing with the following:"

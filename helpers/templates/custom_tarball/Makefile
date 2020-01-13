@@ -1,4 +1,6 @@
-## Package template for non-github tarball
+## {{ .Env.APP }}
+include ../../tasks/Makefile.package
+include ../../tasks/Makefile.apk
 
 ## Package details 
 export VENDOR = {{ .Env.VENDOR }}
@@ -8,13 +10,10 @@ export DOWNLOAD_URL = {{ .Env.URL }}
 
 ## APK build specific requirements
 export APK_BUILD_TEMPLATE = APKBUILD.github-binary
+
 ## Uncomment only if you need additional libraries
 #export APKBUILD_DEPENDS += libc6-compat musl
 
-include ../../tasks/Makefile.package
-include ../../tasks/Makefile.apk
-
-## Package specific install code
 install:
 	mkdir -p $(TMP)/{{ .Env.APP }}
 	$(CURL) -o - $(DOWNLOAD_URL) | tar -C $(TMP)/{{ .Env.APP }} -zx $(OS)-$(ARCH)/{{ .Env.APP }}
@@ -26,7 +25,7 @@ install:
 test:
 	($(PACKAGE_EXE) || true) 2>&1 | grep version
 
-# Custom post-package processing (Note the double colon to append to current inherited package/prepare task)
-## This may be required for apk building
+## Custom post-package processing (Note the double colon to append to current inherited package/prepare task)
+# This may be required for apk building
 #package/prepare::
 #	mv src/{{ .Env.APP }}-$(OS).$(ARCH)/{{ .Env.APP }} src

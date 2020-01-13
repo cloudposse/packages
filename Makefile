@@ -64,8 +64,8 @@ docker/build/apk/all:
 
 ## Build alpine packages for testing
 docker/build/apk/shell:
-	rm -rf tmp/build.* || true
-	[ -n "$(ls tmp/build.*)" ] && sudo rm -rf tmp/build.* || true
+	rm -rf tmp/*
+	[ -n "$(ls tmp/)" ] && sudo rm -rf tmp/* || true
 	docker build -t cloudposse/apkbuild:$(ALPINE_VERSION) -f apk/Dockerfile-$(ALPINE_VERSION) .
 	docker run \
 		--name apkbuild \
@@ -87,9 +87,3 @@ update/%:
 	rm -f vendor/$(subst update/,,$@)/VERSION
 	make -C vendor/$(subst update/,,$@) VERSION
 	make readme
-
-new/package:
-	rm -rf $$(pwd)/tmp/build.helpers
-	mkdir -p $$(pwd)/tmp/build.helpers
-	make -C install INSTALL_PATH=$$(pwd)/tmp/build.helpers gomplate
-	BINPATH=$$(pwd)/tmp/build.helpers $$(pwd)/helpers/new-package.sh
