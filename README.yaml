@@ -75,9 +75,9 @@ usage: |-
   ```
   # Install the cloudposse alpine repository
   ADD https://apk.cloudposse.com/ops@cloudposse.com.rsa.pub /etc/apk/keys/
-  RUN echo "@cloudposse https://apk.cloudposse.com/3.10/vendor" >> /etc/apk/repositories
+  RUN echo "@cloudposse https://apk.cloudposse.com/3.11/vendor" >> /etc/apk/repositories
   ```
-  __NOTE__: we support alpine `3.7`, `3.8`, `3.9`, and `3.10` packages at this time
+  __NOTE__: we support alpine `3.7`, `3.8`, `3.9`, `3.10`, and `3.11` packages at this time
 
   ### Installing Alpine Packages
   
@@ -181,11 +181,24 @@ examples: |-
   ### Contributing Additional Packages
   In addition to following the Contributing section, the following steps can be used to add new packages for review (via a PR).
   1. Clone an existing, similar, package within the vendors directory. Name the new folder with the same name as the binary package being installed.
-  2. At a minimum, update the `VERSION`, `DESCRIPTION`, and `Makefile` to reflect the binary being installed. Ensure that a test section exists and works.
+  2. At a minimum, update the `VERSION`, `DESCRIPTION`, and `Makefile` to reflect the binary being installed. Ensure that a test task exist in the package Makefile.
   3. Test the install and ensure that it downloads and runs as expected (`make -C install <your_package> INSTALL_PATH=/tmp`)
-  4. Test the build (`make all`)
-  5. Update the `README.md` (`make readme/build`)
+  4. Test the apk build (see below)
+  5. Update the `README.md` (`make init readme/deps readme`)
 
+  ### Testing apk builds
+  
+  To validate that a new package will build into an apk you can use the following steps;
+
+  ```bash
+  make docker/build/apk/shell
+  make -C vendor/<appname> apk
+  # Some temp build files in the volume mount set user/group to nobody/nobody for apk building.
+  # It is easier to remove them while within the docker container.
+  rm -rf ./tmp/build.*
+  exit
+  ```
+  
 # Contributors to this project
 contributors:
   - name: "Erik Osterman"
