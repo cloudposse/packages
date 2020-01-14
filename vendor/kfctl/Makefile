@@ -7,7 +7,7 @@ include ../../tasks/Makefile.package
 include ../../tasks/Makefile.apk
 
 # Package details
-export DOWNLOAD_URL ?= https://github.com/$(VENDOR)/$(PACKAGE_REPO_NAME)/releases/download/v$(PACKAGE_VERSION)/$(PACKAGE_NAME)_v$(PACKAGE_VERSION)_$(OS).tar.gz
+export DOWNLOAD_URL := $(shell env PATH=$(PATH) github-repo-metadata $(VENDOR) $(PACKAGE_REPO_NAME) 'releases/tags/v$(PACKAGE_VERSION)' '.assets | .[] | .browser_download_url | select(.|contains("$(OS)"))')
 
 install:
 	$(call download_tarball)
