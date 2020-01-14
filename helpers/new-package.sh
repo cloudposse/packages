@@ -7,6 +7,7 @@ HEIGHT=15
 WIDTH=80
 BINPATH=${BINPATH:-"tmp/build.helpers"}
 IGNORED_EXT='(.tar.gz.asc|.txt|.tar.xz|.asc|.MD|.hsm|+ent.hsm)'
+IGNORED_APPS='(terraform-provider|driver|plugin|vagrant|consul-|docker|helper|atlas-)'
 OS="${OS:-"linux"}"
 ARCH="${ARCH:-"amd64"}"
 VENDORPATH=${VENDORPATH:-"../vendor"}
@@ -15,11 +16,17 @@ VENDORPATH=${VENDORPATH:-"../vendor"}
 # Usage: get_hashicorp_version <app>
 function get_hashicorp_version () {
 	local vendorapp="${1?"Usage: $0 app"}"
-	echo "Available versions for ${vendorapp}"
-	
 	# Scrape HTML from release page for binary versions, which are 
 	# given as ${binary}_<version>. We just use sed to extract.
 	curl -s "https://releases.hashicorp.com/${vendorapp}/" | grep -v -E "${IGNORED_EXT}" | sed -n "s|.*${vendorapp}_\([0-9\.]*\).*|\1|p" | sed -n 2p
+}
+
+# Scrapes the Hashicorp release endpoint for valid apps
+# Usage: get_hashicorp_apps <app>
+function get_hashicorp_apps () {
+	# Scrape HTML from release page for binary app names
+    # There MUST be a better way to do this one... :)
+    curl -s "https://releases.hashicorp.com/" | grep -o '<a .*href=\"/\(.*\)/">' | cut -d/ -f2 | grep -v -E "${IGNORED_APPS}"
 }
 
 function get_github_urls_by_platform {
@@ -41,23 +48,6 @@ function get_github_version_by_tag {
         grep -o '[[:digit:]].[[:digit:]].[[:digit:]]'
 }
 
-APP=$(whiptail --inputbox "Application Name" 8 78 --title "Application Info" 3>&1 1>&2 2>&3)
-if [ $? -ne 0 ]; then
-    exit 0
-fi
-
-if [ -d "${VENDORPATH}/${APP}" ]; then
-    echo  "${VENDORPATH}/${APP} already exists!"
-    exit 1
-else
-    echo  "${VENDORPATH}/${APP} is new, continuing.."
-fi
-
-DESC=$(whiptail --inputbox "Appcation Description" 8 78 "A short description" --title "Application Info" 3>&1 1>&2 2>&3)
-if [ $? -ne 0 ]; then
-    exit 0
-fi
-
 OPTIONS=(bin "github binary"
          tarball "github tarball"
          hashicorp "Hashicorp app")
@@ -74,6 +64,20 @@ if [ $? -ne 0 ]; then
 fi
 
 if [ $packageType -ne "hashicorp" ]; then
+    APP=$(whiptail --inputbox "Application Name" 8 78 --title "Application Info" 3>&1 1>&2 2>&3)
+    if [ $? -ne 0 ]; then
+        exit 0
+    fi
+    DESC=$(whiptail --inputbox "Appcation Description" 8 78 "A short description" --title "Application Info" 3>&1 1>&2 2>&3)
+    if [ $? -ne 0 ]; then
+        exit 0
+    fi
+    if [ -d "${VENDORPATH}/${APP}" ]; then
+        echo  "${VENDORPATH}/${APP} already exists!"
+        exit 1
+    else
+        echo  "${VENDORPATH}/${APP} is new, continuing.."
+    fi
     VENDOR=$(whiptail --inputbox "Github Vendor" 8 78 "vendor" --title "Application Info" 3>&1 1>&2 2>&3)
     if [ $? -ne 0 ]; then
         exit 0
@@ -108,11 +112,29 @@ if [ $packageType -ne "hashicorp" ]; then
     fi
 
 else
+    applist=()
+    hashiapps=(`get_hashicorp_apps`)
+    cnt=${#hashiapps[@]}
+    for ((i=0;i<cnt;i++)); do
+        applist+=("${hashiapps[i]}")
+        applist+=("")
+    done
+    APP=$(whiptail --title "Hashicorp Apps" --menu "Choose App" 16 78 10 "${applist[@]}" 3>&1 1>&2 2>&3)
+    if [ $? -ne 0 ]; then
+        exit 0
+    fi
+    if [ -d "${VENDORPATH}/${APP}" ]; then
+        echo  "${VENDORPATH}/${APP} already exists!"
+        exit 1
+    else
+        echo  "${VENDORPATH}/${APP} is new, continuing.."
+    fi
     latestversion=`get_hashicorp_version "${APP}" | grep -o -E '[0-9]+.[0-9]+.[0-9]+'`
     VERSION=$(whiptail --inputbox "Latest ${APP} Release Version" 8 78 "${latestversion}" --title "Application Info" 3>&1 1>&2 2>&3)
     if [ $? -ne 0 ]; then
         exit 0
     fi
+    DESC="Hashicorp ${APP}"
 fi
 
 export VENDOR APP DESC VERSION URL REPO

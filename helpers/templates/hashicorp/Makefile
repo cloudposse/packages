@@ -14,4 +14,4 @@ install:
 	chmod +x $(INSTALL_PATH)/$(PACKAGE_NAME)
 
 test:
-	$(PACKAGE_EXE) --version
+	$(PACKAGE_EXE) version
