@@ -31,7 +31,7 @@ gomplate                  3.6.0      A flexible commandline tool for template re
 goofys                    0.23.1     a high-performance, POSIX-ish Amazon S3 file system written in Go
 gosu                      1.11       Simple Go-based setuid+setgid+setgroups+exec
 gotop                     3.0.0      A terminal based graphical activity monitor inspired by gtop and vtop
-helm                      3.0.2      The Kubernetes Package Manager
+helm                      2.11.0     The Kubernetes Package Manager
 helmfile                  0.98.2     Deploy Kubernetes Helm Charts
 htmltest                  0.11.0     :white_check_mark: Test generated HTML for problems
 hugo                      0.62.2     The world’s fastest framework for building websites.
@@ -42,7 +42,7 @@ k6                        0.26.0     A modern load testing tool, using Go and Ja
 k9s                       0.12.0     Kubernetes CLI To Manage Your Clusters In Style
 katafygio                 0.8.1      K8s continuous backup to git
 kfctl                     0.7.1      Machine Learning Toolkit for Kubernetes
-kind                      0.6.1      A tool for running local Kubernetes clusters using Docker
+kind                      0.5.1      A tool for running local Kubernetes clusters using Docker
 kops                      1.15.0     Kubernetes Operations (kops) - Production Grade K8s Installation, Upgrades, and Management
 kops-1.12                 1.12.3     Kubernetes Operations (kops) - Production Grade K8s Installation, Upgrades, and Management
 krew                      0.3.3      Kubectl plugin manager
@@ -55,6 +55,7 @@ kubens                    0.7.1      Switch faster between clusters and namespac
 lazydocker                0.7.6      The lazier way to manage everything docker
 lectl                     0.17       Script to check issued certificates by Let's Encrypt on CTL (Certificate Transparency Log) using https://crt.sh
 misspell                  0.3.4      Correct commonly misspelled English words in source files
+pack                      0.6.0      Create cloud native Buildpacks
 packer                    1.5.0      Packer is a tool for creating identical machine images for multiple platforms from a single source configuration.
 pandoc                    2.9.1.1    Universal markup converter
 pgmetrics                 1.8.0      Postgres metrics
