@@ -285,7 +285,7 @@ helmfile                  0.98.2     Deploy Kubernetes Helm Charts
 htmltest                  0.11.0     :white_check_mark: Test generated HTML for problems
 hugo                      0.62.2     The world’s fastest framework for building websites.
 json2hcl                  0.0.6      Convert JSON to HCL, and vice versa
-jx                        2.0.1123   Jenkins-X
+jx                        2.0.1132   Jenkins-X
 k3d                       1.4.0      Little helper to run Rancher Lab's k3s in Docker
 k6                        0.26.0     A modern load testing tool, using Go and JavaScript - https://k6.io
 k9s                       0.12.0     Kubernetes CLI To Manage Your Clusters In Style
