@@ -16,7 +16,7 @@ codefresh                 0.41.11    Codefresh CLI
 ctop                      0.7.3      Top-like interface for container metrics
 direnv                    2.20.0     Unclutter your .profile
 doctl                     1.37.0     A command line tool for DigitalOcean services
-duffle                    0.3.5b1    CNAB installer
+duffle                               CNAB installer
 emailcli                  1.0.3      Command line email sending client written in Go.
 fargate                   0.3.2      CLI for AWS Fargate
 fetch                     0.3.7      fetch makes it easy to download files, folders, and release assets from a specific public git commit, branch, or tag
@@ -32,6 +32,8 @@ goofys                    0.23.1     a high-performance, POSIX-ish Amazon S3 fil
 gosu                      1.11       Simple Go-based setuid+setgid+setgroups+exec
 gotop                     3.0.0      A terminal based graphical activity monitor inspired by gtop and vtop
 helm                      3.0.2      The Kubernetes Package Manager
+helm2                     2.16.1     The Kubernetes Package Manager
+helm3                     3.0.2      The Kubernetes Package Manager
 helmfile                  0.98.2     Deploy Kubernetes Helm Charts
 htmltest                  0.11.0     :white_check_mark: Test generated HTML for problems
 hugo                      0.62.2     The world’s fastest framework for building websites.
@@ -48,8 +50,9 @@ kops-1.12                 1.12.3     Kubernetes Operations (kops) - Production G
 krew                      0.3.3      Kubectl plugin manager
 kubecron                  1.0.2      Utilities to manage kubernetes cronjobs. Run a CronJob manually for test purposes. Suspend/unsuspend a CronJob
 kubectl                   1.16.4     Production-Grade Container Scheduling and Management
-kubectl-1.13              1.13.11    Production-Grade Container Scheduling and Management
-kubectl-1.14              1.14.7     Production-Grade Container Scheduling and Management
+kubectl-1.13              1.13.12    Production-Grade Container Scheduling and Management
+kubectl-1.14              1.14.10    Production-Grade Container Scheduling and Management
+kubectl-1.14              1.15.8     Production-Grade Container Scheduling and Management
 kubectx                   0.7.1      Switch faster between clusters and namespaces in kubectl
 kubens                    0.7.1      Switch faster between clusters and namespaces in kubectl
 lazydocker                0.7.6      The lazier way to manage everything docker
