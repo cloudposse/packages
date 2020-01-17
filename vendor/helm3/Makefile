@@ -1,9 +1,14 @@
+export MASTER_PACKAGE_NAME = helm
+export MAJOR_VERSION = 3
+export PACKAGE_NAME = $(MASTER_PACKAGE_NAME)$(MAJOR_VERSION)
+export PACKAGE_REPO_NAME = helm
+export DOWNLOAD_URL ?= https://get.helm.sh/helm-v$(PACKAGE_VERSION)-$(OS)-$(ARCH).tar.gz
+
 include ../../tasks/Makefile.package
 include ../../tasks/Makefile.apk
 
 # Package details
 export VENDOR ?= helm
-export DOWNLOAD_URL ?= https://get.helm.sh/helm-v$(PACKAGE_VERSION)-$(OS)-$(ARCH).tar.gz
 export APK_BUILD_TEMPLATE ?= APKBUILD.github-binary
 export AUTO_UPDATE_ENABLED = false
 

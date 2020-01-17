@@ -1,5 +1,5 @@
 export MASTER_PACKAGE_NAME = kubectl
-export MAJOR_VERSION = 1.14
+export MAJOR_VERSION = 1.15
 export PACKAGE_NAME = $(MASTER_PACKAGE_NAME)-$(MAJOR_VERSION)
 export PACKAGE_REPO_NAME = kubernetes
 
