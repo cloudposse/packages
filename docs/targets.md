@@ -52,7 +52,7 @@ kubecron                  1.0.2      Utilities to manage kubernetes cronjobs. Ru
 kubectl                   1.16.4     Production-Grade Container Scheduling and Management
 kubectl-1.13              1.13.12    Production-Grade Container Scheduling and Management
 kubectl-1.14              1.14.10    Production-Grade Container Scheduling and Management
-kubectl-1.14              1.15.8     Production-Grade Container Scheduling and Management
+kubectl-1.15              1.15.8     Production-Grade Container Scheduling and Management
 kubectx                   0.7.1      Switch faster between clusters and namespaces in kubectl
 kubens                    0.7.1      Switch faster between clusters and namespaces in kubectl
 lazydocker                0.7.6      The lazier way to manage everything docker
