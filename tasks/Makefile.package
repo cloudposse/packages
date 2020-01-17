@@ -10,6 +10,7 @@ export SHELL := /bin/bash
 export TMP ?= /tmp
 
 # Package details
+export PACKAGE_ENABLED ?= true
 export PACKAGE_NAME ?= $(notdir $(CURDIR))
 export PACKAGE_REPO_NAME ?= $(PACKAGE_NAME)
 export PACKAGE_EXE ?= $(PACKAGE_NAME)
