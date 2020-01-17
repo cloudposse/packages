@@ -1,0 +1,41 @@
+name: Rebuild README
+on:
+  repository_dispatch:
+    types: [rebuild-readme-command]
+
+jobs:
+  rebuild_readme:
+    runs-on: ubuntu-latest
+    steps:
+      # Checkout the pull request branch
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.GITHUB_BOT_TOKEN }}
+          repository: ${{ github.event.client_payload.pull_request.head.repo.full_name }}
+          ref: ${{ github.event.client_payload.pull_request.head.ref }}
+
+      # Rebuild README
+      - name: Rebuild README
+        shell: bash
+        run: |
+          make init
+          make readme/deps
+          make readme
+
+      # Commit changes to the PR branch
+      - name: Commit changes to the PR branch
+        run: |
+          git config --global user.name 'actions-bot'
+          git config --global user.email '58130806+actions-bot@users.noreply.github.com'
+          git add -A
+          git commit -m "Update README.md"
+          git push
+
+      # Add reaction to the original comment
+      - name: Add reaction to the original comment
+        uses: cloudposse/actions/github/create-or-update-comment@0.9.0
+        with:
+          token: ${{ secrets.GITHUB_BOT_TOKEN }}
+          repository: ${{ github.event.client_payload.github.payload.repository.full_name }}
+          comment-id: ${{ github.event.client_payload.github.payload.comment.id }}
+          reaction-type: hooray
