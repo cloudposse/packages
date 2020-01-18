@@ -4,7 +4,7 @@ export OS ?= $(shell uname -s | tr '[:upper:]' '[:lower:'])
 export OS_ARCH ?= $(shell uname -m)
 export INSTALL_PATH ?= /usr/local/bin
 export CURL ?= curl --retry 3 --retry-delay 5 --fail -sSL
-export PATH := "$(PATH):../../bin/"
+export PATH := $(PATH):../../bin/
 export SHELL := /bin/bash
 
 export TMP ?= /tmp
