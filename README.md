@@ -285,7 +285,7 @@ helmfile                  0.98.2     Deploy Kubernetes Helm Charts
 htmltest                  0.11.0     :white_check_mark: Test generated HTML for problems
 hugo                      0.62.2     The world’s fastest framework for building websites.
 json2hcl                  0.0.6      Convert JSON to HCL, and vice versa
-jx                        2.0.1133   Jenkins-X
+jx                        2.0.1136   Jenkins-X
 k3d                       1.4.0      Little helper to run Rancher Lab's k3s in Docker
 k6                        0.26.0     A modern load testing tool, using Go and JavaScript - https://k6.io
 k9s                       0.12.0     Kubernetes CLI To Manage Your Clusters In Style
@@ -326,7 +326,7 @@ teleport                  4.1.8      Privileged access management for elastic in
 terraform                 0.12.19    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-0.11            0.11.14    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-0.12            0.12.10    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
-terraform-docs            0.7.0      Generate docs from terraform modules
+terraform-docs            0.8.0      Generate docs from terraform modules
 terragrunt                0.21.11    Terragrunt is a thin wrapper for Terraform that provides extra tools for working with multiple Terraform modules.
 terrahelp                 0.7.4      Terrahelp is as a command line utility that provides useful tricks like masking of terraform output.
 tfenv                     0.4.0      Transform environment variables for use with Terraform (e.g. `HOSTNAME` ⇨ `TF_VAR_hostname`)
