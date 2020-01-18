@@ -1,7 +1,7 @@
 #!/bin/sh
 # This is an Alpine `deinstall` hook that removes the alternative
 MASTER_PACKAGE_NAME=helm
-MAJOR_VERSION=2
+MAJOR_VERSION=3
 PACKAGE_NAME=${MASTER_PACKAGE_NAME}${MAJOR_VERSION}
 INSTALL_DIR=/usr/share/${MASTER_PACKAGE_NAME}/${MAJOR_VERSION}/bin
 update-alternatives --remove ${PACKAGE_NAME} ${INSTALL_DIR}/${PACKAGE_NAME} --quiet

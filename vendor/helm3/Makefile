@@ -25,4 +25,4 @@ test:
 	($(PACKAGE_NAME) version || true) 2>&1 | grep Version
 
 package/prepare::
-	mv src/$(OS)-$(ARCH)/helm src
+	mv src/$(OS)-$(ARCH)/helm src/helm3
