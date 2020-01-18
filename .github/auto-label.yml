@@ -48,6 +48,8 @@ vendor/goofys: vendor/goofys/**
 vendor/gosu: vendor/gosu/**
 vendor/gotop: vendor/gotop/**
 vendor/helm: vendor/helm/**
+vendor/helm2: vendor/helm2/**
+vendor/helm3: vendor/helm3/**
 vendor/helmfile: vendor/helmfile/**
 vendor/htmltest: vendor/htmltest/**
 vendor/hugo: vendor/hugo/**
@@ -65,6 +67,7 @@ vendor/krew: vendor/krew/**
 vendor/kubecron: vendor/kubecron/**
 vendor/kubectl-1.13: vendor/kubectl-1.13/**
 vendor/kubectl-1.14: vendor/kubectl-1.14/**
+vendor/kubectl-1.15: vendor/kubectl-1.15/**
 vendor/kubectl: vendor/kubectl/**
 vendor/kubectx: vendor/kubectx/**
 vendor/kubens: vendor/kubens/**
