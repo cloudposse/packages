@@ -11,6 +11,7 @@ include ../../tasks/Makefile.apk
 export VENDOR ?= helm
 export APK_BUILD_TEMPLATE ?= APKBUILD.github-binary
 export AUTO_UPDATE_ENABLED = false
+export APKBUILD_DEPENDS += dpkg
 export APKBUILD_INSTALL_SCRIPTS = $(PACKAGE_NAME).post-install $(PACKAGE_NAME).post-deinstall
 export INSTALL_DIR = /usr/share/${MASTER_PACKAGE_NAME}/${MAJOR_VERSION}/bin
 
