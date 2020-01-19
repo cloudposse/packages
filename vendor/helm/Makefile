@@ -5,6 +5,7 @@ include ../../tasks/Makefile.apk
 export VENDOR ?= helm
 export DOWNLOAD_URL ?= https://get.helm.sh/helm-v$(PACKAGE_VERSION)-$(OS)-$(ARCH).tar.gz
 export APK_BUILD_TEMPLATE ?= APKBUILD.github-binary
+export APKBUILD_DEPENDS += dpkg
 export APKBUILD_INSTALL_SCRIPTS = $(PACKAGE_NAME).post-install $(PACKAGE_NAME).post-deinstall
 export MAJOR_VERSION = latest
 export INSTALL_DIR = /usr/share/${PACKAGE_NAME}/${MAJOR_VERSION}/bin
