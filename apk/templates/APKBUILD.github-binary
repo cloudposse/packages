@@ -127,7 +127,7 @@ build() {
 # This function is called right after the build stage. 
 # It should check that the packaged thing is actually working
 check() {
-	make -C ${APK_TMP_DIR} --no-print-directory -s test PATH=$PATH:$srcdir HOME=/tmp
+	make -C ${APK_TMP_DIR} --no-print-directory -s test PATH="$PATH:$srcdir" HOME=/tmp
 }
 
 # This is the packaging stage. 
