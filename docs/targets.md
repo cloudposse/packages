@@ -2,7 +2,7 @@
 ```
 amtool                    0.20.0     Tool for interacting with the Alertmanager API
 assume-role               0.3.2      Easily assume AWS roles in your terminal.
-atlantis                  0.10.2     Terraform For Teams
+atlantis                  0.11.0     Terraform For Teams
 awless                    0.1.11     A Mighty CLI for AWS
 aws-iam-authenticator     0.4.0      A tool to use AWS IAM credentials to authenticate to a Kubernetes cluster
 aws-okta                  0.19.4     aws-okta allows users to authenticate with AWS using Okta credentials
@@ -41,7 +41,7 @@ json2hcl                  0.0.6      Convert JSON to HCL, and vice versa
 jx                        2.0.1139   Jenkins-X
 k3d                       1.4.0      Little helper to run Rancher Lab's k3s in Docker
 k6                        0.26.0     A modern load testing tool, using Go and JavaScript - https://k6.io
-k9s                       0.12.0     Kubernetes CLI To Manage Your Clusters In Style
+k9s                       0.13.1     Kubernetes CLI To Manage Your Clusters In Style
 katafygio                 0.8.1      K8s continuous backup to git
 kfctl                     0.7.1      Machine Learning Toolkit for Kubernetes
 kind                      0.7.0      A tool for running local Kubernetes clusters using Docker
@@ -76,7 +76,7 @@ slack-notifier            0.2.0      Command line utility to send messages with 
 sops                      3.5.0      Secrets management stinks, use some sops!
 stern                     1.11.0     ⎈ Multi pod and container log tailing for Kubernetes
 sudosh                    0.2.0      Shell wrapper to run a login shell with `sudo` as the current user for the purpose of audit logging
-teleport                  4.1.8      Privileged access management for elastic infrastructure.
+teleport                  4.2.2      Privileged access management for elastic infrastructure.
 terraform                 0.12.19    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-0.11            0.11.14    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-0.12            0.12.10    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
