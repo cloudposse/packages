@@ -250,11 +250,11 @@ exit
 ## Makefile Targets
 ```
 amtool                    0.20.0     Tool for interacting with the Alertmanager API
-argocd                    1.4.1      Declarative GitOpts for Kubernetes
+argocd                    1.4.2      Declarative GitOpts for Kubernetes
 assume-role               0.3.2      Easily assume AWS roles in your terminal.
 atlantis                  0.11.1     Terraform For Teams
 awless                    0.1.11     A Mighty CLI for AWS
-aws-iam-authenticator     0.4.0      A tool to use AWS IAM credentials to authenticate to a Kubernetes cluster
+aws-iam-authenticator     0.5.0      A tool to use AWS IAM credentials to authenticate to a Kubernetes cluster
 aws-okta                  0.19.4     aws-okta allows users to authenticate with AWS using Okta credentials
 aws-vault                 5.2.0      A vault for securely storing and accessing AWS credentials in development environments
 cfssl                     1.4.1      Cloudflare's PKI and TLS toolkit
@@ -288,7 +288,7 @@ helmfile                  0.98.2     Deploy Kubernetes Helm Charts
 htmltest                  0.11.0     :white_check_mark: Test generated HTML for problems
 hugo                      0.63.1     The world’s fastest framework for building websites.
 json2hcl                  0.0.6      Convert JSON to HCL, and vice versa
-jx                        2.0.1143   Jenkins-X
+jx                        2.0.1150   Jenkins-X
 k3d                       1.5.1      Little helper to run Rancher Lab's k3s in Docker
 k6                        0.26.0     A modern load testing tool, using Go and JavaScript - https://k6.io
 k9s                       0.13.4     Kubernetes CLI To Manage Your Clusters In Style
@@ -306,7 +306,7 @@ kubectl-1.15              1.15.8     Production-Grade Container Scheduling and M
 kubectx                   0.7.1      Switch faster between clusters and namespaces in kubectl
 kubens                    0.7.1      Switch faster between clusters and namespaces in kubectl
 lazydocker                0.7.6      The lazier way to manage everything docker
-lectl                     0.17       Script to check issued certificates by Let's Encrypt on CTL (Certificate Transparency Log) using https://crt.sh
+lectl                     0.18       Script to check issued certificates by Let's Encrypt on CTL (Certificate Transparency Log) using https://crt.sh
 misspell                  0.3.4      Correct commonly misspelled English words in source files
 pack                      0.7.0      Create cloud native Buildpacks
 packer                    1.5.0      Packer is a tool for creating identical machine images for multiple platforms from a single source configuration.
