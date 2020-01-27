@@ -264,7 +264,7 @@ cloudflared               2019.9.0   Argo Tunnel client
 cloudposse-atlantis       0.9.0.3    Terraform For Teams, enhanced by Cloud Posse
 codefresh                 0.41.13    Codefresh CLI
 ctop                      0.7.3      Top-like interface for container metrics
-direnv                    2.21.0     Unclutter your .profile
+direnv                    2.21.1     Unclutter your .profile
 doctl                     1.37.0     A command line tool for DigitalOcean services
 duffle                    0.3.5b1    CNAB installer
 emailcli                  1.0.3      Command line email sending client written in Go.
