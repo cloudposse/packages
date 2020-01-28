@@ -88,5 +88,6 @@ tfenv                     0.4.0      Transform environment variables for use wit
 tfmask                    0.3.0      Terraform utility to mask select output from `terraform plan` and `terraform apply`
 variant                   0.36.4     Variant is a Universal CLI tool that works like a task runner
 venona                    0.29.0     Codefresh runtime-environment agent
+vert                      0.1.0      Simple CLI for comparing two or more versions
 yq                        2.4.1      yq is a portable command-line YAML processor
 ```
