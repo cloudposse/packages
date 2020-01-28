@@ -10,6 +10,7 @@ export SHELL := /bin/bash
 export TMP ?= /tmp
 
 # Package details
+export PACKAGE_ENABLED ?= true
 export PACKAGE_NAME ?= $(notdir $(CURDIR))
 export PACKAGE_REPO_NAME ?= $(PACKAGE_NAME)
 export PACKAGE_EXE ?= $(PACKAGE_NAME)
@@ -151,7 +152,7 @@ CURRENT_VERSION: API=releases/latest
 CURRENT_VERSION: QUERY=.tag_name
 CURRENT_VERSION:
 	@local_version=$$(cat VERSION || echo 0); \
-	current_version=$$(env PATH=$(PATH) github-repo-metadata $(VENDOR) $(PACKAGE_REPO_NAME) '$(API)' '$(QUERY)' | sed 's/^v//'); \
+	current_version=$$(env PATH='$(PATH)' github-repo-metadata $(VENDOR) $(PACKAGE_REPO_NAME) '$(API)' '$(QUERY)' | sed 's/^v//'); \
 	if [ $$? -ne 0 ]; then \
 		exit 1; \
 	elif [ "$${current_version}" == "null" -o -z "$${current_version}" ]; then \
