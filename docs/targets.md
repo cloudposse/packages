@@ -32,14 +32,14 @@ gomplate                  3.6.0      A flexible commandline tool for template re
 goofys                    0.23.1     a high-performance, POSIX-ish Amazon S3 file system written in Go
 gosu                      1.11       Simple Go-based setuid+setgid+setgroups+exec
 gotop                     3.0.0      A terminal based graphical activity monitor inspired by gtop and vtop
-helm                      3.0.2      The Kubernetes Package Manager
+helm                      3.0.3      The Kubernetes Package Manager
 helm2                     2.16.1     The Kubernetes Package Manager
 helm3                     3.0.2      The Kubernetes Package Manager
 helmfile                  0.98.2     Deploy Kubernetes Helm Charts
 htmltest                  0.12.1     :white_check_mark: Test generated HTML for problems
 hugo                      0.63.2     The world’s fastest framework for building websites.
 json2hcl                  0.0.6      Convert JSON to HCL, and vice versa
-jx                        2.0.1155   Jenkins-X
+jx                        2.0.1162   Jenkins-X
 k3d                       1.5.1      Little helper to run Rancher Lab's k3s in Docker
 k6                        0.26.0     A modern load testing tool, using Go and JavaScript - https://k6.io
 k9s                       0.13.6     Kubernetes CLI To Manage Your Clusters In Style
