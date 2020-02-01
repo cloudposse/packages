@@ -289,7 +289,7 @@ htmltest                  0.12.1     :white_check_mark: Test generated HTML for 
 hugo                      0.63.2     The world’s fastest framework for building websites.
 jq                        1.6        Command-line JSON processor
 json2hcl                  0.0.6      Convert JSON to HCL, and vice versa
-jx                        2.0.1171   Jenkins-X
+jx                        2.0.1173   Jenkins-X
 k3d                       1.5.1      Little helper to run Rancher Lab's k3s in Docker
 k6                        0.26.0     A modern load testing tool, using Go and JavaScript - https://k6.io
 k9s                       0.13.6     Kubernetes CLI To Manage Your Clusters In Style
@@ -307,7 +307,7 @@ kubectl-1.15              1.15.8     Production-Grade Container Scheduling and M
 kubectx                   0.7.1      Switch faster between clusters and namespaces in kubectl
 kubens                    0.7.1      Switch faster between clusters and namespaces in kubectl
 lazydocker                0.7.6      The lazier way to manage everything docker
-lectl                     0.19       Script to check issued certificates by Let's Encrypt on CTL (Certificate Transparency Log) using https://crt.sh
+lectl                     0.20       Script to check issued certificates by Let's Encrypt on CTL (Certificate Transparency Log) using https://crt.sh
 misspell                  0.3.4      Correct commonly misspelled English words in source files
 pack                      0.8.1      Create cloud native Buildpacks
 packer                    1.5.0      Packer is a tool for creating identical machine images for multiple platforms from a single source configuration.
