@@ -70,6 +70,7 @@ rancher                   2.3.2      Rancher CLI
 rbac-lookup               0.5.0      Find Kubernetes roles and cluster roles bound to any user, service account, or group name.
 retry                     3.3.0      ♻️ Functional mechanism based on channels to perform actions repetitively until successful.
 scenery                   0.1.5      A Terraform plan output prettifier
+sentinel                  0.14.2     Hashicorp sentinel
 sentry-cli                1.49.0     A command line utility to work with Sentry.
 shellcheck                0.7.0      ShellCheck, a static analysis tool for shell scripts
 shfmt                     3.0.1      A shell parser, formatter and interpreter (POSIX/Bash/mksh)
