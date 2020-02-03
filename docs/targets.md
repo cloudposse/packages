@@ -35,15 +35,15 @@ gotop                     3.0.0      A terminal based graphical activity monitor
 helm                      3.0.3      The Kubernetes Package Manager
 helm2                     2.16.1     The Kubernetes Package Manager
 helm3                     3.0.2      The Kubernetes Package Manager
-helmfile                  0.98.2     Deploy Kubernetes Helm Charts
+helmfile                  0.98.3     Deploy Kubernetes Helm Charts
 htmltest                  0.12.1     :white_check_mark: Test generated HTML for problems
 hugo                      0.63.2     The world’s fastest framework for building websites.
 jq                        1.6        Command-line JSON processor
 json2hcl                  0.0.6      Convert JSON to HCL, and vice versa
-jx                        2.0.1176   Jenkins-X
+jx                        2.0.1177   Jenkins-X
 k3d                       1.6.0      Little helper to run Rancher Lab's k3s in Docker
 k6                        0.26.0     A modern load testing tool, using Go and JavaScript - https://k6.io
-k9s                       0.13.6     Kubernetes CLI To Manage Your Clusters In Style
+k9s                       0.13.7     Kubernetes CLI To Manage Your Clusters In Style
 katafygio                 0.8.1      K8s continuous backup to git
 kfctl                     0.7.1      Machine Learning Toolkit for Kubernetes
 kind                      0.7.0      A tool for running local Kubernetes clusters using Docker
@@ -57,7 +57,7 @@ kubectl-1.14              1.14.10    Production-Grade Container Scheduling and M
 kubectl-1.15              1.15.8     Production-Grade Container Scheduling and Management
 kubectx                   0.7.1      Switch faster between clusters and namespaces in kubectl
 kubens                    0.7.1      Switch faster between clusters and namespaces in kubectl
-lazydocker                0.7.6      The lazier way to manage everything docker
+lazydocker                0.8        The lazier way to manage everything docker
 lectl                     0.20       Script to check issued certificates by Let's Encrypt on CTL (Certificate Transparency Log) using https://crt.sh
 misspell                  0.3.4      Correct commonly misspelled English words in source files
 pack                      0.8.1      Create cloud native Buildpacks
