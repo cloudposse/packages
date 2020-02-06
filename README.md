@@ -284,12 +284,12 @@ gotop                     3.0.0      A terminal based graphical activity monitor
 helm                      3.0.3      The Kubernetes Package Manager
 helm2                     2.16.1     The Kubernetes Package Manager
 helm3                     3.0.2      The Kubernetes Package Manager
-helmfile                  0.98.3     Deploy Kubernetes Helm Charts
+helmfile                  0.99.0     Deploy Kubernetes Helm Charts
 htmltest                  0.12.1     :white_check_mark: Test generated HTML for problems
 hugo                      0.64.0     The world’s fastest framework for building websites.
 jq                        1.6        Command-line JSON processor
 json2hcl                  0.0.6      Convert JSON to HCL, and vice versa
-jx                        2.0.1180   Jenkins-X
+jx                        2.0.1182   Jenkins-X
 k3d                       1.6.0      Little helper to run Rancher Lab's k3s in Docker
 k6                        0.26.0     A modern load testing tool, using Go and JavaScript - https://k6.io
 k9s                       0.13.7     Kubernetes CLI To Manage Your Clusters In Style
@@ -312,7 +312,7 @@ misspell                  0.3.4      Correct commonly misspelled English words i
 pack                      0.8.1      Create cloud native Buildpacks
 packer                    1.5.0      Packer is a tool for creating identical machine images for multiple platforms from a single source configuration.
 pandoc                    2.9.1.1    Universal markup converter
-pgmetrics                 1.8.0      Postgres metrics
+pgmetrics                 1.8.1      Postgres metrics
 popeye                    0.6.2      A Kubernetes cluster resource sanitizer
 promtool                  2.15.2     Prometheus CLI tool
 rakkess                   0.4.3      Review Access - kubectl plugin to show an access matrix for all available resources
