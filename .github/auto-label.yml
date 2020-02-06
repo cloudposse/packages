@@ -85,6 +85,7 @@ vendor/rakkess: vendor/rakkess/**
 vendor/rancher: vendor/rancher/**
 vendor/rbac-lookup: vendor/rbac-lookup/**
 vendor/retry: vendor/retry/**
+vendor/saml2aws: vendor/saml2aws/**
 vendor/scenery: vendor/scenery/**
 vendor/sentry-cli: vendor/sentry-cli/**
 vendor/shellcheck: vendor/shellcheck/**
