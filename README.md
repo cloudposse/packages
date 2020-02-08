@@ -289,14 +289,14 @@ htmltest                  0.12.1     :white_check_mark: Test generated HTML for 
 hugo                      0.64.0     The world’s fastest framework for building websites.
 jq                        1.6        Command-line JSON processor
 json2hcl                  0.0.6      Convert JSON to HCL, and vice versa
-jx                        2.0.1183   Jenkins-X
+jx                        2.0.1186   Jenkins-X
 k3d                       1.6.0      Little helper to run Rancher Lab's k3s in Docker
 k6                        0.26.0     A modern load testing tool, using Go and JavaScript - https://k6.io
 k9s                       0.13.8     Kubernetes CLI To Manage Your Clusters In Style
 katafygio                 0.8.1      K8s continuous backup to git
 kfctl                     0.7.1      Machine Learning Toolkit for Kubernetes
 kind                      0.7.0      A tool for running local Kubernetes clusters using Docker
-kops                      1.15.1     Kubernetes Operations (kops) - Production Grade K8s Installation, Upgrades, and Management
+kops                      1.15.2     Kubernetes Operations (kops) - Production Grade K8s Installation, Upgrades, and Management
 kops-1.12                 1.12.3     Kubernetes Operations (kops) - Production Grade K8s Installation, Upgrades, and Management
 krew                      0.3.3      Kubectl plugin manager
 kubecron                  1.0.2      Utilities to manage kubernetes cronjobs. Run a CronJob manually for test purposes. Suspend/unsuspend a CronJob
@@ -340,7 +340,7 @@ tfmask                    0.3.0      Terraform utility to mask select output fro
 variant                   0.36.4     Variant is a Universal CLI tool that works like a task runner
 venona                    0.29.1     Codefresh runtime-environment agent
 vert                      0.1.0      Simple CLI for comparing two or more versions
-yq                        3.0.1      yq is a portable command-line YAML processor
+yq                        3.1.0      yq is a portable command-line YAML processor
 ```
 
 
