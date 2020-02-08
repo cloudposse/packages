@@ -14,7 +14,7 @@ cli53                     0.8.16     Command line tool for Amazon Route 53
 cloudflared               2019.9.0   Argo Tunnel client
 cloudposse-atlantis       0.9.0.3    Terraform For Teams, enhanced by Cloud Posse
 codefresh                 0.42.2     Codefresh CLI
-consul                    1.6.3      Hashicorp consul
+consul                    1.7.0      Hashicorp consul
 ctop                      0.7.3      Top-like interface for container metrics
 direnv                    2.21.2     Unclutter your .profile
 doctl                     1.38.0     A command line tool for DigitalOcean services
