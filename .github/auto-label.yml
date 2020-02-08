@@ -54,6 +54,7 @@ vendor/helm3: vendor/helm3/**
 vendor/helmfile: vendor/helmfile/**
 vendor/htmltest: vendor/htmltest/**
 vendor/hugo: vendor/hugo/**
+vendor/jq: vendor/jq/**
 vendor/json2hcl: vendor/json2hcl/**
 vendor/jx: vendor/jx/**
 vendor/k3d: vendor/k3d/**
@@ -85,6 +86,7 @@ vendor/rakkess: vendor/rakkess/**
 vendor/rancher: vendor/rancher/**
 vendor/rbac-lookup: vendor/rbac-lookup/**
 vendor/retry: vendor/retry/**
+vendor/saml2aws: vendor/saml2aws/**
 vendor/scenery: vendor/scenery/**
 vendor/sentry-cli: vendor/sentry-cli/**
 vendor/shellcheck: vendor/shellcheck/**
