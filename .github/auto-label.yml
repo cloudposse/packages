@@ -46,6 +46,7 @@ vendor/github-release: vendor/github-release/**
 vendor/github-status-updater: vendor/github-status-updater/**
 vendor/gitleaks: vendor/gitleaks/**
 vendor/gomplate: vendor/gomplate/**
+vendor/gonsul: vendor/gonsul/**
 vendor/goofys: vendor/goofys/**
 vendor/gosu: vendor/gosu/**
 vendor/gotop: vendor/gotop/**
