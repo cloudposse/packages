@@ -38,7 +38,7 @@ helm2                     2.16.1     The Kubernetes Package Manager
 helm3                     3.0.2      The Kubernetes Package Manager
 helmfile                  0.99.0     Deploy Kubernetes Helm Charts
 htmltest                  0.12.1     :white_check_mark: Test generated HTML for problems
-hugo                      0.64.0     The world’s fastest framework for building websites.
+hugo                      0.64.1     The world’s fastest framework for building websites.
 jq                        jq-1.6     Command-line JSON processor
 json2hcl                  0.0.6      Convert JSON to HCL, and vice versa
 jx                        2.0.1187   Jenkins-X
