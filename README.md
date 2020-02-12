@@ -256,7 +256,7 @@ atlantis                  0.11.1     Terraform For Teams
 awless                    0.1.11     A Mighty CLI for AWS
 aws-iam-authenticator     0.5.0      A tool to use AWS IAM credentials to authenticate to a Kubernetes cluster
 aws-okta                  0.19.4     aws-okta allows users to authenticate with AWS using Okta credentials
-aws-vault                 5.2.0      A vault for securely storing and accessing AWS credentials in development environments
+aws-vault                 5.2.1      A vault for securely storing and accessing AWS credentials in development environments
 cfssl                     1.4.1      Cloudflare's PKI and TLS toolkit
 chamber                   2.7.5      CLI for managing secrets
 cli53                     0.8.16     Command line tool for Amazon Route 53
@@ -290,10 +290,10 @@ htmltest                  0.12.1     :white_check_mark: Test generated HTML for 
 hugo                      0.64.1     The world’s fastest framework for building websites.
 jq                        jq-1.6     Command-line JSON processor
 json2hcl                  0.0.6      Convert JSON to HCL, and vice versa
-jx                        2.0.1187   Jenkins-X
+jx                        2.0.1188   Jenkins-X
 k3d                       1.6.0      Little helper to run Rancher Lab's k3s in Docker
 k6                        0.26.0     A modern load testing tool, using Go and JavaScript - https://k6.io
-k9s                       0.13.8     Kubernetes CLI To Manage Your Clusters In Style
+k9s                       0.14.0     Kubernetes CLI To Manage Your Clusters In Style
 katafygio                 0.8.1      K8s continuous backup to git
 kfctl                     0.7.1      Machine Learning Toolkit for Kubernetes
 kind                      0.7.0      A tool for running local Kubernetes clusters using Docker
@@ -301,7 +301,7 @@ kops                      1.15.2     Kubernetes Operations (kops) - Production G
 kops-1.12                 1.12.3     Kubernetes Operations (kops) - Production Grade K8s Installation, Upgrades, and Management
 krew                      0.3.3      Kubectl plugin manager
 kubecron                  1.0.2      Utilities to manage kubernetes cronjobs. Run a CronJob manually for test purposes. Suspend/unsuspend a CronJob
-kubectl                   1.15.9     Production-Grade Container Scheduling and Management
+kubectl                   1.15.10    Production-Grade Container Scheduling and Management
 kubectl-1.13              1.13.12    Production-Grade Container Scheduling and Management
 kubectl-1.14              1.14.10    Production-Grade Container Scheduling and Management
 kubectl-1.15              1.15.8     Production-Grade Container Scheduling and Management
@@ -322,7 +322,7 @@ rbac-lookup               0.5.0      Find Kubernetes roles and cluster roles bou
 retry                     3.3.0      ♻️ Functional mechanism based on channels to perform actions repetitively until successful.
 saml2aws                  2.22.1     CLI tool which enables you to login and retrieve AWS temporary credentials using a SAML IDP
 scenery                   0.1.5      A Terraform plan output prettifier
-sentry-cli                1.49.0     A command line utility to work with Sentry.
+sentry-cli                1.50.0     A command line utility to work with Sentry.
 shellcheck                0.7.0      ShellCheck, a static analysis tool for shell scripts
 shfmt                     3.0.1      A shell parser, formatter and interpreter (POSIX/Bash/mksh)
 slack-notifier            0.2.0      Command line utility to send messages with attachments to Slack channels via Incoming Webhooks
