@@ -13,7 +13,7 @@ chamber                   2.7.5      CLI for managing secrets
 cli53                     0.8.16     Command line tool for Amazon Route 53
 cloudflared               2019.9.0   Argo Tunnel client
 cloudposse-atlantis       0.9.0.3    Terraform For Teams, enhanced by Cloud Posse
-codefresh                 0.42.2     Codefresh CLI
+codefresh                 0.43.0     Codefresh CLI
 ctop                      0.7.3      Top-like interface for container metrics
 direnv                    2.21.2     Unclutter your .profile
 doctl                     1.38.0     A command line tool for DigitalOcean services
@@ -33,7 +33,7 @@ gonsul                    0.2.1      A stand-alone alternative to git2consul
 goofys                    0.23.1     a high-performance, POSIX-ish Amazon S3 file system written in Go
 gosu                      1.11       Simple Go-based setuid+setgid+setgroups+exec
 gotop                     3.0.0      A terminal based graphical activity monitor inspired by gtop and vtop
-helm                      3.0.3      The Kubernetes Package Manager
+helm                      2.16.3     The Kubernetes Package Manager
 helm2                     2.16.1     The Kubernetes Package Manager
 helm3                     3.0.2      The Kubernetes Package Manager
 helmfile                  0.99.1     Deploy Kubernetes Helm Charts
@@ -44,7 +44,7 @@ json2hcl                  0.0.6      Convert JSON to HCL, and vice versa
 jx                        2.0.1192   Jenkins-X
 k3d                       1.6.0      Little helper to run Rancher Lab's k3s in Docker
 k6                        0.26.0     A modern load testing tool, using Go and JavaScript - https://k6.io
-k9s                       0.14.1     Kubernetes CLI To Manage Your Clusters In Style
+k9s                       0.15.0     Kubernetes CLI To Manage Your Clusters In Style
 katafygio                 0.8.1      K8s continuous backup to git
 kfctl                     0.7.1      Machine Learning Toolkit for Kubernetes
 kind                      0.7.0      A tool for running local Kubernetes clusters using Docker
@@ -73,7 +73,7 @@ rbac-lookup               0.5.0      Find Kubernetes roles and cluster roles bou
 retry                     3.3.0      ♻️ Functional mechanism based on channels to perform actions repetitively until successful.
 saml2aws                  2.22.1     CLI tool which enables you to login and retrieve AWS temporary credentials using a SAML IDP
 scenery                   0.1.5      A Terraform plan output prettifier
-sentry-cli                1.50.0     A command line utility to work with Sentry.
+sentry-cli                1.51.0     A command line utility to work with Sentry.
 shellcheck                0.7.0      ShellCheck, a static analysis tool for shell scripts
 shfmt                     3.0.1      A shell parser, formatter and interpreter (POSIX/Bash/mksh)
 slack-notifier            0.2.0      Command line utility to send messages with attachments to Slack channels via Incoming Webhooks
@@ -90,7 +90,7 @@ terrahelp                 0.7.4      Terrahelp is as a command line utility that
 tfenv                     0.4.0      Transform environment variables for use with Terraform (e.g. `HOSTNAME` ⇨ `TF_VAR_hostname`)
 tfmask                    0.3.0      Terraform utility to mask select output from `terraform plan` and `terraform apply`
 variant                   0.36.4     Variant is a Universal CLI tool that works like a task runner
-venona                    0.30.0     Codefresh runtime-environment agent
+venona                    0.30.2     Codefresh runtime-environment agent
 vert                      0.1.0      Simple CLI for comparing two or more versions
 yq                        3.1.1      yq is a portable command-line YAML processor
 ```
