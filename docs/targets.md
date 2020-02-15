@@ -7,13 +7,13 @@ atlantis                  0.11.1     Terraform For Teams
 awless                    0.1.11     A Mighty CLI for AWS
 aws-iam-authenticator     0.5.0      A tool to use AWS IAM credentials to authenticate to a Kubernetes cluster
 aws-okta                  0.19.4     aws-okta allows users to authenticate with AWS using Okta credentials
-aws-vault                 5.2.1      A vault for securely storing and accessing AWS credentials in development environments
+aws-vault                 5.3.0      A vault for securely storing and accessing AWS credentials in development environments
 cfssl                     1.4.1      Cloudflare's PKI and TLS toolkit
 chamber                   2.7.5      CLI for managing secrets
 cli53                     0.8.16     Command line tool for Amazon Route 53
 cloudflared               2019.9.0   Argo Tunnel client
 cloudposse-atlantis       0.9.0.3    Terraform For Teams, enhanced by Cloud Posse
-codefresh                 0.43.0     Codefresh CLI
+codefresh                 0.43.1     Codefresh CLI
 ctop                      0.7.3      Top-like interface for container metrics
 direnv                    2.21.2     Unclutter your .profile
 doctl                     1.38.0     A command line tool for DigitalOcean services
@@ -44,7 +44,7 @@ json2hcl                  0.0.6      Convert JSON to HCL, and vice versa
 jx                        2.0.1192   Jenkins-X
 k3d                       1.6.0      Little helper to run Rancher Lab's k3s in Docker
 k6                        0.26.0     A modern load testing tool, using Go and JavaScript - https://k6.io
-k9s                       0.15.0     Kubernetes CLI To Manage Your Clusters In Style
+k9s                       0.15.2     Kubernetes CLI To Manage Your Clusters In Style
 katafygio                 0.8.1      K8s continuous backup to git
 kfctl                     0.7.1      Machine Learning Toolkit for Kubernetes
 kind                      0.7.0      A tool for running local Kubernetes clusters using Docker
@@ -66,7 +66,7 @@ packer                    1.5.0      Packer is a tool for creating identical mac
 pandoc                    2.9.1.1    Universal markup converter
 pgmetrics                 1.8.1      Postgres metrics
 popeye                    0.6.2      A Kubernetes cluster resource sanitizer
-promtool                  2.15.2     Prometheus CLI tool
+promtool                  2.16.0     Prometheus CLI tool
 rakkess                   0.4.4      Review Access - kubectl plugin to show an access matrix for all available resources
 rancher                   2.3.2      Rancher CLI
 rbac-lookup               0.5.0      Find Kubernetes roles and cluster roles bound to any user, service account, or group name.
