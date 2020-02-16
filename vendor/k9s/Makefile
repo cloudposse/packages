@@ -14,7 +14,7 @@ endif
 export VENDOR = derailed
 export PACKAGE_NAME = k9s
 export PACKAGE_REPO_NAME = k9s
-export DOWNLOAD_URL = $(PACKAGE_REPO_URL)/releases/download/$(PACKAGE_VERSION)/$(PACKAGE_NAME)_$(PACKAGE_VERSION)_$(OS)_$(ARCH).tar.gz
+export DOWNLOAD_URL = $(PACKAGE_REPO_URL)/releases/download/v$(PACKAGE_VERSION)/$(PACKAGE_NAME)_$(OS)_$(ARCH).tar.gz
 
 ## APK build specific requirements
 export APK_BUILD_TEMPLATE = APKBUILD.github-binary
