@@ -39,6 +39,7 @@ vendor/fargate: vendor/fargate/**
 vendor/fetch: vendor/fetch/**
 vendor/figurine: vendor/figurine/**
 vendor/fzf: vendor/fzf/**
+vendor/gh: vendor/gh/**
 vendor/ghr: vendor/ghr/**
 vendor/github-commenter: vendor/github-commenter/**
 vendor/github-release: vendor/github-release/**
