@@ -256,7 +256,7 @@ atlantis                  0.11.1     Terraform For Teams
 awless                    0.1.11     A Mighty CLI for AWS
 aws-iam-authenticator     0.5.0      A tool to use AWS IAM credentials to authenticate to a Kubernetes cluster
 aws-okta                  0.19.4     aws-okta allows users to authenticate with AWS using Okta credentials
-aws-vault                 5.3.0      A vault for securely storing and accessing AWS credentials in development environments
+aws-vault                 5.3.1      A vault for securely storing and accessing AWS credentials in development environments
 cfssl                     1.4.1      Cloudflare's PKI and TLS toolkit
 chamber                   2.7.5      CLI for managing secrets
 cli53                     0.8.16     Command line tool for Amazon Route 53
@@ -285,7 +285,7 @@ gotop                     3.0.0      A terminal based graphical activity monitor
 helm                      2.16.3     The Kubernetes Package Manager
 helm2                     2.16.1     The Kubernetes Package Manager
 helm3                     3.0.2      The Kubernetes Package Manager
-helmfile                  0.99.1     Deploy Kubernetes Helm Charts
+helmfile                  0.100.0    Deploy Kubernetes Helm Charts
 htmltest                  0.12.1     :white_check_mark: Test generated HTML for problems
 hugo                      0.64.1     The world’s fastest framework for building websites.
 jq                        1.6        Command-line JSON processor
@@ -312,7 +312,7 @@ lectl                     0.20       Script to check issued certificates by Let'
 misspell                  0.3.4      Correct commonly misspelled English words in source files
 pack                      0.8.1      Create cloud native Buildpacks
 packer                    1.5.0      Packer is a tool for creating identical machine images for multiple platforms from a single source configuration.
-pandoc                    2.9.1.1    Universal markup converter
+pandoc                    2.9.2      Universal markup converter
 pgmetrics                 1.8.1      Postgres metrics
 popeye                    0.6.2      A Kubernetes cluster resource sanitizer
 promtool                  2.16.0     Prometheus CLI tool
@@ -320,7 +320,7 @@ rakkess                   0.4.4      Review Access - kubectl plugin to show an a
 rancher                   2.3.2      Rancher CLI
 rbac-lookup               0.5.0      Find Kubernetes roles and cluster roles bound to any user, service account, or group name.
 retry                     3.3.0      ♻️ Functional mechanism based on channels to perform actions repetitively until successful.
-saml2aws                  2.22.1     CLI tool which enables you to login and retrieve AWS temporary credentials using a SAML IDP
+saml2aws                  2.23.0     CLI tool which enables you to login and retrieve AWS temporary credentials using a SAML IDP
 scenery                   0.1.5      A Terraform plan output prettifier
 sentry-cli                1.51.0     A command line utility to work with Sentry.
 shellcheck                0.7.0      ShellCheck, a static analysis tool for shell scripts
