@@ -74,6 +74,7 @@ vendor/kubectl-1.15: vendor/kubectl-1.15/**
 vendor/kubectl: vendor/kubectl/**
 vendor/kubectx: vendor/kubectx/**
 vendor/kubens: vendor/kubens/**
+vendor/kubeval: vendor/kubeval/**
 vendor/lazydocker: vendor/lazydocker/**
 vendor/lectl: vendor/lectl/**
 vendor/misspell: vendor/misspell/**
