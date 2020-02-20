@@ -30,6 +30,7 @@ vendor/cli53: vendor/cli53/**
 vendor/cloudflared: vendor/cloudflared/**
 vendor/cloudposse-atlantis: vendor/cloudposse-atlantis/**
 vendor/codefresh: vendor/codefresh/**
+vendor/consul: vendor/consul/**
 vendor/ctop: vendor/ctop/**
 vendor/direnv: vendor/direnv/**
 vendor/doctl: vendor/doctl/**
@@ -39,6 +40,7 @@ vendor/fargate: vendor/fargate/**
 vendor/fetch: vendor/fetch/**
 vendor/figurine: vendor/figurine/**
 vendor/fzf: vendor/fzf/**
+vendor/gh: vendor/gh/**
 vendor/ghr: vendor/ghr/**
 vendor/github-commenter: vendor/github-commenter/**
 vendor/github-release: vendor/github-release/**
@@ -74,8 +76,10 @@ vendor/kubectl-1.15: vendor/kubectl-1.15/**
 vendor/kubectl: vendor/kubectl/**
 vendor/kubectx: vendor/kubectx/**
 vendor/kubens: vendor/kubens/**
+vendor/kubeval: vendor/kubeval/**
 vendor/lazydocker: vendor/lazydocker/**
 vendor/lectl: vendor/lectl/**
+vendor/minikube: vendor/minikube/**
 vendor/misspell: vendor/misspell/**
 vendor/pack: vendor/pack/**
 vendor/packer: vendor/packer/**
@@ -89,6 +93,7 @@ vendor/rbac-lookup: vendor/rbac-lookup/**
 vendor/retry: vendor/retry/**
 vendor/saml2aws: vendor/saml2aws/**
 vendor/scenery: vendor/scenery/**
+vendor/sentinel: vendor/sentinel/**
 vendor/sentry-cli: vendor/sentry-cli/**
 vendor/shellcheck: vendor/shellcheck/**
 vendor/shfmt: vendor/shfmt/**
