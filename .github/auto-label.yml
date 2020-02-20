@@ -90,6 +90,7 @@ vendor/rbac-lookup: vendor/rbac-lookup/**
 vendor/retry: vendor/retry/**
 vendor/saml2aws: vendor/saml2aws/**
 vendor/scenery: vendor/scenery/**
+vendor/sentinel: vendor/sentinel/**
 vendor/sentry-cli: vendor/sentry-cli/**
 vendor/shellcheck: vendor/shellcheck/**
 vendor/shfmt: vendor/shfmt/**

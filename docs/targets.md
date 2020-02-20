@@ -74,6 +74,7 @@ rbac-lookup               0.5.0      Find Kubernetes roles and cluster roles bou
 retry                     3.3.0      ♻️ Functional mechanism based on channels to perform actions repetitively until successful.
 saml2aws                  2.22.1     CLI tool which enables you to login and retrieve AWS temporary credentials using a SAML IDP
 scenery                   0.1.5      A Terraform plan output prettifier
+sentinel                  0.14.2     Hashicorp sentinel
 sentry-cli                1.50.0     A command line utility to work with Sentry.
 shellcheck                0.7.0      ShellCheck, a static analysis tool for shell scripts
 shfmt                     3.0.1      A shell parser, formatter and interpreter (POSIX/Bash/mksh)
