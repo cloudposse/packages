@@ -263,6 +263,7 @@ cli53                     0.8.16     Command line tool for Amazon Route 53
 cloudflared               2019.9.0   Argo Tunnel client
 cloudposse-atlantis       0.9.0.3    Terraform For Teams, enhanced by Cloud Posse
 codefresh                 0.42.2     Codefresh CLI
+consul                    1.6.3      Hashicorp consul
 ctop                      0.7.3      Top-like interface for container metrics
 direnv                    2.21.2     Unclutter your .profile
 doctl                     1.38.0     A command line tool for DigitalOcean services
@@ -272,6 +273,7 @@ fargate                   0.3.2      CLI for AWS Fargate
 fetch                     0.3.7      fetch makes it easy to download files, folders, and release assets from a specific public git commit, branch, or tag
 figurine                  1.0.1      Print your name in style
 fzf                       0.20.0     A command-line fuzzy finder
+gh                        0.5.5      The GitHub CLI
 ghr                       0.13.0     Upload multiple artifacts to GitHub Releases in parallel
 github-commenter          0.5.0      Command line utility for creating GitHub comments on Commits, Pull Request Reviews or Issues
 github-release            0.7.2      Commandline app to create and edit releases on Github (and upload artifacts)
@@ -323,6 +325,7 @@ rbac-lookup               0.5.0      Find Kubernetes roles and cluster roles bou
 retry                     3.3.0      ♻️ Functional mechanism based on channels to perform actions repetitively until successful.
 saml2aws                  2.22.1     CLI tool which enables you to login and retrieve AWS temporary credentials using a SAML IDP
 scenery                   0.1.5      A Terraform plan output prettifier
+sentinel                  0.14.2     Hashicorp sentinel
 sentry-cli                1.50.0     A command line utility to work with Sentry.
 shellcheck                0.7.0      ShellCheck, a static analysis tool for shell scripts
 shfmt                     3.0.1      A shell parser, formatter and interpreter (POSIX/Bash/mksh)
@@ -340,6 +343,7 @@ terrahelp                 0.7.4      Terrahelp is as a command line utility that
 tfenv                     0.4.0      Transform environment variables for use with Terraform (e.g. `HOSTNAME` ⇨ `TF_VAR_hostname`)
 tfmask                    0.3.0      Terraform utility to mask select output from `terraform plan` and `terraform apply`
 variant                   0.36.4     Variant is a Universal CLI tool that works like a task runner
+vault                     1.3.2      Hashicorp vault
 venona                    0.30.0     Codefresh runtime-environment agent
 vert                      0.1.0      Simple CLI for comparing two or more versions
 yq                        3.1.1      yq is a portable command-line YAML processor
