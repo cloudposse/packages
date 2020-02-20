@@ -30,6 +30,7 @@ vendor/cli53: vendor/cli53/**
 vendor/cloudflared: vendor/cloudflared/**
 vendor/cloudposse-atlantis: vendor/cloudposse-atlantis/**
 vendor/codefresh: vendor/codefresh/**
+vendor/consul: vendor/consul/**
 vendor/ctop: vendor/ctop/**
 vendor/direnv: vendor/direnv/**
 vendor/doctl: vendor/doctl/**
@@ -90,6 +91,7 @@ vendor/rbac-lookup: vendor/rbac-lookup/**
 vendor/retry: vendor/retry/**
 vendor/saml2aws: vendor/saml2aws/**
 vendor/scenery: vendor/scenery/**
+vendor/sentinel: vendor/sentinel/**
 vendor/sentry-cli: vendor/sentry-cli/**
 vendor/shellcheck: vendor/shellcheck/**
 vendor/shfmt: vendor/shfmt/**
@@ -107,6 +109,7 @@ vendor/terrahelp: vendor/terrahelp/**
 vendor/tfenv: vendor/tfenv/**
 vendor/tfmask: vendor/tfmask/**
 vendor/variant: vendor/variant/**
+vendor/vault: vendor/vault/**
 vendor/venona: vendor/venona/**
 vendor/vert: vendor/vert/**
 vendor/yq: vendor/yq/**
