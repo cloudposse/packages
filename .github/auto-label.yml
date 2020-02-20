@@ -107,6 +107,7 @@ vendor/terrahelp: vendor/terrahelp/**
 vendor/tfenv: vendor/tfenv/**
 vendor/tfmask: vendor/tfmask/**
 vendor/variant: vendor/variant/**
+vendor/vault: vendor/vault/**
 vendor/venona: vendor/venona/**
 vendor/vert: vendor/vert/**
 vendor/yq: vendor/yq/**
