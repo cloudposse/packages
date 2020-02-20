@@ -79,6 +79,7 @@ vendor/kubens: vendor/kubens/**
 vendor/kubeval: vendor/kubeval/**
 vendor/lazydocker: vendor/lazydocker/**
 vendor/lectl: vendor/lectl/**
+vendor/minikube: vendor/minikube/**
 vendor/misspell: vendor/misspell/**
 vendor/pack: vendor/pack/**
 vendor/packer: vendor/packer/**
