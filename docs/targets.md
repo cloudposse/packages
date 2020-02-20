@@ -60,6 +60,7 @@ kubectl-1.14              1.14.10    Production-Grade Container Scheduling and M
 kubectl-1.15              1.15.8     Production-Grade Container Scheduling and Management
 kubectx                   0.7.1      Switch faster between clusters and namespaces in kubectl
 kubens                    0.7.1      Switch faster between clusters and namespaces in kubectl
+kubeval                   0.14.0     Validate your Kubernetes configuration files, supports multiple Kubernetes versions
 lazydocker                0.8        The lazier way to manage everything docker
 lectl                     0.20       Script to check issued certificates by Let's Encrypt on CTL (Certificate Transparency Log) using https://crt.sh
 minikube                  1.7.2      Run Kubernetes locally
