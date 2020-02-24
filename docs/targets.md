@@ -65,6 +65,7 @@ lazydocker                0.8        The lazier way to manage everything docker
 lectl                     0.20       Script to check issued certificates by Let's Encrypt on CTL (Certificate Transparency Log) using https://crt.sh
 minikube                  1.7.2      Run Kubernetes locally
 misspell                  0.3.4      Correct commonly misspelled English words in source files
+nomad                     0.10.4     Hashicorp nomad
 pack                      0.8.1      Create cloud native Buildpacks
 packer                    1.5.0      Packer is a tool for creating identical machine images for multiple platforms from a single source configuration.
 pandoc                    2.9.2      Universal markup converter

@@ -81,6 +81,7 @@ vendor/lazydocker: vendor/lazydocker/**
 vendor/lectl: vendor/lectl/**
 vendor/minikube: vendor/minikube/**
 vendor/misspell: vendor/misspell/**
+vendor/nomad: vendor/nomad/**
 vendor/pack: vendor/pack/**
 vendor/packer: vendor/packer/**
 vendor/pandoc: vendor/pandoc/**
