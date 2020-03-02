@@ -2,6 +2,7 @@
 ```
 amtool                    0.20.0     Tool for interacting with the Alertmanager API
 argocd                    1.4.2      Declarative GitOpts for Kubernetes
+arkade                    0.1.5      Kubernetes apps, the easy way 😎
 assume-role               0.3.2      Easily assume AWS roles in your terminal.
 atlantis                  0.11.1     Terraform For Teams
 awless                    0.1.11     A Mighty CLI for AWS
@@ -95,6 +96,7 @@ terragrunt                0.22.3     Terragrunt is a thin wrapper for Terraform 
 terrahelp                 0.7.4      Terrahelp is as a command line utility that provides useful tricks like masking of terraform output.
 tfenv                     0.4.0      Transform environment variables for use with Terraform (e.g. `HOSTNAME` ⇨ `TF_VAR_hostname`)
 tfmask                    0.3.0      Terraform utility to mask select output from `terraform plan` and `terraform apply`
+trivy                     0.4.4      A Simple and Comprehensive Vulnerability Scanner for Containers, Suitable for CI
 variant                   0.36.4     Variant is a Universal CLI tool that works like a task runner
 vault                     1.3.2      Hashicorp vault
 venona                    0.30.2     Codefresh runtime-environment agent

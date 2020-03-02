@@ -18,6 +18,7 @@ scripts:
 vendor: vendor/**
 vendor/amtool: vendor/amtool/**
 vendor/argocd: vendor/argocd/**
+vendor/arkade: vendor/arkade/**
 vendor/assume-role: vendor/assume-role/**
 vendor/atlantis: vendor/atlantis/**
 vendor/awless: vendor/awless/**
@@ -111,6 +112,7 @@ vendor/terragrunt: vendor/terragrunt/**
 vendor/terrahelp: vendor/terrahelp/**
 vendor/tfenv: vendor/tfenv/**
 vendor/tfmask: vendor/tfmask/**
+vendor/trivy: vendor/trivy/**
 vendor/variant: vendor/variant/**
 vendor/vault: vendor/vault/**
 vendor/venona: vendor/venona/**
