@@ -1,5 +1,4 @@
 ## Package - sentinel
-
 ## Sentinel is not an open source, so we don't want to distribute it
 export PACKAGE_ENABLED = false
 
