@@ -11,7 +11,7 @@ export PACKAGE_NAME ?= sentinel
 export DOWNLOAD_URL ?= https://releases.hashicorp.com/$(PACKAGE_NAME)/$(PACKAGE_VERSION)/$(PACKAGE_NAME)_$(PACKAGE_VERSION)_$(OS)_$(ARCH).zip
 export APK_BUILD_TEMPLATE ?= APKBUILD.github-binary
 
-CURRENT_VERSION:
+CURRENT_VERSION::
 	@local_version=$$(cat VERSION || echo 0); \
 	current_version=$$(curl -s "https://releases.hashicorp.com/$(PACKAGE_NAME)/" | sed -nE 's/.*\<a\shref=\"\/sentinel\/(\d+\.\d+\.\d+)\/.*/\1/pi' | head -n 1); \
 	if [ $$? -ne 0 ]; then \
