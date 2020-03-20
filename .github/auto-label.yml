@@ -18,7 +18,6 @@ scripts:
 vendor: vendor/**
 vendor/amtool: vendor/amtool/**
 vendor/argocd: vendor/argocd/**
-vendor/arkade: vendor/arkade/**
 vendor/assume-role: vendor/assume-role/**
 vendor/atlantis: vendor/atlantis/**
 vendor/awless: vendor/awless/**
