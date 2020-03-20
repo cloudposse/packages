@@ -42,7 +42,7 @@
 
 [![Cloud Posse][logo]](https://cpco.io/homepage)
 
-# Packages [![Codefresh Build Status](https://g.codefresh.io/api/badges/pipeline/cloudposse/cloudposse%2Fpackages%2Fapk?type=cf-1)](https://g.codefresh.io/public/accounts/cloudposse/pipelines/5baae099b35f251ecadf1fa0) [![Latest Release](https://img.shields.io/github/release/cloudposse/packages.svg)](https://github.com/cloudposse/packages/releases/latest) [![Slack Community](https://slack.cloudposse.com/badge.svg)](https://slack.cloudposse.com)
+# Packages [![Codefresh Build Status](https://g.codefresh.io/api/badges/pipeline/cloudposse/cloudposse%2Fpackages%2Fapk?branch=master&key=eyJhbGciOiJIUzI1NiJ9.NWEwMTJmNWM3Yjg3YTQwMDAxYTlkMjU0.UwxTSXZGXq3wPQjj3O1k71kQsGuWGlzgkp9V2-llce8&type=cf-1)](https://g.codefresh.io/pipelines/apk/builds?repoOwner=cloudposse&repoName=packages&serviceName=cloudposse%2Fpackages&filter=trigger:build~Build;branch:master;pipeline:5baae099b35f251ecadf1fa0~apk) [![Auto Update Status](https://github.com/cloudposse/packages/workflows/auto-update/badge.svg)](https://github.com/cloudposse/packages/actions?query=workflow%3Aauto-update) [![Latest Release](https://img.shields.io/github/release/cloudposse/packages.svg)](https://github.com/cloudposse/packages/releases/latest) [![Slack Community](https://slack.cloudposse.com/badge.svg)](https://slack.cloudposse.com)
 
 
 Cloud Posse distribution of awesome apps.

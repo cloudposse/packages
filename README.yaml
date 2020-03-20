@@ -26,8 +26,11 @@ github_repo: cloudposse/packages
 # Badges to display
 badges:
   - name: "Codefresh Build Status"
-    image: "https://g.codefresh.io/api/badges/pipeline/cloudposse/cloudposse%2Fpackages%2Fapk?type=cf-1"
-    url: "https://g.codefresh.io/public/accounts/cloudposse/pipelines/5baae099b35f251ecadf1fa0"
+    image: "https://g.codefresh.io/api/badges/pipeline/cloudposse/cloudposse%2Fpackages%2Fapk?branch=master&key=eyJhbGciOiJIUzI1NiJ9.NWEwMTJmNWM3Yjg3YTQwMDAxYTlkMjU0.UwxTSXZGXq3wPQjj3O1k71kQsGuWGlzgkp9V2-llce8&type=cf-1"
+    url: "https://g.codefresh.io/pipelines/apk/builds?repoOwner=cloudposse&repoName=packages&serviceName=cloudposse%2Fpackages&filter=trigger:build~Build;branch:master;pipeline:5baae099b35f251ecadf1fa0~apk"
+  - name: "Auto Update Status"
+    image: "https://github.com/cloudposse/packages/workflows/auto-update/badge.svg"
+    url: "https://github.com/cloudposse/packages/actions?query=workflow%3Aauto-update"
   - name: "Latest Release"
     image: "https://img.shields.io/github/release/cloudposse/packages.svg"
     url: "https://github.com/cloudposse/packages/releases/latest"
