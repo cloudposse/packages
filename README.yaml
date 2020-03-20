@@ -25,9 +25,6 @@ github_repo: cloudposse/packages
 
 # Badges to display
 badges:
-  - name: "TravisCI Build Status"
-    image: "https://travis-ci.org/cloudposse/packages.svg?branch=master"
-    url: "https://travis-ci.org/cloudposse/packages"
   - name: "Codefresh Build Status"
     image: "https://g.codefresh.io/api/badges/pipeline/cloudposse/cloudposse%2Fpackages%2Fapk?type=cf-1"
     url: "https://g.codefresh.io/public/accounts/cloudposse/pipelines/5baae099b35f251ecadf1fa0"
