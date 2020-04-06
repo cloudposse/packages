@@ -335,7 +335,7 @@ slack-notifier            0.2.0      Command line utility to send messages with 
 sops                      3.5.0      Secrets management stinks, use some sops!
 stern                     1.11.0     ⎈ Multi pod and container log tailing for Kubernetes
 sudosh                    0.2.0      Shell wrapper to run a login shell with `sudo` as the current user for the purpose of audit logging
-teleport                  4.2.2      Privileged access management for elastic infrastructure.
+teleport                  4.2.8      Privileged access management for elastic infrastructure.
 terraform                 0.12.21    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-0.11            0.11.14    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-0.12            0.12.10    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
