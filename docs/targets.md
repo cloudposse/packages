@@ -13,7 +13,7 @@ chamber                   2.7.5      CLI for managing secrets
 cli53                     0.8.16     Command line tool for Amazon Route 53
 cloudflared               2019.9.0   Argo Tunnel client
 cloudposse-atlantis       0.9.0.3    Terraform For Teams, enhanced by Cloud Posse
-codefresh                 0.43.1     Codefresh CLI
+codefresh                 0.50.1     Codefresh CLI
 consul                    1.6.3      Hashicorp consul
 ctop                      0.7.3      Top-like interface for container metrics
 direnv                    2.21.2     Unclutter your .profile
@@ -86,7 +86,7 @@ slack-notifier            0.2.0      Command line utility to send messages with 
 sops                      3.5.0      Secrets management stinks, use some sops!
 stern                     1.11.0     ⎈ Multi pod and container log tailing for Kubernetes
 sudosh                    0.2.0      Shell wrapper to run a login shell with `sudo` as the current user for the purpose of audit logging
-teleport                  4.2.2      Privileged access management for elastic infrastructure.
+teleport                  4.2.8      Privileged access management for elastic infrastructure.
 terraform                 0.12.21    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-0.11            0.11.14    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-0.12            0.12.10    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
