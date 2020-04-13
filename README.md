@@ -273,7 +273,7 @@ fargate                   0.3.2      CLI for AWS Fargate
 fetch                     0.3.7      fetch makes it easy to download files, folders, and release assets from a specific public git commit, branch, or tag
 figurine                  1.0.1      Print your name in style
 fzf                       0.20.0     A command-line fuzzy finder
-gh                        0.5.5      The GitHub CLI
+gh                        0.6.4      The GitHub CLI
 ghr                       0.13.0     Upload multiple artifacts to GitHub Releases in parallel
 github-commenter          0.5.0      Command line utility for creating GitHub comments on Commits, Pull Request Reviews or Issues
 github-release            0.7.2      Commandline app to create and edit releases on Github (and upload artifacts)
