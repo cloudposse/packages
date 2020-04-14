@@ -156,7 +156,6 @@ CURRENT_VERSION:
 	if [ $$? -ne 0 ]; then \
 		exit 1; \
 	elif [ "$${current_version}" == "null" -o -z "$${current_version}" ]; then \
-		echo "I am here 111"; \
 		echo "ERROR: failed to obtain current version for $(VENDOR)/$(PACKAGE_REPO_NAME) (got: $${current_version})"; \
 		exit 1; \
 	elif [ "$${local_version}" != "$${current_version}" ]; then \
