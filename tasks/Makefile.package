@@ -150,7 +150,7 @@ auto-update:
 # Update the VERSION file only if it would change, to avoid triggering unnecessary builds
 CURRENT_VERSION: API=releases/latest
 CURRENT_VERSION: QUERY=.tag_name
-CURRENT_VERSION::
+CURRENT_VERSION:
 	@local_version=$$(cat VERSION || echo 0); \
 	current_version=$$(env PATH='$(PATH)' github-repo-metadata $(VENDOR) $(PACKAGE_REPO_NAME) '$(API)' '$(QUERY)' | sed 's/^v//'); \
 	if [ $$? -ne 0 ]; then \

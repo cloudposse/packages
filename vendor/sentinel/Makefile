@@ -23,7 +23,7 @@ VERSION:
 		echo "$${version}" | tee VERSION; \
 	fi
 
-CURRENT_VERSION::
+CURRENT_VERSION:
 	@local_version=$$(cat VERSION || echo 0); \
 	current_version=$$(curl -s "https://releases.hashicorp.com/$(PACKAGE_NAME)/" | sed -nE 's/.*\<a\shref=\"\/sentinel\/(\d+\.\d+\.\d+)\/.*/\1/pi' | head -n 1); \
 	if [ $$? -ne 0 ]; then \
