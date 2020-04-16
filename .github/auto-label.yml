@@ -73,6 +73,8 @@ vendor/kubecron: vendor/kubecron/**
 vendor/kubectl-1.13: vendor/kubectl-1.13/**
 vendor/kubectl-1.14: vendor/kubectl-1.14/**
 vendor/kubectl-1.15: vendor/kubectl-1.15/**
+vendor/kubectl-1.16: vendor/kubectl-1.16/**
+vendor/kubectl-1.17: vendor/kubectl-1.17/**
 vendor/kubectl: vendor/kubectl/**
 vendor/kubectx: vendor/kubectx/**
 vendor/kubens: vendor/kubens/**
