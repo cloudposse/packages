@@ -258,6 +258,7 @@ aws-iam-authenticator     0.5.0      A tool to use AWS IAM credentials to authen
 aws-okta                  0.19.4     aws-okta allows users to authenticate with AWS using Okta credentials
 aws-vault                 5.3.2      A vault for securely storing and accessing AWS credentials in development environments
 cfssl                     1.4.1      Cloudflare's PKI and TLS toolkit
+cfssljson                 1.4.1      Cloudflare's PKI and TLS toolkit json parser
 chamber                   2.7.5      CLI for managing secrets
 cli53                     0.8.16     Command line tool for Amazon Route 53
 cloudflared               2020.3.2   Argo Tunnel client
@@ -321,7 +322,7 @@ pack                      0.8.1      Create cloud native Buildpacks
 packer                    1.5.0      Packer is a tool for creating identical machine images for multiple platforms from a single source configuration.
 pandoc                    2.9.2      Universal markup converter
 pgmetrics                 1.8.1      Postgres metrics
-popeye                    0.6.2      A Kubernetes cluster resource sanitizer
+popeye                    0.8.1      A Kubernetes cluster resource sanitizer
 promtool                  2.16.0     Prometheus CLI tool
 rakkess                   0.4.4      Review Access - kubectl plugin to show an access matrix for all available resources
 rancher                   2.3.2      Rancher CLI
