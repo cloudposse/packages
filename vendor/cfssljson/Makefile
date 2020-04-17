@@ -1,3 +1,5 @@
+export PACKAGE_ENABLED = false
+
 include ../../tasks/Makefile.package
 include ../../tasks/Makefile.apk
 
