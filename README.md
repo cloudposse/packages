@@ -260,7 +260,7 @@ aws-vault                 5.3.2      A vault for securely storing and accessing 
 cfssl                     1.4.1      Cloudflare's PKI and TLS toolkit
 chamber                   2.7.5      CLI for managing secrets
 cli53                     0.8.16     Command line tool for Amazon Route 53
-cloudflared               2019.9.0   Argo Tunnel client
+cloudflared               2020.3.2   Argo Tunnel client
 cloudposse-atlantis       0.9.0.3    Terraform For Teams, enhanced by Cloud Posse
 codefresh                 0.50.1     Codefresh CLI
 consul                    1.6.3      Hashicorp consul
@@ -284,10 +284,10 @@ gonsul                    0.2.1      A stand-alone alternative to git2consul
 goofys                    0.23.1     a high-performance, POSIX-ish Amazon S3 file system written in Go
 gosu                      1.11       Simple Go-based setuid+setgid+setgroups+exec
 gotop                     3.0.0      A terminal based graphical activity monitor inspired by gtop and vtop
-helm                      2.16.3     The Kubernetes Package Manager
-helm2                     2.16.1     The Kubernetes Package Manager
-helm3                     3.0.2      The Kubernetes Package Manager
-helmfile                  0.100.0    Deploy Kubernetes Helm Charts
+helm                      3.1.2      The Kubernetes Package Manager
+helm2                     2.16.6     The Kubernetes Package Manager
+helm3                     3.1.2      The Kubernetes Package Manager
+helmfile                  0.109.0    Deploy Kubernetes Helm Charts
 htmltest                  0.12.1     :white_check_mark: Test generated HTML for problems
 hugo                      0.64.1     The world’s fastest framework for building websites.
 jq                        1.6        Command-line JSON processor
@@ -299,16 +299,18 @@ k9s                       0.15.2     Kubernetes CLI To Manage Your Clusters In S
 katafygio                 0.8.1      K8s continuous backup to git
 kfctl                     0.7.1      Machine Learning Toolkit for Kubernetes
 kind                      0.7.0      A tool for running local Kubernetes clusters using Docker
-kops                      1.15.2     Kubernetes Operations (kops) - Production Grade K8s Installation, Upgrades, and Management
+kops                      1.16.0     Kubernetes Operations (kops) - Production Grade K8s Installation, Upgrades, and Management
 kops-1.12                 1.12.3     Kubernetes Operations (kops) - Production Grade K8s Installation, Upgrades, and Management
 krew                      0.3.4      Kubectl plugin manager
 kubecron                  1.0.2      Utilities to manage kubernetes cronjobs. Run a CronJob manually for test purposes. Suspend/unsuspend a CronJob
-kubectl                   1.15.10    Production-Grade Container Scheduling and Management
-kubectl-1.13              1.13.12    Production-Grade Container Scheduling and Management
-kubectl-1.14              1.14.10    Production-Grade Container Scheduling and Management
-kubectl-1.15              1.15.8     Production-Grade Container Scheduling and Management
-kubectx                   0.7.1      Switch faster between clusters and namespaces in kubectl
-kubens                    0.7.1      Switch faster between clusters and namespaces in kubectl
+kubectl                   1.16.8     Production-Grade Container Scheduling and Management
+kubectl-1.13              1.13.12    Production-Grade Container Scheduling and Management (v1.13)
+kubectl-1.14              1.14.10    Production-Grade Container Scheduling and Management (v1.14)
+kubectl-1.15              1.15.11    Production-Grade Container Scheduling and Management (v1.15)
+kubectl-1.16              1.16.8     Production-Grade Container Scheduling and Management (v1.16)
+kubectl-1.17              1.17.4     Production-Grade Container Scheduling and Management (v1.17)
+kubectx                   0.8.0      Switch faster between clusters and namespaces in kubectl
+kubens                    0.8.0      Switch faster between clusters and namespaces in kubectl
 kubeval                   0.14.0     Validate your Kubernetes configuration files, supports multiple Kubernetes versions
 lazydocker                0.8        The lazier way to manage everything docker
 lectl                     0.20       Script to check issued certificates by Let's Encrypt on CTL (Certificate Transparency Log) using https://crt.sh
@@ -336,9 +338,9 @@ sops                      3.5.0      Secrets management stinks, use some sops!
 stern                     1.11.0     ⎈ Multi pod and container log tailing for Kubernetes
 sudosh                    0.2.0      Shell wrapper to run a login shell with `sudo` as the current user for the purpose of audit logging
 teleport                  4.2.8      Privileged access management for elastic infrastructure.
-terraform                 0.12.21    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
+terraform                 0.12.24    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-0.11            0.11.14    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
-terraform-0.12            0.12.10    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
+terraform-0.12            0.12.24    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-docs            0.8.2      Generate docs from terraform modules
 terragrunt                0.22.3     Terragrunt is a thin wrapper for Terraform that provides extra tools for working with multiple Terraform modules.
 terrahelp                 0.7.4      Terrahelp is as a command line utility that provides useful tricks like masking of terraform output.
