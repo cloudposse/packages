@@ -1,4 +1,3 @@
-export PACKAGE_ENABLED = false
 
 include ../../tasks/Makefile.package
 include ../../tasks/Makefile.apk
@@ -13,4 +12,4 @@ install:
 	$(call download_binary)
 
 test:
-	$(PACKAGE_EXE) version
+	$(PACKAGE_EXE)  -f ./cfssljson-test.json -bare -stdout >/dev/null
