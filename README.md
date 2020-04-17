@@ -319,7 +319,7 @@ pack                      0.8.1      Create cloud native Buildpacks
 packer                    1.5.0      Packer is a tool for creating identical machine images for multiple platforms from a single source configuration.
 pandoc                    2.9.2      Universal markup converter
 pgmetrics                 1.8.1      Postgres metrics
-popeye                    0.6.2      A Kubernetes cluster resource sanitizer
+popeye                    0.8.1      A Kubernetes cluster resource sanitizer
 promtool                  2.16.0     Prometheus CLI tool
 rakkess                   0.4.4      Review Access - kubectl plugin to show an access matrix for all available resources
 rancher                   2.3.2      Rancher CLI
