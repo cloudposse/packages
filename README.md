@@ -258,7 +258,7 @@ aws-iam-authenticator     0.5.0      A tool to use AWS IAM credentials to authen
 aws-okta                  0.19.4     aws-okta allows users to authenticate with AWS using Okta credentials
 aws-vault                 5.3.2      A vault for securely storing and accessing AWS credentials in development environments
 cfssl                     1.4.1      Cloudflare's PKI and TLS toolkit
-chamber                   2.8.1      CLI for managing secrets
+cfssljson                 1.4.1      Cloudflare's PKI and TLS toolkit json parser
 cli53                     0.8.17     Command line tool for Amazon Route 53
 cloudflared               2020.3.2   Argo Tunnel client
 cloudposse-atlantis       0.9.0.3    Terraform For Teams, enhanced by Cloud Posse
