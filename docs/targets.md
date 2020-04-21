@@ -7,7 +7,7 @@ atlantis                  0.11.1     Terraform For Teams
 awless                    0.1.11     A Mighty CLI for AWS
 aws-iam-authenticator     0.5.0      A tool to use AWS IAM credentials to authenticate to a Kubernetes cluster
 aws-okta                  0.19.4     aws-okta allows users to authenticate with AWS using Okta credentials
-aws-vault                 5.3.2      A vault for securely storing and accessing AWS credentials in development environments
+aws-vault                 5.4.1      A vault for securely storing and accessing AWS credentials in development environments
 cfssl                     1.4.1      Cloudflare's PKI and TLS toolkit
 cfssljson                 1.4.1      Cloudflare's PKI and TLS toolkit json parser
 chamber                   2.8.1      CLI for managing secrets
@@ -39,12 +39,12 @@ gotop                     3.0.0      A terminal based graphical activity monitor
 helm                      2.16.6     The Kubernetes Package Manager
 helm2                     2.16.6     The Kubernetes Package Manager
 helm3                     3.1.2      The Kubernetes Package Manager
-helmfile                  0.109.0    Deploy Kubernetes Helm Charts
+helmfile                  0.111.0    Deploy Kubernetes Helm Charts
 htmltest                  0.12.1     :white_check_mark: Test generated HTML for problems
 hugo                      0.69.0     The world’s fastest framework for building websites.
 jq                        1.6        Command-line JSON processor
 json2hcl                  0.0.6      Convert JSON to HCL, and vice versa
-jx                        2.0.1284   Jenkins-X
+jx                        2.0.1286   Jenkins-X
 k3d                       1.7.0      Little helper to run Rancher Lab's k3s in Docker
 k6                        0.26.2     A modern load testing tool, using Go and JavaScript - https://k6.io
 k9s                       0.19.2     Kubernetes CLI To Manage Your Clusters In Style
@@ -74,7 +74,7 @@ packer                    1.5.5      Packer is a tool for creating identical mac
 pandoc                    2.9.2.1    Universal markup converter
 pgmetrics                 1.9.0      Postgres metrics
 popeye                    0.8.1      A Kubernetes cluster resource sanitizer
-promtool                  2.17.1     Prometheus CLI tool
+promtool                  2.17.2     Prometheus CLI tool
 rakkess                   0.4.4      Review Access - kubectl plugin to show an access matrix for all available resources
 rancher                   2.4.0      Rancher CLI
 rbac-lookup               0.5.0      Find Kubernetes roles and cluster roles bound to any user, service account, or group name.
@@ -103,5 +103,5 @@ variant                   0.36.4     Variant is a Universal CLI tool that works 
 vault                     1.4.0      Hashicorp vault
 venona                    0.31.1     Codefresh runtime-environment agent
 vert                      0.1.0      Simple CLI for comparing two or more versions
-yq                        3.2.1      yq is a portable command-line YAML processor
+yq                        3.3.0      yq is a portable command-line YAML processor
 ```
