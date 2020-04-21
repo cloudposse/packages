@@ -349,6 +349,7 @@ tfenv                     0.4.0      Transform environment variables for use wit
 tfmask                    0.3.0      Terraform utility to mask select output from `terraform plan` and `terraform apply`
 trivy                     0.6.0      A Simple and Comprehensive Vulnerability Scanner for Containers, Suitable for CI
 variant                   0.36.4     Variant is a Universal CLI tool that works like a task runner
+variant2                  0.24.0     Variant is a Universal CLI tool that works like a task runner
 vault                     1.4.0      Hashicorp vault
 venona                    0.31.1     Codefresh runtime-environment agent
 vert                      0.1.0      Simple CLI for comparing two or more versions
