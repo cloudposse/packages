@@ -293,7 +293,7 @@ htmltest                  0.12.1     :white_check_mark: Test generated HTML for 
 hugo                      0.69.0     The world’s fastest framework for building websites.
 jq                        1.6        Command-line JSON processor
 json2hcl                  0.0.6      Convert JSON to HCL, and vice versa
-jx                        2.0.1286   Jenkins-X
+jx                        2.1.4      Jenkins-X
 k3d                       1.7.0      Little helper to run Rancher Lab's k3s in Docker
 k6                        0.26.2     A modern load testing tool, using Go and JavaScript - https://k6.io
 k9s                       0.19.2     Kubernetes CLI To Manage Your Clusters In Style
