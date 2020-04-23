@@ -25,7 +25,7 @@ export AUTO_UPDATE_ENABLED ?= true
 
 # Permit version to be overridden on the command line using PACKAGE_VERSION (e.g. FIGURINE_VERSION=0.3.0)
 VERSION_ENV = $(shell basename $$(pwd) | tr '[:lower:]' '[:upper:]')_VERSION
-ifneq ($($(VERSION_ENV)),) 
+ifneq ($($(VERSION_ENV)),)
 	PACKAGE_VERSION=$($(VERSION_ENV))
 endif
 
@@ -48,7 +48,7 @@ define download_tarball
 	[ -n "$(TMP)" ] && [ -n "$(PACKAGE_NAME)" ] && rm -rf "$(TMP)/$(PACKAGE_NAME)"
 	mkdir -p $(TMP)/$(PACKAGE_NAME)
 	$(CURL) -o - $(DOWNLOAD_URL) | tar -zx -C '$(TMP)/$(PACKAGE_NAME)'
-	find $(TMP)/$(PACKAGE_NAME) -type f -name '$(PACKAGE_NAME)*' | xargs -I {} cp -f {} $(INSTALL_PATH)/$(PACKAGE_NAME)
+	find $(TMP)/$(PACKAGE_NAME) -type f -name '$(PACKAGE_EXE)*' | xargs -I {} cp -f {} $(INSTALL_PATH)/$(PACKAGE_NAME)
 	chmod +x $(INSTALL_PATH)/$(PACKAGE_NAME)
 	[ -n "$(TMP)" ] && [ -n "$(PACKAGE_NAME)" ] && rm -rf "$(TMP)/$(PACKAGE_NAME)"
 endef

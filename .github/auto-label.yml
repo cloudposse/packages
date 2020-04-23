@@ -116,6 +116,7 @@ vendor/tfenv: vendor/tfenv/**
 vendor/tfmask: vendor/tfmask/**
 vendor/trivy: vendor/trivy/**
 vendor/variant: vendor/variant/**
+vendor/variant2: vendor/variant2/**
 vendor/vault: vendor/vault/**
 vendor/venona: vendor/venona/**
 vendor/vert: vendor/vert/**
