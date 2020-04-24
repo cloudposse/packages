@@ -14,11 +14,11 @@ chamber                   2.8.1      CLI for managing secrets
 cli53                     0.8.17     Command line tool for Amazon Route 53
 cloudflared               2020.3.2   Argo Tunnel client
 cloudposse-atlantis       0.9.0.3    Terraform For Teams, enhanced by Cloud Posse
-codefresh                 0.51.0     Codefresh CLI
+codefresh                 0.52.0     Codefresh CLI
 consul                    1.7.2      Hashicorp consul
 ctop                      0.7.3      Top-like interface for container metrics
 direnv                    2.21.2     Unclutter your .profile
-doctl                     1.41.0     A command line tool for DigitalOcean services
+doctl                     1.42.0     A command line tool for DigitalOcean services
 duffle                    0.3.5b1    CNAB installer
 emailcli                  1.0.3      Command line email sending client written in Go.
 fargate                   0.3.2      CLI for AWS Fargate
@@ -44,14 +44,14 @@ htmltest                  0.12.1     :white_check_mark: Test generated HTML for 
 hugo                      0.69.1     The world’s fastest framework for building websites.
 jq                        1.6        Command-line JSON processor
 json2hcl                  0.0.6      Convert JSON to HCL, and vice versa
-jx                        2.1.4      Jenkins-X
+jx                        2.1.8      Jenkins-X
 k3d                       1.7.0      Little helper to run Rancher Lab's k3s in Docker
 k6                        0.26.2     A modern load testing tool, using Go and JavaScript - https://k6.io
 k9s                       0.19.2     Kubernetes CLI To Manage Your Clusters In Style
 katafygio                 0.8.1      K8s continuous backup to git
 kfctl                     1.0        Machine Learning Toolkit for Kubernetes
 kind                      0.7.0      A tool for running local Kubernetes clusters using Docker
-kops                      1.16.0     Kubernetes Operations (kops) - Production Grade K8s Installation, Upgrades, and Management
+kops                      1.16.1     Kubernetes Operations (kops) - Production Grade K8s Installation, Upgrades, and Management
 kops-1.12                 1.12.3     Kubernetes Operations (kops) - Production Grade K8s Installation, Upgrades, and Management
 krew                      0.3.4      Kubectl plugin manager
 kubecron                  1.0.2      Utilities to manage kubernetes cronjobs. Run a CronJob manually for test purposes. Suspend/unsuspend a CronJob
@@ -97,7 +97,7 @@ terraform-docs            0.9.1      Generate docs from terraform modules
 terragrunt                0.23.10    Terragrunt is a thin wrapper for Terraform that provides extra tools for working with multiple Terraform modules.
 terrahelp                 0.7.4      Terrahelp is as a command line utility that provides useful tricks like masking of terraform output.
 tfenv                     0.4.0      Transform environment variables for use with Terraform (e.g. `HOSTNAME` ⇨ `TF_VAR_hostname`)
-tfmask                    0.3.0      Terraform utility to mask select output from `terraform plan` and `terraform apply`
+tfmask                    0.4.0      Terraform utility to mask select output from `terraform plan` and `terraform apply`
 trivy                     0.6.0      A Simple and Comprehensive Vulnerability Scanner for Containers, Suitable for CI
 variant                   0.36.4     Variant is a Universal CLI tool that works like a task runner
 variant2                  0.24.0     Variant is a Universal CLI tool that works like a task runner
