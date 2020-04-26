@@ -252,7 +252,7 @@ exit
 amtool                    0.20.0     Tool for interacting with the Alertmanager API
 argocd                    1.4.3      Declarative GitOpts for Kubernetes
 assume-role               0.3.2      Easily assume AWS roles in your terminal.
-atlantis                  0.11.1     Terraform For Teams
+atlantis                  0.12.0     Terraform For Teams
 awless                    0.1.11     A Mighty CLI for AWS
 aws-iam-authenticator     0.5.0      A tool to use AWS IAM credentials to authenticate to a Kubernetes cluster
 aws-okta                  0.19.4     aws-okta allows users to authenticate with AWS using Okta credentials
@@ -288,15 +288,15 @@ gotop                     3.0.0      A terminal based graphical activity monitor
 helm                      3.1.3      The Kubernetes Package Manager
 helm2                     2.16.6     The Kubernetes Package Manager
 helm3                     3.1.2      The Kubernetes Package Manager
-helmfile                  0.111.0    Deploy Kubernetes Helm Charts
+helmfile                  0.112.0    Deploy Kubernetes Helm Charts
 htmltest                  0.12.1     :white_check_mark: Test generated HTML for problems
-hugo                      0.69.1     The world’s fastest framework for building websites.
+hugo                      0.69.2     The world’s fastest framework for building websites.
 jq                        1.6        Command-line JSON processor
 json2hcl                  0.0.6      Convert JSON to HCL, and vice versa
-jx                        2.1.8      Jenkins-X
+jx                        2.1.10     Jenkins-X
 k3d                       1.7.0      Little helper to run Rancher Lab's k3s in Docker
 k6                        0.26.2     A modern load testing tool, using Go and JavaScript - https://k6.io
-k9s                       0.19.2     Kubernetes CLI To Manage Your Clusters In Style
+k9s                       0.19.3     Kubernetes CLI To Manage Your Clusters In Style
 katafygio                 0.8.1      K8s continuous backup to git
 kfctl                     1.0        Machine Learning Toolkit for Kubernetes
 kind                      0.7.0      A tool for running local Kubernetes clusters using Docker
@@ -349,7 +349,7 @@ tfenv                     0.4.0      Transform environment variables for use wit
 tfmask                    0.4.0      Terraform utility to mask select output from `terraform plan` and `terraform apply`
 trivy                     0.6.0      A Simple and Comprehensive Vulnerability Scanner for Containers, Suitable for CI
 variant                   0.36.4     Variant is a Universal CLI tool that works like a task runner
-variant2                  0.24.0     Variant is a Universal CLI tool that works like a task runner
+variant2                  0.28.0     Variant is a Universal CLI tool that works like a task runner
 vault                     1.4.0      Hashicorp vault
 venona                    0.31.1     Codefresh runtime-environment agent
 vert                      0.1.0      Simple CLI for comparing two or more versions
