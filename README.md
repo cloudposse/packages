@@ -288,7 +288,7 @@ gotop                     3.0.0      A terminal based graphical activity monitor
 helm                      3.1.3      The Kubernetes Package Manager
 helm2                     2.16.6     The Kubernetes Package Manager
 helm3                     3.1.2      The Kubernetes Package Manager
-helmfile                  0.111.0    Deploy Kubernetes Helm Charts
+helmfile                  0.112.0    Deploy Kubernetes Helm Charts
 htmltest                  0.12.1     :white_check_mark: Test generated HTML for problems
 hugo                      0.69.2     The world’s fastest framework for building websites.
 jq                        1.6        Command-line JSON processor
@@ -349,7 +349,7 @@ tfenv                     0.4.0      Transform environment variables for use wit
 tfmask                    0.4.0      Terraform utility to mask select output from `terraform plan` and `terraform apply`
 trivy                     0.6.0      A Simple and Comprehensive Vulnerability Scanner for Containers, Suitable for CI
 variant                   0.36.4     Variant is a Universal CLI tool that works like a task runner
-variant2                  0.24.2     Variant is a Universal CLI tool that works like a task runner
+variant2                  0.28.0     Variant is a Universal CLI tool that works like a task runner
 vault                     1.4.0      Hashicorp vault
 venona                    0.31.1     Codefresh runtime-environment agent
 vert                      0.1.0      Simple CLI for comparing two or more versions
