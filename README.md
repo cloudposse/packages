@@ -267,7 +267,7 @@ codefresh                 0.52.0     Codefresh CLI
 consul                    1.7.2      Hashicorp consul
 ctop                      0.7.3      Top-like interface for container metrics
 direnv                    2.21.2     Unclutter your .profile
-doctl                     1.42.0     A command line tool for DigitalOcean services
+doctl                     1.43.0     A command line tool for DigitalOcean services
 duffle                    0.3.5b1    CNAB installer
 emailcli                  1.0.3      Command line email sending client written in Go.
 fargate                   0.3.2      CLI for AWS Fargate
@@ -293,7 +293,7 @@ htmltest                  0.12.1     :white_check_mark: Test generated HTML for 
 hugo                      0.69.2     The world’s fastest framework for building websites.
 jq                        1.6        Command-line JSON processor
 json2hcl                  0.0.6      Convert JSON to HCL, and vice versa
-jx                        2.1.10     Jenkins-X
+jx                        2.1.12     Jenkins-X
 k3d                       1.7.0      Little helper to run Rancher Lab's k3s in Docker
 k6                        0.26.2     A modern load testing tool, using Go and JavaScript - https://k6.io
 k9s                       0.19.3     Kubernetes CLI To Manage Your Clusters In Style
