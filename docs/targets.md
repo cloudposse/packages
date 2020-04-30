@@ -14,7 +14,7 @@ chamber                   2.8.1      CLI for managing secrets
 cli53                     0.8.17     Command line tool for Amazon Route 53
 cloudflared               2020.3.2   Argo Tunnel client
 cloudposse-atlantis       0.9.0.3    Terraform For Teams, enhanced by Cloud Posse
-codefresh                 0.52.0     Codefresh CLI
+codefresh                 0.52.1     Codefresh CLI
 consul                    1.7.2      Hashicorp consul
 ctop                      0.7.3      Top-like interface for container metrics
 direnv                    2.21.2     Unclutter your .profile
@@ -28,7 +28,7 @@ fzf                       0.21.1     A command-line fuzzy finder
 gh                        0.7.0      The GitHub CLI
 ghr                       0.13.0     Upload multiple artifacts to GitHub Releases in parallel
 github-commenter          0.5.0      Command line utility for creating GitHub comments on Commits, Pull Request Reviews or Issues
-github-release            0.7.2      Commandline app to create and edit releases on Github (and upload artifacts)
+github-release            0.8.0      Commandline app to create and edit releases on Github (and upload artifacts)
 github-status-updater     0.2.0      Command line utility for updating GitHub commit statuses and enabling required status checks for pull requests
 gitleaks                  1.2.0      Audit git repos for secrets 🔑
 gomplate                  3.6.0      A flexible commandline tool for template rendering. Supports lots of local and remote datasources.
@@ -44,7 +44,7 @@ htmltest                  0.12.1     :white_check_mark: Test generated HTML for 
 hugo                      0.69.2     The world’s fastest framework for building websites.
 jq                        1.6        Command-line JSON processor
 json2hcl                  0.0.6      Convert JSON to HCL, and vice versa
-jx                        2.1.12     Jenkins-X
+jx                        2.1.14     Jenkins-X
 k3d                       1.7.0      Little helper to run Rancher Lab's k3s in Docker
 k6                        0.26.2     A modern load testing tool, using Go and JavaScript - https://k6.io
 k9s                       0.19.3     Kubernetes CLI To Manage Your Clusters In Style
@@ -61,8 +61,8 @@ kubectl-1.14              1.14.10    Production-Grade Container Scheduling and M
 kubectl-1.15              1.15.11    Production-Grade Container Scheduling and Management (v1.15)
 kubectl-1.16              1.16.8     Production-Grade Container Scheduling and Management (v1.16)
 kubectl-1.17              1.17.4     Production-Grade Container Scheduling and Management (v1.17)
-kubectx                   0.8.0      Switch faster between clusters and namespaces in kubectl
-kubens                    0.8.0      Switch faster between clusters and namespaces in kubectl
+kubectx                   0.9.0      Switch faster between clusters and namespaces in kubectl
+kubens                    0.9.0      Switch faster between clusters and namespaces in kubectl
 kubeval                   0.15.0     Validate your Kubernetes configuration files, supports multiple Kubernetes versions
 lazydocker                0.8        The lazier way to manage everything docker
 lectl                     0.20       Script to check issued certificates by Let's Encrypt on CTL (Certificate Transparency Log) using https://crt.sh
