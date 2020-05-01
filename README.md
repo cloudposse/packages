@@ -256,7 +256,7 @@ atlantis                  0.12.0     Terraform For Teams
 awless                    0.1.11     A Mighty CLI for AWS
 aws-iam-authenticator     0.5.0      A tool to use AWS IAM credentials to authenticate to a Kubernetes cluster
 aws-okta                  0.19.4     aws-okta allows users to authenticate with AWS using Okta credentials
-aws-vault                 5.4.1      A vault for securely storing and accessing AWS credentials in development environments
+aws-vault                 5.4.2      A vault for securely storing and accessing AWS credentials in development environments
 cfssl                     1.4.1      Cloudflare's PKI and TLS toolkit
 cfssljson                 1.4.1      Cloudflare's PKI and TLS toolkit json parser
 chamber                   2.8.1      CLI for managing secrets
@@ -285,10 +285,10 @@ gonsul                    0.2.1      A stand-alone alternative to git2consul
 goofys                    0.24.0     a high-performance, POSIX-ish Amazon S3 file system written in Go
 gosu                      1.12       Simple Go-based setuid+setgid+setgroups+exec
 gotop                     3.0.0      A terminal based graphical activity monitor inspired by gtop and vtop
-helm                      3.1.3      The Kubernetes Package Manager
+helm                      3.2.0      The Kubernetes Package Manager
 helm2                     2.16.6     The Kubernetes Package Manager
-helm3                     3.1.2      The Kubernetes Package Manager
-helmfile                  0.112.0    Deploy Kubernetes Helm Charts
+helm3                     3.2.0      The Kubernetes Package Manager
+helmfile                  0.114.0    Deploy Kubernetes Helm Charts
 htmltest                  0.12.1     :white_check_mark: Test generated HTML for problems
 hugo                      0.69.2     The world’s fastest framework for building websites.
 jq                        1.6        Command-line JSON processor
@@ -328,7 +328,7 @@ rakkess                   0.4.4      Review Access - kubectl plugin to show an a
 rancher                   2.4.0      Rancher CLI
 rbac-lookup               0.5.0      Find Kubernetes roles and cluster roles bound to any user, service account, or group name.
 retry                     3.3.0      ♻️ Functional mechanism based on channels to perform actions repetitively until successful.
-saml2aws                  2.25.0     CLI tool which enables you to login and retrieve AWS temporary credentials using a SAML IDP
+saml2aws                  2.26.0     CLI tool which enables you to login and retrieve AWS temporary credentials using a SAML IDP
 scenery                   0.1.5      A Terraform plan output prettifier
 sentinel                  0.14.2     Hashicorp sentinel
 sentry-cli                1.52.3     A command line utility to work with Sentry.
