@@ -7,14 +7,14 @@ atlantis                  0.12.0     Terraform For Teams
 awless                    0.1.11     A Mighty CLI for AWS
 aws-iam-authenticator     0.5.0      A tool to use AWS IAM credentials to authenticate to a Kubernetes cluster
 aws-okta                  0.19.4     aws-okta allows users to authenticate with AWS using Okta credentials
-aws-vault                 5.4.1      A vault for securely storing and accessing AWS credentials in development environments
+aws-vault                 5.4.2      A vault for securely storing and accessing AWS credentials in development environments
 cfssl                     1.4.1      Cloudflare's PKI and TLS toolkit
 cfssljson                 1.4.1      Cloudflare's PKI and TLS toolkit json parser
 chamber                   2.8.1      CLI for managing secrets
 cli53                     0.8.17     Command line tool for Amazon Route 53
 cloudflared               2020.3.2   Argo Tunnel client
 cloudposse-atlantis       0.9.0.3    Terraform For Teams, enhanced by Cloud Posse
-codefresh                 0.52.1     Codefresh CLI
+codefresh                 0.52.3     Codefresh CLI
 consul                    1.7.2      Hashicorp consul
 ctop                      0.7.3      Top-like interface for container metrics
 direnv                    2.21.2     Unclutter your .profile
@@ -94,14 +94,14 @@ terraform                 0.12.24    Terraform is a tool for building, changing,
 terraform-0.11            0.11.14    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-0.12            0.12.24    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-docs            0.9.1      Generate docs from terraform modules
-terragrunt                0.23.12    Terragrunt is a thin wrapper for Terraform that provides extra tools for working with multiple Terraform modules.
+terragrunt                0.23.13    Terragrunt is a thin wrapper for Terraform that provides extra tools for working with multiple Terraform modules.
 terrahelp                 0.7.4      Terrahelp is as a command line utility that provides useful tricks like masking of terraform output.
 tfenv                     0.4.0      Transform environment variables for use with Terraform (e.g. `HOSTNAME` ⇨ `TF_VAR_hostname`)
 tfmask                    0.4.0      Terraform utility to mask select output from `terraform plan` and `terraform apply`
 trivy                     0.6.0      A Simple and Comprehensive Vulnerability Scanner for Containers, Suitable for CI
 variant                   0.36.4     Variant is a Universal CLI tool that works like a task runner
 variant2                  0.28.0     Variant is a Universal CLI tool that works like a task runner
-vault                     1.4.0      Hashicorp vault
+vault                     1.4.1      Hashicorp vault
 venona                    0.31.2     Codefresh runtime-environment agent
 vert                      0.1.0      Simple CLI for comparing two or more versions
 yq                        3.3.0      yq is a portable command-line YAML processor
