@@ -1,7 +1,7 @@
 ## Makefile Targets
 ```
 amtool                    0.20.0     Tool for interacting with the Alertmanager API
-argocd                    1.4.3      Declarative GitOpts for Kubernetes
+argocd                    1.5.3      Declarative GitOpts for Kubernetes
 assume-role               0.3.2      Easily assume AWS roles in your terminal.
 atlantis                  0.12.0     Terraform For Teams
 awless                    0.1.11     A Mighty CLI for AWS
@@ -28,7 +28,7 @@ fzf                       0.21.1     A command-line fuzzy finder
 gh                        0.7.0      The GitHub CLI
 ghr                       0.13.0     Upload multiple artifacts to GitHub Releases in parallel
 github-commenter          0.5.0      Command line utility for creating GitHub comments on Commits, Pull Request Reviews or Issues
-github-release            0.8.0      Commandline app to create and edit releases on Github (and upload artifacts)
+github-release            0.8.1      Commandline app to create and edit releases on Github (and upload artifacts)
 github-status-updater     0.2.0      Command line utility for updating GitHub commit statuses and enabling required status checks for pull requests
 gitleaks                  1.2.0      Audit git repos for secrets 🔑
 gomplate                  3.6.0      A flexible commandline tool for template rendering. Supports lots of local and remote datasources.
@@ -50,7 +50,7 @@ k6                        0.26.2     A modern load testing tool, using Go and Ja
 k9s                       0.19.4     Kubernetes CLI To Manage Your Clusters In Style
 katafygio                 0.8.1      K8s continuous backup to git
 kfctl                     1.0        Machine Learning Toolkit for Kubernetes
-kind                      0.8.0      A tool for running local Kubernetes clusters using Docker
+kind                      0.8.1      A tool for running local Kubernetes clusters using Docker
 kops                      1.16.1     Kubernetes Operations (kops) - Production Grade K8s Installation, Upgrades, and Management
 kops-1.12                 1.12.3     Kubernetes Operations (kops) - Production Grade K8s Installation, Upgrades, and Management
 krew                      0.3.4      Kubectl plugin manager
