@@ -256,14 +256,14 @@ atlantis                  0.12.0     Terraform For Teams
 awless                    0.1.11     A Mighty CLI for AWS
 aws-iam-authenticator     0.5.0      A tool to use AWS IAM credentials to authenticate to a Kubernetes cluster
 aws-okta                  0.19.4     aws-okta allows users to authenticate with AWS using Okta credentials
-aws-vault                 5.4.2      A vault for securely storing and accessing AWS credentials in development environments
+aws-vault                 5.4.3      A vault for securely storing and accessing AWS credentials in development environments
 cfssl                     1.4.1      Cloudflare's PKI and TLS toolkit
 cfssljson                 1.4.1      Cloudflare's PKI and TLS toolkit json parser
 chamber                   2.8.1      CLI for managing secrets
 cli53                     0.8.17     Command line tool for Amazon Route 53
 cloudflared               2020.3.2   Argo Tunnel client
 cloudposse-atlantis       0.9.0.3    Terraform For Teams, enhanced by Cloud Posse
-codefresh                 0.52.4     Codefresh CLI
+codefresh                 0.52.5     Codefresh CLI
 consul                    1.7.2      Hashicorp consul
 ctop                      0.7.3      Top-like interface for container metrics
 direnv                    2.21.2     Unclutter your .profile
@@ -271,7 +271,7 @@ doctl                     1.43.0     A command line tool for DigitalOcean servic
 duffle                    0.3.5b1    CNAB installer
 emailcli                  1.0.3      Command line email sending client written in Go.
 fargate                   0.3.2      CLI for AWS Fargate
-fetch                     0.3.8      fetch makes it easy to download files, folders, and release assets from a specific public git commit, branch, or tag
+fetch                     0.3.9      fetch makes it easy to download files, folders, and release assets from a specific public git commit, branch, or tag
 figurine                  1.0.1      Print your name in style
 fzf                       0.21.1     A command-line fuzzy finder
 gh                        0.7.0      The GitHub CLI
@@ -333,7 +333,7 @@ scenery                   0.1.5      A Terraform plan output prettifier
 sentinel                  0.14.2     Hashicorp sentinel
 sentry-cli                1.52.3     A command line utility to work with Sentry.
 shellcheck                0.7.1      ShellCheck, a static analysis tool for shell scripts
-shfmt                     3.1.0      A shell parser, formatter and interpreter (POSIX/Bash/mksh)
+shfmt                     3.1.1      A shell parser, formatter and interpreter (POSIX/Bash/mksh)
 slack-notifier            0.2.0      Command line utility to send messages with attachments to Slack channels via Incoming Webhooks
 sops                      3.5.0      Secrets management stinks, use some sops!
 stern                     1.11.0     ⎈ Multi pod and container log tailing for Kubernetes
