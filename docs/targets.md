@@ -1,7 +1,7 @@
 ## Makefile Targets
 ```
 amtool                    0.20.0     Tool for interacting with the Alertmanager API
-argocd                    1.5.3      Declarative GitOpts for Kubernetes
+argocd                    1.5.4      Declarative GitOpts for Kubernetes
 assume-role               0.3.2      Easily assume AWS roles in your terminal.
 atlantis                  0.12.0     Terraform For Teams
 awless                    0.1.11     A Mighty CLI for AWS
@@ -14,8 +14,8 @@ chamber                   2.8.1      CLI for managing secrets
 cli53                     0.8.17     Command line tool for Amazon Route 53
 cloudflared               2020.3.2   Argo Tunnel client
 cloudposse-atlantis       0.9.0.3    Terraform For Teams, enhanced by Cloud Posse
-codefresh                 0.52.5     Codefresh CLI
-consul                    1.7.2      Hashicorp consul
+codefresh                 0.54.0     Codefresh CLI
+consul                    1.7.3      Hashicorp consul
 ctop                      0.7.3      Top-like interface for container metrics
 direnv                    2.21.2     Unclutter your .profile
 doctl                     1.43.0     A command line tool for DigitalOcean services
@@ -36,7 +36,7 @@ gonsul                    0.2.1      A stand-alone alternative to git2consul
 goofys                    0.24.0     a high-performance, POSIX-ish Amazon S3 file system written in Go
 gosu                      1.12       Simple Go-based setuid+setgid+setgroups+exec
 gotop                     3.0.0      A terminal based graphical activity monitor inspired by gtop and vtop
-helm                      3.1.3      The Kubernetes Package Manager
+helm                      2.16.7     The Kubernetes Package Manager
 helm2                     2.16.6     The Kubernetes Package Manager
 helm3                     3.2.0      The Kubernetes Package Manager
 helmfile                  0.114.0    Deploy Kubernetes Helm Charts
@@ -44,7 +44,7 @@ htmltest                  0.12.1     :white_check_mark: Test generated HTML for 
 hugo                      0.69.2     The world’s fastest framework for building websites.
 jq                        1.6        Command-line JSON processor
 json2hcl                  0.0.6      Convert JSON to HCL, and vice versa
-jx                        2.1.20     Jenkins-X
+jx                        2.1.22     Jenkins-X
 k3d                       1.7.0      Little helper to run Rancher Lab's k3s in Docker
 k6                        0.26.2     A modern load testing tool, using Go and JavaScript - https://k6.io
 k9s                       0.19.4     Kubernetes CLI To Manage Your Clusters In Style
@@ -74,12 +74,12 @@ packer                    1.5.5      Packer is a tool for creating identical mac
 pandoc                    2.9.2.1    Universal markup converter
 pgmetrics                 1.9.0      Postgres metrics
 popeye                    0.8.1      A Kubernetes cluster resource sanitizer
-promtool                  2.17.2     Prometheus CLI tool
+promtool                  2.18.0     Prometheus CLI tool
 rakkess                   0.4.4      Review Access - kubectl plugin to show an access matrix for all available resources
-rancher                   2.4.0      Rancher CLI
+rancher                   2.4.3      Rancher CLI
 rbac-lookup               0.5.0      Find Kubernetes roles and cluster roles bound to any user, service account, or group name.
 retry                     3.3.0      ♻️ Functional mechanism based on channels to perform actions repetitively until successful.
-saml2aws                  2.26.0     CLI tool which enables you to login and retrieve AWS temporary credentials using a SAML IDP
+saml2aws                  2.26.1     CLI tool which enables you to login and retrieve AWS temporary credentials using a SAML IDP
 scenery                   0.1.5      A Terraform plan output prettifier
 sentinel                  0.14.2     Hashicorp sentinel
 sentry-cli                1.52.3     A command line utility to work with Sentry.
@@ -89,12 +89,12 @@ slack-notifier            0.2.0      Command line utility to send messages with 
 sops                      3.5.0      Secrets management stinks, use some sops!
 stern                     1.11.0     ⎈ Multi pod and container log tailing for Kubernetes
 sudosh                    0.2.0      Shell wrapper to run a login shell with `sudo` as the current user for the purpose of audit logging
-teleport                  4.2.8      Privileged access management for elastic infrastructure.
+teleport                  4.2.9      Privileged access management for elastic infrastructure.
 terraform                 0.12.24    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-0.11            0.11.14    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-0.12            0.12.24    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-docs            0.9.1      Generate docs from terraform modules
-terragrunt                0.23.13    Terragrunt is a thin wrapper for Terraform that provides extra tools for working with multiple Terraform modules.
+terragrunt                0.23.14    Terragrunt is a thin wrapper for Terraform that provides extra tools for working with multiple Terraform modules.
 terrahelp                 0.7.4      Terrahelp is as a command line utility that provides useful tricks like masking of terraform output.
 tfenv                     0.4.0      Transform environment variables for use with Terraform (e.g. `HOSTNAME` ⇨ `TF_VAR_hostname`)
 tfmask                    0.4.0      Terraform utility to mask select output from `terraform plan` and `terraform apply`
