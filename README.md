@@ -256,7 +256,7 @@ atlantis                  0.12.0     Terraform For Teams
 awless                    0.1.11     A Mighty CLI for AWS
 aws-iam-authenticator     0.5.0      A tool to use AWS IAM credentials to authenticate to a Kubernetes cluster
 aws-okta                  0.19.4     aws-okta allows users to authenticate with AWS using Okta credentials
-aws-vault                 5.4.3      A vault for securely storing and accessing AWS credentials in development environments
+aws-vault                 5.4.4      A vault for securely storing and accessing AWS credentials in development environments
 cfssl                     1.4.1      Cloudflare's PKI and TLS toolkit
 cfssljson                 1.4.1      Cloudflare's PKI and TLS toolkit json parser
 chamber                   2.8.1      CLI for managing secrets
@@ -278,14 +278,14 @@ gh                        0.7.0      The GitHub CLI
 ghr                       0.13.0     Upload multiple artifacts to GitHub Releases in parallel
 github-commenter          0.5.0      Command line utility for creating GitHub comments on Commits, Pull Request Reviews or Issues
 github-release            0.8.1      Commandline app to create and edit releases on Github (and upload artifacts)
-github-status-updater     0.2.0      Command line utility for updating GitHub commit statuses and enabling required status checks for pull requests
+github-status-updater     0.3.0      Command line utility for updating GitHub commit statuses and enabling required status checks for pull requests
 gitleaks                  1.2.0      Audit git repos for secrets 🔑
 gomplate                  3.6.0      A flexible commandline tool for template rendering. Supports lots of local and remote datasources.
 gonsul                    0.2.1      A stand-alone alternative to git2consul 
 goofys                    0.24.0     a high-performance, POSIX-ish Amazon S3 file system written in Go
 gosu                      1.12       Simple Go-based setuid+setgid+setgroups+exec
 gotop                     3.0.0      A terminal based graphical activity monitor inspired by gtop and vtop
-helm                      2.16.7     The Kubernetes Package Manager
+helm                      3.2.1      The Kubernetes Package Manager
 helm2                     2.16.6     The Kubernetes Package Manager
 helm3                     3.2.0      The Kubernetes Package Manager
 helmfile                  0.114.0    Deploy Kubernetes Helm Charts
@@ -293,7 +293,7 @@ htmltest                  0.12.1     :white_check_mark: Test generated HTML for 
 hugo                      0.70.0     The world’s fastest framework for building websites.
 jq                        1.6        Command-line JSON processor
 json2hcl                  0.0.6      Convert JSON to HCL, and vice versa
-jx                        2.1.23     Jenkins-X
+jx                        2.1.29     Jenkins-X
 k3d                       1.7.0      Little helper to run Rancher Lab's k3s in Docker
 k6                        0.26.2     A modern load testing tool, using Go and JavaScript - https://k6.io
 k9s                       0.19.4     Kubernetes CLI To Manage Your Clusters In Style
