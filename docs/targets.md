@@ -1,7 +1,7 @@
 ## Makefile Targets
 ```
 amtool                    0.20.0     Tool for interacting with the Alertmanager API
-argocd                    1.5.4      Declarative GitOpts for Kubernetes
+argocd                    1.5.5      Declarative GitOpts for Kubernetes
 assume-role               0.3.2      Easily assume AWS roles in your terminal.
 atlantis                  0.12.0     Terraform For Teams
 awless                    0.1.11     A Mighty CLI for AWS
@@ -44,10 +44,10 @@ htmltest                  0.12.1     :white_check_mark: Test generated HTML for 
 hugo                      0.70.0     The world’s fastest framework for building websites.
 jq                        1.6        Command-line JSON processor
 json2hcl                  0.0.6      Convert JSON to HCL, and vice versa
-jx                        2.1.35     Jenkins-X
+jx                        2.1.38     Jenkins-X
 k3d                       1.7.0      Little helper to run Rancher Lab's k3s in Docker
 k6                        0.26.2     A modern load testing tool, using Go and JavaScript - https://k6.io
-k9s                       0.19.4     Kubernetes CLI To Manage Your Clusters In Style
+k9s                       0.19.5     Kubernetes CLI To Manage Your Clusters In Style
 katafygio                 0.8.1      K8s continuous backup to git
 kfctl                     1.0        Machine Learning Toolkit for Kubernetes
 kind                      0.8.1      A tool for running local Kubernetes clusters using Docker
@@ -82,7 +82,7 @@ retry                     3.3.0      ♻️ Functional mechanism based on channe
 saml2aws                  2.26.1     CLI tool which enables you to login and retrieve AWS temporary credentials using a SAML IDP
 scenery                   0.1.5      A Terraform plan output prettifier
 sentinel                  0.14.2     Hashicorp sentinel
-sentry-cli                1.52.3     A command line utility to work with Sentry.
+sentry-cli                1.52.4     A command line utility to work with Sentry.
 shellcheck                0.7.1      ShellCheck, a static analysis tool for shell scripts
 shfmt                     3.1.1      A shell parser, formatter and interpreter (POSIX/Bash/mksh)
 slack-notifier            0.2.0      Command line utility to send messages with attachments to Slack channels via Incoming Webhooks
