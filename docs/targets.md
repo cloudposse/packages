@@ -14,7 +14,7 @@ chamber                   2.8.1      CLI for managing secrets
 cli53                     0.8.17     Command line tool for Amazon Route 53
 cloudflared               2020.3.2   Argo Tunnel client
 cloudposse-atlantis       0.9.0.3    Terraform For Teams, enhanced by Cloud Posse
-codefresh                 0.60.2     Codefresh CLI
+codefresh                 0.63.2     Codefresh CLI
 consul                    1.8.0-beta1 Hashicorp consul
 ctop                      0.7.3      Top-like interface for container metrics
 direnv                    2.21.3     Unclutter your .profile
@@ -41,13 +41,13 @@ helm2                     2.16.6     The Kubernetes Package Manager
 helm3                     3.2.0      The Kubernetes Package Manager
 helmfile                  0.116.0    Deploy Kubernetes Helm Charts
 htmltest                  0.12.1     :white_check_mark: Test generated HTML for problems
-hugo                      0.70.0     The world’s fastest framework for building websites.
+hugo                      0.71.0     The world’s fastest framework for building websites.
 jq                        1.6        Command-line JSON processor
 json2hcl                  0.0.6      Convert JSON to HCL, and vice versa
-jx                        2.1.38     Jenkins-X
+jx                        2.1.39     Jenkins-X
 k3d                       1.7.0      Little helper to run Rancher Lab's k3s in Docker
 k6                        0.26.2     A modern load testing tool, using Go and JavaScript - https://k6.io
-k9s                       0.19.5     Kubernetes CLI To Manage Your Clusters In Style
+k9s                       0.19.6     Kubernetes CLI To Manage Your Clusters In Style
 katafygio                 0.8.1      K8s continuous backup to git
 kfctl                     1.0        Machine Learning Toolkit for Kubernetes
 kind                      0.8.1      A tool for running local Kubernetes clusters using Docker
@@ -70,10 +70,10 @@ minikube                  1.10.1     Run Kubernetes locally
 misspell                  0.3.4      Correct commonly misspelled English words in source files
 nomad                     0.11.2     Hashicorp nomad
 pack                      0.10.0     Create cloud native Buildpacks
-packer                    1.5.5      Packer is a tool for creating identical machine images for multiple platforms from a single source configuration.
+packer                    1.5.6      Packer is a tool for creating identical machine images for multiple platforms from a single source configuration.
 pandoc                    2.9.2.1    Universal markup converter
 pgmetrics                 1.9.0      Postgres metrics
-popeye                    0.8.2      A Kubernetes cluster resource sanitizer
+popeye                    0.8.3      A Kubernetes cluster resource sanitizer
 promtool                  2.18.1     Prometheus CLI tool
 rakkess                   0.4.4      Review Access - kubectl plugin to show an access matrix for all available resources
 rancher                   2.4.3      Rancher CLI
@@ -82,7 +82,7 @@ retry                     3.3.0      ♻️ Functional mechanism based on channe
 saml2aws                  2.26.1     CLI tool which enables you to login and retrieve AWS temporary credentials using a SAML IDP
 scenery                   0.1.5      A Terraform plan output prettifier
 sentinel                  0.14.2     Hashicorp sentinel
-sentry-cli                1.52.4     A command line utility to work with Sentry.
+sentry-cli                1.53.0     A command line utility to work with Sentry.
 shellcheck                0.7.1      ShellCheck, a static analysis tool for shell scripts
 shfmt                     3.1.1      A shell parser, formatter and interpreter (POSIX/Bash/mksh)
 slack-notifier            0.2.0      Command line utility to send messages with attachments to Slack channels via Incoming Webhooks
