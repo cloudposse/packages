@@ -10,12 +10,12 @@ aws-okta                  0.19.4     aws-okta allows users to authenticate with 
 aws-vault                 5.4.4      A vault for securely storing and accessing AWS credentials in development environments
 cfssl                     1.4.1      Cloudflare's PKI and TLS toolkit
 cfssljson                 1.4.1      Cloudflare's PKI and TLS toolkit json parser
-chamber                   2.8.1      CLI for managing secrets
+chamber                   2.8.2      CLI for managing secrets
 cli53                     0.8.17     Command line tool for Amazon Route 53
 cloudflared               2020.3.2   Argo Tunnel client
 cloudposse-atlantis       0.9.0.3    Terraform For Teams, enhanced by Cloud Posse
-codefresh                 0.63.9     Codefresh CLI
-consul                    1.8.0-beta1 Hashicorp consul
+codefresh                 0.64.0     Codefresh CLI
+consul                    1.8.0-beta2 Hashicorp consul
 ctop                      0.7.3      Top-like interface for container metrics
 direnv                    2.21.3     Unclutter your .profile
 doctl                     1.43.0     A command line tool for DigitalOcean services
@@ -44,7 +44,7 @@ htmltest                  0.12.1     :white_check_mark: Test generated HTML for 
 hugo                      0.71.0     The world’s fastest framework for building websites.
 jq                        1.6        Command-line JSON processor
 json2hcl                  0.0.6      Convert JSON to HCL, and vice versa
-jx                        2.1.40     Jenkins-X
+jx                        2.1.45     Jenkins-X
 k3d                       1.7.0      Little helper to run Rancher Lab's k3s in Docker
 k6                        0.26.2     A modern load testing tool, using Go and JavaScript - https://k6.io
 k9s                       0.19.6     Kubernetes CLI To Manage Your Clusters In Style
@@ -101,7 +101,7 @@ tfmask                    0.4.0      Terraform utility to mask select output fro
 trivy                     0.7.0      A Simple and Comprehensive Vulnerability Scanner for Containers, Suitable for CI
 variant                   0.36.4     Variant is a Universal CLI tool that works like a task runner
 variant2                  0.28.0     Variant is a Universal CLI tool that works like a task runner
-vault                     1.4.1      Hashicorp vault
+vault                     1.4.2      Hashicorp vault
 venona                    0.32.0     Codefresh runtime-environment agent
 vert                      0.1.0      Simple CLI for comparing two or more versions
 yq                        3.3.0      yq is a portable command-line YAML processor
