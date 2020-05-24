@@ -280,7 +280,7 @@ github-commenter          0.5.0      Command line utility for creating GitHub co
 github-release            0.8.1      Commandline app to create and edit releases on Github (and upload artifacts)
 github-status-updater     0.3.0      Command line utility for updating GitHub commit statuses and enabling required status checks for pull requests
 gitleaks                  1.2.0      Audit git repos for secrets 🔑
-gomplate                  3.6.0      A flexible commandline tool for template rendering. Supports lots of local and remote datasources.
+gomplate                  3.7.0      A flexible commandline tool for template rendering. Supports lots of local and remote datasources.
 gonsul                    0.2.1      A stand-alone alternative to git2consul 
 goofys                    0.24.0     a high-performance, POSIX-ish Amazon S3 file system written in Go
 gosu                      1.12       Simple Go-based setuid+setgid+setgroups+exec
@@ -296,7 +296,7 @@ json2hcl                  0.0.6      Convert JSON to HCL, and vice versa
 jx                        2.1.45     Jenkins-X
 k3d                       1.7.0      Little helper to run Rancher Lab's k3s in Docker
 k6                        0.26.2     A modern load testing tool, using Go and JavaScript - https://k6.io
-k9s                       0.19.6     Kubernetes CLI To Manage Your Clusters In Style
+k9s                       0.19.7     Kubernetes CLI To Manage Your Clusters In Style
 katafygio                 0.8.1      K8s continuous backup to git
 kfctl                     1.0        Machine Learning Toolkit for Kubernetes
 kind                      0.8.1      A tool for running local Kubernetes clusters using Docker
@@ -343,7 +343,7 @@ terraform                 0.12.25    Terraform is a tool for building, changing,
 terraform-0.11            0.11.14    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-0.12            0.12.24    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-docs            0.9.1      Generate docs from terraform modules
-terragrunt                0.23.18    Terragrunt is a thin wrapper for Terraform that provides extra tools for working with multiple Terraform modules.
+terragrunt                0.23.20    Terragrunt is a thin wrapper for Terraform that provides extra tools for working with multiple Terraform modules.
 terrahelp                 0.7.4      Terrahelp is as a command line utility that provides useful tricks like masking of terraform output.
 tfenv                     0.4.0      Transform environment variables for use with Terraform (e.g. `HOSTNAME` ⇨ `TF_VAR_hostname`)
 tfmask                    0.4.0      Terraform utility to mask select output from `terraform plan` and `terraform apply`
