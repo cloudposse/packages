@@ -41,7 +41,7 @@ helm2                     2.16.6     The Kubernetes Package Manager
 helm3                     3.2.0      The Kubernetes Package Manager
 helmfile                  0.116.0    Deploy Kubernetes Helm Charts
 htmltest                  0.12.1     :white_check_mark: Test generated HTML for problems
-hugo                      0.71.0     The world’s fastest framework for building websites.
+hugo                      0.71.1     The world’s fastest framework for building websites.
 jq                        1.6        Command-line JSON processor
 json2hcl                  0.0.6      Convert JSON to HCL, and vice versa
 jx                        2.1.45     Jenkins-X
@@ -102,7 +102,7 @@ trivy                     0.7.0      A Simple and Comprehensive Vulnerability Sc
 variant                   0.36.4     Variant is a Universal CLI tool that works like a task runner
 variant2                  0.28.0     Variant is a Universal CLI tool that works like a task runner
 vault                     1.4.2      Hashicorp vault
-venona                    0.32.0     Codefresh runtime-environment agent
+venona                    0.32.1     Codefresh runtime-environment agent
 vert                      0.1.0      Simple CLI for comparing two or more versions
 yq                        3.3.0      yq is a portable command-line YAML processor
 ```
