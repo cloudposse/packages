@@ -25,7 +25,7 @@ fargate                   0.3.2      CLI for AWS Fargate
 fetch                     0.3.9      fetch makes it easy to download files, folders, and release assets from a specific public git commit, branch, or tag
 figurine                  1.0.1      Print your name in style
 fzf                       0.21.1     A command-line fuzzy finder
-gh                        0.8.0      The GitHub CLI
+gh                        0.9.0      The GitHub CLI
 ghr                       0.13.0     Upload multiple artifacts to GitHub Releases in parallel
 github-commenter          0.5.0      Command line utility for creating GitHub comments on Commits, Pull Request Reviews or Issues
 github-release            0.8.1      Commandline app to create and edit releases on Github (and upload artifacts)
@@ -44,7 +44,7 @@ htmltest                  0.12.1     :white_check_mark: Test generated HTML for 
 hugo                      0.71.1     The world’s fastest framework for building websites.
 jq                        1.6        Command-line JSON processor
 json2hcl                  0.0.6      Convert JSON to HCL, and vice versa
-jx                        2.1.45     Jenkins-X
+jx                        2.1.46     Jenkins-X
 k3d                       1.7.0      Little helper to run Rancher Lab's k3s in Docker
 k6                        0.26.2     A modern load testing tool, using Go and JavaScript - https://k6.io
 k9s                       0.19.7     Kubernetes CLI To Manage Your Clusters In Style
