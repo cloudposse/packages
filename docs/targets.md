@@ -39,7 +39,7 @@ gotop                     3.0.0      A terminal based graphical activity monitor
 helm                      3.2.1      The Kubernetes Package Manager
 helm2                     2.16.6     The Kubernetes Package Manager
 helm3                     3.2.0      The Kubernetes Package Manager
-helmfile                  0.116.0    Deploy Kubernetes Helm Charts
+helmfile                  0.118.1    Deploy Kubernetes Helm Charts
 htmltest                  0.12.1     :white_check_mark: Test generated HTML for problems
 hugo                      0.71.1     The world’s fastest framework for building websites.
 jq                        1.6        Command-line JSON processor
@@ -69,7 +69,7 @@ lectl                     0.20       Script to check issued certificates by Let'
 minikube                  1.10.1     Run Kubernetes locally
 misspell                  0.3.4      Correct commonly misspelled English words in source files
 nomad                     0.11.2     Hashicorp nomad
-pack                      0.10.0     Create cloud native Buildpacks
+pack                      0.11.0     Create cloud native Buildpacks
 packer                    1.5.6      Packer is a tool for creating identical machine images for multiple platforms from a single source configuration.
 pandoc                    2.9.2.1    Universal markup converter
 pgmetrics                 1.9.0      Postgres metrics
@@ -89,8 +89,8 @@ slack-notifier            0.2.0      Command line utility to send messages with 
 sops                      3.5.0      Secrets management stinks, use some sops!
 stern                     1.11.0     ⎈ Multi pod and container log tailing for Kubernetes
 sudosh                    0.2.0      Shell wrapper to run a login shell with `sudo` as the current user for the purpose of audit logging
-teleport                  4.2.9      Privileged access management for elastic infrastructure.
-terraform                 0.12.25    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
+teleport                  4.2.10     Privileged access management for elastic infrastructure.
+terraform                 0.12.26    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-0.11            0.11.14    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-0.12            0.12.24    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-docs            0.9.1      Generate docs from terraform modules
@@ -98,7 +98,7 @@ terragrunt                0.23.20    Terragrunt is a thin wrapper for Terraform 
 terrahelp                 0.7.4      Terrahelp is as a command line utility that provides useful tricks like masking of terraform output.
 tfenv                     0.4.0      Transform environment variables for use with Terraform (e.g. `HOSTNAME` ⇨ `TF_VAR_hostname`)
 tfmask                    0.4.0      Terraform utility to mask select output from `terraform plan` and `terraform apply`
-trivy                     0.7.0      A Simple and Comprehensive Vulnerability Scanner for Containers, Suitable for CI
+trivy                     0.8.0      A Simple and Comprehensive Vulnerability Scanner for Containers, Suitable for CI
 variant                   0.36.4     Variant is a Universal CLI tool that works like a task runner
 variant2                  0.28.0     Variant is a Universal CLI tool that works like a task runner
 vault                     1.4.2      Hashicorp vault
