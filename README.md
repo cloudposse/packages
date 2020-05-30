@@ -252,7 +252,7 @@ exit
 amtool                    0.20.0     Tool for interacting with the Alertmanager API
 argocd                    1.5.5      Declarative GitOpts for Kubernetes
 assume-role               0.3.2      Easily assume AWS roles in your terminal.
-atlantis                  0.12.0     Terraform For Teams
+atlantis                  0.13.0     Terraform For Teams
 awless                    0.1.11     A Mighty CLI for AWS
 aws-iam-authenticator     0.5.0      A tool to use AWS IAM credentials to authenticate to a Kubernetes cluster
 aws-okta                  0.19.4     aws-okta allows users to authenticate with AWS using Okta credentials
@@ -288,15 +288,15 @@ gotop                     3.0.0      A terminal based graphical activity monitor
 helm                      3.2.1      The Kubernetes Package Manager
 helm2                     2.16.6     The Kubernetes Package Manager
 helm3                     3.2.0      The Kubernetes Package Manager
-helmfile                  0.118.1    Deploy Kubernetes Helm Charts
+helmfile                  0.118.3    Deploy Kubernetes Helm Charts
 htmltest                  0.12.1     :white_check_mark: Test generated HTML for problems
 hugo                      0.71.1     The world’s fastest framework for building websites.
 jq                        1.6        Command-line JSON processor
 json2hcl                  0.0.6      Convert JSON to HCL, and vice versa
-jx                        2.1.49     Jenkins-X
+jx                        2.1.55     Jenkins-X
 k3d                       1.7.0      Little helper to run Rancher Lab's k3s in Docker
 k6                        0.26.2     A modern load testing tool, using Go and JavaScript - https://k6.io
-k9s                       0.20.1     Kubernetes CLI To Manage Your Clusters In Style
+k9s                       0.20.2     Kubernetes CLI To Manage Your Clusters In Style
 katafygio                 0.8.1      K8s continuous backup to git
 kfctl                     1.0        Machine Learning Toolkit for Kubernetes
 kind                      0.8.1      A tool for running local Kubernetes clusters using Docker
@@ -315,7 +315,7 @@ kubens                    0.9.0      Switch faster between clusters and namespac
 kubeval                   0.15.0     Validate your Kubernetes configuration files, supports multiple Kubernetes versions
 lazydocker                0.9        The lazier way to manage everything docker
 lectl                     0.20       Script to check issued certificates by Let's Encrypt on CTL (Certificate Transparency Log) using https://crt.sh
-minikube                  1.10.1     Run Kubernetes locally
+minikube                  1.11.0     Run Kubernetes locally
 misspell                  0.3.4      Correct commonly misspelled English words in source files
 nomad                     0.11.2     Hashicorp nomad
 pack                      0.11.0     Create cloud native Buildpacks
@@ -343,7 +343,7 @@ terraform                 0.12.26    Terraform is a tool for building, changing,
 terraform-0.11            0.11.14    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-0.12            0.12.24    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-docs            0.9.1      Generate docs from terraform modules
-terragrunt                0.23.22    Terragrunt is a thin wrapper for Terraform that provides extra tools for working with multiple Terraform modules.
+terragrunt                0.23.23    Terragrunt is a thin wrapper for Terraform that provides extra tools for working with multiple Terraform modules.
 terrahelp                 0.7.4      Terrahelp is as a command line utility that provides useful tricks like masking of terraform output.
 tfenv                     0.4.0      Transform environment variables for use with Terraform (e.g. `HOSTNAME` ⇨ `TF_VAR_hostname`)
 tfmask                    0.4.0      Terraform utility to mask select output from `terraform plan` and `terraform apply`
