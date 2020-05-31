@@ -1,0 +1,14 @@
+#!/bin/sh
+# This is an Alpine Package `post-install` hook that links
+# an alternative from `/usr/share/${PACKAGE_NAME}/$version/bin` into `/usr/bin/`
+MASTER_PACKAGE_NAME=variant
+MAJOR_VERSION=1
+PACKAGE_NAME=${MASTER_PACKAGE_NAME}
+ALTERNATE_NAME=${MASTER_PACKAGE_NAME}${MAJOR_VERSION}
+INSTALL_DIR=/usr/share/${MASTER_PACKAGE_NAME}/${MAJOR_VERSION}/bin
+
+mkdir -p ${INSTALL_DIR}
+update-alternatives --install /usr/bin/${ALTERNATE_NAME} ${ALTERNATE_NAME} ${INSTALL_DIR}/${MASTER_PACKAGE_NAME} 5
+# For historical compatibility, variant1 is the priority choice for "variant" (higher number priority wins)
+update-alternatives --install /usr/bin/${MASTER_PACKAGE_NAME} ${MASTER_PACKAGE_NAME} ${INSTALL_DIR}/${MASTER_PACKAGE_NAME} 100
+exit 0

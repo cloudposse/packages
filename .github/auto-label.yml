@@ -58,6 +58,7 @@ vendor/helm3: vendor/helm3/**
 vendor/helmfile: vendor/helmfile/**
 vendor/htmltest: vendor/htmltest/**
 vendor/hugo: vendor/hugo/**
+vendor/jp: vendor/jp/**
 vendor/jq: vendor/jq/**
 vendor/json2hcl: vendor/json2hcl/**
 vendor/jx: vendor/jx/**
@@ -114,6 +115,7 @@ vendor/terragrunt: vendor/terragrunt/**
 vendor/terrahelp: vendor/terrahelp/**
 vendor/tfenv: vendor/tfenv/**
 vendor/tfmask: vendor/tfmask/**
+vendor/thanos: vendor/thanos/**
 vendor/trivy: vendor/trivy/**
 vendor/variant: vendor/variant/**
 vendor/variant2: vendor/variant2/**
