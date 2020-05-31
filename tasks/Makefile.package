@@ -44,6 +44,14 @@ define download_binary_gz
 	rm -f $(INSTALL_PATH)/$(PACKAGE_NAME).gz
 endef
 
+define download_binary_bz2
+	mkdir -p $(INSTALL_PATH)
+	$(CURL) -o $(INSTALL_PATH)/$(PACKAGE_NAME).bz2 $(DOWNLOAD_URL)
+	bzip2 -d -f -k -q $(INSTALL_PATH)/$(PACKAGE_NAME).bz2
+	chmod +x $(INSTALL_PATH)/$(PACKAGE_NAME)
+	rm -f $(INSTALL_PATH)/$(PACKAGE_NAME).bz2
+endef
+
 define download_tarball
 	[ -n "$(TMP)" ] && [ -n "$(PACKAGE_NAME)" ] && rm -rf "$(TMP)/$(PACKAGE_NAME)"
 	mkdir -p $(TMP)/$(PACKAGE_NAME)
