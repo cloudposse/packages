@@ -66,6 +66,16 @@ unpack() {
 			echo "Renaming/moving \"${s%.gz}\" to \"${srcdir}/${exe}\""
 			mv "${s%.gz}" "$srcdir/$exe"
 			;;
+		*.bz2)
+			do_default=false
+			echo "Un-bzipping $s, expecting ${s%.bz2} to be executable"
+			echo " pwd: $(pwd)"
+			mkdir -p "${srcdir}"
+			options="!strip !tracedeps"
+			bzip2 -d -f -k -q "$s" || return 1
+			echo "Renaming/moving \"${s%.bz2}\" to \"${srcdir}/${exe}\""
+			mv "${s%.bz2}" "$srcdir/$exe"
+			;;
 		# Send everything else to the default method
 		*)
 			do_default=true
