@@ -39,7 +39,7 @@ gotop                     3.0.0      A terminal based graphical activity monitor
 helm                      3.2.1      The Kubernetes Package Manager
 helm2                     2.16.6     The Kubernetes Package Manager
 helm3                     3.2.1      The Kubernetes Package Manager
-helmfile                  0.118.3    Deploy Kubernetes Helm Charts
+helmfile                  0.118.5    Deploy Kubernetes Helm Charts
 htmltest                  0.12.1     :white_check_mark: Test generated HTML for problems
 hugo                      0.72.0     The world’s fastest framework for building websites.
 jp                        0.1.3      Command line interface to JMESPath
