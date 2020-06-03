@@ -250,7 +250,7 @@ exit
 ## Makefile Targets
 ```
 amtool                    0.20.0     Tool for interacting with the Alertmanager API
-argocd                    1.5.5      Declarative GitOpts for Kubernetes
+argocd                    1.5.6      Declarative GitOpts for Kubernetes
 assume-role               0.3.2      Easily assume AWS roles in your terminal.
 atlantis                  0.13.0     Terraform For Teams
 awless                    0.1.11     A Mighty CLI for AWS
@@ -263,11 +263,11 @@ chamber                   2.8.2      CLI for managing secrets
 cli53                     0.8.17     Command line tool for Amazon Route 53
 cloudflared               2020.3.2   Argo Tunnel client
 cloudposse-atlantis       0.9.0.3    Terraform For Teams, enhanced by Cloud Posse
-codefresh                 0.64.6     Codefresh CLI
+codefresh                 0.65.0     Codefresh CLI
 consul                    1.8.0-beta2 Hashicorp consul
 ctop                      0.7.3      Top-like interface for container metrics
 direnv                    2.21.3     Unclutter your .profile
-doctl                     1.43.0     A command line tool for DigitalOcean services
+doctl                     1.45.0     A command line tool for DigitalOcean services
 duffle                    0.3.5b1    CNAB installer
 emailcli                  1.0.3      Command line email sending client written in Go.
 fargate                   0.3.2      CLI for AWS Fargate
@@ -294,7 +294,7 @@ hugo                      0.72.0     The world’s fastest framework for buildin
 jp                        0.1.3      Command line interface to JMESPath
 jq                        1.6        Command-line JSON processor
 json2hcl                  0.0.6      Convert JSON to HCL, and vice versa
-jx                        2.1.55     Jenkins-X
+jx                        2.1.56     Jenkins-X
 k3d                       1.7.0      Little helper to run Rancher Lab's k3s in Docker
 k6                        0.26.2     A modern load testing tool, using Go and JavaScript - https://k6.io
 k9s                       0.20.2     Kubernetes CLI To Manage Your Clusters In Style
@@ -349,7 +349,7 @@ terrahelp                 0.7.4      Terrahelp is as a command line utility that
 tfenv                     0.4.0      Transform environment variables for use with Terraform (e.g. `HOSTNAME` ⇨ `TF_VAR_hostname`)
 tfmask                    0.4.0      Terraform utility to mask select output from `terraform plan` and `terraform apply`
 thanos                    0.12.2     Highly available Prometheus setup with long term storage capabilities. CNCF Sandbox project.
-trivy                     0.8.0      A Simple and Comprehensive Vulnerability Scanner for Containers, Suitable for CI
+trivy                     0.9.0      A Simple and Comprehensive Vulnerability Scanner for Containers, Suitable for CI
 variant                   0.36.5     Variant is a Universal CLI tool that works like a task runner
 variant2                  0.28.0     Second major version of Variant, a Universal CLI tool that works like a task runner
 vault                     1.4.2      Hashicorp vault
