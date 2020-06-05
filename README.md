@@ -263,7 +263,7 @@ chamber                   2.8.2      CLI for managing secrets
 cli53                     0.8.17     Command line tool for Amazon Route 53
 cloudflared               2020.3.2   Argo Tunnel client
 cloudposse-atlantis       0.9.0.3    Terraform For Teams, enhanced by Cloud Posse
-codefresh                 0.68.0     Codefresh CLI
+codefresh                 0.68.1     Codefresh CLI
 consul                    1.8.0-beta2 Hashicorp consul
 ctop                      0.7.3      Top-like interface for container metrics
 direnv                    2.21.3     Unclutter your .profile
@@ -285,7 +285,7 @@ gonsul                    0.2.1      A stand-alone alternative to git2consul
 goofys                    0.24.0     a high-performance, POSIX-ish Amazon S3 file system written in Go
 gosu                      1.12       Simple Go-based setuid+setgid+setgroups+exec
 gotop                     3.0.0      A terminal based graphical activity monitor inspired by gtop and vtop
-helm                      3.2.1      The Kubernetes Package Manager
+helm                      3.2.2      The Kubernetes Package Manager
 helm2                     2.16.6     The Kubernetes Package Manager
 helm3                     3.2.1      The Kubernetes Package Manager
 helmfile                  0.118.5    Deploy Kubernetes Helm Charts
@@ -322,7 +322,7 @@ nomad                     0.11.2     Hashicorp nomad
 pack                      0.11.0     Create cloud native Buildpacks
 packer                    1.5.6      Packer is a tool for creating identical machine images for multiple platforms from a single source configuration.
 pandoc                    2.9.2.1    Universal markup converter
-pgmetrics                 1.9.0      Postgres metrics
+pgmetrics                 1.9.1      Postgres metrics
 popeye                    0.8.4      A Kubernetes cluster resource sanitizer
 promtool                  2.18.1     Prometheus CLI tool
 rakkess                   0.4.4      Review Access - kubectl plugin to show an access matrix for all available resources
