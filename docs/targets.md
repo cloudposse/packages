@@ -45,10 +45,10 @@ hugo                      0.72.0     The world’s fastest framework for buildin
 jp                        0.1.3      Command line interface to JMESPath
 jq                        1.6        Command-line JSON processor
 json2hcl                  0.0.6      Convert JSON to HCL, and vice versa
-jx                        2.1.56     Jenkins-X
+jx                        2.1.58     Jenkins-X
 k3d                       1.7.0      Little helper to run Rancher Lab's k3s in Docker
 k6                        0.26.2     A modern load testing tool, using Go and JavaScript - https://k6.io
-k9s                       0.20.3     Kubernetes CLI To Manage Your Clusters In Style
+k9s                       0.20.5     Kubernetes CLI To Manage Your Clusters In Style
 katafygio                 0.8.1      K8s continuous backup to git
 kfctl                     1.0        Machine Learning Toolkit for Kubernetes
 kind                      0.8.1      A tool for running local Kubernetes clusters using Docker
@@ -69,7 +69,7 @@ lazydocker                0.9        The lazier way to manage everything docker
 lectl                     0.20       Script to check issued certificates by Let's Encrypt on CTL (Certificate Transparency Log) using https://crt.sh
 minikube                  1.11.0     Run Kubernetes locally
 misspell                  0.3.4      Correct commonly misspelled English words in source files
-nomad                     0.11.2     Hashicorp nomad
+nomad                     0.11.3     Hashicorp nomad
 pack                      0.11.0     Create cloud native Buildpacks
 packer                    1.5.6      Packer is a tool for creating identical machine images for multiple platforms from a single source configuration.
 pandoc                    2.9.2.1    Universal markup converter
