@@ -288,13 +288,13 @@ gotop                     3.0.0      A terminal based graphical activity monitor
 helm                      3.2.2      The Kubernetes Package Manager
 helm2                     2.16.6     The Kubernetes Package Manager
 helm3                     3.2.1      The Kubernetes Package Manager
-helmfile                  0.118.5    Deploy Kubernetes Helm Charts
+helmfile                  0.118.6    Deploy Kubernetes Helm Charts
 htmltest                  0.12.1     :white_check_mark: Test generated HTML for problems
 hugo                      0.72.0     The world’s fastest framework for building websites.
 jp                        0.1.3      Command line interface to JMESPath
 jq                        1.6        Command-line JSON processor
 json2hcl                  0.0.6      Convert JSON to HCL, and vice versa
-jx                        2.1.58     Jenkins-X
+jx                        2.1.59     Jenkins-X
 k3d                       1.7.0      Little helper to run Rancher Lab's k3s in Docker
 k6                        0.26.2     A modern load testing tool, using Go and JavaScript - https://k6.io
 k9s                       0.20.5     Kubernetes CLI To Manage Your Clusters In Style
@@ -323,7 +323,7 @@ pack                      0.11.0     Create cloud native Buildpacks
 packer                    1.5.6      Packer is a tool for creating identical machine images for multiple platforms from a single source configuration.
 pandoc                    2.9.2.1    Universal markup converter
 pgmetrics                 1.9.1      Postgres metrics
-popeye                    0.8.4      A Kubernetes cluster resource sanitizer
+popeye                    0.8.5      A Kubernetes cluster resource sanitizer
 promtool                  2.18.1     Prometheus CLI tool
 rakkess                   0.4.4      Review Access - kubectl plugin to show an access matrix for all available resources
 rancher                   2.4.3      Rancher CLI
