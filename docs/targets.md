@@ -1,7 +1,7 @@
 ## Makefile Targets
 ```
 amtool                    0.20.0     Tool for interacting with the Alertmanager API
-argocd                    1.5.5      Declarative GitOpts for Kubernetes
+argocd                    1.5.7      Declarative GitOpts for Kubernetes
 assume-role               0.3.2      Easily assume AWS roles in your terminal.
 atlantis                  0.13.0     Terraform For Teams
 awless                    0.1.11     A Mighty CLI for AWS
@@ -14,11 +14,11 @@ chamber                   2.8.2      CLI for managing secrets
 cli53                     0.8.17     Command line tool for Amazon Route 53
 cloudflared               2020.3.2   Argo Tunnel client
 cloudposse-atlantis       0.9.0.3    Terraform For Teams, enhanced by Cloud Posse
-codefresh                 0.64.0     Codefresh CLI
+codefresh                 0.68.4     Codefresh CLI
 consul                    1.7.3      Hashicorp consul
 ctop                      0.7.3      Top-like interface for container metrics
 direnv                    2.21.3     Unclutter your .profile
-doctl                     1.43.0     A command line tool for DigitalOcean services
+doctl                     1.45.0     A command line tool for DigitalOcean services
 duffle                    0.3.5b1    CNAB installer
 emailcli                  1.0.3      Command line email sending client written in Go.
 fargate                   0.3.2      CLI for AWS Fargate
@@ -36,23 +36,23 @@ gonsul                    0.2.1      A stand-alone alternative to git2consul
 goofys                    0.24.0     a high-performance, POSIX-ish Amazon S3 file system written in Go
 gosu                      1.12       Simple Go-based setuid+setgid+setgroups+exec
 gotop                     3.0.0      A terminal based graphical activity monitor inspired by gtop and vtop
-helm                      3.2.1      The Kubernetes Package Manager
+helm                      3.2.3      The Kubernetes Package Manager
 helm2                     2.16.6     The Kubernetes Package Manager
-helm3                     3.2.1      The Kubernetes Package Manager
-helmfile                  0.118.3    Deploy Kubernetes Helm Charts
+helm3                     3.2.3      The Kubernetes Package Manager
+helmfile                  0.118.7    Deploy Kubernetes Helm Charts
 htmltest                  0.12.1     :white_check_mark: Test generated HTML for problems
-hugo                      0.71.1     The world’s fastest framework for building websites.
+hugo                      0.72.0     The world’s fastest framework for building websites.
 jp                        0.1.3      Command line interface to JMESPath
 jq                        1.6        Command-line JSON processor
 json2hcl                  0.0.6      Convert JSON to HCL, and vice versa
-jx                        2.1.55     Jenkins-X
+jx                        2.1.62     Jenkins-X
 k3d                       1.7.0      Little helper to run Rancher Lab's k3s in Docker
 k6                        0.26.2     A modern load testing tool, using Go and JavaScript - https://k6.io
-k9s                       0.20.2     Kubernetes CLI To Manage Your Clusters In Style
+k9s                       0.20.5     Kubernetes CLI To Manage Your Clusters In Style
 katafygio                 0.8.1      K8s continuous backup to git
 kfctl                     1.0        Machine Learning Toolkit for Kubernetes
 kind                      0.8.1      A tool for running local Kubernetes clusters using Docker
-kops                      1.16.2     Kubernetes Operations (kops) - Production Grade K8s Installation, Upgrades, and Management
+kops                      1.17.0     Kubernetes Operations (kops) - Production Grade K8s Installation, Upgrades, and Management
 kops-1.12                 1.12.3     Kubernetes Operations (kops) - Production Grade K8s Installation, Upgrades, and Management
 krew                      0.3.4      Kubectl plugin manager
 kubecron                  1.0.2      Utilities to manage kubernetes cronjobs. Run a CronJob manually for test purposes. Suspend/unsuspend a CronJob
@@ -69,13 +69,14 @@ lazydocker                0.9        The lazier way to manage everything docker
 lectl                     0.20       Script to check issued certificates by Let's Encrypt on CTL (Certificate Transparency Log) using https://crt.sh
 minikube                  1.11.0     Run Kubernetes locally
 misspell                  0.3.4      Correct commonly misspelled English words in source files
-nomad                     0.11.2     Hashicorp nomad
-pack                      0.11.0     Create cloud native Buildpacks
-packer                    1.5.6      Packer is a tool for creating identical machine images for multiple platforms from a single source configuration.
+nomad                     0.11.3     Hashicorp nomad
+pack                      0.11.1     Create cloud native Buildpacks
+packer                    1.6.0      Packer is a tool for creating identical machine images for multiple platforms from a single source configuration.
 pandoc                    2.9.2.1    Universal markup converter
-pgmetrics                 1.9.0      Postgres metrics
-popeye                    0.8.4      A Kubernetes cluster resource sanitizer
-promtool                  2.18.1     Prometheus CLI tool
+pgmetrics                 1.9.1      Postgres metrics
+pluto                     2.3.0      A cli tool to help discover deprecated apiVersions in Kubernetes
+popeye                    0.8.6      A Kubernetes cluster resource sanitizer
+promtool                  2.19.0     Prometheus CLI tool
 rakkess                   0.4.4      Review Access - kubectl plugin to show an access matrix for all available resources
 rancher                   2.4.3      Rancher CLI
 rbac-lookup               0.5.0      Find Kubernetes roles and cluster roles bound to any user, service account, or group name.
@@ -83,7 +84,7 @@ retry                     3.3.0      ♻️ Functional mechanism based on channe
 saml2aws                  2.26.1     CLI tool which enables you to login and retrieve AWS temporary credentials using a SAML IDP
 scenery                   0.1.5      A Terraform plan output prettifier
 sentinel                  0.14.2     Hashicorp sentinel
-sentry-cli                1.53.0     A command line utility to work with Sentry.
+sentry-cli                1.54.0     A command line utility to work with Sentry.
 shellcheck                0.7.1      ShellCheck, a static analysis tool for shell scripts
 shfmt                     3.1.1      A shell parser, formatter and interpreter (POSIX/Bash/mksh)
 slack-notifier            0.2.0      Command line utility to send messages with attachments to Slack channels via Incoming Webhooks
@@ -95,13 +96,13 @@ terraform                 0.12.26    Terraform is a tool for building, changing,
 terraform-0.11            0.11.14    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-0.12            0.12.24    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-docs            0.9.1      Generate docs from terraform modules
-terragrunt                0.23.23    Terragrunt is a thin wrapper for Terraform that provides extra tools for working with multiple Terraform modules.
+terragrunt                0.23.24    Terragrunt is a thin wrapper for Terraform that provides extra tools for working with multiple Terraform modules.
 terrahelp                 0.7.4      Terrahelp is as a command line utility that provides useful tricks like masking of terraform output.
 tfenv                     0.4.0      Transform environment variables for use with Terraform (e.g. `HOSTNAME` ⇨ `TF_VAR_hostname`)
 tfmask                    0.4.0      Terraform utility to mask select output from `terraform plan` and `terraform apply`
 thanos                    0.12.2     Highly available Prometheus setup with long term storage capabilities. CNCF Sandbox project.
-trivy                     0.8.0      A Simple and Comprehensive Vulnerability Scanner for Containers, Suitable for CI
-variant                   0.36.4     Variant is a Universal CLI tool that works like a task runner
+trivy                     0.9.1      A Simple and Comprehensive Vulnerability Scanner for Containers, Suitable for CI
+variant                   0.36.5     Variant is a Universal CLI tool that works like a task runner
 variant2                  0.28.0     Second major version of Variant, a Universal CLI tool that works like a task runner
 vault                     1.4.2      Hashicorp vault
 venona                    0.32.1     Codefresh runtime-environment agent
