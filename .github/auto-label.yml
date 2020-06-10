@@ -90,6 +90,7 @@ vendor/pack: vendor/pack/**
 vendor/packer: vendor/packer/**
 vendor/pandoc: vendor/pandoc/**
 vendor/pgmetrics: vendor/pgmetrics/**
+vendor/pluto: vendor/pluto/**
 vendor/popeye: vendor/popeye/**
 vendor/promtool: vendor/promtool/**
 vendor/rakkess: vendor/rakkess/**
