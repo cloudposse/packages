@@ -264,10 +264,10 @@ cli53                     0.8.17     Command line tool for Amazon Route 53
 cloudflared               2020.3.2   Argo Tunnel client
 cloudposse-atlantis       0.9.0.3    Terraform For Teams, enhanced by Cloud Posse
 codefresh                 0.68.4     Codefresh CLI
-consul                    1.7.3      Hashicorp consul
+consul                    1.8.0-beta2 Hashicorp consul
 ctop                      0.7.3      Top-like interface for container metrics
 direnv                    2.21.3     Unclutter your .profile
-doctl                     1.45.0     A command line tool for DigitalOcean services
+doctl                     1.45.1     A command line tool for DigitalOcean services
 duffle                    0.3.5b1    CNAB installer
 emailcli                  1.0.3      Command line email sending client written in Go.
 fargate                   0.3.2      CLI for AWS Fargate
@@ -285,7 +285,7 @@ gonsul                    0.2.1      A stand-alone alternative to git2consul
 goofys                    0.24.0     a high-performance, POSIX-ish Amazon S3 file system written in Go
 gosu                      1.12       Simple Go-based setuid+setgid+setgroups+exec
 gotop                     3.0.0      A terminal based graphical activity monitor inspired by gtop and vtop
-helm                      3.2.3      The Kubernetes Package Manager
+helm                      2.16.8     The Kubernetes Package Manager
 helm2                     2.16.6     The Kubernetes Package Manager
 helm3                     3.2.3      The Kubernetes Package Manager
 helmfile                  0.118.7    Deploy Kubernetes Helm Charts
