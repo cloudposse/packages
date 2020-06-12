@@ -263,7 +263,7 @@ chamber                   2.8.2      CLI for managing secrets
 cli53                     0.8.17     Command line tool for Amazon Route 53
 cloudflared               2020.3.2   Argo Tunnel client
 cloudposse-atlantis       0.9.0.3    Terraform For Teams, enhanced by Cloud Posse
-codefresh                 0.68.4     Codefresh CLI
+codefresh                 0.68.6     Codefresh CLI
 consul                    1.8.0-beta2 Hashicorp consul
 ctop                      0.7.3      Top-like interface for container metrics
 direnv                    2.21.3     Unclutter your .profile
@@ -274,7 +274,7 @@ fargate                   0.3.2      CLI for AWS Fargate
 fetch                     0.3.9      fetch makes it easy to download files, folders, and release assets from a specific public git commit, branch, or tag
 figurine                  1.0.1      Print your name in style
 fzf                       0.21.1     A command-line fuzzy finder
-gh                        0.9.0      The GitHub CLI
+gh                        0.10.0     The GitHub CLI
 ghr                       0.13.0     Upload multiple artifacts to GitHub Releases in parallel
 github-commenter          0.5.0      Command line utility for creating GitHub comments on Commits, Pull Request Reviews or Issues
 github-release            0.8.1      Commandline app to create and edit releases on Github (and upload artifacts)
@@ -319,11 +319,11 @@ lectl                     0.20       Script to check issued certificates by Let'
 minikube                  1.11.0     Run Kubernetes locally
 misspell                  0.3.4      Correct commonly misspelled English words in source files
 nomad                     0.11.3     Hashicorp nomad
-pack                      0.11.1     Create cloud native Buildpacks
+pack                      0.11.2     Create cloud native Buildpacks
 packer                    1.6.0      Packer is a tool for creating identical machine images for multiple platforms from a single source configuration.
 pandoc                    2.9.2.1    Universal markup converter
 pgmetrics                 1.9.1      Postgres metrics
-pluto                     2.3.0      A cli tool to help discover deprecated apiVersions in Kubernetes
+pluto                     3.0.1      A cli tool to help discover deprecated apiVersions in Kubernetes
 popeye                    0.8.6      A Kubernetes cluster resource sanitizer
 promtool                  2.19.0     Prometheus CLI tool
 rakkess                   0.4.4      Review Access - kubectl plugin to show an access matrix for all available resources
@@ -345,7 +345,7 @@ terraform                 0.12.26    Terraform is a tool for building, changing,
 terraform-0.11            0.11.14    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-0.12            0.12.24    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-docs            0.9.1      Generate docs from terraform modules
-terragrunt                0.23.24    Terragrunt is a thin wrapper for Terraform that provides extra tools for working with multiple Terraform modules.
+terragrunt                0.23.25    Terragrunt is a thin wrapper for Terraform that provides extra tools for working with multiple Terraform modules.
 terrahelp                 0.7.4      Terrahelp is as a command line utility that provides useful tricks like masking of terraform output.
 tfenv                     0.4.0      Transform environment variables for use with Terraform (e.g. `HOSTNAME` ⇨ `TF_VAR_hostname`)
 tfmask                    0.4.0      Terraform utility to mask select output from `terraform plan` and `terraform apply`
@@ -356,7 +356,7 @@ variant2                  0.28.0     Second major version of Variant, a Universa
 vault                     1.4.2      Hashicorp vault
 venona                    0.32.1     Codefresh runtime-environment agent
 vert                      0.1.0      Simple CLI for comparing two or more versions
-yq                        3.3.0      yq is a portable command-line YAML processor
+yq                        3.3.1      yq is a portable command-line YAML processor
 ```
 
 
