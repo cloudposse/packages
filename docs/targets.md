@@ -45,7 +45,7 @@ hugo                      0.72.0     The world’s fastest framework for buildin
 jp                        0.1.3      Command line interface to JMESPath
 jq                        1.6        Command-line JSON processor
 json2hcl                  0.0.6      Convert JSON to HCL, and vice versa
-jx                        2.1.62     Jenkins-X
+jx                        2.1.65     Jenkins-X
 k3d                       1.7.0      Little helper to run Rancher Lab's k3s in Docker
 k6                        0.26.2     A modern load testing tool, using Go and JavaScript - https://k6.io
 k9s                       0.20.5     Kubernetes CLI To Manage Your Clusters In Style
@@ -96,7 +96,7 @@ terraform                 0.12.26    Terraform is a tool for building, changing,
 terraform-0.11            0.11.14    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-0.12            0.12.24    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-docs            0.9.1      Generate docs from terraform modules
-terragrunt                0.23.25    Terragrunt is a thin wrapper for Terraform that provides extra tools for working with multiple Terraform modules.
+terragrunt                0.23.26    Terragrunt is a thin wrapper for Terraform that provides extra tools for working with multiple Terraform modules.
 terrahelp                 0.7.4      Terrahelp is as a command line utility that provides useful tricks like masking of terraform output.
 tfenv                     0.4.0      Transform environment variables for use with Terraform (e.g. `HOSTNAME` ⇨ `TF_VAR_hostname`)
 tfmask                    0.4.0      Terraform utility to mask select output from `terraform plan` and `terraform apply`
