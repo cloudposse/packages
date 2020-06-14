@@ -107,5 +107,5 @@ variant2                  0.28.0     Second major version of Variant, a Universa
 vault                     1.4.2      Hashicorp vault
 venona                    0.32.1     Codefresh runtime-environment agent
 vert                      0.1.0      Simple CLI for comparing two or more versions
-yq                        3.3.1      yq is a portable command-line YAML processor
+yq                        3.3.2      yq is a portable command-line YAML processor
 ```
