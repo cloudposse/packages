@@ -308,9 +308,9 @@ kubecron                  1.0.2      Utilities to manage kubernetes cronjobs. Ru
 kubectl                   1.16.11    Production-Grade Container Scheduling and Management
 kubectl-1.13              1.13.12    Production-Grade Container Scheduling and Management (v1.13)
 kubectl-1.14              1.14.10    Production-Grade Container Scheduling and Management (v1.14)
-kubectl-1.15              1.15.11    Production-Grade Container Scheduling and Management (v1.15)
-kubectl-1.16              1.16.8     Production-Grade Container Scheduling and Management (v1.16)
-kubectl-1.17              1.17.4     Production-Grade Container Scheduling and Management (v1.17)
+kubectl-1.15              1.15.12    Production-Grade Container Scheduling and Management (v1.15)
+kubectl-1.16              1.16.11    Production-Grade Container Scheduling and Management (v1.16)
+kubectl-1.17              1.17.7     Production-Grade Container Scheduling and Management (v1.17)
 kubectx                   0.9.0      Switch faster between clusters and namespaces in kubectl
 kubens                    0.9.0      Switch faster between clusters and namespaces in kubectl
 kubeval                   0.15.0     Validate your Kubernetes configuration files, supports multiple Kubernetes versions
