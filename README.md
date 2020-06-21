@@ -348,7 +348,7 @@ terraform-docs            0.9.1      Generate docs from terraform modules
 terragrunt                0.23.27    Terragrunt is a thin wrapper for Terraform that provides extra tools for working with multiple Terraform modules.
 terrahelp                 0.7.4      Terrahelp is as a command line utility that provides useful tricks like masking of terraform output.
 tfenv                     0.4.0      Transform environment variables for use with Terraform (e.g. `HOSTNAME` ⇨ `TF_VAR_hostname`)
-tfmask                    0.4.0      Terraform utility to mask select output from `terraform plan` and `terraform apply`
+tfmask                    0.5.0      Terraform utility to mask select output from `terraform plan` and `terraform apply`
 thanos                    0.12.2     Highly available Prometheus setup with long term storage capabilities. CNCF Sandbox project.
 trivy                     0.9.1      A Simple and Comprehensive Vulnerability Scanner for Containers, Suitable for CI
 variant                   0.36.5     Variant is a Universal CLI tool that works like a task runner
