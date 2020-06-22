@@ -285,7 +285,7 @@ gonsul                    0.2.1      A stand-alone alternative to git2consul
 goofys                    0.24.0     a high-performance, POSIX-ish Amazon S3 file system written in Go
 gosu                      1.12       Simple Go-based setuid+setgid+setgroups+exec
 gotop                     3.0.0      A terminal based graphical activity monitor inspired by gtop and vtop
-helm                      3.2.4      The Kubernetes Package Manager
+helm                      2.16.9     The Kubernetes Package Manager
 helm2                     2.16.9     The Kubernetes Package Manager
 helm3                     3.2.4      The Kubernetes Package Manager
 helmfile                  0.119.0    Deploy Kubernetes Helm Charts
@@ -294,7 +294,7 @@ hugo                      0.72.0     The world’s fastest framework for buildin
 jp                        0.1.3      Command line interface to JMESPath
 jq                        1.6        Command-line JSON processor
 json2hcl                  0.0.6      Convert JSON to HCL, and vice versa
-jx                        2.1.76     Jenkins-X
+jx                        2.1.78     Jenkins-X
 k3d                       1.7.0      Little helper to run Rancher Lab's k3s in Docker
 k6                        0.26.2     A modern load testing tool, using Go and JavaScript - https://k6.io
 k9s                       0.20.5     Kubernetes CLI To Manage Your Clusters In Style
