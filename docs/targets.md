@@ -14,7 +14,7 @@ chamber                   2.8.2      CLI for managing secrets
 cli53                     0.8.17     Command line tool for Amazon Route 53
 cloudflared               2020.3.2   Argo Tunnel client
 cloudposse-atlantis       0.9.0.3    Terraform For Teams, enhanced by Cloud Posse
-codefresh                 0.68.13    Codefresh CLI
+codefresh                 0.68.17    Codefresh CLI
 consul                    1.8.0      Hashicorp consul
 ctop                      0.7.3      Top-like interface for container metrics
 direnv                    2.21.3     Unclutter your .profile
@@ -74,14 +74,14 @@ pack                      0.11.2     Create cloud native Buildpacks
 packer                    1.6.0      Packer is a tool for creating identical machine images for multiple platforms from a single source configuration.
 pandoc                    2.9.2.1    Universal markup converter
 pgmetrics                 1.9.1      Postgres metrics
-pluto                     3.0.1      A cli tool to help discover deprecated apiVersions in Kubernetes
+pluto                     3.1.0      A cli tool to help discover deprecated apiVersions in Kubernetes
 popeye                    0.8.6      A Kubernetes cluster resource sanitizer
 promtool                  2.19.1     Prometheus CLI tool
 rakkess                   0.4.4      Review Access - kubectl plugin to show an access matrix for all available resources
 rancher                   2.4.5      Rancher CLI
-rbac-lookup               0.5.0      Find Kubernetes roles and cluster roles bound to any user, service account, or group name.
+rbac-lookup               0.6.0      Find Kubernetes roles and cluster roles bound to any user, service account, or group name.
 retry                     3.3.0      ♻️ Functional mechanism based on channels to perform actions repetitively until successful.
-saml2aws                  2.26.1     CLI tool which enables you to login and retrieve AWS temporary credentials using a SAML IDP
+saml2aws                  2.26.2     CLI tool which enables you to login and retrieve AWS temporary credentials using a SAML IDP
 scenery                   0.1.5      A Terraform plan output prettifier
 sentinel                  0.14.2     Hashicorp sentinel
 sentry-cli                1.54.0     A command line utility to work with Sentry.
@@ -100,7 +100,7 @@ terragrunt                0.23.27    Terragrunt is a thin wrapper for Terraform 
 terrahelp                 0.7.4      Terrahelp is as a command line utility that provides useful tricks like masking of terraform output.
 tfenv                     0.4.0      Transform environment variables for use with Terraform (e.g. `HOSTNAME` ⇨ `TF_VAR_hostname`)
 tfmask                    0.5.0      Terraform utility to mask select output from `terraform plan` and `terraform apply`
-thanos                    0.12.2     Highly available Prometheus setup with long term storage capabilities. CNCF Sandbox project.
+thanos                    0.13.0     Highly available Prometheus setup with long term storage capabilities. CNCF Sandbox project.
 trivy                     0.9.1      A Simple and Comprehensive Vulnerability Scanner for Containers, Suitable for CI
 variant                   0.36.5     Variant is a Universal CLI tool that works like a task runner
 variant2                  0.28.0     Second major version of Variant, a Universal CLI tool that works like a task runner
