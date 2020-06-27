@@ -263,7 +263,7 @@ chamber                   2.8.2      CLI for managing secrets
 cli53                     0.8.17     Command line tool for Amazon Route 53
 cloudflared               2020.3.2   Argo Tunnel client
 cloudposse-atlantis       0.9.0.3    Terraform For Teams, enhanced by Cloud Posse
-codefresh                 0.69.2     Codefresh CLI
+codefresh                 0.69.3     Codefresh CLI
 consul                    1.8.0      Hashicorp consul
 ctop                      0.7.3      Top-like interface for container metrics
 direnv                    2.21.3     Unclutter your .profile
@@ -294,7 +294,7 @@ hugo                      0.73.0     The world’s fastest framework for buildin
 jp                        0.1.3      Command line interface to JMESPath
 jq                        1.6        Command-line JSON processor
 json2hcl                  0.0.6      Convert JSON to HCL, and vice versa
-jx                        2.1.82     Jenkins-X
+jx                        2.1.85     Jenkins-X
 k3d                       1.7.0      Little helper to run Rancher Lab's k3s in Docker
 k6                        0.26.2     A modern load testing tool, using Go and JavaScript - https://k6.io
 k9s                       0.20.5     Kubernetes CLI To Manage Your Clusters In Style
@@ -305,7 +305,7 @@ kops                      1.17.0     Kubernetes Operations (kops) - Production G
 kops-1.12                 1.12.3     Kubernetes Operations (kops) - Production Grade K8s Installation, Upgrades, and Management
 krew                      0.3.4      Kubectl plugin manager
 kubecron                  1.0.2      Utilities to manage kubernetes cronjobs. Run a CronJob manually for test purposes. Suspend/unsuspend a CronJob
-kubectl                   1.16.11    Production-Grade Container Scheduling and Management
+kubectl                   1.18.5     Production-Grade Container Scheduling and Management
 kubectl-1.13              1.13.12    Production-Grade Container Scheduling and Management (v1.13)
 kubectl-1.14              1.14.10    Production-Grade Container Scheduling and Management (v1.14)
 kubectl-1.15              1.15.12    Production-Grade Container Scheduling and Management (v1.15)
@@ -325,7 +325,7 @@ pandoc                    2.9.2.1    Universal markup converter
 pgmetrics                 1.9.2      Postgres metrics
 pluto                     3.1.1      A cli tool to help discover deprecated apiVersions in Kubernetes
 popeye                    0.8.6      A Kubernetes cluster resource sanitizer
-promtool                  2.19.1     Prometheus CLI tool
+promtool                  2.19.2     Prometheus CLI tool
 rakkess                   0.4.4      Review Access - kubectl plugin to show an access matrix for all available resources
 rancher                   2.4.5      Rancher CLI
 rbac-lookup               0.6.0      Find Kubernetes roles and cluster roles bound to any user, service account, or group name.
@@ -335,7 +335,7 @@ scenery                   0.1.5      A Terraform plan output prettifier
 sentinel                  0.14.2     Hashicorp sentinel
 sentry-cli                1.54.0     A command line utility to work with Sentry.
 shellcheck                0.7.1      ShellCheck, a static analysis tool for shell scripts
-shfmt                     3.1.1      A shell parser, formatter and interpreter (POSIX/Bash/mksh)
+shfmt                     3.1.2      A shell parser, formatter and interpreter (POSIX/Bash/mksh)
 slack-notifier            0.2.0      Command line utility to send messages with attachments to Slack channels via Incoming Webhooks
 sops                      3.5.0      Secrets management stinks, use some sops!
 stern                     1.11.0     ⎈ Multi pod and container log tailing for Kubernetes
