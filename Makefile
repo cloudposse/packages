@@ -93,6 +93,32 @@ docker/build/apk/shell:
 		-w /packages \
 		-v $$(pwd):/packages cloudposse/apkbuild:$(ALPINE_VERSION)
 
+## Build debian packages for testing
+docker/build/deb: DEBIAN_VERSION=stable-slim
+docker/build/deb:
+	docker build -t cloudposse/fpm:$(DEBIAN_VERSION) -f deb/Dockerfile .
+	docker run \
+		--name deb \
+		--rm \
+		-e TMP=/packages/tmp \
+		-e DEB_PACKAGES_PATH=/packages/artifacts/$(DEBIAN_VERSION) \
+		-v $$(pwd):/packages cloudposse/fpm:$(DEBIAN_VERSION) \
+		sh -c "make -C /packages/vendor/github-commenter deb"
+
+## Build debian packages for testing
+docker/build/deb/shell: DEBIAN_VERSION=stable-slim
+docker/build/deb/shell:
+	docker build -t cloudposse/fpm:$(DEBIAN_VERSION) -f deb/Dockerfile .
+	docker run \
+		-it \
+		--name deb \
+		--rm \
+		-e TMP=/packages/tmp \
+		-e DEB_PACKAGES_PATH=/packages/artifacts/$(DEBIAN_VERSION) \
+		-v $$(pwd):/packages cloudposse/fpm:$(DEBIAN_VERSION) \
+		bash
+
+
 help/vendor:
 	@$(MAKE) --no-print-directory -s -C vendor help
 

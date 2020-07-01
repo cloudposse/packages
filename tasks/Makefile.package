@@ -36,6 +36,9 @@ define download_binary
 	$(CURL) -o $(INSTALL_PATH)/$(PACKAGE_NAME) $(DOWNLOAD_URL) && chmod +x $(INSTALL_PATH)/$(PACKAGE_NAME)
 endef
 
+download/binary:
+	$(call download_binary)
+
 define download_binary_gz
 	mkdir -p $(INSTALL_PATH)
 	$(CURL) -o $(INSTALL_PATH)/$(PACKAGE_NAME).gz $(DOWNLOAD_URL)
@@ -44,6 +47,9 @@ define download_binary_gz
 	rm -f $(INSTALL_PATH)/$(PACKAGE_NAME).gz
 endef
 
+download/binary/gz:
+	$(call download_binary_gz)
+
 define download_binary_bz2
 	mkdir -p $(INSTALL_PATH)
 	$(CURL) -o $(INSTALL_PATH)/$(PACKAGE_NAME).bz2 $(DOWNLOAD_URL)
@@ -51,6 +57,9 @@ define download_binary_bz2
 	chmod +x $(INSTALL_PATH)/$(PACKAGE_NAME)
 	rm -f $(INSTALL_PATH)/$(PACKAGE_NAME).bz2
 endef
+
+download/binary/bz2:
+	$(call download_binary_bz2)
 
 define download_tarball
 	[ -n "$(TMP)" ] && [ -n "$(PACKAGE_NAME)" ] && rm -rf "$(TMP)/$(PACKAGE_NAME)"
@@ -61,6 +70,9 @@ define download_tarball
 	[ -n "$(TMP)" ] && [ -n "$(PACKAGE_NAME)" ] && rm -rf "$(TMP)/$(PACKAGE_NAME)"
 endef
 
+download/tarball:
+	$(call download_tarball)
+
 define download_tar_bz2
 	[ -n "$(TMP)" ] && [ -n "$(PACKAGE_NAME)" ] && rm -rf "$(TMP)/$(PACKAGE_NAME)"
 	mkdir -p $(TMP)/$(PACKAGE_NAME)
@@ -70,6 +82,9 @@ define download_tar_bz2
 	[ -n "$(TMP)" ] && [ -n "$(PACKAGE_NAME)" ] && rm -rf "$(TMP)/$(PACKAGE_NAME)"
 endef
 
+download/tar/bz2:
+	$(call download_tar_bz2)
+
 define download_tar_xz
 	[ -n "$(TMP)" ] && [ -n "$(PACKAGE_NAME)" ] && rm -rf "$(TMP)/$(PACKAGE_NAME)"
 	mkdir -p $(TMP)/$(PACKAGE_NAME)
@@ -78,6 +93,9 @@ define download_tar_xz
 	chmod +x $(INSTALL_PATH)/$(PACKAGE_NAME)
 	[ -n "$(TMP)" ] && [ -n "$(PACKAGE_NAME)" ] && rm -rf "$(TMP)/$(PACKAGE_NAME)"
 endef
+
+download/tar/xz:
+	$(call download_tar_xz)
 
 define download_zip
 	[ -n "$(TMP)" ] && [ -n "$(PACKAGE_NAME)" ] && rm -rf "$(TMP)/$(PACKAGE_NAME)"
@@ -89,6 +107,9 @@ define download_zip
 	[ -n "$(TMP)" ] && [ -n "$(PACKAGE_NAME)" ] && rm -rf "$(TMP)/$(PACKAGE_NAME)"
 endef
 
+download/zip:
+	$(call download_zip)
+
 define download_gz
 	[ -n "$(TMP)" ] && [ -n "$(PACKAGE_NAME)" ] && rm -rf "$(TMP)/$(PACKAGE_NAME)"
 	mkdir -p $(TMP)/$(PACKAGE_NAME)
@@ -98,6 +119,9 @@ define download_gz
 	chmod +x $(INSTALL_PATH)/$(PACKAGE_NAME)
 	[ -n "$(TMP)" ] && [ -n "$(PACKAGE_NAME)" ] && rm -rf "$(TMP)/$(PACKAGE_NAME)"
 endef
+
+download/gz:
+	$(call download_gz)
 
 default: info
 
