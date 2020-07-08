@@ -3,7 +3,7 @@
 amtool                    0.21.0     Tool for interacting with the Alertmanager API
 argocd                    1.6.1      Declarative GitOpts for Kubernetes
 assume-role               0.3.2      Easily assume AWS roles in your terminal.
-atlantis                  0.13.0     Terraform For Teams
+atlantis                  0.14.0     Terraform For Teams
 awless                    0.1.11     A Mighty CLI for AWS
 aws-iam-authenticator     0.5.1      A tool to use AWS IAM credentials to authenticate to a Kubernetes cluster
 aws-okta                  0.19.4     aws-okta allows users to authenticate with AWS using Okta credentials
@@ -27,7 +27,7 @@ figurine                  1.0.1      Print your name in style
 fzf                       0.21.1     A command-line fuzzy finder
 gh                        0.10.1     The GitHub CLI
 ghr                       0.13.0     Upload multiple artifacts to GitHub Releases in parallel
-github-commenter          0.6.1      Command line utility for creating GitHub comments on Commits, Pull Request Reviews or Issues
+github-commenter          0.7.0      Command line utility for creating GitHub comments on Commits, Pull Request Reviews or Issues
 github-release            0.8.1      Commandline app to create and edit releases on Github (and upload artifacts)
 github-status-updater     0.5.0      Command line utility for updating GitHub commit statuses and enabling required status checks for pull requests
 gitleaks                  1.2.0      Audit git repos for secrets 🔑
@@ -45,7 +45,7 @@ hugo                      0.73.0     The world’s fastest framework for buildin
 jp                        0.1.3      Command line interface to JMESPath
 jq                        1.6        Command-line JSON processor
 json2hcl                  0.0.6      Convert JSON to HCL, and vice versa
-jx                        2.1.95     Jenkins-X
+jx                        2.1.97     Jenkins-X
 k3d                       1.7.0      Little helper to run Rancher Lab's k3s in Docker
 k6                        0.26.2     A modern load testing tool, using Go and JavaScript - https://k6.io
 k9s                       0.21.2     Kubernetes CLI To Manage Your Clusters In Style
@@ -70,7 +70,7 @@ lectl                     0.20       Script to check issued certificates by Let'
 minikube                  1.11.0     Run Kubernetes locally
 misspell                  0.3.4      Correct commonly misspelled English words in source files
 nomad                     0.11.3     Hashicorp nomad
-pack                      0.11.2     Create cloud native Buildpacks
+pack                      0.12.0     Create cloud native Buildpacks
 packer                    1.6.0      Packer is a tool for creating identical machine images for multiple platforms from a single source configuration.
 pandoc                    2.10       Universal markup converter
 pgmetrics                 1.9.2      Postgres metrics
