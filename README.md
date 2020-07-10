@@ -263,7 +263,7 @@ chamber                   2.8.2      CLI for managing secrets
 cli53                     0.8.17     Command line tool for Amazon Route 53
 cloudflared               2020.3.2   Argo Tunnel client
 cloudposse-atlantis       0.9.0.3    Terraform For Teams, enhanced by Cloud Posse
-codefresh                 0.70.2     Codefresh CLI
+codefresh                 0.70.3     Codefresh CLI
 consul                    1.8.0      Hashicorp consul
 ctop                      0.7.3      Top-like interface for container metrics
 direnv                    2.21.3     Unclutter your .profile
@@ -316,14 +316,14 @@ kubens                    0.9.1      Switch faster between clusters and namespac
 kubeval                   0.15.0     Validate your Kubernetes configuration files, supports multiple Kubernetes versions
 lazydocker                0.9        The lazier way to manage everything docker
 lectl                     0.20       Script to check issued certificates by Let's Encrypt on CTL (Certificate Transparency Log) using https://crt.sh
-minikube                  1.11.0     Run Kubernetes locally
+minikube                  1.12.0     Run Kubernetes locally
 misspell                  0.3.4      Correct commonly misspelled English words in source files
-nomad                     0.11.3     Hashicorp nomad
+nomad                     0.12.0     Hashicorp nomad
 pack                      0.12.0     Create cloud native Buildpacks
 packer                    1.6.0      Packer is a tool for creating identical machine images for multiple platforms from a single source configuration.
 pandoc                    2.10       Universal markup converter
 pgmetrics                 1.9.2      Postgres metrics
-pluto                     3.1.2      A cli tool to help discover deprecated apiVersions in Kubernetes
+pluto                     3.2.0      A cli tool to help discover deprecated apiVersions in Kubernetes
 popeye                    0.8.7      A Kubernetes cluster resource sanitizer
 promtool                  2.19.2     Prometheus CLI tool
 rakkess                   0.4.4      Review Access - kubectl plugin to show an access matrix for all available resources
