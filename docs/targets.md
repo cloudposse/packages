@@ -45,7 +45,7 @@ hugo                      0.73.0     The world’s fastest framework for buildin
 jp                        0.1.3      Command line interface to JMESPath
 jq                        1.6        Command-line JSON processor
 json2hcl                  0.0.6      Convert JSON to HCL, and vice versa
-jx                        2.1.97     Jenkins-X
+jx                        2.1.98     Jenkins-X
 k3d                       1.7.0      Little helper to run Rancher Lab's k3s in Docker
 k6                        0.26.2     A modern load testing tool, using Go and JavaScript - https://k6.io
 k9s                       0.21.2     Kubernetes CLI To Manage Your Clusters In Style
@@ -100,7 +100,7 @@ terragrunt                0.23.31    Terragrunt is a thin wrapper for Terraform 
 terrahelp                 0.7.4      Terrahelp is as a command line utility that provides useful tricks like masking of terraform output.
 tfenv                     0.4.0      Transform environment variables for use with Terraform (e.g. `HOSTNAME` ⇨ `TF_VAR_hostname`)
 tfmask                    0.6.1      Terraform utility to mask select output from `terraform plan` and `terraform apply`
-thanos                    0.13.0     Highly available Prometheus setup with long term storage capabilities. CNCF Sandbox project.
+thanos                    0.14.0     Highly available Prometheus setup with long term storage capabilities. CNCF Sandbox project.
 trivy                     0.9.1      A Simple and Comprehensive Vulnerability Scanner for Containers, Suitable for CI
 variant                   0.36.5     Variant is a Universal CLI tool that works like a task runner
 variant2                  0.28.0     Second major version of Variant, a Universal CLI tool that works like a task runner
