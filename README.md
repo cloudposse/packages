@@ -294,9 +294,9 @@ hugo                      0.74.1     The world’s fastest framework for buildin
 jp                        0.1.3      Command line interface to JMESPath
 jq                        1.6        Command-line JSON processor
 json2hcl                  0.0.6      Convert JSON to HCL, and vice versa
-jx                        2.1.98     Jenkins-X
+jx                        2.1.99     Jenkins-X
 k3d                       1.7.0      Little helper to run Rancher Lab's k3s in Docker
-k6                        0.26.2     A modern load testing tool, using Go and JavaScript - https://k6.io
+k6                        0.27.0     A modern load testing tool, using Go and JavaScript - https://k6.io
 k9s                       0.21.2     Kubernetes CLI To Manage Your Clusters In Style
 katafygio                 0.8.1      K8s continuous backup to git
 kfctl                     1.0        Machine Learning Toolkit for Kubernetes
@@ -323,7 +323,7 @@ pack                      0.12.0     Create cloud native Buildpacks
 packer                    1.6.0      Packer is a tool for creating identical machine images for multiple platforms from a single source configuration.
 pandoc                    2.10       Universal markup converter
 pgmetrics                 1.9.2      Postgres metrics
-pluto                     3.2.0      A cli tool to help discover deprecated apiVersions in Kubernetes
+pluto                     3.3.0      A cli tool to help discover deprecated apiVersions in Kubernetes
 popeye                    0.8.7      A Kubernetes cluster resource sanitizer
 promtool                  2.19.2     Prometheus CLI tool
 rakkess                   0.4.4      Review Access - kubectl plugin to show an access matrix for all available resources
