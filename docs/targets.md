@@ -15,7 +15,7 @@ chamber                   2.8.2      CLI for managing secrets
 cli53                     0.8.17     Command line tool for Amazon Route 53
 cloudflared               2020.3.2   Argo Tunnel client
 cloudposse-atlantis       0.9.0.3    Terraform For Teams, enhanced by Cloud Posse
-codefresh                 0.70.4     Codefresh CLI
+codefresh                 0.70.5     Codefresh CLI
 consul                    1.8.0      Hashicorp consul
 ctop                      0.7.3      Top-like interface for container metrics
 direnv                    2.21.3     Unclutter your .profile
@@ -26,7 +26,7 @@ fargate                   0.3.2      CLI for AWS Fargate
 fetch                     0.3.9      fetch makes it easy to download files, folders, and release assets from a specific public git commit, branch, or tag
 figurine                  1.0.1      Print your name in style
 fzf                       0.21.1     A command-line fuzzy finder
-gh                        0.10.1     The GitHub CLI
+gh                        0.11.0     The GitHub CLI
 ghr                       0.13.0     Upload multiple artifacts to GitHub Releases in parallel
 github-commenter          0.7.0      Command line utility for creating GitHub comments on Commits, Pull Request Reviews or Issues
 github-release            0.8.1      Commandline app to create and edit releases on Github (and upload artifacts)
@@ -40,7 +40,7 @@ gotop                     3.0.0      A terminal based graphical activity monitor
 helm                      2.16.9     The Kubernetes Package Manager
 helm2                     2.16.9     The Kubernetes Package Manager
 helm3                     3.2.4      The Kubernetes Package Manager
-helmfile                  0.120.0    Deploy Kubernetes Helm Charts
+helmfile                  0.121.0    Deploy Kubernetes Helm Charts
 htmltest                  0.12.1     :white_check_mark: Test generated HTML for problems
 hugo                      0.74.1     The world’s fastest framework for building websites.
 jp                        0.1.3      Command line interface to JMESPath
