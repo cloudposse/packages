@@ -244,7 +244,7 @@ chamber                   2.8.2      CLI for managing secrets
 cli53                     0.8.17     Command line tool for Amazon Route 53
 cloudflared               2020.3.2   Argo Tunnel client
 cloudposse-atlantis       0.9.0.3    Terraform For Teams, enhanced by Cloud Posse
-codefresh                 0.70.5     Codefresh CLI
+codefresh                 0.70.7     Codefresh CLI
 consul                    1.8.0      Hashicorp consul
 ctop                      0.7.3      Top-like interface for container metrics
 direnv                    2.21.3     Unclutter your .profile
@@ -269,14 +269,14 @@ gotop                     3.0.0      A terminal based graphical activity monitor
 helm                      2.16.9     The Kubernetes Package Manager
 helm2                     2.16.9     The Kubernetes Package Manager
 helm3                     3.2.4      The Kubernetes Package Manager
-helmfile                  0.121.0    Deploy Kubernetes Helm Charts
+helmfile                  0.121.1    Deploy Kubernetes Helm Charts
 htmltest                  0.12.1     :white_check_mark: Test generated HTML for problems
-hugo                      0.74.1     The world’s fastest framework for building websites.
+hugo                      0.74.2     The world’s fastest framework for building websites.
 jp                        0.1.3      Command line interface to JMESPath
 jq                        1.6        Command-line JSON processor
 json2hcl                  0.0.6      Convert JSON to HCL, and vice versa
 jx                        2.1.100    Jenkins-X
-k3d                       1.7.0      Little helper to run Rancher Lab's k3s in Docker
+k3d                       3.0.0      Little helper to run Rancher Lab's k3s in Docker
 k6                        0.27.0     A modern load testing tool, using Go and JavaScript - https://k6.io
 k9s                       0.21.2     Kubernetes CLI To Manage Your Clusters In Style
 katafygio                 0.8.1      K8s continuous backup to git
@@ -297,14 +297,14 @@ kubens                    0.9.1      Switch faster between clusters and namespac
 kubeval                   0.15.0     Validate your Kubernetes configuration files, supports multiple Kubernetes versions
 lazydocker                0.9        The lazier way to manage everything docker
 lectl                     0.20       Script to check issued certificates by Let's Encrypt on CTL (Certificate Transparency Log) using https://crt.sh
-minikube                  1.12.0     Run Kubernetes locally
+minikube                  1.12.1     Run Kubernetes locally
 misspell                  0.3.4      Correct commonly misspelled English words in source files
 nomad                     0.12.0     Hashicorp nomad
 pack                      0.12.0     Create cloud native Buildpacks
 packer                    1.6.0      Packer is a tool for creating identical machine images for multiple platforms from a single source configuration.
 pandoc                    2.10       Universal markup converter
 pgmetrics                 1.9.2      Postgres metrics
-pluto                     3.3.0      A cli tool to help discover deprecated apiVersions in Kubernetes
+pluto                     3.4.0      A cli tool to help discover deprecated apiVersions in Kubernetes
 popeye                    0.8.8      A Kubernetes cluster resource sanitizer
 promtool                  2.19.2     Prometheus CLI tool
 rakkess                   0.4.4      Review Access - kubectl plugin to show an access matrix for all available resources
