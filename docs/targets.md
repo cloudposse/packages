@@ -15,7 +15,7 @@ chamber                   2.8.2      CLI for managing secrets
 cli53                     0.8.17     Command line tool for Amazon Route 53
 cloudflared               2020.3.2   Argo Tunnel client
 cloudposse-atlantis       0.9.0.3    Terraform For Teams, enhanced by Cloud Posse
-codefresh                 0.70.7     Codefresh CLI
+codefresh                 0.71.0     Codefresh CLI
 consul                    1.8.0      Hashicorp consul
 ctop                      0.7.3      Top-like interface for container metrics
 direnv                    2.21.3     Unclutter your .profile
@@ -46,7 +46,7 @@ hugo                      0.74.2     The world’s fastest framework for buildin
 jp                        0.1.3      Command line interface to JMESPath
 jq                        1.6        Command-line JSON processor
 json2hcl                  0.0.6      Convert JSON to HCL, and vice versa
-jx                        2.1.100    Jenkins-X
+jx                        2.1.109    Jenkins-X
 k3d                       3.0.0      Little helper to run Rancher Lab's k3s in Docker
 k6                        0.27.0     A modern load testing tool, using Go and JavaScript - https://k6.io
 k9s                       0.21.2     Kubernetes CLI To Manage Your Clusters In Style
@@ -105,7 +105,7 @@ thanos                    0.14.0     Highly available Prometheus setup with long
 trivy                     0.9.2      A Simple and Comprehensive Vulnerability Scanner for Containers, Suitable for CI
 variant                   0.36.5     Variant is a Universal CLI tool that works like a task runner
 variant2                  0.28.0     Second major version of Variant, a Universal CLI tool that works like a task runner
-vault                     1.5.0-rc   Hashicorp vault
+vault                     1.5.0      Hashicorp vault
 venona                    0.32.1     Codefresh runtime-environment agent
 vert                      0.1.0      Simple CLI for comparing two or more versions
 yq                        3.3.2      yq is a portable command-line YAML processor
