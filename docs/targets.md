@@ -15,11 +15,11 @@ chamber                   2.8.2      CLI for managing secrets
 cli53                     0.8.17     Command line tool for Amazon Route 53
 cloudflared               2020.3.2   Argo Tunnel client
 cloudposse-atlantis       0.9.0.3    Terraform For Teams, enhanced by Cloud Posse
-codefresh                 0.71.0     Codefresh CLI
+codefresh                 0.71.3     Codefresh CLI
 consul                    1.8.0      Hashicorp consul
 ctop                      0.7.3      Top-like interface for container metrics
 direnv                    2.21.3     Unclutter your .profile
-doctl                     1.45.1     A command line tool for DigitalOcean services
+doctl                     1.46.0     A command line tool for DigitalOcean services
 duffle                    0.3.5b1    CNAB installer
 emailcli                  1.0.3      Command line email sending client written in Go.
 fargate                   0.3.2      CLI for AWS Fargate
@@ -40,13 +40,13 @@ gotop                     3.0.0      A terminal based graphical activity monitor
 helm                      2.16.9     The Kubernetes Package Manager
 helm2                     2.16.9     The Kubernetes Package Manager
 helm3                     3.2.4      The Kubernetes Package Manager
-helmfile                  0.123.0    Deploy Kubernetes Helm Charts
+helmfile                  0.125.0    Deploy Kubernetes Helm Charts
 htmltest                  0.12.1     :white_check_mark: Test generated HTML for problems
 hugo                      0.74.2     The world’s fastest framework for building websites.
 jp                        0.1.3      Command line interface to JMESPath
 jq                        1.6        Command-line JSON processor
 json2hcl                  0.0.6      Convert JSON to HCL, and vice versa
-jx                        2.1.109    Jenkins-X
+jx                        2.1.111    Jenkins-X
 k3d                       3.0.0      Little helper to run Rancher Lab's k3s in Docker
 k6                        0.27.0     A modern load testing tool, using Go and JavaScript - https://k6.io
 k9s                       0.21.2     Kubernetes CLI To Manage Your Clusters In Style
@@ -77,7 +77,7 @@ pandoc                    2.10       Universal markup converter
 pgmetrics                 1.9.2      Postgres metrics
 pluto                     3.4.0      A cli tool to help discover deprecated apiVersions in Kubernetes
 popeye                    0.8.8      A Kubernetes cluster resource sanitizer
-promtool                  2.19.2     Prometheus CLI tool
+promtool                  2.20.0     Prometheus CLI tool
 rakkess                   0.4.4      Review Access - kubectl plugin to show an access matrix for all available resources
 rancher                   2.4.5      Rancher CLI
 rbac-lookup               0.6.0      Find Kubernetes roles and cluster roles bound to any user, service account, or group name.
@@ -93,7 +93,7 @@ sops                      3.6.0      Secrets management stinks, use some sops!
 stern                     1.11.0     ⎈ Multi pod and container log tailing for Kubernetes
 sudosh                    0.3.0      Shell wrapper to run a login shell with `sudo` as the current user for the purpose of audit logging
 teleport                  4.3.0      Privileged access management for elastic infrastructure.
-terraform                 0.12.28    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
+terraform                 0.12.29    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-0.11            0.11.14    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-0.12            0.12.24    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-docs            0.9.1      Generate docs from terraform modules
