@@ -46,10 +46,10 @@ hugo                      0.74.3     The world’s fastest framework for buildin
 jp                        0.1.3      Command line interface to JMESPath
 jq                        1.6        Command-line JSON processor
 json2hcl                  0.0.6      Convert JSON to HCL, and vice versa
-jx                        2.1.111    Jenkins-X
+jx                        2.1.114    Jenkins-X
 k3d                       3.0.0      Little helper to run Rancher Lab's k3s in Docker
 k6                        0.27.0     A modern load testing tool, using Go and JavaScript - https://k6.io
-k9s                       0.21.3     Kubernetes CLI To Manage Your Clusters In Style
+k9s                       0.21.4     Kubernetes CLI To Manage Your Clusters In Style
 katafygio                 0.8.1      K8s continuous backup to git
 kfctl                     1.0        Machine Learning Toolkit for Kubernetes
 kind                      0.8.1      A tool for running local Kubernetes clusters using Docker
@@ -73,7 +73,7 @@ misspell                  0.3.4      Correct commonly misspelled English words i
 nomad                     0.12.1     Hashicorp nomad
 pack                      0.12.0     Create cloud native Buildpacks
 packer                    1.6.0      Packer is a tool for creating identical machine images for multiple platforms from a single source configuration.
-pandoc                    2.10       Universal markup converter
+pandoc                    2.10.1     Universal markup converter
 pgmetrics                 1.9.2      Postgres metrics
 pluto                     3.4.0      A cli tool to help discover deprecated apiVersions in Kubernetes
 popeye                    0.8.8      A Kubernetes cluster resource sanitizer
