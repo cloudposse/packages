@@ -255,7 +255,7 @@ fargate                   0.3.2      CLI for AWS Fargate
 fetch                     0.3.9      fetch makes it easy to download files, folders, and release assets from a specific public git commit, branch, or tag
 figurine                  1.0.1      Print your name in style
 fzf                       0.21.1     A command-line fuzzy finder
-gh                        0.11.0     The GitHub CLI
+gh                        0.11.1     The GitHub CLI
 ghr                       0.13.0     Upload multiple artifacts to GitHub Releases in parallel
 github-commenter          0.7.0      Command line utility for creating GitHub comments on Commits, Pull Request Reviews or Issues
 github-release            0.8.1      Commandline app to create and edit releases on Github (and upload artifacts)
@@ -275,7 +275,7 @@ hugo                      0.74.3     The world’s fastest framework for buildin
 jp                        0.1.3      Command line interface to JMESPath
 jq                        1.6        Command-line JSON processor
 json2hcl                  0.0.6      Convert JSON to HCL, and vice versa
-jx                        2.1.114    Jenkins-X
+jx                        2.1.118    Jenkins-X
 k3d                       3.0.0      Little helper to run Rancher Lab's k3s in Docker
 k6                        0.27.0     A modern load testing tool, using Go and JavaScript - https://k6.io
 k9s                       0.21.4     Kubernetes CLI To Manage Your Clusters In Style
@@ -321,7 +321,7 @@ slack-notifier            0.3.0      Command line utility to send messages with 
 sops                      3.6.0      Secrets management stinks, use some sops!
 stern                     1.11.0     ⎈ Multi pod and container log tailing for Kubernetes
 sudosh                    0.3.0      Shell wrapper to run a login shell with `sudo` as the current user for the purpose of audit logging
-teleport                  4.3.0      Privileged access management for elastic infrastructure.
+teleport                  4.3.2      Privileged access management for elastic infrastructure.
 terraform                 0.12.29    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-0.11            0.11.14    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-0.12            0.12.24    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
