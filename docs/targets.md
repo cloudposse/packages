@@ -15,8 +15,8 @@ chamber                   2.8.2      CLI for managing secrets
 cli53                     0.8.17     Command line tool for Amazon Route 53
 cloudflared               2020.3.2   Argo Tunnel client
 cloudposse-atlantis       0.9.0.3    Terraform For Teams, enhanced by Cloud Posse
-codefresh                 0.71.6     Codefresh CLI
-consul                    1.8.0      Hashicorp consul
+codefresh                 0.71.7     Codefresh CLI
+consul                    1.8.1      Hashicorp consul
 ctop                      0.7.3      Top-like interface for container metrics
 direnv                    2.21.3     Unclutter your .profile
 doctl                     1.46.0     A command line tool for DigitalOcean services
@@ -48,7 +48,7 @@ jq                        1.6        Command-line JSON processor
 json2hcl                  0.0.6      Convert JSON to HCL, and vice versa
 jx                        2.1.118    Jenkins-X
 k3d                       3.0.0      Little helper to run Rancher Lab's k3s in Docker
-k6                        0.27.0     A modern load testing tool, using Go and JavaScript - https://k6.io
+k6                        0.27.1     A modern load testing tool, using Go and JavaScript - https://k6.io
 k9s                       0.21.4     Kubernetes CLI To Manage Your Clusters In Style
 katafygio                 0.8.1      K8s continuous backup to git
 kfctl                     1.0        Machine Learning Toolkit for Kubernetes
@@ -72,7 +72,7 @@ minikube                  1.12.1     Run Kubernetes locally
 misspell                  0.3.4      Correct commonly misspelled English words in source files
 nomad                     0.12.1     Hashicorp nomad
 pack                      0.12.0     Create cloud native Buildpacks
-packer                    1.6.0      Packer is a tool for creating identical machine images for multiple platforms from a single source configuration.
+packer                    1.6.1      Packer is a tool for creating identical machine images for multiple platforms from a single source configuration.
 pandoc                    2.10.1     Universal markup converter
 pgmetrics                 1.9.2      Postgres metrics
 pluto                     3.4.0      A cli tool to help discover deprecated apiVersions in Kubernetes
@@ -102,7 +102,7 @@ terrahelp                 0.7.4      Terrahelp is as a command line utility that
 tfenv                     0.4.0      Transform environment variables for use with Terraform (e.g. `HOSTNAME` ⇨ `TF_VAR_hostname`)
 tfmask                    0.6.1      Terraform utility to mask select output from `terraform plan` and `terraform apply`
 thanos                    0.14.0     Highly available Prometheus setup with long term storage capabilities. CNCF Sandbox project.
-trivy                     0.9.2      A Simple and Comprehensive Vulnerability Scanner for Containers, Suitable for CI
+trivy                     0.10.1     A Simple and Comprehensive Vulnerability Scanner for Containers, Suitable for CI
 variant                   0.36.5     Variant is a Universal CLI tool that works like a task runner
 variant2                  0.28.0     Second major version of Variant, a Universal CLI tool that works like a task runner
 vault                     1.5.0      Hashicorp vault
