@@ -252,7 +252,7 @@ doctl                     1.46.0     A command line tool for DigitalOcean servic
 duffle                    0.3.5b1    CNAB installer
 emailcli                  1.0.3      Command line email sending client written in Go.
 fargate                   0.3.2      CLI for AWS Fargate
-fetch                     0.3.9      fetch makes it easy to download files, folders, and release assets from a specific public git commit, branch, or tag
+fetch                     0.3.10     fetch makes it easy to download files, folders, and release assets from a specific public git commit, branch, or tag
 figurine                  1.0.1      Print your name in style
 fzf                       0.21.1     A command-line fuzzy finder
 gh                        0.11.1     The GitHub CLI
@@ -269,7 +269,7 @@ gotop                     3.0.0      A terminal based graphical activity monitor
 helm                      2.16.9     The Kubernetes Package Manager
 helm2                     2.16.9     The Kubernetes Package Manager
 helm3                     3.2.4      The Kubernetes Package Manager
-helmfile                  0.125.0    Deploy Kubernetes Helm Charts
+helmfile                  0.125.1    Deploy Kubernetes Helm Charts
 htmltest                  0.12.1     :white_check_mark: Test generated HTML for problems
 hugo                      0.74.3     The world’s fastest framework for building websites.
 jp                        0.1.3      Command line interface to JMESPath
@@ -278,7 +278,7 @@ json2hcl                  0.0.6      Convert JSON to HCL, and vice versa
 jx                        2.1.121    Jenkins-X
 k3d                       3.0.0      Little helper to run Rancher Lab's k3s in Docker
 k6                        0.27.1     A modern load testing tool, using Go and JavaScript - https://k6.io
-k9s                       0.21.4     Kubernetes CLI To Manage Your Clusters In Style
+k9s                       0.21.5     Kubernetes CLI To Manage Your Clusters In Style
 katafygio                 0.8.1      K8s continuous backup to git
 kfctl                     1.0        Machine Learning Toolkit for Kubernetes
 kind                      0.8.1      A tool for running local Kubernetes clusters using Docker
