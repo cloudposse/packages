@@ -1,6 +1,5 @@
-<!-- markdownlint-disable -->
 ## Makefile Targets
-```text
+```
 amtool                    0.21.0     Tool for interacting with the Alertmanager API
 argocd                    1.6.2      Declarative GitOpts for Kubernetes
 assume-role               0.3.2      Easily assume AWS roles in your terminal.
@@ -37,7 +36,7 @@ gonsul                    0.2.1      A stand-alone alternative to git2consul
 goofys                    0.24.0     a high-performance, POSIX-ish Amazon S3 file system written in Go
 gosu                      1.12       Simple Go-based setuid+setgid+setgroups+exec
 gotop                     3.0.0      A terminal based graphical activity monitor inspired by gtop and vtop
-helm                      2.16.9     The Kubernetes Package Manager
+helm                      3.2.4      The Kubernetes Package Manager
 helm2                     2.16.9     The Kubernetes Package Manager
 helm3                     3.2.4      The Kubernetes Package Manager
 helmfile                  0.125.1    Deploy Kubernetes Helm Charts
@@ -61,8 +60,8 @@ kubectl                   1.18.6     Production-Grade Container Scheduling and M
 kubectl-1.13              1.13.12    Production-Grade Container Scheduling and Management (v1.13)
 kubectl-1.14              1.14.10    Production-Grade Container Scheduling and Management (v1.14)
 kubectl-1.15              1.15.12    Production-Grade Container Scheduling and Management (v1.15)
-kubectl-1.16              1.16.11    Production-Grade Container Scheduling and Management (v1.16)
-kubectl-1.17              1.17.7     Production-Grade Container Scheduling and Management (v1.17)
+kubectl-1.16              1.16.13    Production-Grade Container Scheduling and Management (v1.16)
+kubectl-1.17              1.17.9     Production-Grade Container Scheduling and Management (v1.17)
 kubectx                   0.9.1      Switch faster between clusters and namespaces in kubectl
 kubens                    0.9.1      Switch faster between clusters and namespaces in kubectl
 kubeval                   0.15.0     Validate your Kubernetes configuration files, supports multiple Kubernetes versions
@@ -92,7 +91,7 @@ slack-notifier            0.3.0      Command line utility to send messages with 
 sops                      3.6.0      Secrets management stinks, use some sops!
 stern                     1.11.0     ⎈ Multi pod and container log tailing for Kubernetes
 sudosh                    0.3.0      Shell wrapper to run a login shell with `sudo` as the current user for the purpose of audit logging
-teleport                  4.3.2      Privileged access management for elastic infrastructure.
+teleport                  4.0.16     Privileged access management for elastic infrastructure.
 terraform                 0.12.29    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-0.11            0.11.14    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-0.12            0.12.24    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
@@ -110,4 +109,3 @@ venona                    0.32.1     Codefresh runtime-environment agent
 vert                      0.1.0      Simple CLI for comparing two or more versions
 yq                        3.3.2      yq is a portable command-line YAML processor
 ```
-<!-- markdownlint-restore -->
