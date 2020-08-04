@@ -1,5 +1,6 @@
+<!-- markdownlint-disable -->
 ## Makefile Targets
-```
+```text
 amtool                    0.21.0     Tool for interacting with the Alertmanager API
 argocd                    1.6.2      Declarative GitOpts for Kubernetes
 assume-role               0.3.2      Easily assume AWS roles in your terminal.
@@ -109,3 +110,4 @@ venona                    0.32.1     Codefresh runtime-environment agent
 vert                      0.1.0      Simple CLI for comparing two or more versions
 yq                        3.3.2      yq is a portable command-line YAML processor
 ```
+<!-- markdownlint-restore -->

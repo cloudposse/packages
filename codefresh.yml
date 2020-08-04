@@ -29,7 +29,8 @@ steps:
     type: build
     description: Build packages
     registry: dockerhub
-    image_name: packages
+    image_name: cloudposse/packages
+    tag: '${{CF_REVISION}}'
     dockerfile: Dockerfile
 
   semver:
