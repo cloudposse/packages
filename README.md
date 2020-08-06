@@ -275,7 +275,7 @@ hugo                      0.74.3     The world’s fastest framework for buildin
 jp                        0.1.3      Command line interface to JMESPath
 jq                        1.6        Command-line JSON processor
 json2hcl                  0.0.6      Convert JSON to HCL, and vice versa
-jx                        2.1.121    Jenkins-X
+jx                        2.1.126    Jenkins-X
 k3d                       3.0.0      Little helper to run Rancher Lab's k3s in Docker
 k6                        0.27.1     A modern load testing tool, using Go and JavaScript - https://k6.io
 k9s                       0.21.7     Kubernetes CLI To Manage Your Clusters In Style
@@ -306,7 +306,7 @@ pandoc                    2.10.1     Universal markup converter
 pgmetrics                 1.9.3      Postgres metrics
 pluto                     3.4.0      A cli tool to help discover deprecated apiVersions in Kubernetes
 popeye                    0.8.8      A Kubernetes cluster resource sanitizer
-promtool                  2.19.3     Prometheus CLI tool
+promtool                  2.20.1     Prometheus CLI tool
 rakkess                   0.4.4      Review Access - kubectl plugin to show an access matrix for all available resources
 rancher                   2.4.5      Rancher CLI
 rbac-lookup               0.6.0      Find Kubernetes roles and cluster roles bound to any user, service account, or group name.
@@ -331,7 +331,7 @@ terrahelp                 0.7.4      Terrahelp is as a command line utility that
 tfenv                     0.4.0      Transform environment variables for use with Terraform (e.g. `HOSTNAME` ⇨ `TF_VAR_hostname`)
 tfmask                    0.6.1      Terraform utility to mask select output from `terraform plan` and `terraform apply`
 thanos                    0.14.0     Highly available Prometheus setup with long term storage capabilities. CNCF Sandbox project.
-trivy                     0.10.1     A Simple and Comprehensive Vulnerability Scanner for Containers, Suitable for CI
+trivy                     0.10.2     A Simple and Comprehensive Vulnerability Scanner for Containers, Suitable for CI
 variant                   0.36.5     Variant is a Universal CLI tool that works like a task runner
 variant2                  0.28.0     Second major version of Variant, a Universal CLI tool that works like a task runner
 vault                     1.5.0      Hashicorp vault
