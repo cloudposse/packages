@@ -245,7 +245,7 @@ cli53                     0.8.17     Command line tool for Amazon Route 53
 cloudflared               2020.3.2   Argo Tunnel client
 cloudposse-atlantis       0.9.0.3    Terraform For Teams, enhanced by Cloud Posse
 codefresh                 0.72.0     Codefresh CLI
-consul                    1.8.1      Hashicorp consul
+consul                    1.8.2      Hashicorp consul
 ctop                      0.7.3      Top-like interface for container metrics
 direnv                    2.21.3     Unclutter your .profile
 doctl                     1.46.0     A command line tool for DigitalOcean services
@@ -299,7 +299,7 @@ lazydocker                0.9        The lazier way to manage everything docker
 lectl                     0.20       Script to check issued certificates by Let's Encrypt on CTL (Certificate Transparency Log) using https://crt.sh
 minikube                  1.12.2     Run Kubernetes locally
 misspell                  0.3.4      Correct commonly misspelled English words in source files
-nomad                     0.12.1     Hashicorp nomad
+nomad                     0.11.4     Hashicorp nomad
 pack                      0.12.0     Create cloud native Buildpacks
 packer                    1.6.1      Packer is a tool for creating identical machine images for multiple platforms from a single source configuration.
 pandoc                    2.10.1     Universal markup converter
