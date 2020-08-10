@@ -67,7 +67,7 @@ kubectx                   0.9.1      Switch faster between clusters and namespac
 kubens                    0.9.1      Switch faster between clusters and namespaces in kubectl
 kubeval                   0.15.0     Validate your Kubernetes configuration files, supports multiple Kubernetes versions
 lazydocker                0.9        The lazier way to manage everything docker
-lectl                     0.20       Script to check issued certificates by Let's Encrypt on CTL (Certificate Transparency Log) using https://crt.sh
+lectl                     0.21       Script to check issued certificates by Let's Encrypt on CTL (Certificate Transparency Log) using https://crt.sh
 minikube                  1.12.2     Run Kubernetes locally
 misspell                  0.3.4      Correct commonly misspelled English words in source files
 nomad                     0.11.4     Hashicorp nomad
@@ -104,7 +104,7 @@ tfmask                    0.6.1      Terraform utility to mask select output fro
 thanos                    0.14.0     Highly available Prometheus setup with long term storage capabilities. CNCF Sandbox project.
 trivy                     0.10.2     A Simple and Comprehensive Vulnerability Scanner for Containers, Suitable for CI
 variant                   0.36.5     Variant is a Universal CLI tool that works like a task runner
-variant2                  0.31.0     Second major version of Variant, a Universal CLI tool that works like a task runner
+variant2                  0.32.0     Second major version of Variant, a Universal CLI tool that works like a task runner
 vault                     1.5.0      Hashicorp vault
 venona                    0.32.1     Codefresh runtime-environment agent
 vert                      0.1.0      Simple CLI for comparing two or more versions
