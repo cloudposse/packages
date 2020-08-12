@@ -29,10 +29,10 @@ jobs:
           - '3.11'
     env:
       APK_KEY_RSA: "${{ secrets.APK_KEY_RSA }}"
-      APK_PACKAGES_PATH: /packages/artifacts/${{matrix.alpine}}
+      APK_PACKAGES_PATH: ${{github.workspace}}/artifacts/${{matrix.alpine}}
       PACKAGER: ops@cloudposse.com
       PACKAGER_PRIVKEY: /dev/shm/ops@cloudposse.com.rsa
-      PACKAGER_PUBKEY: /packages/artifacts/ops@cloudposse.com.rsa.pub
+      PACKAGER_PUBKEY: ${{github.workspace}}/artifacts/ops@cloudposse.com.rsa.pub
 
     container: cloudposse/packages-apkbuild:${{matrix.alpine}}
     steps:
@@ -57,7 +57,7 @@ jobs:
           format: 'alpine'
           owner: '${{github.repository_owner}}'             # Your Cloudsmith account name or org name (namespace)
           repo: 'packages'                                  # Your Cloudsmith Repository name (slug)
-          distro: 'Alpine'                                  # Your Distribution  (i.e Debian, Ubuntu)
+          distro: 'alpine'                                  # Your Distribution  (i.e Debian, Ubuntu)
           release: '${{matrix.alpine}}'                     # Your Distribution Release (i.e xenial, buster)
           republish: 'true'                                 # Needed if version is not changing
           file: '${{steps.artifact.outputs.path}}'          # Package filename (including path)
