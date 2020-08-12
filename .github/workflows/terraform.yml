@@ -8,7 +8,7 @@ on:
       - vendor/terraform/**
 
 
-  pull_request: 
+  pull_request:
     types: [opened, synchronize, reopened]
     paths:
       - apk/**
@@ -20,7 +20,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        # These versions must be strings. E.g. Otherwise `3.10` -> `3.1` 
+        # These versions must be strings. E.g. Otherwise `3.10` -> `3.1`
         alpine:
           - '3.7'
           - '3.8'
@@ -43,5 +43,20 @@ jobs:
       - name: "Build alpine packages"
         run: "make -C vendor/${{github.workflow}} apk"
       - name: "List packages"
-        run: "find ${APK_PACKAGES_PATH} -type f -name '*.apk'"
-
+        run: 'find ${APK_PACKAGES_PATH} -type f -name \*.apk | xargs ls -l'
+      - name: "Set package filename"
+        id: package
+        run: 'echo "::set-output name=filename::$(find ${APK_PACKAGES_PATH} -type f -name \*.apk | xargs basename)"'
+      - name: Push
+        id: push
+        uses: cloudsmith-io/action@0.3.0
+        with:
+          api-key: ${{ secrets.CLOUDSMITH_API_KEY }}
+          command: 'push'
+          format: 'apk'
+          owner: '${{github.repository_owner}}'             # Your Cloudsmith account name or org name (namespace)
+          repo: 'packages'                                  # Your Cloudsmith Repository name (slug)
+          distro: 'Alpine'                                  # Your Distribution  (i.e Debian, Ubuntu)
+          release: '${{matrix.alpine}}'                     # Your Distribution Release (i.e xenial, buster)
+          republish: 'true'                                 # Needed if version is not changing
+          file: '${{steps.package.outputs.filename}}'       # Package filename
