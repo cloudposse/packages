@@ -1,18 +1,18 @@
-name: "yq"
+name: "thanos"
 on:
   push:
     branches:
       - master
     paths:
       - apk/**
-      - vendor/yq/**
+      - vendor/thanos/**
 
 
   pull_request:
     types: [opened, synchronize, reopened]
     paths:
       - apk/**
-      - vendor/yq/**
+      - vendor/thanos/**
 
 jobs:
   # Build for alpine linux

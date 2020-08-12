@@ -1,18 +1,18 @@
-name: "yq"
+name: "json2hcl"
 on:
   push:
     branches:
       - master
     paths:
       - apk/**
-      - vendor/yq/**
+      - vendor/json2hcl/**
 
 
   pull_request:
     types: [opened, synchronize, reopened]
     paths:
       - apk/**
-      - vendor/yq/**
+      - vendor/json2hcl/**
 
 jobs:
   # Build for alpine linux

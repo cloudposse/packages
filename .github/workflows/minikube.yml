@@ -1,18 +1,18 @@
-name: "yq"
+name: "minikube"
 on:
   push:
     branches:
       - master
     paths:
       - apk/**
-      - vendor/yq/**
+      - vendor/minikube/**
 
 
   pull_request:
     types: [opened, synchronize, reopened]
     paths:
       - apk/**
-      - vendor/yq/**
+      - vendor/minikube/**
 
 jobs:
   # Build for alpine linux

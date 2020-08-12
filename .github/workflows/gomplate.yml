@@ -1,18 +1,18 @@
-name: "yq"
+name: "gomplate"
 on:
   push:
     branches:
       - master
     paths:
       - apk/**
-      - vendor/yq/**
+      - vendor/gomplate/**
 
 
   pull_request:
     types: [opened, synchronize, reopened]
     paths:
       - apk/**
-      - vendor/yq/**
+      - vendor/gomplate/**
 
 jobs:
   # Build for alpine linux

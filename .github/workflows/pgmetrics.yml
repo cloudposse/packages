@@ -1,18 +1,18 @@
-name: "yq"
+name: "pgmetrics"
 on:
   push:
     branches:
       - master
     paths:
       - apk/**
-      - vendor/yq/**
+      - vendor/pgmetrics/**
 
 
   pull_request:
     types: [opened, synchronize, reopened]
     paths:
       - apk/**
-      - vendor/yq/**
+      - vendor/pgmetrics/**
 
 jobs:
   # Build for alpine linux

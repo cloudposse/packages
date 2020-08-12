@@ -1,18 +1,18 @@
-name: "yq"
+name: "kubectl-1.15"
 on:
   push:
     branches:
       - master
     paths:
       - apk/**
-      - vendor/yq/**
+      - vendor/kubectl-1.15/**
 
 
   pull_request:
     types: [opened, synchronize, reopened]
     paths:
       - apk/**
-      - vendor/yq/**
+      - vendor/kubectl-1.15/**
 
 jobs:
   # Build for alpine linux

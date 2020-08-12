@@ -1,18 +1,18 @@
-name: "yq"
+name: "terraform-0.12"
 on:
   push:
     branches:
       - master
     paths:
       - apk/**
-      - vendor/yq/**
+      - vendor/terraform-0.12/**
 
 
   pull_request:
     types: [opened, synchronize, reopened]
     paths:
       - apk/**
-      - vendor/yq/**
+      - vendor/terraform-0.12/**
 
 jobs:
   # Build for alpine linux

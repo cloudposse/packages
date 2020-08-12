@@ -1,18 +1,18 @@
-name: "yq"
+name: "slack-notifier"
 on:
   push:
     branches:
       - master
     paths:
       - apk/**
-      - vendor/yq/**
+      - vendor/slack-notifier/**
 
 
   pull_request:
     types: [opened, synchronize, reopened]
     paths:
       - apk/**
-      - vendor/yq/**
+      - vendor/slack-notifier/**
 
 jobs:
   # Build for alpine linux

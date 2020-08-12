@@ -1,18 +1,18 @@
-name: "yq"
+name: "github-commenter"
 on:
   push:
     branches:
       - master
     paths:
       - apk/**
-      - vendor/yq/**
+      - vendor/github-commenter/**
 
 
   pull_request:
     types: [opened, synchronize, reopened]
     paths:
       - apk/**
-      - vendor/yq/**
+      - vendor/github-commenter/**
 
 jobs:
   # Build for alpine linux

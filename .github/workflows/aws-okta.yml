@@ -1,18 +1,18 @@
-name: "yq"
+name: "aws-okta"
 on:
   push:
     branches:
       - master
     paths:
       - apk/**
-      - vendor/yq/**
+      - vendor/aws-okta/**
 
 
   pull_request:
     types: [opened, synchronize, reopened]
     paths:
       - apk/**
-      - vendor/yq/**
+      - vendor/aws-okta/**
 
 jobs:
   # Build for alpine linux

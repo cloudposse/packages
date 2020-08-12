@@ -1,18 +1,18 @@
-name: "yq"
+name: "gh"
 on:
   push:
     branches:
       - master
     paths:
       - apk/**
-      - vendor/yq/**
+      - vendor/gh/**
 
 
   pull_request:
     types: [opened, synchronize, reopened]
     paths:
       - apk/**
-      - vendor/yq/**
+      - vendor/gh/**
 
 jobs:
   # Build for alpine linux

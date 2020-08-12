@@ -1,18 +1,18 @@
-name: "yq"
+name: "terrahelp"
 on:
   push:
     branches:
       - master
     paths:
       - apk/**
-      - vendor/yq/**
+      - vendor/terrahelp/**
 
 
   pull_request:
     types: [opened, synchronize, reopened]
     paths:
       - apk/**
-      - vendor/yq/**
+      - vendor/terrahelp/**
 
 jobs:
   # Build for alpine linux

@@ -1,18 +1,18 @@
-name: "yq"
+name: "cloudflared"
 on:
   push:
     branches:
       - master
     paths:
       - apk/**
-      - vendor/yq/**
+      - vendor/cloudflared/**
 
 
   pull_request:
     types: [opened, synchronize, reopened]
     paths:
       - apk/**
-      - vendor/yq/**
+      - vendor/cloudflared/**
 
 jobs:
   # Build for alpine linux

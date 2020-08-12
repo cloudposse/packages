@@ -1,18 +1,18 @@
-name: "yq"
+name: "tfenv"
 on:
   push:
     branches:
       - master
     paths:
       - apk/**
-      - vendor/yq/**
+      - vendor/tfenv/**
 
 
   pull_request:
     types: [opened, synchronize, reopened]
     paths:
       - apk/**
-      - vendor/yq/**
+      - vendor/tfenv/**
 
 jobs:
   # Build for alpine linux

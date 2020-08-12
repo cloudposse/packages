@@ -1,18 +1,18 @@
-name: "yq"
+name: "direnv"
 on:
   push:
     branches:
       - master
     paths:
       - apk/**
-      - vendor/yq/**
+      - vendor/direnv/**
 
 
   pull_request:
     types: [opened, synchronize, reopened]
     paths:
       - apk/**
-      - vendor/yq/**
+      - vendor/direnv/**
 
 jobs:
   # Build for alpine linux

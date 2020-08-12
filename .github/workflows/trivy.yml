@@ -1,18 +1,18 @@
-name: "yq"
+name: "trivy"
 on:
   push:
     branches:
       - master
     paths:
       - apk/**
-      - vendor/yq/**
+      - vendor/trivy/**
 
 
   pull_request:
     types: [opened, synchronize, reopened]
     paths:
       - apk/**
-      - vendor/yq/**
+      - vendor/trivy/**
 
 jobs:
   # Build for alpine linux
