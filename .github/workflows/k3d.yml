@@ -1,18 +1,18 @@
-name: "yq"
+name: "k3d"
 on:
   push:
     branches:
       - master
     paths:
       - apk/**
-      - vendor/yq/**
+      - vendor/k3d/**
 
 
   pull_request:
     types: [opened, synchronize, reopened]
     paths:
       - apk/**
-      - vendor/yq/**
+      - vendor/k3d/**
 
 jobs:
   # Build for alpine linux

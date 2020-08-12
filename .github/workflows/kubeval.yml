@@ -1,18 +1,18 @@
-name: "yq"
+name: "kubeval"
 on:
   push:
     branches:
       - master
     paths:
       - apk/**
-      - vendor/yq/**
+      - vendor/kubeval/**
 
 
   pull_request:
     types: [opened, synchronize, reopened]
     paths:
       - apk/**
-      - vendor/yq/**
+      - vendor/kubeval/**
 
 jobs:
   # Build for alpine linux

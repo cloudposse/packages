@@ -1,18 +1,18 @@
-name: "yq"
+name: "aws-vault"
 on:
   push:
     branches:
       - master
     paths:
       - apk/**
-      - vendor/yq/**
+      - vendor/aws-vault/**
 
 
   pull_request:
     types: [opened, synchronize, reopened]
     paths:
       - apk/**
-      - vendor/yq/**
+      - vendor/aws-vault/**
 
 jobs:
   # Build for alpine linux

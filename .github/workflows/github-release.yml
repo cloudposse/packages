@@ -1,18 +1,18 @@
-name: "yq"
+name: "github-release"
 on:
   push:
     branches:
       - master
     paths:
       - apk/**
-      - vendor/yq/**
+      - vendor/github-release/**
 
 
   pull_request:
     types: [opened, synchronize, reopened]
     paths:
       - apk/**
-      - vendor/yq/**
+      - vendor/github-release/**
 
 jobs:
   # Build for alpine linux

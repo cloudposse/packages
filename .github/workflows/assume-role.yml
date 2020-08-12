@@ -1,18 +1,18 @@
-name: "yq"
+name: "assume-role"
 on:
   push:
     branches:
       - master
     paths:
       - apk/**
-      - vendor/yq/**
+      - vendor/assume-role/**
 
 
   pull_request:
     types: [opened, synchronize, reopened]
     paths:
       - apk/**
-      - vendor/yq/**
+      - vendor/assume-role/**
 
 jobs:
   # Build for alpine linux

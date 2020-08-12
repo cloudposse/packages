@@ -1,18 +1,18 @@
-name: "yq"
+name: "katafygio"
 on:
   push:
     branches:
       - master
     paths:
       - apk/**
-      - vendor/yq/**
+      - vendor/katafygio/**
 
 
   pull_request:
     types: [opened, synchronize, reopened]
     paths:
       - apk/**
-      - vendor/yq/**
+      - vendor/katafygio/**
 
 jobs:
   # Build for alpine linux

@@ -1,18 +1,18 @@
-name: "yq"
+name: "promtool"
 on:
   push:
     branches:
       - master
     paths:
       - apk/**
-      - vendor/yq/**
+      - vendor/promtool/**
 
 
   pull_request:
     types: [opened, synchronize, reopened]
     paths:
       - apk/**
-      - vendor/yq/**
+      - vendor/promtool/**
 
 jobs:
   # Build for alpine linux

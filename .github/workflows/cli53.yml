@@ -1,18 +1,18 @@
-name: "yq"
+name: "cli53"
 on:
   push:
     branches:
       - master
     paths:
       - apk/**
-      - vendor/yq/**
+      - vendor/cli53/**
 
 
   pull_request:
     types: [opened, synchronize, reopened]
     paths:
       - apk/**
-      - vendor/yq/**
+      - vendor/cli53/**
 
 jobs:
   # Build for alpine linux

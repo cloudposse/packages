@@ -1,18 +1,18 @@
-name: "yq"
+name: "amtool"
 on:
   push:
     branches:
       - master
     paths:
       - apk/**
-      - vendor/yq/**
+      - vendor/amtool/**
 
 
   pull_request:
     types: [opened, synchronize, reopened]
     paths:
       - apk/**
-      - vendor/yq/**
+      - vendor/amtool/**
 
 jobs:
   # Build for alpine linux

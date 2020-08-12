@@ -1,18 +1,18 @@
-name: "yq"
+name: "cloudposse-atlantis"
 on:
   push:
     branches:
       - master
     paths:
       - apk/**
-      - vendor/yq/**
+      - vendor/cloudposse-atlantis/**
 
 
   pull_request:
     types: [opened, synchronize, reopened]
     paths:
       - apk/**
-      - vendor/yq/**
+      - vendor/cloudposse-atlantis/**
 
 jobs:
   # Build for alpine linux

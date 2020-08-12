@@ -1,18 +1,18 @@
-name: "yq"
+name: "kfctl"
 on:
   push:
     branches:
       - master
     paths:
       - apk/**
-      - vendor/yq/**
+      - vendor/kfctl/**
 
 
   pull_request:
     types: [opened, synchronize, reopened]
     paths:
       - apk/**
-      - vendor/yq/**
+      - vendor/kfctl/**
 
 jobs:
   # Build for alpine linux

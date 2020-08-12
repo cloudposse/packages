@@ -1,18 +1,18 @@
-name: "yq"
+name: "pluto"
 on:
   push:
     branches:
       - master
     paths:
       - apk/**
-      - vendor/yq/**
+      - vendor/pluto/**
 
 
   pull_request:
     types: [opened, synchronize, reopened]
     paths:
       - apk/**
-      - vendor/yq/**
+      - vendor/pluto/**
 
 jobs:
   # Build for alpine linux

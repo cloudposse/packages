@@ -1,18 +1,18 @@
-name: "yq"
+name: "popeye"
 on:
   push:
     branches:
       - master
     paths:
       - apk/**
-      - vendor/yq/**
+      - vendor/popeye/**
 
 
   pull_request:
     types: [opened, synchronize, reopened]
     paths:
       - apk/**
-      - vendor/yq/**
+      - vendor/popeye/**
 
 jobs:
   # Build for alpine linux

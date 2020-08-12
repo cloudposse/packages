@@ -1,18 +1,18 @@
-name: "yq"
+name: "saml2aws"
 on:
   push:
     branches:
       - master
     paths:
       - apk/**
-      - vendor/yq/**
+      - vendor/saml2aws/**
 
 
   pull_request:
     types: [opened, synchronize, reopened]
     paths:
       - apk/**
-      - vendor/yq/**
+      - vendor/saml2aws/**
 
 jobs:
   # Build for alpine linux
