@@ -28,5 +28,5 @@ jobs:
       - name: "Debug"
         run: "pwd && ls -al"
       - name: "Build alpine packages"
-        run: "make -C vendor/terraform build"
+        run: "make -C vendor/terraform apk"
 
