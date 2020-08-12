@@ -3,9 +3,15 @@ on:
   push:
     branches:
       - master
+    paths:
+      - apk/**
+      - vendor/terraform/**
+
 
   pull_request: 
     types: [opened, synchronize, reopened]
+      - apk/**
+      - vendor/terraform/**
 
 jobs:
   terraform:
@@ -35,5 +41,5 @@ jobs:
       - name: "Build alpine packages"
         run: "make -C vendor/${{github.job}} ${{github.workflow}}"
       - name: "List packages"
-        run: "ls -l ${APK_PACKAGES_PATH}"
+        run: "find ${APK_PACKAGES_PATH} -type f -name '*.apk'"
 
