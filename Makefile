@@ -5,7 +5,7 @@ export DOCKER_IMAGE_NAME ?= $(DOCKER_IMAGE):$(DOCKER_TAG)
 export DOCKER_BUILD_FLAGS = 
 
 export DEFAULT_HELP_TARGET := help/vendor
-export README_DEPS ?= .github/auto-label.yml docs/targets.md
+export README_DEPS ?= .github/auto-label.yml docs/badges.md
 
 export DIST_CMD ?= cp -a
 export DIST_PATH ?= /dist
@@ -42,6 +42,16 @@ run:
 	for vendor in $(PACKAGES); do \
 		echo "$${vendor%/}: $${vendor}**"; \
 	done >> $@
+
+.PHONY : docs/badges.md
+## Update `docs/targets.md` from `make help`
+docs/badges.md: docs/deps
+	@( \
+		echo "## Package Build Status"; \
+		echo "| Build Status | Version | Description |"; \
+		echo "| ------------ | ------- | ----------- |"; \
+		$(SELF) --no-print-directory --quiet --silent help/md | sed $$'s,\x1b\\[[0-9;]*[a-zA-Z],,g'; \
+	) > $@
 
 ## Build alpine packages for testing
 docker/build/apk:
@@ -82,6 +92,9 @@ docker/build/apk/shell:
 
 help/vendor:
 	@$(MAKE) --no-print-directory -s -C vendor help
+
+help/md:
+	@$(MAKE) --no-print-directory -s -C vendor help/md
 
 update/%:
 	rm -f vendor/$(subst update/,,$@)/VERSION

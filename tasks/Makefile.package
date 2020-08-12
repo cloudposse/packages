@@ -189,3 +189,6 @@ info:
 
 info/short:
 	@printf "%-25s %-10s %s\n" "$${PACKAGE_NAME}" "$${PACKAGE_VERSION}" "$${PACKAGE_DESCRIPTION}"
+
+info/md:
+	@printf "![%s](https://github.com/cloudposse/packages/workflows/%s/badge.svg?branch=master) | %-10s | %s\n" "$${PACKAGE_NAME}" "$${PACKAGE_NAME}" "$${PACKAGE_VERSION}" "$${PACKAGE_DESCRIPTION}"
