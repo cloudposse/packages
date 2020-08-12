@@ -5,14 +5,14 @@ on:
       - master
     paths:
       - apk/**
-      - vendor/terraform/**
+      - vendor/${{github.workflow}}/**
 
 
   pull_request:
     types: [opened, synchronize, reopened]
     paths:
       - apk/**
-      - vendor/terraform/**
+      - vendor/${{github.workflow}}/**
 
 jobs:
   # Build for alpine linux
