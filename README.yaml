@@ -48,7 +48,7 @@ related:
 
 # Other files to include in this README from the project folder
 include:
-  - "docs/targets.md"
+  - "docs/badges.md"
 
 usage: |-
 

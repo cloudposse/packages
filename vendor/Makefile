@@ -42,3 +42,6 @@ deindex:
 ## Show available packages
 help:
 	@find . -mindepth 1 -maxdepth 1 -type d | sort -u | xargs -I{} make --no-print-directory -s -C {} info/short
+
+help/md:
+	@find . -mindepth 1 -maxdepth 1 -type d | sort -u | xargs -I{} make --no-print-directory -s -C {} info/md
