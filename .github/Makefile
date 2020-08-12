@@ -3,7 +3,7 @@
 #
 export:
 	@mkdir -p $(APK_PACKAGES_PATH)
-	@echo "$(APK_KEY_RSA)" > $(PACKAGER_PRIVKEY)
+	@printenv APK_KEY_RSA > $(PACKAGER_PRIVKEY)
 	@echo "Exported private key to $(PACKAGER_PRIVKEY)"
 	@ls -l $(PACKAGER_PRIVKEY)
 	openssl rsa -in $(PACKAGER_PRIVKEY) -pubout > $(PACKAGER_PUBKEY)
