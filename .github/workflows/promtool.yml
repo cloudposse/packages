@@ -1,3 +1,8 @@
+#
+# This workflow was created automatically from the `package-template.yml` by running `make -C .github workflows`
+# DO NOT EDIT THIS WORKFLOW
+#
+
 name: "promtool"
 on:
   push:
