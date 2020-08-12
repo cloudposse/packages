@@ -237,7 +237,7 @@ atlantis                  0.14.0     Terraform For Teams
 awless                    0.1.11     A Mighty CLI for AWS
 aws-iam-authenticator     0.5.1      A tool to use AWS IAM credentials to authenticate to a Kubernetes cluster
 aws-okta                  0.19.4     aws-okta allows users to authenticate with AWS using Okta credentials
-aws-vault                 5.4.4      A vault for securely storing and accessing AWS credentials in development environments
+aws-vault                 4.7.2      A vault for securely storing and accessing AWS credentials in development environments
 cfssl                     1.4.1      Cloudflare's PKI and TLS toolkit
 cfssljson                 1.4.1      Cloudflare's PKI and TLS toolkit json parser
 chamber                   2.8.2      CLI for managing secrets
@@ -269,7 +269,7 @@ gotop                     3.0.0      A terminal based graphical activity monitor
 helm                      3.2.4      The Kubernetes Package Manager
 helm2                     2.16.9     The Kubernetes Package Manager
 helm3                     3.2.4      The Kubernetes Package Manager
-helmfile                  0.125.1    Deploy Kubernetes Helm Charts
+helmfile                  0.124.0    Deploy Kubernetes Helm Charts
 htmltest                  0.12.1     :white_check_mark: Test generated HTML for problems
 hugo                      0.74.3     The world’s fastest framework for building websites.
 jp                        0.1.3      Command line interface to JMESPath
@@ -282,9 +282,9 @@ k9s                       0.21.7     Kubernetes CLI To Manage Your Clusters In S
 katafygio                 0.8.1      K8s continuous backup to git
 kfctl                     1.0        Machine Learning Toolkit for Kubernetes
 kind                      0.8.1      A tool for running local Kubernetes clusters using Docker
-kops                      1.18.0     Kubernetes Operations (kops) - Production Grade K8s Installation, Upgrades, and Management
+kops                      1.17.1     Kubernetes Operations (kops) - Production Grade K8s Installation, Upgrades, and Management
 kops-1.12                 1.12.3     Kubernetes Operations (kops) - Production Grade K8s Installation, Upgrades, and Management
-krew                      0.4.0      Kubectl plugin manager
+krew                      0.3.4      Kubectl plugin manager
 kubecron                  1.0.2      Utilities to manage kubernetes cronjobs. Run a CronJob manually for test purposes. Suspend/unsuspend a CronJob
 kubectl                   1.18.6     Production-Grade Container Scheduling and Management
 kubectl-1.13              1.13.12    Production-Grade Container Scheduling and Management (v1.13)
@@ -322,9 +322,10 @@ sops                      3.6.0      Secrets management stinks, use some sops!
 stern                     1.11.0     ⎈ Multi pod and container log tailing for Kubernetes
 sudosh                    0.3.0      Shell wrapper to run a login shell with `sudo` as the current user for the purpose of audit logging
 teleport                  4.2.11     Privileged access management for elastic infrastructure.
-terraform                 0.12.29    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
+terraform                 0.13.0     Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-0.11            0.11.14    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
-terraform-0.12            0.12.24    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
+terraform-0.12            0.12.29    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
+terraform-0.13            0.13.0     Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-docs            0.9.1      Generate docs from terraform modules
 terragrunt                0.23.33    Terragrunt is a thin wrapper for Terraform that provides extra tools for working with multiple Terraform modules.
 terrahelp                 0.7.4      Terrahelp is as a command line utility that provides useful tricks like masking of terraform output.
