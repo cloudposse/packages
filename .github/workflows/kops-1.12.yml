@@ -11,6 +11,7 @@ on:
     paths:
       - apk/**
       - vendor/kops-1.12/**
+      - .github/workflows/kops-1.12.yml
 
 
   pull_request:
@@ -18,6 +19,7 @@ on:
     paths:
       - apk/**
       - vendor/kops-1.12/**
+      - .github/workflows/kops-1.12.yml
 
 jobs:
   # Build for alpine linux
