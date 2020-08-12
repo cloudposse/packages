@@ -37,7 +37,7 @@ gonsul                    0.2.1      A stand-alone alternative to git2consul
 goofys                    0.24.0     a high-performance, POSIX-ish Amazon S3 file system written in Go
 gosu                      1.12       Simple Go-based setuid+setgid+setgroups+exec
 gotop                     3.0.0      A terminal based graphical activity monitor inspired by gtop and vtop
-helm                      2.16.9     The Kubernetes Package Manager
+helm                      3.3.0      The Kubernetes Package Manager
 helm2                     2.16.9     The Kubernetes Package Manager
 helm3                     3.2.4      The Kubernetes Package Manager
 helmfile                  0.125.5    Deploy Kubernetes Helm Charts
@@ -95,7 +95,7 @@ sudosh                    0.3.0      Shell wrapper to run a login shell with `su
 teleport                  4.3.2      Privileged access management for elastic infrastructure.
 terraform                 0.13.0     Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-0.11            0.11.14    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
-terraform-0.12            0.12.24    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
+terraform-0.12            0.12.29    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-docs            0.9.1      Generate docs from terraform modules
 terragrunt                0.23.33    Terragrunt is a thin wrapper for Terraform that provides extra tools for working with multiple Terraform modules.
 terrahelp                 0.7.4      Terrahelp is as a command line utility that provides useful tricks like masking of terraform output.
@@ -104,7 +104,7 @@ tfmask                    0.6.1      Terraform utility to mask select output fro
 thanos                    0.14.0     Highly available Prometheus setup with long term storage capabilities. CNCF Sandbox project.
 trivy                     0.10.2     A Simple and Comprehensive Vulnerability Scanner for Containers, Suitable for CI
 variant                   0.36.5     Variant is a Universal CLI tool that works like a task runner
-variant2                  0.32.0     Second major version of Variant, a Universal CLI tool that works like a task runner
+variant2                  0.33.0     Second major version of Variant, a Universal CLI tool that works like a task runner
 vault                     1.5.0      Hashicorp vault
 venona                    0.32.1     Codefresh runtime-environment agent
 vert                      0.1.0      Simple CLI for comparing two or more versions
