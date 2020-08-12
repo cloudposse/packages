@@ -11,6 +11,7 @@ on:
     paths:
       - apk/**
       - vendor/packer/**
+      - .github/workflows/packer.yml
 
 
   pull_request:
@@ -18,6 +19,7 @@ on:
     paths:
       - apk/**
       - vendor/packer/**
+      - .github/workflows/packer.yml
 
 jobs:
   # Build for alpine linux

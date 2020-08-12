@@ -11,6 +11,7 @@ on:
     paths:
       - apk/**
       - vendor/cfssljson/**
+      - .github/workflows/cfssljson.yml
 
 
   pull_request:
@@ -18,6 +19,7 @@ on:
     paths:
       - apk/**
       - vendor/cfssljson/**
+      - .github/workflows/cfssljson.yml
 
 jobs:
   # Build for alpine linux
