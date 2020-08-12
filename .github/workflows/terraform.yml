@@ -47,16 +47,26 @@ jobs:
       - name: "Set output path to artifact"
         id: artifact
         run: 'echo "::set-output name=path::$(find artifacts/ -type f -name \*.apk)"'
-      - name: "Push to repository"
+      - name: "Determine package repo"
+        id: repo
+        run: |
+          if [[ ${GITHUB_REF} == 'refs/heads/master' ]]; then
+              echo "::set-output name=org::${{github.repository_owner}}"
+          else
+              echo "::set-output name=org::${{github.repository_owner}}-dev"
+          fi
+        env:
+          GITHUB_REF: ${{ github.ref }}
+      - name: "Push artifact to package repository"
         id: push
         uses: cloudsmith-io/action@0.3.1
         with:
           api-key: ${{ secrets.CLOUDSMITH_API_KEY }}
           command: 'push'
           format: 'alpine'
-          owner: '${{github.repository_owner}}'             # Your Cloudsmith account name or org name (namespace)
+          owner: '${{steps.repo.outputs.org}}'              # Your Cloudsmith account name or org name (namespace)
           repo: 'packages'                                  # Your Cloudsmith Repository name (slug)
           distro: 'alpine'                                  # Your Distribution  (i.e Debian, Ubuntu)
-          release: 'v${{matrix.alpine}}'                     # Your Distribution Release (i.e xenial, buster)
+          release: 'v${{matrix.alpine}}'                    # Your Distribution Release (i.e xenial, buster)
           republish: 'true'                                 # Needed if version is not changing
           file: '${{steps.artifact.outputs.path}}'          # Package filename (including path)
