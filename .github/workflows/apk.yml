@@ -26,5 +26,5 @@ jobs:
       - name: "Checkout source code at current commit"
         uses: actions/checkout@v2
       - name: "Build alpine packages"
-        run: "make -C /packages/vendor/terraform build"
+        run: "make -C vendor/terraform build"
 
