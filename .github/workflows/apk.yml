@@ -30,10 +30,10 @@ jobs:
     steps:
       - name: "Checkout source code at current commit"
         uses: actions/checkout@v2
-      - name: "Debug"
-        run: "pwd && ls -al"
       - name: "Export"
         run: "make -C .github/ export"
       - name: "Build alpine packages"
         run: "make -C vendor/terraform apk"
+      - name: "List packages"
+        run: "ls -l ${APK_PACKAGES_PATH}"
 
