@@ -3,17 +3,16 @@ on:
   push:
     branches:
       - master
+
   pull_request: 
     types: [opened, synchronize, reopened]
-  release:
-    types:
-      - created
 
 jobs:
   build-and-push:
     runs-on: ubuntu-latest
     strategy:
       matrix:
+        # These versions must be strings. E.g. Otherwise `3.10` -> `3.1` 
         alpine:
           - '3.7'
           - '3.8'
@@ -34,3 +33,10 @@ jobs:
           registry: registry-1.docker.io
           tag_with_ref: true
           tag_with_sha: true
+      - name: "Build alpine packages"
+        uses: docker://${{ github.repository }}-apkbuild:${{matrix.alpine}}
+        with:
+          args: "sh -c 'make -C /packages/vendor/terraform build'"
+        env:
+          APK_PACKAGES_PATH: /packages/artifacts/${{matrix.alpine}}
+
