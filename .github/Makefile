@@ -3,6 +3,8 @@
 #
 export:
 	@mkdir -p $(APK_PACKAGES_PATH)
-	@echo "$(APK_KEY_RSA)" | base64 -d > $(PACKAGER_PRIVKEY)
+	@echo "$(APK_KEY_RSA)" > $(PACKAGER_PRIVKEY)
+	@echo "Exported private key to $(PACKAGER_PRIVKEY)"
 	@openssl rsa -in $(PACKAGER_PRIVKEY) -pubout > $(PACKAGER_PUBKEY)
+	@echo "Exported public key to $(PACKAGER_PUBKEY)"
 
