@@ -1,4 +1,4 @@
-name: "apk"
+name: "terraform"
 on:
   push:
     branches:
@@ -15,7 +15,8 @@ on:
       - vendor/terraform/**
 
 jobs:
-  terraform:
+  # Build for alpine linux
+  alpine:
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -40,7 +41,7 @@ jobs:
       - name: "Export"
         run: "make -C .github/ export"
       - name: "Build alpine packages"
-        run: "make -C vendor/${{github.job}} ${{github.workflow}}"
+        run: "make -C vendor/${{github.workflow}} apk"
       - name: "List packages"
         run: "find ${APK_PACKAGES_PATH} -type f -name '*.apk'"
 
