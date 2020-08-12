@@ -22,9 +22,9 @@ jobs:
       matrix:
         # These versions must be strings. E.g. Otherwise `3.10` -> `3.1`
         alpine:
-          #- '3.7'
-          #- '3.8'
-          #- '3.9'
+          - '3.7'
+          - '3.8'
+          - '3.9'
           - '3.10'
           - '3.11'
     env:
@@ -58,6 +58,6 @@ jobs:
           owner: '${{github.repository_owner}}'             # Your Cloudsmith account name or org name (namespace)
           repo: 'packages'                                  # Your Cloudsmith Repository name (slug)
           distro: 'alpine'                                  # Your Distribution  (i.e Debian, Ubuntu)
-          release: '${{matrix.alpine}}'                     # Your Distribution Release (i.e xenial, buster)
+          release: 'v${{matrix.alpine}}'                     # Your Distribution Release (i.e xenial, buster)
           republish: 'true'                                 # Needed if version is not changing
           file: '${{steps.artifact.outputs.path}}'          # Package filename (including path)
