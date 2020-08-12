@@ -44,9 +44,9 @@ jobs:
         run: "make -C vendor/${{github.workflow}} apk"
       - name: "List packages"
         run: 'find ${APK_PACKAGES_PATH} -type f -name \*.apk | xargs ls -l'
-      - name: "Set package filename"
-        id: package
-        run: 'echo "::set-output name=filename::$(find ${APK_PACKAGES_PATH} -type f -name \*.apk | xargs basename)"'
+      - name: "Set output path to artifact"
+        id: artifact
+        run: 'echo "::set-output name=path::$(find ${APK_PACKAGES_PATH} -type f -name \*.apk)"'
       - name: "Push to repository"
         id: push
         #uses: cloudsmith-io/action@0.3.0
@@ -60,4 +60,4 @@ jobs:
           distro: 'Alpine'                                  # Your Distribution  (i.e Debian, Ubuntu)
           release: '${{matrix.alpine}}'                     # Your Distribution Release (i.e xenial, buster)
           republish: 'true'                                 # Needed if version is not changing
-          file: '${{steps.package.outputs.filename}}'       # Package filename
+          file: '${{steps.artifact.outputs.path}}'          # Package filename (including path)
