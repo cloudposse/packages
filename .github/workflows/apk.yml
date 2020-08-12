@@ -8,7 +8,7 @@ on:
     types: [opened, synchronize, reopened]
 
 jobs:
-  package:
+  terraform:
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -33,7 +33,7 @@ jobs:
       - name: "Export"
         run: "make -C .github/ export"
       - name: "Build alpine packages"
-        run: "make -C vendor/terraform apk"
+        run: "make -C vendor/${{github.job}} ${{github.workflow}}"
       - name: "List packages"
         run: "ls -l ${APK_PACKAGES_PATH}"
 
