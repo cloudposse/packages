@@ -8,7 +8,7 @@ on:
     types: [opened, synchronize, reopened]
 
 jobs:
-  build-and-push:
+  package:
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -25,6 +25,8 @@ jobs:
     steps:
       - name: "Checkout source code at current commit"
         uses: actions/checkout@v2
+      - name: "Debug"
+        run: "pwd && ls -al"
       - name: "Build alpine packages"
         run: "make -C vendor/terraform build"
 
