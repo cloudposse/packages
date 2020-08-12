@@ -14,7 +14,12 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        alpine: [ 3.7, 3.8, 3.9, 3.10, 3.11, 3.11 ]
+        alpine:
+          - '3.7'
+          - '3.8'
+          - '3.9'
+          - '3.10'
+          - '3.11'
     steps:
       - name: "Checkout source code at current commit"
         uses: actions/checkout@v2
