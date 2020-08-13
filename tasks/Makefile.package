@@ -192,3 +192,18 @@ info/short:
 
 info/md:
 	@printf "![%s](https://github.com/cloudposse/packages/workflows/%s/badge.svg?branch=master) | %-10s | %s\n" "$${PACKAGE_NAME}" "$${PACKAGE_NAME}" "$${PACKAGE_VERSION}" "$${PACKAGE_DESCRIPTION}"
+
+info/github: FORMAT="::set-output name=%s::%s\n"
+info/github:
+	@printf $(FORMAT) "vendor" "$(VENDOR)"
+	@printf $(FORMAT) "package_name" "$(PACKAGE_NAME)"
+	@printf $(FORMAT) "package_enabled" "$(PACKAGE_ENABLED)"
+	@printf $(FORMAT) "package_version" "$(PACKAGE_VERSION)"
+	@printf $(FORMAT) "package_license" "$(PACKAGE_LICENSE)"
+	@printf $(FORMAT) "arch" "$(ARCH)"
+	@printf $(FORMAT) "os" "$(OS)"
+	@printf $(FORMAT) "package_homepage_url" "$(PACKAGE_HOMEPAGE_URL)"
+	@printf $(FORMAT) "package_repo_url" "$(PACKAGE_REPO_URL)"
+	@printf $(FORMAT) "download_url" "$(DOWNLOAD_URL)"
+	@printf $(FORMAT) "install_path" "$(INSTALL_PATH)"
+
