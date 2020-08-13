@@ -110,6 +110,7 @@ vendor/sudosh: vendor/sudosh/**
 vendor/teleport: vendor/teleport/**
 vendor/terraform-0.11: vendor/terraform-0.11/**
 vendor/terraform-0.12: vendor/terraform-0.12/**
+vendor/terraform-0.13: vendor/terraform-0.13/**
 vendor/terraform-docs: vendor/terraform-docs/**
 vendor/terraform: vendor/terraform/**
 vendor/terragrunt: vendor/terragrunt/**
