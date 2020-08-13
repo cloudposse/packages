@@ -1,6 +1,5 @@
-<!-- markdownlint-disable -->
 ## Makefile Targets
-```text
+```
 amtool                    0.21.0     Tool for interacting with the Alertmanager API
 argocd                    1.6.2      Declarative GitOpts for Kubernetes
 assume-role               0.3.2      Easily assume AWS roles in your terminal.
@@ -93,9 +92,10 @@ sops                      3.6.0      Secrets management stinks, use some sops!
 stern                     1.11.0     ⎈ Multi pod and container log tailing for Kubernetes
 sudosh                    0.3.0      Shell wrapper to run a login shell with `sudo` as the current user for the purpose of audit logging
 teleport                  4.2.11     Privileged access management for elastic infrastructure.
-terraform                 0.12.29    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
+terraform                 0.13.0     Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-0.11            0.11.14    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-0.12            0.12.29    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
+terraform-0.13            0.13.0     Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-docs            0.9.1      Generate docs from terraform modules
 terragrunt                0.23.33    Terragrunt is a thin wrapper for Terraform that provides extra tools for working with multiple Terraform modules.
 terrahelp                 0.7.4      Terrahelp is as a command line utility that provides useful tricks like masking of terraform output.
@@ -104,10 +104,9 @@ tfmask                    0.6.1      Terraform utility to mask select output fro
 thanos                    0.14.0     Highly available Prometheus setup with long term storage capabilities. CNCF Sandbox project.
 trivy                     0.10.1     A Simple and Comprehensive Vulnerability Scanner for Containers, Suitable for CI
 variant                   0.36.5     Variant is a Universal CLI tool that works like a task runner
-variant2                  0.28.0     Second major version of Variant, a Universal CLI tool that works like a task runner
+variant2                  0.33.0     Second major version of Variant, a Universal CLI tool that works like a task runner
 vault                     1.5.0      Hashicorp vault
 venona                    0.32.1     Codefresh runtime-environment agent
 vert                      0.1.0      Simple CLI for comparing two or more versions
 yq                        3.3.2      yq is a portable command-line YAML processor
 ```
-<!-- markdownlint-restore -->
