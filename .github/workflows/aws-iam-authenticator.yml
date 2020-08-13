@@ -43,18 +43,39 @@ jobs:
 
     container: cloudposse/packages-apkbuild:${{matrix.alpine}}
     steps:
+      # Checkout the packages repo so we can build the packages as a monorepo
       - name: "Checkout source code at current commit"
         uses: actions/checkout@v2
-      - name: "Export"
+
+      # Export the individual package's configuration as GitHub Action outputs
+      - name: "Export package config as outputs"
+        id: config
+        run: "make -C vendor/${{github.workflow} info/github"
+
+      # Export the apk keys as files from secrets
+      - name: "Export keys"
+        if: steps.config.outputs.package_enabled == "true"
         run: "make -C .github/ export"
+
+      # Build the alpine packages for the matrix version of alpine
       - name: "Build alpine packages"
+        if: steps.config.outputs.package_enabled == "true"
         run: "make -C vendor/${{github.workflow}} apk"
+
+      # Verify the packages were built or error
       - name: "List packages"
-        run: 'find ${APK_PACKAGES_PATH} -type f -name \*.apk | xargs ls -l'
+        if: steps.config.outputs.package_enabled == "true"
+        run: 'find ${APK_PACKAGES_PATH} -type f -name \*.apk | xargs --no-run-if-empty ls -l | grep .'
+
+      # Export the artifact filename including path
       - name: "Set output path to artifact"
+        if: steps.config.outputs.package_enabled == "true"
         id: artifact
         run: 'echo "::set-output name=path::$(find artifacts/ -type f -name \*.apk)"'
+
+      # Determine which package organization we should use (e.g. dev or prod)
       - name: "Determine package repo"
+        if: steps.config.outputs.package_enabled == "true"
         id: repo
         run: |
           if [[ ${GITHUB_REF} == 'refs/heads/master' ]]; then
@@ -64,7 +85,10 @@ jobs:
           fi
         env:
           GITHUB_REF: ${{ github.ref }}
+
+      # Publish the artifacts
       - name: "Push artifact to package repository"
+        if: steps.config.outputs.package_enabled == "true"
         id: push
         uses: cloudsmith-io/action@0.3.1
         with:
