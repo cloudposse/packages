@@ -50,7 +50,7 @@ jobs:
       # Export the individual package's configuration as GitHub Action outputs
       - name: "Export package config as outputs"
         id: config
-        run: "make -C vendor/${{github.workflow} info/github"
+        run: "make -C vendor/${{github.workflow}} info/github"
 
       # Export the apk keys as files from secrets
       - name: "Export keys"
