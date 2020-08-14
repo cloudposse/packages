@@ -40,7 +40,7 @@ gotop                     3.0.0      A terminal based graphical activity monitor
 helm                      2.16.10    The Kubernetes Package Manager
 helm2                     2.16.9     The Kubernetes Package Manager
 helm3                     3.2.4      The Kubernetes Package Manager
-helmfile                  0.125.5    Deploy Kubernetes Helm Charts
+helmfile                  0.125.6    Deploy Kubernetes Helm Charts
 htmltest                  0.13.0     :white_check_mark: Test generated HTML for problems
 hugo                      0.74.3     The world’s fastest framework for building websites.
 jp                        0.1.3      Command line interface to JMESPath
@@ -57,7 +57,7 @@ kops                      1.18.0     Kubernetes Operations (kops) - Production G
 kops-1.12                 1.12.3     Kubernetes Operations (kops) - Production Grade K8s Installation, Upgrades, and Management
 krew                      0.3.4      Kubectl plugin manager
 kubecron                  1.0.2      Utilities to manage kubernetes cronjobs. Run a CronJob manually for test purposes. Suspend/unsuspend a CronJob
-kubectl                   1.18.6     Production-Grade Container Scheduling and Management
+kubectl                   1.18.8     Production-Grade Container Scheduling and Management
 kubectl-1.13              1.13.12    Production-Grade Container Scheduling and Management (v1.13)
 kubectl-1.14              1.14.10    Production-Grade Container Scheduling and Management (v1.14)
 kubectl-1.15              1.15.12    Production-Grade Container Scheduling and Management (v1.15)
@@ -70,7 +70,7 @@ lazydocker                0.9        The lazier way to manage everything docker
 lectl                     0.21       Script to check issued certificates by Let's Encrypt on CTL (Certificate Transparency Log) using https://crt.sh
 minikube                  1.12.3     Run Kubernetes locally
 misspell                  0.3.4      Correct commonly misspelled English words in source files
-nomad                     0.12.2     Hashicorp nomad
+nomad                     0.12.3     Hashicorp nomad
 pack                      0.12.0     Create cloud native Buildpacks
 packer                    1.6.1      Packer is a tool for creating identical machine images for multiple platforms from a single source configuration.
 pandoc                    2.10.1     Universal markup converter
@@ -92,7 +92,7 @@ slack-notifier            0.3.0      Command line utility to send messages with 
 sops                      3.6.0      Secrets management stinks, use some sops!
 stern                     1.11.0     ⎈ Multi pod and container log tailing for Kubernetes
 sudosh                    0.3.0      Shell wrapper to run a login shell with `sudo` as the current user for the purpose of audit logging
-teleport                  4.3.2      Privileged access management for elastic infrastructure.
+teleport                  4.3.5      Privileged access management for elastic infrastructure.
 terraform                 0.13.0     Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-0.11            0.11.14    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-0.12            0.12.29    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
