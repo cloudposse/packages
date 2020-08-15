@@ -269,14 +269,14 @@ gotop                     3.0.0      A terminal based graphical activity monitor
 helm                      2.16.10    The Kubernetes Package Manager
 helm2                     2.16.9     The Kubernetes Package Manager
 helm3                     3.2.4      The Kubernetes Package Manager
-helmfile                  0.125.6    Deploy Kubernetes Helm Charts
+helmfile                  0.125.7    Deploy Kubernetes Helm Charts
 htmltest                  0.13.0     :white_check_mark: Test generated HTML for problems
 hugo                      0.74.3     The world’s fastest framework for building websites.
 jp                        0.1.3      Command line interface to JMESPath
 jq                        1.6        Command-line JSON processor
 json2hcl                  0.0.6      Convert JSON to HCL, and vice versa
 jx                        2.1.127    Jenkins-X
-k3d                       3.0.0      Little helper to run Rancher Lab's k3s in Docker
+k3d                       3.0.1      Little helper to run Rancher Lab's k3s in Docker
 k6                        0.27.1     A modern load testing tool, using Go and JavaScript - https://k6.io
 k9s                       0.21.7     Kubernetes CLI To Manage Your Clusters In Style
 katafygio                 0.8.1      K8s continuous backup to git
@@ -309,7 +309,7 @@ popeye                    0.8.8      A Kubernetes cluster resource sanitizer
 promtool                  2.20.1     Prometheus CLI tool
 rakkess                   0.4.4      Review Access - kubectl plugin to show an access matrix for all available resources
 rancher                   2.4.5      Rancher CLI
-rbac-lookup               0.6.0      Find Kubernetes roles and cluster roles bound to any user, service account, or group name.
+rbac-lookup               0.6.1      Find Kubernetes roles and cluster roles bound to any user, service account, or group name.
 retry                     3.3.0      ♻️ Functional mechanism based on channels to perform actions repetitively until successful.
 saml2aws                  2.26.2     CLI tool which enables you to login and retrieve AWS temporary credentials using a SAML IDP
 scenery                   0.1.5      A Terraform plan output prettifier
