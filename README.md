@@ -233,7 +233,7 @@ exit
 amtool                    0.21.0     Tool for interacting with the Alertmanager API
 argocd                    1.6.2      Declarative GitOpts for Kubernetes
 assume-role               0.3.2      Easily assume AWS roles in your terminal.
-atlantis                  0.14.0     Terraform For Teams
+atlantis                  0.15.0     Terraform For Teams
 awless                    0.1.11     A Mighty CLI for AWS
 aws-iam-authenticator     0.5.1      A tool to use AWS IAM credentials to authenticate to a Kubernetes cluster
 aws-okta                  0.19.4     aws-okta allows users to authenticate with AWS using Okta credentials
@@ -300,7 +300,7 @@ lectl                     0.21       Script to check issued certificates by Let'
 minikube                  1.12.3     Run Kubernetes locally
 misspell                  0.3.4      Correct commonly misspelled English words in source files
 nomad                     0.12.3     Hashicorp nomad
-pack                      0.12.0     Create cloud native Buildpacks
+pack                      0.13.0     Create cloud native Buildpacks
 packer                    1.6.1      Packer is a tool for creating identical machine images for multiple platforms from a single source configuration.
 pandoc                    2.10.1     Universal markup converter
 pgmetrics                 1.9.3      Postgres metrics
