@@ -300,7 +300,7 @@ lectl                     0.21       Script to check issued certificates by Let'
 minikube                  1.12.3     Run Kubernetes locally
 misspell                  0.3.4      Correct commonly misspelled English words in source files
 nomad                     0.12.3     Hashicorp nomad
-pack                      0.13.0     Create cloud native Buildpacks
+pack                      0.13.1     Create cloud native Buildpacks
 packer                    1.6.1      Packer is a tool for creating identical machine images for multiple platforms from a single source configuration.
 pandoc                    2.10.1     Universal markup converter
 pgmetrics                 1.9.3      Postgres metrics
