@@ -1,10 +1,13 @@
+export MASTER_PACKAGE_NAME = terraform
+export MAJOR_VERSION = latest
+
 include ../../tasks/Makefile.package
 include ../../tasks/Makefile.apk
 
-# Package details
-export VENDOR ?= hashicorp
-export DOWNLOAD_URL ?= https://releases.hashicorp.com/$(PACKAGE_NAME)/$(PACKAGE_VERSION)/$(PACKAGE_NAME)_$(PACKAGE_VERSION)_$(OS)_$(ARCH).zip
-	## Run go generate in all packages
+export DOWNLOAD_URL ?= https://releases.hashicorp.com/terraform/$(PACKAGE_VERSION)/terraform_$(PACKAGE_VERSION)_$(OS)_$(ARCH).zip
+export APKBUILD_DEPENDS += dpkg
+export APKBUILD_INSTALL_SCRIPTS = $(PACKAGE_NAME).post-install $(PACKAGE_NAME).post-deinstall
+export INSTALL_DIR = /usr/share/${MASTER_PACKAGE_NAME}/${MAJOR_VERSION}/bin
 export APK_BUILD_TEMPLATE ?= APKBUILD.github-binary
 
 install:
