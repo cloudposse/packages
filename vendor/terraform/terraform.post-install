@@ -1,0 +1,23 @@
+#!/bin/sh
+MASTER_PACKAGE_NAME=terraform
+# Special settings for the base package to be
+# intalled as "latest" and automatically selected
+PRIORITY="100"
+MAJOR_VERSION="latest"
+PACKAGE_NAME=${MASTER_PACKAGE_NAME}
+
+# INSTALL_DIR is where the binary is ultimately installed
+INSTALL_DIR=/usr/share/${MASTER_PACKAGE_NAME}/${MAJOR_VERSION}/bin
+
+mkdir -p ${INSTALL_DIR}
+
+# --install <link> <name> <path> <priority>
+# <link> is the symlink people will actually invoke
+# <name> is the name for this group of alternatives
+# <path> is the location of the actual binary
+# <priority> is an integer. The alternative with the highest priority
+#            number will be automatically selected
+
+# Install terraform command
+update-alternatives --install /usr/bin/${MASTER_PACKAGE_NAME} ${MASTER_PACKAGE_NAME} ${INSTALL_DIR}/${MASTER_PACKAGE_NAME} ${PRIORITY}
+exit 0

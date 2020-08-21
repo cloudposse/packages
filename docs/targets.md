@@ -1,5 +1,6 @@
+<!-- markdownlint-disable -->
 ## Makefile Targets
-```
+```text
 amtool                    0.21.0     Tool for interacting with the Alertmanager API
 argocd                    1.6.2      Declarative GitOpts for Kubernetes
 assume-role               0.3.2      Easily assume AWS roles in your terminal.
@@ -97,6 +98,9 @@ terraform-0.11            0.11.14    Terraform is a tool for building, changing,
 terraform-0.12            0.12.29    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-0.13            0.13.0     Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-docs            0.9.1      Generate docs from terraform modules
+terraform_0.11            0.11.14    Terraform (Deprecated package. Use terraform-0.11 instead)
+terraform_0.12            0.12.29    Terraform (Deprecated package. Use terraform-0.12 instead)
+terraform_0.13            0.13.0     Terraform (Deprecated package. Use terraform-0.13 instead)
 terragrunt                0.23.33    Terragrunt is a thin wrapper for Terraform that provides extra tools for working with multiple Terraform modules.
 terrahelp                 0.7.4      Terrahelp is as a command line utility that provides useful tricks like masking of terraform output.
 tfenv                     0.4.0      Transform environment variables for use with Terraform (e.g. `HOSTNAME` ⇨ `TF_VAR_hostname`)
@@ -110,3 +114,4 @@ venona                    0.32.1     Codefresh runtime-environment agent
 vert                      0.1.0      Simple CLI for comparing two or more versions
 yq                        3.3.2      yq is a portable command-line YAML processor
 ```
+<!-- markdownlint-restore -->

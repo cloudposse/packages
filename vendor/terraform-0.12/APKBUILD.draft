@@ -1,0 +1,42 @@
+# Custom Build for Terraform with hardcoded values
+# Contributor: Cloud Posse, LLC <hello@cloudposse.com>
+# Maintainer: Cloud Posse, LLC <hello@cloudposse.com>
+# vim: filetype=sh
+
+pkgver="${PACKAGE_VERSION}"
+pkgrel="${PACKAGE_RELEASE}"
+mjrver=${pkgver%.*}
+pkgname="terraform_${mjrver}"
+pkgdesc="${PACKAGE_DESCRIPTION}"
+repo=vendor
+arch="x86_64"
+url="https://releases.hashicorp.com/terraform/${pkgver}/terraform_${pkgver}_linux_amd64.zip"
+license="MPL-2.0"
+depends="dpkg"
+makedepends=""
+source="https://releases.hashicorp.com/terraform/${pkgver}/terraform_${pkgver}_linux_amd64.zip"
+builddir="$srcdir/$pkgname-$pkgver"
+install="${pkgname}.post-install ${pkgname}.post-deinstall"
+installdir=${INSTALL_DIR:-/usr/bin/}
+exe=terraform
+
+build() {
+:
+}
+
+check() {
+	cd $srcdir
+	./terraform version
+}
+
+# This is the packaging stage.
+# The built application and support files should be installed into $pkgdir.
+package() {
+	echo "Installing packges to ${pkgdir}"
+	mkdir -p "${pkgdir}/${installdir}"
+	for cmd in ${exe}; do
+	  install -m 755 "$(realpath "${srcdir}/${cmd}")" "${pkgdir}/${installdir}/${cmd}"
+	done
+	echo "Binaries staged for installation in ${pkgdir}"
+	find "${pkgdir}"
+}
