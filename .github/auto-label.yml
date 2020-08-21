@@ -113,6 +113,9 @@ vendor/terraform-0.12: vendor/terraform-0.12/**
 vendor/terraform-0.13: vendor/terraform-0.13/**
 vendor/terraform-docs: vendor/terraform-docs/**
 vendor/terraform: vendor/terraform/**
+vendor/terraform_0.11: vendor/terraform_0.11/**
+vendor/terraform_0.12: vendor/terraform_0.12/**
+vendor/terraform_0.13: vendor/terraform_0.13/**
 vendor/terragrunt: vendor/terragrunt/**
 vendor/terrahelp: vendor/terrahelp/**
 vendor/tfenv: vendor/tfenv/**

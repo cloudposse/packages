@@ -327,6 +327,9 @@ terraform-0.11            0.11.14    Terraform is a tool for building, changing,
 terraform-0.12            0.12.29    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-0.13            0.13.0     Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-docs            0.9.1      Generate docs from terraform modules
+terraform_0.11            0.11.14    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
+terraform_0.12            0.12.29    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
+terraform_0.13            0.13.0     Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terragrunt                0.23.33    Terragrunt is a thin wrapper for Terraform that provides extra tools for working with multiple Terraform modules.
 terrahelp                 0.7.4      Terrahelp is as a command line utility that provides useful tricks like masking of terraform output.
 tfenv                     0.4.0      Transform environment variables for use with Terraform (e.g. `HOSTNAME` ⇨ `TF_VAR_hostname`)
