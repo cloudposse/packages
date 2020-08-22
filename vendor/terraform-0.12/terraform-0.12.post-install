@@ -1,0 +1,29 @@
+#!/bin/sh
+MASTER_PACKAGE_NAME=terraform
+PRIORITY="12"
+MAJOR_VERSION="0.${PRIORITY}"
+PACKAGE_NAME=${MASTER_PACKAGE_NAME}-${MAJOR_VERSION}
+
+# INSTALL_DIR is where the binary is ultimately installed
+INSTALL_DIR=/usr/share/${MASTER_PACKAGE_NAME}/${MAJOR_VERSION}/bin
+DIRENV_SUPPORT_DIR=/usr/local/terraform/${MAJOR_VERSION}/bin
+
+mkdir -p ${INSTALL_DIR}
+mkdir -p ${DIRENV_SUPPORT_DIR}
+
+# --install <link> <name> <path> <priority>
+# <link> is the symlink people will actually invoke
+# <name> is the name for this group of alternatives
+# <path> is the location of the actual binary
+# <priority> is an integer. The alternative with the highest priority
+#            number will be automatically selected
+
+## Install terraform-0.12 command
+update-alternatives --install /usr/bin/${PACKAGE_NAME} ${PACKAGE_NAME} ${INSTALL_DIR}/${MASTER_PACKAGE_NAME} 1
+
+# Install /usr/local/terraform/0.12/bin/terraform for `direnv/use terraform`
+update-alternatives --install ${DIRENV_SUPPORT_DIR}/terraform ${PACKAGE_NAME}-direnv ${INSTALL_DIR}/${MASTER_PACKAGE_NAME} 1
+
+# Install terraform command
+update-alternatives --install /usr/bin/${MASTER_PACKAGE_NAME} ${MASTER_PACKAGE_NAME} ${INSTALL_DIR}/${MASTER_PACKAGE_NAME} ${PRIORITY}
+exit 0
