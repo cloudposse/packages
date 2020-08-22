@@ -1,1 +1,4 @@
-0.13.0
+Usage: ../../bin//github-repo-metadata [org] [repo] [api] [jq path]
+  e.g. ../../bin//github-repo-metadata cloudposse geodesic license .license.spdx_id
+       ../../bin//github-repo-metadata cloudposse geodesic releases/latest .tag_name
+       ../../bin//github-repo-metadata cloudposse geodesic '' .description

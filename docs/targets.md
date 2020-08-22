@@ -93,11 +93,13 @@ sops                      3.6.0      Secrets management stinks, use some sops!
 stern                     1.11.0     ⎈ Multi pod and container log tailing for Kubernetes
 sudosh                    0.3.0      Shell wrapper to run a login shell with `sudo` as the current user for the purpose of audit logging
 teleport                  4.3.5      Privileged access management for elastic infrastructure.
-terraform                 0.13.0     Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-0.11            0.11.14    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-0.12            0.12.29    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-0.13            0.13.0     Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-docs            0.9.1      Generate docs from terraform modules
+terraform_0.11            0.11.14    Terraform (Deprecated package. Use terraform-0.11 instead)
+terraform_0.12            0.12.29    Terraform (Deprecated package. Use terraform-0.12 instead)
+terraform_0.13            0.13.0     Terraform (Deprecated package. Use terraform-0.13 instead)
 terragrunt                0.23.33    Terragrunt is a thin wrapper for Terraform that provides extra tools for working with multiple Terraform modules.
 terrahelp                 0.7.4      Terrahelp is as a command line utility that provides useful tricks like masking of terraform output.
 tfenv                     0.4.0      Transform environment variables for use with Terraform (e.g. `HOSTNAME` ⇨ `TF_VAR_hostname`)
@@ -110,5 +112,7 @@ vault                     1.5.0      Hashicorp vault
 venona                    0.32.1     Codefresh runtime-environment agent
 vert                      0.1.0      Simple CLI for comparing two or more versions
 yq                        3.3.2      yq is a portable command-line YAML processor
+Makefile:44: recipe for target 'help' failed
+Makefile:84: recipe for target 'help/vendor' failed
 ```
 <!-- markdownlint-restore -->
