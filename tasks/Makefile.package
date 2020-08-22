@@ -167,8 +167,12 @@ CURRENT_VERSION:
 		echo "ERROR: failed to obtain current version for $(VENDOR)/$(PACKAGE_REPO_NAME) (got: $${current_version})"; \
 		exit 1; \
 	elif [ "$${local_version}" != "$${current_version}" ]; then \
-		echo "Upgrading $(PACKAGE_NAME) from $${local_version} to $${current_version}"; \
-		echo "$${current_version}" > VERSION; \
+		if [ $$(semver "$${current_version}" "$${local_version}" ) != "1" ]; then \
+			echo "NOT \"Upgrading\" $(PACKAGE_NAME) from $${local_version} to OLDER $${current_version}"; \
+		else \
+		 	echo "Upgrading $(PACKAGE_NAME) from $${local_version} to $${current_version}"; \
+			echo "$${current_version}" > VERSION; \
+		fi \
 	fi
 
 info:

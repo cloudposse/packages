@@ -1,3 +1,5 @@
+export VENDOR ?= hashicorp
+export PACKAGE_REPO_NAME = terraform
 export MASTER_PACKAGE_NAME = terraform
 export MAJOR_VERSION = latest
 
