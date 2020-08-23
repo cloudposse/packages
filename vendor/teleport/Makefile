@@ -14,6 +14,9 @@ include ../../tasks/Makefile.apk
 # Package details
 export VENDOR ?= gravitational
 export DOWNLOAD_URL ?= https://get.gravitational.com/teleport/$(PACKAGE_VERSION)/teleport-v$(PACKAGE_VERSION)-$(OS)-$(ARCH)-bin.tar.gz
+# Starting with version 4.3, Teleport is not compatibly with Alpine
+# so we disable updates
+export AUTO_UPDATE_ENABLED = false
 export APK_BUILD_TEMPLATE ?= APKBUILD.github-binary
 export APKBUILD_DEPENDS += libc6-compat musl eudev-dev
 export PACKAGE_EXE = teleport tctl tsh
