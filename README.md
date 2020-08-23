@@ -267,8 +267,8 @@ goofys                    0.24.0     a high-performance, POSIX-ish Amazon S3 fil
 gosu                      1.12       Simple Go-based setuid+setgid+setgroups+exec
 gotop                     3.0.0      A terminal based graphical activity monitor inspired by gtop and vtop
 helm                      2.16.10    The Kubernetes Package Manager
-helm2                     2.16.9     The Kubernetes Package Manager
-helm3                     3.2.4      The Kubernetes Package Manager
+helm2                     2.16.10    The Kubernetes Package Manager
+helm3                     3.3.0      The Kubernetes Package Manager
 helmfile                  0.125.7    Deploy Kubernetes Helm Charts
 htmltest                  0.13.0     :white_check_mark: Test generated HTML for problems
 hugo                      0.74.3     The world’s fastest framework for building websites.
