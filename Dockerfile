@@ -10,6 +10,8 @@ RUN apk add --update --no-cache bash make curl coreutils libc6-compat tar xz jq
 
 COPY --from=cfssl /go/bin/ ${INSTALL_PATH}/
 
+COPY bin/ /usr/local/bin/
+
 COPY . /packages
 RUN mkdir -p /packages/tmp
 RUN make -C /packages/install/ all
