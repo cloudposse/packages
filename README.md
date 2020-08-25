@@ -284,7 +284,7 @@ kfctl                     1.0        Machine Learning Toolkit for Kubernetes
 kind                      0.8.1      A tool for running local Kubernetes clusters using Docker
 kops                      1.18.0     Kubernetes Operations (kops) - Production Grade K8s Installation, Upgrades, and Management
 kops-1.12                 1.12.3     Kubernetes Operations (kops) - Production Grade K8s Installation, Upgrades, and Management
-krew                      0.3.4      Kubectl plugin manager
+krew                      0.4.0      Kubectl plugin manager
 kubecron                  1.0.2      Utilities to manage kubernetes cronjobs. Run a CronJob manually for test purposes. Suspend/unsuspend a CronJob
 kubectl                   1.18.8     Production-Grade Container Scheduling and Management
 kubectl-1.13              1.13.12    Production-Grade Container Scheduling and Management (v1.13)
@@ -311,7 +311,7 @@ rakkess                   0.4.5      Review Access - kubectl plugin to show an a
 rancher                   2.4.5      Rancher CLI
 rbac-lookup               0.6.1      Find Kubernetes roles and cluster roles bound to any user, service account, or group name.
 retry                     3.3.0      ♻️ Functional mechanism based on channels to perform actions repetitively until successful.
-saml2aws                  2.26.2     CLI tool which enables you to login and retrieve AWS temporary credentials using a SAML IDP
+saml2aws                  2.27.0     CLI tool which enables you to login and retrieve AWS temporary credentials using a SAML IDP
 scenery                   0.1.5      A Terraform plan output prettifier
 sentinel                  0.14.2     Hashicorp sentinel
 sentry-cli                1.55.2     A command line utility to work with Sentry.
@@ -330,7 +330,7 @@ terraform-docs            0.9.1      Generate docs from terraform modules
 terraform_0.11            0.11.14    Terraform (Deprecated package. Use terraform-0.11 instead)
 terraform_0.12            0.12.29    Terraform (Deprecated package. Use terraform-0.12 instead)
 terraform_0.13            0.13.0     Terraform (Deprecated package. Use terraform-0.13 instead)
-terragrunt                0.23.33    Terragrunt is a thin wrapper for Terraform that provides extra tools for working with multiple Terraform modules.
+terragrunt                0.23.34    Terragrunt is a thin wrapper for Terraform that provides extra tools for working with multiple Terraform modules.
 terrahelp                 0.7.4      Terrahelp is as a command line utility that provides useful tricks like masking of terraform output.
 tfenv                     0.4.0      Transform environment variables for use with Terraform (e.g. `HOSTNAME` ⇨ `TF_VAR_hostname`)
 tfmask                    0.7.0      Terraform utility to mask select output from `terraform plan` and `terraform apply`
@@ -338,7 +338,7 @@ thanos                    0.14.0     Highly available Prometheus setup with long
 trivy                     0.10.2     A Simple and Comprehensive Vulnerability Scanner for Containers, Suitable for CI
 variant                   0.36.5     Variant is a Universal CLI tool that works like a task runner
 variant2                  0.33.0     Second major version of Variant, a Universal CLI tool that works like a task runner
-vault                     1.5.0      Hashicorp vault
+vault                     1.5.2      Hashicorp vault
 venona                    0.32.1     Codefresh runtime-environment agent
 vert                      0.1.0      Simple CLI for comparing two or more versions
 yq                        3.3.2      yq is a portable command-line YAML processor
