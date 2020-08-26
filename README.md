@@ -231,7 +231,7 @@ exit
 ## Makefile Targets
 ```text
 amtool                    0.21.0     Tool for interacting with the Alertmanager API
-argocd                    1.6.2      Declarative GitOpts for Kubernetes
+argocd                    1.7.0      Declarative GitOpts for Kubernetes
 assume-role               0.3.2      Easily assume AWS roles in your terminal.
 atlantis                  0.15.0     Terraform For Teams
 awless                    0.1.11     A Mighty CLI for AWS
@@ -305,7 +305,7 @@ packer                    1.6.1      Packer is a tool for creating identical mac
 pandoc                    2.10.1     Universal markup converter
 pgmetrics                 1.9.3      Postgres metrics
 pluto                     3.4.1      A cli tool to help discover deprecated apiVersions in Kubernetes
-popeye                    0.8.8      A Kubernetes cluster resource sanitizer
+popeye                    0.8.10     A Kubernetes cluster resource sanitizer
 promtool                  2.20.1     Prometheus CLI tool
 rakkess                   0.4.5      Review Access - kubectl plugin to show an access matrix for all available resources
 rancher                   2.4.5      Rancher CLI
@@ -330,7 +330,7 @@ terraform-docs            0.9.1      Generate docs from terraform modules
 terraform_0.11            0.11.14    Terraform (Deprecated package. Use terraform-0.11 instead)
 terraform_0.12            0.12.29    Terraform (Deprecated package. Use terraform-0.12 instead)
 terraform_0.13            0.13.0     Terraform (Deprecated package. Use terraform-0.13 instead)
-terragrunt                0.23.34    Terragrunt is a thin wrapper for Terraform that provides extra tools for working with multiple Terraform modules.
+terragrunt                0.23.35    Terragrunt is a thin wrapper for Terraform that provides extra tools for working with multiple Terraform modules.
 terrahelp                 0.7.4      Terrahelp is as a command line utility that provides useful tricks like masking of terraform output.
 tfenv                     0.4.0      Transform environment variables for use with Terraform (e.g. `HOSTNAME` ⇨ `TF_VAR_hostname`)
 tfmask                    0.7.0      Terraform utility to mask select output from `terraform plan` and `terraform apply`
