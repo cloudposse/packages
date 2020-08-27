@@ -231,7 +231,7 @@ exit
 ## Makefile Targets
 ```text
 amtool                    0.21.0     Tool for interacting with the Alertmanager API
-argocd                    1.7.0      Declarative GitOpts for Kubernetes
+argocd                    1.7.1      Declarative GitOpts for Kubernetes
 assume-role               0.3.2      Easily assume AWS roles in your terminal.
 atlantis                  0.15.0     Terraform For Teams
 awless                    0.1.11     A Mighty CLI for AWS
@@ -286,7 +286,7 @@ kops                      1.18.0     Kubernetes Operations (kops) - Production G
 kops-1.12                 1.12.3     Kubernetes Operations (kops) - Production Grade K8s Installation, Upgrades, and Management
 krew                      0.4.0      Kubectl plugin manager
 kubecron                  1.0.2      Utilities to manage kubernetes cronjobs. Run a CronJob manually for test purposes. Suspend/unsuspend a CronJob
-kubectl                   1.18.8     Production-Grade Container Scheduling and Management
+kubectl                   1.19.0     Production-Grade Container Scheduling and Management
 kubectl-1.13              1.13.12    Production-Grade Container Scheduling and Management (v1.13)
 kubectl-1.14              1.14.10    Production-Grade Container Scheduling and Management (v1.14)
 kubectl-1.15              1.15.12    Production-Grade Container Scheduling and Management (v1.15)
@@ -308,7 +308,7 @@ pluto                     3.4.1      A cli tool to help discover deprecated apiV
 popeye                    0.8.10     A Kubernetes cluster resource sanitizer
 promtool                  2.20.1     Prometheus CLI tool
 rakkess                   0.4.5      Review Access - kubectl plugin to show an access matrix for all available resources
-rancher                   2.4.5      Rancher CLI
+rancher                   2.4.6      Rancher CLI
 rbac-lookup               0.6.1      Find Kubernetes roles and cluster roles bound to any user, service account, or group name.
 retry                     3.3.0      ♻️ Functional mechanism based on channels to perform actions repetitively until successful.
 saml2aws                  2.27.0     CLI tool which enables you to login and retrieve AWS temporary credentials using a SAML IDP
@@ -322,7 +322,7 @@ sops                      3.6.0      Secrets management stinks, use some sops!
 stern                     1.11.0     ⎈ Multi pod and container log tailing for Kubernetes
 sudosh                    0.3.0      Shell wrapper to run a login shell with `sudo` as the current user for the purpose of audit logging
 teleport                  4.2.11     Privileged access management for elastic infrastructure.
-terraform                 0.13.0     Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
+terraform                 0.13.1     Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-0.11            0.11.14    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-0.12            0.12.29    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-0.13            0.13.0     Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
@@ -330,7 +330,7 @@ terraform-docs            0.9.1      Generate docs from terraform modules
 terraform_0.11            0.11.14    Terraform (Deprecated package. Use terraform-0.11 instead)
 terraform_0.12            0.12.29    Terraform (Deprecated package. Use terraform-0.12 instead)
 terraform_0.13            0.13.0     Terraform (Deprecated package. Use terraform-0.13 instead)
-terragrunt                0.23.35    Terragrunt is a thin wrapper for Terraform that provides extra tools for working with multiple Terraform modules.
+terragrunt                0.23.36    Terragrunt is a thin wrapper for Terraform that provides extra tools for working with multiple Terraform modules.
 terrahelp                 0.7.4      Terrahelp is as a command line utility that provides useful tricks like masking of terraform output.
 tfenv                     0.4.0      Transform environment variables for use with Terraform (e.g. `HOSTNAME` ⇨ `TF_VAR_hostname`)
 tfmask                    0.7.0      Terraform utility to mask select output from `terraform plan` and `terraform apply`
