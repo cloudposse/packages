@@ -72,7 +72,7 @@ minikube                  1.12.3     Run Kubernetes locally
 misspell                  0.3.4      Correct commonly misspelled English words in source files
 nomad                     0.12.3     Hashicorp nomad
 pack                      0.13.1     Create cloud native Buildpacks
-packer                    1.6.1      Packer is a tool for creating identical machine images for multiple platforms from a single source configuration.
+packer                    1.6.2      Packer is a tool for creating identical machine images for multiple platforms from a single source configuration.
 pandoc                    2.10.1     Universal markup converter
 pgmetrics                 1.9.3      Postgres metrics
 pluto                     3.4.1      A cli tool to help discover deprecated apiVersions in Kubernetes
@@ -101,7 +101,7 @@ terraform-docs            0.9.1      Generate docs from terraform modules
 terraform_0.11            0.11.14    Terraform (Deprecated package. Use terraform-0.11 instead)
 terraform_0.12            0.12.29    Terraform (Deprecated package. Use terraform-0.12 instead)
 terraform_0.13            0.13.0     Terraform (Deprecated package. Use terraform-0.13 instead)
-terragrunt                0.23.37    Terragrunt is a thin wrapper for Terraform that provides extra tools for working with multiple Terraform modules.
+terragrunt                0.23.38    Terragrunt is a thin wrapper for Terraform that provides extra tools for working with multiple Terraform modules.
 terrahelp                 0.7.4      Terrahelp is as a command line utility that provides useful tricks like masking of terraform output.
 tfenv                     0.4.0      Transform environment variables for use with Terraform (e.g. `HOSTNAME` ⇨ `TF_VAR_hostname`)
 tfmask                    0.7.0      Terraform utility to mask select output from `terraform plan` and `terraform apply`
@@ -109,7 +109,7 @@ thanos                    0.14.0     Highly available Prometheus setup with long
 trivy                     0.10.2     A Simple and Comprehensive Vulnerability Scanner for Containers, Suitable for CI
 variant                   0.36.5     Variant is a Universal CLI tool that works like a task runner
 variant2                  0.33.0     Second major version of Variant, a Universal CLI tool that works like a task runner
-vault                     1.5.2      Hashicorp vault
+vault                     1.5.3      Hashicorp vault
 venona                    0.32.1     Codefresh runtime-environment agent
 vert                      0.1.0      Simple CLI for comparing two or more versions
 yq                        3.3.2      yq is a portable command-line YAML processor
