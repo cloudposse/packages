@@ -32,7 +32,7 @@ github-commenter          0.7.0      Command line utility for creating GitHub co
 github-release            0.8.1      Commandline app to create and edit releases on Github (and upload artifacts)
 github-status-updater     0.5.0      Command line utility for updating GitHub commit statuses and enabling required status checks for pull requests
 gitleaks                  1.2.0      Audit git repos for secrets 🔑
-gomplate                  3.7.0      A flexible commandline tool for template rendering. Supports lots of local and remote datasources.
+gomplate                  3.8.0      A flexible commandline tool for template rendering. Supports lots of local and remote datasources.
 gonsul                    0.2.1      A stand-alone alternative to git2consul 
 goofys                    0.24.0     a high-performance, POSIX-ish Amazon S3 file system written in Go
 gosu                      1.12       Simple Go-based setuid+setgid+setgroups+exec
@@ -40,7 +40,7 @@ gotop                     3.0.0      A terminal based graphical activity monitor
 helm                      3.3.0      The Kubernetes Package Manager
 helm2                     2.16.10    The Kubernetes Package Manager
 helm3                     3.3.0      The Kubernetes Package Manager
-helmfile                  0.125.9    Deploy Kubernetes Helm Charts
+helmfile                  0.126.0    Deploy Kubernetes Helm Charts
 htmltest                  0.13.0     :white_check_mark: Test generated HTML for problems
 hugo                      0.74.3     The world’s fastest framework for building websites.
 jp                        0.1.3      Command line interface to JMESPath
@@ -108,7 +108,7 @@ terrahelp                 0.7.4      Terrahelp is as a command line utility that
 tfenv                     0.4.0      Transform environment variables for use with Terraform (e.g. `HOSTNAME` ⇨ `TF_VAR_hostname`)
 tfmask                    0.7.0      Terraform utility to mask select output from `terraform plan` and `terraform apply`
 thanos                    0.14.0     Highly available Prometheus setup with long term storage capabilities. CNCF Sandbox project.
-trivy                     0.10.2     A Simple and Comprehensive Vulnerability Scanner for Containers, Suitable for CI
+trivy                     0.11.0     A Simple and Comprehensive Vulnerability Scanner for Containers, Suitable for CI
 variant                   0.36.5     Variant is a Universal CLI tool that works like a task runner
 variant2                  0.33.0     Second major version of Variant, a Universal CLI tool that works like a task runner
 vault                     1.5.3      Hashicorp vault
