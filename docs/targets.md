@@ -37,7 +37,7 @@ gonsul                    0.2.1      A stand-alone alternative to git2consul
 goofys                    0.24.0     a high-performance, POSIX-ish Amazon S3 file system written in Go
 gosu                      1.12       Simple Go-based setuid+setgid+setgroups+exec
 gotop                     3.0.0      A terminal based graphical activity monitor inspired by gtop and vtop
-helm                      3.3.0      The Kubernetes Package Manager
+helm                      3.3.1      The Kubernetes Package Manager
 helm2                     2.16.10    The Kubernetes Package Manager
 helm3                     3.3.0      The Kubernetes Package Manager
 helmfile                  0.126.0    Deploy Kubernetes Helm Charts
