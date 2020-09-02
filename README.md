@@ -231,7 +231,7 @@ exit
 ## Makefile Targets
 ```text
 amtool                    0.21.0     Tool for interacting with the Alertmanager API
-argocd                    1.7.2      Declarative GitOpts for Kubernetes
+argocd                    1.7.3      Declarative GitOpts for Kubernetes
 assume-role               0.3.2      Easily assume AWS roles in your terminal.
 atlantis                  0.15.0     Terraform For Teams
 awless                    0.1.11     A Mighty CLI for AWS
@@ -247,7 +247,7 @@ cloudposse-atlantis       0.9.0.3    Terraform For Teams, enhanced by Cloud Poss
 codefresh                 0.72.1     Codefresh CLI
 consul                    1.8.3      Hashicorp consul
 ctop                      0.7.3      Top-like interface for container metrics
-direnv                    2.21.3     Unclutter your .profile
+direnv                    2.22.0     Unclutter your .profile
 doctl                     1.46.0     A command line tool for DigitalOcean services
 duffle                    0.3.5b1    CNAB installer
 emailcli                  1.0.3      Command line email sending client written in Go.
@@ -268,8 +268,8 @@ gosu                      1.12       Simple Go-based setuid+setgid+setgroups+exe
 gotop                     3.0.0      A terminal based graphical activity monitor inspired by gtop and vtop
 helm                      3.3.1      The Kubernetes Package Manager
 helm2                     2.16.10    The Kubernetes Package Manager
-helm3                     3.3.0      The Kubernetes Package Manager
-helmfile                  0.126.0    Deploy Kubernetes Helm Charts
+helm3                     3.3.1      The Kubernetes Package Manager
+helmfile                  0.127.0    Deploy Kubernetes Helm Charts
 htmltest                  0.13.0     :white_check_mark: Test generated HTML for problems
 hugo                      0.74.3     The world’s fastest framework for building websites.
 jp                        0.1.3      Command line interface to JMESPath
@@ -332,7 +332,7 @@ terraform-docs            0.9.1      Generate docs from terraform modules
 terraform_0.11            0.11.14    Terraform (Deprecated package. Use terraform-0.11 instead)
 terraform_0.12            0.12.29    Terraform (Deprecated package. Use terraform-0.12 instead)
 terraform_0.13            0.13.1     Terraform (Deprecated package. Use terraform-0.13 instead)
-terragrunt                0.23.38    Terragrunt is a thin wrapper for Terraform that provides extra tools for working with multiple Terraform modules.
+terragrunt                0.23.39    Terragrunt is a thin wrapper for Terraform that provides extra tools for working with multiple Terraform modules.
 terrahelp                 0.7.4      Terrahelp is as a command line utility that provides useful tricks like masking of terraform output.
 tfenv                     0.4.0      Transform environment variables for use with Terraform (e.g. `HOSTNAME` ⇨ `TF_VAR_hostname`)
 tfmask                    0.7.0      Terraform utility to mask select output from `terraform plan` and `terraform apply`
