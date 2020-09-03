@@ -8,7 +8,7 @@ atlantis                  0.15.0     Terraform For Teams
 awless                    0.1.11     A Mighty CLI for AWS
 aws-iam-authenticator     0.5.1      A tool to use AWS IAM credentials to authenticate to a Kubernetes cluster
 aws-okta                  0.19.4     aws-okta allows users to authenticate with AWS using Okta credentials
-aws-vault                 5.4.4      A vault for securely storing and accessing AWS credentials in development environments
+aws-vault                 6.0.0      A vault for securely storing and accessing AWS credentials in development environments
 cfssl                     1.4.1      Cloudflare's PKI and TLS toolkit
 cfssljson                 1.4.1      Cloudflare's PKI and TLS toolkit json parser
 chamber                   2.8.2      CLI for managing secrets
@@ -46,7 +46,7 @@ hugo                      0.74.3     The world’s fastest framework for buildin
 jp                        0.1.3      Command line interface to JMESPath
 jq                        1.6        Command-line JSON processor
 json2hcl                  0.0.6      Convert JSON to HCL, and vice versa
-jx                        2.1.127    Jenkins-X
+jx                        2.1.138    Jenkins-X
 k3d                       3.0.1      Little helper to run Rancher Lab's k3s in Docker
 k6                        0.27.1     A modern load testing tool, using Go and JavaScript - https://k6.io
 k9s                       0.21.7     Kubernetes CLI To Manage Your Clusters In Style
@@ -87,7 +87,7 @@ retry                     3.3.0      ♻️ Functional mechanism based on channe
 saml2aws                  2.27.0     CLI tool which enables you to login and retrieve AWS temporary credentials using a SAML IDP
 scenery                   0.1.5      A Terraform plan output prettifier
 sentinel                  0.14.2     Hashicorp sentinel
-sentry-cli                1.55.2     A command line utility to work with Sentry.
+sentry-cli                1.56.0     A command line utility to work with Sentry.
 shellcheck                0.7.1      ShellCheck, a static analysis tool for shell scripts
 shfmt                     3.1.2      A shell parser, formatter and interpreter (POSIX/Bash/mksh)
 slack-notifier            0.3.0      Command line utility to send messages with attachments to Slack channels via Incoming Webhooks
@@ -95,7 +95,7 @@ sops                      3.6.0      Secrets management stinks, use some sops!
 stern                     1.11.0     ⎈ Multi pod and container log tailing for Kubernetes
 sudosh                    0.3.0      Shell wrapper to run a login shell with `sudo` as the current user for the purpose of audit logging
 teleport                  4.2.11     Privileged access management for elastic infrastructure.
-terraform                 0.13.1     Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
+terraform                 0.13.2     Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-0.11            0.11.14    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-0.12            0.12.29    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-0.13            0.13.1     Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
@@ -103,7 +103,7 @@ terraform-docs            0.9.1      Generate docs from terraform modules
 terraform_0.11            0.11.14    Terraform (Deprecated package. Use terraform-0.11 instead)
 terraform_0.12            0.12.29    Terraform (Deprecated package. Use terraform-0.12 instead)
 terraform_0.13            0.13.1     Terraform (Deprecated package. Use terraform-0.13 instead)
-terragrunt                0.23.39    Terragrunt is a thin wrapper for Terraform that provides extra tools for working with multiple Terraform modules.
+terragrunt                0.23.40    Terragrunt is a thin wrapper for Terraform that provides extra tools for working with multiple Terraform modules.
 terrahelp                 0.7.4      Terrahelp is as a command line utility that provides useful tricks like masking of terraform output.
 tfenv                     0.4.0      Transform environment variables for use with Terraform (e.g. `HOSTNAME` ⇨ `TF_VAR_hostname`)
 tfmask                    0.7.0      Terraform utility to mask select output from `terraform plan` and `terraform apply`
