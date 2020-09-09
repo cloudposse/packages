@@ -255,7 +255,7 @@ fargate                   0.3.2      CLI for AWS Fargate
 fetch                     0.3.10     fetch makes it easy to download files, folders, and release assets from a specific public git commit, branch, or tag
 figurine                  1.0.1      Print your name in style
 fzf                       0.22.0     A command-line fuzzy finder
-gh                        0.11.1     The GitHub CLI
+gh                        0.12.0     The GitHub CLI
 ghr                       0.13.0     Upload multiple artifacts to GitHub Releases in parallel
 github-commenter          0.7.0      Command line utility for creating GitHub comments on Commits, Pull Request Reviews or Issues
 github-release            0.8.1      Commandline app to create and edit releases on Github (and upload artifacts)
@@ -332,7 +332,7 @@ terraform-docs            0.9.1      Generate docs from terraform modules
 terraform_0.11            0.11.14    Terraform (Deprecated package. Use terraform-0.11 instead)
 terraform_0.12            0.12.29    Terraform (Deprecated package. Use terraform-0.12 instead)
 terraform_0.13            0.13.1     Terraform (Deprecated package. Use terraform-0.13 instead)
-terragrunt                0.23.40    Terragrunt is a thin wrapper for Terraform that provides extra tools for working with multiple Terraform modules.
+terragrunt                0.24.0     Terragrunt is a thin wrapper for Terraform that provides extra tools for working with multiple Terraform modules.
 terrahelp                 0.7.4      Terrahelp is as a command line utility that provides useful tricks like masking of terraform output.
 tfenv                     0.4.0      Transform environment variables for use with Terraform (e.g. `HOSTNAME` ⇨ `TF_VAR_hostname`)
 tfmask                    0.7.0      Terraform utility to mask select output from `terraform plan` and `terraform apply`
