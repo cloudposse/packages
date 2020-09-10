@@ -269,7 +269,7 @@ gotop                     3.0.0      A terminal based graphical activity monitor
 helm                      3.3.1      The Kubernetes Package Manager
 helm2                     2.16.10    The Kubernetes Package Manager
 helm3                     3.3.1      The Kubernetes Package Manager
-helmfile                  0.128.0    Deploy Kubernetes Helm Charts
+helmfile                  0.128.1    Deploy Kubernetes Helm Charts
 htmltest                  0.13.0     :white_check_mark: Test generated HTML for problems
 hugo                      0.74.3     The world’s fastest framework for building websites.
 jp                        0.1.3      Command line interface to JMESPath
@@ -282,11 +282,11 @@ k9s                       0.21.7     Kubernetes CLI To Manage Your Clusters In S
 katafygio                 0.8.1      K8s continuous backup to git
 kfctl                     1.0        Machine Learning Toolkit for Kubernetes
 kind                      0.8.1      A tool for running local Kubernetes clusters using Docker
-kops                      1.18.0     Kubernetes Operations (kops) - Production Grade K8s Installation, Upgrades, and Management
+kops                      1.18.1     Kubernetes Operations (kops) - Production Grade K8s Installation, Upgrades, and Management
 kops-1.12                 1.12.3     Kubernetes Operations (kops) - Production Grade K8s Installation, Upgrades, and Management
 krew                      0.4.0      Kubectl plugin manager
 kubecron                  1.0.2      Utilities to manage kubernetes cronjobs. Run a CronJob manually for test purposes. Suspend/unsuspend a CronJob
-kubectl                   1.19.0     Production-Grade Container Scheduling and Management
+kubectl                   1.19.1     Production-Grade Container Scheduling and Management
 kubectl-1.13              1.13.12    Production-Grade Container Scheduling and Management (v1.13)
 kubectl-1.14              1.14.10    Production-Grade Container Scheduling and Management (v1.14)
 kubectl-1.15              1.15.12    Production-Grade Container Scheduling and Management (v1.15)
@@ -301,7 +301,7 @@ lazydocker                0.9        The lazier way to manage everything docker
 lectl                     0.21       Script to check issued certificates by Let's Encrypt on CTL (Certificate Transparency Log) using https://crt.sh
 minikube                  1.13.0     Run Kubernetes locally
 misspell                  0.3.4      Correct commonly misspelled English words in source files
-nomad                     0.12.3     Hashicorp nomad
+nomad                     0.12.4     Hashicorp nomad
 pack                      0.13.1     Create cloud native Buildpacks
 packer                    1.6.2      Packer is a tool for creating identical machine images for multiple platforms from a single source configuration.
 pandoc                    2.10.1     Universal markup converter
