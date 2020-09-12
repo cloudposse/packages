@@ -237,7 +237,7 @@ atlantis                  0.15.0     Terraform For Teams
 awless                    0.1.11     A Mighty CLI for AWS
 aws-iam-authenticator     0.5.1      A tool to use AWS IAM credentials to authenticate to a Kubernetes cluster
 aws-okta                  0.19.4     aws-okta allows users to authenticate with AWS using Okta credentials
-aws-vault                 6.0.0      A vault for securely storing and accessing AWS credentials in development environments
+aws-vault                 6.0.1      A vault for securely storing and accessing AWS credentials in development environments
 cfssl                     1.4.1      Cloudflare's PKI and TLS toolkit
 cfssljson                 1.4.1      Cloudflare's PKI and TLS toolkit json parser
 chamber                   2.8.2      CLI for managing secrets
@@ -245,7 +245,7 @@ cli53                     0.8.17     Command line tool for Amazon Route 53
 cloudflared               2020.3.2   Argo Tunnel client
 cloudposse-atlantis       0.9.0.3    Terraform For Teams, enhanced by Cloud Posse
 codefresh                 0.72.3     Codefresh CLI
-consul                    1.8.3      Hashicorp consul
+consul                    1.8.4      Hashicorp consul
 ctop                      0.7.3      Top-like interface for container metrics
 direnv                    2.22.0     Unclutter your .profile
 doctl                     1.46.0     A command line tool for DigitalOcean services
@@ -269,7 +269,7 @@ gotop                     3.0.0      A terminal based graphical activity monitor
 helm                      3.3.1      The Kubernetes Package Manager
 helm2                     2.16.10    The Kubernetes Package Manager
 helm3                     3.3.1      The Kubernetes Package Manager
-helmfile                  0.128.2    Deploy Kubernetes Helm Charts
+helmfile                  0.129.0    Deploy Kubernetes Helm Charts
 htmltest                  0.13.0     :white_check_mark: Test generated HTML for problems
 hugo                      0.74.3     The world’s fastest framework for building websites.
 jp                        0.1.3      Command line interface to JMESPath
@@ -278,7 +278,7 @@ json2hcl                  0.0.6      Convert JSON to HCL, and vice versa
 jx                        2.1.138    Jenkins-X
 k3d                       3.0.1      Little helper to run Rancher Lab's k3s in Docker
 k6                        0.27.1     A modern load testing tool, using Go and JavaScript - https://k6.io
-k9s                       0.21.8     Kubernetes CLI To Manage Your Clusters In Style
+k9s                       0.21.9     Kubernetes CLI To Manage Your Clusters In Style
 katafygio                 0.8.1      K8s continuous backup to git
 kfctl                     1.0        Machine Learning Toolkit for Kubernetes
 kind                      0.8.1      A tool for running local Kubernetes clusters using Docker
@@ -308,7 +308,7 @@ pandoc                    2.10.1     Universal markup converter
 pgmetrics                 1.9.3      Postgres metrics
 pluto                     3.4.1      A cli tool to help discover deprecated apiVersions in Kubernetes
 popeye                    0.8.10     A Kubernetes cluster resource sanitizer
-promtool                  2.20.1     Prometheus CLI tool
+promtool                  2.21.0     Prometheus CLI tool
 rakkess                   0.4.5      Review Access - kubectl plugin to show an access matrix for all available resources
 rancher                   2.4.6      Rancher CLI
 rbac-lookup               0.6.1      Find Kubernetes roles and cluster roles bound to any user, service account, or group name.
@@ -343,7 +343,7 @@ variant2                  0.33.0     Second major version of Variant, a Universa
 vault                     1.5.3      Hashicorp vault
 venona                    0.32.1     Codefresh runtime-environment agent
 vert                      0.1.0      Simple CLI for comparing two or more versions
-yq                        3.3.2      yq is a portable command-line YAML processor
+yq                        3.3.4      yq is a portable command-line YAML processor
 ```
 <!-- markdownlint-restore -->
 
