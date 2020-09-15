@@ -237,7 +237,7 @@ atlantis                  0.15.0     Terraform For Teams
 awless                    0.1.11     A Mighty CLI for AWS
 aws-iam-authenticator     0.5.1      A tool to use AWS IAM credentials to authenticate to a Kubernetes cluster
 aws-okta                  0.19.4     aws-okta allows users to authenticate with AWS using Okta credentials
-aws-vault                 6.0.1      A vault for securely storing and accessing AWS credentials in development environments
+aws-vault                 6.1.0      A vault for securely storing and accessing AWS credentials in development environments
 cfssl                     1.4.1      Cloudflare's PKI and TLS toolkit
 cfssljson                 1.4.1      Cloudflare's PKI and TLS toolkit json parser
 chamber                   2.8.2      CLI for managing secrets
@@ -269,9 +269,9 @@ gotop                     3.0.0      A terminal based graphical activity monitor
 helm                      3.3.1      The Kubernetes Package Manager
 helm2                     2.16.10    The Kubernetes Package Manager
 helm3                     3.3.1      The Kubernetes Package Manager
-helmfile                  0.129.1    Deploy Kubernetes Helm Charts
+helmfile                  0.129.2    Deploy Kubernetes Helm Charts
 htmltest                  0.13.0     :white_check_mark: Test generated HTML for problems
-hugo                      0.74.3     The world’s fastest framework for building websites.
+hugo                      0.75.0     The world’s fastest framework for building websites.
 jp                        0.1.3      Command line interface to JMESPath
 jq                        1.6        Command-line JSON processor
 json2hcl                  0.0.6      Convert JSON to HCL, and vice versa
@@ -320,7 +320,7 @@ sentry-cli                1.56.1     A command line utility to work with Sentry.
 shellcheck                0.7.1      ShellCheck, a static analysis tool for shell scripts
 shfmt                     3.1.2      A shell parser, formatter and interpreter (POSIX/Bash/mksh)
 slack-notifier            0.3.0      Command line utility to send messages with attachments to Slack channels via Incoming Webhooks
-sops                      3.6.0      Secrets management stinks, use some sops!
+sops                      3.6.1      Secrets management stinks, use some sops!
 stern                     1.11.0     ⎈ Multi pod and container log tailing for Kubernetes
 sudosh                    0.3.0      Shell wrapper to run a login shell with `sudo` as the current user for the purpose of audit logging
 teleport                  4.2.11     Privileged access management for elastic infrastructure.
