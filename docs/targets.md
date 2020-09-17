@@ -15,7 +15,7 @@ chamber                   2.8.2      CLI for managing secrets
 cli53                     0.8.17     Command line tool for Amazon Route 53
 cloudflared               2020.3.2   Argo Tunnel client
 cloudposse-atlantis       0.9.0.3    Terraform For Teams, enhanced by Cloud Posse
-codefresh                 0.72.3     Codefresh CLI
+codefresh                 0.72.5     Codefresh CLI
 consul                    1.8.4      Hashicorp consul
 ctop                      0.7.3      Top-like interface for container metrics
 direnv                    2.22.0     Unclutter your .profile
@@ -26,7 +26,7 @@ fargate                   0.3.2      CLI for AWS Fargate
 fetch                     0.3.10     fetch makes it easy to download files, folders, and release assets from a specific public git commit, branch, or tag
 figurine                  1.0.1      Print your name in style
 fzf                       0.22.0     A command-line fuzzy finder
-gh                        0.12.0     The GitHub CLI
+gh                        1.0.0      The GitHub CLI
 ghr                       0.13.0     Upload multiple artifacts to GitHub Releases in parallel
 github-commenter          0.7.0      Command line utility for creating GitHub comments on Commits, Pull Request Reviews or Issues
 github-release            0.8.1      Commandline app to create and edit releases on Github (and upload artifacts)
@@ -57,7 +57,7 @@ kops                      1.18.1     Kubernetes Operations (kops) - Production G
 kops-1.12                 1.12.3     Kubernetes Operations (kops) - Production Grade K8s Installation, Upgrades, and Management
 krew                      0.4.0      Kubectl plugin manager
 kubecron                  1.0.2      Utilities to manage kubernetes cronjobs. Run a CronJob manually for test purposes. Suspend/unsuspend a CronJob
-kubectl                   1.19.1     Production-Grade Container Scheduling and Management
+kubectl                   1.19.0     Production-Grade Container Scheduling and Management
 kubectl-1.13              1.13.12    Production-Grade Container Scheduling and Management (v1.13)
 kubectl-1.14              1.14.10    Production-Grade Container Scheduling and Management (v1.14)
 kubectl-1.15              1.15.12    Production-Grade Container Scheduling and Management (v1.15)
@@ -95,7 +95,7 @@ sops                      3.6.1      Secrets management stinks, use some sops!
 stern                     1.11.0     ⎈ Multi pod and container log tailing for Kubernetes
 sudosh                    0.3.0      Shell wrapper to run a login shell with `sudo` as the current user for the purpose of audit logging
 teleport                  4.2.11     Privileged access management for elastic infrastructure.
-terraform                 0.13.2     Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
+terraform                 0.13.3     Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-0.11            0.11.14    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-0.12            0.12.29    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-0.13            0.13.1     Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
@@ -103,7 +103,7 @@ terraform-docs            0.9.1      Generate docs from terraform modules
 terraform_0.11            0.11.14    Terraform (Deprecated package. Use terraform-0.11 instead)
 terraform_0.12            0.12.29    Terraform (Deprecated package. Use terraform-0.12 instead)
 terraform_0.13            0.13.1     Terraform (Deprecated package. Use terraform-0.13 instead)
-terragrunt                0.24.3     Terragrunt is a thin wrapper for Terraform that provides extra tools for working with multiple Terraform modules.
+terragrunt                0.24.4     Terragrunt is a thin wrapper for Terraform that provides extra tools for working with multiple Terraform modules.
 terrahelp                 0.7.4      Terrahelp is as a command line utility that provides useful tricks like masking of terraform output.
 tfenv                     0.4.0      Transform environment variables for use with Terraform (e.g. `HOSTNAME` ⇨ `TF_VAR_hostname`)
 tfmask                    0.7.0      Terraform utility to mask select output from `terraform plan` and `terraform apply`
