@@ -286,14 +286,14 @@ kops                      1.18.1     Kubernetes Operations (kops) - Production G
 kops-1.12                 1.12.3     Kubernetes Operations (kops) - Production Grade K8s Installation, Upgrades, and Management
 krew                      0.4.0      Kubectl plugin manager
 kubecron                  1.0.2      Utilities to manage kubernetes cronjobs. Run a CronJob manually for test purposes. Suspend/unsuspend a CronJob
-kubectl                   1.19.0     Production-Grade Container Scheduling and Management
+kubectl                   1.19.1     Production-Grade Container Scheduling and Management
 kubectl-1.13              1.13.12    Production-Grade Container Scheduling and Management (v1.13)
 kubectl-1.14              1.14.10    Production-Grade Container Scheduling and Management (v1.14)
 kubectl-1.15              1.15.12    Production-Grade Container Scheduling and Management (v1.15)
-kubectl-1.16              1.16.14    Production-Grade Container Scheduling and Management (v1.16)
-kubectl-1.17              1.17.11    Production-Grade Container Scheduling and Management (v1.17)
-kubectl-1.18              1.18.8     Production-Grade Container Scheduling and Management (v1.18)
-kubectl-1.19              1.19.0     Production-Grade Container Scheduling and Management (v1.19)
+kubectl-1.16              1.16.15    Production-Grade Container Scheduling and Management (v1.16)
+kubectl-1.17              1.17.12    Production-Grade Container Scheduling and Management (v1.17)
+kubectl-1.18              1.18.9     Production-Grade Container Scheduling and Management (v1.18)
+kubectl-1.19              1.19.1     Production-Grade Container Scheduling and Management (v1.19)
 kubectx                   0.9.1      Switch faster between clusters and namespaces in kubectl
 kubens                    0.9.1      Switch faster between clusters and namespaces in kubectl
 kubeval                   0.15.0     Validate your Kubernetes configuration files, supports multiple Kubernetes versions
@@ -327,11 +327,11 @@ teleport                  4.2.11     Privileged access management for elastic in
 terraform                 0.13.3     Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-0.11            0.11.14    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-0.12            0.12.29    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
-terraform-0.13            0.13.1     Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
+terraform-0.13            0.13.3     Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-docs            0.9.1      Generate docs from terraform modules
 terraform_0.11            0.11.14    Terraform (Deprecated package. Use terraform-0.11 instead)
 terraform_0.12            0.12.29    Terraform (Deprecated package. Use terraform-0.12 instead)
-terraform_0.13            0.13.1     Terraform (Deprecated package. Use terraform-0.13 instead)
+terraform_0.13            0.13.3     Terraform (Deprecated package. Use terraform-0.13 instead)
 terragrunt                0.24.4     Terragrunt is a thin wrapper for Terraform that provides extra tools for working with multiple Terraform modules.
 terrahelp                 0.7.4      Terrahelp is as a command line utility that provides useful tricks like masking of terraform output.
 tfenv                     0.4.0      Transform environment variables for use with Terraform (e.g. `HOSTNAME` ⇨ `TF_VAR_hostname`)
