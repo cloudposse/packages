@@ -278,7 +278,7 @@ json2hcl                  0.0.6      Convert JSON to HCL, and vice versa
 jx                        2.1.138    Jenkins-X
 k3d                       3.0.1      Little helper to run Rancher Lab's k3s in Docker
 k6                        0.27.1     A modern load testing tool, using Go and JavaScript - https://k6.io
-k9s                       0.22.0     Kubernetes CLI To Manage Your Clusters In Style
+k9s                       0.22.1     Kubernetes CLI To Manage Your Clusters In Style
 katafygio                 0.8.1      K8s continuous backup to git
 kfctl                     1.0        Machine Learning Toolkit for Kubernetes
 kind                      0.9.0      A tool for running local Kubernetes clusters using Docker
@@ -301,7 +301,7 @@ lazydocker                0.9        The lazier way to manage everything docker
 lectl                     0.21       Script to check issued certificates by Let's Encrypt on CTL (Certificate Transparency Log) using https://crt.sh
 minikube                  1.13.0     Run Kubernetes locally
 misspell                  0.3.4      Correct commonly misspelled English words in source files
-nomad                     0.12.4     Hashicorp nomad
+nomad                     0.12.5     Hashicorp nomad
 pack                      0.13.1     Create cloud native Buildpacks
 packer                    1.6.2      Packer is a tool for creating identical machine images for multiple platforms from a single source configuration.
 pandoc                    2.10.1     Universal markup converter
@@ -332,7 +332,7 @@ terraform-docs            0.9.1      Generate docs from terraform modules
 terraform_0.11            0.11.14    Terraform (Deprecated package. Use terraform-0.11 instead)
 terraform_0.12            0.12.29    Terraform (Deprecated package. Use terraform-0.12 instead)
 terraform_0.13            0.13.3     Terraform (Deprecated package. Use terraform-0.13 instead)
-terragrunt                0.24.4     Terragrunt is a thin wrapper for Terraform that provides extra tools for working with multiple Terraform modules.
+terragrunt                0.25.0     Terragrunt is a thin wrapper for Terraform that provides extra tools for working with multiple Terraform modules.
 terrahelp                 0.7.4      Terrahelp is as a command line utility that provides useful tricks like masking of terraform output.
 tfenv                     0.4.0      Transform environment variables for use with Terraform (e.g. `HOSTNAME` ⇨ `TF_VAR_hostname`)
 tfmask                    0.7.0      Terraform utility to mask select output from `terraform plan` and `terraform apply`
@@ -343,7 +343,7 @@ variant2                  0.33.1     Second major version of Variant, a Universa
 vault                     1.5.3      Hashicorp vault
 venona                    0.32.1     Codefresh runtime-environment agent
 vert                      0.1.0      Simple CLI for comparing two or more versions
-yq                        3.3.4      yq is a portable command-line YAML processor
+yq                        3.4.0      yq is a portable command-line YAML processor
 ```
 <!-- markdownlint-restore -->
 
