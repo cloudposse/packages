@@ -231,7 +231,7 @@ exit
 ## Makefile Targets
 ```text
 amtool                    0.21.0     Tool for interacting with the Alertmanager API
-argocd                    1.7.5      Declarative GitOpts for Kubernetes
+argocd                    1.7.6      Declarative GitOpts for Kubernetes
 assume-role               0.3.2      Easily assume AWS roles in your terminal.
 atlantis                  0.15.0     Terraform For Teams
 awless                    0.1.11     A Mighty CLI for AWS
@@ -244,7 +244,7 @@ chamber                   2.8.2      CLI for managing secrets
 cli53                     0.8.17     Command line tool for Amazon Route 53
 cloudflared               2020.3.2   Argo Tunnel client
 cloudposse-atlantis       0.9.0.3    Terraform For Teams, enhanced by Cloud Posse
-codefresh                 0.72.5     Codefresh CLI
+codefresh                 0.72.7     Codefresh CLI
 consul                    1.8.4      Hashicorp consul
 ctop                      0.7.3      Top-like interface for container metrics
 direnv                    2.22.0     Unclutter your .profile
