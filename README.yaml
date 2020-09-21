@@ -126,6 +126,18 @@ usage: |-
   make -C uninstall yq
   ```
 
+  ### Rebuilding GitHub Action Workflows
+  
+  The GitHub Action workflows are compiled from the `.github/package-template.yml` file by running `make -C .github workflows`. 
+
+  Run this make target anytime the `pakcage-template.yml` changes or any new packages are added to the `vendor/` folder.
+  
+  __IMPORTANT__: The `package-template.yml` supports a single macro for interpolation `%PACKAGE_NAME%` which is replaced using a `sed` expression.
+  Since the workflow uses a combation of gotemplate-like interpolations as well as inlines shell scripts, we used the `%VAR%` form of interpolation to avoid
+  the need for endless escaping of interpolation specifiers. 
+
+  
+
 examples: |-
   ### Docker Multi-stage Build
 

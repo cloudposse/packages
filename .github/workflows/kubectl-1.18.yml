@@ -3,23 +3,23 @@
 # DO NOT EDIT THIS WORKFLOW
 #
 
-name: "kubectl"
+name: "kubectl-1.18"
 on:
   push:
     branches:
       - master
     paths:
       - apk/**
-      - vendor/kubectl/**
-      - .github/workflows/kubectl.yml
+      - vendor/kubectl-1.18/**
+      - .github/workflows/kubectl-1.18.yml
 
 
   pull_request:
     types: [opened, synchronize, reopened]
     paths:
       - apk/**
-      - vendor/kubectl/**
-      - .github/workflows/kubectl.yml
+      - vendor/kubectl-1.18/**
+      - .github/workflows/kubectl-1.18.yml
 
 jobs:
   # Build for alpine linux

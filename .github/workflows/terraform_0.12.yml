@@ -3,23 +3,23 @@
 # DO NOT EDIT THIS WORKFLOW
 #
 
-name: "kubectl"
+name: "terraform_0.12"
 on:
   push:
     branches:
       - master
     paths:
       - apk/**
-      - vendor/kubectl/**
-      - .github/workflows/kubectl.yml
+      - vendor/terraform_0.12/**
+      - .github/workflows/terraform_0.12.yml
 
 
   pull_request:
     types: [opened, synchronize, reopened]
     paths:
       - apk/**
-      - vendor/kubectl/**
-      - .github/workflows/kubectl.yml
+      - vendor/terraform_0.12/**
+      - .github/workflows/terraform_0.12.yml
 
 jobs:
   # Build for alpine linux
