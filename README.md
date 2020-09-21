@@ -173,7 +173,7 @@ make -C uninstall yq
 
 ### Rebuilding GitHub Action Workflows
 
-The GitHub Action workflows are compiled from the `.github/package-template.yml` file by running `make -C .github workflows`. 
+The GitHub Action workflows are compiled from the `.github/package-template.yml` file by running `make -C .github workflows`. It's also run automatically when rebuilding the `README.md` with `make readme`.
 
 Run this make target anytime the `pakcage-template.yml` changes or any new packages are added to the `vendor/` folder.
 
