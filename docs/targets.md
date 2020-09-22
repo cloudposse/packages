@@ -40,7 +40,7 @@ gotop                     3.0.0      A terminal based graphical activity monitor
 helm                      3.3.1      The Kubernetes Package Manager
 helm2                     2.16.10    The Kubernetes Package Manager
 helm3                     3.3.1      The Kubernetes Package Manager
-helmfile                  0.129.3    Deploy Kubernetes Helm Charts
+helmfile                  0.130.0    Deploy Kubernetes Helm Charts
 htmltest                  0.13.0     :white_check_mark: Test generated HTML for problems
 hugo                      0.75.1     The world’s fastest framework for building websites.
 jp                        0.1.3      Command line interface to JMESPath
@@ -48,7 +48,7 @@ jq                        1.6        Command-line JSON processor
 json2hcl                  0.0.6      Convert JSON to HCL, and vice versa
 jx                        2.1.138    Jenkins-X
 k3d                       3.0.2      Little helper to run Rancher Lab's k3s in Docker
-k6                        0.27.1     A modern load testing tool, using Go and JavaScript - https://k6.io
+k6                        0.28.0     A modern load testing tool, using Go and JavaScript - https://k6.io
 k9s                       0.22.1     Kubernetes CLI To Manage Your Clusters In Style
 katafygio                 0.8.1      K8s continuous backup to git
 kfctl                     1.0        Machine Learning Toolkit for Kubernetes
@@ -70,7 +70,7 @@ kubens                    0.9.1      Switch faster between clusters and namespac
 kubeval                   0.15.0     Validate your Kubernetes configuration files, supports multiple Kubernetes versions
 lazydocker                0.9        The lazier way to manage everything docker
 lectl                     0.21       Script to check issued certificates by Let's Encrypt on CTL (Certificate Transparency Log) using https://crt.sh
-minikube                  1.13.0     Run Kubernetes locally
+minikube                  1.13.1     Run Kubernetes locally
 misspell                  0.3.4      Correct commonly misspelled English words in source files
 nomad                     0.12.5     Hashicorp nomad
 pack                      0.13.1     Create cloud native Buildpacks
@@ -84,7 +84,7 @@ rakkess                   0.4.5      Review Access - kubectl plugin to show an a
 rancher                   2.4.6      Rancher CLI
 rbac-lookup               0.6.1      Find Kubernetes roles and cluster roles bound to any user, service account, or group name.
 retry                     3.3.0      ♻️ Functional mechanism based on channels to perform actions repetitively until successful.
-saml2aws                  2.27.0     CLI tool which enables you to login and retrieve AWS temporary credentials using a SAML IDP
+saml2aws                  2.27.1     CLI tool which enables you to login and retrieve AWS temporary credentials using a SAML IDP
 scenery                   0.1.5      A Terraform plan output prettifier
 sentinel                  0.14.2     Hashicorp sentinel
 sentry-cli                1.57.0     A command line utility to work with Sentry.
@@ -99,7 +99,7 @@ terraform                 0.13.3     Terraform is a tool for building, changing,
 terraform-0.11            0.11.14    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-0.12            0.12.29    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-0.13            0.13.3     Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
-terraform-docs            0.9.1      Generate docs from terraform modules
+terraform-docs            0.10.0     Generate docs from terraform modules
 terraform_0.11            0.11.14    Terraform (Deprecated package. Use terraform-0.11 instead)
 terraform_0.12            0.12.29    Terraform (Deprecated package. Use terraform-0.12 instead)
 terraform_0.13            0.13.3     Terraform (Deprecated package. Use terraform-0.13 instead)
