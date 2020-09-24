@@ -244,7 +244,7 @@ chamber                   2.8.2      CLI for managing secrets
 cli53                     0.8.17     Command line tool for Amazon Route 53
 cloudflared               2020.3.2   Argo Tunnel client
 cloudposse-atlantis       0.9.0.3    Terraform For Teams, enhanced by Cloud Posse
-codefresh                 0.72.7     Codefresh CLI
+codefresh                 0.72.8     Codefresh CLI
 consul                    1.8.4      Hashicorp consul
 ctop                      0.7.3      Top-like interface for container metrics
 direnv                    2.22.0     Unclutter your .profile
@@ -316,7 +316,7 @@ retry                     3.3.0      ♻️ Functional mechanism based on channe
 saml2aws                  2.27.1     CLI tool which enables you to login and retrieve AWS temporary credentials using a SAML IDP
 scenery                   0.1.5      A Terraform plan output prettifier
 sentinel                  0.14.2     Hashicorp sentinel
-sentry-cli                1.57.0     A command line utility to work with Sentry.
+sentry-cli                1.58.0     A command line utility to work with Sentry.
 shellcheck                0.7.1      ShellCheck, a static analysis tool for shell scripts
 shfmt                     3.1.2      A shell parser, formatter and interpreter (POSIX/Bash/mksh)
 slack-notifier            0.3.0      Command line utility to send messages with attachments to Slack channels via Incoming Webhooks
@@ -339,7 +339,7 @@ tfmask                    0.7.0      Terraform utility to mask select output fro
 thanos                    0.15.0     Highly available Prometheus setup with long term storage capabilities. CNCF Sandbox project.
 trivy                     0.11.0     A Simple and Comprehensive Vulnerability Scanner for Containers, Suitable for CI
 variant                   0.36.5     Variant is a Universal CLI tool that works like a task runner
-variant2                  0.33.1     Second major version of Variant, a Universal CLI tool that works like a task runner
+variant2                  0.33.2     Second major version of Variant, a Universal CLI tool that works like a task runner
 vault                     1.5.3      Hashicorp vault
 venona                    0.32.1     Codefresh runtime-environment agent
 vert                      0.1.0      Simple CLI for comparing two or more versions
