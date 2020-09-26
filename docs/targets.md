@@ -8,7 +8,7 @@ atlantis                  0.15.0     Terraform For Teams
 awless                    0.1.11     A Mighty CLI for AWS
 aws-iam-authenticator     0.5.1      A tool to use AWS IAM credentials to authenticate to a Kubernetes cluster
 aws-okta                  0.19.4     aws-okta allows users to authenticate with AWS using Okta credentials
-aws-vault                 6.1.0      A vault for securely storing and accessing AWS credentials in development environments
+aws-vault                 6.2.0      A vault for securely storing and accessing AWS credentials in development environments
 cfssl                     1.4.1      Cloudflare's PKI and TLS toolkit
 cfssljson                 1.4.1      Cloudflare's PKI and TLS toolkit json parser
 chamber                   2.8.2      CLI for managing secrets
@@ -74,7 +74,7 @@ minikube                  1.13.1     Run Kubernetes locally
 misspell                  0.3.4      Correct commonly misspelled English words in source files
 nomad                     0.12.5     Hashicorp nomad
 pack                      0.13.1     Create cloud native Buildpacks
-packer                    1.6.2      Packer is a tool for creating identical machine images for multiple platforms from a single source configuration.
+packer                    1.6.3      Packer is a tool for creating identical machine images for multiple platforms from a single source configuration.
 pandoc                    2.10.1     Universal markup converter
 pgmetrics                 1.9.3      Postgres metrics
 pluto                     3.4.1      A cli tool to help discover deprecated apiVersions in Kubernetes
@@ -111,7 +111,7 @@ thanos                    0.15.0     Highly available Prometheus setup with long
 trivy                     0.11.0     A Simple and Comprehensive Vulnerability Scanner for Containers, Suitable for CI
 variant                   0.36.5     Variant is a Universal CLI tool that works like a task runner
 variant2                  0.33.2     Second major version of Variant, a Universal CLI tool that works like a task runner
-vault                     1.5.3      Hashicorp vault
+vault                     1.5.4      Hashicorp vault
 venona                    0.32.1     Codefresh runtime-environment agent
 vert                      0.1.0      Simple CLI for comparing two or more versions
 yq                        3.4.0      yq is a portable command-line YAML processor
