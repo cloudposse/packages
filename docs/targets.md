@@ -110,7 +110,7 @@ tfmask                    0.7.0      Terraform utility to mask select output fro
 thanos                    0.15.0     Highly available Prometheus setup with long term storage capabilities. CNCF Sandbox project.
 trivy                     0.11.0     A Simple and Comprehensive Vulnerability Scanner for Containers, Suitable for CI
 variant                   0.36.5     Variant is a Universal CLI tool that works like a task runner
-variant2                  0.33.2     Second major version of Variant, a Universal CLI tool that works like a task runner
+variant2                  0.33.3     Second major version of Variant, a Universal CLI tool that works like a task runner
 vault                     1.5.4      Hashicorp vault
 venona                    0.32.1     Codefresh runtime-environment agent
 vert                      0.1.0      Simple CLI for comparing two or more versions
