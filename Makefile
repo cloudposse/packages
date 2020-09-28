@@ -5,7 +5,7 @@ export DOCKER_IMAGE_NAME ?= $(DOCKER_IMAGE):$(DOCKER_TAG)
 export DOCKER_BUILD_FLAGS = 
 
 export DEFAULT_HELP_TARGET := help/vendor
-export README_DEPS ?= .github/auto-label.yml docs/targets.md
+export README_DEPS ?= .github/auto-label.yml docs/badges.md workflows
 
 export DIST_CMD ?= cp -a
 export DIST_PATH ?= /dist
@@ -15,10 +15,13 @@ SHELL := /bin/bash
 
 -include $(shell curl -sSL -o .build-harness "https://git.io/build-harness"; echo .build-harness)
 
-all: init deps build install run
+all: init deps build install run workflows
 
 deps:
 	@exit 0
+
+workflows:
+	$(SELF) --no-print-directory --quiet --silent -C .github/ workflows
 
 ## Create a distribution by coping $PACKAGES from $INSTALL_PATH to $DIST_PATH
 dist: INSTALL_PATH=/usr/local/bin
@@ -42,6 +45,16 @@ run:
 	for vendor in $(PACKAGES); do \
 		echo "$${vendor%/}: $${vendor}**"; \
 	done >> $@
+
+.PHONY : docs/badges.md
+## Update `docs/targets.md` from `make help`
+docs/badges.md: docs/deps
+	@( \
+		echo "## Package Build Status"; \
+		echo "| Build Status | Version | Description |"; \
+		echo "| ------------ | ------- | ----------- |"; \
+		$(SELF) --no-print-directory --quiet --silent help/md | sed $$'s,\x1b\\[[0-9;]*[a-zA-Z],,g'; \
+	) > $@
 
 ## Build alpine packages for testing
 docker/build/apk:
@@ -82,6 +95,9 @@ docker/build/apk/shell:
 
 help/vendor:
 	@$(MAKE) --no-print-directory -s -C vendor help
+
+help/md:
+	@$(MAKE) --no-print-directory -s -C vendor help/md
 
 update/%:
 	rm -f vendor/$(subst update/,,$@)/VERSION

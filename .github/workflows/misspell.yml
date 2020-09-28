@@ -1,0 +1,104 @@
+#
+# This workflow was created automatically from the `package-template.yml` by running `make -C .github workflows`
+# DO NOT EDIT THIS WORKFLOW
+#
+
+name: "misspell"
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - apk/**
+      - vendor/misspell/**
+      - .github/workflows/misspell.yml
+
+
+  pull_request:
+    types: [opened, synchronize, reopened]
+    paths:
+      - apk/**
+      - vendor/misspell/**
+      - .github/workflows/misspell.yml
+
+jobs:
+  # Build for alpine linux
+  alpine:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        # These versions must be strings. E.g. Otherwise `3.10` -> `3.1`
+        alpine:
+          - '3.7'
+          - '3.8'
+          - '3.9'
+          - '3.10'
+          - '3.11'
+    env:
+      APK_KEY_RSA: "${{ secrets.APK_KEY_RSA }}"
+      APK_PACKAGES_PATH: ${{github.workspace}}/artifacts/${{matrix.alpine}}
+      PACKAGER: ops@cloudposse.com
+      PACKAGER_PRIVKEY: /dev/shm/ops@cloudposse.com.rsa
+      PACKAGER_PUBKEY: ${{github.workspace}}/artifacts/ops@cloudposse.com.rsa.pub
+
+    container: cloudposse/packages-apkbuild:${{matrix.alpine}}
+    steps:
+      # Checkout the packages repo so we can build the packages as a monorepo
+      - name: "Checkout source code at current commit"
+        uses: actions/checkout@v2
+
+      # Export the individual package's configuration as GitHub Action outputs
+      - name: "Export package config as outputs"
+        id: config
+        run: "make -C vendor/${{github.workflow}} info/github"
+
+      # Export the apk keys as files from secrets
+      - name: "Export keys"
+        if: steps.config.outputs.package_enabled == 'true'
+        run: "make -C .github/ export"
+
+      # Build the alpine packages for the matrix version of alpine
+      - name: "Build alpine packages"
+        if: steps.config.outputs.package_enabled == 'true'
+        run: "make -C vendor/${{github.workflow}} apk"
+
+      # Verify the packages were built or error
+      - name: "List packages"
+        if: steps.config.outputs.package_enabled == 'true'
+        run: 'find ${APK_PACKAGES_PATH} -type f -name \*.apk | xargs --no-run-if-empty ls -l | grep .'
+
+      # Export the artifact filename including path
+      - name: "Set output path to artifact"
+        if: steps.config.outputs.package_enabled == 'true'
+        id: artifact
+        run: 'echo "::set-output name=path::$(find artifacts/ -type f -name \*.apk)"'
+
+      # Determine which package organization we should use (e.g. dev or prod)
+      - name: "Determine package repo"
+        if: steps.config.outputs.package_enabled == 'true'
+        id: repo
+        run: |
+          if [[ ${GITHUB_REF} == 'refs/heads/master' ]]; then
+              echo "::set-output name=org::${{github.repository_owner}}"
+          else
+              echo "::set-output name=org::${{github.repository_owner}}-dev"
+          fi
+        env:
+          GITHUB_REF: ${{ github.ref }}
+
+      # Publish the artifacts
+      - name: "Push artifact to package repository"
+        if: steps.config.outputs.package_enabled == 'true'
+        id: push
+        uses: cloudsmith-io/action@v0.5.1
+        with:
+          api-key: ${{ secrets.CLOUDSMITH_API_KEY }}
+          command: 'push'
+          format: 'alpine'
+          owner: '${{steps.repo.outputs.org}}'              # Your Cloudsmith account name or org name (namespace)
+          repo: 'packages'                                  # Your Cloudsmith Repository name (slug)
+          distro: 'alpine'                                  # Your Distribution  (i.e Debian, Ubuntu)
+          release: 'v${{matrix.alpine}}'                    # Your Distribution Release (i.e xenial, buster)
+          republish: 'true'                                 # Needed if version is not changing
+          file: '${{steps.artifact.outputs.path}}'          # Package filename (including path)
+          no-wait-for-sync: 'true'                          # Skip the waiting for package synchronisation (i.e. upload only)
