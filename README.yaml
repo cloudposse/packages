@@ -25,9 +25,6 @@ github_repo: cloudposse/packages
 
 # Badges to display
 badges:
-  - name: "Codefresh Build Status"
-    image: "https://g.codefresh.io/api/badges/pipeline/cloudposse/cloudposse%2Fpackages%2Fapk?branch=master&key=eyJhbGciOiJIUzI1NiJ9.NWEwMTJmNWM3Yjg3YTQwMDAxYTlkMjU0.UwxTSXZGXq3wPQjj3O1k71kQsGuWGlzgkp9V2-llce8&type=cf-1"
-    url: "https://g.codefresh.io/pipelines/apk/builds?repoOwner=cloudposse&repoName=packages&serviceName=cloudposse%2Fpackages&filter=trigger:build~Build;branch:master;pipeline:5baae099b35f251ecadf1fa0~apk"
   - name: "Auto Update Status"
     image: "https://github.com/cloudposse/packages/workflows/auto-update/badge.svg"
     url: "https://github.com/cloudposse/packages/actions?query=workflow%3Aauto-update"
@@ -48,7 +45,7 @@ related:
 
 # Other files to include in this README from the project folder
 include:
-  - "docs/targets.md"
+  - "docs/badges.md"
 
 usage: |-
 
@@ -128,6 +125,18 @@ usage: |-
   ```
   make -C uninstall yq
   ```
+
+  ### Rebuilding GitHub Action Workflows
+  
+  The GitHub Action workflows are compiled from the `.github/package-template.yml` file by running `make -C .github workflows`. It's also run automatically when rebuilding the `README.md` with `make readme`.
+
+  Run this make target anytime the `pakcage-template.yml` changes or any new packages are added to the `vendor/` folder.
+  
+  __IMPORTANT__: The `package-template.yml` supports a single macro for interpolation `%PACKAGE_NAME%` which is replaced using a `sed` expression.
+  Since the workflow uses a combation of gotemplate-like interpolations as well as inlines shell scripts, we used the `%VAR%` form of interpolation to avoid
+  the need for endless escaping of interpolation specifiers. 
+
+  
 
 examples: |-
   ### Docker Multi-stage Build

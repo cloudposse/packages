@@ -6,6 +6,7 @@ export MAJOR_VERSION = latest
 include ../../tasks/Makefile.package
 include ../../tasks/Makefile.apk
 
+# Package details
 export DOWNLOAD_URL ?= https://releases.hashicorp.com/terraform/$(PACKAGE_VERSION)/terraform_$(PACKAGE_VERSION)_$(OS)_$(ARCH).zip
 export APKBUILD_DEPENDS += dpkg
 export APKBUILD_INSTALL_SCRIPTS = $(PACKAGE_NAME).post-install $(PACKAGE_NAME).post-deinstall
@@ -21,4 +22,3 @@ install:
 
 test:
 	$(PACKAGE_EXE) version
-
