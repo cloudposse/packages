@@ -235,11 +235,13 @@ rm -rf ./tmp/build.*
 exit
 ```
 
+
+
 ## Package Build Status
 | Build Status | Version | Description |
 | ------------ | ------- | ----------- |
 ![amtool](https://github.com/cloudposse/packages/workflows/amtool/badge.svg?branch=master) | 0.21.0     | Tool for interacting with the Alertmanager API
-![argocd](https://github.com/cloudposse/packages/workflows/argocd/badge.svg?branch=master) | 1.7.6      | Declarative GitOpts for Kubernetes
+![argocd](https://github.com/cloudposse/packages/workflows/argocd/badge.svg?branch=master) | 1.7.7      | Declarative GitOpts for Kubernetes
 ![assume-role](https://github.com/cloudposse/packages/workflows/assume-role/badge.svg?branch=master) | 0.3.2      | Easily assume AWS roles in your terminal.
 ![atlantis](https://github.com/cloudposse/packages/workflows/atlantis/badge.svg?branch=master) | 0.15.0     | Terraform For Teams
 ![awless](https://github.com/cloudposse/packages/workflows/awless/badge.svg?branch=master) | 0.1.11     | A Mighty CLI for AWS
