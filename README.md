@@ -312,8 +312,8 @@ exit
 ![minikube](https://github.com/cloudposse/packages/workflows/minikube/badge.svg?branch=master) | 1.13.1     | Run Kubernetes locally
 ![misspell](https://github.com/cloudposse/packages/workflows/misspell/badge.svg?branch=master) | 0.3.4      | Correct commonly misspelled English words in source files
 ![nomad](https://github.com/cloudposse/packages/workflows/nomad/badge.svg?branch=master) | 0.12.5     | Hashicorp nomad
-![pack](https://github.com/cloudposse/packages/workflows/pack/badge.svg?branch=master) | 0.13.1     | Create cloud native Buildpacks
-![packer](https://github.com/cloudposse/packages/workflows/packer/badge.svg?branch=master) | 1.6.3      | Packer is a tool for creating identical machine images for multiple platforms from a single source configuration.
+![pack](https://github.com/cloudposse/packages/workflows/pack/badge.svg?branch=master) | 0.14.0     | Create cloud native Buildpacks
+![packer](https://github.com/cloudposse/packages/workflows/packer/badge.svg?branch=master) | 1.6.4      | Packer is a tool for creating identical machine images for multiple platforms from a single source configuration.
 ![pandoc](https://github.com/cloudposse/packages/workflows/pandoc/badge.svg?branch=master) | 2.10.1     | Universal markup converter
 ![pgmetrics](https://github.com/cloudposse/packages/workflows/pgmetrics/badge.svg?branch=master) | 1.9.3      | Postgres metrics
 ![pluto](https://github.com/cloudposse/packages/workflows/pluto/badge.svg?branch=master) | 3.5.1      | A cli tool to help discover deprecated apiVersions in Kubernetes
@@ -334,7 +334,7 @@ exit
 ![stern](https://github.com/cloudposse/packages/workflows/stern/badge.svg?branch=master) | 1.11.0     | ⎈ Multi pod and container log tailing for Kubernetes
 ![sudosh](https://github.com/cloudposse/packages/workflows/sudosh/badge.svg?branch=master) | 0.3.0      | Shell wrapper to run a login shell with `sudo` as the current user for the purpose of audit logging
 ![teleport](https://github.com/cloudposse/packages/workflows/teleport/badge.svg?branch=master) | 4.2.11     | Privileged access management for elastic infrastructure.
-![terraform](https://github.com/cloudposse/packages/workflows/terraform/badge.svg?branch=master) | 0.13.3     | Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
+![terraform](https://github.com/cloudposse/packages/workflows/terraform/badge.svg?branch=master) | 0.13.4     | Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 ![terraform-0.11](https://github.com/cloudposse/packages/workflows/terraform-0.11/badge.svg?branch=master) | 0.11.14    | Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 ![terraform-0.12](https://github.com/cloudposse/packages/workflows/terraform-0.12/badge.svg?branch=master) | 0.12.29    | Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 ![terraform-0.13](https://github.com/cloudposse/packages/workflows/terraform-0.13/badge.svg?branch=master) | 0.13.3     | Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
@@ -342,7 +342,7 @@ exit
 ![terraform_0.11](https://github.com/cloudposse/packages/workflows/terraform_0.11/badge.svg?branch=master) | 0.11.14    | Terraform (Deprecated package. Use terraform-0.11 instead)
 ![terraform_0.12](https://github.com/cloudposse/packages/workflows/terraform_0.12/badge.svg?branch=master) | 0.12.29    | Terraform (Deprecated package. Use terraform-0.12 instead)
 ![terraform_0.13](https://github.com/cloudposse/packages/workflows/terraform_0.13/badge.svg?branch=master) | 0.13.3     | Terraform (Deprecated package. Use terraform-0.13 instead)
-![terragrunt](https://github.com/cloudposse/packages/workflows/terragrunt/badge.svg?branch=master) | 0.25.1     | Terragrunt is a thin wrapper for Terraform that provides extra tools for working with multiple Terraform modules.
+![terragrunt](https://github.com/cloudposse/packages/workflows/terragrunt/badge.svg?branch=master) | 0.25.2     | Terragrunt is a thin wrapper for Terraform that provides extra tools for working with multiple Terraform modules.
 ![terrahelp](https://github.com/cloudposse/packages/workflows/terrahelp/badge.svg?branch=master) | 0.7.4      | Terrahelp is as a command line utility that provides useful tricks like masking of terraform output.
 ![tfenv](https://github.com/cloudposse/packages/workflows/tfenv/badge.svg?branch=master) | 0.4.0      | Transform environment variables for use with Terraform (e.g. `HOSTNAME` ⇨ `TF_VAR_hostname`)
 ![tfmask](https://github.com/cloudposse/packages/workflows/tfmask/badge.svg?branch=master) | 0.7.0      | Terraform utility to mask select output from `terraform plan` and `terraform apply`
