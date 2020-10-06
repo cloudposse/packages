@@ -258,7 +258,7 @@ exit
 ![consul](https://github.com/cloudposse/packages/workflows/consul/badge.svg?branch=master) | 1.8.4      | Hashicorp consul
 ![ctop](https://github.com/cloudposse/packages/workflows/ctop/badge.svg?branch=master) | 0.7.3      | Top-like interface for container metrics
 ![direnv](https://github.com/cloudposse/packages/workflows/direnv/badge.svg?branch=master) | 2.22.0     | Unclutter your .profile
-![doctl](https://github.com/cloudposse/packages/workflows/doctl/badge.svg?branch=master) | 1.46.0     | A command line tool for DigitalOcean services
+![doctl](https://github.com/cloudposse/packages/workflows/doctl/badge.svg?branch=master) | 1.47.0     | A command line tool for DigitalOcean services
 ![duffle](https://github.com/cloudposse/packages/workflows/duffle/badge.svg?branch=master) | 0.3.5b1    | CNAB installer
 ![emailcli](https://github.com/cloudposse/packages/workflows/emailcli/badge.svg?branch=master) | 1.0.3      | Command line email sending client written in Go.
 ![fargate](https://github.com/cloudposse/packages/workflows/fargate/badge.svg?branch=master) | 0.3.2      | CLI for AWS Fargate
@@ -349,7 +349,7 @@ exit
 ![thanos](https://github.com/cloudposse/packages/workflows/thanos/badge.svg?branch=master) | 0.15.0     | Highly available Prometheus setup with long term storage capabilities. CNCF Sandbox project.
 ![trivy](https://github.com/cloudposse/packages/workflows/trivy/badge.svg?branch=master) | 0.11.0     | A Simple and Comprehensive Vulnerability Scanner for Containers, Suitable for CI
 ![variant](https://github.com/cloudposse/packages/workflows/variant/badge.svg?branch=master) | 0.36.5     | Variant is a Universal CLI tool that works like a task runner
-![variant2](https://github.com/cloudposse/packages/workflows/variant2/badge.svg?branch=master) | 0.34.0     | Second major version of Variant, a Universal CLI tool that works like a task runner
+![variant2](https://github.com/cloudposse/packages/workflows/variant2/badge.svg?branch=master) | 0.34.1     | Second major version of Variant, a Universal CLI tool that works like a task runner
 ![vault](https://github.com/cloudposse/packages/workflows/vault/badge.svg?branch=master) | 1.5.4      | Hashicorp vault
 ![venona](https://github.com/cloudposse/packages/workflows/venona/badge.svg?branch=master) | 0.32.1     | Codefresh runtime-environment agent
 ![vert](https://github.com/cloudposse/packages/workflows/vert/badge.svg?branch=master) | 0.1.0      | Simple CLI for comparing two or more versions
