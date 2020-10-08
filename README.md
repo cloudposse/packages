@@ -264,7 +264,7 @@ exit
 ![fargate](https://github.com/cloudposse/packages/workflows/fargate/badge.svg?branch=master) | 0.3.2      | CLI for AWS Fargate
 ![fetch](https://github.com/cloudposse/packages/workflows/fetch/badge.svg?branch=master) | 0.3.10     | fetch makes it easy to download files, folders, and release assets from a specific public git commit, branch, or tag
 ![figurine](https://github.com/cloudposse/packages/workflows/figurine/badge.svg?branch=master) | 1.0.1      | Print your name in style
-![fzf](https://github.com/cloudposse/packages/workflows/fzf/badge.svg?branch=master) | 0.22.0     | A command-line fuzzy finder
+![fzf](https://github.com/cloudposse/packages/workflows/fzf/badge.svg?branch=master) | 0.23.0     | A command-line fuzzy finder
 ![gh](https://github.com/cloudposse/packages/workflows/gh/badge.svg?branch=master) | 1.1.0      | The GitHub CLI
 ![ghr](https://github.com/cloudposse/packages/workflows/ghr/badge.svg?branch=master) | 0.13.0     | Upload multiple artifacts to GitHub Releases in parallel
 ![github-commenter](https://github.com/cloudposse/packages/workflows/github-commenter/badge.svg?branch=master) | 0.8.0      | Command line utility for creating GitHub comments on Commits, Pull Request Reviews or Issues
@@ -281,12 +281,12 @@ exit
 ![helm3](https://github.com/cloudposse/packages/workflows/helm3/badge.svg?branch=master) | 3.3.1      | The Kubernetes Package Manager
 ![helmfile](https://github.com/cloudposse/packages/workflows/helmfile/badge.svg?branch=master) | 0.130.1    | Deploy Kubernetes Helm Charts
 ![htmltest](https://github.com/cloudposse/packages/workflows/htmltest/badge.svg?branch=master) | 0.13.0     | :white_check_mark: Test generated HTML for problems
-![hugo](https://github.com/cloudposse/packages/workflows/hugo/badge.svg?branch=master) | 0.76.0     | The world’s fastest framework for building websites.
+![hugo](https://github.com/cloudposse/packages/workflows/hugo/badge.svg?branch=master) | 0.76.2     | The world’s fastest framework for building websites.
 ![jp](https://github.com/cloudposse/packages/workflows/jp/badge.svg?branch=master) | 0.1.3      | Command line interface to JMESPath
 ![jq](https://github.com/cloudposse/packages/workflows/jq/badge.svg?branch=master) | 1.6        | Command-line JSON processor
 ![json2hcl](https://github.com/cloudposse/packages/workflows/json2hcl/badge.svg?branch=master) | 0.0.6      | Convert JSON to HCL, and vice versa
 ![jx](https://github.com/cloudposse/packages/workflows/jx/badge.svg?branch=master) | 2.1.138    | Jenkins-X
-![k3d](https://github.com/cloudposse/packages/workflows/k3d/badge.svg?branch=master) | 3.1.0      | Little helper to run Rancher Lab's k3s in Docker
+![k3d](https://github.com/cloudposse/packages/workflows/k3d/badge.svg?branch=master) | 3.1.2      | Little helper to run Rancher Lab's k3s in Docker
 ![k6](https://github.com/cloudposse/packages/workflows/k6/badge.svg?branch=master) | 0.28.0     | A modern load testing tool, using Go and JavaScript - https://k6.io
 ![k9s](https://github.com/cloudposse/packages/workflows/k9s/badge.svg?branch=master) | 0.22.1     | Kubernetes CLI To Manage Your Clusters In Style
 ![katafygio](https://github.com/cloudposse/packages/workflows/katafygio/badge.svg?branch=master) | 0.8.1      | K8s continuous backup to git
@@ -316,7 +316,7 @@ exit
 ![packer](https://github.com/cloudposse/packages/workflows/packer/badge.svg?branch=master) | 1.6.4      | Packer is a tool for creating identical machine images for multiple platforms from a single source configuration.
 ![pandoc](https://github.com/cloudposse/packages/workflows/pandoc/badge.svg?branch=master) | 2.10.1     | Universal markup converter
 ![pgmetrics](https://github.com/cloudposse/packages/workflows/pgmetrics/badge.svg?branch=master) | 1.10.0     | Postgres metrics
-![pluto](https://github.com/cloudposse/packages/workflows/pluto/badge.svg?branch=master) | 3.5.1      | A cli tool to help discover deprecated apiVersions in Kubernetes
+![pluto](https://github.com/cloudposse/packages/workflows/pluto/badge.svg?branch=master) | 3.5.2      | A cli tool to help discover deprecated apiVersions in Kubernetes
 ![popeye](https://github.com/cloudposse/packages/workflows/popeye/badge.svg?branch=master) | 0.8.10     | A Kubernetes cluster resource sanitizer
 ![promtool](https://github.com/cloudposse/packages/workflows/promtool/badge.svg?branch=master) | 2.21.0     | Prometheus CLI tool
 ![rakkess](https://github.com/cloudposse/packages/workflows/rakkess/badge.svg?branch=master) | 0.4.5      | Review Access - kubectl plugin to show an access matrix for all available resources
