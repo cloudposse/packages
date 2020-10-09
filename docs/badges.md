@@ -15,7 +15,7 @@
 ![cli53](https://github.com/cloudposse/packages/workflows/cli53/badge.svg?branch=master) | 0.8.17     | Command line tool for Amazon Route 53
 ![cloudflared](https://github.com/cloudposse/packages/workflows/cloudflared/badge.svg?branch=master) | 2020.3.2   | Argo Tunnel client
 ![cloudposse-atlantis](https://github.com/cloudposse/packages/workflows/cloudposse-atlantis/badge.svg?branch=master) | 0.9.0.3    | Terraform For Teams, enhanced by Cloud Posse
-![codefresh](https://github.com/cloudposse/packages/workflows/codefresh/badge.svg?branch=master) | 0.72.8     | Codefresh CLI
+![codefresh](https://github.com/cloudposse/packages/workflows/codefresh/badge.svg?branch=master) | 0.73.0     | Codefresh CLI
 ![consul](https://github.com/cloudposse/packages/workflows/consul/badge.svg?branch=master) | 1.8.4      | Hashicorp consul
 ![ctop](https://github.com/cloudposse/packages/workflows/ctop/badge.svg?branch=master) | 0.7.3      | Top-like interface for container metrics
 ![direnv](https://github.com/cloudposse/packages/workflows/direnv/badge.svg?branch=master) | 2.22.1     | Unclutter your .profile
@@ -42,7 +42,7 @@
 ![helm3](https://github.com/cloudposse/packages/workflows/helm3/badge.svg?branch=master) | 3.3.1      | The Kubernetes Package Manager
 ![helmfile](https://github.com/cloudposse/packages/workflows/helmfile/badge.svg?branch=master) | 0.130.1    | Deploy Kubernetes Helm Charts
 ![htmltest](https://github.com/cloudposse/packages/workflows/htmltest/badge.svg?branch=master) | 0.13.0     | :white_check_mark: Test generated HTML for problems
-![hugo](https://github.com/cloudposse/packages/workflows/hugo/badge.svg?branch=master) | 0.76.2     | The world’s fastest framework for building websites.
+![hugo](https://github.com/cloudposse/packages/workflows/hugo/badge.svg?branch=master) | 0.76.3     | The world’s fastest framework for building websites.
 ![jp](https://github.com/cloudposse/packages/workflows/jp/badge.svg?branch=master) | 0.1.3      | Command line interface to JMESPath
 ![jq](https://github.com/cloudposse/packages/workflows/jq/badge.svg?branch=master) | 1.6        | Command-line JSON processor
 ![json2hcl](https://github.com/cloudposse/packages/workflows/json2hcl/badge.svg?branch=master) | 0.0.6      | Convert JSON to HCL, and vice versa
