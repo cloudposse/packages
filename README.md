@@ -254,11 +254,11 @@ exit
 ![cli53](https://github.com/cloudposse/packages/workflows/cli53/badge.svg?branch=master) | 0.8.17     | Command line tool for Amazon Route 53
 ![cloudflared](https://github.com/cloudposse/packages/workflows/cloudflared/badge.svg?branch=master) | 2020.3.2   | Argo Tunnel client
 ![cloudposse-atlantis](https://github.com/cloudposse/packages/workflows/cloudposse-atlantis/badge.svg?branch=master) | 0.9.0.3    | Terraform For Teams, enhanced by Cloud Posse
-![codefresh](https://github.com/cloudposse/packages/workflows/codefresh/badge.svg?branch=master) | 0.73.0     | Codefresh CLI
+![codefresh](https://github.com/cloudposse/packages/workflows/codefresh/badge.svg?branch=master) | 0.73.2     | Codefresh CLI
 ![consul](https://github.com/cloudposse/packages/workflows/consul/badge.svg?branch=master) | 1.8.4      | Hashicorp consul
 ![ctop](https://github.com/cloudposse/packages/workflows/ctop/badge.svg?branch=master) | 0.7.3      | Top-like interface for container metrics
 ![direnv](https://github.com/cloudposse/packages/workflows/direnv/badge.svg?branch=master) | 2.22.1     | Unclutter your .profile
-![doctl](https://github.com/cloudposse/packages/workflows/doctl/badge.svg?branch=master) | 1.48.0     | A command line tool for DigitalOcean services
+![doctl](https://github.com/cloudposse/packages/workflows/doctl/badge.svg?branch=master) | 1.48.1     | A command line tool for DigitalOcean services
 ![duffle](https://github.com/cloudposse/packages/workflows/duffle/badge.svg?branch=master) | 0.3.5b1    | CNAB installer
 ![emailcli](https://github.com/cloudposse/packages/workflows/emailcli/badge.svg?branch=master) | 1.0.3      | Command line email sending client written in Go.
 ![fargate](https://github.com/cloudposse/packages/workflows/fargate/badge.svg?branch=master) | 0.3.2      | CLI for AWS Fargate
@@ -342,7 +342,7 @@ exit
 ![terraform_0.11](https://github.com/cloudposse/packages/workflows/terraform_0.11/badge.svg?branch=master) | 0.11.14    | Terraform (Deprecated package. Use terraform-0.11 instead)
 ![terraform_0.12](https://github.com/cloudposse/packages/workflows/terraform_0.12/badge.svg?branch=master) | 0.12.29    | Terraform (Deprecated package. Use terraform-0.12 instead)
 ![terraform_0.13](https://github.com/cloudposse/packages/workflows/terraform_0.13/badge.svg?branch=master) | 0.13.3     | Terraform (Deprecated package. Use terraform-0.13 instead)
-![terragrunt](https://github.com/cloudposse/packages/workflows/terragrunt/badge.svg?branch=master) | 0.25.2     | Terragrunt is a thin wrapper for Terraform that provides extra tools for working with multiple Terraform modules.
+![terragrunt](https://github.com/cloudposse/packages/workflows/terragrunt/badge.svg?branch=master) | 0.25.3     | Terragrunt is a thin wrapper for Terraform that provides extra tools for working with multiple Terraform modules.
 ![terrahelp](https://github.com/cloudposse/packages/workflows/terrahelp/badge.svg?branch=master) | 0.7.4      | Terrahelp is as a command line utility that provides useful tricks like masking of terraform output.
 ![tfenv](https://github.com/cloudposse/packages/workflows/tfenv/badge.svg?branch=master) | 0.4.0      | Transform environment variables for use with Terraform (e.g. `HOSTNAME` ⇨ `TF_VAR_hostname`)
 ![tfmask](https://github.com/cloudposse/packages/workflows/tfmask/badge.svg?branch=master) | 0.7.0      | Terraform utility to mask select output from `terraform plan` and `terraform apply`
