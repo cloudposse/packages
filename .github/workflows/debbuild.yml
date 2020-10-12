@@ -1,0 +1,41 @@
+name: "debbuild"
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - deb/**
+
+  pull_request: 
+    types: [opened, synchronize, reopened]
+    paths:
+      - apk/**
+
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        debian:
+          - 'stable-slim'
+    steps:
+      - name: "Checkout source code at current commit"
+        uses: actions/checkout@v2
+      - name: "Build and push docker image to DockerHub"
+        uses: docker/build-push-action@v1
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_PASSWORD }}
+          repository: ${{ github.repository }}-apkbuild
+          dockerfile: deb/Dockerfile.${{matrix.alpine}}
+          tags: ${{matrix.debian}}
+          registry: registry-1.docker.io
+          tag_with_ref: true
+          tag_with_sha: true
+      - name: "Test build a debian package"
+        uses: docker://cloudposse/packages-debbuild:${{matrix.debian}}
+        with:
+          args: "sh -c 'make -C /packages/vendor/terraform deb'"
+        env:
+          APK_PACKAGES_PATH: /packages/artifacts/${{matrix.alpine}}
+
