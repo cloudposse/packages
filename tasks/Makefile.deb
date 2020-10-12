@@ -8,7 +8,7 @@ $(TMP)/$(PACKAGE_NAME): install
 
 $(DEB_PACKAGE): $(TMP)/$(PACKAGE_NAME)
 	mkdir -p $(DEB_PACKAGES_PATH)
-	fpm --force -t deb --maintainer '$(DEB_MAINTAINER)' -s dir -a $(ARCH) -n $(PACKAGE_NAME) -v $(PACKAGE_VERSION) -C $(TMP) --prefix /usr/bin --deb-no-default-config-files --package $@ $(PACKAGE_NAME) 
+	fpm --force -t deb --maintainer '$(DEB_MAINTAINER)' -s dir -a $(ARCH) -n $(PACKAGE_NAME) -v $(PACKAGE_VERSION) -C $(DEB_PACKAGES_PATH) --prefix /usr/bin --deb-no-default-config-files --package $@ $(PACKAGE_NAME) 
 
 ifeq ($(DEB_PACKAGE_ENABLED),true)
 .PHONY : deb

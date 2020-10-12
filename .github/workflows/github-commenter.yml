@@ -109,10 +109,7 @@ jobs:
           - 'any-version'
 
     env:
-      APK_PACKAGES_PATH: ${{github.workspace}}/artifacts/${{matrix.any-release}}
-      PACKAGER: ops@cloudposse.com
-      PACKAGER_PRIVKEY: /dev/shm/ops@cloudposse.com.rsa
-      PACKAGER_PUBKEY: ${{github.workspace}}/artifacts/ops@cloudposse.com.rsa.pub
+      DEB_PACKAGES_PATH: ${{github.workspace}}/artifacts/${{matrix.any-release}}
 
     container: cloudposse/packages-debbuild:stable-slim
     steps:
