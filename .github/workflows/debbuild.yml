@@ -32,10 +32,3 @@ jobs:
           registry: registry-1.docker.io
           tag_with_ref: true
           tag_with_sha: true
-      - name: "Test build a debian package"
-        uses: docker://cloudposse/packages-debbuild:${{ matrix.debian }}
-        with:
-          args: "sh -c 'make -C /packages/vendor/terraform deb'"
-        env:
-          APK_PACKAGES_PATH: /packages/artifacts/${{ matrix.debian }}
-
