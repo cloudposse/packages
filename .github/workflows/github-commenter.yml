@@ -114,7 +114,7 @@ jobs:
       PACKAGER_PRIVKEY: /dev/shm/ops@cloudposse.com.rsa
       PACKAGER_PUBKEY: ${{github.workspace}}/artifacts/ops@cloudposse.com.rsa.pub
 
-    container: cloudposse/packages-debbuild:${{matrix.any-release}}
+    container: cloudposse/packages-debbuild:debian-slim
     steps:
       # Checkout the packages repo so we can build the packages as a monorepo
       - name: "Checkout source code at current commit"
