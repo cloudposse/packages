@@ -314,7 +314,7 @@ exit
 ![nomad](https://github.com/cloudposse/packages/workflows/nomad/badge.svg?branch=master) | 0.12.5     | Hashicorp nomad
 ![pack](https://github.com/cloudposse/packages/workflows/pack/badge.svg?branch=master) | 0.14.1     | Create cloud native Buildpacks
 ![packer](https://github.com/cloudposse/packages/workflows/packer/badge.svg?branch=master) | 1.6.4      | Packer is a tool for creating identical machine images for multiple platforms from a single source configuration.
-![pandoc](https://github.com/cloudposse/packages/workflows/pandoc/badge.svg?branch=master) | 2.10.1     | Universal markup converter
+![pandoc](https://github.com/cloudposse/packages/workflows/pandoc/badge.svg?branch=master) | 2.11       | Universal markup converter
 ![pgmetrics](https://github.com/cloudposse/packages/workflows/pgmetrics/badge.svg?branch=master) | 1.10.0     | Postgres metrics
 ![pluto](https://github.com/cloudposse/packages/workflows/pluto/badge.svg?branch=master) | 3.5.2      | A cli tool to help discover deprecated apiVersions in Kubernetes
 ![popeye](https://github.com/cloudposse/packages/workflows/popeye/badge.svg?branch=master) | 0.8.10     | A Kubernetes cluster resource sanitizer
