@@ -73,6 +73,7 @@ jobs:
 
       # Determine which package organization we should use (e.g. dev or prod)
       - name: "Determine package repo"
+        shell: bash
         if: steps.config.outputs.package_enabled == 'true'
         id: repo
         run: |

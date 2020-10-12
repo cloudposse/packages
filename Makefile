@@ -96,7 +96,7 @@ docker/build/apk/shell:
 ## Build debian packages for testing
 docker/build/deb: DEBIAN_VERSION=stable-slim
 docker/build/deb:
-	docker build -t cloudposse/fpm:$(DEBIAN_VERSION) -f deb/Dockerfile .
+	docker build -t cloudposse/fpm:$(DEBIAN_VERSION) -f deb/Dockerfile.$(DEBIAN_VERSION) .
 	docker run \
 		--name deb \
 		--rm \
@@ -108,7 +108,7 @@ docker/build/deb:
 ## Build debian packages for testing
 docker/build/deb/shell: DEBIAN_VERSION=stable-slim
 docker/build/deb/shell:
-	docker build -t cloudposse/fpm:$(DEBIAN_VERSION) -f deb/Dockerfile .
+	docker build -t cloudposse/fpm:$(DEBIAN_VERSION) -f deb/Dockerfile.$(DEBIAN_VERSION) .
 	docker run \
 		-it \
 		--name deb \

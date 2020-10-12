@@ -10,6 +10,7 @@ on:
       - master
     paths:
       - apk/**
+      - deb/**
       - vendor/goofys/**
       - .github/workflows/goofys.yml
 
@@ -18,6 +19,7 @@ on:
     types: [opened, synchronize, reopened]
     paths:
       - apk/**
+      - deb/**
       - vendor/goofys/**
       - .github/workflows/goofys.yml
 
@@ -71,6 +73,7 @@ jobs:
 
       # Determine which package organization we should use (e.g. dev or prod)
       - name: "Determine package repo"
+        shell: bash
         if: steps.config.outputs.package_enabled == 'true'
         id: repo
         run: |
@@ -85,7 +88,6 @@ jobs:
       # Publish the artifacts
       - name: "Push artifact to package repository"
         if: steps.config.outputs.package_enabled == 'true'
-        id: push
         uses: cloudsmith-io/action@v0.5.1
         with:
           api-key: ${{ secrets.CLOUDSMITH_API_KEY }}
@@ -95,6 +97,74 @@ jobs:
           repo: 'packages'                                  # Your Cloudsmith Repository name (slug)
           distro: 'alpine'                                  # Your Distribution  (i.e debian, ubuntu, alpine)
           release: 'any-version'                            # Use "any-version" if your package is compatible with more than one version of alpine linux
+          republish: 'true'                                 # Needed if version is not changing
+          file: '${{steps.artifact.outputs.path}}'          # Package filename (including path)
+          no-wait-for-sync: 'true'                          # Skip the waiting for package synchronisation (i.e. upload only)
+
+  # Build for alpine linux
+  debian:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        any-release:
+          - 'any-version'
+
+    env:
+      DEB_PACKAGES_PATH: ${{github.workspace}}/artifacts/${{matrix.any-release}}
+
+    container: cloudposse/packages-debbuild:stable-slim
+    steps:
+      # Checkout the packages repo so we can build the packages as a monorepo
+      - name: "Checkout source code at current commit"
+        uses: actions/checkout@v2
+
+      # Export the individual package's configuration as GitHub Action outputs
+      - name: "Export package config as outputs"
+        id: config
+        run: "make -C vendor/${{github.workflow}} info/github"
+
+      # Build the debian packages for the matrix version of debian
+      - name: "Build debian packages"
+        if: steps.config.outputs.package_enabled == 'true'
+        run: "make -C vendor/${{github.workflow}} deb"
+
+      # Verify the packages were built or error
+      - name: "List packages"
+        if: steps.config.outputs.package_enabled == 'true'
+        run: 'find ${APK_PACKAGES_PATH} -type f -name \*.deb | xargs --no-run-if-empty ls -l | grep .'
+
+      # Export the artifact filename including path
+      - name: "Set output path to artifact"
+        if: steps.config.outputs.package_enabled == 'true'
+        id: artifact
+        run: 'echo "::set-output name=path::$(find artifacts/ -type f -name \*.deb)"'
+
+      # Determine which package organization we should use (e.g. dev or prod)
+      - name: "Determine package repo"
+        shell: bash
+        if: steps.config.outputs.package_enabled == 'true'
+        id: repo
+        run: |
+          if [[ ${GITHUB_REF} == 'refs/heads/master' ]]; then
+              echo "::set-output name=org::${{github.repository_owner}}"
+          else
+              echo "::set-output name=org::${{github.repository_owner}}-dev"
+          fi
+        env:
+          GITHUB_REF: ${{ github.ref }}
+
+      # Publish the artifacts
+      - name: "Push artifact to package repository"
+        if: steps.config.outputs.package_enabled == 'true'
+        uses: cloudsmith-io/action@v0.5.1
+        with:
+          api-key: ${{ secrets.CLOUDSMITH_API_KEY }}
+          command: 'push'
+          format: 'deb'
+          owner: '${{steps.repo.outputs.org}}'              # Your Cloudsmith account name or org name (namespace)
+          repo: 'packages'                                  # Your Cloudsmith Repository name (slug)
+          distro: 'any-distro'                              # Use "any-distro" since our package is compatible with more than more distribution
+          release: 'any-version'                            # Use "any-version" since our package is compatible with more than more version
           republish: 'true'                                 # Needed if version is not changing
           file: '${{steps.artifact.outputs.path}}'          # Package filename (including path)
           no-wait-for-sync: 'true'                          # Skip the waiting for package synchronisation (i.e. upload only)
