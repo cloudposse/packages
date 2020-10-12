@@ -9,7 +9,7 @@ on:
   pull_request: 
     types: [opened, synchronize, reopened]
     paths:
-      - apk/**
+      - deb/**
 
 jobs:
   build-and-push:
