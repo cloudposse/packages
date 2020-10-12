@@ -89,11 +89,9 @@ See examples below for usage.
 
 Open up an [issue](https://github.com/cloudposse/packages/issues) or submit a PR (*preferred*). We'll review quickly!
 
-## Sponsorship
+## [<img src="https://cloudposse.com/wp-content/uploads/2020/10/cloudsmith.svg" width="200"/>](https://cloudsmith.io/)
 
-[<img src="https://cloudposse.com/wp-content/uploads/2020/10/cloudsmith.svg" width="200"/>](https://cloudsmith.io/)
-
-Package repository hosting is graciously provided by [cloudsmith](https://cloudsmith.io/). Cloudsmith is the only cloud-native, universal package management solution, allowing your organization to create, store and share packages in any format, to any place, with total confidence. We believe there’s a better way to manage software assets and packages, and they’re making it happen!
+Package repository hosting is graciously provided by [cloudsmith](https://cloudsmith.io/). Cloudsmith is the only fully hosted, cloud-native, universal package management solution, that enables your organization to create, store and share packages in any format, to any place, with total confidence. We believe there’s a better way to manage software assets and packages, and they’re making it happen!
 
 ## Usage
 
