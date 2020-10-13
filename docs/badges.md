@@ -15,8 +15,8 @@
 ![cli53](https://github.com/cloudposse/packages/workflows/cli53/badge.svg?branch=master) | 0.8.17     | Command line tool for Amazon Route 53
 ![cloudflared](https://github.com/cloudposse/packages/workflows/cloudflared/badge.svg?branch=master) | 2020.3.2   | Argo Tunnel client
 ![cloudposse-atlantis](https://github.com/cloudposse/packages/workflows/cloudposse-atlantis/badge.svg?branch=master) | 0.9.0.3    | Terraform For Teams, enhanced by Cloud Posse
-![codefresh](https://github.com/cloudposse/packages/workflows/codefresh/badge.svg?branch=master) | 0.73.2     | Codefresh CLI
-![consul](https://github.com/cloudposse/packages/workflows/consul/badge.svg?branch=master) | 1.8.4      | Hashicorp consul
+![codefresh](https://github.com/cloudposse/packages/workflows/codefresh/badge.svg?branch=master) | 0.73.4     | Codefresh CLI
+![consul](https://github.com/cloudposse/packages/workflows/consul/badge.svg?branch=master) | 1.9.0-beta1 | Hashicorp consul
 ![ctop](https://github.com/cloudposse/packages/workflows/ctop/badge.svg?branch=master) | 0.7.3      | Top-like interface for container metrics
 ![direnv](https://github.com/cloudposse/packages/workflows/direnv/badge.svg?branch=master) | 2.23.0     | Unclutter your .profile
 ![doctl](https://github.com/cloudposse/packages/workflows/doctl/badge.svg?branch=master) | 1.48.1     | A command line tool for DigitalOcean services
@@ -42,7 +42,7 @@
 ![helm3](https://github.com/cloudposse/packages/workflows/helm3/badge.svg?branch=master) | 3.3.1      | The Kubernetes Package Manager
 ![helmfile](https://github.com/cloudposse/packages/workflows/helmfile/badge.svg?branch=master) | 0.130.1    | Deploy Kubernetes Helm Charts
 ![htmltest](https://github.com/cloudposse/packages/workflows/htmltest/badge.svg?branch=master) | 0.13.0     | :white_check_mark: Test generated HTML for problems
-![hugo](https://github.com/cloudposse/packages/workflows/hugo/badge.svg?branch=master) | 0.76.3     | The world’s fastest framework for building websites.
+![hugo](https://github.com/cloudposse/packages/workflows/hugo/badge.svg?branch=master) | 0.76.4     | The world’s fastest framework for building websites.
 ![jp](https://github.com/cloudposse/packages/workflows/jp/badge.svg?branch=master) | 0.1.3      | Command line interface to JMESPath
 ![jq](https://github.com/cloudposse/packages/workflows/jq/badge.svg?branch=master) | 1.6        | Command-line JSON processor
 ![json2hcl](https://github.com/cloudposse/packages/workflows/json2hcl/badge.svg?branch=master) | 0.0.6      | Convert JSON to HCL, and vice versa
@@ -70,13 +70,13 @@
 ![kubeval](https://github.com/cloudposse/packages/workflows/kubeval/badge.svg?branch=master) | 0.15.0     | Validate your Kubernetes configuration files, supports multiple Kubernetes versions
 ![lazydocker](https://github.com/cloudposse/packages/workflows/lazydocker/badge.svg?branch=master) | 0.9        | The lazier way to manage everything docker
 ![lectl](https://github.com/cloudposse/packages/workflows/lectl/badge.svg?branch=master) | 0.21       | Script to check issued certificates by Let's Encrypt on CTL (Certificate Transparency Log) using https://crt.sh
-![minikube](https://github.com/cloudposse/packages/workflows/minikube/badge.svg?branch=master) | 1.13.1     | Run Kubernetes locally
+![minikube](https://github.com/cloudposse/packages/workflows/minikube/badge.svg?branch=master) | 1.14.0     | Run Kubernetes locally
 ![misspell](https://github.com/cloudposse/packages/workflows/misspell/badge.svg?branch=master) | 0.3.4      | Correct commonly misspelled English words in source files
 ![nomad](https://github.com/cloudposse/packages/workflows/nomad/badge.svg?branch=master) | 0.12.5     | Hashicorp nomad
 ![pack](https://github.com/cloudposse/packages/workflows/pack/badge.svg?branch=master) | 0.14.1     | Create cloud native Buildpacks
 ![packer](https://github.com/cloudposse/packages/workflows/packer/badge.svg?branch=master) | 1.6.4      | Packer is a tool for creating identical machine images for multiple platforms from a single source configuration.
 ![pandoc](https://github.com/cloudposse/packages/workflows/pandoc/badge.svg?branch=master) | 2.11       | Universal markup converter
-![pgmetrics](https://github.com/cloudposse/packages/workflows/pgmetrics/badge.svg?branch=master) | 1.10.0     | Postgres metrics
+![pgmetrics](https://github.com/cloudposse/packages/workflows/pgmetrics/badge.svg?branch=master) | 1.10.2     | Postgres metrics
 ![pluto](https://github.com/cloudposse/packages/workflows/pluto/badge.svg?branch=master) | 3.5.2      | A cli tool to help discover deprecated apiVersions in Kubernetes
 ![popeye](https://github.com/cloudposse/packages/workflows/popeye/badge.svg?branch=master) | 0.8.10     | A Kubernetes cluster resource sanitizer
 ![promtool](https://github.com/cloudposse/packages/workflows/promtool/badge.svg?branch=master) | 2.21.0     | Prometheus CLI tool
