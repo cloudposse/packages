@@ -16,7 +16,7 @@
 ![cloudflared](https://github.com/cloudposse/packages/workflows/cloudflared/badge.svg?branch=master) | 2020.3.2   | Argo Tunnel client
 ![cloudposse-atlantis](https://github.com/cloudposse/packages/workflows/cloudposse-atlantis/badge.svg?branch=master) | 0.9.0.3    | Terraform For Teams, enhanced by Cloud Posse
 ![codefresh](https://github.com/cloudposse/packages/workflows/codefresh/badge.svg?branch=master) | 0.72.5     | Codefresh CLI
-![conftest](https://github.com/cloudposse/packages/workflows/conftest/badge.svg?branch=master) | 0.21.0     | Conftest helps you write tests against structured configuration data.
+![conftest](https://github.com/cloudposse/packages/workflows/conftest/badge.svg?branch=master) | 0.21.0     | Test your configuration files using Open Policy Agent
 ![consul](https://github.com/cloudposse/packages/workflows/consul/badge.svg?branch=master) | 1.8.4      | Hashicorp consul
 ![ctop](https://github.com/cloudposse/packages/workflows/ctop/badge.svg?branch=master) | 0.7.3      | Top-like interface for container metrics
 ![direnv](https://github.com/cloudposse/packages/workflows/direnv/badge.svg?branch=master) | 2.22.0     | Unclutter your .profile
