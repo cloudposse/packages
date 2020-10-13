@@ -15,6 +15,7 @@ export PACKAGE_DESCRIPTION = Second major version of Variant, a Universal CLI to
 
 include ../../tasks/Makefile.package
 include ../../tasks/Makefile.apk
+include ../../tasks/Makefile.deb
 
 install:
 	$(call download_tarball)

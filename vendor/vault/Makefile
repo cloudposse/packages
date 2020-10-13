@@ -4,6 +4,7 @@ export PACKAGE_VERSION := $(shell echo ${GITHUB_VERSION} | sed -E 's/\-beta([0-9
 
 include ../../tasks/Makefile.package
 include ../../tasks/Makefile.apk
+include ../../tasks/Makefile.deb
 
 export VENDOR ?= hashicorp
 export PACKAGE_NAME ?= vault

@@ -1,6 +1,7 @@
 ## Package - gh
 include ../../tasks/Makefile.package
 include ../../tasks/Makefile.apk
+include ../../tasks/Makefile.deb
 
 export VENDOR = cli
 export PACKAGE_NAME = gh

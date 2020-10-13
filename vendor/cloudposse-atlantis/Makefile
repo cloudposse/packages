@@ -3,6 +3,7 @@ export PACKAGE_REPO_NAME = atlantis
 
 include ../../tasks/Makefile.package
 include ../../tasks/Makefile.apk
+include ../../tasks/Makefile.deb
 
 # Package details
 export VENDOR ?= cloudposse

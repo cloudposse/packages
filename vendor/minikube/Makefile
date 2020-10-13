@@ -1,6 +1,7 @@
 ## Package - minikube
 include ../../tasks/Makefile.package
 include ../../tasks/Makefile.apk
+include ../../tasks/Makefile.deb
 
 export VENDOR = kubernetes
 export PACKAGE_NAME = minikube

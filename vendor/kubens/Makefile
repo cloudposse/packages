@@ -7,6 +7,7 @@ export APKBUILD_DEPENDS += bash
 
 include ../../tasks/Makefile.package
 include ../../tasks/Makefile.apk
+include ../../tasks/Makefile.deb
 
 install:
 	$(call download_binary)

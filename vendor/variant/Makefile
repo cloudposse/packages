@@ -16,6 +16,7 @@ export PACKAGE_DESCRIPTION = Variant is a Universal CLI tool that works like a t
 
 include ../../tasks/Makefile.package
 include ../../tasks/Makefile.apk
+include ../../tasks/Makefile.deb
 
 install:
 	$(call download_tarball)

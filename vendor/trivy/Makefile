@@ -1,6 +1,7 @@
 ## Package - trivy
 include ../../tasks/Makefile.package
 include ../../tasks/Makefile.apk
+include ../../tasks/Makefile.deb
 
 export VENDOR = aquasecurity
 export PACKAGE_NAME = trivy

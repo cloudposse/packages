@@ -14,6 +14,7 @@ export APKBUILD_DEPENDS += libc6-compat musl
 
 include ../../tasks/Makefile.package
 include ../../tasks/Makefile.apk
+include ../../tasks/Makefile.deb
 
 install:
 	$(call download_binary)

@@ -8,6 +8,7 @@ export PACKAGE_NAME = $(MASTER_PACKAGE_NAME)-$(MAJOR_VERSION)
 
 include ../../tasks/Makefile.package
 include ../../tasks/Makefile.apk
+include ../../tasks/Makefile.deb
 
 # NOTE: This build uses a custom build template ./APKBUILD
 export APK_BUILD_TEMPLATE ?= APKBUILD.github-binary

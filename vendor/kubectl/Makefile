@@ -2,6 +2,7 @@ export PACKAGE_REPO_NAME = kubernetes
 
 include ../../tasks/Makefile.package
 include ../../tasks/Makefile.apk
+include ../../tasks/Makefile.deb
 
 # Package details
 export VENDOR = kubernetes

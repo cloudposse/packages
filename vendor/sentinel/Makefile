@@ -6,6 +6,7 @@ export AUTO_UPDATE_ENABLED = false
 
 include ../../tasks/Makefile.package
 include ../../tasks/Makefile.apk
+include ../../tasks/Makefile.deb
 
 export VENDOR ?= hashicorp
 export PACKAGE_NAME ?= sentinel

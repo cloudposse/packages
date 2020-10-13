@@ -6,6 +6,7 @@ export DOWNLOAD_URL = https://github.com/kubernetes/kops/releases/download/$(PAC
 
 include ../../tasks/Makefile.package
 include ../../tasks/Makefile.apk
+include ../../tasks/Makefile.deb
 
 # Package details
 #

@@ -1,6 +1,7 @@
 ## Package - consul
 include ../../tasks/Makefile.package
 include ../../tasks/Makefile.apk
+include ../../tasks/Makefile.deb
 
 CURRENT_VERSION: QUERY=first(.[] | .name)
 CURRENT_VERSION: API=tags
