@@ -15,7 +15,6 @@ github:
 scripts:
 - bin/**
 - tasks/**
-vendor: vendor/**
 vendor/amtool: vendor/amtool/**
 vendor/argocd: vendor/argocd/**
 vendor/assume-role: vendor/assume-role/**
@@ -88,6 +87,7 @@ vendor/lectl: vendor/lectl/**
 vendor/minikube: vendor/minikube/**
 vendor/misspell: vendor/misspell/**
 vendor/nomad: vendor/nomad/**
+vendor/opa: vendor/opa/**
 vendor/pack: vendor/pack/**
 vendor/packer: vendor/packer/**
 vendor/pandoc: vendor/pandoc/**
