@@ -40,7 +40,8 @@ jobs:
         env:
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
         run: |
-          make -C vendor/shfmt update info/github
+          make -C vendor/shfmt update
+          make -C vendor/shfmt info/github
           make init
           make readme/deps
           make readme
@@ -49,8 +50,8 @@ jobs:
         uses: cloudposse/actions/github/create-pull-request@0.4.0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_BOT_TOKEN }}
-          COMMIT_MESSAGE: Update shfmt to ${{ steps.update.outputs.package_version }}
-          PULL_REQUEST_TITLE: Update shfmt to ${{ steps.update.outputs.package_version }}
+          COMMIT_MESSAGE: Update ${{ steps.update.outputs.package_name }} to ${{ steps.update.outputs.package_version }}
+          PULL_REQUEST_TITLE: Update ${{ steps.update.outputs.package_name }} to ${{ steps.update.outputs.package_version }}
           PULL_REQUEST_BODY: |
             This is an auto-generated PR that updates the ${{ steps.update.outputs.package_name }} package version.
 
@@ -63,7 +64,7 @@ jobs:
             | Arch              | ${{ steps.update.outputs.arch }}            |
             | OS                | ${{ steps.update.outputs.package_version }} |
             | Download URL      | ${{ steps.update.outputs.download_url }}    |
-          PULL_REQUEST_BRANCH: auto-update/shfmt
+          PULL_REQUEST_BRANCH: auto-update/${{ steps.update.outputs.package_name }}-${{ steps.update.outputs.package_version }}
           PULL_REQUEST_BASE: master
           BRANCH_SUFFIX: none
 
