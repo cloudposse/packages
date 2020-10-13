@@ -8,6 +8,7 @@ on:
   push:
     branches:
       - master
+
     paths:
       - apk/**
       - deb/**
@@ -23,9 +24,52 @@ on:
       - vendor/gonsul/**
       - .github/workflows/gonsul.yml
 
+  schedule:
+    # Update packages nightly
+    - cron:  '0 0 * * *'
+
 jobs:
+  update-packages:
+    if: github.event_name == 'schedule'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Update packages
+        shell: bash
+        id: update
+        env:
+          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+        run: |
+          make -C vendor/gonsul update info/github
+          make init
+          make readme/deps
+          make readme
+
+      - name: Create Pull Request
+        uses: cloudposse/actions/github/create-pull-request@0.4.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_BOT_TOKEN }}
+          COMMIT_MESSAGE: Update gonsul to ${{ steps.update.outputs.package_version }}
+          PULL_REQUEST_TITLE: Update gonsul to ${{ steps.update.outputs.package_version }}
+          PULL_REQUEST_BODY: |
+            This is an auto-generated PR that updates the ${{ steps.update.outputs.package_name }} package version.
+
+            |:------------------|:--------------------------------------------|
+            | Package Name      | ${{ steps.update.outputs.package_name }}    |
+            | Vendor            | @${{ steps.update.outputs.vendor }}         |
+            | Version           | ${{ steps.update.outputs.package_version }} |
+            | License           | ${{ steps.update.outputs.package_license    |
+            | Repo              | ${{ steps.update.outputs.package_repo_url   |
+            | Arch              | ${{ steps.update.outputs.arch }}            |
+            | OS                | ${{ steps.update.outputs.package_version }} |
+            | Download URL      | ${{ steps.update.outputs.download_url }}    |
+          PULL_REQUEST_BRANCH: auto-update/gonsul
+          PULL_REQUEST_BASE: master
+          BRANCH_SUFFIX: none
+
   # Build for alpine linux
   alpine:
+    if: github.event_name != 'schedule'
     runs-on: ubuntu-latest
     strategy:
       matrix:
