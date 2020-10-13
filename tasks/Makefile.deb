@@ -10,12 +10,21 @@ $(DEB_PACKAGE): $(TMP)/$(PACKAGE_NAME)
 	mkdir -p $(DEB_PACKAGES_PATH)
 	fpm --force -t deb --maintainer '$(DEB_MAINTAINER)' -s dir -a $(ARCH) -n $(PACKAGE_NAME) -v $(PACKAGE_VERSION) -C $(TMP) --prefix /usr/bin --deb-no-default-config-files --package $@ $(PACKAGE_NAME) 
 
-ifeq ($(DEB_PACKAGE_ENABLED),true)
+ifneq ($(PACKAGE_ENABLED),true)
+deb:
+	@echo All packages disabled for $(PACKAGE_NAME) 
+	@exit 0
+else ifeq ($(DEB_PACKAGE_ENABLED),true)
 .PHONY : deb
 deb: $(DEB_PACKAGE)
+	@echo "Wrote $(DEB_PACKAGE)"
+	@exit 0
 else
 .PHONY : deb
 deb:
-	@echo Debian pages disabled for $(PACKAGE_NAME) 
+	@echo Debian packages disabled for $(PACKAGE_NAME) 
 	@exit 0
 endif
+
+clean::
+	rm -f $(DEB_PACKAGE)

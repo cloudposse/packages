@@ -221,6 +221,8 @@ info/github: FORMAT="::set-output name=%s::%s\n"
 info/github:
 	@printf $(FORMAT) "vendor" "$(VENDOR)"
 	@printf $(FORMAT) "package_name" "$(PACKAGE_NAME)"
+	@printf $(FORMAT) "apk_package_enabled" "$(APK_PACKAGE_ENABLED)"
+	@printf $(FORMAT) "deb_package_enabled" "$(DEB_PACKAGE_ENABLED)"
 	@printf $(FORMAT) "package_enabled" "$(PACKAGE_ENABLED)"
 	@printf $(FORMAT) "package_version" "$(PACKAGE_VERSION)"
 	@printf $(FORMAT) "package_license" "$(PACKAGE_LICENSE)"
