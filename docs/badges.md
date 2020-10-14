@@ -15,7 +15,7 @@
 ![cli53](https://github.com/cloudposse/packages/workflows/cli53/badge.svg?branch=master) | 0.8.17     | Command line tool for Amazon Route 53
 ![cloudflared](https://github.com/cloudposse/packages/workflows/cloudflared/badge.svg?branch=master) | 2020.3.2   | Argo Tunnel client
 ![cloudposse-atlantis](https://github.com/cloudposse/packages/workflows/cloudposse-atlantis/badge.svg?branch=master) | 0.9.0.3    | Terraform For Teams, enhanced by Cloud Posse
-![codefresh](https://github.com/cloudposse/packages/workflows/codefresh/badge.svg?branch=master) | 0.73.4     | Codefresh CLI
+![codefresh](https://github.com/cloudposse/packages/workflows/codefresh/badge.svg?branch=master) | 0.73.5     | Codefresh CLI
 ![consul](https://github.com/cloudposse/packages/workflows/consul/badge.svg?branch=master) | 1.9.0-beta1 | Hashicorp consul
 ![ctop](https://github.com/cloudposse/packages/workflows/ctop/badge.svg?branch=master) | 0.7.3      | Top-like interface for container metrics
 ![direnv](https://github.com/cloudposse/packages/workflows/direnv/badge.svg?branch=master) | 2.23.0     | Unclutter your .profile
@@ -40,7 +40,7 @@
 ![helm](https://github.com/cloudposse/packages/workflows/helm/badge.svg?branch=master) | 3.3.4      | The Kubernetes Package Manager
 ![helm2](https://github.com/cloudposse/packages/workflows/helm2/badge.svg?branch=master) | 2.16.10    | The Kubernetes Package Manager
 ![helm3](https://github.com/cloudposse/packages/workflows/helm3/badge.svg?branch=master) | 3.3.1      | The Kubernetes Package Manager
-![helmfile](https://github.com/cloudposse/packages/workflows/helmfile/badge.svg?branch=master) | 0.130.1    | Deploy Kubernetes Helm Charts
+![helmfile](https://github.com/cloudposse/packages/workflows/helmfile/badge.svg?branch=master) | 0.130.2    | Deploy Kubernetes Helm Charts
 ![htmltest](https://github.com/cloudposse/packages/workflows/htmltest/badge.svg?branch=master) | 0.13.0     | :white_check_mark: Test generated HTML for problems
 ![hugo](https://github.com/cloudposse/packages/workflows/hugo/badge.svg?branch=master) | 0.76.4     | The world’s fastest framework for building websites.
 ![jp](https://github.com/cloudposse/packages/workflows/jp/badge.svg?branch=master) | 0.1.3      | Command line interface to JMESPath
@@ -73,7 +73,8 @@
 ![minikube](https://github.com/cloudposse/packages/workflows/minikube/badge.svg?branch=master) | 1.14.0     | Run Kubernetes locally
 ![misspell](https://github.com/cloudposse/packages/workflows/misspell/badge.svg?branch=master) | 0.3.4      | Correct commonly misspelled English words in source files
 ![nomad](https://github.com/cloudposse/packages/workflows/nomad/badge.svg?branch=master) | 0.12.5     | Hashicorp nomad
-![pack](https://github.com/cloudposse/packages/workflows/pack/badge.svg?branch=master) | 0.14.1     | Create cloud native Buildpacks
+![opa](https://github.com/cloudposse/packages/workflows/opa/badge.svg?branch=master) | 0.24.0     | An open source project to policy-enable your service.
+![pack](https://github.com/cloudposse/packages/workflows/pack/badge.svg?branch=master) | 0.14.2     | Create cloud native Buildpacks
 ![packer](https://github.com/cloudposse/packages/workflows/packer/badge.svg?branch=master) | 1.6.4      | Packer is a tool for creating identical machine images for multiple platforms from a single source configuration.
 ![pandoc](https://github.com/cloudposse/packages/workflows/pandoc/badge.svg?branch=master) | 2.11       | Universal markup converter
 ![pgmetrics](https://github.com/cloudposse/packages/workflows/pgmetrics/badge.svg?branch=master) | 1.10.2     | Postgres metrics
@@ -108,7 +109,7 @@
 ![tfenv](https://github.com/cloudposse/packages/workflows/tfenv/badge.svg?branch=master) | 0.4.0      | Transform environment variables for use with Terraform (e.g. `HOSTNAME` ⇨ `TF_VAR_hostname`)
 ![tfmask](https://github.com/cloudposse/packages/workflows/tfmask/badge.svg?branch=master) | 0.7.0      | Terraform utility to mask select output from `terraform plan` and `terraform apply`
 ![thanos](https://github.com/cloudposse/packages/workflows/thanos/badge.svg?branch=master) | 0.15.0     | Highly available Prometheus setup with long term storage capabilities. CNCF Sandbox project.
-![trivy](https://github.com/cloudposse/packages/workflows/trivy/badge.svg?branch=master) | 0.11.0     | A Simple and Comprehensive Vulnerability Scanner for Containers, Suitable for CI
+![trivy](https://github.com/cloudposse/packages/workflows/trivy/badge.svg?branch=master) | 0.12.0     | A Simple and Comprehensive Vulnerability Scanner for Containers, Suitable for CI
 ![variant](https://github.com/cloudposse/packages/workflows/variant/badge.svg?branch=master) | 0.36.5     | Variant is a Universal CLI tool that works like a task runner
 ![variant2](https://github.com/cloudposse/packages/workflows/variant2/badge.svg?branch=master) | 0.34.1     | Second major version of Variant, a Universal CLI tool that works like a task runner
 ![vault](https://github.com/cloudposse/packages/workflows/vault/badge.svg?branch=master) | 1.5.4      | Hashicorp vault
