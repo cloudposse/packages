@@ -18,11 +18,7 @@ jobs:
       matrix:
         # These versions must be strings. E.g. Otherwise `3.10` -> `3.1` 
         alpine:
-          - '3.7'
-          - '3.8'
-          - '3.9'
-          - '3.10'
-          - '3.11'
+          - '3.12'
     steps:
       - name: "Checkout source code at current commit"
         uses: actions/checkout@v2
@@ -37,10 +33,3 @@ jobs:
           registry: registry-1.docker.io
           tag_with_ref: true
           tag_with_sha: true
-      - name: "Build alpine packages"
-        uses: docker://cloudposse/packages-apkbuild:${{matrix.alpine}}
-        with:
-          args: "sh -c 'make -C /packages/vendor/terraform build'"
-        env:
-          APK_PACKAGES_PATH: /packages/artifacts/${{matrix.alpine}}
-

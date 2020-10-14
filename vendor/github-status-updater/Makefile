@@ -11,4 +11,4 @@ install:
 	$(call download_binary)
 
 test:
-	($(PACKAGE_EXE) || true) 2>&1 | grep required
+	($(PACKAGE_EXE) --help || true) 2>&1 | grep "Usage of github-status-updater"
