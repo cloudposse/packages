@@ -16,6 +16,7 @@ export APKBUILD_DEPENDS += dpkg
 export APKBUILD_INSTALL_SCRIPTS = $(PACKAGE_NAME).post-install $(PACKAGE_NAME).post-deinstall
 export AUTO_UPDATE_ENABLED = false
 export INSTALL_DIR = /usr/share/${MASTER_PACKAGE_NAME}/${MAJOR_VERSION}/bin
+export PACKAGE_EXE = kops
 
 install:
 	$(call download_binary)

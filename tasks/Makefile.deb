@@ -27,7 +27,7 @@ $(DEB_PACKAGE): $(DEB_TMP_DIR)/$(PACKAGE_NAME)
 	apt-get install -y $@
 	apt --fix-broken install -y
 	$(MAKE) test
-	apt-get remove -y $@
+	apt-get remove -y $(PACKAGE_NAME)
 
 
 ifneq ($(PACKAGE_ENABLED),true)

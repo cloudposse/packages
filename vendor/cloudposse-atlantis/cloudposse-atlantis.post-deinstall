@@ -5,5 +5,5 @@ PACKAGE_NAME=cloudposse-atlantis
 VENDOR=cloudposse
 INSTALL_DIR=/usr/share/${MASTER_PACKAGE_NAME}/${VENDOR}/bin
 
-update-alternatives --remove ${MASTER_PACKAGE_NAME} ${INSTALL_DIR}/${PACKAGE_NAME} --quiet
+update-alternatives --remove ${MASTER_PACKAGE_NAME} ${INSTALL_DIR}/${MASTER_PACKAGE_NAME} --quiet
 exit 0
