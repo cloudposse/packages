@@ -23,12 +23,12 @@ export APKBUILD_DEPENDS += libc6-compat musl eudev-dev
 export PACKAGE_EXE = teleport tctl tsh
 
 install:
-	$(CURL) -o - $(DOWNLOAD_URL) | tar --wildcards -zxO $(addprefix teleport/,$(PACKAGE_EXE)) > $(INSTALL_PATH)/$(PACKAGE_NAME) && chmod +x $(INSTALL_PATH)/$(PACKAGE_NAME)
+	cd $(INSTALL_PATH) && $(CURL) -o - $(DOWNLOAD_URL) | tar --wildcards --strip-components=1 -zvx $(addprefix teleport/,$(PACKAGE_EXE))
 
 test:
-	teleport version
-	tsh version
-	tctl version
+	teleport version | grep $(PACKAGE_VERSION)
+	tsh version | grep $(PACKAGE_VERSION)
+	tctl version | grep $(PACKAGE_VERSION)
 
 package/prepare::
 	@echo "make package/prepare ($(PACKAGE_EXE))"
