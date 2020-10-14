@@ -29,11 +29,7 @@ jobs:
       matrix:
         # These versions must be strings. E.g. Otherwise `3.10` -> `3.1`
         alpine:
-          - '3.7'
-          - '3.8'
-          - '3.9'
-          - '3.10'
-          - '3.11'
+          - '3.12'
     env:
       APK_KEY_RSA: "${{ secrets.APK_KEY_RSA }}"
       APK_PACKAGES_PATH: ${{github.workspace}}/artifacts/${{matrix.alpine}}
@@ -97,8 +93,8 @@ jobs:
           format: 'alpine'
           owner: '${{steps.repo.outputs.org}}'              # Your Cloudsmith account name or org name (namespace)
           repo: 'packages'                                  # Your Cloudsmith Repository name (slug)
-          distro: 'alpine'                                  # Your Distribution  (i.e Debian, Ubuntu)
-          release: 'v${{matrix.alpine}}'                    # Your Distribution Release (i.e xenial, buster)
-          republish: 'true'                                 # Needed if version is not changing
+          distro: 'alpine'                                  # Your Distribution  (i.e debian, ubuntu, alpine)
+          release: 'any-version'                            # Use "any-version" if your package is compatible with more than one version of alpine linux
+          republish: 'true'                                 # Needed if version is not changilg
           file: '${{steps.artifact.outputs.path}}'          # Package filename (including path)
           no-wait-for-sync: 'true'                          # Skip the waiting for package synchronisation (i.e. upload only)
