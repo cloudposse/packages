@@ -93,8 +93,8 @@ jobs:
           format: 'alpine'
           owner: '${{steps.repo.outputs.org}}'              # Your Cloudsmith account name or org name (namespace)
           repo: 'packages'                                  # Your Cloudsmith Repository name (slug)
-          distro: 'alpine'                                  # Your Distribution  (i.e Debian, Ubuntu)
-          release: 'any-version'                            # Use "any-version" if your package is compatible with more than more version
+          distro: 'alpine'                                  # Your Distribution  (i.e Debian, Ubuntu, Alpine)
+          release: 'any-version'                            # Use "any-version" if your package is compatible with more than one version of Alpine Linux
           republish: 'true'                                 # Needed if version is not changing
           file: '${{steps.artifact.outputs.path}}'          # Package filename (including path)
           no-wait-for-sync: 'true'                          # Skip the waiting for package synchronisation (i.e. upload only)
