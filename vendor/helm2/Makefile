@@ -24,7 +24,7 @@ install:
 	chmod +x $(INSTALL_PATH)/$(PACKAGE_NAME)
 
 test:
-	($(PACKAGE_NAME) version || true) 2>&1 | grep Version
+	$(PACKAGE_NAME) version --client  | grep v$(MAJOR_VERSION)\.
 
 package/prepare::
 	mv src/$(OS)-$(ARCH)/helm src/helm2

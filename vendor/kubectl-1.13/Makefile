@@ -13,11 +13,11 @@ export DOWNLOAD_URL = https://storage.googleapis.com/kubernetes-release/release/
 export APK_BUILD_TEMPLATE = APKBUILD.github-binary
 export APKBUILD_DEPENDS += dpkg
 export APKBUILD_INSTALL_SCRIPTS = $(PACKAGE_NAME).post-install $(PACKAGE_NAME).post-deinstall
-export INSTALL_DIR = /usr/share/${MASTER_PACKAGE_NAME}/${MAJOR_VERSION}/bin
 export AUTO_UPDATE_ENABLED = false
+export INSTALL_DIR = /usr/share/${MASTER_PACKAGE_NAME}/${MAJOR_VERSION}/bin
 
 install:
 	$(call download_binary)
 
 test:
-	$(PACKAGE_EXE) --help
+	$(PACKAGE_EXE) version --client | grep $(MAJOR_VERSION)

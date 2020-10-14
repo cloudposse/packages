@@ -2,14 +2,27 @@ DEB_PACKAGES_PATH ?= .
 DEB_PACKAGE ?= $(DEB_PACKAGES_PATH)/$(PACKAGE_NAME)_$(PACKAGE_VERSION)_$(ARCH).deb 
 DEB_MAINTAINER ?= Cloud Posse <packages@cloudposse.com>
 DEB_PACKAGE_ENABLED ?= true
+DEB_FPM_EXTRA_ARGS ?=
+DEB_FPM_EXTRA_FILES ?=
+
 export DEB_TMP_DIR := $(realpath $(shell mktemp -d ../../tmp/build.XXXXXX))
 
 $(DEB_TMP_DIR)/$(PACKAGE_NAME): INSTALL_PATH=$(DEB_TMP_DIR)
-$(DEB_TMP_DIR)/$(PACKAGE_NAME): install
+$(DEB_TMP_DIR)/$(PACKAGE_NAME): PATH:=$(DEB_TMP_DIR):$(PATH)
+$(DEB_TMP_DIR)/$(PACKAGE_NAME): install test
 
+ifneq ($(wildcard $(PACKAGE_NAME).post-install),)
+$(DEB_PACKAGE): DEB_FPM_EXTRA_ARGS += --after-install $(PACKAGE_NAME).post-install 
+$(DEB_PACKAGE): DEB_FPM_EXTRA_FILES += $(PACKAGE_NAME).post-install
+endif
+ifneq ($(wildcard $(PACKAGE_NAME).post-deinstall),)
+$(DEB_PACKAGE): DEB_FPM_EXTRA_ARGS += --after-remove $(PACKAGE_NAME).post-deinstall
+$(DEB_PACKAGE): DEB_FPM_EXTRA_FILES += $(PACKAGE_NAME).post-deinstall
+endif
 $(DEB_PACKAGE): $(DEB_TMP_DIR)/$(PACKAGE_NAME)
 	mkdir -p $(DEB_PACKAGES_PATH)
-	fpm --force -t deb --maintainer '$(DEB_MAINTAINER)' -s dir -a $(ARCH) -n $(PACKAGE_NAME) -v $(PACKAGE_VERSION) -C $(DEB_TMP_DIR) --prefix /usr/bin --deb-no-default-config-files --package $@ $(PACKAGE_NAME) 
+	[ -z "$(DEB_FPM_EXTRA_FILES)" ] || cp -a $(DEB_FPM_EXTRA_FILES) $(DEB_TMP_DIR)
+	set -x; fpm --force -t deb --maintainer '$(DEB_MAINTAINER)' -s dir -a $(ARCH) -n $(PACKAGE_NAME) -v $(PACKAGE_VERSION) -C $(DEB_TMP_DIR) --prefix $${INSTALL_DIR:-/usr/bin} --deb-no-default-config-files $(DEB_FPM_EXTRA_ARGS) --package $@ .
 
 ifneq ($(PACKAGE_ENABLED),true)
 deb:

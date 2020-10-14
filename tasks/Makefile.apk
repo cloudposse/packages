@@ -83,7 +83,7 @@ endif
 
 # Rebuild the `.apk` when it's older than the Makefile, VERSION, or RELEASE files
 $(APK_PACKAGE): Makefile VERSION RELEASE $(wildcard *.post-install) $(wildcard *.post-deinstall)
-	@echo "Building $@"
+	@echo "Building $@ with $(INSTALL_DIR) install directory"
 	ls -l $@ Makefile VERSION RELEASE || true
 	$(MAKE) info apk/prepare apk/checksum apk/build apk/testinstall apk/clean
 

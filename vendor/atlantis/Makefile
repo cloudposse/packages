@@ -15,5 +15,5 @@ install:
 	$(call download_zip)
 
 test:
-	$(PACKAGE_EXE) version
+	$(PACKAGE_EXE) version | grep $(PACKAGE_VERSION)
 

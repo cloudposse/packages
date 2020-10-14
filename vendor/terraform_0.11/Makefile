@@ -2,6 +2,7 @@
 export VENDOR ?= hashicorp
 export APK_PACKAGE_NAME = terraform_0.11
 export PACKAGE_REPO_NAME = terraform
+export DEB_PACKAGE_ENABLED = false
 
 include ../../tasks/Makefile.package
 include ../../tasks/Makefile.apk

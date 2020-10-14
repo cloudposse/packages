@@ -17,4 +17,4 @@ install:
 	$(call download_binary)
 
 test:
-	$(PACKAGE_EXE) --help
+	$(PACKAGE_EXE) version --client | grep $(PACKAGE_VERSION)

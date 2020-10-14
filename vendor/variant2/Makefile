@@ -21,4 +21,4 @@ install:
 	$(call download_tarball)
 
 test:
-	$(PACKAGE_EXE)
+	$(PACKAGE_EXE) help | grep help

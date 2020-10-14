@@ -33,7 +33,7 @@ endif
 # $(call github_download_binary_release,version,repo,asset)
 define download_binary
 	mkdir -p $(INSTALL_PATH)
-	$(CURL) -o $(INSTALL_PATH)/$(PACKAGE_NAME) $(DOWNLOAD_URL) && chmod +x $(INSTALL_PATH)/$(PACKAGE_NAME)
+	$(CURL) -o $(INSTALL_PATH)/$(PACKAGE_EXE) $(DOWNLOAD_URL) && chmod +x $(INSTALL_PATH)/$(PACKAGE_EXE)
 endef
 
 download/binary:
@@ -43,7 +43,7 @@ define download_binary_gz
 	mkdir -p $(INSTALL_PATH)
 	$(CURL) -o $(INSTALL_PATH)/$(PACKAGE_NAME).gz $(DOWNLOAD_URL)
 	gunzip -f -k -q $(INSTALL_PATH)/$(PACKAGE_NAME).gz
-	chmod +x $(INSTALL_PATH)/$(PACKAGE_NAME)
+	chmod +x $(INSTALL_PATH)/$(PACKAGE_EXE)
 	rm -f $(INSTALL_PATH)/$(PACKAGE_NAME).gz
 endef
 
@@ -54,7 +54,7 @@ define download_binary_bz2
 	mkdir -p $(INSTALL_PATH)
 	$(CURL) -o $(INSTALL_PATH)/$(PACKAGE_NAME).bz2 $(DOWNLOAD_URL)
 	bzip2 -d -f -k -q $(INSTALL_PATH)/$(PACKAGE_NAME).bz2
-	chmod +x $(INSTALL_PATH)/$(PACKAGE_NAME)
+	chmod +x $(INSTALL_PATH)/$(PACKAGE_EXE)
 	rm -f $(INSTALL_PATH)/$(PACKAGE_NAME).bz2
 endef
 
@@ -65,8 +65,8 @@ define download_tarball
 	[ -n "$(TMP)" ] && [ -n "$(PACKAGE_NAME)" ] && rm -rf "$(TMP)/$(PACKAGE_NAME)"
 	mkdir -p $(TMP)/$(PACKAGE_NAME)
 	$(CURL) -o - $(DOWNLOAD_URL) | tar -zx -C '$(TMP)/$(PACKAGE_NAME)'
-	find $(TMP)/$(PACKAGE_NAME) -type f -name '$(PACKAGE_EXE)*' | xargs -I {} cp -f {} $(INSTALL_PATH)/$(PACKAGE_NAME)
-	chmod +x $(INSTALL_PATH)/$(PACKAGE_NAME)
+	find $(TMP)/$(PACKAGE_NAME) -type f -name '$(PACKAGE_EXE)*' | xargs -I {} cp -f {} $(INSTALL_PATH)/$(PACKAGE_EXE)
+	chmod +x $(INSTALL_PATH)/$(PACKAGE_EXE)
 	[ -n "$(TMP)" ] && [ -n "$(PACKAGE_NAME)" ] && rm -rf "$(TMP)/$(PACKAGE_NAME)"
 endef
 
@@ -77,8 +77,8 @@ define download_tar_bz2
 	[ -n "$(TMP)" ] && [ -n "$(PACKAGE_NAME)" ] && rm -rf "$(TMP)/$(PACKAGE_NAME)"
 	mkdir -p $(TMP)/$(PACKAGE_NAME)
 	$(CURL) -o - $(DOWNLOAD_URL) | tar -jx -C $(TMP)/$(PACKAGE_NAME)
-	find $(TMP)/$(PACKAGE_NAME) -type f -name $(PACKAGE_NAME) | xargs -I {} cp -f {} $(INSTALL_PATH)/$(PACKAGE_NAME)
-	chmod +x $(INSTALL_PATH)/$(PACKAGE_NAME)
+	find $(TMP)/$(PACKAGE_NAME) -type f -name $(PACKAGE_NAME) | xargs -I {} cp -f {} $(INSTALL_PATH)/$(PACKAGE_EXE)
+	chmod +x $(INSTALL_PATH)/$(PACKAGE_EXE)
 	[ -n "$(TMP)" ] && [ -n "$(PACKAGE_NAME)" ] && rm -rf "$(TMP)/$(PACKAGE_NAME)"
 endef
 
@@ -89,8 +89,8 @@ define download_tar_xz
 	[ -n "$(TMP)" ] && [ -n "$(PACKAGE_NAME)" ] && rm -rf "$(TMP)/$(PACKAGE_NAME)"
 	mkdir -p $(TMP)/$(PACKAGE_NAME)
 	$(CURL) -o - $(DOWNLOAD_URL) | tar -Jx -C $(TMP)/$(PACKAGE_NAME)
-	find $(TMP)/$(PACKAGE_NAME) -type f -name $(PACKAGE_NAME) | xargs -I {} cp -f {} $(INSTALL_PATH)/$(PACKAGE_NAME)
-	chmod +x $(INSTALL_PATH)/$(PACKAGE_NAME)
+	find $(TMP)/$(PACKAGE_NAME) -type f -name $(PACKAGE_NAME) | xargs -I {} cp -f {} $(INSTALL_PATH)/$(PACKAGE_EXE)
+	chmod +x $(INSTALL_PATH)/$(PACKAGE_EXE)
 	[ -n "$(TMP)" ] && [ -n "$(PACKAGE_NAME)" ] && rm -rf "$(TMP)/$(PACKAGE_NAME)"
 endef
 
@@ -102,8 +102,8 @@ define download_zip
 	mkdir -p $(TMP)/$(PACKAGE_NAME)
 	$(CURL) -L -o $(TMP)/$(PACKAGE_NAME)/$(PACKAGE_NAME).zip $(DOWNLOAD_URL)
 	unzip $(TMP)/$(PACKAGE_NAME)/$(PACKAGE_NAME).zip -d $(TMP)/$(PACKAGE_NAME)
-	find $(TMP)/$(PACKAGE_NAME) -type f -name $(PACKAGE_NAME) | xargs -I {} cp -f {} $(INSTALL_PATH)/$(PACKAGE_NAME)
-	chmod +x $(INSTALL_PATH)/$(PACKAGE_NAME)
+	find $(TMP)/$(PACKAGE_NAME) -type f -name $(PACKAGE_NAME) | xargs -I {} cp -f {} $(INSTALL_PATH)/$(PACKAGE_EXE)
+	chmod +x $(INSTALL_PATH)/$(PACKAGE_EXE)
 	[ -n "$(TMP)" ] && [ -n "$(PACKAGE_NAME)" ] && rm -rf "$(TMP)/$(PACKAGE_NAME)"
 endef
 
@@ -115,8 +115,8 @@ define download_gz
 	mkdir -p $(TMP)/$(PACKAGE_NAME)
 	$(CURL) -L -o $(TMP)/$(PACKAGE_NAME)/$(PACKAGE_NAME).gz $(DOWNLOAD_URL)
 	gunzip $(TMP)/$(PACKAGE_NAME)/$(PACKAGE_NAME).gz
-	find $(TMP)/$(PACKAGE_NAME) -type f -name $(PACKAGE_NAME) | xargs -I {} cp -f {} $(INSTALL_PATH)/$(PACKAGE_NAME)
-	chmod +x $(INSTALL_PATH)/$(PACKAGE_NAME)
+	find $(TMP)/$(PACKAGE_NAME) -type f -name $(PACKAGE_NAME) | xargs -I {} cp -f {} $(INSTALL_PATH)/$(PACKAGE_EXE)
+	chmod +x $(INSTALL_PATH)/$(PACKAGE_EXE)
 	[ -n "$(TMP)" ] && [ -n "$(PACKAGE_NAME)" ] && rm -rf "$(TMP)/$(PACKAGE_NAME)"
 endef
 

@@ -26,4 +26,4 @@ install:
 	chmod +x $(INSTALL_PATH)/$(PACKAGE_EXE)
 
 test:
-	$(PACKAGE_EXE) version
+	$(PACKAGE_EXE) version | grep $(MAJOR_VERSION)

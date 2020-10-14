@@ -17,4 +17,4 @@ install:
 	$(call download_binary)
 
 test:
-	$(PACKAGE_EXE) version
+	$(PACKAGE_EXE) version | grep $(PACKAGE_VERSION)
