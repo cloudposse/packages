@@ -2,13 +2,14 @@ DEB_PACKAGES_PATH ?= .
 DEB_PACKAGE ?= $(DEB_PACKAGES_PATH)/$(PACKAGE_NAME)_$(PACKAGE_VERSION)_$(ARCH).deb 
 DEB_MAINTAINER ?= Cloud Posse <packages@cloudposse.com>
 DEB_PACKAGE_ENABLED ?= true
+export DEB_TMP_DIR := $(realpath $(shell mktemp -d ../../tmp/build.XXXXXX))
 
-$(TMP)/$(PACKAGE_NAME): INSTALL_PATH=$(TMP)
-$(TMP)/$(PACKAGE_NAME): install
+$(DEB_TMP_DIR)/$(PACKAGE_NAME): INSTALL_PATH=$(DEB_TMP_DIR)
+$(DEB_TMP_DIR)/$(PACKAGE_NAME): install
 
-$(DEB_PACKAGE): $(TMP)/$(PACKAGE_NAME)
+$(DEB_PACKAGE): $(DEB_TMP_DIR)/$(PACKAGE_NAME)
 	mkdir -p $(DEB_PACKAGES_PATH)
-	fpm --force -t deb --maintainer '$(DEB_MAINTAINER)' -s dir -a $(ARCH) -n $(PACKAGE_NAME) -v $(PACKAGE_VERSION) -C $(TMP) --prefix /usr/bin --deb-no-default-config-files --package $@ $(PACKAGE_NAME) 
+	fpm --force -t deb --maintainer '$(DEB_MAINTAINER)' -s dir -a $(ARCH) -n $(PACKAGE_NAME) -v $(PACKAGE_VERSION) -C $(DEB_TMP_DIR) --prefix /usr/bin --deb-no-default-config-files --package $@ $(PACKAGE_NAME) 
 
 ifneq ($(PACKAGE_ENABLED),true)
 deb:
