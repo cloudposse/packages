@@ -52,7 +52,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_BOT_TOKEN }}
           COMMIT_MESSAGE: Update ${{ steps.update.outputs.package_name }} to ${{ steps.update.outputs.package_version }}
           PULL_REQUEST_TITLE: Update ${{ steps.update.outputs.package_name }} to ${{ steps.update.outputs.package_version }}
-          PULL_REQUEST_BODY: |
+          PULL_REQUEST_BODY: |-
             This is an auto-generated PR that updates the ${{ steps.update.outputs.package_name }} package version.
 
             |:------------------|:--------------------------------------------|
