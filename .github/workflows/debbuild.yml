@@ -1,0 +1,34 @@
+name: "debbuild"
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - deb/**
+
+  pull_request: 
+    types: [opened, synchronize, reopened]
+    paths:
+      - deb/**
+
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        debian:
+          - 'stable-slim'
+    steps:
+      - name: "Checkout source code at current commit"
+        uses: actions/checkout@v2
+      - name: "Build and push docker image to DockerHub"
+        uses: docker/build-push-action@v1
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_PASSWORD }}
+          repository: ${{ github.repository }}-debbuild
+          dockerfile: deb/Dockerfile.${{ matrix.debian }}
+          tags: ${{ matrix.debian }}
+          registry: registry-1.docker.io
+          tag_with_ref: true
+          tag_with_sha: true

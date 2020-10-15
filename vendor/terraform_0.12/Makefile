@@ -2,9 +2,11 @@
 export VENDOR ?= hashicorp
 export APK_PACKAGE_NAME = terraform_0.12
 export PACKAGE_REPO_NAME = terraform
+export DEB_PACKAGE_ENABLED = false
 
 include ../../tasks/Makefile.package
 include ../../tasks/Makefile.apk
+include ../../tasks/Makefile.deb
 
 export APK_BUILD_TEMPLATE ?= APKBUILD.github-binary
 export DOWNLOAD_URL ?= https://releases.hashicorp.com/terraform/$(PACKAGE_VERSION)/terraform_$(PACKAGE_VERSION)_$(OS)_$(ARCH).zip

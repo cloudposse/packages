@@ -1,5 +1,6 @@
 include ../../tasks/Makefile.package
 include ../../tasks/Makefile.apk
+include ../../tasks/Makefile.deb
 
 # Package details
 # This package tracks the most advanced production-ready version of kops
@@ -15,4 +16,4 @@ install:
 	$(call download_binary)
 
 test:
-	$(PACKAGE_EXE) version
+	$(PACKAGE_EXE) version | grep $(PACKAGE_VERSION)

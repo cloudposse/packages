@@ -33,71 +33,95 @@ endif
 # $(call github_download_binary_release,version,repo,asset)
 define download_binary
 	mkdir -p $(INSTALL_PATH)
-	$(CURL) -o $(INSTALL_PATH)/$(PACKAGE_NAME) $(DOWNLOAD_URL) && chmod +x $(INSTALL_PATH)/$(PACKAGE_NAME)
+	$(CURL) -o $(INSTALL_PATH)/$(PACKAGE_EXE) $(DOWNLOAD_URL) && chmod +x $(INSTALL_PATH)/$(PACKAGE_EXE)
 endef
+
+download/binary:
+	$(call download_binary)
 
 define download_binary_gz
 	mkdir -p $(INSTALL_PATH)
 	$(CURL) -o $(INSTALL_PATH)/$(PACKAGE_NAME).gz $(DOWNLOAD_URL)
 	gunzip -f -k -q $(INSTALL_PATH)/$(PACKAGE_NAME).gz
-	chmod +x $(INSTALL_PATH)/$(PACKAGE_NAME)
+	chmod +x $(INSTALL_PATH)/$(PACKAGE_EXE)
 	rm -f $(INSTALL_PATH)/$(PACKAGE_NAME).gz
 endef
+
+download/binary/gz:
+	$(call download_binary_gz)
 
 define download_binary_bz2
 	mkdir -p $(INSTALL_PATH)
 	$(CURL) -o $(INSTALL_PATH)/$(PACKAGE_NAME).bz2 $(DOWNLOAD_URL)
 	bzip2 -d -f -k -q $(INSTALL_PATH)/$(PACKAGE_NAME).bz2
-	chmod +x $(INSTALL_PATH)/$(PACKAGE_NAME)
+	chmod +x $(INSTALL_PATH)/$(PACKAGE_EXE)
 	rm -f $(INSTALL_PATH)/$(PACKAGE_NAME).bz2
 endef
+
+download/binary/bz2:
+	$(call download_binary_bz2)
 
 define download_tarball
 	[ -n "$(TMP)" ] && [ -n "$(PACKAGE_NAME)" ] && rm -rf "$(TMP)/$(PACKAGE_NAME)"
 	mkdir -p $(TMP)/$(PACKAGE_NAME)
 	$(CURL) -o - $(DOWNLOAD_URL) | tar -zx -C '$(TMP)/$(PACKAGE_NAME)'
-	find $(TMP)/$(PACKAGE_NAME) -type f -name '$(PACKAGE_EXE)*' | xargs -I {} cp -f {} $(INSTALL_PATH)/$(PACKAGE_NAME)
-	chmod +x $(INSTALL_PATH)/$(PACKAGE_NAME)
+	find $(TMP)/$(PACKAGE_NAME) -type f -name '$(PACKAGE_EXE)*' | xargs -I {} cp -f {} $(INSTALL_PATH)/$(PACKAGE_EXE)
+	chmod +x $(INSTALL_PATH)/$(PACKAGE_EXE)
 	[ -n "$(TMP)" ] && [ -n "$(PACKAGE_NAME)" ] && rm -rf "$(TMP)/$(PACKAGE_NAME)"
 endef
+
+download/tarball:
+	$(call download_tarball)
 
 define download_tar_bz2
 	[ -n "$(TMP)" ] && [ -n "$(PACKAGE_NAME)" ] && rm -rf "$(TMP)/$(PACKAGE_NAME)"
 	mkdir -p $(TMP)/$(PACKAGE_NAME)
 	$(CURL) -o - $(DOWNLOAD_URL) | tar -jx -C $(TMP)/$(PACKAGE_NAME)
-	find $(TMP)/$(PACKAGE_NAME) -type f -name $(PACKAGE_NAME) | xargs -I {} cp -f {} $(INSTALL_PATH)/$(PACKAGE_NAME)
-	chmod +x $(INSTALL_PATH)/$(PACKAGE_NAME)
+	find $(TMP)/$(PACKAGE_NAME) -type f -name $(PACKAGE_NAME) | xargs -I {} cp -f {} $(INSTALL_PATH)/$(PACKAGE_EXE)
+	chmod +x $(INSTALL_PATH)/$(PACKAGE_EXE)
 	[ -n "$(TMP)" ] && [ -n "$(PACKAGE_NAME)" ] && rm -rf "$(TMP)/$(PACKAGE_NAME)"
 endef
+
+download/tar/bz2:
+	$(call download_tar_bz2)
 
 define download_tar_xz
 	[ -n "$(TMP)" ] && [ -n "$(PACKAGE_NAME)" ] && rm -rf "$(TMP)/$(PACKAGE_NAME)"
 	mkdir -p $(TMP)/$(PACKAGE_NAME)
 	$(CURL) -o - $(DOWNLOAD_URL) | tar -Jx -C $(TMP)/$(PACKAGE_NAME)
-	find $(TMP)/$(PACKAGE_NAME) -type f -name $(PACKAGE_NAME) | xargs -I {} cp -f {} $(INSTALL_PATH)/$(PACKAGE_NAME)
-	chmod +x $(INSTALL_PATH)/$(PACKAGE_NAME)
+	find $(TMP)/$(PACKAGE_NAME) -type f -name $(PACKAGE_NAME) | xargs -I {} cp -f {} $(INSTALL_PATH)/$(PACKAGE_EXE)
+	chmod +x $(INSTALL_PATH)/$(PACKAGE_EXE)
 	[ -n "$(TMP)" ] && [ -n "$(PACKAGE_NAME)" ] && rm -rf "$(TMP)/$(PACKAGE_NAME)"
 endef
+
+download/tar/xz:
+	$(call download_tar_xz)
 
 define download_zip
 	[ -n "$(TMP)" ] && [ -n "$(PACKAGE_NAME)" ] && rm -rf "$(TMP)/$(PACKAGE_NAME)"
 	mkdir -p $(TMP)/$(PACKAGE_NAME)
 	$(CURL) -L -o $(TMP)/$(PACKAGE_NAME)/$(PACKAGE_NAME).zip $(DOWNLOAD_URL)
 	unzip $(TMP)/$(PACKAGE_NAME)/$(PACKAGE_NAME).zip -d $(TMP)/$(PACKAGE_NAME)
-	find $(TMP)/$(PACKAGE_NAME) -type f -name $(PACKAGE_NAME) | xargs -I {} cp -f {} $(INSTALL_PATH)/$(PACKAGE_NAME)
-	chmod +x $(INSTALL_PATH)/$(PACKAGE_NAME)
+	find $(TMP)/$(PACKAGE_NAME) -type f -name $(PACKAGE_NAME) | xargs -I {} cp -f {} $(INSTALL_PATH)/$(PACKAGE_EXE)
+	chmod +x $(INSTALL_PATH)/$(PACKAGE_EXE)
 	[ -n "$(TMP)" ] && [ -n "$(PACKAGE_NAME)" ] && rm -rf "$(TMP)/$(PACKAGE_NAME)"
 endef
+
+download/zip:
+	$(call download_zip)
 
 define download_gz
 	[ -n "$(TMP)" ] && [ -n "$(PACKAGE_NAME)" ] && rm -rf "$(TMP)/$(PACKAGE_NAME)"
 	mkdir -p $(TMP)/$(PACKAGE_NAME)
 	$(CURL) -L -o $(TMP)/$(PACKAGE_NAME)/$(PACKAGE_NAME).gz $(DOWNLOAD_URL)
 	gunzip $(TMP)/$(PACKAGE_NAME)/$(PACKAGE_NAME).gz
-	find $(TMP)/$(PACKAGE_NAME) -type f -name $(PACKAGE_NAME) | xargs -I {} cp -f {} $(INSTALL_PATH)/$(PACKAGE_NAME)
-	chmod +x $(INSTALL_PATH)/$(PACKAGE_NAME)
+	find $(TMP)/$(PACKAGE_NAME) -type f -name $(PACKAGE_NAME) | xargs -I {} cp -f {} $(INSTALL_PATH)/$(PACKAGE_EXE)
+	chmod +x $(INSTALL_PATH)/$(PACKAGE_EXE)
 	[ -n "$(TMP)" ] && [ -n "$(PACKAGE_NAME)" ] && rm -rf "$(TMP)/$(PACKAGE_NAME)"
 endef
+
+download/gz:
+	$(call download_gz)
 
 default: info
 
@@ -197,6 +221,8 @@ info/github: FORMAT="::set-output name=%s::%s\n"
 info/github:
 	@printf $(FORMAT) "vendor" "$(VENDOR)"
 	@printf $(FORMAT) "package_name" "$(PACKAGE_NAME)"
+	@printf $(FORMAT) "apk_package_enabled" "$(APK_PACKAGE_ENABLED)"
+	@printf $(FORMAT) "deb_package_enabled" "$(DEB_PACKAGE_ENABLED)"
 	@printf $(FORMAT) "package_enabled" "$(PACKAGE_ENABLED)"
 	@printf $(FORMAT) "package_version" "$(PACKAGE_VERSION)"
 	@printf $(FORMAT) "package_license" "$(PACKAGE_LICENSE)"

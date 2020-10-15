@@ -16,14 +16,11 @@ export PACKAGE_DESCRIPTION = Variant is a Universal CLI tool that works like a t
 
 include ../../tasks/Makefile.package
 include ../../tasks/Makefile.apk
+include ../../tasks/Makefile.deb
 
 install:
 	$(call download_tarball)
 
 test:
-	# https://github.com/mumoshu/variant/issues/63#issuecomment-636411336
-	# $(PACKAGE_EXE) version
-	echo 'Work around bug https://github.com/mumoshu/variant/issues/63#issuecomment-636411336'
-	echo "cd src && $(PACKAGE_EXE) version"
-	cd src && $(PACKAGE_EXE) version
+	$(PACKAGE_EXE) version 2>&1 | grep -q $(PACKAGE_VERSION)
 

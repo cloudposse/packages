@@ -5,6 +5,7 @@ export DOWNLOAD_URL ?= $(PACKAGE_REPO_URL)/releases/download/$(PACKAGE_VERSION)/
 
 include ../../tasks/Makefile.package
 include ../../tasks/Makefile.apk
+include ../../tasks/Makefile.deb
 
 install:
 	$(call download_binary)

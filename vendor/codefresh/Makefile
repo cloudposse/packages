@@ -23,6 +23,7 @@ export PACKAGE_EXE = codefresh
 
 include ../../tasks/Makefile.package
 include ../../tasks/Makefile.apk
+include ../../tasks/Makefile.deb
 
 install:
 	$(call download_tarball)

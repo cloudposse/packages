@@ -1,6 +1,7 @@
 
 include ../../tasks/Makefile.package
 include ../../tasks/Makefile.apk
+include ../../tasks/Makefile.deb
 
 ifeq ($(ARCH), amd64)
 	ARCH=x86_64

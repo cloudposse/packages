@@ -3,6 +3,7 @@ export PACKAGE_REPO_NAME = atlantis
 
 include ../../tasks/Makefile.package
 include ../../tasks/Makefile.apk
+include ../../tasks/Makefile.deb
 
 # Package details
 export VENDOR ?= cloudposse
@@ -11,9 +12,10 @@ export APK_BUILD_TEMPLATE ?= APKBUILD.github-binary
 export APKBUILD_DEPENDS += dpkg
 export APKBUILD_INSTALL_SCRIPTS = $(PACKAGE_NAME).post-install $(PACKAGE_NAME).post-deinstall
 export INSTALL_DIR = /usr/share/${MASTER_PACKAGE_NAME}/${VENDOR}/bin
+export PACKAGE_EXE = atlantis
 
 install:
 	$(call download_binary)
 
 test:
-	$(PACKAGE_EXE) version
+	$(PACKAGE_EXE) version | grep $(PACKAGE_VERSION)

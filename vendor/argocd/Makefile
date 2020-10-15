@@ -1,5 +1,6 @@
 include ../../tasks/Makefile.package
 include ../../tasks/Makefile.apk
+include ../../tasks/Makefile.deb
 
 export VENDOR = argoproj
 export PACKAGE_NAME = argocd

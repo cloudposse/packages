@@ -13,6 +13,7 @@ export APK_BUILD_TEMPLATE = APKBUILD.github-binary
 
 include ../../tasks/Makefile.package
 include ../../tasks/Makefile.apk
+include ../../tasks/Makefile.deb
 
 ## Package specific install code
 install:

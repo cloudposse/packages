@@ -1,5 +1,6 @@
 include ../../tasks/Makefile.package
 include ../../tasks/Makefile.apk
+include ../../tasks/Makefile.deb
 
 # Package details
 export VENDOR ?= runatlantis
@@ -14,5 +15,5 @@ install:
 	$(call download_zip)
 
 test:
-	$(PACKAGE_EXE) version
+	$(PACKAGE_EXE) version | grep $(PACKAGE_VERSION)
 

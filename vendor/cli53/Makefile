@@ -1,10 +1,11 @@
 include ../../tasks/Makefile.package
 include ../../tasks/Makefile.apk
+include ../../tasks/Makefile.deb
 
 ifeq ($(OS), darwin)
   OS=mac
 else
-  ARCH=386
+  ARCH=amd64
 endif
 
 # Package details

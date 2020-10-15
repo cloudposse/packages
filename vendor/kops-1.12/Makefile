@@ -6,6 +6,7 @@ export DOWNLOAD_URL = https://github.com/kubernetes/kops/releases/download/$(PAC
 
 include ../../tasks/Makefile.package
 include ../../tasks/Makefile.apk
+include ../../tasks/Makefile.deb
 
 # Package details
 #
@@ -13,11 +14,12 @@ export VENDOR = kubernetes
 export APK_BUILD_TEMPLATE = APKBUILD.github-binary
 export APKBUILD_DEPENDS += dpkg
 export APKBUILD_INSTALL_SCRIPTS = $(PACKAGE_NAME).post-install $(PACKAGE_NAME).post-deinstall
-export INSTALL_DIR = /usr/share/${MASTER_PACKAGE_NAME}/${MAJOR_VERSION}/bin
 export AUTO_UPDATE_ENABLED = false
+export INSTALL_DIR = /usr/share/${MASTER_PACKAGE_NAME}/${MAJOR_VERSION}/bin
+export PACKAGE_EXE = kops
 
 install:
 	$(call download_binary)
 
 test:
-	$(PACKAGE_EXE) version
+	$(PACKAGE_EXE) version | grep $(MAJOR_VERSION)

@@ -22,6 +22,7 @@ $(PACKAGER_PUBKEY_INSTALLED): $(PACKAGER_PUBKEY)
 
 endif
 
+export APK_PACKAGE_ENABLED ?= true
 export APK_TEMPLATE_PATH ?= ../../apk/templates/
 export APK_BUILD_TEMPLATE ?= APKBUILD.github-binary
 export APK_PACKAGES_PATH ?= /tmp/packages
@@ -66,8 +67,13 @@ apk/reset:
 	rm -rf $(APK_PACKAGE)
 
 .PHONY : apk
-ifeq ($(PACKAGE_ENABLED),true)
+ifneq ($(PACKAGE_ENABLED),true)
+apk:
+	@echo All packages disabled for $(PACKAGE_NAME).
+	@exit 0
+else ifeq ($(APK_PACKAGE_ENABLED),true)
 apk: $(PACKAGER_PRIVKEY) $(PACKAGER_PUBKEY_INSTALLED) $(APK_PACKAGE)
+	@echo Wrote $(APK_PACKAGE)
 	@exit 0
 else
 apk:
@@ -77,9 +83,12 @@ endif
 
 # Rebuild the `.apk` when it's older than the Makefile, VERSION, or RELEASE files
 $(APK_PACKAGE): Makefile VERSION RELEASE $(wildcard *.post-install) $(wildcard *.post-deinstall)
-	@echo "Building $@"
+	@echo "Building $@ with $(INSTALL_DIR) install directory"
 	ls -l $@ Makefile VERSION RELEASE || true
 	$(MAKE) info apk/prepare apk/checksum apk/build apk/testinstall apk/clean
 
 package/prepare::
 	@exit 0
+
+clean::
+	rm -f $(APK_PACKAGE)

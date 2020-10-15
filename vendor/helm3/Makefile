@@ -6,6 +6,7 @@ export DOWNLOAD_URL ?= https://get.helm.sh/helm-v$(PACKAGE_VERSION)-$(OS)-$(ARCH
 
 include ../../tasks/Makefile.package
 include ../../tasks/Makefile.apk
+include ../../tasks/Makefile.deb
 
 # Package details
 export VENDOR ?= helm
@@ -23,7 +24,7 @@ install:
 	chmod +x $(INSTALL_PATH)/$(PACKAGE_NAME)
 
 test:
-	($(PACKAGE_NAME) version || true) 2>&1 | grep Version
+	$(PACKAGE_NAME) version | grep v$(MAJOR_VERSION)\.
 
 package/prepare::
 	mv src/$(OS)-$(ARCH)/helm src/helm3

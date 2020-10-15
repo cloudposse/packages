@@ -1,6 +1,7 @@
 
 include ../../tasks/Makefile.package
 include ../../tasks/Makefile.apk
+include ../../tasks/Makefile.deb
 
 export VENDOR = cloudflare
 export PACKAGE_NAME = cfssljson
