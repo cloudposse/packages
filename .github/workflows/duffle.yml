@@ -55,15 +55,15 @@ jobs:
           PULL_REQUEST_BODY: |-
             This is an auto-generated PR that updates the ${{ steps.update.outputs.package_name }} package version.
 
-            |:------------------|:--------------------------------------------|
-            | Package Name      | ${{ steps.update.outputs.package_name }}    |
-            | Vendor            | @${{ steps.update.outputs.vendor }}         |
-            | Version           | ${{ steps.update.outputs.package_version }} |
-            | License           | ${{ steps.update.outputs.package_license    |
-            | Repo              | ${{ steps.update.outputs.package_repo_url   |
-            | Arch              | ${{ steps.update.outputs.arch }}            |
-            | OS                | ${{ steps.update.outputs.package_version }} |
-            | Download URL      | ${{ steps.update.outputs.download_url }}    |
+            |:------------------|:---------------------------------------------|
+            | Package Name      | ${{ steps.update.outputs.package_name }}     |
+            | Vendor            | @${{ steps.update.outputs.vendor }}          |
+            | Version           | ${{ steps.update.outputs.package_version }}  |
+            | License           | ${{ steps.update.outputs.package_license }}  |
+            | Repo              | ${{ steps.update.outputs.package_repo_url }} |
+            | Arch              | ${{ steps.update.outputs.arch }}             |
+            | OS                | ${{ steps.update.outputs.package_version }}  |
+            | Download URL      | ${{ steps.update.outputs.download_url }}     |
           PULL_REQUEST_BRANCH: auto-update/${{ steps.update.outputs.package_name }}-${{ steps.update.outputs.package_version }}
           PULL_REQUEST_BASE: master
           BRANCH_SUFFIX: none
