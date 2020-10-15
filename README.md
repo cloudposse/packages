@@ -254,7 +254,7 @@ exit
 ![aws-vault](https://github.com/cloudposse/packages/workflows/aws-vault/badge.svg?branch=master) | 6.2.0      | A vault for securely storing and accessing AWS credentials in development environments
 ![cfssl](https://github.com/cloudposse/packages/workflows/cfssl/badge.svg?branch=master) | 1.4.1      | Cloudflare's PKI and TLS toolkit
 ![cfssljson](https://github.com/cloudposse/packages/workflows/cfssljson/badge.svg?branch=master) | 1.4.1      | Cloudflare's PKI and TLS toolkit json parser
-![chamber](https://github.com/cloudposse/packages/workflows/chamber/badge.svg?branch=master) | 2.8.2      | CLI for managing secrets
+![chamber](https://github.com/cloudposse/packages/workflows/chamber/badge.svg?branch=master) | 2.9.0      | CLI for managing secrets
 ![cli53](https://github.com/cloudposse/packages/workflows/cli53/badge.svg?branch=master) | 0.8.17     | Command line tool for Amazon Route 53
 ![cloudflared](https://github.com/cloudposse/packages/workflows/cloudflared/badge.svg?branch=master) | 2020.3.2   | Argo Tunnel client
 ![cloudposse-atlantis](https://github.com/cloudposse/packages/workflows/cloudposse-atlantis/badge.svg?branch=master) | 0.9.0.3    | Terraform For Teams, enhanced by Cloud Posse
@@ -283,9 +283,9 @@ exit
 ![helm](https://github.com/cloudposse/packages/workflows/helm/badge.svg?branch=master) | 3.3.4      | The Kubernetes Package Manager
 ![helm2](https://github.com/cloudposse/packages/workflows/helm2/badge.svg?branch=master) | 2.16.10    | The Kubernetes Package Manager
 ![helm3](https://github.com/cloudposse/packages/workflows/helm3/badge.svg?branch=master) | 3.3.1      | The Kubernetes Package Manager
-![helmfile](https://github.com/cloudposse/packages/workflows/helmfile/badge.svg?branch=master) | 0.130.2    | Deploy Kubernetes Helm Charts
+![helmfile](https://github.com/cloudposse/packages/workflows/helmfile/badge.svg?branch=master) | 0.130.3    | Deploy Kubernetes Helm Charts
 ![htmltest](https://github.com/cloudposse/packages/workflows/htmltest/badge.svg?branch=master) | 0.13.0     | :white_check_mark: Test generated HTML for problems
-![hugo](https://github.com/cloudposse/packages/workflows/hugo/badge.svg?branch=master) | 0.76.4     | The world’s fastest framework for building websites.
+![hugo](https://github.com/cloudposse/packages/workflows/hugo/badge.svg?branch=master) | 0.76.5     | The world’s fastest framework for building websites.
 ![jp](https://github.com/cloudposse/packages/workflows/jp/badge.svg?branch=master) | 0.1.3      | Command line interface to JMESPath
 ![jq](https://github.com/cloudposse/packages/workflows/jq/badge.svg?branch=master) | 1.6        | Command-line JSON processor
 ![json2hcl](https://github.com/cloudposse/packages/workflows/json2hcl/badge.svg?branch=master) | 0.0.6      | Convert JSON to HCL, and vice versa
@@ -300,7 +300,7 @@ exit
 ![kops-1.12](https://github.com/cloudposse/packages/workflows/kops-1.12/badge.svg?branch=master) | 1.12.3     | Kubernetes Operations (kops) - Production Grade K8s Installation, Upgrades, and Management
 ![krew](https://github.com/cloudposse/packages/workflows/krew/badge.svg?branch=master) | 0.4.0      | Kubectl plugin manager
 ![kubecron](https://github.com/cloudposse/packages/workflows/kubecron/badge.svg?branch=master) | 1.0.2      | Utilities to manage kubernetes cronjobs. Run a CronJob manually for test purposes. Suspend/unsuspend a CronJob
-![kubectl](https://github.com/cloudposse/packages/workflows/kubectl/badge.svg?branch=master) | 1.19.1     | Production-Grade Container Scheduling and Management
+![kubectl](https://github.com/cloudposse/packages/workflows/kubectl/badge.svg?branch=master) | 1.19.3     | Production-Grade Container Scheduling and Management
 ![kubectl-1.13](https://github.com/cloudposse/packages/workflows/kubectl-1.13/badge.svg?branch=master) | 1.13.12    | Production-Grade Container Scheduling and Management (v1.13)
 ![kubectl-1.14](https://github.com/cloudposse/packages/workflows/kubectl-1.14/badge.svg?branch=master) | 1.14.10    | Production-Grade Container Scheduling and Management (v1.14)
 ![kubectl-1.15](https://github.com/cloudposse/packages/workflows/kubectl-1.15/badge.svg?branch=master) | 1.15.12    | Production-Grade Container Scheduling and Management (v1.15)
@@ -319,7 +319,7 @@ exit
 ![opa](https://github.com/cloudposse/packages/workflows/opa/badge.svg?branch=master) | 0.24.0     | An open source project to policy-enable your service.
 ![pack](https://github.com/cloudposse/packages/workflows/pack/badge.svg?branch=master) | 0.14.2     | Create cloud native Buildpacks
 ![packer](https://github.com/cloudposse/packages/workflows/packer/badge.svg?branch=master) | 1.6.4      | Packer is a tool for creating identical machine images for multiple platforms from a single source configuration.
-![pandoc](https://github.com/cloudposse/packages/workflows/pandoc/badge.svg?branch=master) | 2.11       | Universal markup converter
+![pandoc](https://github.com/cloudposse/packages/workflows/pandoc/badge.svg?branch=master) | 2.11.0.1   | Universal markup converter
 ![pgmetrics](https://github.com/cloudposse/packages/workflows/pgmetrics/badge.svg?branch=master) | 1.10.2     | Postgres metrics
 ![pluto](https://github.com/cloudposse/packages/workflows/pluto/badge.svg?branch=master) | 3.5.2      | A cli tool to help discover deprecated apiVersions in Kubernetes
 ![popeye](https://github.com/cloudposse/packages/workflows/popeye/badge.svg?branch=master) | 0.8.10     | A Kubernetes cluster resource sanitizer
