@@ -31,6 +31,7 @@ vendor/cli53: vendor/cli53/**
 vendor/cloudflared: vendor/cloudflared/**
 vendor/cloudposse-atlantis: vendor/cloudposse-atlantis/**
 vendor/codefresh: vendor/codefresh/**
+vendor/conftest: vendor/conftest/**
 vendor/consul: vendor/consul/**
 vendor/ctop: vendor/ctop/**
 vendor/direnv: vendor/direnv/**
