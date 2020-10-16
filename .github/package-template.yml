@@ -47,7 +47,7 @@ jobs:
           make readme
 
       - name: Create Pull Request
-        uses: cloudposse/actions/github/create-pull-request@0.19.0
+        uses: cloudposse/actions/github/create-pull-request@0.20.0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_BOT_TOKEN }}
           COMMIT_MESSAGE: Update ${{ steps.update.outputs.package_name }} to ${{ steps.update.outputs.package_version }}
