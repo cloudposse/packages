@@ -15,6 +15,7 @@ github:
 scripts:
 - bin/**
 - tasks/**
+vendor: vendor/**
 vendor/amtool: vendor/amtool/**
 vendor/argocd: vendor/argocd/**
 vendor/assume-role: vendor/assume-role/**
