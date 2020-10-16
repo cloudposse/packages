@@ -54,7 +54,8 @@ jobs:
           title: Update ${{ steps.update.outputs.package_name }} to ${{ steps.update.outputs.package_version }}
           body: |-
             This is an auto-generated PR that updates the ${{ steps.update.outputs.package_name }} package version.
-
+            
+            | Meta              | Details                                      |
             |:------------------|:---------------------------------------------|
             | Package Name      | ${{ steps.update.outputs.package_name }}     |
             | Vendor            | @${{ steps.update.outputs.vendor }}          |
@@ -62,13 +63,14 @@ jobs:
             | License           | ${{ steps.update.outputs.package_license }}  |
             | Repo              | ${{ steps.update.outputs.package_repo_url }} |
             | Arch              | ${{ steps.update.outputs.arch }}             |
-            | OS                | ${{ steps.update.outputs.package_version }}  |
+            | OS                | ${{ steps.update.outputs.os }}               |
             | Download URL      | ${{ steps.update.outputs.download_url }}     |
           branch: auto-update/${{ steps.update.outputs.package_name }}-${{ steps.update.outputs.package_version }}
           base: master
           delete-branch: true
           labels: |
             auto-update
+            vendor/${{ steps.update.outputs.package_name }}
 
   # Build for alpine linux
   alpine:
