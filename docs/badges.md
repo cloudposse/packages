@@ -2,7 +2,7 @@
 | Build Status | Version | Description |
 | ------------ | ------- | ----------- |
 ![amtool](https://github.com/cloudposse/packages/workflows/amtool/badge.svg?branch=master) | 0.21.0     | Tool for interacting with the Alertmanager API
-![argocd](https://github.com/cloudposse/packages/workflows/argocd/badge.svg?branch=master) | 1.7.7      | Declarative GitOpts for Kubernetes
+![argocd](https://github.com/cloudposse/packages/workflows/argocd/badge.svg?branch=master) | 1.7.8      | Declarative GitOpts for Kubernetes
 ![assume-role](https://github.com/cloudposse/packages/workflows/assume-role/badge.svg?branch=master) | 0.3.2      | Easily assume AWS roles in your terminal.
 ![atlantis](https://github.com/cloudposse/packages/workflows/atlantis/badge.svg?branch=master) | 0.15.0     | Terraform For Teams
 ![awless](https://github.com/cloudposse/packages/workflows/awless/badge.svg?branch=master) | 0.1.11     | A Mighty CLI for AWS
@@ -15,7 +15,7 @@
 ![cli53](https://github.com/cloudposse/packages/workflows/cli53/badge.svg?branch=master) | 0.8.17     | Command line tool for Amazon Route 53
 ![cloudflared](https://github.com/cloudposse/packages/workflows/cloudflared/badge.svg?branch=master) | 2020.3.2   | Argo Tunnel client
 ![cloudposse-atlantis](https://github.com/cloudposse/packages/workflows/cloudposse-atlantis/badge.svg?branch=master) | 0.9.0.3    | Terraform For Teams, enhanced by Cloud Posse
-![codefresh](https://github.com/cloudposse/packages/workflows/codefresh/badge.svg?branch=master) | 0.73.5     | Codefresh CLI
+![codefresh](https://github.com/cloudposse/packages/workflows/codefresh/badge.svg?branch=master) | 0.73.6     | Codefresh CLI
 ![consul](https://github.com/cloudposse/packages/workflows/consul/badge.svg?branch=master) | 1.9.0-beta1 | Hashicorp consul
 ![ctop](https://github.com/cloudposse/packages/workflows/ctop/badge.svg?branch=master) | 0.7.3      | Top-like interface for container metrics
 ![direnv](https://github.com/cloudposse/packages/workflows/direnv/badge.svg?branch=master) | 2.23.0     | Unclutter your .profile
@@ -40,7 +40,7 @@
 ![helm](https://github.com/cloudposse/packages/workflows/helm/badge.svg?branch=master) | 3.3.4      | The Kubernetes Package Manager
 ![helm2](https://github.com/cloudposse/packages/workflows/helm2/badge.svg?branch=master) | 2.16.10    | The Kubernetes Package Manager
 ![helm3](https://github.com/cloudposse/packages/workflows/helm3/badge.svg?branch=master) | 3.3.1      | The Kubernetes Package Manager
-![helmfile](https://github.com/cloudposse/packages/workflows/helmfile/badge.svg?branch=master) | 0.130.3    | Deploy Kubernetes Helm Charts
+![helmfile](https://github.com/cloudposse/packages/workflows/helmfile/badge.svg?branch=master) | 0.131.0    | Deploy Kubernetes Helm Charts
 ![htmltest](https://github.com/cloudposse/packages/workflows/htmltest/badge.svg?branch=master) | 0.13.0     | :white_check_mark: Test generated HTML for problems
 ![hugo](https://github.com/cloudposse/packages/workflows/hugo/badge.svg?branch=master) | 0.76.5     | The world’s fastest framework for building websites.
 ![jp](https://github.com/cloudposse/packages/workflows/jp/badge.svg?branch=master) | 0.1.3      | Command line interface to JMESPath
@@ -57,7 +57,7 @@
 ![kops-1.12](https://github.com/cloudposse/packages/workflows/kops-1.12/badge.svg?branch=master) | 1.12.3     | Kubernetes Operations (kops) - Production Grade K8s Installation, Upgrades, and Management
 ![krew](https://github.com/cloudposse/packages/workflows/krew/badge.svg?branch=master) | 0.4.0      | Kubectl plugin manager
 ![kubecron](https://github.com/cloudposse/packages/workflows/kubecron/badge.svg?branch=master) | 1.0.2      | Utilities to manage kubernetes cronjobs. Run a CronJob manually for test purposes. Suspend/unsuspend a CronJob
-![kubectl](https://github.com/cloudposse/packages/workflows/kubectl/badge.svg?branch=master) | 1.19.3     | Production-Grade Container Scheduling and Management
+![kubectl](https://github.com/cloudposse/packages/workflows/kubectl/badge.svg?branch=master) | 1.19.1     | Production-Grade Container Scheduling and Management
 ![kubectl-1.13](https://github.com/cloudposse/packages/workflows/kubectl-1.13/badge.svg?branch=master) | 1.13.12    | Production-Grade Container Scheduling and Management (v1.13)
 ![kubectl-1.14](https://github.com/cloudposse/packages/workflows/kubectl-1.14/badge.svg?branch=master) | 1.14.10    | Production-Grade Container Scheduling and Management (v1.14)
 ![kubectl-1.15](https://github.com/cloudposse/packages/workflows/kubectl-1.15/badge.svg?branch=master) | 1.15.12    | Production-Grade Container Scheduling and Management (v1.15)
@@ -80,7 +80,7 @@
 ![pgmetrics](https://github.com/cloudposse/packages/workflows/pgmetrics/badge.svg?branch=master) | 1.10.2     | Postgres metrics
 ![pluto](https://github.com/cloudposse/packages/workflows/pluto/badge.svg?branch=master) | 3.5.2      | A cli tool to help discover deprecated apiVersions in Kubernetes
 ![popeye](https://github.com/cloudposse/packages/workflows/popeye/badge.svg?branch=master) | 0.8.10     | A Kubernetes cluster resource sanitizer
-![promtool](https://github.com/cloudposse/packages/workflows/promtool/badge.svg?branch=master) | 2.21.0     | Prometheus CLI tool
+![promtool](https://github.com/cloudposse/packages/workflows/promtool/badge.svg?branch=master) | 2.22.0     | Prometheus CLI tool
 ![rakkess](https://github.com/cloudposse/packages/workflows/rakkess/badge.svg?branch=master) | 0.4.5      | Review Access - kubectl plugin to show an access matrix for all available resources
 ![rancher](https://github.com/cloudposse/packages/workflows/rancher/badge.svg?branch=master) | 2.4.6      | Rancher CLI
 ![rbac-lookup](https://github.com/cloudposse/packages/workflows/rbac-lookup/badge.svg?branch=master) | 0.6.1      | Find Kubernetes roles and cluster roles bound to any user, service account, or group name.
@@ -104,7 +104,7 @@
 ![terraform_0.11](https://github.com/cloudposse/packages/workflows/terraform_0.11/badge.svg?branch=master) | 0.11.14    | Terraform (Deprecated package. Use terraform-0.11 instead)
 ![terraform_0.12](https://github.com/cloudposse/packages/workflows/terraform_0.12/badge.svg?branch=master) | 0.12.29    | Terraform (Deprecated package. Use terraform-0.12 instead)
 ![terraform_0.13](https://github.com/cloudposse/packages/workflows/terraform_0.13/badge.svg?branch=master) | 0.13.3     | Terraform (Deprecated package. Use terraform-0.13 instead)
-![terragrunt](https://github.com/cloudposse/packages/workflows/terragrunt/badge.svg?branch=master) | 0.25.3     | Terragrunt is a thin wrapper for Terraform that provides extra tools for working with multiple Terraform modules.
+![terragrunt](https://github.com/cloudposse/packages/workflows/terragrunt/badge.svg?branch=master) | 0.25.4     | Terragrunt is a thin wrapper for Terraform that provides extra tools for working with multiple Terraform modules.
 ![terrahelp](https://github.com/cloudposse/packages/workflows/terrahelp/badge.svg?branch=master) | 0.7.4      | Terrahelp is as a command line utility that provides useful tricks like masking of terraform output.
 ![tfenv](https://github.com/cloudposse/packages/workflows/tfenv/badge.svg?branch=master) | 0.4.0      | Transform environment variables for use with Terraform (e.g. `HOSTNAME` ⇨ `TF_VAR_hostname`)
 ![tfmask](https://github.com/cloudposse/packages/workflows/tfmask/badge.svg?branch=master) | 0.7.0      | Terraform utility to mask select output from `terraform plan` and `terraform apply`
