@@ -29,8 +29,8 @@ on:
     - cron:  '0 0 * * *'
 
 jobs:
-  update-packages:
-    #    if: github.event_name == 'schedule'
+  auto-update:
+    #if: github.event_name == 'schedule'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -48,11 +48,11 @@ jobs:
 
       - name: Create Pull Request
         uses: cloudposse/actions/github/create-pull-request@0.20.0
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_BOT_TOKEN }}
-          COMMIT_MESSAGE: Update ${{ steps.update.outputs.package_name }} to ${{ steps.update.outputs.package_version }}
-          PULL_REQUEST_TITLE: Update ${{ steps.update.outputs.package_name }} to ${{ steps.update.outputs.package_version }}
-          PULL_REQUEST_BODY: |-
+        with:
+          token: ${{ secrets.GITHUB_BOT_TOKEN }}
+          commit-message: Update ${{ steps.update.outputs.package_name }} to ${{ steps.update.outputs.package_version }}
+          title: Update ${{ steps.update.outputs.package_name }} to ${{ steps.update.outputs.package_version }}
+          body: |-
             This is an auto-generated PR that updates the ${{ steps.update.outputs.package_name }} package version.
 
             |:------------------|:---------------------------------------------|
@@ -64,9 +64,12 @@ jobs:
             | Arch              | ${{ steps.update.outputs.arch }}             |
             | OS                | ${{ steps.update.outputs.package_version }}  |
             | Download URL      | ${{ steps.update.outputs.download_url }}     |
-          PULL_REQUEST_BRANCH: auto-update/${{ steps.update.outputs.package_name }}-${{ steps.update.outputs.package_version }}
-          PULL_REQUEST_BASE: master
-          BRANCH_SUFFIX: none
+          branch: auto-update/${{ steps.update.outputs.package_name }}-${{ steps.update.outputs.package_version }}
+          base: master
+          branch-suffix: none
+          delete-branch: true
+          labels: |
+            auto-update
 
   # Build for alpine linux
   alpine:
