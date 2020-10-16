@@ -39,4 +39,7 @@ pull_request_rules:
     conditions:
       - "base=master"
     actions:
-      dismiss_reviews: {}
+      dismiss_reviews:
+        changes_requested: true
+        approved: true
+        message: "This Pull Request has been updated, so we're dismissing all reviews."

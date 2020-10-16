@@ -1,4 +1,8 @@
 # Use this file to define individuals or teams that are responsible for code in a repository.
 # Read more: <https://help.github.com/articles/about-codeowners/>
 
-* @cloudposse/engineering
+# Cloud Posse Admins must review all changes to the mergify configuration
+.github/mergify.yml @cloudposse/admins
+
+# All other changes require approval from Cloud Posse Engineering
+*                   @cloudposse/engineering @mergify
