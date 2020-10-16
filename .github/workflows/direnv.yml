@@ -30,7 +30,7 @@ on:
 
 jobs:
   auto-update:
-    #if: github.event_name == 'schedule'
+    if: github.event_name == 'schedule'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
