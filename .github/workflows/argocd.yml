@@ -8,6 +8,7 @@ on:
   push:
     branches:
       - master
+
     paths:
       - apk/**
       - deb/**
@@ -23,9 +24,64 @@ on:
       - vendor/argocd/**
       - .github/workflows/argocd.yml
 
+  schedule:
+    # Update packages nightly
+    - cron:  '0 0 * * *'
+
 jobs:
+  auto-update:
+    if: github.event_name == 'schedule'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Update packages
+        shell: bash
+        id: update
+        env:
+          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+        run: |
+          make -C vendor/argocd update
+          make -C vendor/argocd info/github
+          make init
+          make readme/deps
+          make readme
+
+      - name: Create Pull Request
+        uses: cloudposse/actions/github/create-pull-request@0.20.0
+        with:
+          token: ${{ secrets.GITHUB_BOT_TOKEN }}
+          commit-message: Update ${{ steps.update.outputs.package_name }} to ${{ steps.update.outputs.package_version }}
+          title: Update ${{ steps.update.outputs.package_name }} to ${{ steps.update.outputs.package_version }}
+          body: |-
+            ## what
+
+            This is an auto-generated PR that updates the ${{ steps.update.outputs.package_name }} package version.
+            
+            | Meta              | Details                                      |
+            |:------------------|:---------------------------------------------|
+            | **Package Name**  | `${{ steps.update.outputs.package_name }}`   |
+            | **Vendor**        | @${{ steps.update.outputs.vendor }}          |
+            | **Version**       | ${{ steps.update.outputs.package_version }}  |
+            | **License**       | ${{ steps.update.outputs.package_license }}  |
+            | **Repo**          | ${{ steps.update.outputs.package_repo_url }} |
+            | **Arch**          | ${{ steps.update.outputs.arch }}             |
+            | **OS**            | ${{ steps.update.outputs.os }}               |
+            | **Download URL**  | ${{ steps.update.outputs.download_url }}     |
+
+            ## why
+
+            Publish the latest release of `${{ steps.update.outputs.package_name }}` to our package repository.
+
+          branch: auto-update/${{ steps.update.outputs.package_name }}-${{ steps.update.outputs.package_version }}
+          base: master
+          delete-branch: true
+          labels: |
+            auto-update
+            vendor/${{ steps.update.outputs.package_name }}
+
   # Build for alpine linux
   alpine:
+    if: github.event_name != 'schedule'
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -103,6 +159,7 @@ jobs:
 
   # Build for alpine linux
   debian:
+    if: github.event_name != 'schedule'
     runs-on: ubuntu-latest
     strategy:
       matrix:
