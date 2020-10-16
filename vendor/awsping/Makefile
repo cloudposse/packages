@@ -1,5 +1,6 @@
 include ../../tasks/Makefile.package
 include ../../tasks/Makefile.apk
+include ../../tasks/Makefile.deb
 
 # Package details
 export VENDOR ?= ekalinin
@@ -11,7 +12,7 @@ install:
 	chmod +x $(INSTALL_PATH)/awsping
 
 test:
-	$(PACKAGE_EXE) --version
+	$(PACKAGE_EXE) -v | grep $(PACKAGE_VERSION)
 
 package/prepare::
 	mv src/awsping_v$(PACKAGE_VERSION)_$(OS)_$(ARCH)/$(PACKAGE_EXE) src
