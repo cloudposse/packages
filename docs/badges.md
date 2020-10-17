@@ -41,7 +41,7 @@
 [![helm](https://github.com/cloudposse/packages/workflows/helm/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ahelm) | 3.3.1      | The Kubernetes Package Manager
 [![helm2](https://github.com/cloudposse/packages/workflows/helm2/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ahelm2) | 2.16.10    | The Kubernetes Package Manager
 [![helm3](https://github.com/cloudposse/packages/workflows/helm3/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ahelm3) | 3.3.4      | The Kubernetes Package Manager
-[![helmfile](https://github.com/cloudposse/packages/workflows/helmfile/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ahelmfile) | 0.129.3    | Deploy Kubernetes Helm Charts
+[![helmfile](https://github.com/cloudposse/packages/workflows/helmfile/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ahelmfile) | 0.131.0    | Deploy Kubernetes Helm Charts
 [![htmltest](https://github.com/cloudposse/packages/workflows/htmltest/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ahtmltest) | 0.13.0     | :white_check_mark: Test generated HTML for problems
 [![hugo](https://github.com/cloudposse/packages/workflows/hugo/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ahugo) | 0.75.1     | The world’s fastest framework for building websites.
 [![jp](https://github.com/cloudposse/packages/workflows/jp/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ajp) | 0.1.3      | Command line interface to JMESPath
