@@ -40,7 +40,7 @@ jobs:
         env:
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
         run: |
-          make -C vendor/rbac-lookup update
+          make -C vendor/rbac-lookup auto-update
           make -C vendor/rbac-lookup info/github
           make init
           make readme/deps

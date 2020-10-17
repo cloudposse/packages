@@ -40,7 +40,7 @@ jobs:
         env:
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
         run: |
-          make -C vendor/cloudposse-atlantis update
+          make -C vendor/cloudposse-atlantis auto-update
           make -C vendor/cloudposse-atlantis info/github
           make init
           make readme/deps

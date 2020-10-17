@@ -40,7 +40,7 @@ jobs:
         env:
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
         run: |
-          make -C vendor/retry update
+          make -C vendor/retry auto-update
           make -C vendor/retry info/github
           make init
           make readme/deps

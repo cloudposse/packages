@@ -40,7 +40,7 @@ jobs:
         env:
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
         run: |
-          make -C vendor/sentry-cli update
+          make -C vendor/sentry-cli auto-update
           make -C vendor/sentry-cli info/github
           make init
           make readme/deps

@@ -40,7 +40,7 @@ jobs:
         env:
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
         run: |
-          make -C vendor/pgmetrics update
+          make -C vendor/pgmetrics auto-update
           make -C vendor/pgmetrics info/github
           make init
           make readme/deps

@@ -40,7 +40,7 @@ jobs:
         env:
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
         run: |
-          make -C vendor/sops update
+          make -C vendor/sops auto-update
           make -C vendor/sops info/github
           make init
           make readme/deps

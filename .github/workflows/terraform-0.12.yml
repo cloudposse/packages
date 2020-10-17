@@ -40,7 +40,7 @@ jobs:
         env:
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
         run: |
-          make -C vendor/terraform-0.12 update
+          make -C vendor/terraform-0.12 auto-update
           make -C vendor/terraform-0.12 info/github
           make init
           make readme/deps

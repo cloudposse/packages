@@ -40,7 +40,7 @@ jobs:
         env:
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
         run: |
-          make -C vendor/popeye update
+          make -C vendor/popeye auto-update
           make -C vendor/popeye info/github
           make init
           make readme/deps

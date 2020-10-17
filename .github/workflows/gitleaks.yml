@@ -40,7 +40,7 @@ jobs:
         env:
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
         run: |
-          make -C vendor/gitleaks update
+          make -C vendor/gitleaks auto-update
           make -C vendor/gitleaks info/github
           make init
           make readme/deps

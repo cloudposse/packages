@@ -40,7 +40,7 @@ jobs:
         env:
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
         run: |
-          make -C vendor/trivy update
+          make -C vendor/trivy auto-update
           make -C vendor/trivy info/github
           make init
           make readme/deps

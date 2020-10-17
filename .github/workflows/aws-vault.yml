@@ -40,7 +40,7 @@ jobs:
         env:
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
         run: |
-          make -C vendor/aws-vault update
+          make -C vendor/aws-vault auto-update
           make -C vendor/aws-vault info/github
           make init
           make readme/deps

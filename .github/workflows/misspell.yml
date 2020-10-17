@@ -40,7 +40,7 @@ jobs:
         env:
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
         run: |
-          make -C vendor/misspell update
+          make -C vendor/misspell auto-update
           make -C vendor/misspell info/github
           make init
           make readme/deps

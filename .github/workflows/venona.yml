@@ -40,7 +40,7 @@ jobs:
         env:
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
         run: |
-          make -C vendor/venona update
+          make -C vendor/venona auto-update
           make -C vendor/venona info/github
           make init
           make readme/deps

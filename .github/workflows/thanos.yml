@@ -40,7 +40,7 @@ jobs:
         env:
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
         run: |
-          make -C vendor/thanos update
+          make -C vendor/thanos auto-update
           make -C vendor/thanos info/github
           make init
           make readme/deps

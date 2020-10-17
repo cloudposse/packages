@@ -40,7 +40,7 @@ jobs:
         env:
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
         run: |
-          make -C vendor/katafygio update
+          make -C vendor/katafygio auto-update
           make -C vendor/katafygio info/github
           make init
           make readme/deps

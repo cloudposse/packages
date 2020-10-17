@@ -40,7 +40,7 @@ jobs:
         env:
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
         run: |
-          make -C vendor/sudosh update
+          make -C vendor/sudosh auto-update
           make -C vendor/sudosh info/github
           make init
           make readme/deps

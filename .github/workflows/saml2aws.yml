@@ -40,7 +40,7 @@ jobs:
         env:
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
         run: |
-          make -C vendor/saml2aws update
+          make -C vendor/saml2aws auto-update
           make -C vendor/saml2aws info/github
           make init
           make readme/deps

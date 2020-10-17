@@ -40,7 +40,7 @@ jobs:
         env:
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
         run: |
-          make -C vendor/k3d update
+          make -C vendor/k3d auto-update
           make -C vendor/k3d info/github
           make init
           make readme/deps

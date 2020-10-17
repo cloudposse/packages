@@ -40,7 +40,7 @@ jobs:
         env:
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
         run: |
-          make -C vendor/fzf update
+          make -C vendor/fzf auto-update
           make -C vendor/fzf info/github
           make init
           make readme/deps

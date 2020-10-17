@@ -40,7 +40,7 @@ jobs:
         env:
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
         run: |
-          make -C vendor/gonsul update
+          make -C vendor/gonsul auto-update
           make -C vendor/gonsul info/github
           make init
           make readme/deps

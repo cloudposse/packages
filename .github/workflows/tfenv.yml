@@ -40,7 +40,7 @@ jobs:
         env:
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
         run: |
-          make -C vendor/tfenv update
+          make -C vendor/tfenv auto-update
           make -C vendor/tfenv info/github
           make init
           make readme/deps
