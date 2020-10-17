@@ -40,7 +40,7 @@ jobs:
         env:
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
         run: |
-          make -C vendor/pluto update
+          make -C vendor/pluto auto-update
           make -C vendor/pluto info/github
           make init
           make readme/deps

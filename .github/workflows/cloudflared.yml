@@ -40,7 +40,7 @@ jobs:
         env:
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
         run: |
-          make -C vendor/cloudflared update
+          make -C vendor/cloudflared auto-update
           make -C vendor/cloudflared info/github
           make init
           make readme/deps

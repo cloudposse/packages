@@ -40,7 +40,7 @@ jobs:
         env:
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
         run: |
-          make -C vendor/amtool update
+          make -C vendor/amtool auto-update
           make -C vendor/amtool info/github
           make init
           make readme/deps

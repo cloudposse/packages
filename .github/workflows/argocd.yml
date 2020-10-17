@@ -40,7 +40,7 @@ jobs:
         env:
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
         run: |
-          make -C vendor/argocd update
+          make -C vendor/argocd auto-update
           make -C vendor/argocd info/github
           make init
           make readme/deps

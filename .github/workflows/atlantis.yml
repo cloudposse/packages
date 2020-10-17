@@ -40,7 +40,7 @@ jobs:
         env:
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
         run: |
-          make -C vendor/atlantis update
+          make -C vendor/atlantis auto-update
           make -C vendor/atlantis info/github
           make init
           make readme/deps

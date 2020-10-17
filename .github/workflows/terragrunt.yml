@@ -40,7 +40,7 @@ jobs:
         env:
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
         run: |
-          make -C vendor/terragrunt update
+          make -C vendor/terragrunt auto-update
           make -C vendor/terragrunt info/github
           make init
           make readme/deps

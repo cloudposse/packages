@@ -40,7 +40,7 @@ jobs:
         env:
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
         run: |
-          make -C vendor/fargate update
+          make -C vendor/fargate auto-update
           make -C vendor/fargate info/github
           make init
           make readme/deps

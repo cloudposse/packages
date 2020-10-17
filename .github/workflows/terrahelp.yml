@@ -40,7 +40,7 @@ jobs:
         env:
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
         run: |
-          make -C vendor/terrahelp update
+          make -C vendor/terrahelp auto-update
           make -C vendor/terrahelp info/github
           make init
           make readme/deps

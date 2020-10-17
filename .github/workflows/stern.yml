@@ -40,7 +40,7 @@ jobs:
         env:
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
         run: |
-          make -C vendor/stern update
+          make -C vendor/stern auto-update
           make -C vendor/stern info/github
           make init
           make readme/deps
