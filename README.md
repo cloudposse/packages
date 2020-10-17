@@ -281,7 +281,7 @@ exit
 [![goofys](https://github.com/cloudposse/packages/workflows/goofys/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Agoofys) | 0.24.0     | a high-performance, POSIX-ish Amazon S3 file system written in Go
 [![gosu](https://github.com/cloudposse/packages/workflows/gosu/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Agosu) | 1.12       | Simple Go-based setuid+setgid+setgroups+exec
 [![gotop](https://github.com/cloudposse/packages/workflows/gotop/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Agotop) | 3.0.0      | A terminal based graphical activity monitor inspired by gtop and vtop
-[![helm](https://github.com/cloudposse/packages/workflows/helm/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ahelm) | 3.3.1      | The Kubernetes Package Manager
+[![helm](https://github.com/cloudposse/packages/workflows/helm/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ahelm) | 3.3.4      | The Kubernetes Package Manager
 [![helm2](https://github.com/cloudposse/packages/workflows/helm2/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ahelm2) | 2.16.10    | The Kubernetes Package Manager
 [![helm3](https://github.com/cloudposse/packages/workflows/helm3/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ahelm3) | 3.3.4      | The Kubernetes Package Manager
 [![helmfile](https://github.com/cloudposse/packages/workflows/helmfile/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ahelmfile) | 0.131.0    | Deploy Kubernetes Helm Charts
