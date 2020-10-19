@@ -3,7 +3,7 @@ pull_request_rules:
     conditions:
       - "check-success~=.*alpine.*"
       - "check-success~=.*debian.*"
-      - "check-success~=.*docker.*"
+      - "check-success~=.*build-and-push.*"
       - "base=master"
       - "author=cloudpossebot"
       - "head~=auto-update/.*"
@@ -16,7 +16,7 @@ pull_request_rules:
     conditions:
       - "check-success~=.*alpine.*"
       - "check-success~=.*debian.*"
-      - "check-success~=.*docker.*"
+      - "check-success~=.*build-and-push.*"
       - "#approved-reviews-by>=1"
       - "#changes-requested-reviews-by=0"
       - "#commented-reviews-by=0"

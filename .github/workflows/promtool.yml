@@ -60,7 +60,7 @@ jobs:
         if: steps.update.outputs.package_version != steps.current.outputs.package_version
         with:
           token: ${{ secrets.GITHUB_BOT_TOKEN }}
-          commit-message: Update ${{ steps.update.outputs.package_name }} to ${{ steps.update.outputs.package_version }}
+          commit-message: Update ${{ steps.update.outputs.package_name }} to ${{ steps.current.outputs.package_version }} → ${{ steps.update.outputs.package_version }}
           title: Update ${{ steps.update.outputs.package_name }} to ${{ steps.update.outputs.package_version }}
           body: |-
             ## what
