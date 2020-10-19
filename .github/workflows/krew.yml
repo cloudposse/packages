@@ -34,6 +34,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+
+      - name: Get current package information
+        shell: bash
+        id: current
+        env:
+          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+        run: |
+          make -C vendor/krew info/github
+
       - name: Update packages
         shell: bash
         id: update
@@ -48,6 +57,7 @@ jobs:
 
       - name: Create Pull Request
         uses: cloudposse/actions/github/create-pull-request@0.20.0
+        if: steps.update.outputs.package_version != steps.current.outputs.package_version
         with:
           token: ${{ secrets.GITHUB_BOT_TOKEN }}
           commit-message: Update ${{ steps.update.outputs.package_name }} to ${{ steps.update.outputs.package_version }}
