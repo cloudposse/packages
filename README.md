@@ -357,7 +357,7 @@ exit
 [![variant](https://github.com/cloudposse/packages/workflows/variant/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Avariant) | 0.36.5     | Variant is a Universal CLI tool that works like a task runner
 [![variant2](https://github.com/cloudposse/packages/workflows/variant2/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Avariant2) | 0.34.1     | Second major version of Variant, a Universal CLI tool that works like a task runner
 [![vault](https://github.com/cloudposse/packages/workflows/vault/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Avault) | 1.5.5      | Hashicorp vault
-[![venona](https://github.com/cloudposse/packages/workflows/venona/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Avenona) | 0.32.1     | Codefresh runtime-environment agent
+[![venona](https://github.com/cloudposse/packages/workflows/venona/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Avenona) | 0.32.2     | Codefresh runtime-environment agent
 [![vert](https://github.com/cloudposse/packages/workflows/vert/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Avert) | 0.1.0      | Simple CLI for comparing two or more versions
 [![yq](https://github.com/cloudposse/packages/workflows/yq/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ayq) | 3.4.1      | yq is a portable command-line YAML processor
 
