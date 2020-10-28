@@ -129,6 +129,7 @@ vendor/trivy: vendor/trivy/**
 vendor/variant: vendor/variant/**
 vendor/variant2: vendor/variant2/**
 vendor/vault: vendor/vault/**
+vendor/vendir: vendor/vendir/**
 vendor/venona: vendor/venona/**
 vendor/vert: vendor/vert/**
 vendor/yq: vendor/yq/**

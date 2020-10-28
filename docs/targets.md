@@ -112,6 +112,7 @@ trivy                     0.11.0     A Simple and Comprehensive Vulnerability Sc
 variant                   0.36.5     Variant is a Universal CLI tool that works like a task runner
 variant2                  0.33.1     Second major version of Variant, a Universal CLI tool that works like a task runner
 vault                     1.5.3      Hashicorp vault
+vendir                    0.11.0     Easy way to vendor portions of git repos, github releases, etc. declaratively
 venona                    0.32.1     Codefresh runtime-environment agent
 vert                      0.1.0      Simple CLI for comparing two or more versions
 yq                        3.3.4      yq is a portable command-line YAML processor
