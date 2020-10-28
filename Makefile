@@ -2,7 +2,7 @@ export DOCKER_ORG ?= cloudposse
 export DOCKER_IMAGE ?= $(DOCKER_ORG)/packages
 export DOCKER_TAG ?= latest
 export DOCKER_IMAGE_NAME ?= $(DOCKER_IMAGE):$(DOCKER_TAG)
-export DOCKER_BUILD_FLAGS = 
+export DOCKER_BUILD_FLAGS =
 
 export DEFAULT_HELP_TARGET := help/vendor
 export README_DEPS ?= .github/auto-label.yml docs/badges.md workflows
@@ -47,7 +47,7 @@ run:
 	done >> $@
 
 .PHONY : docs/badges.md
-## Update `docs/targets.md` from `make help`
+## Update `docs/badges.md` from `make help`
 docs/badges.md: docs/deps
 	@( \
 		echo "## Package Build Status"; \
