@@ -80,7 +80,7 @@
 [![pandoc](https://github.com/cloudposse/packages/workflows/pandoc/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Apandoc) | 2.11.0.2   | Universal markup converter
 [![pgmetrics](https://github.com/cloudposse/packages/workflows/pgmetrics/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Apgmetrics) | 1.10.2     | Postgres metrics
 [![pluto](https://github.com/cloudposse/packages/workflows/pluto/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Apluto) | 3.5.2      | A cli tool to help discover deprecated apiVersions in Kubernetes
-[![popeye](https://github.com/cloudposse/packages/workflows/popeye/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Apopeye) | 0.8.10     | A Kubernetes cluster resource sanitizer
+[![popeye](https://github.com/cloudposse/packages/workflows/popeye/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Apopeye) | 0.9.0      | A Kubernetes cluster resource sanitizer
 [![promtool](https://github.com/cloudposse/packages/workflows/promtool/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Apromtool) | 2.22.0     | Prometheus CLI tool
 [![rakkess](https://github.com/cloudposse/packages/workflows/rakkess/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Arakkess) | 0.4.5      | Review Access - kubectl plugin to show an access matrix for all available resources
 [![rancher](https://github.com/cloudposse/packages/workflows/rancher/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Arancher) | 2.4.7      | Rancher CLI
