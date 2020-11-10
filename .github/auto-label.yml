@@ -53,6 +53,7 @@ vendor/gonsul: vendor/gonsul/**
 vendor/goofys: vendor/goofys/**
 vendor/gosu: vendor/gosu/**
 vendor/gotop: vendor/gotop/**
+vendor/grpcurl: vendor/grpcurl/**
 vendor/helm: vendor/helm/**
 vendor/helm2: vendor/helm2/**
 vendor/helm3: vendor/helm3/**
