@@ -92,6 +92,18 @@ endef
 download/tar/bz2:
 	$(call download_tar_bz2)
 
+define download_tar_gz
+	[ -n "$(TMP)" ] && [ -n "$(PACKAGE_NAME)" ] && rm -rf "$(TMP)/$(PACKAGE_NAME)"
+	mkdir -p $(TMP)/$(PACKAGE_NAME)
+	$(CURL) -o - $(DOWNLOAD_URL) | tar -zx -C $(TMP)/$(PACKAGE_NAME)
+	find $(TMP)/$(PACKAGE_NAME) -type f -name $(PACKAGE_NAME) | xargs -I {} cp -f {} $(INSTALL_PATH)/$(PACKAGE_EXE)
+	chmod +x $(INSTALL_PATH)/$(PACKAGE_EXE)
+	[ -n "$(TMP)" ] && [ -n "$(PACKAGE_NAME)" ] && rm -rf "$(TMP)/$(PACKAGE_NAME)"
+endef
+
+download/tar/gz:
+	$(call download_tar_gz)
+
 define download_tar_xz
 	[ -n "$(TMP)" ] && [ -n "$(PACKAGE_NAME)" ] && rm -rf "$(TMP)/$(PACKAGE_NAME)"
 	mkdir -p $(TMP)/$(PACKAGE_NAME)

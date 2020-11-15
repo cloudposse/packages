@@ -13,7 +13,7 @@ export APK_BUILD_TEMPLATE ?= APKBUILD.github-binary
 export APKBUILD_DEPENDS += libc6-compat
 
 install:
-	$(call download_tarball)
+	$(call download_tar_gz)
 
 test:
 	$(PACKAGE_EXE) --version
