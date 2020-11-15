@@ -112,6 +112,10 @@ vendor/slack-notifier: vendor/slack-notifier/**
 vendor/sops: vendor/sops/**
 vendor/stern: vendor/stern/**
 vendor/sudosh: vendor/sudosh/**
+vendor/teleport-4.2: vendor/teleport-4.2/**
+vendor/teleport-4.3: vendor/teleport-4.3/**
+vendor/teleport-4.4: vendor/teleport-4.4/**
+vendor/teleport-5.0: vendor/teleport-5.0/**
 vendor/teleport: vendor/teleport/**
 vendor/terraform-0.11: vendor/terraform-0.11/**
 vendor/terraform-0.12: vendor/terraform-0.12/**

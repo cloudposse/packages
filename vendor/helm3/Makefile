@@ -3,6 +3,7 @@ export MAJOR_VERSION = 3
 export PACKAGE_NAME = $(MASTER_PACKAGE_NAME)$(MAJOR_VERSION)
 export PACKAGE_REPO_NAME = helm
 export DOWNLOAD_URL ?= https://get.helm.sh/helm-v$(PACKAGE_VERSION)-$(OS)-$(ARCH).tar.gz
+export PACKAGE_VERSION_PIN = $(MAJOR_VERSION).x
 
 include ../../tasks/Makefile.package
 include ../../tasks/Makefile.apk
@@ -11,7 +12,6 @@ include ../../tasks/Makefile.deb
 # Package details
 export VENDOR ?= helm
 export APK_BUILD_TEMPLATE ?= APKBUILD.github-binary
-export AUTO_UPDATE_ENABLED = false
 export APKBUILD_DEPENDS += dpkg
 export APKBUILD_INSTALL_SCRIPTS = $(PACKAGE_NAME).post-install $(PACKAGE_NAME).post-deinstall
 export INSTALL_DIR = /usr/share/${MASTER_PACKAGE_NAME}/${MAJOR_VERSION}/bin

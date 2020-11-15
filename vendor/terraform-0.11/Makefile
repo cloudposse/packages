@@ -5,6 +5,7 @@ export PACKAGE_EXE = terraform
 export MASTER_PACKAGE_NAME = terraform
 export MAJOR_VERSION = 0.11
 export PACKAGE_NAME = $(MASTER_PACKAGE_NAME)-$(MAJOR_VERSION)
+export PACKAGE_VERSION_PIN = $(MAJOR_VERSION).x
 
 include ../../tasks/Makefile.package
 include ../../tasks/Makefile.apk
@@ -15,7 +16,6 @@ export APK_BUILD_TEMPLATE ?= APKBUILD.github-binary
 export DOWNLOAD_URL ?= https://releases.hashicorp.com/terraform/$(PACKAGE_VERSION)/terraform_$(PACKAGE_VERSION)_$(OS)_$(ARCH).zip
 export APKBUILD_DEPENDS += dpkg
 export APKBUILD_INSTALL_SCRIPTS = $(PACKAGE_NAME).post-install $(PACKAGE_NAME).post-deinstall
-export AUTO_UPDATE_ENABLED = false
 export INSTALL_DIR = /usr/share/${MASTER_PACKAGE_NAME}/${MAJOR_VERSION}/bin
 
 install:

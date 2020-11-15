@@ -4,7 +4,8 @@ export OS ?= $(shell uname -s | tr '[:upper:]' '[:lower:'])
 export OS_ARCH ?= $(shell uname -m)
 export INSTALL_PATH ?= /usr/local/bin
 export CURL ?= curl --retry 3 --retry-delay 5 --fail -sSL
-export PATH := $(PATH):../../bin/
+export LOCAL_BIN := ../../bin
+export PATH := $(PATH):$(LOCAL_BIN)
 export SHELL := /bin/bash
 
 export TMP ?= /tmp
@@ -20,6 +21,12 @@ export PACKAGE_RELEASE ?= $(shell cat RELEASE 2>/dev/null)
 export PACKAGE_LICENSE ?= $(shell cat LICENSE 2>/dev/null)
 export PACKAGE_HOMEPAGE_URL ?= https://github.com/$(VENDOR)/$(PACKAGE)
 export PACKAGE_REPO_URL ?= https://github.com/$(VENDOR)/$(PACKAGE_REPO_NAME)
+
+ifeq ($(strip $(PACKAGE_VERSION_PIN)),)
+	export PACKAGE_VERSION_TARGET = CURRENT_VERSION
+else
+	export PACKAGE_VERSION_TARGET = PINNED_VERSION
+endif
 
 export AUTO_UPDATE_ENABLED ?= true
 
@@ -125,22 +132,15 @@ download/gz:
 
 default: info
 
+# Only works if current working directory is under vendor/
+$(LOCAL_BIN)/vert: INSTALL_PATH = $(LOCAL_BIN)
+$(LOCAL_BIN)/vert:
+	$(MAKE) -C ../vert download/binary
+
 DESCRIPTION:
 	@github-repo-metadata $(VENDOR) $(PACKAGE_REPO_NAME) "index" .description | tee DESCRIPTION
 
-VERSION: API=releases/latest
-VERSION: QUERY=.tag_name
-VERSION:
-	@version=$$(github-repo-metadata $(VENDOR) $(PACKAGE_REPO_NAME) '$(API)' '$(QUERY)' | sed 's/^v//' | tr -d '\n'); \
-	if [ $$? -ne 0 ]; then \
-		exit 1; \
-	fi; \
-	if [ "$${version}" == "null" -o "$${version}" == "" ]; then \
-		echo "ERROR: failed to obtain current version for $(VENDOR)/$(PACKAGE_REPO_NAME)"; \
-		exit 1; \
-	else \
-		echo "$${version}" | tee VERSION; \
-	fi
+VERSION: $(PACKAGE_VERSION_TARGET)
 
 LICENSE:
 	@github-repo-metadata $(VENDOR) $(PACKAGE_REPO_NAME) "license" .license.spdx_id | tr '[:lower:]' '[:upper:]' | tee LICENSE
@@ -161,7 +161,7 @@ RELEASE: VERSION LICENSE DESCRIPTION
 
 init: VERSION LICENSE DESCRIPTION RELEASE
 
-update: CURRENT_VERSION RELEASE
+update: $(PACKAGE_VERSION_TARGET) RELEASE
 
 sleep: RATE_LIMIT=0
 sleep:
@@ -198,6 +198,27 @@ CURRENT_VERSION:
 			echo "$${current_version}" > VERSION; \
 		fi \
 	fi
+
+PINNED_VERSION: API=releases?per_page=100
+PINNED_VERSION: QUERY=.[].tag_name
+PINNED_VERSION: $(LOCAL_BIN)/vert
+	@local_version=$$(cat VERSION || echo 0); \
+	current_version=$$(env PATH='$(PATH)' vert -s '$(PACKAGE_VERSION_PIN)' \
+	  $$(env PATH='$(PATH)' github-repo-metadata $(VENDOR) $(PACKAGE_REPO_NAME) '$(API)' '$(QUERY)') | tail -1); \
+	if [ $$? -ne 0 ]; then \
+		exit 1; \
+	elif [ "$${current_version}" == "null" -o -z "$${current_version}" ]; then \
+		echo "ERROR: failed to obtain current version for $(VENDOR)/$(PACKAGE_REPO_NAME) (got: $${current_version})"; \
+		exit 1; \
+	elif [ "$${local_version}" != "$${current_version}" ]; then \
+		if [ $$(semver "$${current_version}" "$${local_version}" ) != "1" ]; then \
+			echo "NOT \"Upgrading\" $(PACKAGE_NAME) from $${local_version} to OLDER $${current_version}"; \
+		else \
+		 	echo "Upgrading $(PACKAGE_NAME) from $${local_version} to $${current_version}"; \
+			echo "$${current_version}" > VERSION; \
+		fi \
+	fi
+
 
 info:
 	@printf "%-20s %s\n" "Vendor:" "$(VENDOR)"
