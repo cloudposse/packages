@@ -188,14 +188,16 @@ CURRENT_VERSION:
 	if [ $$? -ne 0 ]; then \
 		exit 1; \
 	elif [ "$${current_version}" == "null" -o -z "$${current_version}" ]; then \
-		echo "ERROR: failed to obtain current version for $(VENDOR)/$(PACKAGE_REPO_NAME) (got: $${current_version})"; \
+		echo "ERROR: failed to obtain current version for $(VENDOR)/$(PACKAGE_REPO_NAME) (got: $${current_version})" >&2; \
 		exit 1; \
 	elif [ "$${local_version}" != "$${current_version}" ]; then \
 		if [ $$(semver "$${current_version}" "$${local_version}" ) != "1" ]; then \
-			echo "NOT \"Upgrading\" $(PACKAGE_NAME) from $${local_version} to OLDER $${current_version}"; \
-		else \
+			echo "NOT \"Upgrading\" $(PACKAGE_NAME) from $${local_version} to OLDER $${current_version}" >&2; \
+		elif [ "$${AUTO_UPDATE_ENABLED:-true}" == "true" ]; then \
 		 	echo "Upgrading $(PACKAGE_NAME) from $${local_version} to $${current_version}"; \
 			echo "$${current_version}" > VERSION; \
+		else \
+			echo "NOT \"Upgrading\" $(PACKAGE_NAME) from $${local_version} to $${current_version} because auto-update is disabled" >&2; \
 		fi \
 	fi
 
@@ -208,14 +210,16 @@ PINNED_VERSION: $(LOCAL_BIN)/vert
 	if [ $$? -ne 0 ]; then \
 		exit 1; \
 	elif [ "$${current_version}" == "null" -o -z "$${current_version}" ]; then \
-		echo "ERROR: failed to obtain current version for $(VENDOR)/$(PACKAGE_REPO_NAME) (got: $${current_version})"; \
+		echo "ERROR: failed to obtain version matching '$(PACKAGE_VERSION_PIN)' for $(VENDOR)/$(PACKAGE_REPO_NAME) (got: $${current_version})" >&2; \
 		exit 1; \
 	elif [ "$${local_version}" != "$${current_version}" ]; then \
 		if [ $$(semver "$${current_version}" "$${local_version}" ) != "1" ]; then \
-			echo "NOT \"Upgrading\" $(PACKAGE_NAME) from $${local_version} to OLDER $${current_version}"; \
-		else \
+			echo "NOT \"Upgrading\" $(PACKAGE_NAME) from $${local_version} to OLDER $${current_version}" >&2; \
+		elif [ "$${AUTO_UPDATE_ENABLED:-true}" == "true" ]; then \
 		 	echo "Upgrading $(PACKAGE_NAME) from $${local_version} to $${current_version}"; \
 			echo "$${current_version}" > VERSION; \
+		else \
+			echo "NOT \"Upgrading\" $(PACKAGE_NAME) from $${local_version} to $${current_version} because auto-update is disabled" >&2; \
 		fi \
 	fi
 
