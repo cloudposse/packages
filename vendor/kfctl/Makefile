@@ -1,5 +1,5 @@
 export VENDOR ?= kubeflow
-export PACKAGE_REPO_NAME ?= kubeflow
+export PACKAGE_REPO_NAME ?= kfctl
 export APK_BUILD_TEMPLATE ?= APKBUILD.github-binary
 export APKBUILD_DEPENDS += libc6-compat
 
