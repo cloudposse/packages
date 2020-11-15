@@ -140,7 +140,9 @@ $(LOCAL_BIN)/vert:
 DESCRIPTION:
 	@github-repo-metadata $(VENDOR) $(PACKAGE_REPO_NAME) "index" .description | tee DESCRIPTION
 
-VERSION: $(PACKAGE_VERSION_TARGET)
+# In order to support static configuration of version, the VERSION file should be
+# considered up-to-date unless explicitly updated via the "update" target
+# VERSION:
 
 LICENSE:
 	@github-repo-metadata $(VENDOR) $(PACKAGE_REPO_NAME) "license" .license.spdx_id | tr '[:lower:]' '[:upper:]' | tee LICENSE
@@ -159,9 +161,13 @@ RELEASE: VERSION LICENSE DESCRIPTION
 		fi; \
 	fi
 
-init: VERSION LICENSE DESCRIPTION RELEASE
+init: AUTO_UPDATE_ENABLED=true
+init: $(PACKAGE_VERSION_TARGET) LICENSE DESCRIPTION RELEASE
 
 update: $(PACKAGE_VERSION_TARGET) RELEASE
+
+force-update: AUTO_UPDATE_ENABLED=true
+force-update: $(PACKAGE_VERSION_TARGET) RELEASE
 
 sleep: RATE_LIMIT=0
 sleep:
@@ -177,7 +183,7 @@ auto-update:
 	fi
 
 # The only way to tell if VERSION is up to date is to query the source via the internet
-.PHONY: CURRENT_VERSION
+.PHONY: CURRENT_VERSION PINNED_VERSION
 
 # Update the VERSION file only if it would change, to avoid triggering unnecessary builds
 CURRENT_VERSION: API=releases/latest
