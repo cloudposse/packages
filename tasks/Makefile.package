@@ -147,7 +147,7 @@ default: info
 # Only works if current working directory is under vendor/
 $(LOCAL_BIN)/vert: INSTALL_PATH = $(LOCAL_BIN)
 $(LOCAL_BIN)/vert:
-	$(MAKE) -C ../vert download/binary
+	$(MAKE) -C ../vert install
 
 DESCRIPTION:
 	@github-repo-metadata $(VENDOR) $(PACKAGE_REPO_NAME) "index" .description | tee DESCRIPTION
