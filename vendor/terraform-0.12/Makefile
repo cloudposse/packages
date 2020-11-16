@@ -26,4 +26,5 @@ install:
 	chmod +x $(INSTALL_PATH)/$(PACKAGE_EXE)
 
 test:
-	$(PACKAGE_EXE) version | grep $(MAJOR_VERSION)
+	pinned-package-sanity-check "$(PACKAGE_VERSION)" "$(MAJOR_VERSION)"
+	$(PACKAGE_EXE) version | grep $(PACKAGE_VERSION)

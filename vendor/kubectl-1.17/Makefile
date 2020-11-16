@@ -20,4 +20,5 @@ install:
 	$(call download_binary)
 
 test:
-	$(PACKAGE_EXE) version --client | grep $(MAJOR_VERSION)
+	pinned-package-sanity-check "$(PACKAGE_VERSION)" "$(MAJOR_VERSION)"
+	$(PACKAGE_EXE) version --client | grep $(PACKAGE_VERSION)

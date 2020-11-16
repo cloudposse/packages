@@ -23,6 +23,7 @@ install:
 	cd $(INSTALL_PATH) && $(CURL) -o - $(DOWNLOAD_URL) | tar --wildcards --strip-components=1 -zvx $(addprefix teleport/,$(PACKAGE_EXE))
 
 test:
+	pinned-package-sanity-check "$(PACKAGE_VERSION)" "$(MAJOR_VERSION)"
 	teleport version | grep $(PACKAGE_VERSION)
 	tsh version | grep $(PACKAGE_VERSION)
 	tctl version | grep $(PACKAGE_VERSION)

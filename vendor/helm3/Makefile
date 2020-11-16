@@ -24,7 +24,8 @@ install:
 	chmod +x $(INSTALL_PATH)/$(PACKAGE_NAME)
 
 test:
-	$(PACKAGE_NAME) version | grep v$(MAJOR_VERSION)\.
+	pinned-package-sanity-check "$(PACKAGE_VERSION)" "$(MAJOR_VERSION)"
+	$(PACKAGE_NAME) version | grep v$(PACKAGE_VERSION)
 
 package/prepare::
 	mv src/$(OS)-$(ARCH)/helm src/helm3
