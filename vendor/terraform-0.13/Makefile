@@ -5,6 +5,7 @@ export PACKAGE_EXE = terraform
 export MASTER_PACKAGE_NAME = terraform
 export MAJOR_VERSION = 0.13
 export PACKAGE_NAME = $(MASTER_PACKAGE_NAME)-$(MAJOR_VERSION)
+export PACKAGE_VERSION_PIN = $(MAJOR_VERSION).x
 
 include ../../tasks/Makefile.package
 include ../../tasks/Makefile.apk
@@ -13,7 +14,6 @@ include ../../tasks/Makefile.deb
 # NOTE: This build uses a custom build template ./APKBUILD
 export APK_BUILD_TEMPLATE ?= APKBUILD.github-binary
 export DOWNLOAD_URL ?= https://releases.hashicorp.com/terraform/$(PACKAGE_VERSION)/terraform_$(PACKAGE_VERSION)_$(OS)_$(ARCH).zip
-export AUTO_UPDATE_ENABLED = false
 export APKBUILD_DEPENDS += dpkg
 export APKBUILD_INSTALL_SCRIPTS = $(PACKAGE_NAME).post-install $(PACKAGE_NAME).post-deinstall
 export INSTALL_DIR = /usr/share/${MASTER_PACKAGE_NAME}/${MAJOR_VERSION}/bin
@@ -26,4 +26,5 @@ install:
 	chmod +x $(INSTALL_PATH)/$(PACKAGE_EXE)
 
 test:
-	$(PACKAGE_EXE) version | grep $(MAJOR_VERSION)
+	pinned-package-sanity-check "$(PACKAGE_VERSION)" "$(MAJOR_VERSION)"
+	$(PACKAGE_EXE) version | grep $(PACKAGE_VERSION)

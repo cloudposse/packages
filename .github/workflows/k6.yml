@@ -51,6 +51,14 @@ jobs:
         run: |
           make -C vendor/k6 auto-update
           make -C vendor/k6 info/github
+
+      - name: Update readme
+        shell: bash
+        id: readme
+        if: steps.update.outputs.package_version != steps.current.outputs.package_version
+        env:
+          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+        run: |
           make init
           make readme/deps
           make readme
@@ -70,7 +78,7 @@ jobs:
             | Meta              | Details                                      |
             |:------------------|:---------------------------------------------|
             | **Package Name**  | `${{ steps.update.outputs.package_name }}`   |
-            | **Vendor**        | @${{ steps.update.outputs.vendor }}          |
+            | **Vendor**        | [${{ steps.update.outputs.vendor }}](${{ steps.update.outputs.package_homepage_url }}) |
             | **Version**       | ${{ steps.update.outputs.package_version }}  |
             | **License**       | ${{ steps.update.outputs.package_license }}  |
             | **Repo**          | ${{ steps.update.outputs.package_repo_url }} |
