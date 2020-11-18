@@ -1,8 +1,7 @@
 # Use this file to define individuals or teams that are responsible for code in a repository.
 # Read more: <https://help.github.com/articles/about-codeowners/>
 
-# All changes require approval from Cloud Posse Engineering
-*                   @cloudposse/engineering @mergify
+# To allow mergify to auto-merge, we must in general not assign code owners to files
 
 # Cloud Posse Admins must review all changes to the mergify configuration
 .github/mergify.yml @cloudposse/admins
@@ -14,7 +13,7 @@ deb/**              @cloudposse/admins
 tasks/*             @cloudposse/admins
 **/Makefile         @cloudposse/admins
 
-Of course, admins must approve changes to CODEOWNERS itself
+# Of course, admins must approve changes to CODEOWNERS itself
 .github/CODEOWNERS  @cloudposse/admins
 
 # Cloud Posse Engineering can update individual package Makefiles
