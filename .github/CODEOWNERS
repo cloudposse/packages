@@ -15,6 +15,7 @@ tasks/*             @cloudposse/admins
 
 # Of course, admins must approve changes to CODEOWNERS itself
 .github/CODEOWNERS  @cloudposse/admins
+.github/workflows/validate-codeowners.yml @cloudposse/admins
 
 # Cloud Posse Engineering can update individual package Makefiles
 vendor/*/Makefile   @cloudposse/engineering
