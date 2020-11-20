@@ -34,7 +34,7 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       package-enabled: ${{ steps.info.outputs.package_enabled }}
-      package-matrix:  ${{steps.info.outputs.package-matrix}}
+      package-matrix:  ${{steps.info.outputs.package_matrix}}
       apk-enabled: ${{ steps.info.outputs.package_enabled && steps.info.outputs.apk_package_enabled }}
     steps:
     - uses: actions/checkout@v2
@@ -45,8 +45,28 @@ jobs:
       env:
         GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
       run: |
+        echo setting ouputs
         make -C vendor/teleport-4.2 info/github
+        echo
+        echo outputs set
+        make -C vendor/teleport-4.2 info/github | sed 's/::set/  set/g'
 
+
+  debug:
+    needs: matrix
+    runs-on: ubuntu-latest
+    steps:
+    - name: Export package build matrix
+      shell: bash
+      id: info
+      env:
+        PE: ${{ needs.matrix.outputs.package-enabled }}
+        PM: ${{ needs.matrix.outputs.package-matrix }}
+        AE: ${{ needs.matrix.outputs.apk-enabled }}
+      run: |
+        echo PE is $PE
+        echo PM is $PM
+        echo AE is $AE
 
   # Build for alpine linux
   alpine:
