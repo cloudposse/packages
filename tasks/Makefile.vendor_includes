@@ -1,0 +1,6 @@
+# This makefile is the one that should be included in every vendor/*/Makefile
+
+include ../../tasks/Makefile.package
+include ../../tasks/Makefile.apk
+include ../../tasks/Makefile.deb
+include ../../tasks/Makefile.rpm

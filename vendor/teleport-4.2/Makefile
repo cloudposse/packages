@@ -6,14 +6,11 @@ export MAJOR_VERSION = 4.2
 export PACKAGE_NAME = $(MASTER_PACKAGE_NAME)-$(MAJOR_VERSION)
 export PACKAGE_VERSION_PIN = $(MAJOR_VERSION).x
 
-export DEB_PACKAGE_ENABLED = true
-export APK_PACKAGE_ENABLED = false
+export PACKAGE_TYPES_DISABLED = apk
 
-include ../../tasks/Makefile.package
-include ../../tasks/Makefile.apk
-include ../../tasks/Makefile.deb
+include ../../tasks/Makefile.vendor_includes
 
-export DOWNLOAD_URL ?= https://get.gravitational.com/teleport/$(PACKAGE_VERSION)/teleport-v$(PACKAGE_VERSION)-$(OS)-$(ARCH)-bin.tar.gz
+export DOWNLOAD_URL = https://get.gravitational.com/teleport/$(PACKAGE_VERSION)/teleport-v$(PACKAGE_VERSION)-$(OS)-$(ARCH)-bin.tar.gz
 # Starting with version 4.3, Teleport is not compatible with Alpine
 # so we disable updates
 # export AUTO_UPDATE_ENABLED = false

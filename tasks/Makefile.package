@@ -7,11 +7,14 @@ export CURL ?= curl --retry 3 --retry-delay 5 --fail -sSL
 export LOCAL_BIN := ../../bin
 export PATH := $(PATH):$(LOCAL_BIN)
 export SHELL := /bin/bash
+export .DEFAULT_GOAL := default
 
 export TMP ?= /tmp
 
 # Package details
 export PACKAGE_ENABLED ?= true
+export PACKAGE_PRERELEASE_ENABLED ?= false
+# Leave PACKAGE_VERSION_PIN unset to use latest version
 export PACKAGE_NAME ?= $(notdir $(CURDIR))
 export PACKAGE_REPO_NAME ?= $(PACKAGE_NAME)
 export PACKAGE_EXE ?= $(PACKAGE_NAME)
@@ -22,11 +25,12 @@ export PACKAGE_LICENSE ?= $(shell cat LICENSE 2>/dev/null)
 export PACKAGE_HOMEPAGE_URL ?= https://github.com/$(VENDOR)/$(PACKAGE)
 export PACKAGE_REPO_URL ?= https://github.com/$(VENDOR)/$(PACKAGE_REPO_NAME)
 
-ifeq ($(strip $(PACKAGE_VERSION_PIN)),)
-	export PACKAGE_VERSION_TARGET = CURRENT_VERSION
-else
-	export PACKAGE_VERSION_TARGET = PINNED_VERSION
-endif
+export PACKAGE_VERSION_TARGET = PINNED_VERSION
+#ifeq ($(strip $(PACKAGE_VERSION_PIN)),)
+#	export PACKAGE_VERSION_TARGET = CURRENT_VERSION
+#else
+#	export PACKAGE_VERSION_TARGET = PINNED_VERSION
+#endif
 
 export AUTO_UPDATE_ENABLED ?= true
 
@@ -143,6 +147,9 @@ download/gz:
 	$(call download_gz)
 
 default: info
+	@echo
+	@echo You probably want to specify a target
+	@exit 1
 
 # Only works if current working directory is under vendor/
 $(LOCAL_BIN)/vert: INSTALL_PATH = $(LOCAL_BIN)
@@ -198,47 +205,51 @@ auto-update:
 .PHONY: CURRENT_VERSION PINNED_VERSION
 
 # Update the VERSION file only if it would change, to avoid triggering unnecessary builds
-CURRENT_VERSION: API=releases/latest
-CURRENT_VERSION: QUERY=.tag_name
-CURRENT_VERSION:
-	@local_version=$$(cat VERSION || echo 0); \
-	current_version=$$(env PATH='$(PATH)' github-repo-metadata $(VENDOR) $(PACKAGE_REPO_NAME) '$(API)' '$(QUERY)' | sed 's/^v//'); \
-	if [ $$? -ne 0 ]; then \
-		exit 1; \
-	elif [ "$${current_version}" == "null" -o -z "$${current_version}" ]; then \
-		echo "ERROR: failed to obtain current version for $(VENDOR)/$(PACKAGE_REPO_NAME) (got: $${current_version})" >&2; \
-		exit 1; \
-	elif [ "$${local_version}" != "$${current_version}" ]; then \
-		if [ $$(semver "$${current_version}" "$${local_version}" ) != "1" ]; then \
-			echo "NOT \"Upgrading\" $(PACKAGE_NAME) from $${local_version} to OLDER $${current_version}" >&2; \
-		elif [ "$${AUTO_UPDATE_ENABLED:-true}" == "true" ]; then \
-		 	echo "Upgrading $(PACKAGE_NAME) from $${local_version} to $${current_version}"; \
-			echo "$${current_version}" > VERSION; \
-		else \
-			echo "NOT \"Upgrading\" $(PACKAGE_NAME) from $${local_version} to $${current_version} because auto-update is disabled" >&2; \
-		fi \
-	fi
+#CURRENT_VERSION: API=releases/latest
+#CURRENT_VERSION: QUERY=.tag_name
+#CURRENT_VERSION:
+#	@local_version=$$(cat VERSION || echo 0); \
+#	current_version=$$(env PATH='$(PATH)' github-repo-metadata $(VENDOR) $(PACKAGE_REPO_NAME) '$(API)' '$(QUERY)' | sed 's/^v//'); \
+#	if [ $$? -ne 0 ]; then \
+#		exit 1; \
+#	elif [ "$${current_version}" == "null" -o -z "$${current_version}" ]; then \
+#		echo "ERROR: failed to obtain current version for $(VENDOR)/$(PACKAGE_REPO_NAME) (got: $${current_version})" >&2; \
+#		exit 1; \
+#	elif [ "$${local_version}" != "$${current_version}" ]; then \
+#		if [ $$(semver "$${current_version}" "$${local_version}" ) != "1" ]; then \
+#			echo "NOT \"Upgrading\" $(PACKAGE_NAME) from $${local_version} to OLDER $${current_version}" >&2; \
+#		elif [ "$${AUTO_UPDATE_ENABLED:-true}" == "true" ]; then \
+#		 	echo "Upgrading $(PACKAGE_NAME) from $${local_version} to $${current_version}"; \
+#			echo "$${current_version}" > VERSION; \
+#		else \
+#			echo "NOT \"Upgrading\" $(PACKAGE_NAME) from $${local_version} to $${current_version} because auto-update is disabled" >&2; \
+#		fi \
+#	fi
 
 PINNED_VERSION: API=releases?per_page=100
-PINNED_VERSION: QUERY=.[].tag_name
+PINNED_VERSION: QUERY=.[] | select(.prerelease == false or .prerelease == $(PACKAGE_PRERELEASE_ENABLED)) | .tag_name
 PINNED_VERSION: $(LOCAL_BIN)/vert
-	@local_version=$$(cat VERSION || echo 0); \
-	current_version=$$(env PATH='$(PATH)' vert -s '$(PACKAGE_VERSION_PIN)' \
-	  $$(env PATH='$(PATH)' github-repo-metadata $(VENDOR) $(PACKAGE_REPO_NAME) '$(API)' '$(QUERY)') | tail -1); \
-	if [ $$? -ne 0 ]; then \
-		exit 1; \
-	elif [ "$${current_version}" == "null" -o -z "$${current_version}" ]; then \
-		echo "ERROR: failed to obtain version matching '$(PACKAGE_VERSION_PIN)' for $(VENDOR)/$(PACKAGE_REPO_NAME) (got: $${current_version})" >&2; \
-		exit 1; \
-	elif [ "$${local_version}" != "$${current_version}" ]; then \
-		if [ $$(semver "$${current_version}" "$${local_version}" ) != "1" ]; then \
-			echo "NOT \"Upgrading\" $(PACKAGE_NAME) from $${local_version} to OLDER $${current_version}" >&2; \
-		elif [ "$${AUTO_UPDATE_ENABLED:-true}" == "true" ]; then \
-		 	echo "Upgrading $(PACKAGE_NAME) from $${local_version} to $${current_version}"; \
-			echo "$${current_version}" > VERSION; \
-		else \
-			echo "NOT \"Upgrading\" $(PACKAGE_NAME) from $${local_version} to $${current_version} because auto-update is disabled" >&2; \
-		fi \
+	@if [ "$${AUTO_UPDATE_ENABLED:-true}" == "true" ]; then \
+		local_version=$$(cat VERSION || echo 0); version_pin='$(PACKAGE_VERSION_PIN)'; \
+		version_pin="$${version_pin:->=$$local_version}"; \
+		releases=($$(env PATH='$(PATH)' github-repo-metadata $(VENDOR) $(PACKAGE_REPO_NAME) '$(API)' '$(QUERY)')); \
+		current_version=$$(env PATH='$(PATH)' vert -s "$${version_pin}" "$${releases[@]}" | tail -1); \
+		if [ $$? -ne 0 ]; then \
+			exit 1; \
+		elif [ "$${current_version}" == "null" -o -z "$${current_version}" ]; then \
+			echo "ERROR: failed to obtain version matching '$${version_pin}' for $(VENDOR)/$(PACKAGE_REPO_NAME) (got: $${releases[@]:0:10}...)" >&2; \
+			exit 1; \
+		elif [ "$${local_version}" != "$${current_version}" ]; then \
+			if ! env PATH='$(PATH)' vert ">$${local_version}" "$${current_version}" >/dev/null; then \
+				echo "NOT \"Upgrading\" $(PACKAGE_NAME) from $${local_version} to OLDER $${current_version}" >&2; \
+				exit 1; \
+			else \
+				echo "Upgrading $(PACKAGE_NAME) from $${local_version} to $${current_version}"; \
+				echo "$${current_version}" > VERSION; \
+			fi; \
+		fi; \
+	else \
+		echo "NOT \"Upgrading\" $(PACKAGE_NAME) from $${local_version} to $${current_version} because auto-update is disabled" >&2; \
 	fi
 
 
@@ -264,8 +275,7 @@ info/github: FORMAT="::set-output name=%s::%s\n"
 info/github:
 	@printf $(FORMAT) "vendor" "$(VENDOR)"
 	@printf $(FORMAT) "package_name" "$(PACKAGE_NAME)"
-	@printf $(FORMAT) "apk_package_enabled" "$(APK_PACKAGE_ENABLED)"
-	@printf $(FORMAT) "deb_package_enabled" "$(DEB_PACKAGE_ENABLED)"
+	@$(LOCAL_BIN)/package-filter info/github "$(APK_PACKAGE_ENABLED)" "$(PACKAGE_TYPES_DISABLED)"
 	@printf $(FORMAT) "package_enabled" "$(PACKAGE_ENABLED)"
 	@printf $(FORMAT) "package_version" "$(PACKAGE_VERSION)"
 	@printf $(FORMAT) "package_license" "$(PACKAGE_LICENSE)"
@@ -276,3 +286,7 @@ info/github:
 	@printf $(FORMAT) "download_url" "$(DOWNLOAD_URL)"
 	@printf $(FORMAT) "install_path" "$(INSTALL_PATH)"
 
+
+_package-disabled:
+	@echo Creating packages has been disabled for $(PACKAGE_NAME)
+	@exit 0

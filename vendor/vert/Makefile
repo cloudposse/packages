@@ -1,8 +1,9 @@
-include ../../tasks/Makefile.package
-include ../../tasks/Makefile.apk
-include ../../tasks/Makefile.deb
+include ../../tasks/Makefile.vendor_includes
 
 # Package details
+# NOTE: vert is a tool used by our Make recipies and so it has to be able to be installed
+# while making other packages. We cannot rely on default values of any of the variables
+# because they may be set for a different package.
 export VENDOR = Masterminds
 export PACKAGE_NAME = vert
 export PACKAGE_EXE = vert

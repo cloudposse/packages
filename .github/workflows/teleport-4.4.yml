@@ -12,6 +12,8 @@ on:
     paths:
       - apk/**
       - deb/**
+      - rpm/**
+      - tasks/**
       - vendor/teleport-4.4/**
       - .github/workflows/teleport-4.4.yml
 
@@ -21,6 +23,8 @@ on:
     paths:
       - apk/**
       - deb/**
+      - rpm/**
+      - tasks/**
       - vendor/teleport-4.4/**
       - .github/workflows/teleport-4.4.yml
 
@@ -97,9 +101,27 @@ jobs:
             auto-update
             vendor/${{ steps.update.outputs.package_name }}
 
+  matrix:
+    if: github.event_name != 'schedule'
+    runs-on: ubuntu-latest
+    outputs:
+      package-enabled: ${{ steps.info.outputs.package_enabled }}
+      package-matrix:  ${{steps.info.outputs.package-matrix}}
+      apk-enabled: ${{ steps.info.outputs.package_enabled && steps.info.outputs.apk_package_enabled }}
+    steps:
+    - name: "Checkout source code at current commit"
+      uses: actions/checkout@v2
+
+    # Export the individual package's configuration as GitHub Action outputs
+    - name: "Export package config as outputs"
+      id: info
+      run: "make -C vendor/${{github.workflow}} info/github"
+
+
   # Build for alpine linux
   alpine:
-    if: github.event_name != 'schedule'
+    needs: matrix
+    if: github.event_name != 'schedule' && needs.matrix.outputs.apk-enabled
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -119,36 +141,26 @@ jobs:
       - name: "Checkout source code at current commit"
         uses: actions/checkout@v2
 
-      # Export the individual package's configuration as GitHub Action outputs
-      - name: "Export package config as outputs"
-        id: config
-        run: "make -C vendor/${{github.workflow}} info/github"
-
       # Export the apk keys as files from secrets
       - name: "Export keys"
-        if: steps.config.outputs.package_enabled == 'true' && steps.config.outputs.apk_package_enabled == 'true'
         run: "make -C .github/ export"
 
       # Build the alpine packages for the matrix version of alpine
       - name: "Build alpine packages"
-        if: steps.config.outputs.package_enabled == 'true' && steps.config.outputs.apk_package_enabled == 'true'
         run: "make -C vendor/${{github.workflow}} apk"
 
       # Verify the packages were built or error
       - name: "List packages"
-        if: steps.config.outputs.package_enabled == 'true' && steps.config.outputs.apk_package_enabled == 'true'
         run: 'find ${APK_PACKAGES_PATH} -type f -name \*.apk | xargs --no-run-if-empty ls -l | grep .'
 
       # Export the artifact filename including path
       - name: "Set output path to artifact"
-        if: steps.config.outputs.package_enabled == 'true' && steps.config.outputs.apk_package_enabled == 'true'
         id: artifact
         run: 'echo "::set-output name=path::$(find artifacts/ -type f -name \*.apk)"'
 
       # Determine which package organization we should use (e.g. dev or prod)
       - name: "Determine package repo"
         shell: bash
-        if: steps.config.outputs.package_enabled == 'true' && steps.config.outputs.apk_package_enabled == 'true'
         id: repo
         run: |
           if [[ ${GITHUB_REF} == 'refs/heads/master' ]]; then
@@ -161,7 +173,6 @@ jobs:
 
       # Publish the artifacts
       - name: "Push artifact to package repository"
-        if: steps.config.outputs.package_enabled == 'true' && steps.config.outputs.apk_package_enabled == 'true'
         uses: cloudsmith-io/action@v0.5.1
         with:
           api-key: ${{ secrets.CLOUDSMITH_API_KEY }}
@@ -175,49 +186,47 @@ jobs:
           file: '${{steps.artifact.outputs.path}}'          # Package filename (including path)
           no-wait-for-sync: 'true'                          # Skip the waiting for package synchronisation (i.e. upload only)
 
-  # Build for alpine linux
-  debian:
-    if: github.event_name != 'schedule'
+  # Build for fpm package manager
+  fpm:
+    needs: matrix
+    if: github.event_name != 'schedule' && needs.matrix.outputs.package-enabled
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        any-release:
-          - 'any-version'
+        package-type: ${{ fromJSON(needs.matrix.outputs.package-matrix) }}
+        exclude:
+        - package-type: 'apk'
+        include:
+        - package-type: deb
+          builder-version: stable-slim
+        - package-type: rpm
+          builder-version: centos8
 
     env:
-      DEB_PACKAGES_PATH: ${{github.workspace}}/artifacts/${{matrix.any-release}}
+      PACKAGES_PATH: ${{github.workspace}}/artifacts/${{matrix.package-type}}/any-version
 
-    container: cloudposse/packages-debbuild:stable-slim
+    container: cloudposse/packages-${{matrix.package-type}}build:${{matrix.builder-version}}
     steps:
       # Checkout the packages repo so we can build the packages as a monorepo
       - name: "Checkout source code at current commit"
         uses: actions/checkout@v2
 
-      # Export the individual package's configuration as GitHub Action outputs
-      - name: "Export package config as outputs"
-        id: config
-        run: "make -C vendor/${{github.workflow}} info/github"
-
       # Build the debian packages for the matrix version of debian
-      - name: "Build debian packages"
-        if: steps.config.outputs.package_enabled == 'true' && steps.config.outputs.deb_package_enabled == 'true'
-        run: "make -C vendor/${{github.workflow}} deb"
+      - name: "Build ${{matrix.package-type}} packages"
+        run: "make -C vendor/${{github.workflow}} ${{matrix.package-type}}"
 
       # Verify the packages were built or error
       - name: "List packages"
-        if: steps.config.outputs.package_enabled == 'true' && steps.config.outputs.deb_package_enabled == 'true'
-        run: 'find ${APK_PACKAGES_PATH} -type f -name \*.deb | xargs --no-run-if-empty ls -l | grep .'
+        run: 'find ${PACKAGES_PATH} -type f -name \*.${{matrix.package-type}} | xargs --no-run-if-empty ls -l | grep .'
 
       # Export the artifact filename including path
       - name: "Set output path to artifact"
-        if: steps.config.outputs.package_enabled == 'true' && steps.config.outputs.deb_package_enabled == 'true'
         id: artifact
-        run: 'echo "::set-output name=path::$(find artifacts/ -type f -name \*.deb)"'
+        run: 'echo "::set-output name=path::$(find ${PACKAGES_PATH} -type f -name \*.${{matrix.package-type}})"'
 
       # Determine which package organization we should use (e.g. dev or prod)
       - name: "Determine package repo"
         shell: bash
-        if: steps.config.outputs.package_enabled == 'true' && steps.config.outputs.deb_package_enabled == 'true'
         id: repo
         run: |
           if [[ ${GITHUB_REF} == 'refs/heads/master' ]]; then
@@ -230,12 +239,11 @@ jobs:
 
       # Publish the artifacts
       - name: "Push artifact to package repository"
-        if: steps.config.outputs.package_enabled == 'true' && steps.config.outputs.deb_package_enabled == 'true'
         uses: cloudsmith-io/action@v0.5.1
         with:
           api-key: ${{ secrets.CLOUDSMITH_API_KEY }}
           command: 'push'
-          format: 'deb'
+          format: '${{matrix.package-type}}'
           owner: '${{steps.repo.outputs.org}}'              # Your Cloudsmith account name or org name (namespace)
           repo: 'packages'                                  # Your Cloudsmith Repository name (slug)
           distro: 'any-distro'                              # Use "any-distro" since our package is compatible with more than more distribution

@@ -6,14 +6,12 @@ export MAJOR_VERSION = 5.0
 export PACKAGE_NAME = $(MASTER_PACKAGE_NAME)-$(MAJOR_VERSION)
 # the -0 at the end of the pin allows prerelease candidates
 export PACKAGE_VERSION_PIN = $(MAJOR_VERSION).x-0
+export PACKAGE_PRERELEASE_ENABLED = true
 
 # Starting with version 4.3, Teleport is not compatible with Alpine
-export APK_PACKAGE_ENABLED = false
-export DEB_PACKAGE_ENABLED = true
+export PACKAGE_TYPES_DISABLED = apk
 
-include ../../tasks/Makefile.package
-include ../../tasks/Makefile.apk
-include ../../tasks/Makefile.deb
+include ../../tasks/Makefile.vendor_includes
 
 export DOWNLOAD_URL ?= https://get.gravitational.com/teleport/$(PACKAGE_VERSION)/teleport-v$(PACKAGE_VERSION)-$(OS)-$(ARCH)-bin.tar.gz
 export PACKAGE_EXE = teleport tctl tsh

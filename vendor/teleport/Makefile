@@ -3,13 +3,9 @@ export MASTER_PACKAGE_NAME = teleport
 export PACKAGE_NAME = $(MASTER_PACKAGE_NAME)
 export MAJOR_VERSION = latest
 
-export DEB_PACKAGE_ENABLED = true
-export APK_PACKAGE_ENABLED = false
+export PACKAGE_TYPES_DISABLED = apk
 
-
-include ../../tasks/Makefile.package
-include ../../tasks/Makefile.apk
-include ../../tasks/Makefile.deb
+include ../../tasks/Makefile.vendor_includes
 
 # Package details
 export VENDOR ?= gravitational

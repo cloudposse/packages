@@ -22,7 +22,7 @@ $(PACKAGER_PUBKEY_INSTALLED): $(PACKAGER_PUBKEY)
 
 endif
 
-export APK_PACKAGE_ENABLED ?= true
+export APK_PACKAGE_ENABLED := $(shell $(LOCAL_BIN)/package-filter apk-enabled "$(APK_PACKAGE_ENABLED)" "$(PACKAGE_TYPES_DISABLED)")
 export APK_TEMPLATE_PATH ?= ../../apk/templates/
 export APK_BUILD_TEMPLATE ?= APKBUILD.github-binary
 export APK_PACKAGES_PATH ?= /tmp/packages

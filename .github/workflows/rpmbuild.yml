@@ -1,0 +1,34 @@
+name: "rpmbuild"
+on:
+  push:
+    branches:
+    - master
+    paths:
+    - rpm/**
+
+  pull_request:
+    types: [opened, synchronize, reopened]
+    paths:
+    - rpm/**
+
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        centos:
+        - 'centos8'
+    steps:
+    - name: "Checkout source code at current commit"
+      uses: actions/checkout@v2
+    - name: "Build and push docker image to DockerHub"
+      uses: docker/build-push-action@v1
+      with:
+        username: ${{ secrets.DOCKERHUB_USERNAME }}
+        password: ${{ secrets.DOCKERHUB_PASSWORD }}
+        repository: ${{ github.repository }}-rpmbuild
+        dockerfile: rpm/Dockerfile.${{ matrix.centos }}
+        tags: ${{ matrix.centos }},latest
+        registry: registry-1.docker.io
+        tag_with_ref: true
+        tag_with_sha: true

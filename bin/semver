@@ -2,7 +2,8 @@
 
 ###
 # semantic version comparition using semver specification http://semver.org/
-# This bash script compares pre-releases alphabetically as well
+# This bash script compares pre-releases alphabetically as well,
+# but FAILS when the alpha is itself versioned (says 1.0.0-rc.3 comes before 1.0.0-beta.5)
 #
 # Copied from https://gist.githubusercontent.com/Ariel-Rodriguez/9e3c2163f4644d7a389759b224bfe7f3/raw/816453441da56058b73af5812db6217fb71897d2/semver.sh
 #

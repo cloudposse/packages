@@ -1,5 +1,6 @@
-DEB_PACKAGES_PATH ?= .
-DEB_PACKAGE ?= $(DEB_PACKAGES_PATH)/$(PACKAGE_NAME)_$(PACKAGE_VERSION)_$(ARCH).deb 
+PACKAGES_PATH ?= .
+DEB_PACKAGES_PATH ?= $(PACKAGES_PATH)
+DEB_PACKAGE ?= $(DEB_PACKAGES_PATH)/$(PACKAGE_NAME)_$(PACKAGE_VERSION)_$(ARCH).deb
 DEB_MAINTAINER ?= Cloud Posse <packages@cloudposse.com>
 DEB_PACKAGE_ENABLED ?= true
 DEB_FPM_EXTRA_ARGS ?=
@@ -29,22 +30,16 @@ $(DEB_PACKAGE): $(DEB_TMP_DIR)/$(PACKAGE_NAME)
 	$(MAKE) test
 	apt-get remove -y $(PACKAGE_NAME)
 
+.PHONY: deb deb_make_package deb_skip_package
 
-ifneq ($(PACKAGE_ENABLED),true)
-deb:
-	@echo All packages disabled for $(PACKAGE_NAME) 
-	@exit 0
-else ifeq ($(DEB_PACKAGE_ENABLED),true)
-.PHONY : deb
-deb: $(DEB_PACKAGE)
+deb-make-package: $(DEB_PACKAGE)
 	@echo "Wrote $(DEB_PACKAGE)"
+
+deb-skip-package:
+	@echo Debian packages disabled for $(PACKAGE_NAME)
+
+deb: $(shell $(LOCAL_BIN)/package-filter make-target deb $(PACKAGE_ENABLED) "$(PACKAGE_TYPES_DISABLED)")
 	@exit 0
-else
-.PHONY : deb
-deb:
-	@echo Debian packages disabled for $(PACKAGE_NAME) 
-	@exit 0
-endif
 
 clean::
 	rm -f $(DEB_PACKAGE)

@@ -93,30 +93,33 @@ docker/build/apk/shell:
 		-w /packages \
 		-v $$(pwd):/packages cloudposse/apkbuild:$(ALPINE_VERSION)
 
-## Build debian packages for testing
-docker/build/deb: DEBIAN_VERSION=stable-slim
-docker/build/deb:
-	docker build -t cloudposse/fpm:$(DEBIAN_VERSION) -f deb/Dockerfile.$(DEBIAN_VERSION) .
+docker/build/deb/test docker/build/deb/shell: BUILDER_VERSION=stable-slim
+
+docker/build/rpm/test docker/build/rpm/shell: BUILDER_VERSION=centos8
+
+## Build package as a test
+docker/build/%/test:
+	docker build -t cloudposse/packages-$*build:$(BUILDER_VERSION) -f $*/Dockerfile.$(BUILDER_VERSION) .
 	docker run \
-		--name deb \
+		--name $* \
 		--rm \
 		-e TMP=/packages/tmp \
-		-e DEB_PACKAGES_PATH=/packages/artifacts/$(DEBIAN_VERSION) \
-		-v $$(pwd):/packages cloudposse/fpm:$(DEBIAN_VERSION) \
-		sh -c "make -C /packages/vendor/github-commenter deb"
+		-e PACKAGES_PATH=/packages/artifacts/$*/$(BUILDER_VERSION) \
+		-v $$(pwd):/packages cloudposse/packages-$*build:$(BUILDER_VERSION) \
+		sh -c "make -C /packages/vendor/github-commenter $*"
 
-## Build debian packages for testing
-docker/build/deb/shell: DEBIAN_VERSION=stable-slim
-docker/build/deb/shell:
-	docker build -t cloudposse/fpm:$(DEBIAN_VERSION) -f deb/Dockerfile.$(DEBIAN_VERSION) .
+## Build package builder shell
+docker/build/%/shell:
+	docker build -t cloudposse/packages-$*build:$(BUILDER_VERSION) -f $*/Dockerfile.$(BUILDER_VERSION) .
 	docker run \
 		-it \
-		--name deb \
+		--name $* \
 		--rm \
 		-e TMP=/packages/tmp \
-		-e DEB_PACKAGES_PATH=/packages/artifacts/$(DEBIAN_VERSION) \
-		-v $$(pwd):/packages cloudposse/fpm:$(DEBIAN_VERSION) \
+		-e PACKAGES_PATH=/packages/artifacts/$*/$(BUILDER_VERSION) \
+		-v $$(pwd):/packages cloudposse/packages-$*build:$(BUILDER_VERSION) \
 		bash
+
 
 
 help/vendor:
