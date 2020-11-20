@@ -71,7 +71,7 @@ jobs:
   # Build for alpine linux
   alpine:
     needs: matrix
-    if: github.event_name != 'schedule' && needs.matrix.outputs.apk-enabled
+    if: needs.matrix.outputs.apk-enabled
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -91,7 +91,13 @@ jobs:
       - name: "Checkout source code at current commit"
         uses: actions/checkout@v2
 
-      # Export the apk keys as files from secrets
+      - name: debug1
+        run: "echo needs.matrix.outputs.apk-enabled is '${{needs.matrix.outputs.apk-enabled}}'"
+      - name: debug2
+        if: needs.matrix.outputs.apk-enabled
+        run: "echo needs.matrix.outputs.apk-enabled satisfied 'if'"
+
+    # Export the apk keys as files from secrets
       - name: "Export keys"
         run: "make -C .github/ export"
 
@@ -153,7 +159,7 @@ jobs:
           builder-version: centos8
 
     env:
-      PACKAGES_PATH: ${{github.workspace}}/artifacts/${{matrix.package-type}}/any-version
+      PACKAGES_PATH: /github/workspace/artifacts/${{matrix.package-type}}/any-version
 
     container: cloudposse/packages-${{matrix.package-type}}build:${{matrix.builder-version}}
     steps:
