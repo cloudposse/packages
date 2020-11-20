@@ -201,7 +201,13 @@ jobs:
       # Build the debian packages for the matrix version of debian
       - name: "Build debian packages"
         if: steps.config.outputs.package_enabled == 'true' && steps.config.outputs.deb_package_enabled == 'true'
-        run: "make -C vendor/${{github.workflow}} deb"
+        run: |
+          echo PWD $(pwd)
+          echo PWD -P $(pwd -P)
+          echo DEB_PACKAGES_PATH $DEB_PACKAGES_PATH
+          ls -l /home/runner/ /home/runner/work __w || true
+          env
+          make -C vendor/${{github.workflow}} deb
 
       # Verify the packages were built or error
       - name: "List packages"
