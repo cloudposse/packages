@@ -132,7 +132,12 @@ jobs:
   # Build packages with fpm package manager
   package:
     needs: matrix
-    if: github.event_name != 'schedule' && needs.matrix.outputs.package-enabled != 'false'
+    # Should not be needed, but without these conditions, this job would fail with an error if the matrix is []
+    # and would run with package-type empty if matrix is ["apk"]
+    if: >
+      github.event_name != 'schedule' && needs.matrix.outputs.package-enabled != 'false'
+      && needs.matrix.outputs.package-matrix != '[]' && needs.matrix.outputs.package-matrix != '["apk"]'
+
     runs-on: ubuntu-latest
     strategy:
       matrix:

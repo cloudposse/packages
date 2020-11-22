@@ -27,11 +27,15 @@ workflows/auto-update-packages.yml: generate-auto-update-template
 	@echo Generating auto-update workflow file
 	./generate-auto-update-template $(sort $(notdir $(realpath $(wildcard ../vendor/*/)))) > $@
 
-.PHONY : workflows workflows/%.yml workflows/auto-update-packages.yml auto-update-workflow
+.PHONY : workflows workflows/%.yml workflows/auto-update-packages.yml auto-update-workflow builder-workflows
+
 # This crazy expression gets a list of all the package folders under the vendor folder
 # Then it turns it into a file like workflows/terraform.yml and we use it as a build dep
-workflows: $(addsuffix .yml,$(addprefix workflows/, $(sort $(notdir $(realpath $(wildcard ../vendor/*/)))))) workflows/auto-update-packages.yml
-	@exit 0
+builder-workflows: $(addsuffix .yml,$(addprefix workflows/, $(sort $(notdir $(realpath $(wildcard ../vendor/*/))))))
+	@:
 
 auto-update-workflow: workflows/auto-update-packages.yml
-	@exit 0
+	@:
+
+workflows: builder-workflows auto-update-workflow
+	@:
