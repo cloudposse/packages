@@ -129,7 +129,7 @@ jobs:
           file: '${{steps.artifact.outputs.path}}'          # Package filename (including path)
           no-wait-for-sync: 'true'                          # Skip the waiting for package synchronisation (i.e. upload only)
 
-  # Build for fpm package manager
+  # Build packages with fpm package manager
   package:
     needs: matrix
     if: github.event_name != 'schedule' && needs.matrix.outputs.package-enabled != 'false'
@@ -139,12 +139,6 @@ jobs:
         package-type: ${{ fromJSON(needs.matrix.outputs.package-matrix) }}
         exclude:
         - package-type: 'apk'
-        include:
-        - package-type: deb
-          builder-version: stable-slim
-        - package-type: rpm
-          builder-version: centos8
-
     env:
       # We are in a bit of a bind here because of how GitHub actions work as of 2020-11-19
       # Although the "workspace" is mounted to the container, it is not mounted
@@ -159,7 +153,8 @@ jobs:
       PACKAGES_PATH: ${{github.workspace}}/artifacts/${{matrix.package-type}}/any-version
       PACKAGE_RELPATH: artifacts/${{matrix.package-type}}/any-version
 
-    container: cloudposse/packages-${{matrix.package-type}}build:${{matrix.builder-version}}
+    # Unfortunately, there is no reasonable way to configure the docker image tag based on the package-type
+    container: cloudposse/packages-${{matrix.package-type}}build:latest
     steps:
       # Checkout the packages repo so we can build the packages as a monorepo
       - name: "Checkout source code at current commit"

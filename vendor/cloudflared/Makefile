@@ -16,7 +16,7 @@ export PACKAGE_TYPES_DISABLED = deb rpm
 # Releases: https://developers.cloudflare.com/argo-tunnel/downloads/
 ## Install cloudflared which offers an easy way to expose web servers securely to the internet(Argo Tunnel)
 install:
-	$(call download_tarball)
+	$(call download_binary)
 
 test:
 	$(PACKAGE_EXE) --version | grep -F $(PACKAGE_VERSION)
