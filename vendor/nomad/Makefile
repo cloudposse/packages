@@ -1,8 +1,7 @@
 ## Package - nomad
+# Hashicorp publishes packages for nomad: https://learn.hashicorp.com/tutorials/nomad/get-started-install
 export PACKAGE_ENABLED = false
-include ../../tasks/Makefile.package
-include ../../tasks/Makefile.apk
-include ../../tasks/Makefile.deb
+include ../../tasks/Makefile.vendor_includes
 
 export VENDOR ?= hashicorp
 export PACKAGE_NAME ?= nomad

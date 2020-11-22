@@ -5,11 +5,8 @@ export PACKAGE_EXE = terraform
 export MASTER_PACKAGE_NAME = terraform
 export MAJOR_VERSION = 0.11
 export PACKAGE_NAME = $(MASTER_PACKAGE_NAME)-$(MAJOR_VERSION)
-export PACKAGE_VERSION_PIN = $(MAJOR_VERSION).x
 
-include ../../tasks/Makefile.package
-include ../../tasks/Makefile.apk
-include ../../tasks/Makefile.deb
+include ../../tasks/Makefile.vendor_includes
 
 # NOTE: This build uses a custom build template ./APKBUILD
 export APK_BUILD_TEMPLATE ?= APKBUILD.github-binary
@@ -27,4 +24,4 @@ install:
 
 test:
 	pinned-package-sanity-check "$(PACKAGE_VERSION)" "$(MAJOR_VERSION)"
-	$(PACKAGE_EXE) version | grep $(PACKAGE_VERSION)
+	$(PACKAGE_EXE) version | grep -F $(PACKAGE_VERSION)

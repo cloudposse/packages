@@ -1,7 +1,5 @@
-## jq
-include ../../tasks/Makefile.package
-include ../../tasks/Makefile.apk
-include ../../tasks/Makefile.deb
+## jp
+include ../../tasks/Makefile.vendor_includes
 
 export VENDOR = jmespath
 export PACKAGE_NAME = jp

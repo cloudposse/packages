@@ -21,9 +21,9 @@ install:
 	cd $(INSTALL_PATH) && $(CURL) -o - $(DOWNLOAD_URL) | tar --wildcards --strip-components=1 -zvx $(addprefix teleport/,$(PACKAGE_EXE))
 
 test:
-	teleport version | grep $(PACKAGE_VERSION)
-	tsh version | grep $(PACKAGE_VERSION)
-	tctl version | grep $(PACKAGE_VERSION)
+	teleport version | grep -F $(PACKAGE_VERSION)
+	tsh version | grep -F $(PACKAGE_VERSION)
+	tctl version | grep -F $(PACKAGE_VERSION)
 
 package/prepare::
 	@echo "make package/prepare ($(PACKAGE_EXE))"

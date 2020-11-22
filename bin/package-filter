@@ -30,11 +30,14 @@ function make_target() {
   local package_type=${1,,}
   local package_enabled=${2,,}
   local package_types_disabled=${3,,}
+  local legacy_package_enabled=${4,,}
 
   if [[ ! " ${SUPPORTED_PACKAGE_TYPES[@]} " =~ " $package_type " ]]; then
     echo Unsupported package type \"$package_type\" >&2
     exit 1
   fi
+
+  [[ $legacy_package_enabled == "false" ]] && package_types_disabled+=" $package_type"
 
   if [[ $package_enabled == "false" ]]; then
     echo $SKIP_TARGET

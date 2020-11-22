@@ -1,12 +1,11 @@
-include ../../tasks/Makefile.package
-include ../../tasks/Makefile.apk
-include ../../tasks/Makefile.deb
-
 # Package details
-export VENDOR ?= k14s
+export VENDOR ?= vmware-tanzu
+export PACKAGE_REPO_NAME = carvel-vendir
+export PACKAGE_NAME = vendir
 export DOWNLOAD_URL ?= $(PACKAGE_REPO_URL)/releases/download/v$(PACKAGE_VERSION)/$(PACKAGE_NAME)-$(OS)-$(ARCH)
 export APK_BUILD_TEMPLATE ?= APKBUILD.github-binary
-export PACKAGE_DESCRIPTION = Easy way to vendor portions of git repos, github releases, etc. declaratively
+
+include ../../tasks/Makefile.vendor_includes
 
 install:
 	$(call download_binary)

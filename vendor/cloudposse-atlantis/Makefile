@@ -1,9 +1,7 @@
 export MASTER_PACKAGE_NAME = atlantis
 export PACKAGE_REPO_NAME = atlantis
 
-include ../../tasks/Makefile.package
-include ../../tasks/Makefile.apk
-include ../../tasks/Makefile.deb
+include ../../tasks/Makefile.vendor_includes
 
 # Package details
 export VENDOR ?= cloudposse
@@ -18,4 +16,4 @@ install:
 	$(call download_binary)
 
 test:
-	$(PACKAGE_EXE) version | grep $(PACKAGE_VERSION)
+	$(PACKAGE_EXE) version | grep -F $(PACKAGE_VERSION)

@@ -1,15 +1,4 @@
 # Package details
-export OS ?= $(shell uname -s | tr '[:upper:]' '[:lower:'])
-export DISTR ?= $(shell grep ^ID= /etc/os-release 2>/dev/null | cut -d= -f2 | tr '[:upper:]' '[:lower:'])
-
-ifeq ($(OS),darwin)
-	OS=macos
-endif
-
-ifeq ($(DISTR),alpine)
-	OS=alpine
-endif
-
 export VENDOR ?= codefresh-io
 export PACKAGE_REPO_NAME ?= cli
 export APK_BUILD_TEMPLATE ?= APKBUILD.github-binary
@@ -21,9 +10,15 @@ export CFCONFIG ?= ./src/.cfconfig
 
 export PACKAGE_EXE = codefresh
 
-include ../../tasks/Makefile.package
-include ../../tasks/Makefile.apk
-include ../../tasks/Makefile.deb
+include ../../tasks/Makefile.vendor_includes
+
+ifeq ($(OS),darwin)
+	OS=macos
+endif
+
+ifeq ($(DIST_DISTRIBUTION),alpine)
+	OS=alpine
+endif
 
 install:
 	$(call download_tarball)

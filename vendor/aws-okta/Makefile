@@ -1,7 +1,3 @@
-include ../../tasks/Makefile.package
-include ../../tasks/Makefile.apk
-include ../../tasks/Makefile.deb
-
 # Package details
 export VENDOR ?= segmentio
 export DOWNLOAD_URL ?= $(PACKAGE_REPO_URL)/releases/download/v$(PACKAGE_VERSION)/$(PACKAGE_NAME)-v$(PACKAGE_VERSION)-$(OS)-$(ARCH)
@@ -11,6 +7,11 @@ export PACKAGE_DESCRIPTION = aws-okta allows users to authenticate with AWS usin
 
 # Disable automatic updates until this is fixed: https://github.com/segmentio/aws-okta/issues/246
 export AUTO_UPDATE_ENABLED = false
+
+# project is abandoned https://github.com/segmentio/aws-okta/issues/278
+export PACKAGE_ENABLED = false
+
+include ../../tasks/Makefile.vendor_includes
 
 install:
 	$(call download_binary)

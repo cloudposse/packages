@@ -4,8 +4,8 @@ export PACKAGE_REPO_NAME = teleport
 export MASTER_PACKAGE_NAME = teleport
 export MAJOR_VERSION = 5.0
 export PACKAGE_NAME = $(MASTER_PACKAGE_NAME)-$(MAJOR_VERSION)
-# the -0 at the end of the pin allows prerelease candidates
-export PACKAGE_VERSION_PIN = $(MAJOR_VERSION).x-0
+
+# At this point (Nov 2020) 5.0 is only in prerelease.
 export PACKAGE_PRERELEASE_ENABLED = true
 
 # Starting with version 4.3, Teleport is not compatible with Alpine
@@ -22,9 +22,9 @@ install:
 
 test:
 	pinned-package-sanity-check "$(PACKAGE_VERSION)" "$(MAJOR_VERSION)"
-	teleport version | grep $(PACKAGE_VERSION)
-	tsh version | grep $(PACKAGE_VERSION)
-	tctl version | grep $(PACKAGE_VERSION)
+	teleport version | grep -F $(PACKAGE_VERSION)
+	tsh version | grep -F $(PACKAGE_VERSION)
+	tctl version | grep -F $(PACKAGE_VERSION)
 
 package/prepare::
 	@echo "make package/prepare ($(PACKAGE_EXE))"

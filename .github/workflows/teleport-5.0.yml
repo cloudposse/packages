@@ -92,7 +92,14 @@ jobs:
       # Path must be relative to workdir for Cloudsmith action to be able to find it
       - name: "Set output path to artifact"
         id: artifact
-        run: 'echo "::set-output name=path::$(find artifacts/${{matrix.alpine}} -type f -name \*.apk)"'
+        shell: bash
+        run: |
+          artifact=$(find artifacts/${{matrix.alpine}} -type f -name \*.apk)
+          echo "::set-output name=path::$artifact"
+          echo "set output path=$artifact"
+          echo creating '"pip"' cache directory for Cloudsmith
+          mkdir -p $HOME/.cache/pip && chmod -R 777 $HOME/.cache || echo Ignoring error creating '"pip"' cache directory
+
 
       # Determine which package organization we should use (e.g. dev or prod)
       - name: "Determine package repo"

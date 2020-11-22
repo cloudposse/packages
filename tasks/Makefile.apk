@@ -66,21 +66,6 @@ apk/reset:
 	apk del buildtest || true
 	rm -rf $(APK_PACKAGE)
 
-.PHONY : apk
-ifneq ($(PACKAGE_ENABLED),true)
-apk:
-	@echo All packages disabled for $(PACKAGE_NAME).
-	@exit 0
-else ifeq ($(APK_PACKAGE_ENABLED),true)
-apk: $(PACKAGER_PRIVKEY) $(PACKAGER_PUBKEY_INSTALLED) $(APK_PACKAGE)
-	@echo Wrote $(APK_PACKAGE)
-	@exit 0
-else
-apk:
-	@echo $(PACKAGE_NAME) is disabled for alpine $(shell cat /etc/alpine-release 2>/dev/null).
-	@exit 0
-endif
-
 # Rebuild the `.apk` when it's older than the Makefile, VERSION, or RELEASE files
 $(APK_PACKAGE): Makefile VERSION RELEASE $(wildcard *.post-install) $(wildcard *.post-deinstall)
 	@echo "Building $@ with $(INSTALL_DIR) install directory"
@@ -92,3 +77,33 @@ package/prepare::
 
 clean::
 	rm -f $(APK_PACKAGE)
+
+.PHONY: apk apk_make_package apk_skip_package _apk_target _apk_settings/% apk/%
+
+# Legacy suppprt: set APK_PACKAGE_ENABLED = true
+apk-make-package: APK_PACKAGE_ENABLED = true
+apk-make-package: $(PACKAGER_PRIVKEY) $(PACKAGER_PUBKEY_INSTALLED) $(APK_PACKAGE)
+	@echo "Wrote $(APK_PACKAGE)"
+
+apk-skip-package:
+	@echo $(PACKAGE_NAME) is disabled for alpine $(shell cat /etc/alpine-release 2>/dev/null).
+
+# Pick which target to make (make, skip, disabled) based on settings
+# APK_PACKAGE_ENABLED is legacy support. If APK_PACKAGE_ENABLED == true
+# and PACKAGE_TYPES_DISABLED contains "apk" the packge will be disabled.
+_apk_target: $(shell $(LOCAL_BIN)/package-filter make-target apk $(PACKAGE_ENABLED) "$(PACKAGE_TYPES_DISABLED)" "$(APK_PACKAGE_ENABLED)")
+
+# use _apk_settings to set Alpine-specific settings, then _apk_target to find the right build target
+apk: _apk_settings/_apk_target
+	@exit 0
+
+# General rule to make any target with APK-specific settings
+apk/%: _apk_settings/%
+	@exit 0
+
+_apk_settings/%: DIST_ARCH_DETECTED = $(or $(PACKAGE_DIST_ARCH),$(ARCH))
+_apk_settings/%: DIST_ARCH = $(if $(subst x86_64,,$(DIST_ARCH_DETECTED)),$(DIST_ARCH_DETECTED),amd64)
+_apk_settings/%: DIST_PACKAGE_TYPE = apk
+_apk_settings/%: DIST_DISTRIBUTION = alpine
+_apk_settings/%: %
+	@exit 0

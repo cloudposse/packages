@@ -88,34 +88,39 @@ docker/build/apk/shell:
 		-e AWS_ACCESS_KEY_ID \
 		-e AWS_SESSION_TOKEN \
 		-e AWS_SECURITY_TOKEN \
+		-e TMP=/packages/tmp/apk \
 		-e APK_PACKAGES_PATH=/packages/artifacts/$(ALPINE_VERSION) \
 		--privileged \
 		-w /packages \
 		-v $$(pwd):/packages cloudposse/apkbuild:$(ALPINE_VERSION)
 
-docker/build/deb/test docker/build/deb/shell: BUILDER_VERSION=stable-slim
+# MATRIX BUILD
+docker/build/deb/shell docker/build/deb/test : BUILDER_VERSION=stable-slim
 
-docker/build/rpm/test docker/build/rpm/shell: BUILDER_VERSION=centos8
+docker/build/rpm/shell docker/build/rpm/test : BUILDER_VERSION=centos8
 
 ## Build package as a test
 docker/build/%/test:
 	docker build -t cloudposse/packages-$*build:$(BUILDER_VERSION) -f $*/Dockerfile.$(BUILDER_VERSION) .
 	docker run \
-		--name $* \
+		--name $*build \
 		--rm \
-		-e TMP=/packages/tmp \
+		-e TMP=/packages/tmp/$* \
 		-e PACKAGES_PATH=/packages/artifacts/$*/$(BUILDER_VERSION) \
 		-v $$(pwd):/packages cloudposse/packages-$*build:$(BUILDER_VERSION) \
 		sh -c "make -C /packages/vendor/github-commenter $*"
 
 ## Build package builder shell
 docker/build/%/shell:
+	rm -rf tmp/*
+	[ -n "$(ls tmp/)" ] && sudo rm -rf tmp/* || true
+	mkdir -p tmp/$*
 	docker build -t cloudposse/packages-$*build:$(BUILDER_VERSION) -f $*/Dockerfile.$(BUILDER_VERSION) .
 	docker run \
 		-it \
-		--name $* \
+		--name $*build \
 		--rm \
-		-e TMP=/packages/tmp \
+		-e TMP=/packages/tmp/$* \
 		-e PACKAGES_PATH=/packages/artifacts/$*/$(BUILDER_VERSION) \
 		-v $$(pwd):/packages cloudposse/packages-$*build:$(BUILDER_VERSION) \
 		bash
@@ -129,6 +134,6 @@ help/md:
 	@$(MAKE) --no-print-directory -s -C vendor help/md
 
 update/%:
-	rm -f vendor/$(subst update/,,$@)/VERSION
-	make -C vendor/$(subst update/,,$@) VERSION
+	rm -f vendor/$*/VERSION
+	make -C vendor/$* update
 	make readme

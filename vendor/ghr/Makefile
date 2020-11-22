@@ -1,11 +1,9 @@
-include ../../tasks/Makefile.package
-include ../../tasks/Makefile.apk
-include ../../tasks/Makefile.deb
+include ../../tasks/Makefile.vendor_includes
 
 ifeq ($(OS), darwin)
 	EXTENSION=zip
 else
-  EXTENSION=tar.gz
+	EXTENSION=tar.gz
 endif
 
 # Package details

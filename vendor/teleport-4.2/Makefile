@@ -24,9 +24,9 @@ install:
 
 test:
 	pinned-package-sanity-check "$(PACKAGE_VERSION)" "$(MAJOR_VERSION)"
-	teleport version | grep $(PACKAGE_VERSION)
-	tsh version | grep $(PACKAGE_VERSION)
-	tctl version | grep $(PACKAGE_VERSION)
+	teleport version | grep -F $(PACKAGE_VERSION)
+	tsh version | grep -F $(PACKAGE_VERSION)
+	tctl version | grep -F $(PACKAGE_VERSION)
 
 package/prepare::
 	@echo "make package/prepare ($(PACKAGE_EXE))"

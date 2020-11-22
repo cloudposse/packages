@@ -5,9 +5,7 @@ export DOWNLOAD_URL ?= https://raw.githubusercontent.com/ahmetb/kubectx/v$(PACKA
 export APK_BUILD_TEMPLATE ?= APKBUILD.github-binary
 export APKBUILD_DEPENDS += bash
 
-include ../../tasks/Makefile.package
-include ../../tasks/Makefile.apk
-include ../../tasks/Makefile.deb
+include ../../tasks/Makefile.vendor_includes
 
 install:
 	$(call download_binary)

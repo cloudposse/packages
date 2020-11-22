@@ -1,6 +1,6 @@
 #
 # This workflow was created automatically from the `package-template.yml` by running `make -C .github workflows`
-# DO NOT EDIT THIS WORKFLOW
+# DO NOT EDIT THIS WORKFLOW, changes will be lost on the next update.
 #
 
 name: "%PACKAGE_NAME%"
@@ -34,8 +34,8 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       package-enabled: ${{ steps.info.outputs.package_enabled }}
-      package-matrix:  ${{steps.info.outputs.package-matrix}}
-      apk-enabled: ${{ steps.info.outputs.package_enabled && steps.info.outputs.apk_package_enabled }}
+      package-matrix:  ${{steps.info.outputs.package_matrix}}
+      apk-enabled: ${{ steps.info.outputs.package_enabled == 'true' && steps.info.outputs.apk_package_enabled == 'true' }}
     steps:
     - uses: actions/checkout@v2
 
@@ -45,13 +45,18 @@ jobs:
       env:
         GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
       run: |
+        echo setting ouputs
         make -C vendor/%PACKAGE_NAME% info/github
+        echo
+        echo outputs set
+        make -C vendor/%PACKAGE_NAME% info/github | sed s'/::set-output name=//' | sed 's/::/=/'
 
 
   # Build for alpine linux
+  # Kept separate because it is old and slightly different than the other package builds
   alpine:
     needs: matrix
-    if: github.event_name != 'schedule' && needs.matrix.outputs.apk-enabled
+    if: github.event_name != 'schedule' && needs.matrix.outputs.apk-enabled != 'false'
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -84,9 +89,17 @@ jobs:
         run: 'find ${APK_PACKAGES_PATH} -type f -name \*.apk | xargs --no-run-if-empty ls -l | grep .'
 
       # Export the artifact filename including path
+      # Path must be relative to workdir for Cloudsmith action to be able to find it
       - name: "Set output path to artifact"
         id: artifact
-        run: 'echo "::set-output name=path::$(find artifacts/ -type f -name \*.apk)"'
+        shell: bash
+        run: |
+          artifact=$(find artifacts/${{matrix.alpine}} -type f -name \*.apk)
+          echo "::set-output name=path::$artifact"
+          echo "set output path=$artifact"
+          echo creating '"pip"' cache directory for Cloudsmith
+          mkdir -p $HOME/.cache/pip && chmod -R 777 $HOME/.cache || echo Ignoring error creating '"pip"' cache directory
+
 
       # Determine which package organization we should use (e.g. dev or prod)
       - name: "Determine package repo"
@@ -117,9 +130,9 @@ jobs:
           no-wait-for-sync: 'true'                          # Skip the waiting for package synchronisation (i.e. upload only)
 
   # Build for fpm package manager
-  fpm:
+  package:
     needs: matrix
-    if: github.event_name != 'schedule' && needs.matrix.outputs.package-enabled
+    if: github.event_name != 'schedule' && needs.matrix.outputs.package-enabled != 'false'
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -133,7 +146,18 @@ jobs:
           builder-version: centos8
 
     env:
+      # We are in a bit of a bind here because of how GitHub actions work as of 2020-11-19
+      # Although the "workspace" is mounted to the container, it is not mounted
+      # at `/github/workspace` or ${{github.workspace}}, although through some
+      # mechanism, an environment variable whose value starts with ${{github.workspace}}
+      # will have ${{github.workspace}} replaced with the correct mount point.
+      #
+      # We need an absolute path for the package build system, since every build happens
+      # in a different directory, but because the mount point changes, we also
+      # need a path relative to the initial working directory to communicate between
+      # the package building container and the cloudsmith action.
       PACKAGES_PATH: ${{github.workspace}}/artifacts/${{matrix.package-type}}/any-version
+      PACKAGE_RELPATH: artifacts/${{matrix.package-type}}/any-version
 
     container: cloudposse/packages-${{matrix.package-type}}build:${{matrix.builder-version}}
     steps:
@@ -141,18 +165,31 @@ jobs:
       - name: "Checkout source code at current commit"
         uses: actions/checkout@v2
 
-      # Build the debian packages for the matrix version of debian
+      # Build the packages for the matrix version
       - name: "Build ${{matrix.package-type}} packages"
-        run: "make -C vendor/${{github.workflow}} ${{matrix.package-type}}"
-
-      # Verify the packages were built or error
-      - name: "List packages"
-        run: 'find ${PACKAGES_PATH} -type f -name \*.${{matrix.package-type}} | xargs --no-run-if-empty ls -l | grep .'
+        shell: bash
+        run: |
+          echo Current directory is $(pwd)
+          [[ $PACKAGES_PATH =~ ^$(pwd) ]] || { echo Package dir \"$PACKAGES_PATH\" not beneath workdir \"$(pwd)\" >&2; exit 1; }
+          make -C vendor/${{github.workflow}} ${{matrix.package-type}}
 
       # Export the artifact filename including path
       - name: "Set output path to artifact"
         id: artifact
-        run: 'echo "::set-output name=path::$(find ${PACKAGES_PATH} -type f -name \*.${{matrix.package-type}})"'
+        shell: bash
+        run: |
+          [[ -n $PACKAGE_RELPATH ]] || { echo Error: PACKAGE_RELPATH is not set >&2; exit 1; }
+          packages=($(find ${PACKAGE_RELPATH} -type f -name \*.${{matrix.package-type}}))
+          echo List packages found:
+          printf "%s\n" "${packages[@]}" | xargs --no-run-if-empty ls -l
+          echo Error if not exactly 1 package found
+          (( ${#packages[@]} == 1 )) || { echo "Error: other than 1 package found (${#packages[@]})" >&2; exit 1; }
+
+          echo "setting output name=path::$packages"
+          echo "::set-output name=path::$packages"
+
+          echo creating '"pip"' cache directory for Cloudsmith
+          mkdir -p $HOME/.cache/pip && chmod -R 777 $HOME/.cache || echo Ignoring error creating '"pip"' cache directory
 
       # Determine which package organization we should use (e.g. dev or prod)
       - name: "Determine package repo"

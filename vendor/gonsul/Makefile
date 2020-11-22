@@ -1,7 +1,5 @@
 ## Package - gonsul
-include ../../tasks/Makefile.package
-include ../../tasks/Makefile.apk
-include ../../tasks/Makefile.deb
+include ../../tasks/Makefile.vendor_includes
 
 export VENDOR = miniclip
 export PACKAGE_NAME = gonsul

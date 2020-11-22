@@ -14,12 +14,24 @@ workflows/Makefile.yml:
 
 # We're using `sed` because GitHub actions are a mashup of environment variables and go-template like formatting. 
 # It's practical to use `envsubst` or `gomplate` if we need to escape every interpolation
-workflows/%.yml: package-template.yml
-	sed 's/%PACKAGE_NAME%/$*/g' package-template.yml > $@
+workflows/%.yml: package-template.yml ../vendor/%/Makefile
+	@if [[ $$(make -sC ../vendor/$* info/package-enabled) != "false" ]]; then \
+  		echo updating $@; \
+		sed 's/%PACKAGE_NAME%/$*/g' package-template.yml > $@; \
+	else \
+		echo DELETING workflow $@ because package is disabled; \
+		rm -f $@; \
+	fi
 
-.PHONY : workflows
+workflows/auto-update-packages.yml: generate-auto-update-template
+	@echo Generating auto-update workflow file
+	./generate-auto-update-template $(sort $(notdir $(realpath $(wildcard ../vendor/*/)))) > $@
+
+.PHONY : workflows workflows/%.yml workflows/auto-update-packages.yml auto-update-workflow
 # This crazy expression gets a list of all the package folders under the vendor folder
 # Then it turns it into a file like workflows/terraform.yml and we use it as a build dep
-workflows: $(addsuffix .yml,$(addprefix workflows/, $(sort $(notdir $(realpath $(wildcard ../vendor/*/))))))
+workflows: $(addsuffix .yml,$(addprefix workflows/, $(sort $(notdir $(realpath $(wildcard ../vendor/*/)))))) workflows/auto-update-packages.yml
 	@exit 0
 
+auto-update-workflow: workflows/auto-update-packages.yml
+	@exit 0

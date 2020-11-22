@@ -3,9 +3,7 @@ export PACKAGE_REPO_NAME = terraform
 export MASTER_PACKAGE_NAME = terraform
 export MAJOR_VERSION = latest
 
-include ../../tasks/Makefile.package
-include ../../tasks/Makefile.apk
-include ../../tasks/Makefile.deb
+include ../../tasks/Makefile.vendor_includes
 
 # Package details
 export DOWNLOAD_URL ?= https://releases.hashicorp.com/terraform/$(PACKAGE_VERSION)/terraform_$(PACKAGE_VERSION)_$(OS)_$(ARCH).zip
@@ -22,4 +20,4 @@ install:
 	chmod +x $(INSTALL_PATH)/$(PACKAGE_NAME)
 
 test:
-	$(PACKAGE_EXE) version | grep $(PACKAGE_VERSION)
+	$(PACKAGE_EXE) version | grep -F $(PACKAGE_VERSION)
