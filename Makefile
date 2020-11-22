@@ -5,7 +5,7 @@ export DOCKER_IMAGE_NAME ?= $(DOCKER_IMAGE):$(DOCKER_TAG)
 export DOCKER_BUILD_FLAGS =
 
 export DEFAULT_HELP_TARGET := help/vendor
-export README_DEPS ?= .github/auto-label.yml docs/badges.md workflows
+export README_DEPS ?= .github/auto-label.yml docs/badges.md docs/targets.md workflows
 
 export DIST_CMD ?= cp -a
 export DIST_PATH ?= /dist
@@ -43,7 +43,7 @@ run:
 .github/auto-label.yml::
 	cp .github/auto-label-default.yml $@
 	for vendor in $(PACKAGES); do \
-		echo "$${vendor%/}: $${vendor}**"; \
+		printf "$${vendor%/}:\n- any: [\"$${vendor}**\"]\n  all: [\"!bin/**\", \"!tasks/**\"]\n"; \
 	done >> $@
 
 .PHONY : docs/badges.md

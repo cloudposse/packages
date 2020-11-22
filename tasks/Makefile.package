@@ -216,6 +216,7 @@ info:
 	@printf "%-20s %s\n" "Download URL:" "$(DOWNLOAD_URL)"
 	@printf "%-20s %s\n" "Install Path:" "$(INSTALL_PATH)"
 
+# info/short is used to make docs/targets.md
 info/short:
 	@if [[ $${PACKAGE_ENABLED:-true} != "false" ]]; then \
 		printf "%-25s %-10s %s\n" "$${PACKAGE_NAME}" "$${PACKAGE_VERSION}" "$${PACKAGE_DESCRIPTION}"; \
@@ -223,11 +224,13 @@ info/short:
 		printf "%-25s %-10s %s\n" "$${PACKAGE_NAME}" "OBSOLETE" "$${PACKAGE_DESCRIPTION}"; \
 	fi
 
+# info/md is used to make docs/badges.md
 info/md:
 	@if [[ $${PACKAGE_ENABLED:-true} != "false" ]]; then \
 		printf "[![%s](https://github.com/cloudposse/packages/workflows/%s/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%%3A%s) | %-10s | %s\n" "$${PACKAGE_NAME}" "$${PACKAGE_NAME}" "$${PACKAGE_NAME}" "$${PACKAGE_VERSION}" "$${PACKAGE_DESCRIPTION}"; \
 	fi
 
+# info/github is used to configure GitHub Actions, particularly build and auto-update
 info/github: FORMAT="::set-output name=%s::%s\n"
 info/github:
 	@printf $(FORMAT) "vendor" "$(VENDOR)"
@@ -243,9 +246,13 @@ info/github:
 	@printf $(FORMAT) "download_url" "$(DOWNLOAD_URL)"
 	@printf $(FORMAT) "install_path" "$(INSTALL_PATH)"
 
+# info/package-enabled outputs "true" if the package is enabled, "false" if it is not.
+# Used by scripts and other info targets to toggle behaviors such as creating or not creating a build action workflow.
 info/package-enabled:
 	@status="$${PACKAGE_ENABLED:-true}"; echo "$${status}"
 
+# info/auto-update-enabled outputs "true" if auto-updates for the package are enabled, "false" if they are not.
+# Used by scripts and other info targets to toggle behaviors such as creating or not creating an update workflow.
 info/auto-update-enabled:
 	@status="$${PACKAGE_ENABLED:-true}"; auto="$${AUTO_UPDATE_ENABLED}"; \
 	if [[ $$status == "false" || $$auto == "false" ]]; then \
@@ -254,8 +261,11 @@ info/auto-update-enabled:
 		echo true; \
 	fi
 
+# _package-disabled is an internal target called when an attempt is made to create
+# a package but the package has been disabled.
 _package-disabled:
 	@echo Creating packages has been disabled for $(PACKAGE_NAME)
 	@exit 0
 
+# Makefile.downloads contains all the recipes for downloading and unpacking release bundles
 include $(SELF_DIR)/Makefile.downloads
