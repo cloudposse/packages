@@ -202,9 +202,9 @@ info:
 	@printf "%-20s %s\n" "Vendor:" "$(VENDOR)"
 	@printf "%-20s %s\n" "Package:" "$(PACKAGE_NAME)"
 	@if [[ $${PACKAGE_ENABLED:-true} != "false" ]]; then \
-		@printf "%-20s %s\n" "Version:" "$(PACKAGE_VERSION)"; \
+		printf "%-20s %s\n" "Version:" "$(PACKAGE_VERSION)"; \
 	else \
-		@printf "%-20s %s\n" "Version:" "OBSOLETE"; \
+		printf "%-20s %s\n" "Version:" "OBSOLETE"; \
 	fi
 	@printf "%-20s %s\n" "Version:" "$(PACKAGE_VERSION)"
 	@printf "%-20s %s\n" "License:" "$(PACKAGE_LICENSE)"
