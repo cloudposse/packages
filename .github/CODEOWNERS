@@ -3,7 +3,7 @@
 
 # To allow mergify to auto-merge, we must in general not assign code owners to files
 
-# With exceptions, engineering or admin must approve changes workflow configuration files
+# With exceptions, engineering or admin must approve changes to workflow configuration files
 .github/*.yml                                      @cloudposse/engineering @cloudposse/admins
 
 # The atuo-update-packages.yml is auto-generates along with REAMDE, but it should change unless
@@ -12,7 +12,6 @@
 
 # engineering or admin must approve changes to non-package workflows
 .github/workflows/apkbuild.yml                      @cloudposse/engineering @cloudposse/admins
-.github/workflows/auto-assign.yml                   @cloudposse/engineering @cloudposse/admins
 .github/workflows/auto-greet.yml                    @cloudposse/engineering @cloudposse/admins
 .github/workflows/auto-label.yml                    @cloudposse/engineering @cloudposse/admins
 .github/workflows/debbuild.yml                      @cloudposse/engineering @cloudposse/admins
