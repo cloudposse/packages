@@ -6,9 +6,12 @@ MINOR_VERSION=0
 PINNED_VERSION=${MAJOR_VERSION}.${MINOR_VERSION}
 PACKAGE_NAME=${MASTER_PACKAGE_NAME}-${PINNED_VERSION}
 INSTALL_DIR=/usr/share/${MASTER_PACKAGE_NAME}/${PINNED_VERSION}/bin
+QUIET=""
+
+update-alternatives --help | grep -- --quiet >/dev/null 2>&1 && QUIET="--quiet"
 
 for exe in teleport tsh tctl; do
-  update-alternatives --remove ${exe}-${PINNED_VERSION} ${INSTALL_DIR}/${exe} --quiet
-  update-alternatives --remove ${exe} ${INSTALL_DIR}/${exe} --quiet
+  update-alternatives --remove ${exe}-${PINNED_VERSION} ${INSTALL_DIR}/${exe} $QUIET
+  update-alternatives --remove ${exe} ${INSTALL_DIR}/${exe} $QUIET
 done
 exit 0

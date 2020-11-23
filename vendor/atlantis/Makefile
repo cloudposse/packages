@@ -1,7 +1,3 @@
-include ../../tasks/Makefile.package
-include ../../tasks/Makefile.apk
-include ../../tasks/Makefile.deb
-
 # Package details
 export VENDOR ?= runatlantis
 export DOWNLOAD_URL ?= $(PACKAGE_REPO_URL)/releases/download/v$(PACKAGE_VERSION)/$(PACKAGE_NAME)_$(OS)_$(ARCH).zip
@@ -11,9 +7,11 @@ export APKBUILD_INSTALL_SCRIPTS = $(PACKAGE_NAME).post-install $(PACKAGE_NAME).p
 export MASTER_PACKAGE_NAME = atlantis
 export INSTALL_DIR = /usr/share/${MASTER_PACKAGE_NAME}/${VENDOR}/bin
 
+include ../../tasks/Makefile.vendor_includes
+
 install:
 	$(call download_zip)
 
 test:
-	$(PACKAGE_EXE) version | grep $(PACKAGE_VERSION)
+	$(PACKAGE_EXE) version | grep -F $(PACKAGE_VERSION)
 

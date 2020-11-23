@@ -1,17 +1,73 @@
 # Build Environment
+
+# This gets the directory of the last Makefile opened, which here is the current one
+SELF_DIR := $(dir $(lastword $(MAKEFILE_LIST)))
+
+# Brief tutorial on make variables:
+#
+# Make variables are recursively defined, meaning any variables on the right hand
+# side are evaluated at the time the variable on the left hand side is **referenced**
+# not the value at the time it is defined. This is especially handy as variable values
+# can change during the course of the make session. For example, the line
+#
+# target: VAR = target_var
+#
+# sets the value of $(VAR) to "target_var" only for the portion of the build that
+# is building "target". So if DEF = DEF_$(VAR), then $(DEF) will be "DEF_target_var"
+# even if elsewhere VAR = global_var.
+#
+# This feature is how it is possible for us to include this Makefile.package at the
+# top of a vendor/*/Makefile and still have the later Makefile influence the recipes
+# in this Makefile. The global value of the variable is based on the last assignment.
+#
+# On the other hand, conditionals like `ifeq` and assignments using ?= depend
+# on the value of the variable at the time that line of the Makefile is being
+# parsed. If this Makefile.package is at the top of the vendor Makefile, then
+# nothing in the vendor Makefile will affect the `ifeq` or ?=. However,
+# since **variables get their initial values from the shell environment**
+# it is still useful to use ?= at the start of the Makefile.
+#
+# Note: "?=" means set if unset and will not modify a variable that has been set, even if it is empty.
+# To allow a variable that has already been set to be set with ?= you must `undefine` it.
 export ARCH ?= amd64
-export OS ?= $(shell uname -s | tr '[:upper:]' '[:lower:'])
-export OS_ARCH ?= $(shell uname -m)
+# Note: := means left hand var gets the value of the right hand vars as they are right now.
+# Setting HOST_* using := prevents a shell from being spawned every time it is referenced.
+# HOST_DISTRIBUTION is the distribution (e.g. alpine, debian, centos) of the running Docker image
+export HOST_DISTRIBUTION := $(shell . /etc/os-release ; echo $$ID)
+# DIST_DISTRIBUTION is the target distribution of the package. Default to host
+export DIST_DISTRIBUTION ?= $(HOST_DISTRIBUTION)
+# HOST_OS is the OS of the packaging Docker container
+export HOST_OS := $(shell uname -s | tr '[:upper:]' '[:lower:'])
+# Setting OS = $(HOST_OS) gives us a way to conditionally set OS based on HOST_OS
+# while avoiding a recursive OS = $(OS) situation.
+# OS is the designation of the target OS as specified by the package source releaser
+export OS ?= $(HOST_OS)
+# DIST_OS is the designation of the target OS as specified in the package we create
+export DIST_OS ?= $(HOST_OS)
+export HOST_OS_ARCH := $(shell uname -m)
+export OS_ARCH ?= $(HOST_OS_ARCH)
+export DIST_ARCH ?= $(if $(subst alpine,,$(HOST_DISTRIBUTION)),$(HOST_OS_ARCH),amd64)
 export INSTALL_PATH ?= /usr/local/bin
 export CURL ?= curl --retry 3 --retry-delay 5 --fail -sSL
-export LOCAL_BIN := ../../bin
+export LOCAL_BIN ?= ../../bin
+# If you set "PATH := $(PATH):$(LOCAL_BIN)" and LOCAL_BIN were changed later in the Makefile,
+# PATH would still refer to the value above. However, we want PATH to get the "current"
+# value of LOCAL_BIN. We cannot use "PATH = $(PATH):$(LOCAL_BIN)" because that would
+# cause and infinite loop, as PATH is recursively evaluated. Fortunately, Make has
+# a solution for that: "PATH += :$(LOCAL_BIN)", but unfortunately, it does not
+# work for PATH, because += inserts a space between the old value and the newly added value.
 export PATH := $(PATH):$(LOCAL_BIN)
+# SHELL is a special variable that defines the binary Make will use to execute shell commands.
 export SHELL := /bin/bash
-
+# .DEFAULT_GOAL is a special variable that defines which make target to use when none is given on the command line
+export .DEFAULT_GOAL := default
+# TMP is not a special variable
 export TMP ?= /tmp
 
 # Package details
 export PACKAGE_ENABLED ?= true
+export PACKAGE_PRERELEASE_ENABLED ?= false
+# Leave PACKAGE_VERSION_PIN unset to use latest version
 export PACKAGE_NAME ?= $(notdir $(CURDIR))
 export PACKAGE_REPO_NAME ?= $(PACKAGE_NAME)
 export PACKAGE_EXE ?= $(PACKAGE_NAME)
@@ -22,127 +78,21 @@ export PACKAGE_LICENSE ?= $(shell cat LICENSE 2>/dev/null)
 export PACKAGE_HOMEPAGE_URL ?= https://github.com/$(VENDOR)/$(PACKAGE)
 export PACKAGE_REPO_URL ?= https://github.com/$(VENDOR)/$(PACKAGE_REPO_NAME)
 
-ifeq ($(strip $(PACKAGE_VERSION_PIN)),)
-	export PACKAGE_VERSION_TARGET = CURRENT_VERSION
-else
-	export PACKAGE_VERSION_TARGET = PINNED_VERSION
-endif
+export PACKAGE_VERSION_TARGET ?= RELEASE_VERSION
 
 export AUTO_UPDATE_ENABLED ?= true
 
 # Permit version to be overridden on the command line using PACKAGE_VERSION (e.g. FIGURINE_VERSION=0.3.0)
-VERSION_ENV = $(shell basename $$(pwd) | tr '[:lower:]' '[:upper:]')_VERSION
+VERSION_ENV = $(shell echo '$(PACKAGE_NAME)' | tr '[:lower:]' '[:upper:]')_VERSION
 ifneq ($($(VERSION_ENV)),)
 	PACKAGE_VERSION=$($(VERSION_ENV))
 endif
 
-# Macros to download a binary release from GitHub and install it
-# $(call github_download_binary_release,version,repo,asset)
-define download_binary
-	mkdir -p $(INSTALL_PATH)
-	$(CURL) -o $(INSTALL_PATH)/$(PACKAGE_EXE) $(DOWNLOAD_URL) && chmod +x $(INSTALL_PATH)/$(PACKAGE_EXE)
-endef
-
-download/binary:
-	$(call download_binary)
-
-define download_binary_gz
-	mkdir -p $(INSTALL_PATH)
-	$(CURL) -o $(INSTALL_PATH)/$(PACKAGE_NAME).gz $(DOWNLOAD_URL)
-	gunzip -f -k -q $(INSTALL_PATH)/$(PACKAGE_NAME).gz
-	chmod +x $(INSTALL_PATH)/$(PACKAGE_EXE)
-	rm -f $(INSTALL_PATH)/$(PACKAGE_NAME).gz
-endef
-
-download/binary/gz:
-	$(call download_binary_gz)
-
-define download_binary_bz2
-	mkdir -p $(INSTALL_PATH)
-	$(CURL) -o $(INSTALL_PATH)/$(PACKAGE_NAME).bz2 $(DOWNLOAD_URL)
-	bzip2 -d -f -k -q $(INSTALL_PATH)/$(PACKAGE_NAME).bz2
-	chmod +x $(INSTALL_PATH)/$(PACKAGE_EXE)
-	rm -f $(INSTALL_PATH)/$(PACKAGE_NAME).bz2
-endef
-
-download/binary/bz2:
-	$(call download_binary_bz2)
-
-define download_tarball
-	[ -n "$(TMP)" ] && [ -n "$(PACKAGE_NAME)" ] && rm -rf "$(TMP)/$(PACKAGE_NAME)"
-	mkdir -p $(TMP)/$(PACKAGE_NAME)
-	$(CURL) -o - $(DOWNLOAD_URL) | tar -zx -C '$(TMP)/$(PACKAGE_NAME)'
-	find $(TMP)/$(PACKAGE_NAME) -type f -name '$(PACKAGE_EXE)*' | xargs -I {} cp -f {} $(INSTALL_PATH)/$(PACKAGE_EXE)
-	chmod +x $(INSTALL_PATH)/$(PACKAGE_EXE)
-	[ -n "$(TMP)" ] && [ -n "$(PACKAGE_NAME)" ] && rm -rf "$(TMP)/$(PACKAGE_NAME)"
-endef
-
-download/tarball:
-	$(call download_tarball)
-
-define download_tar_bz2
-	[ -n "$(TMP)" ] && [ -n "$(PACKAGE_NAME)" ] && rm -rf "$(TMP)/$(PACKAGE_NAME)"
-	mkdir -p $(TMP)/$(PACKAGE_NAME)
-	$(CURL) -o - $(DOWNLOAD_URL) | tar -jx -C $(TMP)/$(PACKAGE_NAME)
-	find $(TMP)/$(PACKAGE_NAME) -type f -name $(PACKAGE_NAME) | xargs -I {} cp -f {} $(INSTALL_PATH)/$(PACKAGE_EXE)
-	chmod +x $(INSTALL_PATH)/$(PACKAGE_EXE)
-	[ -n "$(TMP)" ] && [ -n "$(PACKAGE_NAME)" ] && rm -rf "$(TMP)/$(PACKAGE_NAME)"
-endef
-
-download/tar/bz2:
-	$(call download_tar_bz2)
-
-define download_tar_gz
-	[ -n "$(TMP)" ] && [ -n "$(PACKAGE_NAME)" ] && rm -rf "$(TMP)/$(PACKAGE_NAME)"
-	mkdir -p $(TMP)/$(PACKAGE_NAME)
-	$(CURL) -o - $(DOWNLOAD_URL) | tar -zx -C $(TMP)/$(PACKAGE_NAME)
-	find $(TMP)/$(PACKAGE_NAME) -type f -name $(PACKAGE_NAME) | xargs -I {} cp -f {} $(INSTALL_PATH)/$(PACKAGE_EXE)
-	chmod +x $(INSTALL_PATH)/$(PACKAGE_EXE)
-	[ -n "$(TMP)" ] && [ -n "$(PACKAGE_NAME)" ] && rm -rf "$(TMP)/$(PACKAGE_NAME)"
-endef
-
-download/tar/gz:
-	$(call download_tar_gz)
-
-define download_tar_xz
-	[ -n "$(TMP)" ] && [ -n "$(PACKAGE_NAME)" ] && rm -rf "$(TMP)/$(PACKAGE_NAME)"
-	mkdir -p $(TMP)/$(PACKAGE_NAME)
-	$(CURL) -o - $(DOWNLOAD_URL) | tar -Jx -C $(TMP)/$(PACKAGE_NAME)
-	find $(TMP)/$(PACKAGE_NAME) -type f -name $(PACKAGE_NAME) | xargs -I {} cp -f {} $(INSTALL_PATH)/$(PACKAGE_EXE)
-	chmod +x $(INSTALL_PATH)/$(PACKAGE_EXE)
-	[ -n "$(TMP)" ] && [ -n "$(PACKAGE_NAME)" ] && rm -rf "$(TMP)/$(PACKAGE_NAME)"
-endef
-
-download/tar/xz:
-	$(call download_tar_xz)
-
-define download_zip
-	[ -n "$(TMP)" ] && [ -n "$(PACKAGE_NAME)" ] && rm -rf "$(TMP)/$(PACKAGE_NAME)"
-	mkdir -p $(TMP)/$(PACKAGE_NAME)
-	$(CURL) -L -o $(TMP)/$(PACKAGE_NAME)/$(PACKAGE_NAME).zip $(DOWNLOAD_URL)
-	unzip $(TMP)/$(PACKAGE_NAME)/$(PACKAGE_NAME).zip -d $(TMP)/$(PACKAGE_NAME)
-	find $(TMP)/$(PACKAGE_NAME) -type f -name $(PACKAGE_NAME) | xargs -I {} cp -f {} $(INSTALL_PATH)/$(PACKAGE_EXE)
-	chmod +x $(INSTALL_PATH)/$(PACKAGE_EXE)
-	[ -n "$(TMP)" ] && [ -n "$(PACKAGE_NAME)" ] && rm -rf "$(TMP)/$(PACKAGE_NAME)"
-endef
-
-download/zip:
-	$(call download_zip)
-
-define download_gz
-	[ -n "$(TMP)" ] && [ -n "$(PACKAGE_NAME)" ] && rm -rf "$(TMP)/$(PACKAGE_NAME)"
-	mkdir -p $(TMP)/$(PACKAGE_NAME)
-	$(CURL) -L -o $(TMP)/$(PACKAGE_NAME)/$(PACKAGE_NAME).gz $(DOWNLOAD_URL)
-	gunzip $(TMP)/$(PACKAGE_NAME)/$(PACKAGE_NAME).gz
-	find $(TMP)/$(PACKAGE_NAME) -type f -name $(PACKAGE_NAME) | xargs -I {} cp -f {} $(INSTALL_PATH)/$(PACKAGE_EXE)
-	chmod +x $(INSTALL_PATH)/$(PACKAGE_EXE)
-	[ -n "$(TMP)" ] && [ -n "$(PACKAGE_NAME)" ] && rm -rf "$(TMP)/$(PACKAGE_NAME)"
-endef
-
-download/gz:
-	$(call download_gz)
 
 default: info
+	@echo
+	@echo You probably want to specify a target
+	@exit 1
 
 # Only works if current working directory is under vendor/
 $(LOCAL_BIN)/vert: INSTALL_PATH = $(LOCAL_BIN)
@@ -195,84 +145,127 @@ auto-update:
 	fi
 
 # The only way to tell if VERSION is up to date is to query the source via the internet
-.PHONY: CURRENT_VERSION PINNED_VERSION
+.PHONY: TAGGED_VERSION RELEASE_VERSION
 
-# Update the VERSION file only if it would change, to avoid triggering unnecessary builds
-CURRENT_VERSION: API=releases/latest
-CURRENT_VERSION: QUERY=.tag_name
-CURRENT_VERSION:
-	@local_version=$$(cat VERSION || echo 0); \
-	current_version=$$(env PATH='$(PATH)' github-repo-metadata $(VENDOR) $(PACKAGE_REPO_NAME) '$(API)' '$(QUERY)' | sed 's/^v//'); \
-	if [ $$? -ne 0 ]; then \
-		exit 1; \
-	elif [ "$${current_version}" == "null" -o -z "$${current_version}" ]; then \
-		echo "ERROR: failed to obtain current version for $(VENDOR)/$(PACKAGE_REPO_NAME) (got: $${current_version})" >&2; \
-		exit 1; \
-	elif [ "$${local_version}" != "$${current_version}" ]; then \
-		if [ $$(semver "$${current_version}" "$${local_version}" ) != "1" ]; then \
-			echo "NOT \"Upgrading\" $(PACKAGE_NAME) from $${local_version} to OLDER $${current_version}" >&2; \
-		elif [ "$${AUTO_UPDATE_ENABLED:-true}" == "true" ]; then \
-		 	echo "Upgrading $(PACKAGE_NAME) from $${local_version} to $${current_version}"; \
-			echo "$${current_version}" > VERSION; \
-		else \
-			echo "NOT \"Upgrading\" $(PACKAGE_NAME) from $${local_version} to $${current_version} because auto-update is disabled" >&2; \
-		fi \
+# Update the VERSION file according to the release version.
+RELEASE_VERSION: API=releases?per_page=100
+RELEASE_VERSION: QUERY=.[] | select(.prerelease == false or .prerelease == $(PACKAGE_PRERELEASE_ENABLED)) | .tag_name
+RELEASE_VERSION: _version_by_semver
+
+# Update the VERSION file according to the tags.
+TAGGED_VERSION: API=tags?per_page=100
+TAGGED_VERSION: QUERY=.[] | .name
+TAGGED_VERSION: _version_by_semver
+
+# These lines implement the following logic to determine TARGET_VERSION_PIN
+# If PACKAGE_VERSION_PIN is set, then use it
+# else if MAJOR_VERSION is set and is not "latest",
+#    use $(MAJOR_VERSION).x-0 if PACKAGE_PRERELEASE_ENABLED is set and is not "false"
+#    otherwise use $(MAJOR_VERSION).x
+# else leave it blank, because we want the  recipe to put the current version in the pin
+# to make the real default pin which is >=current-version.
+_version_by_semver: TARGET_MAJOR_VERSION = $(strip $(subst latest,,$(MAJOR_VERSION)))
+_version_by_semver: DEFAULT_PIN_SUFFIX = $(if $(subst false,,$(PACKAGE_PRERELEASE_ENABLED)),-0,)
+_version_by_semver: DEFAULT_PIN_PREFIX = $(if $(TARGET_MAJOR_VERSION),=,>=)
+_version_by_semver: DEFAULT_VERSION_PIN = $(if $(TARGET_MAJOR_VERSION),$(TARGET_MAJOR_VERSION).x$(DEFAULT_PIN_SUFFIX))
+_version_by_semver: TARGET_VERSION_PIN = $(or $(PACKAGE_VERSION_PIN),$(DEFAULT_VERSION_PIN))
+# Not all pacakges actually use semver. Packages can provide a shell snippet to transform the package's
+# release version format into something semver compliant.
+_version_by_semver: VERSION_XFORM = $(if $(PACKAGE_VERSION_SEMVER_XFORM), | $(PACKAGE_VERSION_SEMVER_XFORM))
+_version_by_semver: $(LOCAL_BIN)/vert
+	@if [ "$${AUTO_UPDATE_ENABLED:-true}" == "true" ]; then \
+		local_version=$$(cat VERSION || echo 0); version_pin='$(TARGET_VERSION_PIN)'; \
+		version_pin="$${version_pin:-$(DEFAULT_PIN_PREFIX)$$local_version$(DEFAULT_PIN_SUFFIX)}"; \
+		releases=($$(env PATH='$(PATH)' github-repo-metadata $(VENDOR) $(PACKAGE_REPO_NAME) '$(API)' '$(QUERY)'$(VERSION_XFORM))); \
+		current_version=$$(env PATH='$(PATH)' vert -s "$${version_pin}" "$${releases[@]}" | tail -1); \
+		if [ $$? -ne 0 ]; then \
+			exit 1; \
+		elif [ "$${current_version}" == "null" -o -z "$${current_version}" ]; then \
+			echo "ERROR: failed to obtain version matching '$${version_pin}' for $(VENDOR)/$(PACKAGE_REPO_NAME) (got: $${releases[@]:0:10}...)" >&2; \
+			exit 1; \
+		elif [ "$${local_version}" != "$${current_version}" ]; then \
+			if ! env PATH='$(PATH)' vert ">$${local_version}$(DEFAULT_PIN_SUFFIX)" "$${current_version}" >/dev/null; then \
+				echo "NOT \"Upgrading\" $(PACKAGE_NAME) from $${local_version} to OLDER $${current_version}" >&2; \
+				exit 1; \
+			else \
+				echo "Upgrading $(PACKAGE_NAME) from $${local_version} to $${current_version}"; \
+				echo "$${current_version}" > VERSION; \
+			fi; \
+		fi; \
+	else \
+		echo "NOT \"Upgrading\" $(PACKAGE_NAME) from $${local_version} to $${current_version} because auto-update is disabled" >&2; \
 	fi
 
-PINNED_VERSION: API=releases?per_page=100
-PINNED_VERSION: QUERY=.[].tag_name
-PINNED_VERSION: $(LOCAL_BIN)/vert
-	@local_version=$$(cat VERSION || echo 0); \
-	current_version=$$(env PATH='$(PATH)' vert -s '$(PACKAGE_VERSION_PIN)' \
-	  $$(env PATH='$(PATH)' github-repo-metadata $(VENDOR) $(PACKAGE_REPO_NAME) '$(API)' '$(QUERY)') | tail -1); \
-	if [ $$? -ne 0 ]; then \
-		exit 1; \
-	elif [ "$${current_version}" == "null" -o -z "$${current_version}" ]; then \
-		echo "ERROR: failed to obtain version matching '$(PACKAGE_VERSION_PIN)' for $(VENDOR)/$(PACKAGE_REPO_NAME) (got: $${current_version})" >&2; \
-		exit 1; \
-	elif [ "$${local_version}" != "$${current_version}" ]; then \
-		if [ $$(semver "$${current_version}" "$${local_version}" ) != "1" ]; then \
-			echo "NOT \"Upgrading\" $(PACKAGE_NAME) from $${local_version} to OLDER $${current_version}" >&2; \
-		elif [ "$${AUTO_UPDATE_ENABLED:-true}" == "true" ]; then \
-		 	echo "Upgrading $(PACKAGE_NAME) from $${local_version} to $${current_version}"; \
-			echo "$${current_version}" > VERSION; \
-		else \
-			echo "NOT \"Upgrading\" $(PACKAGE_NAME) from $${local_version} to $${current_version} because auto-update is disabled" >&2; \
-		fi \
-	fi
-
+.PHONY: info info/short info/github info/md
 
 info:
 	@printf "%-20s %s\n" "Vendor:" "$(VENDOR)"
 	@printf "%-20s %s\n" "Package:" "$(PACKAGE_NAME)"
+	@if [[ $${PACKAGE_ENABLED:-true} != "false" ]]; then \
+		printf "%-20s %s\n" "Version:" "$(PACKAGE_VERSION)"; \
+	else \
+		printf "%-20s %s\n" "Version:" "OBSOLETE"; \
+	fi
 	@printf "%-20s %s\n" "Version:" "$(PACKAGE_VERSION)"
 	@printf "%-20s %s\n" "License:" "$(PACKAGE_LICENSE)"
-	@printf "%-20s %s\n" "Arch:" "$(ARCH)"
-	@printf "%-20s %s\n" "OS:" "$(OS)"
+	@printf "%-20s %s\n" "Arch:" "$(DIST_ARCH)"
+	@printf "%-20s %s\n" "OS:" "$(DIST_OS)"
+	@printf "%-20s %s\n" "Distribution:" "$(DIST_DISTRIBUTION)"
 	@printf "%-20s %s\n" "Homepage URL:" "$(PACKAGE_HOMEPAGE_URL)"
 	@printf "%-20s %s\n" "Repo URL:" "$(PACKAGE_REPO_URL)"
 	@printf "%-20s %s\n" "Download URL:" "$(DOWNLOAD_URL)"
 	@printf "%-20s %s\n" "Install Path:" "$(INSTALL_PATH)"
 
+# info/short is used to make docs/targets.md
 info/short:
-	@printf "%-25s %-10s %s\n" "$${PACKAGE_NAME}" "$${PACKAGE_VERSION}" "$${PACKAGE_DESCRIPTION}"
+	@if [[ $${PACKAGE_ENABLED:-true} != "false" ]]; then \
+		printf "%-25s %-10s %s\n" "$${PACKAGE_NAME}" "$${PACKAGE_VERSION}" "$${PACKAGE_DESCRIPTION}"; \
+	else \
+		printf "%-25s %-10s %s\n" "$${PACKAGE_NAME}" "OBSOLETE" "$${PACKAGE_DESCRIPTION}"; \
+	fi
 
+# info/md is used to make docs/badges.md
 info/md:
-	@printf "[![%s](https://github.com/cloudposse/packages/workflows/%s/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%%3A%s) | %-10s | %s\n" "$${PACKAGE_NAME}" "$${PACKAGE_NAME}" "$${PACKAGE_NAME}" "$${PACKAGE_VERSION}" "$${PACKAGE_DESCRIPTION}"
+	@if [[ $${PACKAGE_ENABLED:-true} != "false" ]]; then \
+		printf "[![%s](https://github.com/cloudposse/packages/workflows/%s/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%%3A%s) | %-10s | %s\n" "$${PACKAGE_NAME}" "$${PACKAGE_NAME}" "$${PACKAGE_NAME}" "$${PACKAGE_VERSION}" "$${PACKAGE_DESCRIPTION}"; \
+	fi
 
+# info/github is used to configure GitHub Actions, particularly build and auto-update
 info/github: FORMAT="::set-output name=%s::%s\n"
 info/github:
 	@printf $(FORMAT) "vendor" "$(VENDOR)"
 	@printf $(FORMAT) "package_name" "$(PACKAGE_NAME)"
-	@printf $(FORMAT) "apk_package_enabled" "$(APK_PACKAGE_ENABLED)"
-	@printf $(FORMAT) "deb_package_enabled" "$(DEB_PACKAGE_ENABLED)"
+	@$(LOCAL_BIN)/package-filter info/github "$(APK_PACKAGE_ENABLED)" "$(PACKAGE_TYPES_DISABLED)"
 	@printf $(FORMAT) "package_enabled" "$(PACKAGE_ENABLED)"
 	@printf $(FORMAT) "package_version" "$(PACKAGE_VERSION)"
 	@printf $(FORMAT) "package_license" "$(PACKAGE_LICENSE)"
-	@printf $(FORMAT) "arch" "$(ARCH)"
-	@printf $(FORMAT) "os" "$(OS)"
+	@printf $(FORMAT) "arch" "$(DIST_ARCH)"
+	@printf $(FORMAT) "os" "$(DIST_OS)"
 	@printf $(FORMAT) "package_homepage_url" "$(PACKAGE_HOMEPAGE_URL)"
 	@printf $(FORMAT) "package_repo_url" "$(PACKAGE_REPO_URL)"
 	@printf $(FORMAT) "download_url" "$(DOWNLOAD_URL)"
 	@printf $(FORMAT) "install_path" "$(INSTALL_PATH)"
 
+# info/package-enabled outputs "true" if the package is enabled, "false" if it is not.
+# Used by scripts and other info targets to toggle behaviors such as creating or not creating a build action workflow.
+info/package-enabled:
+	@status="$${PACKAGE_ENABLED:-true}"; echo "$${status}"
+
+# info/auto-update-enabled outputs "true" if auto-updates for the package are enabled, "false" if they are not.
+# Used by scripts and other info targets to toggle behaviors such as creating or not creating an update workflow.
+info/auto-update-enabled:
+	@status="$${PACKAGE_ENABLED:-true}"; auto="$${AUTO_UPDATE_ENABLED}"; \
+	if [[ $$status == "false" || $$auto == "false" ]]; then \
+		echo false; \
+	else \
+		echo true; \
+	fi
+
+# _package-disabled is an internal target called when an attempt is made to create
+# a package but the package has been disabled.
+_package-disabled:
+	@echo Creating packages has been disabled for $(PACKAGE_NAME)
+	@exit 0
+
+# Makefile.downloads contains all the recipes for downloading and unpacking release bundles
+include $(SELF_DIR)/Makefile.downloads

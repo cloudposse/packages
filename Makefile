@@ -5,7 +5,7 @@ export DOCKER_IMAGE_NAME ?= $(DOCKER_IMAGE):$(DOCKER_TAG)
 export DOCKER_BUILD_FLAGS =
 
 export DEFAULT_HELP_TARGET := help/vendor
-export README_DEPS ?= .github/auto-label.yml docs/badges.md workflows
+export README_DEPS ?= .github/auto-label.yml docs/badges.md docs/targets.md workflows
 
 export DIST_CMD ?= cp -a
 export DIST_PATH ?= /dist
@@ -43,7 +43,7 @@ run:
 .github/auto-label.yml::
 	cp .github/auto-label-default.yml $@
 	for vendor in $(PACKAGES); do \
-		echo "$${vendor%/}: $${vendor}**"; \
+		printf "$${vendor%/}:\n- any: [\"$${vendor}**\"]\n  all: [\"!bin/**\", \"!tasks/**\"]\n"; \
 	done >> $@
 
 .PHONY : docs/badges.md
@@ -88,35 +88,43 @@ docker/build/apk/shell:
 		-e AWS_ACCESS_KEY_ID \
 		-e AWS_SESSION_TOKEN \
 		-e AWS_SECURITY_TOKEN \
+		-e TMP=/packages/tmp/apk \
 		-e APK_PACKAGES_PATH=/packages/artifacts/$(ALPINE_VERSION) \
 		--privileged \
 		-w /packages \
 		-v $$(pwd):/packages cloudposse/apkbuild:$(ALPINE_VERSION)
 
-## Build debian packages for testing
-docker/build/deb: DEBIAN_VERSION=stable-slim
-docker/build/deb:
-	docker build -t cloudposse/fpm:$(DEBIAN_VERSION) -f deb/Dockerfile.$(DEBIAN_VERSION) .
-	docker run \
-		--name deb \
-		--rm \
-		-e TMP=/packages/tmp \
-		-e DEB_PACKAGES_PATH=/packages/artifacts/$(DEBIAN_VERSION) \
-		-v $$(pwd):/packages cloudposse/fpm:$(DEBIAN_VERSION) \
-		sh -c "make -C /packages/vendor/github-commenter deb"
+# MATRIX BUILD
+docker/build/deb/shell docker/build/deb/test : BUILDER_VERSION=stable-slim
 
-## Build debian packages for testing
-docker/build/deb/shell: DEBIAN_VERSION=stable-slim
-docker/build/deb/shell:
-	docker build -t cloudposse/fpm:$(DEBIAN_VERSION) -f deb/Dockerfile.$(DEBIAN_VERSION) .
+docker/build/rpm/shell docker/build/rpm/test : BUILDER_VERSION=centos8
+
+## Build package as a test
+docker/build/%/test:
+	docker build -t cloudposse/packages-$*build:$(BUILDER_VERSION) -f $*/Dockerfile.$(BUILDER_VERSION) .
+	docker run \
+		--name $*build \
+		--rm \
+		-e TMP=/packages/tmp/$* \
+		-e PACKAGES_PATH=/packages/artifacts/$*/$(BUILDER_VERSION) \
+		-v $$(pwd):/packages cloudposse/packages-$*build:$(BUILDER_VERSION) \
+		sh -c "make -C /packages/vendor/github-commenter $*"
+
+## Build package builder shell
+docker/build/%/shell:
+	rm -rf tmp/*
+	[ -n "$(ls tmp/)" ] && sudo rm -rf tmp/* || true
+	mkdir -p tmp/$*
+	docker build -t cloudposse/packages-$*build:$(BUILDER_VERSION) -f $*/Dockerfile.$(BUILDER_VERSION) .
 	docker run \
 		-it \
-		--name deb \
+		--name $*build \
 		--rm \
-		-e TMP=/packages/tmp \
-		-e DEB_PACKAGES_PATH=/packages/artifacts/$(DEBIAN_VERSION) \
-		-v $$(pwd):/packages cloudposse/fpm:$(DEBIAN_VERSION) \
+		-e TMP=/packages/tmp/$* \
+		-e PACKAGES_PATH=/packages/artifacts/$*/$(BUILDER_VERSION) \
+		-v $$(pwd):/packages cloudposse/packages-$*build:$(BUILDER_VERSION) \
 		bash
+
 
 
 help/vendor:
@@ -126,6 +134,6 @@ help/md:
 	@$(MAKE) --no-print-directory -s -C vendor help/md
 
 update/%:
-	rm -f vendor/$(subst update/,,$@)/VERSION
-	make -C vendor/$(subst update/,,$@) VERSION
+	rm -f vendor/$*/VERSION
+	make -C vendor/$* update
 	make readme

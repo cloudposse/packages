@@ -3,13 +3,9 @@ export MASTER_PACKAGE_NAME = teleport
 export PACKAGE_NAME = $(MASTER_PACKAGE_NAME)
 export MAJOR_VERSION = latest
 
-export DEB_PACKAGE_ENABLED = true
-export APK_PACKAGE_ENABLED = false
+export PACKAGE_TYPES_DISABLED = apk
 
-
-include ../../tasks/Makefile.package
-include ../../tasks/Makefile.apk
-include ../../tasks/Makefile.deb
+include ../../tasks/Makefile.vendor_includes
 
 # Package details
 export VENDOR ?= gravitational
@@ -25,9 +21,9 @@ install:
 	cd $(INSTALL_PATH) && $(CURL) -o - $(DOWNLOAD_URL) | tar --wildcards --strip-components=1 -zvx $(addprefix teleport/,$(PACKAGE_EXE))
 
 test:
-	teleport version | grep $(PACKAGE_VERSION)
-	tsh version | grep $(PACKAGE_VERSION)
-	tctl version | grep $(PACKAGE_VERSION)
+	teleport version | grep -F $(PACKAGE_VERSION)
+	tsh version | grep -F $(PACKAGE_VERSION)
+	tctl version | grep -F $(PACKAGE_VERSION)
 
 package/prepare::
 	@echo "make package/prepare ($(PACKAGE_EXE))"

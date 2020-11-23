@@ -2,11 +2,8 @@ export MASTER_PACKAGE_NAME = kubectl
 export MAJOR_VERSION = 1.17
 export PACKAGE_NAME = $(MASTER_PACKAGE_NAME)-$(MAJOR_VERSION)
 export PACKAGE_REPO_NAME = kubernetes
-export PACKAGE_VERSION_PIN = $(MAJOR_VERSION).x
 
-include ../../tasks/Makefile.package
-include ../../tasks/Makefile.apk
-include ../../tasks/Makefile.deb
+include ../../tasks/Makefile.vendor_includes
 
 # Package details
 export VENDOR = kubernetes
@@ -21,4 +18,4 @@ install:
 
 test:
 	pinned-package-sanity-check "$(PACKAGE_VERSION)" "$(MAJOR_VERSION)"
-	$(PACKAGE_EXE) version --client | grep $(PACKAGE_VERSION)
+	$(PACKAGE_EXE) version --client | grep -F $(PACKAGE_VERSION)

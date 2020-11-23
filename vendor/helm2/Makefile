@@ -3,11 +3,8 @@ export MAJOR_VERSION = 2
 export PACKAGE_NAME = $(MASTER_PACKAGE_NAME)$(MAJOR_VERSION)
 export PACKAGE_REPO_NAME = helm
 export DOWNLOAD_URL ?= https://get.helm.sh/helm-v$(PACKAGE_VERSION)-$(OS)-$(ARCH).tar.gz
-export PACKAGE_VERSION_PIN = $(MAJOR_VERSION).x
 
-include ../../tasks/Makefile.package
-include ../../tasks/Makefile.apk
-include ../../tasks/Makefile.deb
+include ../../tasks/Makefile.vendor_includes
 
 # Package details
 export VENDOR ?= helm

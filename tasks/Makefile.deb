@@ -1,7 +1,7 @@
-DEB_PACKAGES_PATH ?= .
-DEB_PACKAGE ?= $(DEB_PACKAGES_PATH)/$(PACKAGE_NAME)_$(PACKAGE_VERSION)_$(ARCH).deb 
+PACKAGES_PATH ?= .
+DEB_PACKAGES_PATH ?= $(PACKAGES_PATH)
+DEB_PACKAGE ?= $(DEB_PACKAGES_PATH)/$(PACKAGE_NAME)_$(PACKAGE_VERSION)_$(ARCH).deb
 DEB_MAINTAINER ?= Cloud Posse <packages@cloudposse.com>
-DEB_PACKAGE_ENABLED ?= true
 DEB_FPM_EXTRA_ARGS ?=
 DEB_FPM_EXTRA_FILES ?=
 
@@ -11,40 +11,42 @@ $(DEB_TMP_DIR)/$(PACKAGE_NAME): INSTALL_PATH=$(DEB_TMP_DIR)
 $(DEB_TMP_DIR)/$(PACKAGE_NAME): PATH:=$(DEB_TMP_DIR):$(PATH)
 $(DEB_TMP_DIR)/$(PACKAGE_NAME): install
 
-ifneq ($(wildcard $(PACKAGE_NAME).post-install),)
-$(DEB_PACKAGE): DEB_FPM_EXTRA_ARGS += --after-install $(PACKAGE_NAME).post-install 
-$(DEB_PACKAGE): DEB_FPM_EXTRA_FILES += $(PACKAGE_NAME).post-install
-endif
-ifneq ($(wildcard $(PACKAGE_NAME).post-deinstall),)
-$(DEB_PACKAGE): DEB_FPM_EXTRA_ARGS += --after-remove $(PACKAGE_NAME).post-deinstall
-$(DEB_PACKAGE): DEB_FPM_EXTRA_FILES += $(PACKAGE_NAME).post-deinstall
-endif
+$(DEB_PACKAGE): DEB_FPM_EXTRA_ARGS += $(if $(wildcard $(PACKAGE_NAME).post-install),--after-install $(PACKAGE_NAME).post-install)
+$(DEB_PACKAGE): DEB_FPM_EXTRA_ARGS += $(if $(wildcard $(PACKAGE_NAME).post-deinstall),--after-remove $(PACKAGE_NAME).post-deinstall)
 $(DEB_PACKAGE): $(DEB_TMP_DIR)/$(PACKAGE_NAME)
 	mkdir -p $(DEB_PACKAGES_PATH)
 	[ -z "$(DEB_FPM_EXTRA_FILES)" ] || cp -a $(DEB_FPM_EXTRA_FILES) $(DEB_TMP_DIR)
-	set -x; fpm --force -t deb --maintainer '$(DEB_MAINTAINER)' -s dir -a $(ARCH) -n $(PACKAGE_NAME) -v $(PACKAGE_VERSION) -C $(DEB_TMP_DIR) --prefix $${INSTALL_DIR:-/usr/bin} --deb-no-default-config-files $(DEB_FPM_EXTRA_ARGS) --package $@ .
+	set -x; fpm --force -t deb --maintainer '$(DEB_MAINTAINER)' -s dir -a $(DIST_ARCH) -n $(PACKAGE_NAME) -v $(PACKAGE_VERSION) --iteration $(PACKAGE_RELEASE) -C $(DEB_TMP_DIR) --prefix $${INSTALL_DIR:-/usr/bin} --deb-no-default-config-files $(DEB_FPM_EXTRA_ARGS) --package $@ .
 	@echo "Testing installation of $@"
 	apt-get install -y $@
-	apt --fix-broken install -y
 	$(MAKE) test
 	apt-get remove -y $(PACKAGE_NAME)
 
+.PHONY: deb deb_make_package deb_skip_package _deb_target _deb_settings/% deb/%
 
-ifneq ($(PACKAGE_ENABLED),true)
-deb:
-	@echo All packages disabled for $(PACKAGE_NAME) 
-	@exit 0
-else ifeq ($(DEB_PACKAGE_ENABLED),true)
-.PHONY : deb
-deb: $(DEB_PACKAGE)
+deb-make-package: $(DEB_PACKAGE)
 	@echo "Wrote $(DEB_PACKAGE)"
+
+deb-skip-package:
+	@echo Debian packages disabled for $(PACKAGE_NAME)
+
+# Pick which target to make (make, skip, disabled) based on settings
+_deb_target: $(shell $(LOCAL_BIN)/package-filter make-target deb $(PACKAGE_ENABLED) "$(PACKAGE_TYPES_DISABLED)")
+
+# use _deb_settings to set Debian-specific settings, then _deb_target to find the right build target
+deb: _deb_settings/_deb_target
 	@exit 0
-else
-.PHONY : deb
-deb:
-	@echo Debian packages disabled for $(PACKAGE_NAME) 
+
+# General rule to make any target with DEB-specific settings
+deb/%: _deb_settings/%
 	@exit 0
-endif
+
+_deb_settings/%: DIST_ARCH_DETECTED = $(or $(PACKAGE_DIST_ARCH),$(ARCH))
+_deb_settings/%: DIST_ARCH = $(if $(subst x86_64,,$(DIST_ARCH_DETECTED)),$(DIST_ARCH_DETECTED),amd64)
+_deb_settings/%: DIST_PACKAGE_TYPE = deb
+_deb_settings/%: DIST_DISTRIBUTION = debian
+_deb_settings/%: %
+	@exit 0
 
 clean::
 	rm -f $(DEB_PACKAGE)

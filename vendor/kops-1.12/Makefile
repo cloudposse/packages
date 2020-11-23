@@ -3,12 +3,11 @@ export MAJOR_VERSION = 1.12
 export PACKAGE_NAME = $(MASTER_PACKAGE_NAME)-$(MAJOR_VERSION)
 export PACKAGE_REPO_NAME = kops
 export DOWNLOAD_URL = https://github.com/kubernetes/kops/releases/download/$(PACKAGE_VERSION)/kops-$(OS)-$(ARCH)
-export PACKAGE_VERSION_PIN = $(MAJOR_VERSION).x
+# This package is obsolete, so no further updates should be attempted
+export PACKAGE_ENABLED = false
 export AUTO_UPDATE_ENABLED = false
 
-include ../../tasks/Makefile.package
-include ../../tasks/Makefile.apk
-include ../../tasks/Makefile.deb
+include ../../tasks/Makefile.vendor_includes
 
 # Package details
 #
@@ -24,4 +23,4 @@ install:
 
 test:
 	pinned-package-sanity-check "$(PACKAGE_VERSION)" "$(MAJOR_VERSION)"
-	$(PACKAGE_EXE) version | grep $(PACKAGE_VERSION)
+	$(PACKAGE_EXE) version | grep -F $(PACKAGE_VERSION)

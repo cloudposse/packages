@@ -1,0 +1,9 @@
+# This makefile is the one that should be included in every vendor/*/Makefile
+
+# This gets the directory of the last Makefile opened, which here is the current one
+SELF_DIR := $(dir $(lastword $(MAKEFILE_LIST)))
+
+include $(SELF_DIR)/Makefile.package
+include $(SELF_DIR)/Makefile.apk
+include $(SELF_DIR)/Makefile.deb
+include $(SELF_DIR)/Makefile.rpm

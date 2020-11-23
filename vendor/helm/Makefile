@@ -1,6 +1,4 @@
-include ../../tasks/Makefile.package
-include ../../tasks/Makefile.apk
-include ../../tasks/Makefile.deb
+include ../../tasks/Makefile.vendor_includes
 
 # Package details
 export VENDOR ?= helm
@@ -19,7 +17,7 @@ install:
 	chmod +x $(INSTALL_PATH)/helm
 
 test:
-	$(PACKAGE_EXE) version | grep $(PACKAGE_VERSION)
+	$(PACKAGE_EXE) version | grep -F $(PACKAGE_VERSION)
 
 package/prepare::
 	mv src/$(OS)-$(ARCH)/helm src

@@ -1,6 +1,6 @@
 #
 # This workflow was created automatically from the `package-template.yml` by running `make -C .github workflows`
-# DO NOT EDIT THIS WORKFLOW
+# DO NOT EDIT THIS WORKFLOW, changes will be lost on the next update.
 #
 
 name: "shfmt"
@@ -12,6 +12,8 @@ on:
     paths:
       - apk/**
       - deb/**
+      - rpm/**
+      - tasks/**
       - vendor/shfmt/**
       - .github/workflows/shfmt.yml
 
@@ -21,85 +23,40 @@ on:
     paths:
       - apk/**
       - deb/**
+      - rpm/**
+      - tasks/**
       - vendor/shfmt/**
       - .github/workflows/shfmt.yml
 
-  schedule:
-    # Update packages nightly
-    - cron:  '0 0 * * *'
-
 jobs:
-  auto-update:
-    if: github.event_name == 'schedule'
+  matrix:
+    if: github.event_name != 'schedule'
     runs-on: ubuntu-latest
+    outputs:
+      package-enabled: ${{ steps.info.outputs.package_enabled }}
+      package-matrix:  ${{steps.info.outputs.package_matrix}}
+      apk-enabled: ${{ steps.info.outputs.package_enabled == 'true' && steps.info.outputs.apk_package_enabled == 'true' }}
     steps:
-      - uses: actions/checkout@v2
+    - uses: actions/checkout@v2
 
-      - name: Get current package information
-        shell: bash
-        id: current
-        env:
-          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
-        run: |
-          make -C vendor/shfmt info/github
+    - name: Export package build matrix
+      shell: bash
+      id: info
+      env:
+        GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+      run: |
+        echo setting ouputs
+        make -C vendor/shfmt info/github
+        echo
+        echo outputs set
+        make -C vendor/shfmt info/github | sed s'/::set-output name=//' | sed 's/::/=/'
 
-      - name: Update packages
-        shell: bash
-        id: update
-        env:
-          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
-        run: |
-          make -C vendor/shfmt auto-update
-          make -C vendor/shfmt info/github
-
-      - name: Update readme
-        shell: bash
-        id: readme
-        if: steps.update.outputs.package_version != steps.current.outputs.package_version
-        env:
-          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
-        run: |
-          make init
-          make readme/deps
-          make readme
-
-      - name: Create Pull Request
-        uses: cloudposse/actions/github/create-pull-request@0.20.0
-        if: steps.update.outputs.package_version != steps.current.outputs.package_version
-        with:
-          token: ${{ secrets.GITHUB_BOT_TOKEN }}
-          commit-message: Update ${{ steps.update.outputs.package_name }} to ${{ steps.current.outputs.package_version }} → ${{ steps.update.outputs.package_version }}
-          title: Update ${{ steps.update.outputs.package_name }} to ${{ steps.update.outputs.package_version }}
-          body: |-
-            ## what
-
-            This is an auto-generated PR that updates the ${{ steps.update.outputs.package_name }} package version.
-            
-            | Meta              | Details                                      |
-            |:------------------|:---------------------------------------------|
-            | **Package Name**  | `${{ steps.update.outputs.package_name }}`   |
-            | **Vendor**        | [${{ steps.update.outputs.vendor }}](${{ steps.update.outputs.package_homepage_url }}) |
-            | **Version**       | ${{ steps.update.outputs.package_version }}  |
-            | **License**       | ${{ steps.update.outputs.package_license }}  |
-            | **Repo**          | ${{ steps.update.outputs.package_repo_url }} |
-            | **Arch**          | ${{ steps.update.outputs.arch }}             |
-            | **OS**            | ${{ steps.update.outputs.os }}               |
-            | **Download URL**  | ${{ steps.update.outputs.download_url }}     |
-
-            ## why
-
-            Publish the latest release of `${{ steps.update.outputs.package_name }}` to our package repository.
-
-          branch: auto-update/${{ steps.update.outputs.package_name }}-${{ steps.update.outputs.package_version }}
-          base: master
-          delete-branch: true
-          labels: |
-            auto-update
-            vendor/${{ steps.update.outputs.package_name }}
 
   # Build for alpine linux
+  # Kept separate because it is old and slightly different than the other package builds
   alpine:
-    if: github.event_name != 'schedule'
+    needs: matrix
+    if: github.event_name != 'schedule' && needs.matrix.outputs.apk-enabled != 'false'
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -119,36 +76,34 @@ jobs:
       - name: "Checkout source code at current commit"
         uses: actions/checkout@v2
 
-      # Export the individual package's configuration as GitHub Action outputs
-      - name: "Export package config as outputs"
-        id: config
-        run: "make -C vendor/${{github.workflow}} info/github"
-
       # Export the apk keys as files from secrets
       - name: "Export keys"
-        if: steps.config.outputs.package_enabled == 'true' && steps.config.outputs.apk_package_enabled == 'true'
         run: "make -C .github/ export"
 
       # Build the alpine packages for the matrix version of alpine
       - name: "Build alpine packages"
-        if: steps.config.outputs.package_enabled == 'true' && steps.config.outputs.apk_package_enabled == 'true'
         run: "make -C vendor/${{github.workflow}} apk"
 
       # Verify the packages were built or error
       - name: "List packages"
-        if: steps.config.outputs.package_enabled == 'true' && steps.config.outputs.apk_package_enabled == 'true'
         run: 'find ${APK_PACKAGES_PATH} -type f -name \*.apk | xargs --no-run-if-empty ls -l | grep .'
 
       # Export the artifact filename including path
+      # Path must be relative to workdir for Cloudsmith action to be able to find it
       - name: "Set output path to artifact"
-        if: steps.config.outputs.package_enabled == 'true' && steps.config.outputs.apk_package_enabled == 'true'
         id: artifact
-        run: 'echo "::set-output name=path::$(find artifacts/ -type f -name \*.apk)"'
+        shell: bash
+        run: |
+          artifact=$(find artifacts/${{matrix.alpine}} -type f -name \*.apk)
+          echo "::set-output name=path::$artifact"
+          echo "set output path=$artifact"
+          echo creating '"pip"' cache directory for Cloudsmith
+          mkdir -p $HOME/.cache/pip && chmod -R 777 $HOME/.cache || echo Ignoring error creating '"pip"' cache directory
+
 
       # Determine which package organization we should use (e.g. dev or prod)
       - name: "Determine package repo"
         shell: bash
-        if: steps.config.outputs.package_enabled == 'true' && steps.config.outputs.apk_package_enabled == 'true'
         id: repo
         run: |
           if [[ ${GITHUB_REF} == 'refs/heads/master' ]]; then
@@ -161,7 +116,6 @@ jobs:
 
       # Publish the artifacts
       - name: "Push artifact to package repository"
-        if: steps.config.outputs.package_enabled == 'true' && steps.config.outputs.apk_package_enabled == 'true'
         uses: cloudsmith-io/action@v0.5.1
         with:
           api-key: ${{ secrets.CLOUDSMITH_API_KEY }}
@@ -175,49 +129,71 @@ jobs:
           file: '${{steps.artifact.outputs.path}}'          # Package filename (including path)
           no-wait-for-sync: 'true'                          # Skip the waiting for package synchronisation (i.e. upload only)
 
-  # Build for alpine linux
-  debian:
-    if: github.event_name != 'schedule'
+  # Build packages with fpm package manager
+  package:
+    needs: matrix
+    # Should not be needed, but without these conditions, this job would fail with an error if the matrix is []
+    # and would run with package-type empty if matrix is ["apk"]
+    if: >
+      github.event_name != 'schedule' && needs.matrix.outputs.package-enabled != 'false'
+      && needs.matrix.outputs.package-matrix != '[]' && needs.matrix.outputs.package-matrix != '["apk"]'
+
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        any-release:
-          - 'any-version'
-
+        package-type: ${{ fromJSON(needs.matrix.outputs.package-matrix) }}
+        exclude:
+        - package-type: 'apk'
     env:
-      DEB_PACKAGES_PATH: ${{github.workspace}}/artifacts/${{matrix.any-release}}
+      # We are in a bit of a bind here because of how GitHub actions work as of 2020-11-19
+      # Although the "workspace" is mounted to the container, it is not mounted
+      # at `/github/workspace` or ${{github.workspace}}, although through some
+      # mechanism, an environment variable whose value starts with ${{github.workspace}}
+      # will have ${{github.workspace}} replaced with the correct mount point.
+      #
+      # We need an absolute path for the package build system, since every build happens
+      # in a different directory, but because the mount point changes, we also
+      # need a path relative to the initial working directory to communicate between
+      # the package building container and the cloudsmith action.
+      PACKAGES_PATH: ${{github.workspace}}/artifacts/${{matrix.package-type}}/any-version
+      PACKAGE_RELPATH: artifacts/${{matrix.package-type}}/any-version
 
-    container: cloudposse/packages-debbuild:stable-slim
+    # Unfortunately, there is no reasonable way to configure the docker image tag based on the package-type
+    container: cloudposse/packages-${{matrix.package-type}}build:latest
     steps:
       # Checkout the packages repo so we can build the packages as a monorepo
       - name: "Checkout source code at current commit"
         uses: actions/checkout@v2
 
-      # Export the individual package's configuration as GitHub Action outputs
-      - name: "Export package config as outputs"
-        id: config
-        run: "make -C vendor/${{github.workflow}} info/github"
-
-      # Build the debian packages for the matrix version of debian
-      - name: "Build debian packages"
-        if: steps.config.outputs.package_enabled == 'true' && steps.config.outputs.deb_package_enabled == 'true'
-        run: "make -C vendor/${{github.workflow}} deb"
-
-      # Verify the packages were built or error
-      - name: "List packages"
-        if: steps.config.outputs.package_enabled == 'true' && steps.config.outputs.deb_package_enabled == 'true'
-        run: 'find ${APK_PACKAGES_PATH} -type f -name \*.deb | xargs --no-run-if-empty ls -l | grep .'
+      # Build the packages for the matrix version
+      - name: "Build ${{matrix.package-type}} packages"
+        shell: bash
+        run: |
+          echo Current directory is $(pwd)
+          [[ $PACKAGES_PATH =~ ^$(pwd) ]] || { echo Package dir \"$PACKAGES_PATH\" not beneath workdir \"$(pwd)\" >&2; exit 1; }
+          make -C vendor/${{github.workflow}} ${{matrix.package-type}}
 
       # Export the artifact filename including path
       - name: "Set output path to artifact"
-        if: steps.config.outputs.package_enabled == 'true' && steps.config.outputs.deb_package_enabled == 'true'
         id: artifact
-        run: 'echo "::set-output name=path::$(find artifacts/ -type f -name \*.deb)"'
+        shell: bash
+        run: |
+          [[ -n $PACKAGE_RELPATH ]] || { echo Error: PACKAGE_RELPATH is not set >&2; exit 1; }
+          packages=($(find ${PACKAGE_RELPATH} -type f -name \*.${{matrix.package-type}}))
+          echo List packages found:
+          printf "%s\n" "${packages[@]}" | xargs --no-run-if-empty ls -l
+          echo Error if not exactly 1 package found
+          (( ${#packages[@]} == 1 )) || { echo "Error: other than 1 package found (${#packages[@]})" >&2; exit 1; }
+
+          echo "setting output name=path::$packages"
+          echo "::set-output name=path::$packages"
+
+          echo creating '"pip"' cache directory for Cloudsmith
+          mkdir -p $HOME/.cache/pip && chmod -R 777 $HOME/.cache || echo Ignoring error creating '"pip"' cache directory
 
       # Determine which package organization we should use (e.g. dev or prod)
       - name: "Determine package repo"
         shell: bash
-        if: steps.config.outputs.package_enabled == 'true' && steps.config.outputs.deb_package_enabled == 'true'
         id: repo
         run: |
           if [[ ${GITHUB_REF} == 'refs/heads/master' ]]; then
@@ -230,12 +206,11 @@ jobs:
 
       # Publish the artifacts
       - name: "Push artifact to package repository"
-        if: steps.config.outputs.package_enabled == 'true' && steps.config.outputs.deb_package_enabled == 'true'
         uses: cloudsmith-io/action@v0.5.1
         with:
           api-key: ${{ secrets.CLOUDSMITH_API_KEY }}
           command: 'push'
-          format: 'deb'
+          format: '${{matrix.package-type}}'
           owner: '${{steps.repo.outputs.org}}'              # Your Cloudsmith account name or org name (namespace)
           repo: 'packages'                                  # Your Cloudsmith Repository name (slug)
           distro: 'any-distro'                              # Use "any-distro" since our package is compatible with more than more distribution
