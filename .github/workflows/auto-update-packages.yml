@@ -6,13 +6,16 @@
 name: "auto-update-packages"
 on:
   schedule:
-    # Update packages nightly
-    - cron:  '0 0 * * *'
+    # See cron format at https://docs.github.com/en/free-pro-team@latest/actions/reference/events-that-trigger-workflows#scheduled-events
+    # Update packages 5am and 4pm PST
+    - cron:  '0 0,13 * * *'
 
 jobs:
   auto-update:
     runs-on: ubuntu-latest
     strategy:
+      # do not let 1 failure stop the other jobs from proceeding
+      fail-fast: false
       matrix:
         package-name:
         - amtool
