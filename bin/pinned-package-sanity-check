@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# Usage: $0 package-version major-version
+PACKAGE_VERSION="$1"
+MAJOR_VERSION="$2"
+
+printf "Verifing Package Version \"${PACKAGE_VERSION}\" matches Major Version \"${MAJOR_VERSION}\"... "
+{ echo "${PACKAGE_VERSION}" | grep "^${MAJOR_VERSION}" >/dev/null && echo "Success"; } || { echo 'Fail!' >&2 && false; }

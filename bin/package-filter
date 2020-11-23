@@ -1,0 +1,103 @@
+#!/bin/bash
+
+# This is a utility script to extend the package makefiles with some
+# intelligence around whether or not to make a package for a given package type.
+# It is not intended for human usage.
+
+SUPPORTED_PACKAGE_TYPES=(apk deb rpm)
+
+function package_type_enabled() {
+  local package_type=${1,,}
+  local package_types_disabled=${2,,}
+
+  if [[ ! " ${SUPPORTED_PACKAGE_TYPES[@]} " =~ " $package_type " ]]; then
+    echo Unsupported package type \"$package_type\" >&2
+    exit 1
+  fi
+
+  if [[ $package_types_disabled =~ $package_type ]]; then
+    echo false
+  else
+    echo true
+  fi
+}
+
+MAKE_PACKAGE_TARGET="-make-package"
+SKIP_PACKAGE_TARGET="-skip-package"
+SKIP_TARGET="_package-disabled"
+
+function make_target() {
+  local package_type=${1,,}
+  local package_enabled=${2,,}
+  local package_types_disabled=${3,,}
+  local legacy_package_enabled=${4,,}
+
+  if [[ ! " ${SUPPORTED_PACKAGE_TYPES[@]} " =~ " $package_type " ]]; then
+    echo Unsupported package type \"$package_type\" >&2
+    exit 1
+  fi
+
+  [[ $legacy_package_enabled == "false" ]] && package_types_disabled+=" $package_type"
+
+  if [[ $package_enabled == "false" ]]; then
+    echo $SKIP_TARGET
+  elif [[ $(package_type_enabled "$package_type" "$package_types_disabled") == "true" ]]; then
+    printf "%s%s\n" $package_type $MAKE_PACKAGE_TARGET
+  else
+    printf "%s%s\n" $package_type $SKIP_PACKAGE_TARGET
+  fi
+}
+
+# We will support legacy APK_PACKAGE_ENABLED var as wel as PACKAGE_DISABLED_TYPES for apk
+# apk package is disabled if APK_PACKAGE_ENABLED is not empty or "true" or "apk" is included in PACKAGE_DISABLED_TYPES
+function apk_enabled() {
+  local apk_package_enabled=${1:-true}
+  local package_types_disabled=${2,,}
+
+  if [[ $apk_package_enabled != true || $package_types_disabled =~ "apk" ]]; then
+    echo false
+  else
+    echo true
+  fi
+}
+
+GITHUB_FORMAT_PACKAGE="::set-output name=%s_package_enabled::%s\n"
+GITHUB_FORMAT_MATRIX="::set-output name=package_matrix::%s\n"
+
+function info_github() {
+  local apk_package_enabled=${1:-true}
+  local package_types_disabled=${2,,}
+
+  local matrix="["
+  local enabled
+
+  for pkg in "${SUPPORTED_PACKAGE_TYPES[@]}"; do
+    if [[ $pkg == "apk" ]]; then
+      enabled=$(apk_enabled "$@")
+    else
+      enabled=$(package_type_enabled "$pkg" "$package_types_disabled")
+    fi
+    if [[ $enabled == "true" ]]; then
+      [[ $matrix == "[" ]] || matrix+=","
+      matrix+="\"$pkg\""
+    fi
+    printf "$GITHUB_FORMAT_PACKAGE" "$pkg" "$enabled"
+  done
+  matrix+="]"
+  printf "$GITHUB_FORMAT_MATRIX" "$matrix"
+}
+
+case "$1" in
+  make-target)
+    shift
+    make_target "$@"
+    ;;
+  apk-enabled)
+    shift
+    apk_enabled "$@"
+    ;;
+  info/github)
+    shift
+    info_github "$@"
+    ;;
+esac

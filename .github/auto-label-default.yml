@@ -4,10 +4,11 @@ codefresh:
 
 docker:
 - Dockerfile
-- apk/Dockerfile.*
+- "*/Dockerfile.*"
 
-docs:
-- docs/**
+# Docs are updated on every PR, not a helpful label
+#docs:
+#- docs/**
 
 github:
 - .github/**
@@ -15,3 +16,7 @@ github:
 scripts:
 - bin/**
 - tasks/**
+
+# suppress individual package labels when scripts change,
+# because they affect all packages, we have more than 100 packages,
+# and there is a limit of 100 labels on a PR.

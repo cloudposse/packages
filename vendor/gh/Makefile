@@ -1,8 +1,4 @@
 ## Package - gh
-include ../../tasks/Makefile.package
-include ../../tasks/Makefile.apk
-include ../../tasks/Makefile.deb
-
 export VENDOR = cli
 export PACKAGE_NAME = gh
 export PACKAGE_REPO_NAME = cli
@@ -10,10 +6,12 @@ export DOWNLOAD_URL ?= $(PACKAGE_REPO_URL)/releases/download/v$(PACKAGE_VERSION)
 export APK_BUILD_TEMPLATE ?= APKBUILD.github-binary
 
 ## Uncomment only if you need additional libraries
-export APKBUILD_DEPENDS += libc6-compat musl
+export APKBUILD_DEPENDS += libc6-compat
+
+include ../../tasks/Makefile.vendor_includes
 
 install:
-	$(call download_tarball)
+	$(call download_tar_gz)
 
 test:
 	$(PACKAGE_EXE) --version

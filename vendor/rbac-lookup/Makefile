@@ -3,9 +3,7 @@ export VENDOR ?= reactiveops
 export PACKAGE_REPO_NAME ?= rbac-lookup
 export APK_BUILD_TEMPLATE ?= APKBUILD.github-binary
 
-include ../../tasks/Makefile.package
-include ../../tasks/Makefile.apk
-include ../../tasks/Makefile.deb
+include ../../tasks/Makefile.vendor_includes
 
 
 ifeq ($(OS), darwin)

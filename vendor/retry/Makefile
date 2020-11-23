@@ -1,6 +1,7 @@
-include ../../tasks/Makefile.package
-include ../../tasks/Makefile.apk
-include ../../tasks/Makefile.deb
+# This binary is now easily available with `go get` so we no longer need the package.
+export PACKAGE_ENABLED = false
+
+include ../../tasks/Makefile.vendor_includes
 
 ifeq ($(OS), darwin)
   OS=macOS

@@ -1,0 +1,16 @@
+#!/bin/sh
+# This is an Alpine Package `post-install` hook that links
+# an alternative from `/usr/share/${PACKAGE_NAME}/$version/bin` into `/usr/bin/`
+MASTER_PACKAGE_NAME=teleport
+PINNED_VERSION=latest
+PACKAGE_NAME=${MASTER_PACKAGE_NAME}-${PINNED_VERSION}
+INSTALL_DIR=/usr/share/${MASTER_PACKAGE_NAME}/${PINNED_VERSION}/bin
+QUIET=""
+
+update-alternatives --help | grep -- --quiet >/dev/null 2>&1 && QUIET="--quiet"
+
+for exe in teleport tsh tctl; do
+  update-alternatives --remove ${exe} ${INSTALL_DIR}/${exe} $QUIET
+done
+
+exit 0

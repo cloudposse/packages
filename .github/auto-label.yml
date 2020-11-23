@@ -4,10 +4,11 @@ codefresh:
 
 docker:
 - Dockerfile
-- apk/Dockerfile.*
+- "*/Dockerfile.*"
 
-docs:
-- docs/**
+# Docs are updated on every PR, not a helpful label
+#docs:
+#- docs/**
 
 github:
 - .github/**
@@ -15,123 +16,382 @@ github:
 scripts:
 - bin/**
 - tasks/**
-vendor: vendor/**
-vendor/amtool: vendor/amtool/**
-vendor/argocd: vendor/argocd/**
-vendor/assume-role: vendor/assume-role/**
-vendor/atlantis: vendor/atlantis/**
-vendor/awless: vendor/awless/**
-vendor/aws-iam-authenticator: vendor/aws-iam-authenticator/**
-vendor/aws-okta: vendor/aws-okta/**
-vendor/aws-vault: vendor/aws-vault/**
-vendor/cfssl: vendor/cfssl/**
-vendor/cfssljson: vendor/cfssljson/**
-vendor/chamber: vendor/chamber/**
-vendor/cli53: vendor/cli53/**
-vendor/cloudflared: vendor/cloudflared/**
-vendor/cloudposse-atlantis: vendor/cloudposse-atlantis/**
-vendor/codefresh: vendor/codefresh/**
-vendor/conftest: vendor/conftest/**
-vendor/consul: vendor/consul/**
-vendor/ctop: vendor/ctop/**
-vendor/direnv: vendor/direnv/**
-vendor/doctl: vendor/doctl/**
-vendor/duffle: vendor/duffle/**
-vendor/emailcli: vendor/emailcli/**
-vendor/fargate: vendor/fargate/**
-vendor/fetch: vendor/fetch/**
-vendor/figurine: vendor/figurine/**
-vendor/fzf: vendor/fzf/**
-vendor/gh: vendor/gh/**
-vendor/ghr: vendor/ghr/**
-vendor/github-commenter: vendor/github-commenter/**
-vendor/github-release: vendor/github-release/**
-vendor/github-status-updater: vendor/github-status-updater/**
-vendor/gitleaks: vendor/gitleaks/**
-vendor/gomplate: vendor/gomplate/**
-vendor/gonsul: vendor/gonsul/**
-vendor/goofys: vendor/goofys/**
-vendor/gosu: vendor/gosu/**
-vendor/gotop: vendor/gotop/**
-vendor/helm: vendor/helm/**
-vendor/helm2: vendor/helm2/**
-vendor/helm3: vendor/helm3/**
-vendor/helmfile: vendor/helmfile/**
-vendor/htmltest: vendor/htmltest/**
-vendor/hugo: vendor/hugo/**
-vendor/jp: vendor/jp/**
-vendor/jq: vendor/jq/**
-vendor/json2hcl: vendor/json2hcl/**
-vendor/jx: vendor/jx/**
-vendor/k3d: vendor/k3d/**
-vendor/k6: vendor/k6/**
-vendor/k9s: vendor/k9s/**
-vendor/katafygio: vendor/katafygio/**
-vendor/kfctl: vendor/kfctl/**
-vendor/kind: vendor/kind/**
-vendor/kops-1.12: vendor/kops-1.12/**
-vendor/kops: vendor/kops/**
-vendor/krew: vendor/krew/**
-vendor/kubecron: vendor/kubecron/**
-vendor/kubectl-1.13: vendor/kubectl-1.13/**
-vendor/kubectl-1.14: vendor/kubectl-1.14/**
-vendor/kubectl-1.15: vendor/kubectl-1.15/**
-vendor/kubectl-1.16: vendor/kubectl-1.16/**
-vendor/kubectl-1.17: vendor/kubectl-1.17/**
-vendor/kubectl-1.18: vendor/kubectl-1.18/**
-vendor/kubectl-1.19: vendor/kubectl-1.19/**
-vendor/kubectl: vendor/kubectl/**
-vendor/kubectx: vendor/kubectx/**
-vendor/kubens: vendor/kubens/**
-vendor/kubeval: vendor/kubeval/**
-vendor/lazydocker: vendor/lazydocker/**
-vendor/lectl: vendor/lectl/**
-vendor/minikube: vendor/minikube/**
-vendor/misspell: vendor/misspell/**
-vendor/nomad: vendor/nomad/**
-vendor/opa: vendor/opa/**
-vendor/pack: vendor/pack/**
-vendor/packer: vendor/packer/**
-vendor/pandoc: vendor/pandoc/**
-vendor/pgmetrics: vendor/pgmetrics/**
-vendor/pluto: vendor/pluto/**
-vendor/popeye: vendor/popeye/**
-vendor/promtool: vendor/promtool/**
-vendor/rakkess: vendor/rakkess/**
-vendor/rancher: vendor/rancher/**
-vendor/rbac-lookup: vendor/rbac-lookup/**
-vendor/retry: vendor/retry/**
-vendor/saml2aws: vendor/saml2aws/**
-vendor/scenery: vendor/scenery/**
-vendor/sentinel: vendor/sentinel/**
-vendor/sentry-cli: vendor/sentry-cli/**
-vendor/shellcheck: vendor/shellcheck/**
-vendor/shfmt: vendor/shfmt/**
-vendor/slack-notifier: vendor/slack-notifier/**
-vendor/sops: vendor/sops/**
-vendor/stern: vendor/stern/**
-vendor/sudosh: vendor/sudosh/**
-vendor/teleport: vendor/teleport/**
-vendor/terraform-0.11: vendor/terraform-0.11/**
-vendor/terraform-0.12: vendor/terraform-0.12/**
-vendor/terraform-0.13: vendor/terraform-0.13/**
-vendor/terraform-0.14: vendor/terraform-0.14/**
-vendor/terraform-docs: vendor/terraform-docs/**
-vendor/terraform: vendor/terraform/**
-vendor/terraform_0.11: vendor/terraform_0.11/**
-vendor/terraform_0.12: vendor/terraform_0.12/**
-vendor/terraform_0.13: vendor/terraform_0.13/**
-vendor/terraform_0.14: vendor/terraform_0.14/**
-vendor/terragrunt: vendor/terragrunt/**
-vendor/terrahelp: vendor/terrahelp/**
-vendor/tfenv: vendor/tfenv/**
-vendor/tfmask: vendor/tfmask/**
-vendor/thanos: vendor/thanos/**
-vendor/trivy: vendor/trivy/**
-vendor/variant: vendor/variant/**
-vendor/variant2: vendor/variant2/**
-vendor/vault: vendor/vault/**
-vendor/vendir: vendor/vendir/**
-vendor/venona: vendor/venona/**
-vendor/vert: vendor/vert/**
-vendor/yq: vendor/yq/**
+
+# suppress individual package labels when scripts change,
+# because they affect all packages, we have more than 100 packages,
+# and there is a limit of 100 labels on a PR.
+vendor:
+- any: ["vendor/**"]
+  all: ["!bin/**", "!tasks/**"]
+vendor/amtool:
+- any: ["vendor/amtool/**"]
+  all: ["!bin/**", "!tasks/**"]
+vendor/argocd:
+- any: ["vendor/argocd/**"]
+  all: ["!bin/**", "!tasks/**"]
+vendor/assume-role:
+- any: ["vendor/assume-role/**"]
+  all: ["!bin/**", "!tasks/**"]
+vendor/atlantis:
+- any: ["vendor/atlantis/**"]
+  all: ["!bin/**", "!tasks/**"]
+vendor/awless:
+- any: ["vendor/awless/**"]
+  all: ["!bin/**", "!tasks/**"]
+vendor/aws-iam-authenticator:
+- any: ["vendor/aws-iam-authenticator/**"]
+  all: ["!bin/**", "!tasks/**"]
+vendor/aws-okta:
+- any: ["vendor/aws-okta/**"]
+  all: ["!bin/**", "!tasks/**"]
+vendor/aws-vault:
+- any: ["vendor/aws-vault/**"]
+  all: ["!bin/**", "!tasks/**"]
+vendor/cfssl:
+- any: ["vendor/cfssl/**"]
+  all: ["!bin/**", "!tasks/**"]
+vendor/cfssljson:
+- any: ["vendor/cfssljson/**"]
+  all: ["!bin/**", "!tasks/**"]
+vendor/chamber:
+- any: ["vendor/chamber/**"]
+  all: ["!bin/**", "!tasks/**"]
+vendor/cli53:
+- any: ["vendor/cli53/**"]
+  all: ["!bin/**", "!tasks/**"]
+vendor/cloudflared:
+- any: ["vendor/cloudflared/**"]
+  all: ["!bin/**", "!tasks/**"]
+vendor/cloudposse-atlantis:
+- any: ["vendor/cloudposse-atlantis/**"]
+  all: ["!bin/**", "!tasks/**"]
+vendor/codefresh:
+- any: ["vendor/codefresh/**"]
+  all: ["!bin/**", "!tasks/**"]
+vendor/conftest:
+- any: ["vendor/conftest/**"]
+  all: ["!bin/**", "!tasks/**"]
+vendor/consul:
+- any: ["vendor/consul/**"]
+  all: ["!bin/**", "!tasks/**"]
+vendor/ctop:
+- any: ["vendor/ctop/**"]
+  all: ["!bin/**", "!tasks/**"]
+vendor/direnv:
+- any: ["vendor/direnv/**"]
+  all: ["!bin/**", "!tasks/**"]
+vendor/doctl:
+- any: ["vendor/doctl/**"]
+  all: ["!bin/**", "!tasks/**"]
+vendor/duffle:
+- any: ["vendor/duffle/**"]
+  all: ["!bin/**", "!tasks/**"]
+vendor/emailcli:
+- any: ["vendor/emailcli/**"]
+  all: ["!bin/**", "!tasks/**"]
+vendor/fargate:
+- any: ["vendor/fargate/**"]
+  all: ["!bin/**", "!tasks/**"]
+vendor/fetch:
+- any: ["vendor/fetch/**"]
+  all: ["!bin/**", "!tasks/**"]
+vendor/figurine:
+- any: ["vendor/figurine/**"]
+  all: ["!bin/**", "!tasks/**"]
+vendor/fzf:
+- any: ["vendor/fzf/**"]
+  all: ["!bin/**", "!tasks/**"]
+vendor/gh:
+- any: ["vendor/gh/**"]
+  all: ["!bin/**", "!tasks/**"]
+vendor/ghr:
+- any: ["vendor/ghr/**"]
+  all: ["!bin/**", "!tasks/**"]
+vendor/github-commenter:
+- any: ["vendor/github-commenter/**"]
+  all: ["!bin/**", "!tasks/**"]
+vendor/github-release:
+- any: ["vendor/github-release/**"]
+  all: ["!bin/**", "!tasks/**"]
+vendor/github-status-updater:
+- any: ["vendor/github-status-updater/**"]
+  all: ["!bin/**", "!tasks/**"]
+vendor/gitleaks:
+- any: ["vendor/gitleaks/**"]
+  all: ["!bin/**", "!tasks/**"]
+vendor/gomplate:
+- any: ["vendor/gomplate/**"]
+  all: ["!bin/**", "!tasks/**"]
+vendor/gonsul:
+- any: ["vendor/gonsul/**"]
+  all: ["!bin/**", "!tasks/**"]
+vendor/goofys:
+- any: ["vendor/goofys/**"]
+  all: ["!bin/**", "!tasks/**"]
+vendor/gosu:
+- any: ["vendor/gosu/**"]
+  all: ["!bin/**", "!tasks/**"]
+vendor/gotop:
+- any: ["vendor/gotop/**"]
+  all: ["!bin/**", "!tasks/**"]
+vendor/grpcurl:
+- any: ["vendor/grpcurl/**"]
+  all: ["!bin/**", "!tasks/**"]
+vendor/helm:
+- any: ["vendor/helm/**"]
+  all: ["!bin/**", "!tasks/**"]
+vendor/helm2:
+- any: ["vendor/helm2/**"]
+  all: ["!bin/**", "!tasks/**"]
+vendor/helm3:
+- any: ["vendor/helm3/**"]
+  all: ["!bin/**", "!tasks/**"]
+vendor/helmfile:
+- any: ["vendor/helmfile/**"]
+  all: ["!bin/**", "!tasks/**"]
+vendor/htmltest:
+- any: ["vendor/htmltest/**"]
+  all: ["!bin/**", "!tasks/**"]
+vendor/hugo:
+- any: ["vendor/hugo/**"]
+  all: ["!bin/**", "!tasks/**"]
+vendor/jp:
+- any: ["vendor/jp/**"]
+  all: ["!bin/**", "!tasks/**"]
+vendor/jq:
+- any: ["vendor/jq/**"]
+  all: ["!bin/**", "!tasks/**"]
+vendor/json2hcl:
+- any: ["vendor/json2hcl/**"]
+  all: ["!bin/**", "!tasks/**"]
+vendor/jx:
+- any: ["vendor/jx/**"]
+  all: ["!bin/**", "!tasks/**"]
+vendor/k3d:
+- any: ["vendor/k3d/**"]
+  all: ["!bin/**", "!tasks/**"]
+vendor/k6:
+- any: ["vendor/k6/**"]
+  all: ["!bin/**", "!tasks/**"]
+vendor/k9s:
+- any: ["vendor/k9s/**"]
+  all: ["!bin/**", "!tasks/**"]
+vendor/katafygio:
+- any: ["vendor/katafygio/**"]
+  all: ["!bin/**", "!tasks/**"]
+vendor/kfctl:
+- any: ["vendor/kfctl/**"]
+  all: ["!bin/**", "!tasks/**"]
+vendor/kind:
+- any: ["vendor/kind/**"]
+  all: ["!bin/**", "!tasks/**"]
+vendor/kops-1.12:
+- any: ["vendor/kops-1.12/**"]
+  all: ["!bin/**", "!tasks/**"]
+vendor/kops:
+- any: ["vendor/kops/**"]
+  all: ["!bin/**", "!tasks/**"]
+vendor/krew:
+- any: ["vendor/krew/**"]
+  all: ["!bin/**", "!tasks/**"]
+vendor/kubecron:
+- any: ["vendor/kubecron/**"]
+  all: ["!bin/**", "!tasks/**"]
+vendor/kubectl-1.13:
+- any: ["vendor/kubectl-1.13/**"]
+  all: ["!bin/**", "!tasks/**"]
+vendor/kubectl-1.14:
+- any: ["vendor/kubectl-1.14/**"]
+  all: ["!bin/**", "!tasks/**"]
+vendor/kubectl-1.15:
+- any: ["vendor/kubectl-1.15/**"]
+  all: ["!bin/**", "!tasks/**"]
+vendor/kubectl-1.16:
+- any: ["vendor/kubectl-1.16/**"]
+  all: ["!bin/**", "!tasks/**"]
+vendor/kubectl-1.17:
+- any: ["vendor/kubectl-1.17/**"]
+  all: ["!bin/**", "!tasks/**"]
+vendor/kubectl-1.18:
+- any: ["vendor/kubectl-1.18/**"]
+  all: ["!bin/**", "!tasks/**"]
+vendor/kubectl-1.19:
+- any: ["vendor/kubectl-1.19/**"]
+  all: ["!bin/**", "!tasks/**"]
+vendor/kubectl:
+- any: ["vendor/kubectl/**"]
+  all: ["!bin/**", "!tasks/**"]
+vendor/kubectx:
+- any: ["vendor/kubectx/**"]
+  all: ["!bin/**", "!tasks/**"]
+vendor/kubens:
+- any: ["vendor/kubens/**"]
+  all: ["!bin/**", "!tasks/**"]
+vendor/kubeval:
+- any: ["vendor/kubeval/**"]
+  all: ["!bin/**", "!tasks/**"]
+vendor/lazydocker:
+- any: ["vendor/lazydocker/**"]
+  all: ["!bin/**", "!tasks/**"]
+vendor/lectl:
+- any: ["vendor/lectl/**"]
+  all: ["!bin/**", "!tasks/**"]
+vendor/minikube:
+- any: ["vendor/minikube/**"]
+  all: ["!bin/**", "!tasks/**"]
+vendor/misspell:
+- any: ["vendor/misspell/**"]
+  all: ["!bin/**", "!tasks/**"]
+vendor/nomad:
+- any: ["vendor/nomad/**"]
+  all: ["!bin/**", "!tasks/**"]
+vendor/opa:
+- any: ["vendor/opa/**"]
+  all: ["!bin/**", "!tasks/**"]
+vendor/pack:
+- any: ["vendor/pack/**"]
+  all: ["!bin/**", "!tasks/**"]
+vendor/packer:
+- any: ["vendor/packer/**"]
+  all: ["!bin/**", "!tasks/**"]
+vendor/pandoc:
+- any: ["vendor/pandoc/**"]
+  all: ["!bin/**", "!tasks/**"]
+vendor/pgmetrics:
+- any: ["vendor/pgmetrics/**"]
+  all: ["!bin/**", "!tasks/**"]
+vendor/pluto:
+- any: ["vendor/pluto/**"]
+  all: ["!bin/**", "!tasks/**"]
+vendor/popeye:
+- any: ["vendor/popeye/**"]
+  all: ["!bin/**", "!tasks/**"]
+vendor/promtool:
+- any: ["vendor/promtool/**"]
+  all: ["!bin/**", "!tasks/**"]
+vendor/rakkess:
+- any: ["vendor/rakkess/**"]
+  all: ["!bin/**", "!tasks/**"]
+vendor/rancher:
+- any: ["vendor/rancher/**"]
+  all: ["!bin/**", "!tasks/**"]
+vendor/rbac-lookup:
+- any: ["vendor/rbac-lookup/**"]
+  all: ["!bin/**", "!tasks/**"]
+vendor/retry:
+- any: ["vendor/retry/**"]
+  all: ["!bin/**", "!tasks/**"]
+vendor/saml2aws:
+- any: ["vendor/saml2aws/**"]
+  all: ["!bin/**", "!tasks/**"]
+vendor/scenery:
+- any: ["vendor/scenery/**"]
+  all: ["!bin/**", "!tasks/**"]
+vendor/sentinel:
+- any: ["vendor/sentinel/**"]
+  all: ["!bin/**", "!tasks/**"]
+vendor/sentry-cli:
+- any: ["vendor/sentry-cli/**"]
+  all: ["!bin/**", "!tasks/**"]
+vendor/shellcheck:
+- any: ["vendor/shellcheck/**"]
+  all: ["!bin/**", "!tasks/**"]
+vendor/shfmt:
+- any: ["vendor/shfmt/**"]
+  all: ["!bin/**", "!tasks/**"]
+vendor/slack-notifier:
+- any: ["vendor/slack-notifier/**"]
+  all: ["!bin/**", "!tasks/**"]
+vendor/sops:
+- any: ["vendor/sops/**"]
+  all: ["!bin/**", "!tasks/**"]
+vendor/stern:
+- any: ["vendor/stern/**"]
+  all: ["!bin/**", "!tasks/**"]
+vendor/sudosh:
+- any: ["vendor/sudosh/**"]
+  all: ["!bin/**", "!tasks/**"]
+vendor/teleport-4.2:
+- any: ["vendor/teleport-4.2/**"]
+  all: ["!bin/**", "!tasks/**"]
+vendor/teleport-4.3:
+- any: ["vendor/teleport-4.3/**"]
+  all: ["!bin/**", "!tasks/**"]
+vendor/teleport-4.4:
+- any: ["vendor/teleport-4.4/**"]
+  all: ["!bin/**", "!tasks/**"]
+vendor/teleport-5.0:
+- any: ["vendor/teleport-5.0/**"]
+  all: ["!bin/**", "!tasks/**"]
+vendor/teleport:
+- any: ["vendor/teleport/**"]
+  all: ["!bin/**", "!tasks/**"]
+vendor/terraform-0.11:
+- any: ["vendor/terraform-0.11/**"]
+  all: ["!bin/**", "!tasks/**"]
+vendor/terraform-0.12:
+- any: ["vendor/terraform-0.12/**"]
+  all: ["!bin/**", "!tasks/**"]
+vendor/terraform-0.13:
+- any: ["vendor/terraform-0.13/**"]
+  all: ["!bin/**", "!tasks/**"]
+vendor/terraform-0.14:
+- any: ["vendor/terraform-0.14/**"]
+  all: ["!bin/**", "!tasks/**"]
+vendor/terraform-docs:
+- any: ["vendor/terraform-docs/**"]
+  all: ["!bin/**", "!tasks/**"]
+vendor/terraform:
+- any: ["vendor/terraform/**"]
+  all: ["!bin/**", "!tasks/**"]
+vendor/terraform_0.11:
+- any: ["vendor/terraform_0.11/**"]
+  all: ["!bin/**", "!tasks/**"]
+vendor/terraform_0.12:
+- any: ["vendor/terraform_0.12/**"]
+  all: ["!bin/**", "!tasks/**"]
+vendor/terraform_0.13:
+- any: ["vendor/terraform_0.13/**"]
+  all: ["!bin/**", "!tasks/**"]
+vendor/terraform_0.14:
+- any: ["vendor/terraform_0.14/**"]
+  all: ["!bin/**", "!tasks/**"]
+vendor/terragrunt:
+- any: ["vendor/terragrunt/**"]
+  all: ["!bin/**", "!tasks/**"]
+vendor/terrahelp:
+- any: ["vendor/terrahelp/**"]
+  all: ["!bin/**", "!tasks/**"]
+vendor/tfenv:
+- any: ["vendor/tfenv/**"]
+  all: ["!bin/**", "!tasks/**"]
+vendor/tfmask:
+- any: ["vendor/tfmask/**"]
+  all: ["!bin/**", "!tasks/**"]
+vendor/thanos:
+- any: ["vendor/thanos/**"]
+  all: ["!bin/**", "!tasks/**"]
+vendor/trivy:
+- any: ["vendor/trivy/**"]
+  all: ["!bin/**", "!tasks/**"]
+vendor/variant:
+- any: ["vendor/variant/**"]
+  all: ["!bin/**", "!tasks/**"]
+vendor/variant2:
+- any: ["vendor/variant2/**"]
+  all: ["!bin/**", "!tasks/**"]
+vendor/vault:
+- any: ["vendor/vault/**"]
+  all: ["!bin/**", "!tasks/**"]
+vendor/vendir:
+- any: ["vendor/vendir/**"]
+  all: ["!bin/**", "!tasks/**"]
+vendor/venona:
+- any: ["vendor/venona/**"]
+  all: ["!bin/**", "!tasks/**"]
+vendor/vert:
+- any: ["vendor/vert/**"]
+  all: ["!bin/**", "!tasks/**"]
+vendor/yq:
+- any: ["vendor/yq/**"]
+  all: ["!bin/**", "!tasks/**"]

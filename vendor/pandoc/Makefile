@@ -1,6 +1,4 @@
-include ../../tasks/Makefile.package
-include ../../tasks/Makefile.apk
-include ../../tasks/Makefile.deb
+include ../../tasks/Makefile.vendor_includes
 
 # Package details
 export VENDOR ?= jgm
@@ -9,7 +7,7 @@ export APK_BUILD_TEMPLATE ?= APKBUILD.github-binary
 export APKBUILD_DEPENDS += libc6-compat
 
 install:
-	$(call download_tarball)
+	$(call download_tar_gz)
 
 test:
 	$(PACKAGE_EXE) -v

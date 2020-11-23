@@ -5,9 +5,7 @@ export DOWNLOAD_URL ?= $(PACKAGE_REPO_URL)/releases/download/v$(PACKAGE_VERSION)
 export APKBUILD_DEPENDS += ca-certificates
 export PACKAGE_EXE = email
 
-include ../../tasks/Makefile.package
-include ../../tasks/Makefile.apk
-include ../../tasks/Makefile.deb
+include ../../tasks/Makefile.vendor_includes
 
 install:
 	$(call download_binary)
