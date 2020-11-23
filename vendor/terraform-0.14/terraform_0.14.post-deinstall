@@ -5,7 +5,7 @@ MAJOR_VERSION=0.14
 PACKAGE_NAME=${MASTER_PACKAGE_NAME}-${MAJOR_VERSION}
 INSTALL_DIR=/usr/share/${MASTER_PACKAGE_NAME}/${MAJOR_VERSION}/bin
 
-update-alternatives --remove ${PACKAGE_NAME} ${INSTALL_DIR}/${PACKAGE_NAME} --quiet
-update-alternatives --remove ${PACKAGE_NAME}-direnv ${INSTALL_DIR}/${PACKAGE_NAME} --quiet
-update-alternatives --remove ${MASTER_PACKAGE_NAME} ${INSTALL_DIR}/${PACKAGE_NAME} --quiet
+update-alternatives --remove ${PACKAGE_NAME} ${INSTALL_DIR}/${MASTER_PACKAGE_NAME} --quiet
+update-alternatives --remove ${PACKAGE_NAME}-direnv ${INSTALL_DIR}/${MASTER_PACKAGE_NAME} --quiet
+update-alternatives --remove ${MASTER_PACKAGE_NAME} ${INSTALL_DIR}/${MASTER_PACKAGE_NAME} --quiet
 exit 0
