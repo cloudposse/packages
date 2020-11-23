@@ -20,6 +20,9 @@ scripts:
 # suppress individual package labels when scripts change,
 # because they affect all packages, we have more than 100 packages,
 # and there is a limit of 100 labels on a PR.
+vendor:
+- any: ["vendor/**"]
+  all: ["!bin/**", "!tasks/**"]
 vendor/amtool:
 - any: ["vendor/amtool/**"]
   all: ["!bin/**", "!tasks/**"]
@@ -349,9 +352,6 @@ vendor/terraform_0.12:
   all: ["!bin/**", "!tasks/**"]
 vendor/terraform_0.13:
 - any: ["vendor/terraform_0.13/**"]
-  all: ["!bin/**", "!tasks/**"]
-vendor/terraform_0.14:
-- any: ["vendor/terraform_0.14/**"]
   all: ["!bin/**", "!tasks/**"]
 vendor/terragrunt:
 - any: ["vendor/terragrunt/**"]
