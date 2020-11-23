@@ -1,11 +1,5 @@
-#!/bin/bash
-
-# This is practically a workflow.yml document. It just has a section for expanding its arguments
-# into a YAML array.
-
-cat <<'EOT'
 #
-# This workflow was created automatically from the `auto-update-template.yml` by running `make -C .github workflows`
+# This workflow was created automatically from the `auto-update-template.yml` by running `make -C .github auto-update-workflow`
 # DO NOT EDIT THIS WORKFLOW
 #
 
@@ -21,18 +15,7 @@ jobs:
     strategy:
       matrix:
         package-name:
-EOT
-
-for pkg in "$@"; do
-  if [[ $(make -sC ../vendor/$pkg info/auto-update-enabled) != "false" ]]; then
-    printf "        - %s\n" $pkg
-  else
-    echo Auto-update of $pkg is disabled >&2
-  fi
-done
-
-cat <<'EOF'
-
+%PACKAGE_LIST%
     steps:
       - uses: actions/checkout@v2
 
@@ -65,7 +48,7 @@ cat <<'EOF'
           make readme
 
       - name: Create Pull Request
-        uses: cloudposse/actions/github/create-pull-request@0.20.0
+        uses: cloudposse/actions/github/create-pull-request@0.22.0
         if: steps.update.outputs.package_version != steps.current.outputs.package_version
         with:
           token: ${{ secrets.GITHUB_BOT_TOKEN }}
@@ -97,4 +80,3 @@ cat <<'EOF'
           labels: |
             auto-update
             vendor/${{ steps.update.outputs.package_name }}
-EOF

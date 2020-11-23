@@ -5,4 +5,5 @@ PACKAGE_VERSION="$1"
 MAJOR_VERSION="$2"
 
 printf "Verifing Package Version \"${PACKAGE_VERSION}\" matches Major Version \"${MAJOR_VERSION}\"... "
-{ echo "${PACKAGE_VERSION}" | grep "^${MAJOR_VERSION}" >/dev/null && echo "Success"; } || { echo 'Fail!' >&2 && false; }
+# ${MAJOR_VERSION//./\\.} converts all dots in MAJOR_VERSION to \. so grep will not treat them as wildcards
+{ echo "${PACKAGE_VERSION}" | grep "^${MAJOR_VERSION//./\\.}" >/dev/null && echo "Success"; } || { echo 'Fail!' >&2 && false; }
