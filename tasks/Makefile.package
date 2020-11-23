@@ -33,7 +33,7 @@ export ARCH ?= amd64
 # Note: := means left hand var gets the value of the right hand vars as they are right now.
 # Setting HOST_* using := prevents a shell from being spawned every time it is referenced.
 # HOST_DISTRIBUTION is the distribution (e.g. alpine, debian, centos) of the running Docker image
-export HOST_DISTRIBUTION := $(shell . /etc/os-release ; echo $$ID)
+export HOST_DISTRIBUTION := $(shell [ -r /etc/os-release ] && . /etc/os-release || ID=darwin; echo $$ID)
 # DIST_DISTRIBUTION is the target distribution of the package. Default to host
 export DIST_DISTRIBUTION ?= $(HOST_DISTRIBUTION)
 # HOST_OS is the OS of the packaging Docker container
