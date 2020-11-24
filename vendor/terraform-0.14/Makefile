@@ -7,9 +7,7 @@ export MAJOR_VERSION = 0.14
 export PACKAGE_PRERELEASE_ENABLED = true
 export PACKAGE_NAME = $(MASTER_PACKAGE_NAME)-$(MAJOR_VERSION)
 
-include ../../tasks/Makefile.package
-include ../../tasks/Makefile.apk
-include ../../tasks/Makefile.deb
+include ../../tasks/Makefile.vendor_includes
 
 # NOTE: This build uses a custom build template ./APKBUILD
 export APK_BUILD_TEMPLATE ?= APKBUILD.github-binary
