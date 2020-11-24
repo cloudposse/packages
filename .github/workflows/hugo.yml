@@ -127,7 +127,7 @@ jobs:
           release: 'any-version'                            # Use "any-version" if your package is compatible with more than one version of alpine linux
           republish: 'true'                                 # Needed if version is not changing
           file: '${{steps.artifact.outputs.path}}'          # Package filename (including path)
-          no-wait-for-sync: 'true'                          # Skip the waiting for package synchronisation (i.e. upload only)
+          no-wait-for-sync: 'false'                         # Skip the waiting for package synchronisation (i.e. upload only)
 
   # Build packages with fpm package manager
   package:
@@ -217,4 +217,4 @@ jobs:
           release: 'any-version'                            # Use "any-version" since our package is compatible with more than more version
           republish: 'true'                                 # Needed if version is not changing
           file: '${{steps.artifact.outputs.path}}'          # Package filename (including path)
-          no-wait-for-sync: 'true'                          # Skip the waiting for package synchronisation (i.e. upload only)
+          no-wait-for-sync: 'false'                         # Skip the waiting for package synchronisation (i.e. upload only)
