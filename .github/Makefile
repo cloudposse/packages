@@ -29,7 +29,7 @@ workflows/auto-update-packages.yml: auto-update-template.yml .ALWAYS
 # It is not practical to use `envsubst` or `gomplate` if we need to escape every interpolation.
 workflows/%.yml: .ALWAYS
 	@set -e; enabled=$$(make -sC ../vendor/$* info/package-enabled); \
-	if [[ $enabled != "false" ]]; then \
+	if [[ $$enabled != "false" ]]; then \
   		echo updating $@; \
 		sed 's/%PACKAGE_NAME%/$*/g' package-template.yml > $@; \
 	else \

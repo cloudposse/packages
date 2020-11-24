@@ -7,3 +7,6 @@ build-harness
 *.iml
 *.rsa*
 artifacts/
+
+# bin/vert is a binary automatically downloaded and should not be checked in
+/bin/vert
