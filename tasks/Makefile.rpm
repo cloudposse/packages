@@ -1,6 +1,9 @@
 PACKAGES_PATH ?= .
 RPM_PACKAGES_PATH ?= $(PACKAGES_PATH)
-RPM_PACKAGE ?= $(RPM_PACKAGES_PATH)/$(PACKAGE_NAME)_$(PACKAGE_VERSION)_$(DIST_ARCH).rpm
+# By convention, the first release of an RPM package is 1, not zero
+RPM_PACKAGE_RELEASE = $(shell echo $$(($(PACKAGE_RELEASE) + 1)))
+# Package managers require that every package file have a unique name.
+RPM_PACKAGE ?= $(RPM_PACKAGES_PATH)/$(PACKAGE_NAME)_$(PACKAGE_VERSION)-$(RPM_PACKAGE_RELEASE)_$(DIST_ARCH).rpm
 RPM_MAINTAINER ?= Cloud Posse <packages@cloudposse.com>
 RPM_FPM_EXTRA_ARGS ?=
 RPM_FPM_EXTRA_FILES ?=
@@ -20,13 +23,12 @@ $(RPM_PACKAGE): RPM_FPM_EXTRA_ARGS += --after-remove $(RPM_TMP_DIR)/$(PACKAGE_NA
 $(RPM_PACKAGE): RPM_FPM_EXTRA_FILES += $(PACKAGE_NAME).post-deinstall
 $(RPM_PACKAGE): RPM_DEINSTALL = $(PACKAGE_NAME).post-deinstall
 endif
-$(RPM_PACKAGE): ITER = $(shell echo $$(($(PACKAGE_RELEASE) + 1)))
 # update-alternatives on Centos does not have a --quiet flag, so we edit it out of the deinstall script
 $(RPM_PACKAGE): $(RPM_TMP_DIR)/$(PACKAGE_NAME)
 	mkdir -p $(RPM_PACKAGES_PATH)
 	[ -z "$(RPM_FPM_EXTRA_FILES)" ] || cp -a $(RPM_FPM_EXTRA_FILES) $(RPM_TMP_DIR)
 	[ -z "$(RPM_DEINSTALL)" ] || sed -i 's/\(update-alternatives .*\) --quiet/\1/' "$(RPM_TMP_DIR)/$(RPM_DEINSTALL)"
-	set -x; fpm --force -t rpm --maintainer '$(RPM_MAINTAINER)' -s dir -a $(DIST_ARCH) -n $(PACKAGE_NAME) -v $(PACKAGE_VERSION) --iteration $(ITER) -C $(RPM_TMP_DIR) --prefix $${INSTALL_DIR:-/usr/bin} $(RPM_FPM_EXTRA_ARGS) --package $@ .
+	set -x; fpm --force -t rpm --maintainer '$(RPM_MAINTAINER)' -s dir -a $(DIST_ARCH) -n $(PACKAGE_NAME) -v $(PACKAGE_VERSION) --iteration $(RPM_PACKAGE_RELEASE) -C $(RPM_TMP_DIR) --prefix $${INSTALL_DIR:-/usr/bin} $(RPM_FPM_EXTRA_ARGS) --package $@ .
 	@echo "Testing installation of $@"
 	yum install -y --allowerasing -C $@
 	$(MAKE) test
