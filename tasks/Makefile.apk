@@ -28,11 +28,13 @@ export APK_BUILD_TEMPLATE ?= APKBUILD.github-binary
 export APK_PACKAGES_PATH ?= /tmp/packages
 export APK_TMP_DIR := $(realpath $(shell mktemp -d ../../tmp/build.XXXXXX))
 export APK_PACKAGE_NAME ?= $(PACKAGE_NAME)
-export APK_PACKAGE ?= $(APK_PACKAGES_PATH)/vendor/x86_64/$(APK_PACKAGE_NAME)-$(PACKAGE_VERSION)-r$(PACKAGE_RELEASE).apk
+export APK_NORMALIZED_PACKAGE_VERSION := $(if $(subst false,,$(PACKAGE_PRERELEASE_ENABLED)),$(shell printf "%s" "$(PACKAGE_VERSION)" | sed -E 's/-([a-z]*)\.?/_\1/'),$(PACKAGE_VERSION))
+export APK_PACKAGE_VERSION ?= $(APK_NORMALIZED_PACKAGE_VERSION)
+export APK_PACKAGE ?= $(APK_PACKAGES_PATH)/vendor/x86_64/$(APK_PACKAGE_NAME)-$(APK_PACKAGE_VERSION)-r$(PACKAGE_RELEASE).apk
 export SRCDEST := $(APK_TMP_DIR)/cache
 
 apk/prepare::
-	@apk version --check --quiet $(PACKAGE_VERSION) || (echo "$(PACKAGE_VERSION) is not a valid version for alpine linux"; exit 1)
+	@apk version --check --quiet $(APK_PACKAGE_VERSION) || (echo "$(APK_PACKAGE_VERSION) is not a valid version for alpine linux"; exit 1)
 	mkdir -p $(APK_PACKAGES_PATH) $(APK_TMP_DIR) $(SRCDEST)
 	chmod 777 $(APK_PACKAGES_PATH) $(APK_TMP_DIR)
 	cp -a $(APK_TEMPLATE_PATH)/$(APK_BUILD_TEMPLATE) $(APK_TMP_DIR)/APKBUILD

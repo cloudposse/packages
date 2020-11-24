@@ -2,7 +2,7 @@
 # Maintainer: Cloud Posse, LLC <hello@cloudposse.com>
 # vim: filetype=sh
 pkgname=${PACKAGE_NAME}
-pkgver=${PACKAGE_VERSION}
+pkgver=${APK_PACKAGE_VERSION:-$PACKAGE_VERSION}
 pkgrel=${PACKAGE_RELEASE}
 pkgdesc="${PACKAGE_DESCRIPTION}"
 builddir="$srcdir"
