@@ -23,6 +23,10 @@
 # Cloud Posse Admins must review all changes to the mergify configuration
 .github/mergify.yml @cloudposse/admins
 
+# engineering or admin must approve changes to scripts
+bin/**      @cloudposse/engineering @cloudposse/admins
+contrib/**  @cloudposse/engineering @cloudposse/admins
+
 # Cloud Posse Admins must review all changes to templated build configuration except auto-update
 .github/package-template.yml @cloudposse/admins
 apk/**              @cloudposse/admins
