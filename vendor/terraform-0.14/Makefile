@@ -13,10 +13,7 @@ include ../../tasks/Makefile.deb
 
 # NOTE: This build uses a custom build template ./APKBUILD
 export APK_BUILD_TEMPLATE ?= APKBUILD.github-binary
-# TODO: remove `rc-1` from URL as soon as normal version release will be published.
-# `rc-1` added to keep `PACKAGE_VERSION` clean (without rc-1 suffix) to unblock creating packages for alpine.
-# alpine version check fails for `0.14.0-rc1` version.
-export DOWNLOAD_URL ?= https://releases.hashicorp.com/terraform/$(PACKAGE_VERSION)-rc1/terraform_$(PACKAGE_VERSION)-rc1_$(OS)_$(ARCH).zip
+export DOWNLOAD_URL ?= https://releases.hashicorp.com/terraform/$(PACKAGE_VERSION)/terraform_$(PACKAGE_VERSION)_$(OS)_$(ARCH).zip
 export APKBUILD_DEPENDS += dpkg
 export APKBUILD_INSTALL_SCRIPTS = $(PACKAGE_NAME).post-install $(PACKAGE_NAME).post-deinstall
 export INSTALL_DIR = /usr/share/${MASTER_PACKAGE_NAME}/${MAJOR_VERSION}/bin
