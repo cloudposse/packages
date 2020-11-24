@@ -1,9 +1,11 @@
 pull_request_rules:
   - name: "approve automated PRs that have passed checks"
     conditions:
-      - "check-success~=.*alpine.*"
-      - "check-success~=.*debian.*"
+      - "-check-failure~=.*alpine.*"
+      - "-check-failure~=.*package.*"
+      - "-check-failure~=.*matrix.*"
       - "check-success~=.*build-and-push.*"
+      - "#files<=6"
       - "base=master"
       - "author=cloudpossebot"
       - "head~=auto-update/.*"
@@ -12,10 +14,26 @@ pull_request_rules:
         type: "APPROVE"
         message: "We've automatically approved this PR because the checks from the automated Pull Request have passed."
 
+  - name: "approve manual PRs that have passed checks"
+    conditions:
+      - "-check-failure~=.*alpine.*"
+      - "-check-failure~=.*package.*"
+      - "-check-failure~=.*matrix.*"
+      - "check-success~=.*build-and-push.*"
+      - "#files<=14"
+      - "base=master"
+      - "-author=cloudpossebot"
+      - "-head~=auto-update/.*"
+    actions:
+      review:
+        type: "APPROVE"
+        message: "We've automatically approved this PR because the checks for a manual Pull Request have passed."
+
   - name: "merge automated PRs when approved and tests pass"
     conditions:
-      - "check-success~=.*alpine.*"
-      - "check-success~=.*debian.*"
+      - "-check-failure~=.*alpine.*"
+      - "-check-failure~=.*package.*"
+      - "-check-failure~=.*matrix.*"
       - "check-success~=.*build-and-push.*"
       - "#approved-reviews-by>=1"
       - "#changes-requested-reviews-by=0"
@@ -38,7 +56,7 @@ pull_request_rules:
       - "conflict"
     actions:
       comment:
-        message: "This pull request is now in conflicts. Could you fix it @{{author}}? 🙏"
+        message: "This pull request now has conflicts. Could you fix it @{{author}}? 🙏"
 
   - name: "remove outdated reviews"
     conditions:
