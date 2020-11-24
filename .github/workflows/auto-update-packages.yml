@@ -1,0 +1,200 @@
+#
+# This workflow was created automatically from the `auto-update-template.yml` by running `make -C .github auto-update-workflow`
+# DO NOT EDIT THIS WORKFLOW
+#
+
+name: "auto-update-packages"
+on:
+  schedule:
+    # See cron format at https://docs.github.com/en/free-pro-team@latest/actions/reference/events-that-trigger-workflows#scheduled-events
+    # Update packages 5am and 4pm PST
+    - cron:  '0 0,13 * * *'
+
+jobs:
+  auto-update:
+    runs-on: ubuntu-latest
+    strategy:
+      # do not let 1 failure stop the other jobs from proceeding
+      fail-fast: false
+      matrix:
+        package-name:
+        - amtool
+        - argocd
+        - assume-role
+        - atlantis
+        - awless
+        - aws-iam-authenticator
+        - aws-vault
+        - cfssl
+        - cfssljson
+        - chamber
+        - cli53
+        - cloudflared
+        - cloudposse-atlantis
+        - codefresh
+        - conftest
+        - consul
+        - ctop
+        - direnv
+        - doctl
+        - duffle
+        - emailcli
+        - fargate
+        - fetch
+        - figurine
+        - fzf
+        - gh
+        - ghr
+        - github-commenter
+        - github-release
+        - github-status-updater
+        - gitleaks
+        - gomplate
+        - gonsul
+        - goofys
+        - gosu
+        - gotop
+        - grpcurl
+        - helm
+        - helm2
+        - helm3
+        - helmfile
+        - htmltest
+        - hugo
+        - jp
+        - jq
+        - json2hcl
+        - jx
+        - k3d
+        - k6
+        - k9s
+        - katafygio
+        - kfctl
+        - kind
+        - kops
+        - krew
+        - kubecron
+        - kubectl
+        - kubectl-1.15
+        - kubectl-1.16
+        - kubectl-1.17
+        - kubectl-1.18
+        - kubectl-1.19
+        - kubectx
+        - kubens
+        - kubeval
+        - lazydocker
+        - lectl
+        - minikube
+        - misspell
+        - opa
+        - pack
+        - packer
+        - pandoc
+        - pgmetrics
+        - pluto
+        - popeye
+        - promtool
+        - rakkess
+        - rancher
+        - rbac-lookup
+        - saml2aws
+        - scenery
+        - sentry-cli
+        - shellcheck
+        - shfmt
+        - slack-notifier
+        - sops
+        - stern
+        - sudosh
+        - teleport
+        - teleport-4.2
+        - teleport-4.3
+        - teleport-4.4
+        - teleport-5.0
+        - terraform
+        - terraform-0.11
+        - terraform-0.12
+        - terraform-0.13
+        - terraform-docs
+        - terraform_0.11
+        - terraform_0.12
+        - terraform_0.13
+        - terragrunt
+        - terrahelp
+        - tfenv
+        - tfmask
+        - thanos
+        - trivy
+        - variant
+        - variant2
+        - vault
+        - vendir
+        - venona
+        - vert
+        - yq
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Get current package information
+        shell: bash
+        id: current
+        env:
+          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+        run: |
+          make -C vendor/${{matrix.package-name}} info/github
+
+      - name: Update packages
+        shell: bash
+        id: update
+        env:
+          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+        run: |
+          make -C vendor/${{matrix.package-name}} auto-update
+          make -C vendor/${{matrix.package-name}} info/github
+
+      - name: Update readme
+        shell: bash
+        id: readme
+        if: steps.update.outputs.package_version != steps.current.outputs.package_version
+        env:
+          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+        run: |
+          make init
+          make readme/deps
+          make readme
+
+      - name: Create Pull Request
+        uses: cloudposse/actions/github/create-pull-request@0.22.0
+        if: steps.update.outputs.package_version != steps.current.outputs.package_version
+        with:
+          token: ${{ secrets.GITHUB_BOT_TOKEN }}
+          commit-message: Update ${{ steps.update.outputs.package_name }} to ${{ steps.current.outputs.package_version }} → ${{ steps.update.outputs.package_version }}
+          title: Update ${{ steps.update.outputs.package_name }} to ${{ steps.update.outputs.package_version }}
+          body: |-
+            ## what
+
+            This is an auto-generated PR that updates the ${{ steps.update.outputs.package_name }} package version.
+
+            | Meta              | Details                                      |
+            |:------------------|:---------------------------------------------|
+            | **Package Name**  | `${{ steps.update.outputs.package_name }}`   |
+            | **Vendor**        | [${{ steps.update.outputs.vendor }}](${{ steps.update.outputs.package_homepage_url }}) |
+            | **Version**       | ${{ steps.update.outputs.package_version }}  |
+            | **License**       | ${{ steps.update.outputs.package_license }}  |
+            | **Repo**          | ${{ steps.update.outputs.package_repo_url }} |
+            | **Arch**          | ${{ steps.update.outputs.arch }}             |
+            | **OS**            | ${{ steps.update.outputs.os }}               |
+            | **Download URL**  | ${{ steps.update.outputs.download_url }}     |
+
+            ## why
+
+            Publish the latest release of `${{ steps.update.outputs.package_name }}` to our package repository.
+
+          branch: auto-update/${{ steps.update.outputs.package_name }}-${{ steps.update.outputs.package_version }}
+          base: master
+          delete-branch: true
+          labels: |
+            auto-update
+            vendor/${{ steps.update.outputs.package_name }}
