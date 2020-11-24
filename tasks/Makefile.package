@@ -206,7 +206,6 @@ info:
 	else \
 		printf "%-20s %s\n" "Version:" "OBSOLETE"; \
 	fi
-	@printf "%-20s %s\n" "Version:" "$(PACKAGE_VERSION)"
 	@printf "%-20s %s\n" "License:" "$(PACKAGE_LICENSE)"
 	@printf "%-20s %s\n" "Arch:" "$(DIST_ARCH)"
 	@printf "%-20s %s\n" "OS:" "$(DIST_OS)"
