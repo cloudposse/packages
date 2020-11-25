@@ -12,6 +12,9 @@ export APKBUILD_INSTALL_SCRIPTS = $(PACKAGE_NAME).post-install $(PACKAGE_NAME).p
 export INSTALL_DIR = /usr/share/${MASTER_PACKAGE_NAME}/${VENDOR}/bin
 export PACKAGE_EXE = atlantis
 
+# This pacakge does not use semver, cannot be auto-updated
+export AUTO_UPDATE_ENABLED = false
+
 install:
 	$(call download_binary)
 
