@@ -17,7 +17,7 @@ cloudflared               2020.10.0  Argo Tunnel client
 cloudposse-atlantis       0.9.0.3    Terraform For Teams, enhanced by Cloud Posse
 codefresh                 0.73.21    Codefresh CLI
 conftest                  0.22.0     Test your configuration files using Open Policy Agent
-consul                    1.8.4      Hashicorp consul
+consul                    1.9.0      Hashicorp consul
 ctop                      0.7.5      Top-like interface for container metrics
 direnv                    2.24.0     Unclutter your .profile
 doctl                     1.53.0     A command line tool for DigitalOcean services
