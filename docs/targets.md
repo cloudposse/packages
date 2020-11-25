@@ -97,7 +97,7 @@ slack-notifier            0.3.0      Command line utility to send messages with 
 sops                      3.6.1      Secrets management stinks, use some sops!
 stern                     1.11.0     ⎈ Multi pod and container log tailing for Kubernetes
 sudosh                    0.3.0      Shell wrapper to run a login shell with `sudo` as the current user for the purpose of audit logging
-teleport                  4.4.5      Secure Access for Developers that doesn't get in the way.
+teleport                  5.0.0      Secure Access for Developers that doesn't get in the way.
 teleport-4.2              4.2.12     Privileged access management for elastic infrastructure.
 teleport-4.3              4.3.7      Privileged access management for elastic infrastructure.
 teleport-4.4              4.4.5      Privileged access management for elastic infrastructure.
