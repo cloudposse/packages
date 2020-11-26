@@ -30,7 +30,6 @@ jobs:
         - chamber
         - cli53
         - cloudflared
-        - cloudposse-atlantis
         - codefresh
         - conftest
         - consul
