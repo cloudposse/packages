@@ -1,4 +1,6 @@
+<!-- markdownlint-disable -->
 # Packages [![Auto Update Status](https://github.com/cloudposse/packages/workflows/auto-update/badge.svg)](https://github.com/cloudposse/packages/actions?query=workflow%3Aauto-update) [![Latest Release](https://img.shields.io/github/release/cloudposse/packages.svg)](https://github.com/cloudposse/packages/releases/latest) [![Slack Community](https://slack.cloudposse.com/badge.svg)](https://slack.cloudposse.com)
+<!-- markdownlint-restore -->
 
 [![README Header][readme_header_img]][readme_header_link]
 
@@ -353,7 +355,7 @@ exit
 [![terrahelp](https://github.com/cloudposse/packages/workflows/terrahelp/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aterrahelp) | 0.7.4      | Terrahelp is as a command line utility that provides useful tricks like masking of terraform output.
 [![tfenv](https://github.com/cloudposse/packages/workflows/tfenv/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Atfenv) | 0.4.0      | Transform environment variables for use with Terraform (e.g. `HOSTNAME` ⇨ `TF_VAR_hostname`)
 [![tfmask](https://github.com/cloudposse/packages/workflows/tfmask/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Atfmask) | 0.7.0      | Terraform utility to mask select output from `terraform plan` and `terraform apply`
-[![thanos](https://github.com/cloudposse/packages/workflows/thanos/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Athanos) | 0.17.0     | Highly available Prometheus setup with long term storage capabilities. CNCF Sandbox project.
+[![thanos](https://github.com/cloudposse/packages/workflows/thanos/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Athanos) | 0.17.1     | Highly available Prometheus setup with long term storage capabilities. CNCF Sandbox project.
 [![trivy](https://github.com/cloudposse/packages/workflows/trivy/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Atrivy) | 0.13.0     | A Simple and Comprehensive Vulnerability Scanner for Containers, Suitable for CI
 [![variant](https://github.com/cloudposse/packages/workflows/variant/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Avariant) | 0.36.5     | Variant is a Universal CLI tool that works like a task runner
 [![variant2](https://github.com/cloudposse/packages/workflows/variant2/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Avariant2) | 0.35.0     | Second major version of Variant, a Universal CLI tool that works like a task runner
@@ -509,8 +511,10 @@ Check out [our other projects][github], [follow us on twitter][twitter], [apply 
 
 ### Contributors
 
+<!-- markdownlint-disable -->
 |  [![Erik Osterman][osterman_avatar]][osterman_homepage]<br/>[Erik Osterman][osterman_homepage] | [![Igor Rodionov][goruha_avatar]][goruha_homepage]<br/>[Igor Rodionov][goruha_homepage] | [![Andriy Knysh][aknysh_avatar]][aknysh_homepage]<br/>[Andriy Knysh][aknysh_homepage] |
 |---|---|---|
+<!-- markdownlint-restore -->
 
   [osterman_homepage]: https://github.com/osterman
   [osterman_avatar]: https://img.cloudposse.com/150x150/https://github.com/osterman.png
