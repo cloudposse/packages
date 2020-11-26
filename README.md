@@ -1,4 +1,6 @@
+<!-- markdownlint-disable -->
 # Packages [![Auto Update Status](https://github.com/cloudposse/packages/workflows/auto-update/badge.svg)](https://github.com/cloudposse/packages/actions?query=workflow%3Aauto-update) [![Latest Release](https://img.shields.io/github/release/cloudposse/packages.svg)](https://github.com/cloudposse/packages/releases/latest) [![Slack Community](https://slack.cloudposse.com/badge.svg)](https://slack.cloudposse.com)
+<!-- markdownlint-restore -->
 
 [![README Header][readme_header_img]][readme_header_link]
 
@@ -269,7 +271,7 @@ exit
 [![fetch](https://github.com/cloudposse/packages/workflows/fetch/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Afetch) | 0.3.11     | fetch makes it easy to download files, folders, and release assets from a specific public git commit, branch, or tag
 [![figurine](https://github.com/cloudposse/packages/workflows/figurine/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Afigurine) | 1.0.1      | Print your name in style
 [![fzf](https://github.com/cloudposse/packages/workflows/fzf/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Afzf) | 0.23.1     | A command-line fuzzy finder
-[![gh](https://github.com/cloudposse/packages/workflows/gh/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Agh) | 1.2.1      | The GitHub CLI
+[![gh](https://github.com/cloudposse/packages/workflows/gh/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Agh) | 1.3.0      | The GitHub CLI
 [![ghr](https://github.com/cloudposse/packages/workflows/ghr/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aghr) | 0.13.0     | Upload multiple artifacts to GitHub Releases in parallel
 [![github-commenter](https://github.com/cloudposse/packages/workflows/github-commenter/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Agithub-commenter) | 0.8.0      | Command line utility for creating GitHub comments on Commits, Pull Request Reviews or Issues
 [![github-release](https://github.com/cloudposse/packages/workflows/github-release/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Agithub-release) | 0.9.0      | Commandline app to create and edit releases on Github (and upload artifacts)
@@ -509,8 +511,10 @@ Check out [our other projects][github], [follow us on twitter][twitter], [apply 
 
 ### Contributors
 
+<!-- markdownlint-disable -->
 |  [![Erik Osterman][osterman_avatar]][osterman_homepage]<br/>[Erik Osterman][osterman_homepage] | [![Igor Rodionov][goruha_avatar]][goruha_homepage]<br/>[Igor Rodionov][goruha_homepage] | [![Andriy Knysh][aknysh_avatar]][aknysh_homepage]<br/>[Andriy Knysh][aknysh_homepage] |
 |---|---|---|
+<!-- markdownlint-restore -->
 
   [osterman_homepage]: https://github.com/osterman
   [osterman_avatar]: https://img.cloudposse.com/150x150/https://github.com/osterman.png
