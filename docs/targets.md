@@ -36,7 +36,7 @@ gitleaks                  1.2.0      Audit git repos for secrets 🔑
 gomplate                  3.8.0      A flexible commandline tool for template rendering. Supports lots of local and remote datasources.
 gonsul                    0.2.1      A stand-alone alternative to git2consul 
 goofys                    0.24.0     a high-performance, POSIX-ish Amazon S3 file system written in Go
-gosu                      1.12       Simple Go-based setuid+setgid+setgroups+exec
+gosu                      1.12.0     Simple Go-based setuid+setgid+setgroups+exec
 gotop                     3.0.0      A terminal based graphical activity monitor inspired by gtop and vtop
 grpcurl                   1.7.0      Like cURL, but for gRPC: Command-line tool for interacting with gRPC servers
 helm                      3.4.1      The Kubernetes Package Manager
@@ -70,8 +70,8 @@ kubectl-1.19              1.19.4     Production-Grade Container Scheduling and M
 kubectx                   0.9.1      Switch faster between clusters and namespaces in kubectl
 kubens                    0.9.1      Switch faster between clusters and namespaces in kubectl
 kubeval                   0.15.0     Validate your Kubernetes configuration files, supports multiple Kubernetes versions
-lazydocker                0.10       The lazier way to manage everything docker
-lectl                     0.21       Script to check issued certificates by Let's Encrypt on CTL (Certificate Transparency Log) using https://crt.sh
+lazydocker                0.10.0     The lazier way to manage everything docker
+lectl                     0.21.0     Script to check issued certificates by Let's Encrypt on CTL (Certificate Transparency Log) using https://crt.sh
 minikube                  1.15.1     Run Kubernetes locally
 misspell                  0.3.4      Correct commonly misspelled English words in source files
 nomad                     OBSOLETE   Hashicorp nomad
