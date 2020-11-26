@@ -1,4 +1,6 @@
+<!-- markdownlint-disable -->
 # Packages [![Auto Update Status](https://github.com/cloudposse/packages/workflows/auto-update/badge.svg)](https://github.com/cloudposse/packages/actions?query=workflow%3Aauto-update) [![Latest Release](https://img.shields.io/github/release/cloudposse/packages.svg)](https://github.com/cloudposse/packages/releases/latest) [![Slack Community](https://slack.cloudposse.com/badge.svg)](https://slack.cloudposse.com)
+<!-- markdownlint-restore -->
 
 [![README Header][readme_header_img]][readme_header_link]
 
@@ -295,7 +297,7 @@ exit
 [![k6](https://github.com/cloudposse/packages/workflows/k6/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ak6) | 0.29.0     | A modern load testing tool, using Go and JavaScript - https://k6.io
 [![k9s](https://github.com/cloudposse/packages/workflows/k9s/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ak9s) | 0.23.10    | Kubernetes CLI To Manage Your Clusters In Style
 [![katafygio](https://github.com/cloudposse/packages/workflows/katafygio/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Akatafygio) | 0.8.1      | K8s continuous backup to git
-[![kfctl](https://github.com/cloudposse/packages/workflows/kfctl/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Akfctl) | 1.1.0      | Machine Learning Toolkit for Kubernetes
+[![kfctl](https://github.com/cloudposse/packages/workflows/kfctl/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Akfctl) | 1.2.0      | Machine Learning Toolkit for Kubernetes
 [![kind](https://github.com/cloudposse/packages/workflows/kind/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Akind) | 0.9.0      | A tool for running local Kubernetes clusters using Docker
 [![kops](https://github.com/cloudposse/packages/workflows/kops/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Akops) | 1.18.2     | Kubernetes Operations (kops) - Production Grade K8s Installation, Upgrades, and Management
 [![krew](https://github.com/cloudposse/packages/workflows/krew/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Akrew) | 0.4.0      | Kubectl plugin manager
@@ -509,8 +511,10 @@ Check out [our other projects][github], [follow us on twitter][twitter], [apply 
 
 ### Contributors
 
+<!-- markdownlint-disable -->
 |  [![Erik Osterman][osterman_avatar]][osterman_homepage]<br/>[Erik Osterman][osterman_homepage] | [![Igor Rodionov][goruha_avatar]][goruha_homepage]<br/>[Igor Rodionov][goruha_homepage] | [![Andriy Knysh][aknysh_avatar]][aknysh_homepage]<br/>[Andriy Knysh][aknysh_homepage] |
 |---|---|---|
+<!-- markdownlint-restore -->
 
   [osterman_homepage]: https://github.com/osterman
   [osterman_avatar]: https://img.cloudposse.com/150x150/https://github.com/osterman.png
