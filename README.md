@@ -1,4 +1,6 @@
+<!-- markdownlint-disable -->
 # Packages [![Auto Update Status](https://github.com/cloudposse/packages/workflows/auto-update/badge.svg)](https://github.com/cloudposse/packages/actions?query=workflow%3Aauto-update) [![Latest Release](https://img.shields.io/github/release/cloudposse/packages.svg)](https://github.com/cloudposse/packages/releases/latest) [![Slack Community](https://slack.cloudposse.com/badge.svg)](https://slack.cloudposse.com)
+<!-- markdownlint-restore -->
 
 [![README Header][readme_header_img]][readme_header_link]
 
@@ -339,7 +341,7 @@ exit
 [![teleport-4.2](https://github.com/cloudposse/packages/workflows/teleport-4.2/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ateleport-4.2) | 4.2.12     | Privileged access management for elastic infrastructure.
 [![teleport-4.3](https://github.com/cloudposse/packages/workflows/teleport-4.3/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ateleport-4.3) | 4.3.7      | Privileged access management for elastic infrastructure.
 [![teleport-4.4](https://github.com/cloudposse/packages/workflows/teleport-4.4/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ateleport-4.4) | 4.4.5      | Privileged access management for elastic infrastructure.
-[![teleport-5.0](https://github.com/cloudposse/packages/workflows/teleport-5.0/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ateleport-5.0) | 5.0.0-rc.2 | Secure Access for Developers that doesn't get in the way.
+[![teleport-5.0](https://github.com/cloudposse/packages/workflows/teleport-5.0/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ateleport-5.0) | 5.0.0      | Secure Access for Developers that doesn't get in the way.
 [![terraform](https://github.com/cloudposse/packages/workflows/terraform/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aterraform) | 0.13.5     | Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 [![terraform-0.11](https://github.com/cloudposse/packages/workflows/terraform-0.11/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aterraform-0.11) | 0.11.14    | Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 [![terraform-0.12](https://github.com/cloudposse/packages/workflows/terraform-0.12/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aterraform-0.12) | 0.12.29    | Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
@@ -509,8 +511,10 @@ Check out [our other projects][github], [follow us on twitter][twitter], [apply 
 
 ### Contributors
 
+<!-- markdownlint-disable -->
 |  [![Erik Osterman][osterman_avatar]][osterman_homepage]<br/>[Erik Osterman][osterman_homepage] | [![Igor Rodionov][goruha_avatar]][goruha_homepage]<br/>[Igor Rodionov][goruha_homepage] | [![Andriy Knysh][aknysh_avatar]][aknysh_homepage]<br/>[Andriy Knysh][aknysh_homepage] |
 |---|---|---|
+<!-- markdownlint-restore -->
 
   [osterman_homepage]: https://github.com/osterman
   [osterman_avatar]: https://img.cloudposse.com/150x150/https://github.com/osterman.png
