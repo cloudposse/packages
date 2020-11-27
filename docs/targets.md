@@ -17,7 +17,7 @@ cloudflared               2020.11.11 Argo Tunnel client
 cloudposse-atlantis       0.9.0.3    Terraform For Teams, enhanced by Cloud Posse
 codefresh                 0.73.21    Codefresh CLI
 conftest                  0.22.0     Test your configuration files using Open Policy Agent
-consul                    1.8.6      Hashicorp consul
+consul                    1.9.0      Hashicorp consul
 ctop                      0.7.5      Top-like interface for container metrics
 direnv                    2.24.0     Unclutter your .profile
 doctl                     1.53.0     A command line tool for DigitalOcean services
@@ -44,7 +44,7 @@ helm2                     2.17.0     The Kubernetes Package Manager
 helm3                     3.4.1      The Kubernetes Package Manager
 helmfile                  0.135.0    Deploy Kubernetes Helm Charts
 htmltest                  0.13.0     :white_check_mark: Test generated HTML for problems
-hugo                      0.78.2     The world’s fastest framework for building websites.
+hugo                      0.79.0     The world’s fastest framework for building websites.
 jp                        0.1.3      Command line interface to JMESPath
 jq                        1.6.0      Command-line JSON processor
 json2hcl                  0.0.6      Convert JSON to HCL, and vice versa
