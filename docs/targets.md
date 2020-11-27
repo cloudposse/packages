@@ -17,7 +17,7 @@ cloudflared               2020.11.11 Argo Tunnel client
 cloudposse-atlantis       0.9.0.3    Terraform For Teams, enhanced by Cloud Posse
 codefresh                 0.73.21    Codefresh CLI
 conftest                  0.22.0     Test your configuration files using Open Policy Agent
-consul                    1.9.0      Hashicorp consul
+consul                    1.8.6      Hashicorp consul
 ctop                      0.7.5      Top-like interface for container metrics
 direnv                    2.24.0     Unclutter your .profile
 doctl                     1.53.0     A command line tool for DigitalOcean services
@@ -82,7 +82,7 @@ pandoc                    2.11.2     Universal markup converter
 pgmetrics                 1.10.2     Postgres metrics
 pluto                     4.0.0      A cli tool to help discover deprecated apiVersions in Kubernetes
 popeye                    0.9.0      A Kubernetes cluster resource sanitizer
-promtool                  2.22.2     Prometheus CLI tool
+promtool                  2.23.0     Prometheus CLI tool
 rakkess                   0.4.5      Review Access - kubectl plugin to show an access matrix for all available resources
 rancher                   2.4.9      Rancher CLI
 rbac-lookup               0.6.2      Find Kubernetes roles and cluster roles bound to any user, service account, or group name.
