@@ -261,7 +261,7 @@ exit
 [![cloudposse-atlantis](https://github.com/cloudposse/packages/workflows/cloudposse-atlantis/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Acloudposse-atlantis) | 0.9.0.3    | Terraform For Teams, enhanced by Cloud Posse
 [![codefresh](https://github.com/cloudposse/packages/workflows/codefresh/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Acodefresh) | 0.73.21    | Codefresh CLI
 [![conftest](https://github.com/cloudposse/packages/workflows/conftest/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aconftest) | 0.22.0     | Test your configuration files using Open Policy Agent
-[![consul](https://github.com/cloudposse/packages/workflows/consul/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aconsul) | 1.8.6      | Hashicorp consul
+[![consul](https://github.com/cloudposse/packages/workflows/consul/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aconsul) | 1.9.0      | Hashicorp consul
 [![ctop](https://github.com/cloudposse/packages/workflows/ctop/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Actop) | 0.7.5      | Top-like interface for container metrics
 [![direnv](https://github.com/cloudposse/packages/workflows/direnv/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Adirenv) | 2.24.0     | Unclutter your .profile
 [![doctl](https://github.com/cloudposse/packages/workflows/doctl/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Adoctl) | 1.53.0     | A command line tool for DigitalOcean services
@@ -288,7 +288,7 @@ exit
 [![helm3](https://github.com/cloudposse/packages/workflows/helm3/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ahelm3) | 3.4.1      | The Kubernetes Package Manager
 [![helmfile](https://github.com/cloudposse/packages/workflows/helmfile/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ahelmfile) | 0.135.0    | Deploy Kubernetes Helm Charts
 [![htmltest](https://github.com/cloudposse/packages/workflows/htmltest/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ahtmltest) | 0.13.0     | :white_check_mark: Test generated HTML for problems
-[![hugo](https://github.com/cloudposse/packages/workflows/hugo/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ahugo) | 0.78.2     | The world’s fastest framework for building websites.
+[![hugo](https://github.com/cloudposse/packages/workflows/hugo/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ahugo) | 0.79.0     | The world’s fastest framework for building websites.
 [![jp](https://github.com/cloudposse/packages/workflows/jp/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ajp) | 0.1.3      | Command line interface to JMESPath
 [![jq](https://github.com/cloudposse/packages/workflows/jq/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ajq) | 1.6.0      | Command-line JSON processor
 [![json2hcl](https://github.com/cloudposse/packages/workflows/json2hcl/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ajson2hcl) | 0.0.6      | Convert JSON to HCL, and vice versa
