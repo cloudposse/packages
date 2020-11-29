@@ -104,6 +104,7 @@ jobs:
         - shfmt
         - slack-notifier
         - sops
+        - spotctl
         - stern
         - sudosh
         - teleport
