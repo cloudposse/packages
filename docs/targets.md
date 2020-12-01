@@ -52,7 +52,7 @@ jx                        2.1.138    Jenkins-X
 k3d                       3.3.0      Little helper to run Rancher Lab's k3s in Docker
 k6                        0.29.0     A modern load testing tool, using Go and JavaScript - https://k6.io
 k9s                       0.24.1     Kubernetes CLI To Manage Your Clusters In Style
-katafygio                 0.8.1      K8s continuous backup to git
+katafygio                 0.8.2      K8s continuous backup to git
 kfctl                     1.2.0      Machine Learning Toolkit for Kubernetes
 kind                      0.9.0      A tool for running local Kubernetes clusters using Docker
 kops                      1.18.2     Kubernetes Operations (kops) - Production Grade K8s Installation, Upgrades, and Management
