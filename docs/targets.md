@@ -117,7 +117,7 @@ terrahelp                 0.7.4      Terrahelp is as a command line utility that
 tfenv                     0.4.0      Transform environment variables for use with Terraform (e.g. `HOSTNAME` ⇨ `TF_VAR_hostname`)
 tfmask                    0.7.0      Terraform utility to mask select output from `terraform plan` and `terraform apply`
 thanos                    0.17.1     Highly available Prometheus setup with long term storage capabilities. CNCF Sandbox project.
-trivy                     0.13.0     A Simple and Comprehensive Vulnerability Scanner for Containers, Suitable for CI
+trivy                     0.14.0     A Simple and Comprehensive Vulnerability Scanner for Containers, Suitable for CI
 variant                   0.36.5     Variant is a Universal CLI tool that works like a task runner
 variant2                  0.36.0     Second major version of Variant, a Universal CLI tool that works like a task runner
 vault                     1.6.0      Hashicorp vault
