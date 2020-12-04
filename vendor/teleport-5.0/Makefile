@@ -5,8 +5,7 @@ export MASTER_PACKAGE_NAME = teleport
 export MAJOR_VERSION = 5.0
 export PACKAGE_NAME = $(MASTER_PACKAGE_NAME)-$(MAJOR_VERSION)
 
-# At this point (Nov 2020) 5.0 is only in prerelease.
-export PACKAGE_PRERELEASE_ENABLED = true
+export PACKAGE_PRERELEASE_ENABLED = false
 
 # Starting with version 4.3, Teleport is not compatible with Alpine
 export PACKAGE_TYPES_DISABLED = apk
