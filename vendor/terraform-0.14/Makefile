@@ -4,7 +4,7 @@ export PACKAGE_REPO_NAME = terraform
 export PACKAGE_EXE = terraform
 export MASTER_PACKAGE_NAME = terraform
 export MAJOR_VERSION = 0.14
-export PACKAGE_PRERELEASE_ENABLED = true
+export PACKAGE_PRERELEASE_ENABLED = false
 export PACKAGE_NAME = $(MASTER_PACKAGE_NAME)-$(MAJOR_VERSION)
 
 include ../../tasks/Makefile.vendor_includes
