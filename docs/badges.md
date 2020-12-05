@@ -19,7 +19,7 @@
 [![consul](https://github.com/cloudposse/packages/workflows/consul/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aconsul) | 1.9.0      | Hashicorp consul
 [![ctop](https://github.com/cloudposse/packages/workflows/ctop/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Actop) | 0.7.5      | Top-like interface for container metrics
 [![direnv](https://github.com/cloudposse/packages/workflows/direnv/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Adirenv) | 2.25.0     | Unclutter your .profile
-[![doctl](https://github.com/cloudposse/packages/workflows/doctl/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Adoctl) | 1.53.0     | A command line tool for DigitalOcean services
+[![doctl](https://github.com/cloudposse/packages/workflows/doctl/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Adoctl) | 1.54.0     | A command line tool for DigitalOcean services
 [![duffle](https://github.com/cloudposse/packages/workflows/duffle/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aduffle) | 0.3.5b1    | CNAB installer
 [![emailcli](https://github.com/cloudposse/packages/workflows/emailcli/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aemailcli) | 1.0.3      | Command line email sending client written in Go.
 [![fargate](https://github.com/cloudposse/packages/workflows/fargate/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Afargate) | 0.3.2      | CLI for AWS Fargate
