@@ -338,6 +338,9 @@ vendor/terraform-0.13:
 vendor/terraform-0.14:
 - any: ["vendor/terraform-0.14/**"]
   all: ["!bin/**", "!tasks/**"]
+vendor/terraform-config-inspect:
+- any: ["vendor/terraform-config-inspect/**"]
+  all: ["!bin/**", "!tasks/**"]
 vendor/terraform-docs:
 - any: ["vendor/terraform-docs/**"]
   all: ["!bin/**", "!tasks/**"]
