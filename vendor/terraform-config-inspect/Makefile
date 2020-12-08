@@ -18,7 +18,7 @@ version.go: VERSION
 	go generate
 
 $(INSTALL_PATH)/$(PACKAGE_EXE): main.go version.go VERSION
-	chown 777 ../../tmp || echo Failed to chown ../../tmp from $(shell pwd -P)
+	chmod 777 ../../tmp || echo Failed to chmod ../../tmp from $(shell pwd -P)
 	mkdir -p $(INSTALL_PATH)
 	go build -o $(INSTALL_PATH)/$(PACKAGE_EXE)
 
