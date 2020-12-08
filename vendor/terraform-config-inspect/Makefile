@@ -18,9 +18,12 @@ $(INSTALL_PATH)/$(PACKAGE_EXE): main.go version.go VERSION
 	mkdir -p $(INSTALL_PATH)
 	go generate
 	go build -o $(INSTALL_PATH)/$(PACKAGE_EXE)
+	chmod 777 $(INSTALL_PATH)/$(PACKAGE_EXE)
 
 test:
-	$(PACKAGE_EXE) --version | grep -F $(APK_PACKAGE_VERSION)
+	@echo Test: expecting exe version like $(APK_PACKAGE_VERSION)
+	@echo Running: $(PACKAGE_EXE) --version && $(PACKAGE_EXE) --version
+	$(PACKAGE_EXE) --version | grep -q -F $(APK_PACKAGE_VERSION)
 
 ## This may be required for apk building and varies from package to package
 # Custom post-package processing (Note the double colon to append to current inherited package/prepare task)
