@@ -11,7 +11,7 @@ func main() {
 	out, _ := os.Create("version.go")
 	out.Write([]byte("package main \n\nconst (\n"))
 	out.Write([]byte("Version = `"))
-	f, _ := os.Open("Version")
+	f, _ := os.Open("VERSION")
 	io.Copy(out, f)
 	out.Write([]byte("`\n)\n"))
 }
