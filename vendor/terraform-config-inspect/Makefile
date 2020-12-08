@@ -18,7 +18,6 @@ version.go: VERSION
 	go generate
 
 $(INSTALL_PATH)/$(PACKAGE_EXE): main.go version.go VERSION
-	chmod 777 ../../tmp || echo Failed to chmod ../../tmp from $(shell pwd -P)
 	mkdir -p $(INSTALL_PATH)
 	go build -o $(INSTALL_PATH)/$(PACKAGE_EXE)
 
@@ -29,19 +28,12 @@ test:
 
 ## This may be required for apk building and varies from package to package
 # Custom post-package processing (Note the double colon to append to current inherited package/prepare task)
+#package/prepare::
 # 	echo cp src/gh_$(PACKAGE_VERSION)_$(OS)_$(ARCH)/bin/$(PACKAGE_EXE) src
-package/prepare::
-	echo CUSTOM PREPARE
-	echo cwd is $$(pwd)
-	echo APK_TMP_DIR is $(APK_TMP_DIR)
-	echo ls -l $(APK_TMP_DIR)/../..
-	ls -l $(APK_TMP_DIR)/../..
-	echo ls -l ../../
-	ls -l ../../
-	chmod 777 ../../tmp || echo could not chmod ../../tmp
 
 apk/prepare:: $(INSTALL_PATH)/$(PACKAGE_EXE)
 	cp -p $(INSTALL_PATH)/$(PACKAGE_EXE) $(APK_TMP_DIR)
+	chown nobody $(APK_TMP_DIR)/$(PACKAGE_EXE)
 
 install: $(INSTALL_PATH)/$(PACKAGE_EXE)
 
