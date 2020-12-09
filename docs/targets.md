@@ -103,7 +103,7 @@ teleport-4.2              4.2.12     Privileged access management for elastic in
 teleport-4.3              4.3.7      Privileged access management for elastic infrastructure.
 teleport-4.4              4.4.5      Privileged access management for elastic infrastructure.
 teleport-5.0              5.0.0      Secure Access for Developers that doesn't get in the way.
-terraform                 0.14.0     Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
+terraform                 0.14.2     Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-0.11            0.11.14    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-0.12            0.12.29    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-0.13            0.13.5     Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
