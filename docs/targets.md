@@ -100,7 +100,7 @@ stern                     1.11.0     ⎈ Multi pod and container log tailing for
 sudosh                    0.3.0      Shell wrapper to run a login shell with `sudo` as the current user for the purpose of audit logging
 teleport                  5.0.1      Secure Access for Developers that doesn't get in the way.
 teleport-4.2              4.2.12     Privileged access management for elastic infrastructure.
-teleport-4.3              4.3.7      Privileged access management for elastic infrastructure.
+teleport-4.3              4.3.9      Privileged access management for elastic infrastructure.
 teleport-4.4              4.4.6      Privileged access management for elastic infrastructure.
 teleport-5.0              5.0.1      Secure Access for Developers that doesn't get in the way.
 terraform                 0.14.2     Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
