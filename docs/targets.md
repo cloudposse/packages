@@ -19,7 +19,7 @@ codefresh                 0.74.2     Codefresh CLI
 conftest                  0.22.0     Test your configuration files using Open Policy Agent
 consul                    1.9.1      Hashicorp consul
 ctop                      0.7.5      Top-like interface for container metrics
-direnv                    2.25.2     Unclutter your .profile
+direnv                    2.26.0     Unclutter your .profile
 doctl                     1.54.0     A command line tool for DigitalOcean services
 duffle                    0.3.5b1    CNAB installer
 emailcli                  1.0.3      Command line email sending client written in Go.
