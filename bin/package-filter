@@ -7,8 +7,8 @@
 SUPPORTED_PACKAGE_TYPES=(apk deb rpm)
 
 function package_type_enabled() {
-  local package_type=${1,,}
-  local package_types_disabled=${2,,}
+  local package_type=$(echo ${1} | tr '[:upper:]' '[:lower:]')
+  local package_types_disabled=$(echo ${2} | tr '[:upper:]' '[:lower:]')
 
   if [[ ! " ${SUPPORTED_PACKAGE_TYPES[@]} " =~ " $package_type " ]]; then
     echo Unsupported package type \"$package_type\" >&2
@@ -27,10 +27,10 @@ SKIP_PACKAGE_TARGET="-skip-package"
 SKIP_TARGET="_package-disabled"
 
 function make_target() {
-  local package_type=${1,,}
-  local package_enabled=${2,,}
-  local package_types_disabled=${3,,}
-  local legacy_package_enabled=${4,,}
+  local package_type=$(echo ${1} | tr '[:upper:]' '[:lower:]')
+  local package_enabled=$(echo ${2} | tr '[:upper:]' '[:lower:]')
+  local package_types_disabled=$(echo ${3} | tr '[:upper:]' '[:lower:]')
+  local legacy_package_enabled=$(echo ${4} | tr '[:upper:]' '[:lower:]')
 
   if [[ ! " ${SUPPORTED_PACKAGE_TYPES[@]} " =~ " $package_type " ]]; then
     echo Unsupported package type \"$package_type\" >&2
@@ -52,7 +52,7 @@ function make_target() {
 # apk package is disabled if APK_PACKAGE_ENABLED is not empty or "true" or "apk" is included in PACKAGE_DISABLED_TYPES
 function apk_enabled() {
   local apk_package_enabled=${1:-true}
-  local package_types_disabled=${2,,}
+  local package_types_disabled=$(echo ${2} | tr '[:upper:]' '[:lower:]')
 
   if [[ $apk_package_enabled != true || $package_types_disabled =~ "apk" ]]; then
     echo false
@@ -66,7 +66,7 @@ GITHUB_FORMAT_MATRIX="::set-output name=package_matrix::%s\n"
 
 function info_github() {
   local apk_package_enabled=${1:-true}
-  local package_types_disabled=${2,,}
+  local package_types_disabled=$(echo ${2} | tr '[:upper:]' '[:lower:]')
 
   local matrix="["
   local enabled
