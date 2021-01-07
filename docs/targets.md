@@ -106,7 +106,7 @@ teleport-5.0              5.0.2      Secure Access for Developers that doesn't g
 terraform                 0.14.3     Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-0.11            0.11.14    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-0.12            0.12.29    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
-terraform-0.13            0.13.5     Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
+terraform-0.13            0.13.6     Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-0.14            0.14.3     Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-config-inspect  0.0.20201102131242+git0c45ba392e51 A helper library for shallow inspection of Terraform configurations
 terraform-docs            0.10.1     Generate docs from terraform modules
