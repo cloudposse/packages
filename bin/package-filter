@@ -6,9 +6,24 @@
 
 SUPPORTED_PACKAGE_TYPES=(apk deb rpm)
 
+# Bash 3.2 is what ships with Macs, and it does not support the ${var,,} syntax
+# for converting to lower case. This is one of the few scripts that might
+# get run directly on a Mac rather than in a Docker container, so we want
+# it to be compatible. At the same time, I want it to use only shell builtins
+# and handle bad input, so we have this function that only converts
+# valid uppercase package types to lowercase.
+function lc_package_type() {
+  case $1 in
+  APK) printf apk;;
+  DEB) printf deb;;
+  RPM) printf rpm;;
+  *) printf "%s" "$1"
+  esac
+}
+
 function package_type_enabled() {
-  local package_type=${1,,}
-  local package_types_disabled=${2,,}
+  local package_type=$(lc_package_type "$1")
+  local package_types_disabled=$(lc_package_type "$2")
 
   if [[ ! " ${SUPPORTED_PACKAGE_TYPES[@]} " =~ " $package_type " ]]; then
     echo Unsupported package type \"$package_type\" >&2
@@ -27,10 +42,10 @@ SKIP_PACKAGE_TARGET="-skip-package"
 SKIP_TARGET="_package-disabled"
 
 function make_target() {
-  local package_type=${1,,}
-  local package_enabled=${2,,}
-  local package_types_disabled=${3,,}
-  local legacy_package_enabled=${4,,}
+  local package_type=$(lc_package_type "$1")
+  local package_enabled=$(lc_package_type "$2")
+  local package_types_disabled=$(lc_package_type "$3")
+  local legacy_package_enabled=$(lc_package_type "$4")
 
   if [[ ! " ${SUPPORTED_PACKAGE_TYPES[@]} " =~ " $package_type " ]]; then
     echo Unsupported package type \"$package_type\" >&2
@@ -52,7 +67,7 @@ function make_target() {
 # apk package is disabled if APK_PACKAGE_ENABLED is not empty or "true" or "apk" is included in PACKAGE_DISABLED_TYPES
 function apk_enabled() {
   local apk_package_enabled=${1:-true}
-  local package_types_disabled=${2,,}
+  local package_types_disabled=$(lc_package_type "$2")
 
   if [[ $apk_package_enabled != true || $package_types_disabled =~ "apk" ]]; then
     echo false
@@ -66,7 +81,7 @@ GITHUB_FORMAT_MATRIX="::set-output name=package_matrix::%s\n"
 
 function info_github() {
   local apk_package_enabled=${1:-true}
-  local package_types_disabled=${2,,}
+  local package_types_disabled=$(lc_package_type "$2")
 
   local matrix="["
   local enabled
