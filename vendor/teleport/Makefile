@@ -18,7 +18,7 @@ export PACKAGE_EXE = teleport tctl tsh
 export INSTALL_DIR = /usr/share/${MASTER_PACKAGE_NAME}/${MAJOR_VERSION}/bin
 
 install:
-	cd $(INSTALL_PATH) && $(CURL) -o - $(DOWNLOAD_URL) | tar --wildcards --strip-components=1 -zvx $(addprefix teleport/,$(PACKAGE_EXE))
+	cd $(INSTALL_PATH) && $(CURL) -o - $(DOWNLOAD_URL) | tar --strip-components=1 -zvx $(addprefix teleport/,$(PACKAGE_EXE))
 
 test:
 	teleport version | grep -F $(PACKAGE_VERSION)
