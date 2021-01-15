@@ -1,7 +1,7 @@
 # Package details
 export VENDOR ?= mikefarah
 export APK_BUILD_TEMPLATE ?= APKBUILD.github-binary
-export DOWNLOAD_URL ?= $(PACKAGE_REPO_URL)/releases/download/$(PACKAGE_VERSION)/$(PACKAGE_NAME)_$(OS)_$(ARCH)
+export DOWNLOAD_URL ?= $(PACKAGE_REPO_URL)/releases/download/v$(PACKAGE_VERSION)/$(PACKAGE_NAME)_$(OS)_$(ARCH)
 
 include ../../tasks/Makefile.vendor_includes
 
