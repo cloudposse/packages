@@ -256,7 +256,7 @@ exit
 [![cfssl](https://github.com/cloudposse/packages/workflows/cfssl/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Acfssl) | 1.5.0      | Cloudflare's PKI and TLS toolkit
 [![cfssljson](https://github.com/cloudposse/packages/workflows/cfssljson/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Acfssljson) | 1.5.0      | Cloudflare's PKI and TLS toolkit json parser
 [![chamber](https://github.com/cloudposse/packages/workflows/chamber/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Achamber) | 2.9.1      | CLI for managing secrets
-[![cli53](https://github.com/cloudposse/packages/workflows/cli53/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Acli53) | 0.8.17     | Command line tool for Amazon Route 53
+[![cli53](https://github.com/cloudposse/packages/workflows/cli53/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Acli53) | 0.8.18     | Command line tool for Amazon Route 53
 [![cloudflared](https://github.com/cloudposse/packages/workflows/cloudflared/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Acloudflared) | 2021.1.4   | Argo Tunnel client
 [![cloudposse-atlantis](https://github.com/cloudposse/packages/workflows/cloudposse-atlantis/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Acloudposse-atlantis) | 0.9.0.3    | Terraform For Teams, enhanced by Cloud Posse
 [![codefresh](https://github.com/cloudposse/packages/workflows/codefresh/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Acodefresh) | 0.74.4     | Codefresh CLI
