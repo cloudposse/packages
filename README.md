@@ -247,7 +247,7 @@ exit
 | Build Status | Version | Description |
 | ------------ | ------- | ----------- |
 [![amtool](https://github.com/cloudposse/packages/workflows/amtool/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aamtool) | 0.21.0     | Tool for interacting with the Alertmanager API
-[![argocd](https://github.com/cloudposse/packages/workflows/argocd/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aargocd) | 1.8.2      | Declarative GitOpts for Kubernetes
+[![argocd](https://github.com/cloudposse/packages/workflows/argocd/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aargocd) | 1.8.3      | Declarative GitOpts for Kubernetes
 [![assume-role](https://github.com/cloudposse/packages/workflows/assume-role/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aassume-role) | 0.3.2      | Easily assume AWS roles in your terminal.
 [![atlantis](https://github.com/cloudposse/packages/workflows/atlantis/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aatlantis) | 0.16.0     | Terraform For Teams
 [![awless](https://github.com/cloudposse/packages/workflows/awless/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aawless) | 0.1.11     | A Mighty CLI for AWS
