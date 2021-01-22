@@ -392,6 +392,9 @@ vendor/venona:
 vendor/vert:
 - any: ["vendor/vert/**"]
   all: ["!bin/**", "!tasks/**"]
+vendor/yajsv:
+- any: ["vendor/yajsv/**"]
+  all: ["!bin/**", "!tasks/**"]
 vendor/yq:
 - any: ["vendor/yq/**"]
   all: ["!bin/**", "!tasks/**"]

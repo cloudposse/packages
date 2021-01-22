@@ -365,6 +365,7 @@ exit
 [![vendir](https://github.com/cloudposse/packages/workflows/vendir/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Avendir) | 0.14.0     |  Easy way to vendor portions of git repos, github releases, helm charts, docker image contents, etc. declaratively.
 [![venona](https://github.com/cloudposse/packages/workflows/venona/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Avenona) | 0.32.2     | Codefresh runtime-environment agent
 [![vert](https://github.com/cloudposse/packages/workflows/vert/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Avert) | 0.1.0      | Simple CLI for comparing two or more versions
+[![yajsv](https://github.com/cloudposse/packages/workflows/yajsv/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ayajsv) | 1.4.0      | Yet Another JSON Schema Validator [CLI]
 [![yq](https://github.com/cloudposse/packages/workflows/yq/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ayq) | 4.4.1      | yq is a portable command-line YAML processor
 
 

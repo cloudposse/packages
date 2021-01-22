@@ -12,4 +12,4 @@ install:
 	$(call download_binary)
 
 test:
-	$(PACKAGE_EXE) -v  | grep -F $(PACKAGE_VERSION)
+	$(PACKAGE_EXE) -v | grep -F $(PACKAGE_VERSION)
