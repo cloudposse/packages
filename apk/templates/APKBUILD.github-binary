@@ -130,8 +130,10 @@ prepare() {
 # Function will be called as the current user
 build() {
 	cd "$builddir"
-	echo "Build dir"
+	echo "Build dir: ls -l $(pwd)"
 	ls -l $(pwd)
+	echo "Build dir resolved links"
+	ls -lL $(pwd)
 }
 
 # This function is called right after the build stage. 

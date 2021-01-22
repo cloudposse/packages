@@ -134,6 +134,7 @@ jobs:
         - vendir
         - venona
         - vert
+        - yajsv
         - yq
 
     steps:
