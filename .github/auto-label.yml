@@ -32,6 +32,9 @@ vendor/assume-role:
 vendor/atlantis:
 - any: ["vendor/atlantis/**"]
   all: ["!bin/**", "!tasks/**"]
+vendor/atmos:
+- any: ["vendor/atmos/**"]
+  all: ["!bin/**", "!tasks/**"]
 vendor/awless:
 - any: ["vendor/awless/**"]
   all: ["!bin/**", "!tasks/**"]

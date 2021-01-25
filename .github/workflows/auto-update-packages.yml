@@ -22,6 +22,7 @@ jobs:
         - argocd
         - assume-role
         - atlantis
+        - atmos
         - awless
         - aws-iam-authenticator
         - aws-vault
