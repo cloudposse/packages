@@ -142,6 +142,28 @@ usage: |-
   Since the workflow uses a combation of gotemplate-like interpolations as well as inlines shell scripts, we used the `%VAR%` form of interpolation to avoid
   the need for endless escaping of interpolation specifiers.
 
+  ### Testing Locally
+
+  #### Alpine
+
+  ```sh
+  $ make docker/build/apk/shell
+  $ make -C vendor/<package> apk
+  ```
+
+  #### Debian
+
+  ```sh
+  $ make docker/build/deb/shell
+  $ make -C vendor/<package> deb
+  ```
+
+  ### Mac
+
+  ```sh
+  $ make -C vendor/<package> install
+  ```
+
 examples: |-
   ### Docker Multi-stage Build
 
