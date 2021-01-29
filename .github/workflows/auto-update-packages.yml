@@ -25,12 +25,14 @@ jobs:
         - atmos
         - awless
         - aws-iam-authenticator
+        - aws-okta
         - aws-vault
         - cfssl
         - cfssljson
         - chamber
         - cli53
         - cloudflared
+        - cloudposse-atlantis
         - codefresh
         - conftest
         - consul
@@ -72,9 +74,12 @@ jobs:
         - kfctl
         - kind
         - kops
+        - kops-1.12
         - krew
         - kubecron
         - kubectl
+        - kubectl-1.13
+        - kubectl-1.14
         - kubectl-1.15
         - kubectl-1.16
         - kubectl-1.17
@@ -87,6 +92,7 @@ jobs:
         - lectl
         - minikube
         - misspell
+        - nomad
         - opa
         - pack
         - packer
@@ -98,8 +104,10 @@ jobs:
         - rakkess
         - rancher
         - rbac-lookup
+        - retry
         - saml2aws
         - scenery
+        - sentinel
         - sentry-cli
         - shellcheck
         - shfmt
@@ -129,6 +137,7 @@ jobs:
         - tfmask
         - thanos
         - trivy
+        - turf
         - variant
         - variant2
         - vault
