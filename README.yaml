@@ -1,4 +1,4 @@
-name: Packages 
+name: Packages
 
 description: |-
   Cloud Posse distribution of awesome apps.
@@ -6,7 +6,7 @@ description: |-
 introduction: |-
 
   Use this repo to easily install releases of popular Open Source apps. We provide a few ways to use it.
-  
+
   1. **Make Based Installer.** This installer works regardless of your OS and distribution. It downloads packages directly from their GitHub source repos and installs them to your `INSTALL_PATH`. 
   2. **Alpine Linux Packages.** Use our Alpine repository to install prebuilt packages that use the original source binary (where possible) from the maintainers' official GitHub repo releases.
   3. **Docker Image.** Use our docker image as a base-image or as part of a multi-stage docker build. The docker image always distributes the latest linux binaries for `x86_64` architectures.
@@ -14,7 +14,7 @@ introduction: |-
   See examples below for usage.
 
   **Is one of our packages out of date?**
-  
+
   Open up an [issue](https://github.com/cloudposse/packages/issues) or submit a PR (*preferred*). We'll review quickly!
 
   ## Sponsorship [<img src="https://cloudposse.com/wp-content/uploads/2020/10/cloudsmith.svg" width="250" align="right" />](https://cloudsmith.io/)
@@ -24,7 +24,7 @@ introduction: |-
 # License of this project
 license: "APACHE2"
 
-# Canonical GitHub repo 
+# Canonical GitHub repo
 github_repo: cloudposse/packages
 
 # Badges to display
@@ -44,7 +44,9 @@ related:
     description: "Collection of Makefiles to facilitate building Golang projects, Dockerfiles, Helm charts, and more"
     url: "https://github.com/cloudposse/build-harness"
   - name: "geodesic"
-    description: "Geodesic is the fastest way to get up and running with a rock solid, production grade cloud platform built on strictly Open Source tools."
+    description:
+      "Geodesic is the fastest way to get up and running with a rock solid, production grade cloud platform built on
+      strictly Open Source tools."
     url: "https://github.com/cloudposse/geodesic"
 
 # Other files to include in this README from the project folder
@@ -54,11 +56,11 @@ include:
 usage: |-
 
   ### Alpine Repository (recommended)
-  
+
   A public Alpine repository is provided by [Cloud Posse](https://cloudposse.com). The repository is hosted on Amazon S3 and fronted by [CloudFlare's CDN](http://cloudflare.com) with end-to-end TLS. This ensures insane availability with DDoS mitigation and low-cost hosting. Using this alpine repository is ultimately more reliable than depending on [GitHub for availability](https://twitter.com/githubstatus) and provides an easier way to manage dependencies pinned at multiple versions. 
-  
+
   The repository itself is managed using [`alpinist`](https://github.com/cloudposse/alpinist), which takes care of the heavy lifting of building repository indexes. You can self-host your own Alpine repository using this strategy.
-  
+
   ### Configure the alpine repository:
 
   #### The Easy Way
@@ -71,7 +73,7 @@ usage: |-
   __NOTE__: Requires `bash` and `curl` to run:
 
   #### For Docker
-  
+
   Add the following to your `Dockerfile` near the top.
   ```
   # Install the cloudposse alpine repository
@@ -81,9 +83,9 @@ usage: |-
   __NOTE__: we support alpine `3.7`, `3.8`, `3.9`, `3.10`, and `3.11` packages at this time
 
   ### Installing Alpine Packages
-  
+
   When adding packages, we recommend using `apk add --update $package` to update the repository index before installing packages.
-  
+
   Simply install any package as normal:
   ```
   apk add gomplate
@@ -100,9 +102,9 @@ usage: |-
   ```
 
   ### Makefile Interface
-  
+
   The `Makefile` interface works on OSX and Linux. It's a great way to distribute binaries in an OS-agnostic way which does not depend on a package manager (e.g. no `brew` or `apt-get`). 
-  
+
   This method is ideal for [local development environments](https://docs.cloudposse.com/local-dev-environments/) (which is how we use it) where you need the dependencies installed natively for your OS/architecture, such as installing a package on OSX.
 
   See all available packages:
@@ -131,16 +133,14 @@ usage: |-
   ```
 
   ### Rebuilding GitHub Action Workflows
-  
+
   The GitHub Action workflows are compiled from the `.github/package-template.yml` file by running `make -C .github workflows`. It's also run automatically when rebuilding the `README.md` with `make readme`.
 
-  Run this make target anytime the `pakcage-template.yml` changes or any new packages are added to the `vendor/` folder.
-  
+  Run this make target anytime the `package-template.yml` changes or any new packages are added to the `vendor/` folder.
+
   __IMPORTANT__: The `package-template.yml` supports a single macro for interpolation `%PACKAGE_NAME%` which is replaced using a `sed` expression.
   Since the workflow uses a combation of gotemplate-like interpolations as well as inlines shell scripts, we used the `%VAR%` form of interpolation to avoid
-  the need for endless escaping of interpolation specifiers. 
-
-  
+  the need for endless escaping of interpolation specifiers.
 
 examples: |-
   ### Docker Multi-stage Build
@@ -153,7 +153,7 @@ examples: |-
   ```
 
   ### Docker with Git Clone
-  
+
   Or... add this to a `Dockerfile` to easily install packages on-demand:
   ```
   RUN git clone --depth=1 -b master https://github.com/cloudposse/packages.git /packages && \
@@ -200,7 +200,7 @@ examples: |-
   5. Update the `README.md` (`make init readme/deps readme`)
 
   ### Testing apk builds
-  
+
   To validate that a new package will build into an apk you can use the following steps;
 
   ```bash
@@ -211,7 +211,7 @@ examples: |-
   rm -rf ./tmp/build.*
   exit
   ```
-  
+
 # Contributors to this project
 contributors:
   - name: "Erik Osterman"
@@ -220,4 +220,3 @@ contributors:
     github: "goruha"
   - name: "Andriy Knysh"
     github: "aknysh"
-
