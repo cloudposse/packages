@@ -18,7 +18,7 @@ cloudflared               2021.1.5   Argo Tunnel client
 cloudposse-atlantis       0.9.0.3    Terraform For Teams, enhanced by Cloud Posse
 codefresh                 0.74.9     Codefresh CLI
 conftest                  0.23.0     Test your configuration files using Open Policy Agent
-consul                    1.9.2      Hashicorp consul
+consul                    1.9.3      Hashicorp consul
 ctop                      0.7.5      Top-like interface for container metrics
 direnv                    2.27.0     Unclutter your .profile
 doctl                     1.55.0     A command line tool for DigitalOcean services
@@ -56,7 +56,7 @@ k9s                       0.24.2     Kubernetes CLI To Manage Your Clusters In S
 katafygio                 0.8.3      K8s continuous backup to git
 kfctl                     1.2.0      Machine Learning Toolkit for Kubernetes
 kind                      0.10.0     A tool for running local Kubernetes clusters using Docker
-kops                      1.18.3     Kubernetes Operations (kops) - Production Grade K8s Installation, Upgrades, and Management
+kops                      1.19.0     Kubernetes Operations (kops) - Production Grade K8s Installation, Upgrades, and Management
 kops-1.12                 OBSOLETE   Kubernetes Operations (kops) - Production Grade K8s Installation, Upgrades, and Management
 krew                      0.4.0      Kubectl plugin manager
 kubecron                  2.0.0      Utilities to manage kubernetes cronjobs. Run a CronJob manually for test purposes. Suspend/unsuspend a CronJob
@@ -91,9 +91,9 @@ retry                     OBSOLETE   ♻️ Functional mechanism based on channe
 saml2aws                  2.27.1     CLI tool which enables you to login and retrieve AWS temporary credentials using a SAML IDP
 scenery                   0.1.5      A Terraform plan output prettifier
 sentinel                  OBSOLETE   Hashicorp sentinel
-sentry-cli                1.61.0     A command line utility to work with Sentry.
+sentry-cli                1.62.0     A command line utility to work with Sentry.
 shellcheck                0.7.1      ShellCheck, a static analysis tool for shell scripts
-shfmt                     3.2.1      A shell parser, formatter and interpreter (POSIX/Bash/mksh)
+shfmt                     3.2.2      A shell parser, formatter and interpreter (POSIX/Bash/mksh)
 slack-notifier            0.3.0      Command line utility to send messages with attachments to Slack channels via Incoming Webhooks
 sops                      3.6.1      Secrets management stinks, use some sops!
 spotctl                   0.0.17     A unified CLI to manage your [Spot](https://spot.io/) resources.
@@ -114,16 +114,19 @@ terraform-0.13            0.13.6     Terraform is a tool for building, changing,
 terraform-0.14            0.14.5     Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-config-inspect  0.0.20201102131242+git0c45ba392e51 A helper library for shallow inspection of Terraform configurations
 terraform-docs            0.10.1     Generate docs from terraform modules
-terragrunt                0.27.3     Terragrunt is a thin wrapper for Terraform that provides extra tools for working with multiple Terraform modules.
+terraform_0.11            0.11.14    Terraform (Deprecated package. Use terraform-0.11 instead)
+terraform_0.12            0.12.30    Terraform (Deprecated package. Use terraform-0.12 instead)
+terraform_0.13            0.13.6     Terraform (Deprecated package. Use terraform-0.13 instead)
+terragrunt                0.28.1     Terragrunt is a thin wrapper for Terraform that provides extra tools for working with multiple Terraform modules.
 terrahelp                 0.7.4      Terrahelp is as a command line utility that provides useful tricks like masking of terraform output.
 tfenv                     0.4.0      Transform environment variables for use with Terraform (e.g. `HOSTNAME` ⇨ `TF_VAR_hostname`)
 tfmask                    0.7.0      Terraform utility to mask select output from `terraform plan` and `terraform apply`
-thanos                    0.17.2     Highly available Prometheus setup with long term storage capabilities. CNCF Sandbox project.
+thanos                    0.18.0     Highly available Prometheus setup with long term storage capabilities. CNCF Sandbox project.
 trivy                     0.15.0     A Simple and Comprehensive Vulnerability Scanner for Containers, Suitable for CI
-turf                      0.10.0     Turf is Cloud Posse's command-line automation helper.
+turf                      0.11.0     Turf is Cloud Posse's command-line automation helper.
 variant                   0.37.0     Variant is a Universal CLI tool that works like a task runner
 variant2                  0.37.0     Second major version of Variant, a Universal CLI tool that works like a task runner
-vault                     1.6.1      Hashicorp vault
+vault                     1.6.2      Hashicorp vault
 vendir                    0.15.0      Easy way to vendor portions of git repos, github releases, helm charts, docker image contents, etc. declaratively.
 venona                    0.32.2     Codefresh runtime-environment agent
 vert                      0.1.0      Simple CLI for comparing two or more versions
