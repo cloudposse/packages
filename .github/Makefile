@@ -23,7 +23,7 @@ workflows/auto-update-packages.yml: auto-update-template.yml .ALWAYS
 		echo Auto-update of $$pkg is disabled >&2; \
 	  fi; \
 	done; \
-	sed -e "s/%PACKAGE_LIST%/ $${LIST::-1}/" auto-update-template.yml > $@
+	sed -e "s/%PACKAGE_LIST%/ $${LIST%?}/" auto-update-template.yml > $@
 
 # We're using `sed` because GitHub actions are a mashup of environment variables and go-template like formatting. 
 # It is not practical to use `envsubst` or `gomplate` if we need to escape every interpolation.

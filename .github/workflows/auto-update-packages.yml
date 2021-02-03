@@ -129,6 +129,7 @@ jobs:
         - tfmask
         - thanos
         - trivy
+        - turf
         - variant
         - variant2
         - vault

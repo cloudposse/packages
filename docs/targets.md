@@ -120,6 +120,7 @@ tfenv                     0.4.0      Transform environment variables for use wit
 tfmask                    0.7.0      Terraform utility to mask select output from `terraform plan` and `terraform apply`
 thanos                    0.17.2     Highly available Prometheus setup with long term storage capabilities. CNCF Sandbox project.
 trivy                     0.15.0     A Simple and Comprehensive Vulnerability Scanner for Containers, Suitable for CI
+turf                      0.10.0     Turf is Cloud Posse's command-line automation helper.
 variant                   0.37.0     Variant is a Universal CLI tool that works like a task runner
 variant2                  0.37.0     Second major version of Variant, a Universal CLI tool that works like a task runner
 vault                     1.6.1      Hashicorp vault

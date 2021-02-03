@@ -75,6 +75,9 @@ Open up an [issue](https://github.com/cloudposse/packages/issues) or submit a PR
 
 Package repository hosting is graciously provided by [cloudsmith](https://cloudsmith.io/). Cloudsmith is the only fully hosted, cloud-native, universal package management solution, that enables your organization to create, store and share packages in any format, to any place, with total confidence. We believe there’s a better way to manage software assets and packages, and they’re making it happen!
 
+
+
+
 ## Usage
 
 
@@ -161,11 +164,33 @@ make -C uninstall yq
 
 The GitHub Action workflows are compiled from the `.github/package-template.yml` file by running `make -C .github workflows`. It's also run automatically when rebuilding the `README.md` with `make readme`.
 
-Run this make target anytime the `pakcage-template.yml` changes or any new packages are added to the `vendor/` folder.
+Run this make target anytime the `package-template.yml` changes or any new packages are added to the `vendor/` folder.
 
 __IMPORTANT__: The `package-template.yml` supports a single macro for interpolation `%PACKAGE_NAME%` which is replaced using a `sed` expression.
 Since the workflow uses a combation of gotemplate-like interpolations as well as inlines shell scripts, we used the `%VAR%` form of interpolation to avoid
-the need for endless escaping of interpolation specifiers. 
+the need for endless escaping of interpolation specifiers.
+
+### Testing Locally
+
+#### Alpine
+
+```sh
+$ make docker/build/apk/shell
+$ make -C vendor/<package> apk
+```
+
+#### Debian
+
+```sh
+$ make docker/build/deb/shell
+$ make -C vendor/<package> deb
+```
+
+### Mac
+
+```sh
+$ make -C vendor/<package> install
+```
 
 
 
@@ -222,11 +247,15 @@ packages/uninstall/%:
 
 ### Contributing Additional Packages
 In addition to following the Contributing section, the following steps can be used to add new packages for review (via a PR).
-1. Clone an existing, similar, package within the vendors directory. Name the new folder with the same name as the binary package being installed.
-2. At a minimum, update the `VERSION`, `DESCRIPTION`, and `Makefile` to reflect the binary being installed. Ensure that a test task exist in the package Makefile.
-3. Test the install and ensure that it downloads and runs as expected (`make -C install <your_package> INSTALL_PATH=/tmp`)
-4. Test the apk build (see below)
-5. Update the `README.md` (`make init readme/deps readme`)
+If possible (and it usually is), you want to find an existing package with similarly packaged release (`.tar`, `.gz`, uncompressed binary, etc.),
+and copy and edit its Makefile.
+1. Copy the Makefile from an existing, similar, package within the vendors directory. Name the new folder with the same name as the binary package being installed.
+2. Edit the Makefile, ensuring the `DOWNLOAD_URL` is properly formatted
+3. Run `make init` from within the directory to create the `DESCRIPTION`, `LICENSE`, `RELEASE`, and `VERSION` files.
+4. Ensure that a test task exists in the package Makefile. It should check the version number of the installed binary if possible.
+5. Test the install and ensure that it downloads and runs as expected (`make -C install <your_package> INSTALL_PATH=/tmp`)
+6. Test the apk build (see below)
+7. Update the `README.md` (`make init readme/deps readme`)
 
 ### Testing apk builds
 
@@ -360,6 +389,7 @@ exit
 [![tfmask](https://github.com/cloudposse/packages/workflows/tfmask/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Atfmask) | 0.7.0      | Terraform utility to mask select output from `terraform plan` and `terraform apply`
 [![thanos](https://github.com/cloudposse/packages/workflows/thanos/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Athanos) | 0.17.2     | Highly available Prometheus setup with long term storage capabilities. CNCF Sandbox project.
 [![trivy](https://github.com/cloudposse/packages/workflows/trivy/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Atrivy) | 0.15.0     | A Simple and Comprehensive Vulnerability Scanner for Containers, Suitable for CI
+[![turf](https://github.com/cloudposse/packages/workflows/turf/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aturf) | 0.10.0     | Turf is Cloud Posse's command-line automation helper.
 [![variant](https://github.com/cloudposse/packages/workflows/variant/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Avariant) | 0.37.0     | Variant is a Universal CLI tool that works like a task runner
 [![variant2](https://github.com/cloudposse/packages/workflows/variant2/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Avariant2) | 0.37.0     | Second major version of Variant, a Universal CLI tool that works like a task runner
 [![vault](https://github.com/cloudposse/packages/workflows/vault/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Avault) | 1.6.1      | Hashicorp vault

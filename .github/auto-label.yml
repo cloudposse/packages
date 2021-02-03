@@ -377,6 +377,9 @@ vendor/thanos:
 vendor/trivy:
 - any: ["vendor/trivy/**"]
   all: ["!bin/**", "!tasks/**"]
+vendor/turf:
+- any: ["vendor/turf/**"]
+  all: ["!bin/**", "!tasks/**"]
 vendor/variant:
 - any: ["vendor/variant/**"]
   all: ["!bin/**", "!tasks/**"]
