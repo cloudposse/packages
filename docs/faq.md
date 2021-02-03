@@ -9,5 +9,5 @@ Here are the answers to several commonly asked questions:
     </details>
 2.  <details><summary>When adding a new binary, the `make builder TARGETS=readme` command fails with `Unable to find image 'cloudposse/build-harness:sha-[some_SHA_stub]' locally`.</summary>
 
-  This can occur when you have the `cloudposse/build-harness` repository checked out somewhere on your machine. `make builder TARGETS=readme` will end up looking for a docker image tagged with the SHA that the `HEAD` ref of your `buld-harness` points to. To correct this behavior, just run `make init` in the `cloudposse/packages` directory prior to running `make builder TARGETS=readme`.
+    This can occur when you have the `cloudposse/build-harness` repository checked out somewhere on your machine. `make builder TARGETS=readme` will end up looking for a docker image tagged with the SHA that the `HEAD` ref of your `buld-harness` points to. To correct this behavior, just run `make init` in the `cloudposse/packages` directory prior to running `make builder TARGETS=readme`.
     </details>
