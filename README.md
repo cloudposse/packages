@@ -270,6 +270,18 @@ rm -rf ./tmp/build.*
 exit
 ```
 
+### Troubleshooting Package Addition
+Here are some solutions to several common problems that may occur when adding a new package:
+
+1. <details><summary>When adding a new binary, the `make builder TARGETS=readme` command fails, claiming it can't find the binary file, even though it is in the expected place.</summary> 
+
+    Part of the `make builder TARGETS=readme` command is building a package for the binary inside an Alpine Linux container. Since Alpine Linux uses `musl` as its C library, this often leads to situations where binaries built against `libc` might not function on Alpine. However, binaries from projects written in `Go` that are compiled using `libc` will not be found by the Alpine package builder at all if they are missing any necessary libraries, like `libc`. The solution to this problem is to add a `export APKBUILD_DEPENDS += libc6-compat` line to the top of your new binary's associated `Makefile`. 
+    </details>
+2.  <details><summary>When adding a new binary, the `make builder TARGETS=readme` command fails with `Unable to find image 'cloudposse/build-harness:sha-[some_SHA_stub]' locally`.</summary>
+
+    This can occur when you have the `cloudposse/build-harness` repository checked out somewhere on your machine. `make builder TARGETS=readme` will end up looking for a docker image tagged with the SHA that the `HEAD` ref of your `buld-harness` points to. To correct this behavior, just run `make init` in the `cloudposse/packages` directory prior to running `make builder TARGETS=readme`.
+    </details>
+
 
 
 ## Package Build Status
@@ -374,15 +386,15 @@ exit
 [![teleport-4.4](https://github.com/cloudposse/packages/workflows/teleport-4.4/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ateleport-4.4) | 4.4.7      | Privileged access management for elastic infrastructure.
 [![teleport-5.0](https://github.com/cloudposse/packages/workflows/teleport-5.0/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ateleport-5.0) | 5.0.2      | Secure Access for Developers that doesn't get in the way.
 [![terraform](https://github.com/cloudposse/packages/workflows/terraform/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aterraform) | 0.14.5     | Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
+[![terraform_0.11](https://github.com/cloudposse/packages/workflows/terraform_0.11/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aterraform_0.11) | 0.11.14    | Terraform (Deprecated package. Use terraform-0.11 instead)
 [![terraform-0.11](https://github.com/cloudposse/packages/workflows/terraform-0.11/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aterraform-0.11) | 0.11.14    | Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
+[![terraform_0.12](https://github.com/cloudposse/packages/workflows/terraform_0.12/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aterraform_0.12) | 0.12.30    | Terraform (Deprecated package. Use terraform-0.12 instead)
 [![terraform-0.12](https://github.com/cloudposse/packages/workflows/terraform-0.12/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aterraform-0.12) | 0.12.30    | Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
+[![terraform_0.13](https://github.com/cloudposse/packages/workflows/terraform_0.13/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aterraform_0.13) | 0.13.6     | Terraform (Deprecated package. Use terraform-0.13 instead)
 [![terraform-0.13](https://github.com/cloudposse/packages/workflows/terraform-0.13/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aterraform-0.13) | 0.13.6     | Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 [![terraform-0.14](https://github.com/cloudposse/packages/workflows/terraform-0.14/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aterraform-0.14) | 0.14.5     | Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 [![terraform-config-inspect](https://github.com/cloudposse/packages/workflows/terraform-config-inspect/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aterraform-config-inspect) | 0.0.20201102131242+git0c45ba392e51 | A helper library for shallow inspection of Terraform configurations
 [![terraform-docs](https://github.com/cloudposse/packages/workflows/terraform-docs/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aterraform-docs) | 0.10.1     | Generate docs from terraform modules
-[![terraform_0.11](https://github.com/cloudposse/packages/workflows/terraform_0.11/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aterraform_0.11) | 0.11.14    | Terraform (Deprecated package. Use terraform-0.11 instead)
-[![terraform_0.12](https://github.com/cloudposse/packages/workflows/terraform_0.12/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aterraform_0.12) | 0.12.30    | Terraform (Deprecated package. Use terraform-0.12 instead)
-[![terraform_0.13](https://github.com/cloudposse/packages/workflows/terraform_0.13/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aterraform_0.13) | 0.13.6     | Terraform (Deprecated package. Use terraform-0.13 instead)
 [![terragrunt](https://github.com/cloudposse/packages/workflows/terragrunt/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aterragrunt) | 0.27.3     | Terragrunt is a thin wrapper for Terraform that provides extra tools for working with multiple Terraform modules.
 [![terrahelp](https://github.com/cloudposse/packages/workflows/terrahelp/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aterrahelp) | 0.7.4      | Terrahelp is as a command line utility that provides useful tricks like masking of terraform output.
 [![tfenv](https://github.com/cloudposse/packages/workflows/tfenv/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Atfenv) | 0.4.0      | Transform environment variables for use with Terraform (e.g. `HOSTNAME` ⇨ `TF_VAR_hostname`)
