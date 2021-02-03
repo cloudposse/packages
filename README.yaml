@@ -215,11 +215,15 @@ examples: |-
 
   ### Contributing Additional Packages
   In addition to following the Contributing section, the following steps can be used to add new packages for review (via a PR).
-  1. Clone an existing, similar, package within the vendors directory. Name the new folder with the same name as the binary package being installed.
-  2. At a minimum, update the `VERSION`, `DESCRIPTION`, and `Makefile` to reflect the binary being installed. Ensure that a test task exist in the package Makefile.
-  3. Test the install and ensure that it downloads and runs as expected (`make -C install <your_package> INSTALL_PATH=/tmp`)
-  4. Test the apk build (see below)
-  5. Update the `README.md` (`make init readme/deps readme`)
+  If possible (and it usually is), you want to find an existing package with similarly packaged release (`.tar`, `.gz`, uncompressed binary, etc.),
+  and copy and edit its Makefile.
+  1. Copy the Makefile from an existing, similar, package within the vendors directory. Name the new folder with the same name as the binary package being installed.
+  2. Edit the Makefile, ensuring the `DOWNLOAD_URL` is properly formatted
+  3. Run `make init` from within the directory to create the `DESCRIPTION`, `LICENSE`, `RELEASE`, and `VERSION` files.
+  4. Ensure that a test task exists in the package Makefile. It should check the version number of the installed binary if possible.
+  5. Test the install and ensure that it downloads and runs as expected (`make -C install <your_package> INSTALL_PATH=/tmp`)
+  6. Test the apk build (see below)
+  7. Update the `README.md` (`make init readme/deps readme`)
 
   ### Testing apk builds
 
