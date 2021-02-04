@@ -25,7 +25,7 @@ doctl                     1.55.0     A command line tool for DigitalOcean servic
 duffle                    0.3.5b1    CNAB installer
 emailcli                  1.0.3      Command line email sending client written in Go.
 fargate                   0.3.2      CLI for AWS Fargate
-fetch                     0.3.13     fetch makes it easy to download files, folders, and release assets from a specific public git commit, branch, or tag
+fetch                     0.3.14     fetch makes it easy to download files, folders, and release assets from a specific public git commit, branch, or tag
 figurine                  1.0.1      Print your name in style
 fzf                       0.23.1     A command-line fuzzy finder
 gh                        1.5.0      The GitHub CLI
