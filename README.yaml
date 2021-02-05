@@ -68,7 +68,7 @@ usage: |-
   We provide a bootstrap script to configure the alpine repository for your version of alpine. 
 
   ```
-  curl -sSL https://apk.cloudposse.com/install.sh | sh
+  curl -sSL https://apk.cloudposse.com/install.sh | bash
   ```
   __NOTE__: Requires `bash` and `curl` to run:
 
