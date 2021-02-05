@@ -14,7 +14,7 @@ cfssl                     1.5.0      Cloudflare's PKI and TLS toolkit
 cfssljson                 1.5.0      Cloudflare's PKI and TLS toolkit json parser
 chamber                   2.9.1      CLI for managing secrets
 cli53                     0.8.18     Command line tool for Amazon Route 53
-cloudflared               2021.1.5   Argo Tunnel client
+cloudflared               2021.2.1   Argo Tunnel client
 cloudposse-atlantis       0.9.0.3    Terraform For Teams, enhanced by Cloud Posse
 codefresh                 0.74.9     Codefresh CLI
 conftest                  0.23.0     Test your configuration files using Open Policy Agent
@@ -25,7 +25,7 @@ doctl                     1.55.0     A command line tool for DigitalOcean servic
 duffle                    0.3.5b1    CNAB installer
 emailcli                  1.0.3      Command line email sending client written in Go.
 fargate                   0.3.2      CLI for AWS Fargate
-fetch                     0.3.13     fetch makes it easy to download files, folders, and release assets from a specific public git commit, branch, or tag
+fetch                     0.4.1      fetch makes it easy to download files, folders, and release assets from a specific public git commit, branch, or tag
 figurine                  1.0.1      Print your name in style
 fzf                       0.23.1     A command-line fuzzy finder
 gh                        1.5.0      The GitHub CLI
@@ -40,10 +40,10 @@ goofys                    0.24.0     a high-performance, POSIX-ish Amazon S3 fil
 gosu                      1.12.0     Simple Go-based setuid+setgid+setgroups+exec
 gotop                     3.0.0      A terminal based graphical activity monitor inspired by gtop and vtop
 grpcurl                   1.8.0      Like cURL, but for gRPC: Command-line tool for interacting with gRPC servers
-helm                      3.5.1      The Kubernetes Package Manager
+helm                      3.5.2      The Kubernetes Package Manager
 helm2                     2.17.0     The Kubernetes Package Manager
-helm3                     3.5.1      The Kubernetes Package Manager
-helmfile                  0.138.2    Deploy Kubernetes Helm Charts
+helm3                     3.5.2      The Kubernetes Package Manager
+helmfile                  0.138.4    Deploy Kubernetes Helm Charts
 htmltest                  0.14.0     :white_check_mark: Test generated HTML for problems
 hugo                      0.80.0     The world’s fastest framework for building websites.
 jp                        0.1.3      Command line interface to JMESPath
@@ -77,7 +77,7 @@ minikube                  1.17.1     Run Kubernetes locally
 misspell                  0.3.4      Correct commonly misspelled English words in source files
 nomad                     OBSOLETE   Hashicorp nomad
 opa                       0.26.0     An open source project to policy-enable your service.
-pack                      0.16.0     Create cloud native Buildpacks
+pack                      0.17.0     Create cloud native Buildpacks
 packer                    1.6.6      Packer is a tool for creating identical machine images for multiple platforms from a single source configuration.
 pandoc                    2.11.4     Universal markup converter
 pgmetrics                 1.10.5     Postgres metrics
@@ -86,7 +86,7 @@ popeye                    0.9.0      A Kubernetes cluster resource sanitizer
 promtool                  2.24.1     Prometheus CLI tool
 rakkess                   0.4.6      Review Access - kubectl plugin to show an access matrix for all available resources
 rancher                   2.4.10     Rancher CLI
-rbac-lookup               0.6.2      Find Kubernetes roles and cluster roles bound to any user, service account, or group name.
+rbac-lookup               0.6.3      Find Kubernetes roles and cluster roles bound to any user, service account, or group name.
 retry                     OBSOLETE   ♻️ Functional mechanism based on channels to perform actions repetitively until successful.
 saml2aws                  2.27.1     CLI tool which enables you to login and retrieve AWS temporary credentials using a SAML IDP
 scenery                   0.1.5      A Terraform plan output prettifier
@@ -104,17 +104,17 @@ teleport-4.2              4.2.12     Privileged access management for elastic in
 teleport-4.3              4.3.9      Privileged access management for elastic infrastructure.
 teleport-4.4              4.4.7      Privileged access management for elastic infrastructure.
 teleport-5.0              5.0.2      Secure Access for Developers that doesn't get in the way.
-terraform                 0.14.5     Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
+terraform                 0.14.6     Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-0.11            0.11.14    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-0.12            0.12.30    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-0.13            0.13.6     Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
-terraform-0.14            0.14.5     Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
+terraform-0.14            0.14.6     Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-config-inspect  0.0.20201102131242+git0c45ba392e51 A helper library for shallow inspection of Terraform configurations
 terraform-docs            0.10.1     Generate docs from terraform modules
 terraform_0.11            0.11.14    Terraform (Deprecated package. Use terraform-0.11 instead)
 terraform_0.12            0.12.30    Terraform (Deprecated package. Use terraform-0.12 instead)
 terraform_0.13            0.13.6     Terraform (Deprecated package. Use terraform-0.13 instead)
-terragrunt                0.28.1     Terragrunt is a thin wrapper for Terraform that provides extra tools for working with multiple Terraform modules.
+terragrunt                0.28.2     Terragrunt is a thin wrapper for Terraform that provides extra tools for working with multiple Terraform modules.
 terrahelp                 0.7.4      Terrahelp is as a command line utility that provides useful tricks like masking of terraform output.
 tfenv                     0.4.0      Transform environment variables for use with Terraform (e.g. `HOSTNAME` ⇨ `TF_VAR_hostname`)
 tfmask                    0.7.0      Terraform utility to mask select output from `terraform plan` and `terraform apply`
@@ -124,10 +124,10 @@ turf                      0.11.0     Turf is Cloud Posse's command-line automati
 variant                   0.37.0     Variant is a Universal CLI tool that works like a task runner
 variant2                  0.37.0     Second major version of Variant, a Universal CLI tool that works like a task runner
 vault                     1.6.2      Hashicorp vault
-vendir                    0.15.0      Easy way to vendor portions of git repos, github releases, helm charts, docker image contents, etc. declaratively.
+vendir                    0.16.0      Easy way to vendor portions of git repos, github releases, helm charts, docker image contents, etc. declaratively.
 venona                    0.32.2     Codefresh runtime-environment agent
 vert                      0.1.0      Simple CLI for comparing two or more versions
 yajsv                     1.4.0      Yet Another JSON Schema Validator [CLI]
-yq                        4.4.1      yq is a portable command-line YAML processor
+yq                        4.5.0      yq is a portable command-line YAML processor
 ```
 <!-- markdownlint-restore -->
