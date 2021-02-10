@@ -17,7 +17,9 @@ include ../../tasks/Makefile.vendor_includes
 version.go: VERSION
 	go generate
 
+# Cannot depend on file modification dates to regenerate version because builder uses fresh git clone
 $(INSTALL_PATH)/$(PACKAGE_EXE): main.go version.go VERSION
+	go generate
 	mkdir -p $(INSTALL_PATH)
 	go build -o $(INSTALL_PATH)/$(PACKAGE_EXE)
 
