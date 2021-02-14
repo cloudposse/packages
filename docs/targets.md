@@ -84,7 +84,7 @@ pgmetrics                 1.10.5     Postgres metrics
 pluto                     4.0.4      A cli tool to help discover deprecated apiVersions in Kubernetes
 popeye                    0.9.0      A Kubernetes cluster resource sanitizer
 promtool                  2.24.1     Prometheus CLI tool
-rakkess                   0.4.6      Review Access - kubectl plugin to show an access matrix for all available resources
+rakkess                   0.4.7      Review Access - kubectl plugin to show an access matrix for all available resources
 rancher                   2.4.10     Rancher CLI
 rbac-lookup               0.6.3      Find Kubernetes roles and cluster roles bound to any user, service account, or group name.
 retry                     OBSOLETE   ♻️ Functional mechanism based on channels to perform actions repetitively until successful.
