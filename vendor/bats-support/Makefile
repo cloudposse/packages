@@ -5,6 +5,7 @@ export VENDOR ?= ztombol
 export DOWNLOAD_URL ?= $(PACKAGE_REPO_URL)/archive/v$(PACKAGE_VERSION).tar.gz
 export APK_BUILD_TEMPLATE ?= APKBUILD.github-binary
 export INSTALL_PATH ?= /usr/local/lib/bats
+export APKBUILD_DEPENDS += bats
 
 install:
 	[ -n "$(TMP)" ] && [ -n "$(PACKAGE_NAME)" ] && rm -rf "$(TMP)/$(PACKAGE_NAME)"
