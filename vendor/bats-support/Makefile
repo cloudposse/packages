@@ -10,7 +10,7 @@ install:
 	[ -n "$(TMP)" ] && [ -n "$(PACKAGE_NAME)" ] && rm -rf "$(TMP)/$(PACKAGE_NAME)"
 	mkdir -p $(TMP)/$(PACKAGE_NAME)
 	$(CURL) -o - $(DOWNLOAD_URL) | tar -zx -C $(TMP)/$(PACKAGE_NAME)
-	cp -f {} $(INSTALL_PATH)/$(PACKAGE_NAME)
+	cp -R $(TMP)/$(PACKAGE_NAME) $(INSTALL_PATH)/$(PACKAGE_NAME)
 	printf 'source "%s"\n' "$(INSTALL_PATH)/$(PACKAGE_NAME)/load.bash" >> /usr/local/lib/bats/load.bash
 	[ -n "$(TMP)" ] && [ -n "$(PACKAGE_NAME)" ] && rm -rf "$(TMP)/$(PACKAGE_NAME)"
 
