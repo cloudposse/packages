@@ -15,4 +15,4 @@ install:
 	[ -n "$(TMP)" ] && [ -n "$(PACKAGE_NAME)" ] && rm -rf "$(TMP)/$(PACKAGE_NAME)"
 
 test:
-	ls -l $(INSTALL_PATH)/$(PACKAGE_NAME)
+	[ ls -l $(INSTALL_PATH)/$(PACKAGE_NAME)/load.bash ] && [ grep -q "$(INSTALL_PATH)/$(PACKAGE_NAME)/load.bash" /usr/local/lib/bats/load.bash ]
