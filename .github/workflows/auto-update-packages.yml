@@ -49,6 +49,7 @@ jobs:
         - github-release
         - github-status-updater
         - gitleaks
+        - go-jsonnet
         - gomplate
         - gonsul
         - goofys
