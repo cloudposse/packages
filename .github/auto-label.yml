@@ -119,6 +119,9 @@ vendor/github-status-updater:
 vendor/gitleaks:
 - any: ["vendor/gitleaks/**"]
   all: ["!bin/**", "!tasks/**"]
+vendor/go-jsonnet:
+- any: ["vendor/go-jsonnet/**"]
+  all: ["!bin/**", "!tasks/**"]
 vendor/gomplate:
 - any: ["vendor/gomplate/**"]
   all: ["!bin/**", "!tasks/**"]
