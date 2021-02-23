@@ -21,7 +21,7 @@ conftest                  0.23.0     Test your configuration files using Open Po
 consul                    1.9.3      Hashicorp consul
 ctop                      0.7.5      Top-like interface for container metrics
 direnv                    2.27.0     Unclutter your .profile
-doctl                     1.56.0     A command line tool for DigitalOcean services
+doctl                     1.57.0     A command line tool for DigitalOcean services
 duffle                    0.3.5b1    CNAB installer
 emailcli                  1.0.3      Command line email sending client written in Go.
 fargate                   0.3.2      CLI for AWS Fargate
