@@ -221,6 +221,9 @@ vendor/kubectl-1.18:
 vendor/kubectl-1.19:
 - any: ["vendor/kubectl-1.19/**"]
   all: ["!bin/**", "!tasks/**"]
+vendor/kubectl-1.20:
+- any: ["vendor/kubectl-1.20/**"]
+  all: ["!bin/**", "!tasks/**"]
 vendor/kubectl:
 - any: ["vendor/kubectl/**"]
   all: ["!bin/**", "!tasks/**"]
@@ -343,6 +346,9 @@ vendor/terraform-0.13:
   all: ["!bin/**", "!tasks/**"]
 vendor/terraform-0.14:
 - any: ["vendor/terraform-0.14/**"]
+  all: ["!bin/**", "!tasks/**"]
+vendor/terraform-0.15:
+- any: ["vendor/terraform-0.15/**"]
   all: ["!bin/**", "!tasks/**"]
 vendor/terraform-config-inspect:
 - any: ["vendor/terraform-config-inspect/**"]
