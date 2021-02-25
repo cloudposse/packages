@@ -1,0 +1,11 @@
+#!/bin/sh
+# This is an Alpine `deinstall` hook that removes the alternative
+MASTER_PACKAGE_NAME=terraform
+MAJOR_VERSION=0.15
+PACKAGE_NAME=${MASTER_PACKAGE_NAME}-${MAJOR_VERSION}
+INSTALL_DIR=/usr/share/${MASTER_PACKAGE_NAME}/${MAJOR_VERSION}/bin
+
+update-alternatives --remove ${PACKAGE_NAME} ${INSTALL_DIR}/${MASTER_PACKAGE_NAME} --quiet
+update-alternatives --remove ${PACKAGE_NAME}-direnv ${INSTALL_DIR}/${MASTER_PACKAGE_NAME} --quiet
+update-alternatives --remove ${MASTER_PACKAGE_NAME} ${INSTALL_DIR}/${MASTER_PACKAGE_NAME} --quiet
+exit 0
