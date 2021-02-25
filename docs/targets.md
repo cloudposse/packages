@@ -70,7 +70,7 @@ kubectl-1.17              1.17.17    Production-Grade Container Scheduling and M
 kubectl-1.18              1.18.16    Production-Grade Container Scheduling and Management (v1.18)
 kubectl-1.19              1.19.8     Production-Grade Container Scheduling and Management (v1.19)
 kubectx                   0.9.1      Switch faster between clusters and namespaces in kubectl
-kubens                    0.9.1      Switch faster between clusters and namespaces in kubectl
+kubens                    0.9.2      Switch faster between clusters and namespaces in kubectl
 kubeval                   0.15.0     Validate your Kubernetes configuration files, supports multiple Kubernetes versions
 lazydocker                0.10.0     The lazier way to manage everything docker
 lectl                     0.21.0     Script to check issued certificates by Let's Encrypt on CTL (Certificate Transparency Log) using https://crt.sh
