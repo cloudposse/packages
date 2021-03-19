@@ -38,6 +38,7 @@ jobs:
         - direnv
         - doctl
         - duffle
+        - ec2-instance-selector
         - emailcli
         - fargate
         - fetch
