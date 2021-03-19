@@ -23,6 +23,7 @@ ctop                      0.7.5      Top-like interface for container metrics
 direnv                    2.28.0     Unclutter your .profile
 doctl                     1.57.0     A command line tool for DigitalOcean services
 duffle                    0.3.5b1    CNAB installer
+ec2-instance-selector     2.0.2      A CLI tool and go library which recommends instance types based on resource criteria like vcpus and memory
 emailcli                  1.0.3      Command line email sending client written in Go.
 fargate                   0.3.2      CLI for AWS Fargate
 fetch                     0.4.1      fetch makes it easy to download files, folders, and release assets from a specific public git commit, branch, or tag

@@ -86,6 +86,9 @@ vendor/doctl:
 vendor/duffle:
 - any: ["vendor/duffle/**"]
   all: ["!bin/**", "!tasks/**"]
+vendor/ec2-instance-selector:
+- any: ["vendor/ec2-instance-selector/**"]
+  all: ["!bin/**", "!tasks/**"]
 vendor/emailcli:
 - any: ["vendor/emailcli/**"]
   all: ["!bin/**", "!tasks/**"]
