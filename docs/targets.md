@@ -74,7 +74,7 @@ kubectl-1.20              1.20.5     Production-Grade Container Scheduling and M
 kubectx                   0.9.3      Switch faster between clusters and namespaces in kubectl
 kubens                    0.9.3      Switch faster between clusters and namespaces in kubectl
 kubeval                   0.15.0     Validate your Kubernetes configuration files, supports multiple Kubernetes versions
-lazydocker                0.10.0     The lazier way to manage everything docker
+lazydocker                0.12.0     The lazier way to manage everything docker
 lectl                     0.21.0     Script to check issued certificates by Let's Encrypt on CTL (Certificate Transparency Log) using https://crt.sh
 minikube                  1.18.1     Run Kubernetes locally
 misspell                  0.3.4      Correct commonly misspelled English words in source files
