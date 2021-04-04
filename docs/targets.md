@@ -73,7 +73,7 @@ kubectl-1.19              1.19.9     Production-Grade Container Scheduling and M
 kubectl-1.20              1.20.5     Production-Grade Container Scheduling and Management (v1.19)
 kubectx                   0.9.3      Switch faster between clusters and namespaces in kubectl
 kubens                    0.9.3      Switch faster between clusters and namespaces in kubectl
-kubeval                   0.16.0     Validate your Kubernetes configuration files, supports multiple Kubernetes versions
+kubeval                   0.16.1     Validate your Kubernetes configuration files, supports multiple Kubernetes versions
 lazydocker                0.12.0     The lazier way to manage everything docker
 lectl                     0.21.0     Script to check issued certificates by Let's Encrypt on CTL (Certificate Transparency Log) using https://crt.sh
 minikube                  1.18.1     Run Kubernetes locally
@@ -82,11 +82,12 @@ nomad                     OBSOLETE   Hashicorp nomad
 opa                       0.27.1     An open source project to policy-enable your service.
 pack                      0.18.0     Create cloud native Buildpacks
 packer                    1.7.1      Packer is a tool for creating identical machine images for multiple platforms from a single source configuration.
-pandoc                    2.11.4     Universal markup converter
+pandoc                    2.13       Universal markup converter
 pgmetrics                 1.10.5     Postgres metrics
 pluto                     4.0.6      A cli tool to help discover deprecated apiVersions in Kubernetes
 popeye                    0.9.0      A Kubernetes cluster resource sanitizer
 promtool                  2.26.0     Prometheus CLI tool
+rainbow                   1.1.1      Tasty rainbows for your terminal! (lolcat clone)
 rakkess                   0.4.7      Review Access - kubectl plugin to show an access matrix for all available resources
 rancher                   2.4.10     Rancher CLI
 rbac-lookup               0.6.3      Find Kubernetes roles and cluster roles bound to any user, service account, or group name.
