@@ -3,7 +3,7 @@
 # DO NOT EDIT THIS WORKFLOW, changes will be lost on the next update.
 #
 
-name: "rainbow"
+name: "rainbow-text"
 on:
   push:
     branches:
@@ -14,8 +14,8 @@ on:
       - deb/**
       - rpm/**
       - tasks/**
-      - vendor/rainbow/**
-      - .github/workflows/rainbow.yml
+      - vendor/rainbow-text/**
+      - .github/workflows/rainbow-text.yml
 
 
   pull_request:
@@ -25,8 +25,8 @@ on:
       - deb/**
       - rpm/**
       - tasks/**
-      - vendor/rainbow/**
-      - .github/workflows/rainbow.yml
+      - vendor/rainbow-text/**
+      - .github/workflows/rainbow-text.yml
 
 jobs:
   matrix:
@@ -46,10 +46,10 @@ jobs:
         GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
       run: |
         echo setting ouputs
-        make -C vendor/rainbow info/github
+        make -C vendor/rainbow-text info/github
         echo
         echo outputs set
-        make -C vendor/rainbow info/github | sed s'/::set-output name=//' | sed 's/::/=/'
+        make -C vendor/rainbow-text info/github | sed s'/::set-output name=//' | sed 's/::/=/'
 
 
   # Build for alpine linux

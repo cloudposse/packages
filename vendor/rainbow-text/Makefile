@@ -3,7 +3,8 @@
 # Note that you must update main.go to call the library
 # and optionally add options and help.
 export VENDOR = arsham
-export PACKAGE_NAME = rainbow
+export PACKAGE_NAME = rainbow-text
+export PACKAGE_EXE = rainbow
 export DOWNLOAD_URL ?= $(PACKAGE_EXE)
 export APK_BUILD_TEMPLATE ?= APKBUILD.github-binary
 export APK_PACKAGE_VERSION := $(shell cat VERSION | sed s/\+.*//)
