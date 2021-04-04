@@ -11,6 +11,7 @@ import (
 )
 
 //go:generate go run scripts/includeversion.go
+const ExeName = "terraform-config-inspect"
 
 var showJSON = flag.Bool("json", false, "produce JSON-formatted output")
 var showVersion = flag.BoolP("version", "v", false, "output version")
@@ -59,5 +60,5 @@ func showModuleMarkdown(module *tfconfig.Module) {
 }
 
 func printVersion() {
-	fmt.Fprintf(os.Stdout, "terraform-config-inspect v%v (Cloud Posse)\n", strings.Trim(Version,"\n"))
+	fmt.Fprintf(os.Stdout, "%v v%v (Cloud Posse)\n", ExeName, strings.Trim(Version,"\n"))
 }

@@ -278,6 +278,9 @@ vendor/popeye:
 vendor/promtool:
 - any: ["vendor/promtool/**"]
   all: ["!bin/**", "!tasks/**"]
+vendor/rainbow:
+- any: ["vendor/rainbow/**"]
+  all: ["!bin/**", "!tasks/**"]
 vendor/rakkess:
 - any: ["vendor/rakkess/**"]
   all: ["!bin/**", "!tasks/**"]

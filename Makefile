@@ -9,7 +9,7 @@ export README_DEPS ?= .github/auto-label.yml docs/badges.md docs/targets.md work
 
 export DIST_CMD ?= cp -a
 export DIST_PATH ?= /dist
-export ALPINE_VERSION ?= 3.12
+export ALPINE_VERSION ?= alpine
 
 SHELL := /bin/bash
 

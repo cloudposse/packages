@@ -17,7 +17,7 @@ install:
 	$(call download_tarball)
 
 test:
-	$(PACKAGE_EXE) --version
+	$(PACKAGE_EXE) version | grep -F $(PACKAGE_VERSION)
 
 ## This may be required for apk building and varies from package to package
 ## Custom post-package processing (Note the double colon to append to current inherited package/prepare task)
