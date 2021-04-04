@@ -4,7 +4,8 @@ include ../../tasks/Makefile.vendor_includes
 export VENDOR = instrumenta
 export PACKAGE_NAME = kubeval
 export PACKAGE_REPO_NAME = kubeval
-export DOWNLOAD_URL ?= $(PACKAGE_REPO_URL)/releases/download/$(PACKAGE_VERSION)/$(PACKAGE_NAME)-$(OS)-$(ARCH).tar.gz
+# https://github.com/instrumenta/kubeval/releases/download/v0.16.1/kubeval-linux-amd64.tar.gz
+export DOWNLOAD_URL ?= $(PACKAGE_REPO_URL)/releases/download/v$(PACKAGE_VERSION)/$(PACKAGE_NAME)-$(OS)-$(ARCH).tar.gz
 export APK_BUILD_TEMPLATE ?= APKBUILD.github-binary
 
 install:
