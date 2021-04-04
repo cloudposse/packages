@@ -1,4 +1,7 @@
-## Package - terraform-config-inspect
+## Package - rainbow
+# Example for GO package based on GO library.
+# Note that you must update main.go to call the library
+# and optionally add options and help.
 export VENDOR = arsham
 export PACKAGE_NAME = rainbow
 export DOWNLOAD_URL ?= $(PACKAGE_EXE)
@@ -10,7 +13,7 @@ export INSTALL_PATH=/usr/local/bin
 export PACKAGE_TYPES_DISABLED = rpm
 
 # Custom auto-update target
-export PACKAGE_VERSION_TARGET := go-update
+export PACKAGE_VERSION_TARGET := GOLANG_LATEST_VERSION
 
 include ../../tasks/Makefile.vendor_includes
 
@@ -38,7 +41,3 @@ apk/prepare:: $(INSTALL_PATH)/$(PACKAGE_EXE)
 	chown nobody $(APK_TMP_DIR)/$(PACKAGE_EXE)
 
 install: $(INSTALL_PATH)/$(PACKAGE_EXE)
-
-go-update:
-	go get -u github.com/arsham/rainbow
-	printf "%s" $$(grep -F github.com/arsham/rainbow go.mod| sed -e 's/.* v//' -e 's/\.0-/./' -e 's/-/+git/') > VERSION
