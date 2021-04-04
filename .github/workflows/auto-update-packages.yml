@@ -98,7 +98,7 @@ jobs:
         - pluto
         - popeye
         - promtool
-        - rainbow
+        - rainbow-text
         - rakkess
         - rancher
         - rbac-lookup
