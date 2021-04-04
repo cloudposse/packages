@@ -1,3 +1,4 @@
+# Need to use version number so that it gets updated here and triggers a build
 FROM alpine:3.13.4
 
 ENV LC_ALL=C.UTF-8
