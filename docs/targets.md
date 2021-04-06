@@ -90,7 +90,7 @@ promtool                  2.26.0     Prometheus CLI tool
 rainbow-text              1.1.1      Tasty rainbows for your terminal! (lolcat clone)
 rakkess                   0.4.7      Review Access - kubectl plugin to show an access matrix for all available resources
 rancher                   2.4.10     Rancher CLI
-rbac-lookup               0.6.3      Find Kubernetes roles and cluster roles bound to any user, service account, or group name.
+rbac-lookup               0.6.4      Find Kubernetes roles and cluster roles bound to any user, service account, or group name.
 retry                     OBSOLETE   ♻️ Functional mechanism based on channels to perform actions repetitively until successful.
 saml2aws                  2.28.4     CLI tool which enables you to login and retrieve AWS temporary credentials using a SAML IDP
 scenery                   0.1.5      A Terraform plan output prettifier
