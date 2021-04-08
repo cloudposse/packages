@@ -103,7 +103,7 @@ sops                      3.7.0      Secrets management stinks, use some sops!
 spotctl                   0.19.0     A unified CLI to manage your [Spot](https://spot.io/) resources.
 stern                     1.11.0     ⎈ Multi pod and container log tailing for Kubernetes
 sudosh                    0.3.0      Shell wrapper to run a login shell with `sudo` as the current user for the purpose of audit logging
-teleport                  6.0.2      Secure Access for Developers that doesn't get in the way.
+teleport                  6.0.3      Secure Access for Developers that doesn't get in the way.
 teleport-4.2              4.2.12     Privileged access management for elastic infrastructure.
 teleport-4.3              4.3.10     Privileged access management for elastic infrastructure.
 teleport-4.4              4.4.9      Privileged access management for elastic infrastructure.
