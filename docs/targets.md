@@ -2,7 +2,7 @@
 ## Makefile Targets
 ```text
 amtool                    0.21.0     Tool for interacting with the Alertmanager API
-argocd                    1.8.7      Declarative GitOpts for Kubernetes
+argocd                    2.0.0      Declarative GitOpts for Kubernetes
 assume-role               0.3.2      Easily assume AWS roles in your terminal.
 atlantis                  0.16.1     Terraform For Teams
 atmos                     0.17.0     Universal Tool for DevOps and Cloud Automation
@@ -14,7 +14,7 @@ cfssl                     1.5.0      Cloudflare's PKI and TLS toolkit
 cfssljson                 1.5.0      Cloudflare's PKI and TLS toolkit json parser
 chamber                   2.9.1      CLI for managing secrets
 cli53                     0.8.18     Command line tool for Amazon Route 53
-cloudflared               2021.3.6   Argo Tunnel client
+cloudflared               2021.4.0   Argo Tunnel client
 cloudposse-atlantis       0.9.0.3    Terraform For Teams, enhanced by Cloud Posse
 codefresh                 0.75.8     Codefresh CLI
 conftest                  0.23.0     Test your configuration files using Open Policy Agent
@@ -51,8 +51,8 @@ hugo                      0.82.0     The world’s fastest framework for buildin
 jp                        0.1.3      Command line interface to JMESPath
 jq                        1.6.0      Command-line JSON processor
 json2hcl                  0.0.6      Convert JSON to HCL, and vice versa
-jx                        3.2.14     Jenkins-X
-k3d                       4.4.0      Little helper to run Rancher Lab's k3s in Docker
+jx                        3.2.23     Jenkins-X
+k3d                       4.4.1      Little helper to run Rancher Lab's k3s in Docker
 k6                        0.31.1     A modern load testing tool, using Go and JavaScript - https://k6.io
 k9s                       0.24.7     Kubernetes CLI To Manage Your Clusters In Style
 katafygio                 0.8.3      K8s continuous backup to git
@@ -62,7 +62,7 @@ kops                      1.19.1     Kubernetes Operations (kops) - Production G
 kops-1.12                 OBSOLETE   Kubernetes Operations (kops) - Production Grade K8s Installation, Upgrades, and Management
 krew                      0.4.1      Kubectl plugin manager
 kubecron                  2.0.0      Utilities to manage kubernetes cronjobs. Run a CronJob manually for test purposes. Suspend/unsuspend a CronJob
-kubectl                   1.20.5     Production-Grade Container Scheduling and Management
+kubectl                   1.21.0     Production-Grade Container Scheduling and Management
 kubectl-1.13              1.13.12    Production-Grade Container Scheduling and Management (v1.13)
 kubectl-1.14              1.14.10    Production-Grade Container Scheduling and Management (v1.14)
 kubectl-1.15              1.15.12    Production-Grade Container Scheduling and Management (v1.15)
@@ -99,27 +99,27 @@ sentry-cli                1.63.2     A command line utility to work with Sentry.
 shellcheck                0.7.1      ShellCheck, a static analysis tool for shell scripts
 shfmt                     3.2.4      A shell parser, formatter and interpreter (POSIX/Bash/mksh)
 slack-notifier            0.3.0      Command line utility to send messages with attachments to Slack channels via Incoming Webhooks
-sops                      3.7.0      Secrets management stinks, use some sops!
+sops                      3.7.1      Secrets management stinks, use some sops!
 spotctl                   0.19.0     A unified CLI to manage your [Spot](https://spot.io/) resources.
 stern                     1.11.0     ⎈ Multi pod and container log tailing for Kubernetes
 sudosh                    0.3.0      Shell wrapper to run a login shell with `sudo` as the current user for the purpose of audit logging
-teleport                  6.0.2      Secure Access for Developers that doesn't get in the way.
+teleport                  6.0.3      Secure Access for Developers that doesn't get in the way.
 teleport-4.2              4.2.12     Privileged access management for elastic infrastructure.
 teleport-4.3              4.3.10     Privileged access management for elastic infrastructure.
 teleport-4.4              4.4.9      Privileged access management for elastic infrastructure.
 teleport-5.0              5.0.2      Secure Access for Developers that doesn't get in the way.
-terraform                 0.14.9     Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
+terraform                 0.14.10    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-0.11            0.11.14    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-0.12            0.12.30    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-0.13            0.13.6     Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
-terraform-0.14            0.14.9     Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
-terraform-0.15            0.15.0-rc1 Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
+terraform-0.14            0.14.10    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
+terraform-0.15            0.15.0-rc2 Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-config-inspect  0.0.20210318070130+git9a80970d6b34 A helper library for shallow inspection of Terraform configurations
 terraform-docs            0.12.1     Generate docs from terraform modules
 terraform_0.11            0.11.14    Terraform (Deprecated package. Use terraform-0.11 instead)
 terraform_0.12            0.12.30    Terraform (Deprecated package. Use terraform-0.12 instead)
 terraform_0.13            0.13.6     Terraform (Deprecated package. Use terraform-0.13 instead)
-terragrunt                0.28.18    Terragrunt is a thin wrapper for Terraform that provides extra tools for working with multiple Terraform modules.
+terragrunt                0.28.19    Terragrunt is a thin wrapper for Terraform that provides extra tools for working with multiple Terraform modules.
 terrahelp                 0.7.4      Terrahelp is as a command line utility that provides useful tricks like masking of terraform output.
 tfenv                     0.4.0      Transform environment variables for use with Terraform (e.g. `HOSTNAME` ⇨ `TF_VAR_hostname`)
 tfmask                    0.7.0      Terraform utility to mask select output from `terraform plan` and `terraform apply`
