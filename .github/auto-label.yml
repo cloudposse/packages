@@ -317,6 +317,9 @@ vendor/slack-notifier:
 vendor/sops:
 - any: ["vendor/sops/**"]
   all: ["!bin/**", "!tasks/**"]
+vendor/spacectl:
+- any: ["vendor/spacectl/**"]
+  all: ["!bin/**", "!tasks/**"]
 vendor/spotctl:
 - any: ["vendor/spotctl/**"]
   all: ["!bin/**", "!tasks/**"]
