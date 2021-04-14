@@ -83,7 +83,7 @@ opa                       0.27.1     An open source project to policy-enable you
 pack                      0.18.0     Create cloud native Buildpacks
 packer                    1.7.2      Packer is a tool for creating identical machine images for multiple platforms from a single source configuration.
 pandoc                    2.13       Universal markup converter
-pgmetrics                 1.10.5     Postgres metrics
+pgmetrics                 1.11.0     Postgres metrics
 pluto                     4.1.0      A cli tool to help discover deprecated apiVersions in Kubernetes
 popeye                    0.9.0      A Kubernetes cluster resource sanitizer
 promtool                  2.26.0     Prometheus CLI tool
