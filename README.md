@@ -1,3 +1,4 @@
+
 <!-- markdownlint-disable -->
 # Packages [![Auto Update Status](https://github.com/cloudposse/packages/workflows/auto-update/badge.svg)](https://github.com/cloudposse/packages/actions?query=workflow%3Aauto-update) [![Latest Release](https://img.shields.io/github/release/cloudposse/packages.svg)](https://github.com/cloudposse/packages/releases/latest) [![Slack Community](https://slack.cloudposse.com/badge.svg)](https://slack.cloudposse.com)
 <!-- markdownlint-restore -->
@@ -28,7 +29,6 @@
 -->
 
 Cloud Posse distribution of awesome apps.
-
 
 ---
 
@@ -74,6 +74,7 @@ Open up an [issue](https://github.com/cloudposse/packages/issues) or submit a PR
 ## Sponsorship [<img src="https://cloudposse.com/wp-content/uploads/2020/10/cloudsmith.svg" width="250" align="right" />](https://cloudsmith.io/)
 
 Package repository hosting is graciously provided by [cloudsmith](https://cloudsmith.io/). Cloudsmith is the only fully hosted, cloud-native, universal package management solution, that enables your organization to create, store and share packages in any format, to any place, with total confidence. We believe there’s a better way to manage software assets and packages, and they’re making it happen!
+
 
 
 
@@ -374,7 +375,7 @@ Here are some solutions to several common problems that may occur when adding a 
 [![rakkess](https://github.com/cloudposse/packages/workflows/rakkess/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Arakkess) | 0.4.7      | Review Access - kubectl plugin to show an access matrix for all available resources
 [![rancher](https://github.com/cloudposse/packages/workflows/rancher/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Arancher) | 2.4.10     | Rancher CLI
 [![rbac-lookup](https://github.com/cloudposse/packages/workflows/rbac-lookup/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Arbac-lookup) | 0.6.4      | Find Kubernetes roles and cluster roles bound to any user, service account, or group name.
-[![saml2aws](https://github.com/cloudposse/packages/workflows/saml2aws/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Asaml2aws) | 2.28.4     | CLI tool which enables you to login and retrieve AWS temporary credentials using a SAML IDP
+[![saml2aws](https://github.com/cloudposse/packages/workflows/saml2aws/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Asaml2aws) | 2.29.0     | CLI tool which enables you to login and retrieve AWS temporary credentials using a SAML IDP
 [![scenery](https://github.com/cloudposse/packages/workflows/scenery/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ascenery) | 0.1.5      | A Terraform plan output prettifier
 [![sentry-cli](https://github.com/cloudposse/packages/workflows/sentry-cli/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Asentry-cli) | 1.64.0     | A command line utility to work with Sentry.
 [![shellcheck](https://github.com/cloudposse/packages/workflows/shellcheck/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ashellcheck) | 0.7.1      | ShellCheck, a static analysis tool for shell scripts
