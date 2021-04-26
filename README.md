@@ -1,4 +1,3 @@
-
 <!-- markdownlint-disable -->
 # Packages [![Auto Update Status](https://github.com/cloudposse/packages/workflows/auto-update/badge.svg)](https://github.com/cloudposse/packages/actions?query=workflow%3Aauto-update) [![Latest Release](https://img.shields.io/github/release/cloudposse/packages.svg)](https://github.com/cloudposse/packages/releases/latest) [![Slack Community](https://slack.cloudposse.com/badge.svg)](https://slack.cloudposse.com)
 <!-- markdownlint-restore -->
@@ -29,6 +28,7 @@
 -->
 
 Cloud Posse distribution of awesome apps.
+
 
 ---
 
@@ -74,7 +74,6 @@ Open up an [issue](https://github.com/cloudposse/packages/issues) or submit a PR
 ## Sponsorship [<img src="https://cloudposse.com/wp-content/uploads/2020/10/cloudsmith.svg" width="250" align="right" />](https://cloudsmith.io/)
 
 Package repository hosting is graciously provided by [cloudsmith](https://cloudsmith.io/). Cloudsmith is the only fully hosted, cloud-native, universal package management solution, that enables your organization to create, store and share packages in any format, to any place, with total confidence. We believe there’s a better way to manage software assets and packages, and they’re making it happen!
-
 
 
 
@@ -292,7 +291,7 @@ Here are some solutions to several common problems that may occur when adding a 
 [![argocd](https://github.com/cloudposse/packages/workflows/argocd/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aargocd) | 2.0.1      | Declarative GitOpts for Kubernetes
 [![assume-role](https://github.com/cloudposse/packages/workflows/assume-role/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aassume-role) | 0.3.2      | Easily assume AWS roles in your terminal.
 [![atlantis](https://github.com/cloudposse/packages/workflows/atlantis/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aatlantis) | 0.16.1     | Terraform For Teams
-[![atmos](https://github.com/cloudposse/packages/workflows/atmos/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aatmos) | 0.17.0     | Universal Tool for DevOps and Cloud Automation
+[![atmos](https://github.com/cloudposse/packages/workflows/atmos/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aatmos) | 0.17.1     | Universal Tool for DevOps and Cloud Automation
 [![awless](https://github.com/cloudposse/packages/workflows/awless/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aawless) | 0.1.11     | A Mighty CLI for AWS
 [![aws-iam-authenticator](https://github.com/cloudposse/packages/workflows/aws-iam-authenticator/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aaws-iam-authenticator) | 0.5.2      | A tool to use AWS IAM credentials to authenticate to a Kubernetes cluster
 [![aws-vault](https://github.com/cloudposse/packages/workflows/aws-vault/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aaws-vault) | 6.3.1      | A vault for securely storing and accessing AWS credentials in development environments
