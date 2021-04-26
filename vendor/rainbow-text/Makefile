@@ -28,9 +28,8 @@ $(INSTALL_PATH)/$(PACKAGE_EXE): main.go version.go VERSION
 	go build -o $(INSTALL_PATH)/$(PACKAGE_EXE)
 
 test:
-	@echo Test: expecting exe version like $(APK_PACKAGE_VERSION) or $(DEB_PACKAGE_VERSION) from VERSION $(shell cat VERSION)
-	@echo Running: $(PACKAGE_EXE) --version && $(PACKAGE_EXE) --version
-	$(PACKAGE_EXE) --version | grep -q -F $(APK_PACKAGE_VERSION)
+	@printf '%s\n' 'TESTING binary by executing >>>: $(PACKAGE_EXE) --version | grep -F $(PACKAGE_VERSION)'
+	$(PACKAGE_EXE) --version | grep -F $(PACKAGE_VERSION)
 
 ## This may be required for apk building and varies from package to package
 # Custom post-package processing (Note the double colon to append to current inherited package/prepare task)
