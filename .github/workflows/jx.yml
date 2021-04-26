@@ -62,7 +62,9 @@ jobs:
       matrix:
         # These versions must be strings. E.g. Otherwise `3.10` -> `3.1`
         alpine:
-          - '3.13'
+          # Now that we are just building 1 binary for all distributions, we do not
+          # need to track which distribution we are building on.
+          - 'alpine'
     env:
       APK_KEY_RSA: "${{ secrets.APK_KEY_RSA }}"
       APK_PACKAGES_PATH: ${{github.workspace}}/artifacts/${{matrix.alpine}}
