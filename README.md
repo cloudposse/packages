@@ -1,3 +1,4 @@
+
 <!-- markdownlint-disable -->
 # Packages [![Auto Update Status](https://github.com/cloudposse/packages/workflows/auto-update/badge.svg)](https://github.com/cloudposse/packages/actions?query=workflow%3Aauto-update) [![Latest Release](https://img.shields.io/github/release/cloudposse/packages.svg)](https://github.com/cloudposse/packages/releases/latest) [![Slack Community](https://slack.cloudposse.com/badge.svg)](https://slack.cloudposse.com)
 <!-- markdownlint-restore -->
@@ -28,7 +29,6 @@
 -->
 
 Cloud Posse distribution of awesome apps.
-
 
 ---
 
@@ -74,6 +74,7 @@ Open up an [issue](https://github.com/cloudposse/packages/issues) or submit a PR
 ## Sponsorship [<img src="https://cloudposse.com/wp-content/uploads/2020/10/cloudsmith.svg" width="250" align="right" />](https://cloudsmith.io/)
 
 Package repository hosting is graciously provided by [cloudsmith](https://cloudsmith.io/). Cloudsmith is the only fully hosted, cloud-native, universal package management solution, that enables your organization to create, store and share packages in any format, to any place, with total confidence. We believe there’s a better way to manage software assets and packages, and they’re making it happen!
+
 
 
 
@@ -390,7 +391,7 @@ Here are some solutions to several common problems that may occur when adding a 
 [![teleport-4.3](https://github.com/cloudposse/packages/workflows/teleport-4.3/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ateleport-4.3) | 4.3.10     | Privileged access management for elastic infrastructure.
 [![teleport-4.4](https://github.com/cloudposse/packages/workflows/teleport-4.4/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ateleport-4.4) | 4.4.9      | Privileged access management for elastic infrastructure.
 [![teleport-5.0](https://github.com/cloudposse/packages/workflows/teleport-5.0/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ateleport-5.0) | 5.0.2      | Secure Access for Developers that doesn't get in the way.
-[![terraform](https://github.com/cloudposse/packages/workflows/terraform/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aterraform) | 0.15.0     | Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
+[![terraform](https://github.com/cloudposse/packages/workflows/terraform/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aterraform) | 0.15.1     | Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 [![terraform-0.11](https://github.com/cloudposse/packages/workflows/terraform-0.11/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aterraform-0.11) | 0.11.14    | Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 [![terraform-0.12](https://github.com/cloudposse/packages/workflows/terraform-0.12/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aterraform-0.12) | 0.12.30    | Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 [![terraform-0.13](https://github.com/cloudposse/packages/workflows/terraform-0.13/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aterraform-0.13) | 0.13.6     | Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
