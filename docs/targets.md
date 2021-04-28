@@ -79,7 +79,7 @@ lectl                     0.21.0     Script to check issued certificates by Let'
 minikube                  1.19.0     Run Kubernetes locally
 misspell                  0.3.4      Correct commonly misspelled English words in source files
 nomad                     OBSOLETE   Hashicorp nomad
-opa                       0.27.1     An open source project to policy-enable your service.
+opa                       0.28.0     An open source project to policy-enable your service.
 pack                      0.18.1     Create cloud native Buildpacks
 packer                    1.7.2      Packer is a tool for creating identical machine images for multiple platforms from a single source configuration.
 pandoc                    2.13       Universal markup converter
