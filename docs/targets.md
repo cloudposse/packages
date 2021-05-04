@@ -5,7 +5,7 @@ amtool                    0.21.0     Tool for interacting with the Alertmanager 
 argocd                    2.0.1      Declarative GitOpts for Kubernetes
 assume-role               0.3.2      Easily assume AWS roles in your terminal.
 atlantis                  0.16.1     Terraform For Teams
-atmos                     0.17.0     Universal Tool for DevOps and Cloud Automation
+atmos                     0.17.1     Universal Tool for DevOps and Cloud Automation
 awless                    0.1.11     A Mighty CLI for AWS
 aws-iam-authenticator     0.5.2      A tool to use AWS IAM credentials to authenticate to a Kubernetes cluster
 aws-okta                  OBSOLETE   aws-okta allows users to authenticate with AWS using Okta credentials
@@ -16,7 +16,7 @@ chamber                   2.10.0     CLI for managing secrets
 cli53                     0.8.18     Command line tool for Amazon Route 53
 cloudflared               2021.4.0   Argo Tunnel client
 cloudposse-atlantis       0.9.0.3    Terraform For Teams, enhanced by Cloud Posse
-codefresh                 0.75.12    Codefresh CLI
+codefresh                 0.75.15    Codefresh CLI
 conftest                  0.24.0     Test your configuration files using Open Policy Agent
 consul                    1.9.5      Hashicorp consul
 ctop                      0.7.5      Top-like interface for container metrics
@@ -51,7 +51,7 @@ hugo                      0.82.1     The world’s fastest framework for buildin
 jp                        0.1.3      Command line interface to JMESPath
 jq                        1.6.0      Command-line JSON processor
 json2hcl                  0.0.6      Convert JSON to HCL, and vice versa
-jx                        3.2.60     Jenkins-X
+jx                        3.2.63     Jenkins-X
 k3d                       4.4.2      Little helper to run Rancher Lab's k3s in Docker
 k6                        0.31.1     A modern load testing tool, using Go and JavaScript - https://k6.io
 k9s                       0.24.7     Kubernetes CLI To Manage Your Clusters In Style
@@ -109,17 +109,17 @@ teleport-4.2              4.2.12     Privileged access management for elastic in
 teleport-4.3              4.3.10     Privileged access management for elastic infrastructure.
 teleport-4.4              4.4.9      Privileged access management for elastic infrastructure.
 teleport-5.0              5.0.2      Secure Access for Developers that doesn't get in the way.
-terraform                 0.15.0     Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
-terraform-0.11            0.11.14    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
+terraform                 0.15.1     Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
+terraform-0.11            0.11.15    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-0.12            0.12.30    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
-terraform-0.13            0.13.6     Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
-terraform-0.14            0.14.10    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
-terraform-0.15            0.15.0     Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
+terraform-0.13            0.13.7     Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
+terraform-0.14            0.14.11    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
+terraform-0.15            0.15.1     Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-config-inspect  0.0.20210318070130+git9a80970d6b34 A helper library for shallow inspection of Terraform configurations
 terraform-docs            0.12.1     Generate docs from terraform modules
-terraform_0.11            0.11.14    Terraform (Deprecated package. Use terraform-0.11 instead)
-terraform_0.12            0.12.30    Terraform (Deprecated package. Use terraform-0.12 instead)
-terraform_0.13            0.13.6     Terraform (Deprecated package. Use terraform-0.13 instead)
+terraform_0.11            0.11.15    Terraform (Deprecated package. Use terraform-0.11 instead)
+terraform_0.12            0.12.31    Terraform (Deprecated package. Use terraform-0.12 instead)
+terraform_0.13            0.13.7     Terraform (Deprecated package. Use terraform-0.13 instead)
 terragrunt                0.29.0     Terragrunt is a thin wrapper for Terraform that provides extra tools for working with multiple Terraform modules.
 terrahelp                 0.7.4      Terrahelp is as a command line utility that provides useful tricks like masking of terraform output.
 tfenv                     0.4.0      Transform environment variables for use with Terraform (e.g. `HOSTNAME` ⇨ `TF_VAR_hostname`)
