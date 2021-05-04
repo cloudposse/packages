@@ -100,7 +100,7 @@ shellcheck                0.7.2      ShellCheck, a static analysis tool for shel
 shfmt                     3.2.4      A shell parser, formatter and interpreter (POSIX/Bash/mksh)
 slack-notifier            0.3.0      Command line utility to send messages with attachments to Slack channels via Incoming Webhooks
 sops                      3.7.1      Secrets management stinks, use some sops!
-spacectl                  0.2.0      [Spacelift.io](https://spacelift.io/) client and CLI
+spacectl                  0.3.0      [Spacelift.io](https://spacelift.io/) client and CLI
 spotctl                   0.20.0     A unified CLI to manage your [Spot](https://spot.io/) resources.
 stern                     1.11.0     ⎈ Multi pod and container log tailing for Kubernetes
 sudosh                    0.3.0      Shell wrapper to run a login shell with `sudo` as the current user for the purpose of audit logging
