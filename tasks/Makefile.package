@@ -77,6 +77,7 @@ export PACKAGE_RELEASE ?= $(shell cat RELEASE 2>/dev/null)
 export PACKAGE_LICENSE ?= $(shell cat LICENSE 2>/dev/null)
 export PACKAGE_HOMEPAGE_URL ?= https://github.com/$(VENDOR)/$(PACKAGE)
 export PACKAGE_REPO_URL ?= https://github.com/$(VENDOR)/$(PACKAGE_REPO_NAME)
+export PACKAGE_GOLANG_NAME ?= github.com/$(VENDOR)/$(PACKAGE_NAME)
 
 export PACKAGE_VERSION_TARGET ?= RELEASE_VERSION
 
@@ -195,6 +196,31 @@ _version_by_semver: $(LOCAL_BIN)/vert
 	else \
 		echo "NOT \"Upgrading\" $(PACKAGE_NAME) from $${local_version} to $${current_version} because auto-update is disabled" >&2; \
 	fi
+
+# Latest GitHub Release, for packages that do not use anything like semver
+GITHUB_LATEST_RELEASE: API=releases?per_page=100
+GITHUB_LATEST_RELEASE: QUERY=.[] | select(.prerelease == false or .prerelease == $(PACKAGE_PRERELEASE_ENABLED)) | .tag_name
+GITHUB_LATEST_RELEASE:
+	@if [ "$${AUTO_UPDATE_ENABLED:-true}" == "true" ]; then \
+		local_version=$$(cat VERSION || echo 0); \
+		releases=($$(env PATH='$(PATH)' github-repo-metadata $(VENDOR) $(PACKAGE_REPO_NAME) '$(API)' '$(QUERY)')); \
+		current_version="$${releases[0]}"; \
+		if [ $$? -ne 0 ]; then \
+			exit 1; \
+		elif [ "$${current_version}" == "null" -o -z "$${current_version}" ]; then \
+			echo "ERROR: failed to obtain version matching '$${version_pin}' for $(VENDOR)/$(PACKAGE_REPO_NAME) (got: $${releases[@]:0:10}...)" >&2; \
+			exit 1; \
+		elif [ "$${local_version}" != "$${current_version}" ]; then \
+			echo "Upgrading $(PACKAGE_NAME) from $${local_version} to $${current_version}"; \
+			echo "$${current_version}" > VERSION; \
+		fi; \
+	else \
+		echo "NOT \"Upgrading\" $(PACKAGE_NAME) from $${local_version} to $${current_version} because auto-update is disabled" >&2; \
+	fi
+
+GOLANG_LATEST_VERSION:
+	go get -u $(PACKAGE_GOLANG_NAME)
+	printf "%s" $$(grep -F $(PACKAGE_GOLANG_NAME) go.mod| sed -e 's/.* v//' -e 's/\.0-/./' -e 's/-/+git/') > VERSION
 
 .PHONY: info info/short info/github info/md
 

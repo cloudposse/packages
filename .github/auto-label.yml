@@ -278,6 +278,9 @@ vendor/popeye:
 vendor/promtool:
 - any: ["vendor/promtool/**"]
   all: ["!bin/**", "!tasks/**"]
+vendor/rainbow-text:
+- any: ["vendor/rainbow-text/**"]
+  all: ["!bin/**", "!tasks/**"]
 vendor/rakkess:
 - any: ["vendor/rakkess/**"]
   all: ["!bin/**", "!tasks/**"]
@@ -313,6 +316,9 @@ vendor/slack-notifier:
   all: ["!bin/**", "!tasks/**"]
 vendor/sops:
 - any: ["vendor/sops/**"]
+  all: ["!bin/**", "!tasks/**"]
+vendor/spacectl:
+- any: ["vendor/spacectl/**"]
   all: ["!bin/**", "!tasks/**"]
 vendor/spotctl:
 - any: ["vendor/spotctl/**"]

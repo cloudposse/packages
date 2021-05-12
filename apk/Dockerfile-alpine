@@ -1,0 +1,16 @@
+# Need to use version number so that it gets updated here and triggers a build
+FROM alpine:3.13.4
+
+ENV LC_ALL=C.UTF-8
+ENV PS1="(apk) \w \$ "
+
+# Install the cloudposse alpine repository
+ADD https://apk.cloudposse.com/ops@cloudposse.com.rsa.pub /etc/apk/keys/
+RUN echo "https://apk.cloudposse.com/3.13/vendor" >> /etc/apk/repositories
+RUN echo "https://alpine.global.ssl.fastly.net/alpine/edge/testing" >> /etc/apk/repositories
+RUN echo "https://alpine.global.ssl.fastly.net/alpine/edge/community" >> /etc/apk/repositories
+
+RUN apk update && \
+    apk add make curl alpine-sdk shadow bash jq sudo go
+
+RUN echo "auth       sufficient   pam_shells.so" > /etc/pam.d/chsh
