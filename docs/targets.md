@@ -115,7 +115,7 @@ terraform-0.12            0.12.31    Terraform is a tool for building, changing,
 terraform-0.13            0.13.7     Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-0.14            0.14.11    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-0.15            0.15.3     Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
-terraform-config-inspect  0.0.20210318070130+git9a80970d6b34 A helper library for shallow inspection of Terraform configurations
+terraform-config-inspect  0.0.20210511202847+gitad33d83d7650 A helper library for shallow inspection of Terraform configurations
 terraform-docs            0.13.0     Generate docs from terraform modules
 terraform_0.11            0.11.15    Terraform (Deprecated package. Use terraform-0.11 instead)
 terraform_0.12            0.12.31    Terraform (Deprecated package. Use terraform-0.12 instead)
