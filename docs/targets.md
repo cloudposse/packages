@@ -85,7 +85,7 @@ packer                    1.7.2      Packer is a tool for creating identical mac
 pandoc                    2.13       Universal markup converter
 pgmetrics                 1.11.0     Postgres metrics
 pluto                     4.1.2      A cli tool to help discover deprecated apiVersions in Kubernetes
-popeye                    0.9.1      A Kubernetes cluster resource sanitizer
+popeye                    0.9.2      A Kubernetes cluster resource sanitizer
 promtool                  2.26.0     Prometheus CLI tool
 rainbow-text              1.1.1      Tasty rainbows for your terminal! (lolcat clone)
 rakkess                   0.4.7      Review Access - kubectl plugin to show an access matrix for all available resources
