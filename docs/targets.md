@@ -62,7 +62,7 @@ kops                      1.20.0     Kubernetes Operations (kops) - Production G
 kops-1.12                 OBSOLETE   Kubernetes Operations (kops) - Production Grade K8s Installation, Upgrades, and Management
 krew                      0.4.1      Kubectl plugin manager
 kubecron                  2.0.0      Utilities to manage kubernetes cronjobs. Run a CronJob manually for test purposes. Suspend/unsuspend a CronJob
-kubectl                   1.21.0     Production-Grade Container Scheduling and Management
+kubectl                   1.21.1     Production-Grade Container Scheduling and Management
 kubectl-1.13              1.13.12    Production-Grade Container Scheduling and Management (v1.13)
 kubectl-1.14              1.14.10    Production-Grade Container Scheduling and Management (v1.14)
 kubectl-1.15              1.15.12    Production-Grade Container Scheduling and Management (v1.15)
@@ -126,7 +126,7 @@ tfenv                     0.4.0      Transform environment variables for use wit
 tfmask                    0.7.0      Terraform utility to mask select output from `terraform plan` and `terraform apply`
 thanos                    0.20.1     Highly available Prometheus setup with long term storage capabilities. CNCF Sandbox project.
 trivy                     0.18.0     A Simple and Comprehensive Vulnerability Scanner for Containers, Suitable for CI
-turf                      0.16.0     Turf is Cloud Posse's command-line automation helper.
+turf                      0.17.0     Turf is Cloud Posse's command-line automation helper.
 variant                   0.37.0     Variant is a Universal CLI tool that works like a task runner
 variant2                  0.37.1     Second major version of Variant, a Universal CLI tool that works like a task runner
 vault                     1.7.1      Hashicorp vault
