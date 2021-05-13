@@ -86,7 +86,7 @@ pandoc                    2.13       Universal markup converter
 pgmetrics                 1.11.0     Postgres metrics
 pluto                     4.1.2      A cli tool to help discover deprecated apiVersions in Kubernetes
 popeye                    0.9.2      A Kubernetes cluster resource sanitizer
-promtool                  2.26.0     Prometheus CLI tool
+promtool                  2.27.0     Prometheus CLI tool
 rainbow-text              1.1.1      Tasty rainbows for your terminal! (lolcat clone)
 rakkess                   0.4.7      Review Access - kubectl plugin to show an access matrix for all available resources
 rancher                   2.4.11     Rancher CLI
@@ -126,7 +126,7 @@ tfenv                     0.4.0      Transform environment variables for use wit
 tfmask                    0.7.0      Terraform utility to mask select output from `terraform plan` and `terraform apply`
 thanos                    0.20.1     Highly available Prometheus setup with long term storage capabilities. CNCF Sandbox project.
 trivy                     0.18.0     A Simple and Comprehensive Vulnerability Scanner for Containers, Suitable for CI
-turf                      0.16.0     Turf is Cloud Posse's command-line automation helper.
+turf                      0.17.0     Turf is Cloud Posse's command-line automation helper.
 variant                   0.37.0     Variant is a Universal CLI tool that works like a task runner
 variant2                  0.37.1     Second major version of Variant, a Universal CLI tool that works like a task runner
 vault                     1.7.1      Hashicorp vault
