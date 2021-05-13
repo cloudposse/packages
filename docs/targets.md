@@ -68,7 +68,7 @@ kubectl-1.14              1.14.10    Production-Grade Container Scheduling and M
 kubectl-1.15              1.15.12    Production-Grade Container Scheduling and Management (v1.15)
 kubectl-1.16              1.16.15    Production-Grade Container Scheduling and Management (v1.16)
 kubectl-1.17              1.17.17    Production-Grade Container Scheduling and Management (v1.17)
-kubectl-1.18              1.18.18    Production-Grade Container Scheduling and Management (v1.18)
+kubectl-1.18              1.18.19    Production-Grade Container Scheduling and Management (v1.18)
 kubectl-1.19              1.19.10    Production-Grade Container Scheduling and Management (v1.19)
 kubectl-1.20              1.20.6     Production-Grade Container Scheduling and Management (v1.19)
 kubectx                   0.9.3      Switch faster between clusters and namespaces in kubectl
@@ -126,7 +126,7 @@ tfenv                     0.4.0      Transform environment variables for use wit
 tfmask                    0.7.0      Terraform utility to mask select output from `terraform plan` and `terraform apply`
 thanos                    0.20.1     Highly available Prometheus setup with long term storage capabilities. CNCF Sandbox project.
 trivy                     0.18.0     A Simple and Comprehensive Vulnerability Scanner for Containers, Suitable for CI
-turf                      0.16.0     Turf is Cloud Posse's command-line automation helper.
+turf                      0.17.0     Turf is Cloud Posse's command-line automation helper.
 variant                   0.37.0     Variant is a Universal CLI tool that works like a task runner
 variant2                  0.37.1     Second major version of Variant, a Universal CLI tool that works like a task runner
 vault                     1.7.1      Hashicorp vault
