@@ -307,7 +307,7 @@ Here are some solutions to several common problems that may occur when adding a 
 [![consul](https://github.com/cloudposse/packages/workflows/consul/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aconsul) | 1.9.5      | Hashicorp consul
 [![ctop](https://github.com/cloudposse/packages/workflows/ctop/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Actop) | 0.7.5      | Top-like interface for container metrics
 [![direnv](https://github.com/cloudposse/packages/workflows/direnv/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Adirenv) | 2.28.0     | Unclutter your .profile
-[![doctl](https://github.com/cloudposse/packages/workflows/doctl/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Adoctl) | 1.60.0     | A command line tool for DigitalOcean services
+[![doctl](https://github.com/cloudposse/packages/workflows/doctl/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Adoctl) | 1.61.0     | A command line tool for DigitalOcean services
 [![duffle](https://github.com/cloudposse/packages/workflows/duffle/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aduffle) | 0.3.5b1    | CNAB installer
 [![ec2-instance-selector](https://github.com/cloudposse/packages/workflows/ec2-instance-selector/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aec2-instance-selector) | 2.0.2      | A CLI tool and go library which recommends instance types based on resource criteria like vcpus and memory
 [![emailcli](https://github.com/cloudposse/packages/workflows/emailcli/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aemailcli) | 1.0.3      | Command line email sending client written in Go.
@@ -427,14 +427,13 @@ Like this project? Please give it a ★ on [our GitHub](https://github.com/cloud
 Are you using this project or any of our other projects? Consider [leaving a testimonial][testimonial]. =)
 
 
+
 ## Related Projects
 
 Check out these related projects.
 
 - [build-harness](https://github.com/cloudposse/build-harness) - Collection of Makefiles to facilitate building Golang projects, Dockerfiles, Helm charts, and more
 - [geodesic](https://github.com/cloudposse/geodesic) - Geodesic is the fastest way to get up and running with a rock solid, production grade cloud platform built on strictly Open Source tools.
-
-
 
 ## Help
 
