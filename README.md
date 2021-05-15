@@ -300,7 +300,7 @@ Here are some solutions to several common problems that may occur when adding a 
 [![cfssljson](https://github.com/cloudposse/packages/workflows/cfssljson/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Acfssljson) | 1.5.0      | Cloudflare's PKI and TLS toolkit json parser
 [![chamber](https://github.com/cloudposse/packages/workflows/chamber/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Achamber) | 2.10.0     | CLI for managing secrets
 [![cli53](https://github.com/cloudposse/packages/workflows/cli53/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Acli53) | 0.8.18     | Command line tool for Amazon Route 53
-[![cloudflared](https://github.com/cloudposse/packages/workflows/cloudflared/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Acloudflared) | 2021.4.0   | Argo Tunnel client
+[![cloudflared](https://github.com/cloudposse/packages/workflows/cloudflared/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Acloudflared) | 2021.5.5   | Argo Tunnel client
 [![cloudposse-atlantis](https://github.com/cloudposse/packages/workflows/cloudposse-atlantis/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Acloudposse-atlantis) | 0.9.0.3    | Terraform For Teams, enhanced by Cloud Posse
 [![codefresh](https://github.com/cloudposse/packages/workflows/codefresh/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Acodefresh) | 0.75.18    | Codefresh CLI
 [![conftest](https://github.com/cloudposse/packages/workflows/conftest/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aconftest) | 0.25.0     | Test your configuration files using Open Policy Agent
@@ -427,14 +427,13 @@ Like this project? Please give it a ★ on [our GitHub](https://github.com/cloud
 Are you using this project or any of our other projects? Consider [leaving a testimonial][testimonial]. =)
 
 
+
 ## Related Projects
 
 Check out these related projects.
 
 - [build-harness](https://github.com/cloudposse/build-harness) - Collection of Makefiles to facilitate building Golang projects, Dockerfiles, Helm charts, and more
 - [geodesic](https://github.com/cloudposse/geodesic) - Geodesic is the fastest way to get up and running with a rock solid, production grade cloud platform built on strictly Open Source tools.
-
-
 
 ## Help
 
