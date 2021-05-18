@@ -97,7 +97,7 @@ scenery                   0.1.5      A Terraform plan output prettifier
 sentinel                  OBSOLETE   Hashicorp sentinel
 sentry-cli                1.64.2     A command line utility to work with Sentry.
 shellcheck                0.7.2      ShellCheck, a static analysis tool for shell scripts
-shfmt                     3.2.4      A shell parser, formatter and interpreter (POSIX/Bash/mksh)
+shfmt                     3.3.0      A shell parser, formatter and interpreter (POSIX/Bash/mksh)
 slack-notifier            0.3.0      Command line utility to send messages with attachments to Slack channels via Incoming Webhooks
 sops                      3.7.1      Secrets management stinks, use some sops!
 spacectl                  0.4.0      [Spacelift.io](https://spacelift.io/) client and CLI
