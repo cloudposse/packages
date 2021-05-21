@@ -124,7 +124,7 @@ terragrunt                0.29.4     Terragrunt is a thin wrapper for Terraform 
 terrahelp                 0.7.4      Terrahelp is as a command line utility that provides useful tricks like masking of terraform output.
 tfenv                     0.4.0      Transform environment variables for use with Terraform (e.g. `HOSTNAME` ⇨ `TF_VAR_hostname`)
 tfmask                    0.7.0      Terraform utility to mask select output from `terraform plan` and `terraform apply`
-thanos                    0.20.1     Highly available Prometheus setup with long term storage capabilities. CNCF Sandbox project.
+thanos                    0.20.2     Highly available Prometheus setup with long term storage capabilities. CNCF Sandbox project.
 trivy                     0.18.2     A Simple and Comprehensive Vulnerability Scanner for Containers, Suitable for CI
 turf                      0.17.0     Turf is Cloud Posse's command-line automation helper.
 variant                   0.37.0     Variant is a Universal CLI tool that works like a task runner
