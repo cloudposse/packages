@@ -104,7 +104,7 @@ spacectl                  0.6.0      [Spacelift.io](https://spacelift.io/) clien
 spotctl                   0.20.0     A unified CLI to manage your [Spot](https://spot.io/) resources.
 stern                     1.11.0     ⎈ Multi pod and container log tailing for Kubernetes
 sudosh                    0.3.0      Shell wrapper to run a login shell with `sudo` as the current user for the purpose of audit logging
-teleport                  6.1.5      Secure Access for Developers that doesn't get in the way.
+teleport                  6.2.0      Secure Access for Developers that doesn't get in the way.
 teleport-4.2              4.2.12     Privileged access management for elastic infrastructure.
 teleport-4.3              4.3.10     Privileged access management for elastic infrastructure.
 teleport-4.4              4.4.9      Privileged access management for elastic infrastructure.
