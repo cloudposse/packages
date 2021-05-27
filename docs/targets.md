@@ -1,7 +1,7 @@
 <!-- markdownlint-disable -->
 ## Makefile Targets
 ```text
-amtool                    0.22.0     Tool for interacting with the Alertmanager API
+amtool                    0.22.1     Tool for interacting with the Alertmanager API
 argocd                    2.0.2      Declarative GitOpts for Kubernetes
 assume-role               0.3.2      Easily assume AWS roles in your terminal.
 atlantis                  0.17.0     Terraform For Teams
