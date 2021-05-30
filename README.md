@@ -340,7 +340,7 @@ Here are some solutions to several common problems that may occur when adding a 
 [![jx](https://github.com/cloudposse/packages/workflows/jx/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ajx) | 3.2.124    | Jenkins-X
 [![k3d](https://github.com/cloudposse/packages/workflows/k3d/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ak3d) | 4.4.4      | Little helper to run Rancher Lab's k3s in Docker
 [![k6](https://github.com/cloudposse/packages/workflows/k6/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ak6) | 0.32.0     | A modern load testing tool, using Go and JavaScript - https://k6.io
-[![k9s](https://github.com/cloudposse/packages/workflows/k9s/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ak9s) | 0.24.9     | Kubernetes CLI To Manage Your Clusters In Style
+[![k9s](https://github.com/cloudposse/packages/workflows/k9s/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ak9s) | 0.24.10    | Kubernetes CLI To Manage Your Clusters In Style
 [![katafygio](https://github.com/cloudposse/packages/workflows/katafygio/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Akatafygio) | 0.8.3      | K8s continuous backup to git
 [![kfctl](https://github.com/cloudposse/packages/workflows/kfctl/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Akfctl) | 1.2.0      | Machine Learning Toolkit for Kubernetes
 [![kind](https://github.com/cloudposse/packages/workflows/kind/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Akind) | 0.11.1     | A tool for running local Kubernetes clusters using Docker
@@ -427,14 +427,13 @@ Like this project? Please give it a ★ on [our GitHub](https://github.com/cloud
 Are you using this project or any of our other projects? Consider [leaving a testimonial][testimonial]. =)
 
 
+
 ## Related Projects
 
 Check out these related projects.
 
 - [build-harness](https://github.com/cloudposse/build-harness) - Collection of Makefiles to facilitate building Golang projects, Dockerfiles, Helm charts, and more
 - [geodesic](https://github.com/cloudposse/geodesic) - Geodesic is the fastest way to get up and running with a rock solid, production grade cloud platform built on strictly Open Source tools.
-
-
 
 ## Help
 
