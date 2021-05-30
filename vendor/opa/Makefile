@@ -10,7 +10,9 @@ else
   OS=linux
 endif
 
+# https://github.com/open-policy-agent/opa/releases/download/v0.29.1/opa_darwin_amd64
 export DOWNLOAD_URL = $(PACKAGE_REPO_URL)/releases/download/v$(PACKAGE_VERSION)/$(PACKAGE_NAME)_$(OS)_$(ARCH)
+export APKBUILD_DEPENDS += libc6-compat musl
 
 ## APK build specific requirements
 export APK_BUILD_TEMPLATE = APKBUILD.github-binary
