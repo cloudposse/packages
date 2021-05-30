@@ -5,7 +5,7 @@ amtool                    0.22.1     Tool for interacting with the Alertmanager 
 argocd                    2.0.3      Declarative GitOpts for Kubernetes
 assume-role               0.3.2      Easily assume AWS roles in your terminal.
 atlantis                  0.17.0     Terraform For Teams
-atmos                     0.18.0     Universal Tool for DevOps and Cloud Automation
+atmos                     0.19.0     Universal Tool for DevOps and Cloud Automation
 awless                    0.1.11     A Mighty CLI for AWS
 aws-iam-authenticator     0.5.3      A tool to use AWS IAM credentials to authenticate to a Kubernetes cluster
 aws-okta                  OBSOLETE   aws-okta allows users to authenticate with AWS using Okta credentials
@@ -51,13 +51,13 @@ hugo                      0.83.1     The world’s fastest framework for buildin
 jp                        0.1.3      Command line interface to JMESPath
 jq                        1.6.0      Command-line JSON processor
 json2hcl                  0.0.6      Convert JSON to HCL, and vice versa
-jx                        3.2.120    Jenkins-X
+jx                        3.2.124    Jenkins-X
 k3d                       4.4.4      Little helper to run Rancher Lab's k3s in Docker
-k6                        0.31.1     A modern load testing tool, using Go and JavaScript - https://k6.io
+k6                        0.32.0     A modern load testing tool, using Go and JavaScript - https://k6.io
 k9s                       0.24.9     Kubernetes CLI To Manage Your Clusters In Style
 katafygio                 0.8.3      K8s continuous backup to git
 kfctl                     1.2.0      Machine Learning Toolkit for Kubernetes
-kind                      0.11.0     A tool for running local Kubernetes clusters using Docker
+kind                      0.11.1     A tool for running local Kubernetes clusters using Docker
 kops                      1.20.1     Kubernetes Operations (kops) - Production Grade K8s Installation, Upgrades, and Management
 kops-1.12                 OBSOLETE   Kubernetes Operations (kops) - Production Grade K8s Installation, Upgrades, and Management
 krew                      0.4.1      Kubectl plugin manager
@@ -80,9 +80,9 @@ minikube                  1.20.0     Run Kubernetes locally
 misspell                  0.3.4      Correct commonly misspelled English words in source files
 nomad                     OBSOLETE   Hashicorp nomad
 opa                       0.29.2     An open source project to policy-enable your service.
-pack                      0.18.1     Create cloud native Buildpacks
+pack                      0.19.0     Create cloud native Buildpacks
 packer                    1.7.2      Packer is a tool for creating identical machine images for multiple platforms from a single source configuration.
-pandoc                    2.13       Universal markup converter
+pandoc                    2.14       Universal markup converter
 pgmetrics                 1.11.0     Postgres metrics
 pluto                     4.1.2      A cli tool to help discover deprecated apiVersions in Kubernetes
 popeye                    0.9.2      A Kubernetes cluster resource sanitizer
@@ -104,7 +104,7 @@ spacectl                  0.6.0      [Spacelift.io](https://spacelift.io/) clien
 spotctl                   0.20.0     A unified CLI to manage your [Spot](https://spot.io/) resources.
 stern                     1.11.0     ⎈ Multi pod and container log tailing for Kubernetes
 sudosh                    0.3.0      Shell wrapper to run a login shell with `sudo` as the current user for the purpose of audit logging
-teleport                  6.2.0      Secure Access for Developers that doesn't get in the way.
+teleport                  6.2.1      Secure Access for Developers that doesn't get in the way.
 teleport-4.2              4.2.12     Privileged access management for elastic infrastructure.
 teleport-4.3              4.3.10     Privileged access management for elastic infrastructure.
 teleport-4.4              4.4.9      Privileged access management for elastic infrastructure.
@@ -120,7 +120,7 @@ terraform-docs            0.13.0     Generate docs from terraform modules
 terraform_0.11            0.11.15    Terraform (Deprecated package. Use terraform-0.11 instead)
 terraform_0.12            0.12.31    Terraform (Deprecated package. Use terraform-0.12 instead)
 terraform_0.13            0.13.7     Terraform (Deprecated package. Use terraform-0.13 instead)
-terragrunt                0.29.6     Terragrunt is a thin wrapper for Terraform that provides extra tools for working with multiple Terraform modules.
+terragrunt                0.29.7     Terragrunt is a thin wrapper for Terraform that provides extra tools for working with multiple Terraform modules.
 terrahelp                 0.7.4      Terrahelp is as a command line utility that provides useful tricks like masking of terraform output.
 tfenv                     0.4.0      Transform environment variables for use with Terraform (e.g. `HOSTNAME` ⇨ `TF_VAR_hostname`)
 tfmask                    0.7.0      Terraform utility to mask select output from `terraform plan` and `terraform apply`
