@@ -363,7 +363,7 @@ Here are some solutions to several common problems that may occur when adding a 
 [![lectl](https://github.com/cloudposse/packages/workflows/lectl/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Alectl) | 0.21.0     | Script to check issued certificates by Let's Encrypt on CTL (Certificate Transparency Log) using https://crt.sh
 [![minikube](https://github.com/cloudposse/packages/workflows/minikube/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aminikube) | 1.20.0     | Run Kubernetes locally
 [![misspell](https://github.com/cloudposse/packages/workflows/misspell/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Amisspell) | 0.3.4      | Correct commonly misspelled English words in source files
-[![opa](https://github.com/cloudposse/packages/workflows/opa/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aopa) | 0.29.3     | An open source project to policy-enable your service.
+[![opa](https://github.com/cloudposse/packages/workflows/opa/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aopa) | 0.29.4     | An open source project to policy-enable your service.
 [![pack](https://github.com/cloudposse/packages/workflows/pack/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Apack) | 0.19.0     | Create cloud native Buildpacks
 [![packer](https://github.com/cloudposse/packages/workflows/packer/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Apacker) | 1.7.2      | Packer is a tool for creating identical machine images for multiple platforms from a single source configuration.
 [![pandoc](https://github.com/cloudposse/packages/workflows/pandoc/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Apandoc) | 2.14       | Universal markup converter
@@ -427,14 +427,13 @@ Like this project? Please give it a ★ on [our GitHub](https://github.com/cloud
 Are you using this project or any of our other projects? Consider [leaving a testimonial][testimonial]. =)
 
 
+
 ## Related Projects
 
 Check out these related projects.
 
 - [build-harness](https://github.com/cloudposse/build-harness) - Collection of Makefiles to facilitate building Golang projects, Dockerfiles, Helm charts, and more
 - [geodesic](https://github.com/cloudposse/geodesic) - Geodesic is the fastest way to get up and running with a rock solid, production grade cloud platform built on strictly Open Source tools.
-
-
 
 ## Help
 
