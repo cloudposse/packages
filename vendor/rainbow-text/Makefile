@@ -5,6 +5,7 @@
 export VENDOR = arsham
 export PACKAGE_NAME = rainbow-text
 export PACKAGE_EXE = rainbow
+export PACKAGE_REPO_NAME = rainbow
 export DOWNLOAD_URL ?= $(PACKAGE_EXE)
 export APK_BUILD_TEMPLATE ?= APKBUILD.github-binary
 export APK_PACKAGE_VERSION := $(shell cat VERSION | sed s/\+.*//)

@@ -77,7 +77,7 @@ export PACKAGE_RELEASE ?= $(shell cat RELEASE 2>/dev/null)
 export PACKAGE_LICENSE ?= $(shell cat LICENSE 2>/dev/null)
 export PACKAGE_HOMEPAGE_URL ?= https://github.com/$(VENDOR)/$(PACKAGE)
 export PACKAGE_REPO_URL ?= https://github.com/$(VENDOR)/$(PACKAGE_REPO_NAME)
-export PACKAGE_GOLANG_NAME ?= github.com/$(VENDOR)/$(PACKAGE_NAME)
+export PACKAGE_GOLANG_NAME ?= github.com/$(VENDOR)/$(PACKAGE_REPO_NAME)
 
 export PACKAGE_VERSION_TARGET ?= RELEASE_VERSION
 
