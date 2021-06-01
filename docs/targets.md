@@ -51,7 +51,7 @@ hugo                      0.83.1     The world’s fastest framework for buildin
 jp                        0.1.3      Command line interface to JMESPath
 jq                        1.6.0      Command-line JSON processor
 json2hcl                  0.0.6      Convert JSON to HCL, and vice versa
-jx                        3.2.124    Jenkins-X
+jx                        3.2.104    Jenkins-X
 k3d                       4.4.4      Little helper to run Rancher Lab's k3s in Docker
 k6                        0.32.0     A modern load testing tool, using Go and JavaScript - https://k6.io
 k9s                       0.24.10    Kubernetes CLI To Manage Your Clusters In Style
@@ -116,7 +116,7 @@ terraform-0.13            0.13.7     Terraform is a tool for building, changing,
 terraform-0.14            0.14.11    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-0.15            0.15.4     Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-config-inspect  0.0.20210511202847+gitad33d83d7650 A helper library for shallow inspection of Terraform configurations
-terraform-docs            0.13.0     Generate docs from terraform modules
+terraform-docs            0.14.0     Generate docs from terraform modules
 terraform_0.11            0.11.15    Terraform (Deprecated package. Use terraform-0.11 instead)
 terraform_0.12            0.12.31    Terraform (Deprecated package. Use terraform-0.12 instead)
 terraform_0.13            0.13.7     Terraform (Deprecated package. Use terraform-0.13 instead)
