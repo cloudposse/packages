@@ -6,7 +6,7 @@
 # With exceptions, engineering or admin must approve changes to workflow configuration files
 .github/*.yml                                      @cloudposse/engineering @cloudposse/admins
 
-# The atuo-update-packages.yml is auto-generates along with REAMDE, but it should change unless
+# The auto-update-packages.yml is auto-generated along with README, but it should not change unless
 # a package was enabled or disabled for auto-update, and that should be done by engineering.
 .github/workflows/auto-update-packages.yml          @cloudposse/engineering @cloudposse/admins
 
