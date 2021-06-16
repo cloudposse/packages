@@ -124,6 +124,7 @@ jobs:
         - terraform-0.13
         - terraform-0.14
         - terraform-0.15
+        - terraform-1
         - terraform-config-inspect
         - terraform-docs
         - terraform_0.11

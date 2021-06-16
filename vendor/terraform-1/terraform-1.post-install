@@ -1,7 +1,7 @@
 #!/bin/sh
 MASTER_PACKAGE_NAME=terraform
-PRIORITY="15"
-MAJOR_VERSION="0.${PRIORITY}"
+PRIORITY="16" # 0.15 was 15, 1.0.0 was 16, hopefully we will not get to 17 until 2.0.0
+MAJOR_VERSION="1"
 PACKAGE_NAME=${MASTER_PACKAGE_NAME}-${MAJOR_VERSION}
 
 # INSTALL_DIR is where the binary is ultimately installed
@@ -18,10 +18,10 @@ mkdir -p ${DIRENV_SUPPORT_DIR}
 # <priority> is an integer. The alternative with the highest priority
 #            number will be automatically selected
 
-## Install terraform-0.15 command
+## Install terraform-1 command
 update-alternatives --install /usr/bin/${PACKAGE_NAME} ${PACKAGE_NAME} ${INSTALL_DIR}/${MASTER_PACKAGE_NAME} 1
 
-# Install /usr/local/terraform/0.15/bin/terraform for `direnv/use terraform` and other automation
+# Install /usr/local/terraform/1/bin/terraform for `direnv/use terraform` and other automation
 update-alternatives --install ${DIRENV_SUPPORT_DIR}/terraform ${PACKAGE_NAME}-direnv ${INSTALL_DIR}/${MASTER_PACKAGE_NAME} 1
 
 # Install terraform command
