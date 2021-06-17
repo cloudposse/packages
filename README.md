@@ -353,7 +353,7 @@ Here are some solutions to several common problems that may occur when adding a 
 [![kubectl-1.15](https://github.com/cloudposse/packages/workflows/kubectl-1.15/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Akubectl-1.15) | 1.15.12    | Production-Grade Container Scheduling and Management (v1.15)
 [![kubectl-1.16](https://github.com/cloudposse/packages/workflows/kubectl-1.16/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Akubectl-1.16) | 1.16.15    | Production-Grade Container Scheduling and Management (v1.16)
 [![kubectl-1.17](https://github.com/cloudposse/packages/workflows/kubectl-1.17/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Akubectl-1.17) | 1.17.17    | Production-Grade Container Scheduling and Management (v1.17)
-[![kubectl-1.18](https://github.com/cloudposse/packages/workflows/kubectl-1.18/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Akubectl-1.18) | 1.18.19    | Production-Grade Container Scheduling and Management (v1.18)
+[![kubectl-1.18](https://github.com/cloudposse/packages/workflows/kubectl-1.18/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Akubectl-1.18) | 1.18.20    | Production-Grade Container Scheduling and Management (v1.18)
 [![kubectl-1.19](https://github.com/cloudposse/packages/workflows/kubectl-1.19/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Akubectl-1.19) | 1.19.11    | Production-Grade Container Scheduling and Management (v1.19)
 [![kubectl-1.20](https://github.com/cloudposse/packages/workflows/kubectl-1.20/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Akubectl-1.20) | 1.20.7     | Production-Grade Container Scheduling and Management (v1.19)
 [![kubectx](https://github.com/cloudposse/packages/workflows/kubectx/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Akubectx) | 0.9.3      | Switch faster between clusters and namespaces in kubectl
@@ -428,14 +428,13 @@ Like this project? Please give it a ★ on [our GitHub](https://github.com/cloud
 Are you using this project or any of our other projects? Consider [leaving a testimonial][testimonial]. =)
 
 
+
 ## Related Projects
 
 Check out these related projects.
 
 - [build-harness](https://github.com/cloudposse/build-harness) - Collection of Makefiles to facilitate building Golang projects, Dockerfiles, Helm charts, and more
 - [geodesic](https://github.com/cloudposse/geodesic) - Geodesic is the fastest way to get up and running with a rock solid, production grade cloud platform built on strictly Open Source tools.
-
-
 
 ## Help
 
