@@ -412,7 +412,7 @@ Here are some solutions to several common problems that may occur when adding a 
 [![turf](https://github.com/cloudposse/packages/workflows/turf/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aturf) | 0.17.0     | Turf is Cloud Posse's command-line automation helper.
 [![variant](https://github.com/cloudposse/packages/workflows/variant/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Avariant) | 0.37.0     | Variant is a Universal CLI tool that works like a task runner
 [![variant2](https://github.com/cloudposse/packages/workflows/variant2/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Avariant2) | 0.37.1     | Second major version of Variant, a Universal CLI tool that works like a task runner
-[![vault](https://github.com/cloudposse/packages/workflows/vault/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Avault) | 1.7.2      | Hashicorp vault
+[![vault](https://github.com/cloudposse/packages/workflows/vault/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Avault) | 1.7.3      | Hashicorp vault
 [![vendir](https://github.com/cloudposse/packages/workflows/vendir/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Avendir) | 0.19.0     |  Easy way to vendor portions of git repos, github releases, helm charts, docker image contents, etc. declaratively.
 [![venona](https://github.com/cloudposse/packages/workflows/venona/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Avenona) | 1.6.6      | Codefresh runtime-environment agent
 [![vert](https://github.com/cloudposse/packages/workflows/vert/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Avert) | 0.1.0      | Simple CLI for comparing two or more versions
@@ -428,14 +428,13 @@ Like this project? Please give it a ★ on [our GitHub](https://github.com/cloud
 Are you using this project or any of our other projects? Consider [leaving a testimonial][testimonial]. =)
 
 
+
 ## Related Projects
 
 Check out these related projects.
 
 - [build-harness](https://github.com/cloudposse/build-harness) - Collection of Makefiles to facilitate building Golang projects, Dockerfiles, Helm charts, and more
 - [geodesic](https://github.com/cloudposse/geodesic) - Geodesic is the fastest way to get up and running with a rock solid, production grade cloud platform built on strictly Open Source tools.
-
-
 
 ## Help
 
