@@ -328,7 +328,7 @@ Here are some solutions to several common problems that may occur when adding a 
 [![gosu](https://github.com/cloudposse/packages/workflows/gosu/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Agosu) | 1.13.0     | Simple Go-based setuid+setgid+setgroups+exec
 [![gotop](https://github.com/cloudposse/packages/workflows/gotop/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Agotop) | 3.0.0      | A terminal based graphical activity monitor inspired by gtop and vtop
 [![grpcurl](https://github.com/cloudposse/packages/workflows/grpcurl/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Agrpcurl) | 1.8.1      | Like cURL, but for gRPC: Command-line tool for interacting with gRPC servers
-[![helm](https://github.com/cloudposse/packages/workflows/helm/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ahelm) | 3.6.0      | The Kubernetes Package Manager
+[![helm](https://github.com/cloudposse/packages/workflows/helm/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ahelm) | 3.6.1      | The Kubernetes Package Manager
 [![helm2](https://github.com/cloudposse/packages/workflows/helm2/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ahelm2) | 2.17.0     | The Kubernetes Package Manager
 [![helm3](https://github.com/cloudposse/packages/workflows/helm3/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ahelm3) | 3.6.0      | The Kubernetes Package Manager
 [![helmfile](https://github.com/cloudposse/packages/workflows/helmfile/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ahelmfile) | 0.139.9    | Deploy Kubernetes Helm Charts
@@ -428,14 +428,13 @@ Like this project? Please give it a ★ on [our GitHub](https://github.com/cloud
 Are you using this project or any of our other projects? Consider [leaving a testimonial][testimonial]. =)
 
 
+
 ## Related Projects
 
 Check out these related projects.
 
 - [build-harness](https://github.com/cloudposse/build-harness) - Collection of Makefiles to facilitate building Golang projects, Dockerfiles, Helm charts, and more
 - [geodesic](https://github.com/cloudposse/geodesic) - Geodesic is the fastest way to get up and running with a rock solid, production grade cloud platform built on strictly Open Source tools.
-
-
 
 ## Help
 
