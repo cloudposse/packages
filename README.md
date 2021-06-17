@@ -389,7 +389,7 @@ Here are some solutions to several common problems that may occur when adding a 
 [![teleport](https://github.com/cloudposse/packages/workflows/teleport/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ateleport) | 6.2.3      | Secure Access for Developers that doesn't get in the way.
 [![teleport-4.2](https://github.com/cloudposse/packages/workflows/teleport-4.2/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ateleport-4.2) | 4.2.12     | Privileged access management for elastic infrastructure.
 [![teleport-4.3](https://github.com/cloudposse/packages/workflows/teleport-4.3/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ateleport-4.3) | 4.3.10     | Privileged access management for elastic infrastructure.
-[![teleport-4.4](https://github.com/cloudposse/packages/workflows/teleport-4.4/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ateleport-4.4) | 4.4.9      | Privileged access management for elastic infrastructure.
+[![teleport-4.4](https://github.com/cloudposse/packages/workflows/teleport-4.4/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ateleport-4.4) | 4.4.10     | Privileged access management for elastic infrastructure.
 [![teleport-5.0](https://github.com/cloudposse/packages/workflows/teleport-5.0/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ateleport-5.0) | 5.0.2      | Secure Access for Developers that doesn't get in the way.
 [![terraform](https://github.com/cloudposse/packages/workflows/terraform/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aterraform) | 1.0.0      | Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 [![terraform-0.11](https://github.com/cloudposse/packages/workflows/terraform-0.11/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aterraform-0.11) | 0.11.15    | Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
@@ -428,14 +428,13 @@ Like this project? Please give it a ★ on [our GitHub](https://github.com/cloud
 Are you using this project or any of our other projects? Consider [leaving a testimonial][testimonial]. =)
 
 
+
 ## Related Projects
 
 Check out these related projects.
 
 - [build-harness](https://github.com/cloudposse/build-harness) - Collection of Makefiles to facilitate building Golang projects, Dockerfiles, Helm charts, and more
 - [geodesic](https://github.com/cloudposse/geodesic) - Geodesic is the fastest way to get up and running with a rock solid, production grade cloud platform built on strictly Open Source tools.
-
-
 
 ## Help
 
