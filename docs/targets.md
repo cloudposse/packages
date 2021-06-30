@@ -44,7 +44,7 @@ gotop                     3.0.0      A terminal based graphical activity monitor
 grpcurl                   1.8.1      Like cURL, but for gRPC: Command-line tool for interacting with gRPC servers
 helm                      3.6.1      The Kubernetes Package Manager
 helm2                     2.17.0     The Kubernetes Package Manager
-helm3                     3.6.1      The Kubernetes Package Manager
+helm3                     3.6.2      The Kubernetes Package Manager
 helmfile                  0.139.9    Deploy Kubernetes Helm Charts
 htmltest                  0.14.0     :white_check_mark: Test generated HTML for problems
 hugo                      0.84.3     The world’s fastest framework for building websites.
