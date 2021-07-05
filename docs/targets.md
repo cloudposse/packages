@@ -132,7 +132,7 @@ variant                   0.37.0     Variant is a Universal CLI tool that works 
 variant2                  0.38.0     Second major version of Variant, a Universal CLI tool that works like a task runner
 vault                     1.7.3      Hashicorp vault
 vendir                    0.21.1      Easy way to vendor portions of git repos, github releases, helm charts, docker image contents, etc. declaratively.
-venona                    1.6.6      Codefresh runtime-environment agent
+venona                    1.6.7      Codefresh runtime-environment agent
 vert                      0.1.0      Simple CLI for comparing two or more versions
 yajsv                     1.4.0      Yet Another JSON Schema Validator [CLI]
 yq                        4.9.6      yq is a portable command-line YAML processor
