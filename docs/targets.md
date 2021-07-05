@@ -129,7 +129,7 @@ thanos                    0.21.1     Highly available Prometheus setup with long
 trivy                     0.18.3     A Simple and Comprehensive Vulnerability Scanner for Containers, Suitable for CI
 turf                      0.17.0     Turf is Cloud Posse's command-line automation helper.
 variant                   0.37.0     Variant is a Universal CLI tool that works like a task runner
-variant2                  0.37.1     Second major version of Variant, a Universal CLI tool that works like a task runner
+variant2                  0.38.0     Second major version of Variant, a Universal CLI tool that works like a task runner
 vault                     1.7.3      Hashicorp vault
 vendir                    0.21.1      Easy way to vendor portions of git repos, github releases, helm charts, docker image contents, etc. declaratively.
 venona                    1.6.6      Codefresh runtime-environment agent
