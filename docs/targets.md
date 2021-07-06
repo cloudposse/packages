@@ -95,7 +95,7 @@ retry                     OBSOLETE   ♻️ Functional mechanism based on channe
 saml2aws                  2.31.0     CLI tool which enables you to login and retrieve AWS temporary credentials using a SAML IDP
 scenery                   0.1.5      A Terraform plan output prettifier
 sentinel                  OBSOLETE   Hashicorp sentinel
-sentry-cli                1.66.0     A command line utility to work with Sentry.
+sentry-cli                1.67.0     A command line utility to work with Sentry.
 shellcheck                0.7.2      ShellCheck, a static analysis tool for shell scripts
 shfmt                     3.3.0      A shell parser, formatter and interpreter (POSIX/Bash/mksh)
 slack-notifier            0.3.0      Command line utility to send messages with attachments to Slack channels via Incoming Webhooks
