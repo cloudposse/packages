@@ -111,6 +111,7 @@ jobs:
         - sops
         - spacectl
         - spotctl
+        - sshm
         - stern
         - sudosh
         - teleport
