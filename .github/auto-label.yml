@@ -323,6 +323,9 @@ vendor/spacectl:
 vendor/spotctl:
 - any: ["vendor/spotctl/**"]
   all: ["!bin/**", "!tasks/**"]
+vendor/sshm:
+- any: ["vendor/sshm/**"]
+  all: ["!bin/**", "!tasks/**"]
 vendor/stern:
 - any: ["vendor/stern/**"]
   all: ["!bin/**", "!tasks/**"]
