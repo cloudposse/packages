@@ -51,7 +51,7 @@ hugo                      0.86.0     The world’s fastest framework for buildin
 jp                        0.1.3      Command line interface to JMESPath
 jq                        1.6.0      Command-line JSON processor
 json2hcl                  0.0.6      Convert JSON to HCL, and vice versa
-jx                        3.2.175    Jenkins-X
+jx                        3.2.177    Jenkins-X
 k3d                       4.4.7      Little helper to run Rancher Lab's k3s in Docker
 k6                        0.33.0     A modern load testing tool, using Go and JavaScript - https://k6.io
 k9s                       0.24.10    Kubernetes CLI To Manage Your Clusters In Style
