@@ -92,6 +92,9 @@ vendor/ec2-instance-selector:
 vendor/emailcli:
 - any: ["vendor/emailcli/**"]
   all: ["!bin/**", "!tasks/**"]
+vendor/envcli:
+- any: ["vendor/envcli/**"]
+  all: ["!bin/**", "!tasks/**"]
 vendor/fargate:
 - any: ["vendor/fargate/**"]
   all: ["!bin/**", "!tasks/**"]
