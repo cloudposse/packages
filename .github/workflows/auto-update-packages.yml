@@ -135,6 +135,7 @@ jobs:
         - terragrunt
         - terrahelp
         - tfenv
+        - tflint
         - tfmask
         - thanos
         - trivy

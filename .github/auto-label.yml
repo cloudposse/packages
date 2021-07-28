@@ -395,6 +395,9 @@ vendor/terrahelp:
 vendor/tfenv:
 - any: ["vendor/tfenv/**"]
   all: ["!bin/**", "!tasks/**"]
+vendor/tflint:
+- any: ["vendor/tflint/**"]
+  all: ["!bin/**", "!tasks/**"]
 vendor/tfmask:
 - any: ["vendor/tfmask/**"]
   all: ["!bin/**", "!tasks/**"]
