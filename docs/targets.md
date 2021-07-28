@@ -25,6 +25,7 @@ doctl                     1.62.0     A command line tool for DigitalOcean servic
 duffle                    0.3.5b1    CNAB installer
 ec2-instance-selector     2.0.2      A CLI tool and go library which recommends instance types based on resource criteria like vcpus and memory
 emailcli                  1.0.3      Command line email sending client written in Go.
+envcli                    0.7.1      A simple wrapper that allows you to run commands within ethereal docker containers
 fargate                   0.3.2      CLI for AWS Fargate
 fetch                     0.4.2      fetch makes it easy to download files, folders, and release assets from a specific public git commit, branch, or tag
 figurine                  1.0.1      Print your name in style

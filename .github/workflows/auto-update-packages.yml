@@ -40,6 +40,7 @@ jobs:
         - duffle
         - ec2-instance-selector
         - emailcli
+        - envcli
         - fargate
         - fetch
         - figurine
