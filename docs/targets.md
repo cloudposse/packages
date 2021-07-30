@@ -128,6 +128,7 @@ terrahelp                 0.7.4      Terrahelp is as a command line utility that
 tfenv                     0.4.0      Transform environment variables for use with Terraform (e.g. `HOSTNAME` ⇨ `TF_VAR_hostname`)
 tflint                    0.30.0     A Pluggable Terraform Linter
 tfmask                    0.7.0      Terraform utility to mask select output from `terraform plan` and `terraform apply`
+tfschema                  0.7.0      A schema inspector for Terraform providers
 thanos                    0.22.0     Highly available Prometheus setup with long term storage capabilities. CNCF Sandbox project.
 trivy                     0.19.2     A Simple and Comprehensive Vulnerability Scanner for Containers, Suitable for CI
 turf                      0.17.0     Turf is Cloud Posse's command-line automation helper.

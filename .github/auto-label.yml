@@ -401,6 +401,9 @@ vendor/tflint:
 vendor/tfmask:
 - any: ["vendor/tfmask/**"]
   all: ["!bin/**", "!tasks/**"]
+vendor/tfschema:
+- any: ["vendor/tfschema/**"]
+  all: ["!bin/**", "!tasks/**"]
 vendor/thanos:
 - any: ["vendor/thanos/**"]
   all: ["!bin/**", "!tasks/**"]
