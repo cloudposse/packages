@@ -58,6 +58,7 @@ jobs:
         - gosu
         - gotop
         - grpcurl
+        - hcledit
         - helm
         - helm2
         - helm3

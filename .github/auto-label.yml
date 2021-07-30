@@ -146,6 +146,9 @@ vendor/gotop:
 vendor/grpcurl:
 - any: ["vendor/grpcurl/**"]
   all: ["!bin/**", "!tasks/**"]
+vendor/hcledit:
+- any: ["vendor/hcledit/**"]
+  all: ["!bin/**", "!tasks/**"]
 vendor/helm:
 - any: ["vendor/helm/**"]
   all: ["!bin/**", "!tasks/**"]
