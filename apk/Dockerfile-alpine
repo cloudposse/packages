@@ -11,6 +11,6 @@ RUN echo "https://alpine.global.ssl.fastly.net/alpine/edge/testing" >> /etc/apk/
 RUN echo "https://alpine.global.ssl.fastly.net/alpine/edge/community" >> /etc/apk/repositories
 
 RUN apk update && \
-    apk add make curl alpine-sdk shadow bash jq sudo go
+    apk add make curl alpine-sdk shadow bash jq sudo go libc6-compat
 
 RUN echo "auth       sufficient   pam_shells.so" > /etc/pam.d/chsh
