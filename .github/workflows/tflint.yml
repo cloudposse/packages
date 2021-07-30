@@ -3,7 +3,7 @@
 # DO NOT EDIT THIS WORKFLOW, changes will be lost on the next update.
 #
 
-name: "sshm"
+name: "tflint"
 on:
   push:
     branches:
@@ -14,8 +14,8 @@ on:
       - deb/**
       - rpm/**
       - tasks/**
-      - vendor/sshm/**
-      - .github/workflows/sshm.yml
+      - vendor/tflint/**
+      - .github/workflows/tflint.yml
 
 
   pull_request:
@@ -25,8 +25,8 @@ on:
       - deb/**
       - rpm/**
       - tasks/**
-      - vendor/sshm/**
-      - .github/workflows/sshm.yml
+      - vendor/tflint/**
+      - .github/workflows/tflint.yml
 
 jobs:
   matrix:
@@ -46,10 +46,10 @@ jobs:
         GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
       run: |
         echo setting ouputs
-        make -C vendor/sshm info/github
+        make -C vendor/tflint info/github
         echo
         echo outputs set
-        make -C vendor/sshm info/github | sed s'/::set-output name=//' | sed 's/::/=/'
+        make -C vendor/tflint info/github | sed s'/::set-output name=//' | sed 's/::/=/'
 
 
   # Build for alpine linux
