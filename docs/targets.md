@@ -21,7 +21,7 @@ conftest                  0.26.0     Test your configuration files using Open Po
 consul                    1.10.1     Hashicorp consul
 ctop                      0.7.6      Top-like interface for container metrics
 direnv                    2.28.0     Unclutter your .profile
-doctl                     1.62.0     A command line tool for DigitalOcean services
+doctl                     1.63.1     A command line tool for DigitalOcean services
 duffle                    0.3.5b1    CNAB installer
 ec2-instance-selector     2.0.2      A CLI tool and go library which recommends instance types based on resource criteria like vcpus and memory
 emailcli                  1.0.3      Command line email sending client written in Go.
