@@ -16,7 +16,7 @@ chamber                   2.10.1     CLI for managing secrets
 cli53                     0.8.18     Command line tool for Amazon Route 53
 cloudflared               2021.8.2   Argo Tunnel client
 cloudposse-atlantis       0.9.0.3    Terraform For Teams, enhanced by Cloud Posse
-codefresh                 0.76.0     Codefresh CLI
+codefresh                 0.77.0     Codefresh CLI
 conftest                  0.27.0     Test your configuration files using Open Policy Agent
 consul                    1.10.1     Hashicorp consul
 ctop                      0.7.6      Top-like interface for container metrics
