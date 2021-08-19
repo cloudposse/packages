@@ -8,11 +8,11 @@ else
 	FILENAME_PATH=linux_64bit/session-manager-plugin.rpm
 endif
 
+export APK_BUILD_TEMPLATE ?= APKBUILD.github-binary
+
 # Package details
 export VENDOR ?= amazon
-export APK_BUILD_TEMPLATE ?= APKBUILD.github-binary
 export PACKAGE_NAME ?= session-manager-plugin
-# Download zip for mac
 # https://session-manager-downloads.s3.amazonaws.com/plugin/1.2.234.0/mac/sessionmanager-bundle.zip
 # https://session-manager-downloads.s3.amazonaws.com/plugin/1.2.234.0/linux_64bit/session-manager-plugin.rpm
 export DOWNLOAD_URL ?= https://session-manager-downloads.s3.amazonaws.com/plugin/$(PACKAGE_VERSION)/$(FILENAME_PATH)
