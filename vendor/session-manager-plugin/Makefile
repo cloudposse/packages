@@ -10,6 +10,8 @@ endif
 
 export APK_BUILD_TEMPLATE ?= APKBUILD.github-binary
 
+export PACKAGE_TYPES_DISABLED = rpm
+
 # Package details
 export VENDOR ?= amazon
 export PACKAGE_NAME ?= session-manager-plugin
