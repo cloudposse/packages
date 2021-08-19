@@ -107,6 +107,7 @@ jobs:
         - saml2aws
         - scenery
         - sentry-cli
+        - session-manager-plugin
         - shellcheck
         - shfmt
         - slack-notifier

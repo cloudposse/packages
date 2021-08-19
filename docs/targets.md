@@ -98,6 +98,7 @@ saml2aws                  2.32.0     CLI tool which enables you to login and ret
 scenery                   0.1.5      A Terraform plan output prettifier
 sentinel                  OBSOLETE   Hashicorp sentinel
 sentry-cli                1.68.0     A command line utility to work with Sentry.
+session-manager-plugin    1.2.234.0  Plugin for AWS CLI to start and end sessions that connect to managed instances
 shellcheck                0.7.2      ShellCheck, a static analysis tool for shell scripts
 shfmt                     3.3.1      A shell parser, formatter and interpreter (POSIX/Bash/mksh)
 slack-notifier            0.3.0      Command line utility to send messages with attachments to Slack channels via Incoming Webhooks

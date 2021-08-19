@@ -311,6 +311,9 @@ vendor/sentinel:
 vendor/sentry-cli:
 - any: ["vendor/sentry-cli/**"]
   all: ["!bin/**", "!tasks/**"]
+vendor/session-manager-plugin:
+- any: ["vendor/session-manager-plugin/**"]
+  all: ["!bin/**", "!tasks/**"]
 vendor/shellcheck:
 - any: ["vendor/shellcheck/**"]
   all: ["!bin/**", "!tasks/**"]
