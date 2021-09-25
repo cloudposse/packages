@@ -5,7 +5,7 @@ amtool                    0.23.0     Tool for interacting with the Alertmanager 
 argocd                    2.1.2      Declarative GitOpts for Kubernetes
 assume-role               0.3.2      Easily assume AWS roles in your terminal.
 atlantis                  0.17.3     Terraform For Teams
-atmos                     0.21.3     Universal Tool for DevOps and Cloud Automation
+atmos                     0.22.0     Universal Tool for DevOps and Cloud Automation
 awless                    0.1.11     A Mighty CLI for AWS
 aws-iam-authenticator     0.5.3      A tool to use AWS IAM credentials to authenticate to a Kubernetes cluster
 aws-okta                  OBSOLETE   aws-okta allows users to authenticate with AWS using Okta credentials
