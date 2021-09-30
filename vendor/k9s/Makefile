@@ -14,7 +14,8 @@ export VENDOR = derailed
 export PACKAGE_NAME = k9s
 export PACKAGE_REPO_NAME = k9s
 # https://github.com/derailed/k9s/releases/download/v0.24.10/k9s_v0.24.10_Linux_arm64.tar.gz
-export DOWNLOAD_URL = $(PACKAGE_REPO_URL)/releases/download/v$(PACKAGE_VERSION)/$(PACKAGE_NAME)_v$(PACKAGE_VERSION)_$(OS)_$(ARCH).tar.gz
+# https://github.com/derailed/k9s/releases/download/v0.24.15/k9s_Linux_x86_64.tar.gz
+export DOWNLOAD_URL = $(PACKAGE_REPO_URL)/releases/download/v$(PACKAGE_VERSION)/$(PACKAGE_NAME)_$(OS)_$(ARCH).tar.gz
 
 ## APK build specific requirements
 export APK_BUILD_TEMPLATE = APKBUILD.github-binary
