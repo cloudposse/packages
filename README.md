@@ -336,7 +336,7 @@ Here are some solutions to several common problems that may occur when adding a 
 [![helmfile](https://github.com/cloudposse/packages/workflows/helmfile/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ahelmfile) | 0.140.1    | Deploy Kubernetes Helm Charts
 [![htmltest](https://github.com/cloudposse/packages/workflows/htmltest/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ahtmltest) | 0.14.0     | :white_check_mark: Test generated HTML for problems
 [![hugo](https://github.com/cloudposse/packages/workflows/hugo/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ahugo) | 0.88.1     | The world’s fastest framework for building websites.
-[![jp](https://github.com/cloudposse/packages/workflows/jp/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ajp) | 0.1.3      | Command line interface to JMESPath
+[![jp](https://github.com/cloudposse/packages/workflows/jp/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ajp) | 0.2.0      | Command line interface to JMESPath
 [![jq](https://github.com/cloudposse/packages/workflows/jq/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ajq) | 1.6.0      | Command-line JSON processor
 [![json2hcl](https://github.com/cloudposse/packages/workflows/json2hcl/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ajson2hcl) | 0.0.6      | Convert JSON to HCL, and vice versa
 [![jx](https://github.com/cloudposse/packages/workflows/jx/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ajx) | 3.2.196    | Jenkins-X
