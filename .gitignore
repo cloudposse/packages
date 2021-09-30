@@ -1,5 +1,6 @@
 .build-harness
 build-harness
+/build-harness/
 .terraform
 *.tfstate
 *.tfstate.*
