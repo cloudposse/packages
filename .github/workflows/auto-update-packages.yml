@@ -40,6 +40,7 @@ jobs:
         - duffle
         - ec2-instance-selector
         - emailcli
+        - envcli
         - fargate
         - fetch
         - figurine
@@ -57,6 +58,7 @@ jobs:
         - gosu
         - gotop
         - grpcurl
+        - hcledit
         - helm
         - helm2
         - helm3
@@ -111,6 +113,7 @@ jobs:
         - sops
         - spacectl
         - spotctl
+        - sshm
         - stern
         - sudosh
         - teleport
@@ -133,7 +136,9 @@ jobs:
         - terragrunt
         - terrahelp
         - tfenv
+        - tflint
         - tfmask
+        - tfschema
         - thanos
         - trivy
         - turf

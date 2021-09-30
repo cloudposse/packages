@@ -92,6 +92,9 @@ vendor/ec2-instance-selector:
 vendor/emailcli:
 - any: ["vendor/emailcli/**"]
   all: ["!bin/**", "!tasks/**"]
+vendor/envcli:
+- any: ["vendor/envcli/**"]
+  all: ["!bin/**", "!tasks/**"]
 vendor/fargate:
 - any: ["vendor/fargate/**"]
   all: ["!bin/**", "!tasks/**"]
@@ -142,6 +145,9 @@ vendor/gotop:
   all: ["!bin/**", "!tasks/**"]
 vendor/grpcurl:
 - any: ["vendor/grpcurl/**"]
+  all: ["!bin/**", "!tasks/**"]
+vendor/hcledit:
+- any: ["vendor/hcledit/**"]
   all: ["!bin/**", "!tasks/**"]
 vendor/helm:
 - any: ["vendor/helm/**"]
@@ -323,6 +329,9 @@ vendor/spacectl:
 vendor/spotctl:
 - any: ["vendor/spotctl/**"]
   all: ["!bin/**", "!tasks/**"]
+vendor/sshm:
+- any: ["vendor/sshm/**"]
+  all: ["!bin/**", "!tasks/**"]
 vendor/stern:
 - any: ["vendor/stern/**"]
   all: ["!bin/**", "!tasks/**"]
@@ -389,8 +398,14 @@ vendor/terrahelp:
 vendor/tfenv:
 - any: ["vendor/tfenv/**"]
   all: ["!bin/**", "!tasks/**"]
+vendor/tflint:
+- any: ["vendor/tflint/**"]
+  all: ["!bin/**", "!tasks/**"]
 vendor/tfmask:
 - any: ["vendor/tfmask/**"]
+  all: ["!bin/**", "!tasks/**"]
+vendor/tfschema:
+- any: ["vendor/tfschema/**"]
   all: ["!bin/**", "!tasks/**"]
 vendor/thanos:
 - any: ["vendor/thanos/**"]
