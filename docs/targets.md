@@ -131,7 +131,7 @@ tflint                    0.33.0     A Pluggable Terraform Linter
 tfmask                    0.7.0      Terraform utility to mask select output from `terraform plan` and `terraform apply`
 tfschema                  0.7.0      A schema inspector for Terraform providers
 thanos                    0.23.1     Highly available Prometheus setup with long term storage capabilities. CNCF Sandbox project.
-trivy                     0.20.0     A Simple and Comprehensive Vulnerability Scanner for Containers, Suitable for CI
+trivy                     0.20.1     A Simple and Comprehensive Vulnerability Scanner for Containers, Suitable for CI
 turf                      0.17.0     Turf is Cloud Posse's command-line automation helper.
 variant                   0.37.0     Variant is a Universal CLI tool that works like a task runner
 variant2                  0.38.0     Second major version of Variant, a Universal CLI tool that works like a task runner
