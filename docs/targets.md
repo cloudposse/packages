@@ -5,7 +5,7 @@ amtool                    0.23.0     Tool for interacting with the Alertmanager 
 argocd                    2.1.5      Declarative GitOpts for Kubernetes
 assume-role               0.3.2      Easily assume AWS roles in your terminal.
 atlantis                  0.17.3     Terraform For Teams
-atmos                     1.2.3      Universal Tool for DevOps and Cloud Automation
+atmos                     1.2.4      Universal Tool for DevOps and Cloud Automation
 awless                    0.1.11     A Mighty CLI for AWS
 aws-iam-authenticator     0.5.3      A tool to use AWS IAM credentials to authenticate to a Kubernetes cluster
 aws-okta                  OBSOLETE   aws-okta allows users to authenticate with AWS using Okta credentials
@@ -60,7 +60,7 @@ k9s                       0.24.15    Kubernetes CLI To Manage Your Clusters In S
 katafygio                 0.8.3      K8s continuous backup to git
 kfctl                     1.2.0      Machine Learning Toolkit for Kubernetes
 kind                      0.11.1     A tool for running local Kubernetes clusters using Docker
-kops                      1.22.0     Kubernetes Operations (kops) - Production Grade K8s Installation, Upgrades, and Management
+kops                      1.22.1     Kubernetes Operations (kops) - Production Grade K8s Installation, Upgrades, and Management
 kops-1.12                 OBSOLETE   Kubernetes Operations (kops) - Production Grade K8s Installation, Upgrades, and Management
 krew                      0.4.1      Kubectl plugin manager
 kubecron                  2.0.0      Utilities to manage kubernetes cronjobs. Run a CronJob manually for test purposes. Suspend/unsuspend a CronJob
