@@ -84,7 +84,7 @@ nomad                     OBSOLETE   Hashicorp nomad
 opa                       0.34.0     An open source project to policy-enable your service.
 pack                      0.21.1     Create cloud native Buildpacks
 packer                    1.7.8      Packer is a tool for creating identical machine images for multiple platforms from a single source configuration.
-pandoc                    2.15       Universal markup converter
+pandoc                    2.16       Universal markup converter
 pgmetrics                 1.12.0     Postgres metrics
 pluto                     5.1.0      A cli tool to help discover deprecated apiVersions in Kubernetes
 popeye                    0.9.7      A Kubernetes cluster resource sanitizer
@@ -127,7 +127,7 @@ terraform_0.13            0.13.7     Terraform (Deprecated package. Use terrafor
 terragrunt                0.35.5     Terragrunt is a thin wrapper for Terraform that provides extra tools for working with multiple Terraform modules.
 terrahelp                 0.7.5      Terrahelp is as a command line utility that provides useful tricks like masking of terraform output.
 tfenv                     0.4.0      Transform environment variables for use with Terraform (e.g. `HOSTNAME` ⇨ `TF_VAR_hostname`)
-tflint                    0.33.0     A Pluggable Terraform Linter
+tflint                    0.33.1     A Pluggable Terraform Linter
 tfmask                    0.7.0      Terraform utility to mask select output from `terraform plan` and `terraform apply`
 tfschema                  0.7.1      A schema inspector for Terraform providers
 thanos                    0.23.1     Highly available Prometheus setup with long term storage capabilities. CNCF Sandbox project.
