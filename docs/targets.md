@@ -82,7 +82,7 @@ minikube                  1.24.0     Run Kubernetes locally
 misspell                  0.3.4      Correct commonly misspelled English words in source files
 nomad                     OBSOLETE   Hashicorp nomad
 opa                       0.34.1     An open source project to policy-enable your service.
-pack                      0.21.1     Create cloud native Buildpacks
+pack                      0.22.0     Create cloud native Buildpacks
 packer                    1.7.8      Packer is a tool for creating identical machine images for multiple platforms from a single source configuration.
 pandoc                    2.16.1     Universal markup converter
 pgmetrics                 1.12.0     Postgres metrics
