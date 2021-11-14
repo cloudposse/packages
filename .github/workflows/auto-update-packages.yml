@@ -130,6 +130,7 @@ jobs:
         - terraform-1
         - terraform-config-inspect
         - terraform-docs
+        - terraform-module-versions
         - terraform_0.11
         - terraform_0.12
         - terraform_0.13

@@ -377,6 +377,9 @@ vendor/terraform-config-inspect:
 vendor/terraform-docs:
 - any: ["vendor/terraform-docs/**"]
   all: ["!bin/**", "!tasks/**"]
+vendor/terraform-module-versions:
+- any: ["vendor/terraform-module-versions/**"]
+  all: ["!bin/**", "!tasks/**"]
 vendor/terraform:
 - any: ["vendor/terraform/**"]
   all: ["!bin/**", "!tasks/**"]
