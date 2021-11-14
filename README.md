@@ -403,6 +403,7 @@ Here are some solutions to several common problems that may occur when adding a 
 [![terraform-1](https://github.com/cloudposse/packages/workflows/terraform-1/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aterraform-1) | 1.0.11     | Terraform enables you to safely and predictably create, change, and improve infrastructure.
 [![terraform-config-inspect](https://github.com/cloudposse/packages/workflows/terraform-config-inspect/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aterraform-config-inspect) | 0.0.20210625153042+git09f34846faab | A helper library for shallow inspection of Terraform configurations
 [![terraform-docs](https://github.com/cloudposse/packages/workflows/terraform-docs/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aterraform-docs) | 0.16.0     | Generate docs from terraform modules
+[![terraform-module-versions](https://github.com/cloudposse/packages/workflows/terraform-module-versions/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aterraform-module-versions) | 3.1.6      | CLI tool that checks Terraform code for module updates. Single binary, no dependencies. linux, osx, windows.
 [![terraform_0.11](https://github.com/cloudposse/packages/workflows/terraform_0.11/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aterraform_0.11) | 0.11.15    | Terraform (Deprecated package. Use terraform-0.11 instead)
 [![terraform_0.12](https://github.com/cloudposse/packages/workflows/terraform_0.12/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aterraform_0.12) | 0.12.31    | Terraform (Deprecated package. Use terraform-0.12 instead)
 [![terraform_0.13](https://github.com/cloudposse/packages/workflows/terraform_0.13/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aterraform_0.13) | 0.13.7     | Terraform (Deprecated package. Use terraform-0.13 instead)
@@ -422,7 +423,7 @@ Here are some solutions to several common problems that may occur when adding a 
 [![venona](https://github.com/cloudposse/packages/workflows/venona/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Avenona) | 1.6.10     | Codefresh runtime-environment agent
 [![vert](https://github.com/cloudposse/packages/workflows/vert/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Avert) | 0.1.0      | Simple CLI for comparing two or more versions
 [![yajsv](https://github.com/cloudposse/packages/workflows/yajsv/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ayajsv) | 1.4.0      | Yet Another JSON Schema Validator [CLI]
-[![yq](https://github.com/cloudposse/packages/workflows/yq/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ayq) | 4.14.1     | yq is a portable command-line YAML processor
+[![yq](https://github.com/cloudposse/packages/workflows/yq/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ayq) | 4.14.2     | yq is a portable command-line YAML processor
 
 
 
