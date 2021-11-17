@@ -1,4 +1,4 @@
-class Githubcommenter < Formula
+class GithubCommenter < Formula
   desc "Command line utility for creating GitHub comments on Commits, Pull Request Reviews or Issues"
   url "https://github.com/cloudposse/packages.git"
   version "0.9.0"

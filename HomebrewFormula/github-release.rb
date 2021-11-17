@@ -1,4 +1,4 @@
-class Githubrelease < Formula
+class GithubRelease < Formula
   desc "Commandline app to create and edit releases on Github (and upload artifacts)"
   url "https://github.com/cloudposse/packages.git"
   version "0.10.0"

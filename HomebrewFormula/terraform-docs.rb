@@ -1,4 +1,4 @@
-class Terraformdocs < Formula
+class TerraformDocs < Formula
   desc "Generate docs from terraform modules"
   url "https://github.com/cloudposse/packages.git"
   version "0.16.0"

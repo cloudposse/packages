@@ -1,4 +1,4 @@
-class Awsokta < Formula
+class AwsOkta < Formula
   desc "aws-vault like tool for Okta authentication"
   url "https://github.com/cloudposse/packages.git"
   version "1.0.3"

@@ -1,4 +1,4 @@
-class Slacknotifier < Formula
+class SlackNotifier < Formula
   desc "Command line utility to send messages with attachments to Slack channels via Incoming Webhooks"
   url "https://github.com/cloudposse/packages.git"
   version "0.4.0"

@@ -1,4 +1,4 @@
-class Cloudposseatlantis < Formula
+class CloudposseAtlantis < Formula
   desc "Terraform For Teams, enhanced by Cloud Posse"
   url "https://github.com/cloudposse/packages.git"
   version "0.9.0.3"

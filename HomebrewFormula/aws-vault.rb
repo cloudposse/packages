@@ -1,4 +1,4 @@
-class Awsvault < Formula
+class AwsVault < Formula
   desc "A vault for securely storing and accessing AWS credentials in development environments"
   url "https://github.com/cloudposse/packages.git"
   version "6.3.1"

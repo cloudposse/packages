@@ -1,4 +1,4 @@
-class Assumerole < Formula
+class AssumeRole < Formula
   desc "Easily assume AWS roles in your terminal."
   url "https://github.com/cloudposse/packages.git"
   version "0.3.2"

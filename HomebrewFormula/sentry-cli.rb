@@ -1,4 +1,4 @@
-class Sentrycli < Formula
+class SentryCli < Formula
   desc "A command line utility to work with Sentry."
   url "https://github.com/cloudposse/packages.git"
   version "1.71.0"

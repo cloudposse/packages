@@ -1,4 +1,4 @@
-class Awsiamauthenticator < Formula
+class AwsIamAuthenticator < Formula
   desc "A tool to use AWS IAM credentials to authenticate to a Kubernetes cluster"
   url "https://github.com/cloudposse/packages.git"
   version "0.5.3"

@@ -1,4 +1,4 @@
-class Rainbowtext < Formula
+class RainbowText < Formula
   desc "Tasty rainbows for your terminal! (lolcat clone)"
   url "https://github.com/cloudposse/packages.git"
   version "1.1.1"

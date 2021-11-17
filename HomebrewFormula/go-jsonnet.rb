@@ -1,4 +1,4 @@
-class Gojsonnet < Formula
+class GoJsonnet < Formula
   desc "This an implementation of Jsonnet in pure Go."
   url "https://github.com/cloudposse/packages.git"
   version "0.17.0"

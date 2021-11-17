@@ -1,4 +1,4 @@
-class Terraformconfiginspect < Formula
+class TerraformConfigInspect < Formula
   desc "A helper library for shallow inspection of Terraform configurations"
   url "https://github.com/cloudposse/packages.git"
   version "0.0.20211115214459+git90acf1ca460f"

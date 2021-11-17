@@ -1,4 +1,4 @@
-class Terraformmoduleversions < Formula
+class TerraformModuleVersions < Formula
   desc "CLI tool that checks Terraform code for module updates. Single binary, no dependencies. linux, osx, windows."
   url "https://github.com/cloudposse/packages.git"
   version "3.1.7"

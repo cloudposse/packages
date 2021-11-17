@@ -1,4 +1,4 @@
-class Githubstatusupdater < Formula
+class GithubStatusUpdater < Formula
   desc "Command line utility for updating GitHub commit statuses and enabling required status checks for pull requests"
   url "https://github.com/cloudposse/packages.git"
   version "0.6.0"

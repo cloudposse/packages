@@ -1,4 +1,4 @@
-class Ec2instanceselector < Formula
+class Ec2InstanceSelector < Formula
   desc "A CLI tool and go library which recommends instance types based on resource criteria like vcpus and memory"
   url "https://github.com/cloudposse/packages.git"
   version "2.0.3"
