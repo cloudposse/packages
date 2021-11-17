@@ -72,6 +72,13 @@ usage: |-
   ```
   __NOTE__: Requires `bash` and `curl` to run:
 
+  ### Using Homebrew
+
+  ```
+  brew tap cloudposse/packages https://github.com/cloudposse/packages.git
+  brew search cloudposse/packages
+  ```
+
   #### For Docker
 
   Add the following to your `Dockerfile` near the top.
