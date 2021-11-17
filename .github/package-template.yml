@@ -102,7 +102,6 @@ jobs:
           echo creating '"pip"' cache directory for Cloudsmith
           mkdir -p $HOME/.cache/pip && chmod -R 777 $HOME/.cache || echo Ignoring error creating '"pip"' cache directory
 
-
       # Determine which package organization we should use (e.g. dev or prod)
       - name: "Determine package repo"
         shell: bash
@@ -220,3 +219,11 @@ jobs:
           republish: 'true'                                 # Needed if version is not changing
           file: '${{steps.artifact.outputs.path}}'          # Package filename (including path)
           no-wait-for-sync: 'true'                          # Skip the waiting for package synchronisation (i.e. upload only)
+
+  homebrew:
+    runs-on: ubuntu-latest
+      steps:
+      - name: "Create Homebrew formula"
+        shell: bash
+        run: |
+          make -C vendor/${{github.workflow}} homebrew
