@@ -7,3 +7,4 @@ include $(SELF_DIR)/Makefile.package
 include $(SELF_DIR)/Makefile.apk
 include $(SELF_DIR)/Makefile.deb
 include $(SELF_DIR)/Makefile.rpm
+include $(SELF_DIR)/Makefile.homebrew

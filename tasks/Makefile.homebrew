@@ -1,0 +1,4 @@
+.PHONY: homebrew
+
+homebrew:
+	../../contrib/homebrew_formula.sh > ../../HomebrewFormula/$(PACKAGE_NAME).rb
