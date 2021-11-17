@@ -1,13 +1,13 @@
-class Argocd < Formula
-  desc "Declarative GitOpts for Kubernetes"
+class Direnv < Formula
+  desc "Unclutter your .profile"
   url "https://github.com/cloudposse/packages.git"
-  version "2.1.6"
+  version "2.28.0"
 
   def install
     ENV["INSTALL_PATH"] = "cloudposse"
-    chdir "vendor/argocd" do
+    chdir "vendor/direnv" do
       system "make", "install"
-      bin.install "cloudposse/argocd"
+      bin.install "cloudposse/direnv"
     end
   end
 end

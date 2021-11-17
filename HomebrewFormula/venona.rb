@@ -1,13 +1,13 @@
-class Argocd < Formula
-  desc "Declarative GitOpts for Kubernetes"
+class Venona < Formula
+  desc "Codefresh runtime-environment agent"
   url "https://github.com/cloudposse/packages.git"
-  version "2.1.6"
+  version "1.6.10"
 
   def install
     ENV["INSTALL_PATH"] = "cloudposse"
-    chdir "vendor/argocd" do
+    chdir "vendor/venona" do
       system "make", "install"
-      bin.install "cloudposse/argocd"
+      bin.install "cloudposse/venona"
     end
   end
 end

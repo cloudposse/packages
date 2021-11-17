@@ -1,13 +1,13 @@
-class Argocd < Formula
-  desc "Declarative GitOpts for Kubernetes"
+class Fargate < Formula
+  desc "CLI for AWS Fargate"
   url "https://github.com/cloudposse/packages.git"
-  version "2.1.6"
+  version "0.3.2"
 
   def install
     ENV["INSTALL_PATH"] = "cloudposse"
-    chdir "vendor/argocd" do
+    chdir "vendor/fargate" do
       system "make", "install"
-      bin.install "cloudposse/argocd"
+      bin.install "cloudposse/fargate"
     end
   end
 end
