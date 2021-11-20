@@ -1,4 +1,4 @@
-class Kubectl1.18 < Formula
+class Kubectl118 < Formula
   desc "Production-Grade Container Scheduling and Management (v1.18)"
   url "https://github.com/cloudposse/packages.git"
   version "1.18.20"
