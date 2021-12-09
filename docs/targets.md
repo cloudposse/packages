@@ -46,7 +46,7 @@ grpcurl                   1.8.5      Like cURL, but for gRPC: Command-line tool 
 hcledit                   0.2.2      A command line editor for HCL
 helm                      3.7.1      The Kubernetes Package Manager
 helm2                     2.17.0     The Kubernetes Package Manager
-helm3                     3.7.1      The Kubernetes Package Manager
+helm3                     3.7.2      The Kubernetes Package Manager
 helmfile                  0.142.0    Deploy Kubernetes Helm Charts
 htmltest                  0.15.0     :white_check_mark: Test generated HTML for problems
 hugo                      0.90.0     The world’s fastest framework for building websites.
