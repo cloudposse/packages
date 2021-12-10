@@ -5,14 +5,14 @@ amtool                    0.23.0     Tool for interacting with the Alertmanager 
 argocd                    2.1.7      Declarative GitOpts for Kubernetes
 assume-role               0.3.2      Easily assume AWS roles in your terminal.
 atlantis                  0.17.5     Terraform For Teams
-atmos                     1.3.10     Universal Tool for DevOps and Cloud Automation
+atmos                     1.3.11     Universal Tool for DevOps and Cloud Automation
 awless                    0.1.11     A Mighty CLI for AWS
 aws-iam-authenticator     0.5.3      A tool to use AWS IAM credentials to authenticate to a Kubernetes cluster
 aws-okta                  OBSOLETE   aws-okta allows users to authenticate with AWS using Okta credentials
 aws-vault                 6.3.1      A vault for securely storing and accessing AWS credentials in development environments
 cfssl                     1.6.1      Cloudflare's PKI and TLS toolkit
 cfssljson                 1.6.1      Cloudflare's PKI and TLS toolkit json parser
-chamber                   2.10.6     CLI for managing secrets
+chamber                   2.10.7     CLI for managing secrets
 cli53                     0.8.18     Command line tool for Amazon Route 53
 cloudflared               2021.11.0  Argo Tunnel client
 cloudposse-atlantis       0.9.0.3    Terraform For Teams, enhanced by Cloud Posse
@@ -53,7 +53,7 @@ hugo                      0.90.0     The world’s fastest framework for buildin
 jp                        0.2.1      Command line interface to JMESPath
 jq                        1.6.0      Command-line JSON processor
 json2hcl                  0.0.6      Convert JSON to HCL, and vice versa
-jx                        3.2.231    Jenkins-X
+jx                        3.2.233    Jenkins-X
 k3d                       5.2.1      Little helper to run Rancher Lab's k3s in Docker
 k6                        0.35.0     A modern load testing tool, using Go and JavaScript - https://k6.io
 k9s                       0.25.8     Kubernetes CLI To Manage Your Clusters In Style
@@ -73,6 +73,7 @@ kubectl-1.17              1.17.17    Production-Grade Container Scheduling and M
 kubectl-1.18              1.18.20    Production-Grade Container Scheduling and Management (v1.18)
 kubectl-1.19              1.19.16    Production-Grade Container Scheduling and Management (v1.19)
 kubectl-1.20              1.20.13    Production-Grade Container Scheduling and Management (v1.19)
+kubectl-1.21              1.21.7     Production-Grade Container Scheduling and Management (v1.19)
 kubectx                   0.9.4      Switch faster between clusters and namespaces in kubectl
 kubens                    0.9.4      Switch faster between clusters and namespaces in kubectl
 kubeval                   0.16.1     Validate your Kubernetes configuration files, supports multiple Kubernetes versions
@@ -82,7 +83,7 @@ minikube                  1.24.0     Run Kubernetes locally
 misspell                  0.3.4      Correct commonly misspelled English words in source files
 nomad                     OBSOLETE   Hashicorp nomad
 opa                       0.35.0     An open source project to policy-enable your service.
-pack                      0.22.0     Create cloud native Buildpacks
+pack                      0.23.0     Create cloud native Buildpacks
 packer                    1.7.8      Packer is a tool for creating identical machine images for multiple platforms from a single source configuration.
 pandoc                    2.16.2     Universal markup converter
 pgmetrics                 1.12.0     Postgres metrics
@@ -103,7 +104,7 @@ shfmt                     3.4.1      A shell parser, formatter and interpreter (
 slack-notifier            0.4.0      Command line utility to send messages with attachments to Slack channels via Incoming Webhooks
 sops                      3.7.1      Secrets management stinks, use some sops!
 spacectl                  0.7.1      [Spacelift.io](https://spacelift.io/) client and CLI
-spotctl                   0.20.1     A unified CLI to manage your [Spot](https://spot.io/) resources.
+spotctl                   0.21.0     A unified CLI to manage your [Spot](https://spot.io/) resources.
 sshm                      1.2.2      Easy connect on EC2 instances thanks to AWS System Manager Agent
 stern                     1.11.0     ⎈ Multi pod and container log tailing for Kubernetes
 sudosh                    0.3.0      Shell wrapper to run a login shell with `sudo` as the current user for the purpose of audit logging
@@ -136,7 +137,7 @@ trivy                     0.21.2     A Simple and Comprehensive Vulnerability Sc
 turf                      0.17.0     Turf is Cloud Posse's command-line automation helper.
 variant                   0.37.0     Variant is a Universal CLI tool that works like a task runner
 variant2                  0.38.0     Second major version of Variant, a Universal CLI tool that works like a task runner
-vault                     1.9.0      Hashicorp vault
+vault                     1.9.1      Hashicorp vault
 vendir                    0.23.0      Easy way to vendor portions of git repos, github releases, helm charts, docker image contents, etc. declaratively.
 venona                    1.6.10     Codefresh runtime-environment agent
 vert                      0.1.0      Simple CLI for comparing two or more versions
