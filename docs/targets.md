@@ -5,14 +5,14 @@ amtool                    0.23.0     Tool for interacting with the Alertmanager 
 argocd                    2.1.7      Declarative GitOpts for Kubernetes
 assume-role               0.3.2      Easily assume AWS roles in your terminal.
 atlantis                  0.17.5     Terraform For Teams
-atmos                     1.3.9      Universal Tool for DevOps and Cloud Automation
+atmos                     1.3.11     Universal Tool for DevOps and Cloud Automation
 awless                    0.1.11     A Mighty CLI for AWS
 aws-iam-authenticator     0.5.3      A tool to use AWS IAM credentials to authenticate to a Kubernetes cluster
 aws-okta                  OBSOLETE   aws-okta allows users to authenticate with AWS using Okta credentials
 aws-vault                 6.3.1      A vault for securely storing and accessing AWS credentials in development environments
 cfssl                     1.6.1      Cloudflare's PKI and TLS toolkit
 cfssljson                 1.6.1      Cloudflare's PKI and TLS toolkit json parser
-chamber                   2.10.6     CLI for managing secrets
+chamber                   2.10.7     CLI for managing secrets
 cli53                     0.8.18     Command line tool for Amazon Route 53
 cloudflared               2021.11.0  Argo Tunnel client
 cloudposse-atlantis       0.9.0.3    Terraform For Teams, enhanced by Cloud Posse
@@ -21,7 +21,7 @@ conftest                  0.28.3     Test your configuration files using Open Po
 consul                    1.10.4     Hashicorp consul
 ctop                      0.7.6      Top-like interface for container metrics
 direnv                    2.29.0     Unclutter your .profile
-doctl                     1.67.0     A command line tool for DigitalOcean services
+doctl                     1.68.0     A command line tool for DigitalOcean services
 duffle                    0.3.5b1    CNAB installer
 ec2-instance-selector     2.0.3      A CLI tool and go library which recommends instance types based on resource criteria like vcpus and memory
 emailcli                  1.0.3      Command line email sending client written in Go.
@@ -44,17 +44,17 @@ gosu                      1.14.0     Simple Go-based setuid+setgid+setgroups+exe
 gotop                     3.0.0      A terminal based graphical activity monitor inspired by gtop and vtop
 grpcurl                   1.8.5      Like cURL, but for gRPC: Command-line tool for interacting with gRPC servers
 hcledit                   0.2.2      A command line editor for HCL
-helm                      3.7.1      The Kubernetes Package Manager
+helm                      3.7.2      The Kubernetes Package Manager
 helm2                     2.17.0     The Kubernetes Package Manager
-helm3                     3.7.1      The Kubernetes Package Manager
+helm3                     3.7.2      The Kubernetes Package Manager
 helmfile                  0.142.0    Deploy Kubernetes Helm Charts
 htmltest                  0.15.0     :white_check_mark: Test generated HTML for problems
-hugo                      0.89.4     The world’s fastest framework for building websites.
+hugo                      0.90.0     The world’s fastest framework for building websites.
 jp                        0.2.1      Command line interface to JMESPath
 jq                        1.6.0      Command-line JSON processor
 json2hcl                  0.0.6      Convert JSON to HCL, and vice versa
-jx                        3.2.231    Jenkins-X
-k3d                       5.2.0      Little helper to run Rancher Lab's k3s in Docker
+jx                        3.2.233    Jenkins-X
+k3d                       5.2.1      Little helper to run Rancher Lab's k3s in Docker
 k6                        0.35.0     A modern load testing tool, using Go and JavaScript - https://k6.io
 k9s                       0.25.8     Kubernetes CLI To Manage Your Clusters In Style
 katafygio                 0.8.3      K8s continuous backup to git
@@ -64,7 +64,7 @@ kops                      1.22.2     Kubernetes Operations (kops) - Production G
 kops-1.12                 OBSOLETE   Kubernetes Operations (kops) - Production Grade K8s Installation, Upgrades, and Management
 krew                      0.4.1      Kubectl plugin manager
 kubecron                  2.0.0      Utilities to manage kubernetes cronjobs. Run a CronJob manually for test purposes. Suspend/unsuspend a CronJob
-kubectl                   1.22.4     Production-Grade Container Scheduling and Management
+kubectl                   1.23.0     Production-Grade Container Scheduling and Management
 kubectl-1.13              1.13.12    Production-Grade Container Scheduling and Management (v1.13)
 kubectl-1.14              1.14.10    Production-Grade Container Scheduling and Management (v1.14)
 kubectl-1.15              1.15.12    Production-Grade Container Scheduling and Management (v1.15)
@@ -73,6 +73,7 @@ kubectl-1.17              1.17.17    Production-Grade Container Scheduling and M
 kubectl-1.18              1.18.20    Production-Grade Container Scheduling and Management (v1.18)
 kubectl-1.19              1.19.16    Production-Grade Container Scheduling and Management (v1.19)
 kubectl-1.20              1.20.13    Production-Grade Container Scheduling and Management (v1.19)
+kubectl-1.21              1.21.7     Production-Grade Container Scheduling and Management (v1.19)
 kubectx                   0.9.4      Switch faster between clusters and namespaces in kubectl
 kubens                    0.9.4      Switch faster between clusters and namespaces in kubectl
 kubeval                   0.16.1     Validate your Kubernetes configuration files, supports multiple Kubernetes versions
@@ -82,7 +83,7 @@ minikube                  1.24.0     Run Kubernetes locally
 misspell                  0.3.4      Correct commonly misspelled English words in source files
 nomad                     OBSOLETE   Hashicorp nomad
 opa                       0.35.0     An open source project to policy-enable your service.
-pack                      0.22.0     Create cloud native Buildpacks
+pack                      0.23.0     Create cloud native Buildpacks
 packer                    1.7.8      Packer is a tool for creating identical machine images for multiple platforms from a single source configuration.
 pandoc                    2.16.2     Universal markup converter
 pgmetrics                 1.12.0     Postgres metrics
@@ -103,7 +104,7 @@ shfmt                     3.4.1      A shell parser, formatter and interpreter (
 slack-notifier            0.4.0      Command line utility to send messages with attachments to Slack channels via Incoming Webhooks
 sops                      3.7.1      Secrets management stinks, use some sops!
 spacectl                  0.7.1      [Spacelift.io](https://spacelift.io/) client and CLI
-spotctl                   0.20.1     A unified CLI to manage your [Spot](https://spot.io/) resources.
+spotctl                   0.21.0     A unified CLI to manage your [Spot](https://spot.io/) resources.
 sshm                      1.2.2      Easy connect on EC2 instances thanks to AWS System Manager Agent
 stern                     1.11.0     ⎈ Multi pod and container log tailing for Kubernetes
 sudosh                    0.3.0      Shell wrapper to run a login shell with `sudo` as the current user for the purpose of audit logging
@@ -112,13 +113,13 @@ teleport-4.2              4.2.12     Privileged access management for elastic in
 teleport-4.3              4.3.10     Privileged access management for elastic infrastructure.
 teleport-4.4              4.4.11     Privileged access management for elastic infrastructure.
 teleport-5.0              5.0.2      Secure Access for Developers that doesn't get in the way.
-terraform                 1.0.11     Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
+terraform                 1.1.0      Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-0.11            0.11.15    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-0.12            0.12.31    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-0.13            0.13.7     Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-0.14            0.14.11    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-0.15            0.15.5     Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
-terraform-1               1.0.11     Terraform enables you to safely and predictably create, change, and improve infrastructure.
+terraform-1               1.1.0      Terraform enables you to safely and predictably create, change, and improve infrastructure.
 terraform-config-inspect  0.0.20211115214459+git90acf1ca460f A helper library for shallow inspection of Terraform configurations
 terraform-docs            0.16.0     Generate docs from terraform modules
 terraform-module-versions 3.1.7      CLI tool that checks Terraform code for module updates. Single binary, no dependencies. linux, osx, windows.
@@ -128,7 +129,7 @@ terraform_0.13            0.13.7     Terraform (Deprecated package. Use terrafor
 terragrunt                0.35.13    Terragrunt is a thin wrapper for Terraform that provides extra tools for working with multiple Terraform modules.
 terrahelp                 0.7.5      Terrahelp is as a command line utility that provides useful tricks like masking of terraform output.
 tfenv                     0.4.0      Transform environment variables for use with Terraform (e.g. `HOSTNAME` ⇨ `TF_VAR_hostname`)
-tflint                    0.33.1     A Pluggable Terraform Linter
+tflint                    0.33.2     A Pluggable Terraform Linter
 tfmask                    0.7.0      Terraform utility to mask select output from `terraform plan` and `terraform apply`
 tfschema                  0.7.1      A schema inspector for Terraform providers
 thanos                    0.23.1     Highly available Prometheus setup with long term storage capabilities. CNCF Sandbox project.
@@ -136,7 +137,7 @@ trivy                     0.21.2     A Simple and Comprehensive Vulnerability Sc
 turf                      0.17.0     Turf is Cloud Posse's command-line automation helper.
 variant                   0.37.0     Variant is a Universal CLI tool that works like a task runner
 variant2                  0.38.0     Second major version of Variant, a Universal CLI tool that works like a task runner
-vault                     1.9.0      Hashicorp vault
+vault                     1.9.1      Hashicorp vault
 vendir                    0.23.0      Easy way to vendor portions of git repos, github releases, helm charts, docker image contents, etc. declaratively.
 venona                    1.6.10     Codefresh runtime-environment agent
 vert                      0.1.0      Simple CLI for comparing two or more versions
