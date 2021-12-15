@@ -138,7 +138,7 @@ turf                      0.17.0     Turf is Cloud Posse's command-line automati
 variant                   0.37.0     Variant is a Universal CLI tool that works like a task runner
 variant2                  0.38.0     Second major version of Variant, a Universal CLI tool that works like a task runner
 vault                     1.9.1      Hashicorp vault
-vendir                    0.23.0      Easy way to vendor portions of git repos, github releases, helm charts, docker image contents, etc. declaratively.
+vendir                    0.24.0      Easy way to vendor portions of git repos, github releases, helm charts, docker image contents, etc. declaratively.
 venona                    1.6.10     Codefresh runtime-environment agent
 vert                      0.1.0      Simple CLI for comparing two or more versions
 yajsv                     1.4.0      Yet Another JSON Schema Validator [CLI]
