@@ -289,7 +289,7 @@ Here are some solutions to several common problems that may occur when adding a 
 | Build Status | Version | Description |
 | ------------ | ------- | ----------- |
 [![amtool](https://github.com/cloudposse/packages/workflows/amtool/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aamtool) | 0.23.0     | Tool for interacting with the Alertmanager API
-[![argocd](https://github.com/cloudposse/packages/workflows/argocd/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aargocd) | 2.2.1      | Declarative GitOpts for Kubernetes
+[![argocd](https://github.com/cloudposse/packages/workflows/argocd/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aargocd) | 2.2.2      | Declarative GitOpts for Kubernetes
 [![assume-role](https://github.com/cloudposse/packages/workflows/assume-role/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aassume-role) | 0.3.2      | Easily assume AWS roles in your terminal.
 [![atlantis](https://github.com/cloudposse/packages/workflows/atlantis/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aatlantis) | 0.18.0     | Terraform For Teams
 [![atmos](https://github.com/cloudposse/packages/workflows/atmos/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aatmos) | 1.3.14     | Universal Tool for DevOps and Cloud Automation
@@ -514,7 +514,7 @@ In general, PRs are welcome. We follow the typical "fork-and-pull" Git workflow.
 
 ## Copyright
 
-Copyright © 2017-2021 [Cloud Posse, LLC](https://cpco.io/copyright)
+Copyright © 2017-2022 [Cloud Posse, LLC](https://cpco.io/copyright)
 
 
 
