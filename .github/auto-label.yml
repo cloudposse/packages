@@ -413,6 +413,9 @@ vendor/tfmask:
 vendor/tfschema:
 - any: ["vendor/tfschema/**"]
   all: ["!bin/**", "!tasks/**"]
+vendor/tfsec:
+- any: ["vendor/tfsec/**"]
+  all: ["!bin/**", "!tasks/**"]
 vendor/thanos:
 - any: ["vendor/thanos/**"]
   all: ["!bin/**", "!tasks/**"]

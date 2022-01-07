@@ -141,6 +141,7 @@ jobs:
         - tflint
         - tfmask
         - tfschema
+        - tfsec
         - thanos
         - trivy
         - turf
