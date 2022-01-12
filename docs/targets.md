@@ -104,7 +104,7 @@ shfmt                     3.4.2      A shell parser, formatter and interpreter (
 slack-notifier            0.4.0      Command line utility to send messages with attachments to Slack channels via Incoming Webhooks
 sops                      3.7.1      Secrets management stinks, use some sops!
 spacectl                  0.7.1      [Spacelift.io](https://spacelift.io/) client and CLI
-spotctl                   0.24.0     A unified CLI to manage your [Spot](https://spot.io/) resources.
+spotctl                   0.25.0     A unified CLI to manage your [Spot](https://spot.io/) resources.
 sshm                      1.2.2      Easy connect on EC2 instances thanks to AWS System Manager Agent
 stern                     1.11.0     ⎈ Multi pod and container log tailing for Kubernetes
 sudosh                    0.3.0      Shell wrapper to run a login shell with `sudo` as the current user for the purpose of audit logging
