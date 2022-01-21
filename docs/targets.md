@@ -5,7 +5,7 @@ amtool                    0.23.0     Tool for interacting with the Alertmanager 
 argocd                    2.2.3      Declarative GitOpts for Kubernetes
 assume-role               0.3.2      Easily assume AWS roles in your terminal.
 atlantis                  0.18.1     Terraform For Teams
-atmos                     1.3.19     Universal Tool for DevOps and Cloud Automation
+atmos                     1.3.22     Universal Tool for DevOps and Cloud Automation
 awless                    0.1.11     A Mighty CLI for AWS
 aws-iam-authenticator     0.5.3      A tool to use AWS IAM credentials to authenticate to a Kubernetes cluster
 aws-okta                  OBSOLETE   aws-okta allows users to authenticate with AWS using Okta credentials
@@ -98,7 +98,7 @@ retry                     OBSOLETE   ♻️ Functional mechanism based on channe
 saml2aws                  2.33.0     CLI tool which enables you to login and retrieve AWS temporary credentials using a SAML IDP
 scenery                   0.1.5      A Terraform plan output prettifier
 sentinel                  OBSOLETE   Hashicorp sentinel
-sentry-cli                1.71.0     A command line utility to work with Sentry.
+sentry-cli                1.72.0     A command line utility to work with Sentry.
 shellcheck                0.8.0      ShellCheck, a static analysis tool for shell scripts
 shfmt                     3.4.2      A shell parser, formatter and interpreter (POSIX/Bash/mksh)
 slack-notifier            0.4.0      Command line utility to send messages with attachments to Slack channels via Incoming Webhooks
