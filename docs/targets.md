@@ -5,7 +5,7 @@ amtool                    0.23.0     Tool for interacting with the Alertmanager 
 argocd                    2.2.3      Declarative GitOpts for Kubernetes
 assume-role               0.3.2      Easily assume AWS roles in your terminal.
 atlantis                  0.18.1     Terraform For Teams
-atmos                     1.3.22     Universal Tool for DevOps and Cloud Automation
+atmos                     1.3.19     Universal Tool for DevOps and Cloud Automation
 awless                    0.1.11     A Mighty CLI for AWS
 aws-iam-authenticator     0.5.3      A tool to use AWS IAM credentials to authenticate to a Kubernetes cluster
 aws-okta                  OBSOLETE   aws-okta allows users to authenticate with AWS using Okta credentials
@@ -126,7 +126,7 @@ terraform-module-versions 3.1.9      CLI tool that checks Terraform code for mod
 terraform_0.11            0.11.15    Terraform (Deprecated package. Use terraform-0.11 instead)
 terraform_0.12            0.12.31    Terraform (Deprecated package. Use terraform-0.12 instead)
 terraform_0.13            0.13.7     Terraform (Deprecated package. Use terraform-0.13 instead)
-terragrunt                0.35.20    Terragrunt is a thin wrapper for Terraform that provides extra tools for working with multiple Terraform modules.
+terragrunt                0.36.0     Terragrunt is a thin wrapper for Terraform that provides extra tools for working with multiple Terraform modules.
 terrahelp                 0.7.5      Terrahelp is as a command line utility that provides useful tricks like masking of terraform output.
 tfenv                     0.4.0      Transform environment variables for use with Terraform (e.g. `HOSTNAME` ⇨ `TF_VAR_hostname`)
 tflint                    0.34.1     A Pluggable Terraform Linter
