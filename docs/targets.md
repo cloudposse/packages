@@ -5,7 +5,7 @@ amtool                    0.23.0     Tool for interacting with the Alertmanager 
 argocd                    2.2.3      Declarative GitOpts for Kubernetes
 assume-role               0.3.2      Easily assume AWS roles in your terminal.
 atlantis                  0.18.1     Terraform For Teams
-atmos                     1.3.19     Universal Tool for DevOps and Cloud Automation
+atmos                     1.3.22     Universal Tool for DevOps and Cloud Automation
 awless                    0.1.11     A Mighty CLI for AWS
 aws-iam-authenticator     0.5.3      A tool to use AWS IAM credentials to authenticate to a Kubernetes cluster
 aws-okta                  OBSOLETE   aws-okta allows users to authenticate with AWS using Okta credentials
@@ -79,7 +79,7 @@ kubens                    0.9.4      Switch faster between clusters and namespac
 kubeval                   0.16.1     Validate your Kubernetes configuration files, supports multiple Kubernetes versions
 lazydocker                0.12.0     The lazier way to manage everything docker
 lectl                     0.21.0     Script to check issued certificates by Let's Encrypt on CTL (Certificate Transparency Log) using https://crt.sh
-minikube                  1.25.0     Run Kubernetes locally
+minikube                  1.25.1     Run Kubernetes locally
 misspell                  0.3.4      Correct commonly misspelled English words in source files
 nomad                     OBSOLETE   Hashicorp nomad
 opa                       0.36.1     An open source project to policy-enable your service.
