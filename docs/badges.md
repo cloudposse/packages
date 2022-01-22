@@ -138,4 +138,4 @@
 [![venona](https://github.com/cloudposse/packages/workflows/venona/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Avenona) | 1.6.10     | Codefresh runtime-environment agent
 [![vert](https://github.com/cloudposse/packages/workflows/vert/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Avert) | 0.1.0      | Simple CLI for comparing two or more versions
 [![yajsv](https://github.com/cloudposse/packages/workflows/yajsv/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ayajsv) | 1.4.0      | Yet Another JSON Schema Validator [CLI]
-[![yq](https://github.com/cloudposse/packages/workflows/yq/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ayq) | 4.16.2     | yq is a portable command-line YAML processor
+[![yq](https://github.com/cloudposse/packages/workflows/yq/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ayq) | 4.17.2     | yq is a portable command-line YAML processor
