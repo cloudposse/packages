@@ -1,5 +1,5 @@
 # Need to use version number so that it gets updated here and triggers a build
-FROM debian:10.10-slim
+FROM debian:11.2-slim
 
 ENV LC_ALL=C.UTF-8
 ENV PS1="(deb) \w \$ "
