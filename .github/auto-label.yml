@@ -20,6 +20,9 @@ scripts:
 # suppress individual package labels when scripts change,
 # because they affect all packages, we have more than 100 packages,
 # and there is a limit of 100 labels on a PR.
+vendor/amazon-ecr-credential-helper:
+- any: ["vendor/amazon-ecr-credential-helper/**"]
+  all: ["!bin/**", "!tasks/**"]
 vendor/amtool:
 - any: ["vendor/amtool/**"]
   all: ["!bin/**", "!tasks/**"]
