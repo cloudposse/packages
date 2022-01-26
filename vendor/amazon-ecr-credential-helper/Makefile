@@ -12,4 +12,4 @@ install:
 	$(call download_binary)
 
 test:
-	HOME=/tmp $(PACKAGE_EXE) version
+	HOME=/tmp $(PACKAGE_EXE) -v | grep -F $(PACKAGE_VERSION)
