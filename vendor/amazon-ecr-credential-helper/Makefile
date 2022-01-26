@@ -5,6 +5,7 @@ export DOWNLOAD_URL ?= https://amazon-ecr-credential-helper-releases.s3.us-east-
 export CHECK_COMMAND_ARGUMENTS ?= version
 export CHECK_COMMAND_ENV ?= HOME=./
 export PACKAGE_NAME ?= amazon-ecr-credential-helper
+export PACKAGE_EXE ?= docker-credential-ecr-login
 
 include ../../tasks/Makefile.vendor_includes
 
