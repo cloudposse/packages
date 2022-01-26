@@ -4,7 +4,7 @@
 amtool                    0.23.0     Tool for interacting with the Alertmanager API
 argocd                    2.2.3      Declarative GitOpts for Kubernetes
 assume-role               0.3.2      Easily assume AWS roles in your terminal.
-atlantis                  0.18.1     Terraform For Teams
+atlantis                  0.18.2     Terraform For Teams
 atmos                     1.3.24     Universal Tool for DevOps and Cloud Automation
 awless                    0.1.11     A Mighty CLI for AWS
 aws-iam-authenticator     0.5.3      A tool to use AWS IAM credentials to authenticate to a Kubernetes cluster
@@ -27,7 +27,7 @@ ec2-instance-selector     2.0.3      A CLI tool and go library which recommends 
 emailcli                  1.0.3      Command line email sending client written in Go.
 envcli                    0.7.1      A simple wrapper that allows you to run commands within ethereal docker containers
 fargate                   0.3.2      CLI for AWS Fargate
-fetch                     0.4.2      fetch makes it easy to download files, folders, and release assets from a specific public git commit, branch, or tag
+fetch                     0.4.3      fetch makes it easy to download files, folders, and release assets from a specific public git commit, branch, or tag
 figurine                  1.0.1      Print your name in style
 fzf                       0.23.1     A command-line fuzzy finder
 gh                        2.4.0      The GitHub CLI
@@ -44,9 +44,9 @@ gosu                      1.14.0     Simple Go-based setuid+setgid+setgroups+exe
 gotop                     3.0.0      A terminal based graphical activity monitor inspired by gtop and vtop
 grpcurl                   1.8.5      Like cURL, but for gRPC: Command-line tool for interacting with gRPC servers
 hcledit                   0.2.2      A command line editor for HCL
-helm                      3.7.2      The Kubernetes Package Manager
+helm                      3.8.0      The Kubernetes Package Manager
 helm2                     2.17.0     The Kubernetes Package Manager
-helm3                     3.7.2      The Kubernetes Package Manager
+helm3                     3.8.0      The Kubernetes Package Manager
 helmfile                  0.143.0    Deploy Kubernetes Helm Charts
 htmltest                  0.15.0     :white_check_mark: Test generated HTML for problems
 hugo                      0.92.0     The world’s fastest framework for building websites.
@@ -64,7 +64,7 @@ kops                      1.22.3     Kubernetes Operations (kops) - Production G
 kops-1.12                 OBSOLETE   Kubernetes Operations (kops) - Production Grade K8s Installation, Upgrades, and Management
 krew                      0.4.1      Kubectl plugin manager
 kubecron                  2.0.0      Utilities to manage kubernetes cronjobs. Run a CronJob manually for test purposes. Suspend/unsuspend a CronJob
-kubectl                   1.23.2     Production-Grade Container Scheduling and Management
+kubectl                   1.23.3     Production-Grade Container Scheduling and Management
 kubectl-1.13              1.13.12    Production-Grade Container Scheduling and Management (v1.13)
 kubectl-1.14              1.14.10    Production-Grade Container Scheduling and Management (v1.14)
 kubectl-1.15              1.15.12    Production-Grade Container Scheduling and Management (v1.15)
@@ -88,7 +88,7 @@ pack                      0.23.0     Create cloud native Buildpacks
 packer                    1.7.9      Packer is a tool for creating identical machine images for multiple platforms from a single source configuration.
 pandoc                    2.17.0.1   Universal markup converter
 pgmetrics                 1.12.0     Postgres metrics
-pluto                     5.3.3      A cli tool to help discover deprecated apiVersions in Kubernetes
+pluto                     5.3.4      A cli tool to help discover deprecated apiVersions in Kubernetes
 popeye                    0.9.8      A Kubernetes cluster resource sanitizer
 promtool                  2.32.1     Prometheus CLI tool
 rainbow-text              1.1.1      Tasty rainbows for your terminal! (lolcat clone)
@@ -99,7 +99,7 @@ retry                     OBSOLETE   ♻️ Functional mechanism based on channe
 saml2aws                  2.33.0     CLI tool which enables you to login and retrieve AWS temporary credentials using a SAML IDP
 scenery                   0.1.5      A Terraform plan output prettifier
 sentinel                  OBSOLETE   Hashicorp sentinel
-sentry-cli                1.72.0     A command line utility to work with Sentry.
+sentry-cli                1.72.1     A command line utility to work with Sentry.
 shellcheck                0.8.0      ShellCheck, a static analysis tool for shell scripts
 shfmt                     3.4.2      A shell parser, formatter and interpreter (POSIX/Bash/mksh)
 slack-notifier            0.4.0      Command line utility to send messages with attachments to Slack channels via Incoming Webhooks
@@ -109,7 +109,7 @@ spotctl                   0.25.0     A unified CLI to manage your [Spot](https:/
 sshm                      1.2.2      Easy connect on EC2 instances thanks to AWS System Manager Agent
 stern                     1.11.0     ⎈ Multi pod and container log tailing for Kubernetes
 sudosh                    0.3.0      Shell wrapper to run a login shell with `sudo` as the current user for the purpose of audit logging
-teleport                  8.1.0      Secure Access for Developers that doesn't get in the way.
+teleport                  8.1.1      Secure Access for Developers that doesn't get in the way.
 teleport-4.2              4.2.12     Privileged access management for elastic infrastructure.
 teleport-4.3              4.3.10     Privileged access management for elastic infrastructure.
 teleport-4.4              4.4.11     Privileged access management for elastic infrastructure.
@@ -137,7 +137,7 @@ tfsec                     0.63.1     Security scanner for your Terraform code
 thanos                    0.24.0     Highly available Prometheus setup with long term storage capabilities. CNCF Sandbox project.
 trivy                     0.22.0     A Simple and Comprehensive Vulnerability Scanner for Containers, Suitable for CI
 turf                      0.17.0     Turf is Cloud Posse's command-line automation helper.
-variant                   0.37.0     Variant is a Universal CLI tool that works like a task runner
+variant                   0.38.0     Variant is a Universal CLI tool that works like a task runner
 variant2                  0.38.0     Second major version of Variant, a Universal CLI tool that works like a task runner
 vault                     1.9.2      Hashicorp vault
 vendir                    0.24.0      Easy way to vendor portions of git repos, github releases, helm charts, docker image contents, etc. declaratively.
