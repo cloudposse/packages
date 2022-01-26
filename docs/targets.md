@@ -137,7 +137,7 @@ tfsec                     0.63.1     Security scanner for your Terraform code
 thanos                    0.24.0     Highly available Prometheus setup with long term storage capabilities. CNCF Sandbox project.
 trivy                     0.22.0     A Simple and Comprehensive Vulnerability Scanner for Containers, Suitable for CI
 turf                      0.17.0     Turf is Cloud Posse's command-line automation helper.
-variant                   0.37.0     Variant is a Universal CLI tool that works like a task runner
+variant                   0.38.0     Variant is a Universal CLI tool that works like a task runner
 variant2                  0.38.0     Second major version of Variant, a Universal CLI tool that works like a task runner
 vault                     1.9.2      Hashicorp vault
 vendir                    0.24.0      Easy way to vendor portions of git repos, github releases, helm charts, docker image contents, etc. declaratively.
