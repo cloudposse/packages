@@ -27,7 +27,7 @@ ec2-instance-selector     2.0.3      A CLI tool and go library which recommends 
 emailcli                  1.0.3      Command line email sending client written in Go.
 envcli                    0.7.1      A simple wrapper that allows you to run commands within ethereal docker containers
 fargate                   0.3.2      CLI for AWS Fargate
-fetch                     0.4.2      fetch makes it easy to download files, folders, and release assets from a specific public git commit, branch, or tag
+fetch                     0.4.3      fetch makes it easy to download files, folders, and release assets from a specific public git commit, branch, or tag
 figurine                  1.0.1      Print your name in style
 fzf                       0.23.1     A command-line fuzzy finder
 gh                        2.4.0      The GitHub CLI
