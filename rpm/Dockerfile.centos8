@@ -1,4 +1,4 @@
-FROM centos:centos8
+FROM registry.access.redhat.com/ubi8/ubi
 
 ENV LC_ALL=C.UTF-8
 ENV PS1="(rpm) \w \$ "
