@@ -38,7 +38,7 @@ github-status-updater     0.7.0      Command line utility for updating GitHub co
 gitleaks                  1.2.0      Audit git repos for secrets 🔑
 go-jsonnet                0.18.0     This an implementation of Jsonnet in pure Go.
 gomplate                  3.10.0     A flexible commandline tool for template rendering. Supports lots of local and remote datasources.
-gonsul                    1.0.1      A stand-alone alternative to git2consul 
+gonsul                    1.0.2      A stand-alone alternative to git2consul 
 goofys                    0.24.0     a high-performance, POSIX-ish Amazon S3 file system written in Go
 gosu                      1.14.0     Simple Go-based setuid+setgid+setgroups+exec
 gotop                     3.0.0      A terminal based graphical activity monitor inspired by gtop and vtop
