@@ -77,7 +77,6 @@ jobs:
         - kfctl
         - kind
         - kops
-        - krew
         - kubecron
         - kubectl
         - kubectl-1.15
