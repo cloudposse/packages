@@ -34,7 +34,7 @@ gh                        2.4.0      The GitHub CLI
 ghr                       0.14.0     Upload multiple artifacts to GitHub Releases in parallel
 github-commenter          0.10.1     Command line utility for creating GitHub comments on Commits, Pull Request Reviews or Issues
 github-release            0.10.0     Commandline app to create and edit releases on Github (and upload artifacts)
-github-status-updater     0.6.0      Command line utility for updating GitHub commit statuses and enabling required status checks for pull requests
+github-status-updater     0.7.0      Command line utility for updating GitHub commit statuses and enabling required status checks for pull requests
 gitleaks                  1.2.0      Audit git repos for secrets 🔑
 go-jsonnet                0.18.0     This an implementation of Jsonnet in pure Go.
 gomplate                  3.10.0     A flexible commandline tool for template rendering. Supports lots of local and remote datasources.
