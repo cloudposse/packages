@@ -10,7 +10,7 @@ atmos                     1.3.30     Universal Tool for DevOps and Cloud Automat
 awless                    0.1.11     A Mighty CLI for AWS
 aws-iam-authenticator     0.5.5      A tool to use AWS IAM credentials to authenticate to a Kubernetes cluster
 aws-okta                  OBSOLETE   aws-okta allows users to authenticate with AWS using Okta credentials
-aws-vault                 6.5.0      A vault for securely storing and accessing AWS credentials in development environments
+aws-vault                 6.6.0      A vault for securely storing and accessing AWS credentials in development environments
 cfssl                     1.6.1      Cloudflare's PKI and TLS toolkit
 cfssljson                 1.6.1      Cloudflare's PKI and TLS toolkit json parser
 chamber                   2.10.8     CLI for managing secrets
