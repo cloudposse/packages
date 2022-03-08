@@ -92,7 +92,7 @@ pgmetrics                 1.12.0     Postgres metrics
 pluto                     5.5.1      A cli tool to help discover deprecated apiVersions in Kubernetes
 popeye                    0.9.8      A Kubernetes cluster resource sanitizer
 promtool                  2.33.4     Prometheus CLI tool
-rainbow-text              1.1.1      Tasty rainbows for your terminal! (lolcat clone)
+rainbow-text              1.2.0      Tasty rainbows for your terminal! (lolcat clone)
 rakkess                   0.5.0      Review Access - kubectl plugin to show an access matrix for all available resources
 rancher                   2.6.0      Rancher CLI
 rbac-lookup               0.8.3      Find Kubernetes roles and cluster roles bound to any user, service account, or group name.
