@@ -24,7 +24,7 @@ ctop                      0.7.6      Top-like interface for container metrics
 direnv                    2.30.3     Unclutter your .profile
 doctl                     1.71.1     A command line tool for DigitalOcean services
 duffle                    0.3.5b1    CNAB installer
-ec2-instance-selector     2.0.3      A CLI tool and go library which recommends instance types based on resource criteria like vcpus and memory
+ec2-instance-selector     2.1.0      A CLI tool and go library which recommends instance types based on resource criteria like vcpus and memory
 emailcli                  1.0.3      Command line email sending client written in Go.
 envcli                    0.7.1      A simple wrapper that allows you to run commands within ethereal docker containers
 fargate                   0.3.2      CLI for AWS Fargate
