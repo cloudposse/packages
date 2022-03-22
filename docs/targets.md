@@ -20,7 +20,7 @@ cloudposse-atlantis       0.9.0.3    Terraform For Teams, enhanced by Cloud Poss
 codefresh                 0.78.5     Codefresh CLI
 conftest                  0.30.0     Test your configuration files using Open Policy Agent
 consul                    1.11.4     Hashicorp consul
-ctop                      0.7.6      Top-like interface for container metrics
+ctop                      0.7.7      Top-like interface for container metrics
 direnv                    2.30.3     Unclutter your .profile
 doctl                     1.71.1     A command line tool for DigitalOcean services
 duffle                    0.3.5b1    CNAB installer
