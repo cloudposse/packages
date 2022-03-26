@@ -48,7 +48,7 @@ hcledit                   0.2.3      A command line editor for HCL
 helm                      3.8.1      The Kubernetes Package Manager
 helm2                     2.17.0     The Kubernetes Package Manager
 helm3                     3.8.1      The Kubernetes Package Manager
-helmfile                  0.143.3    Deploy Kubernetes Helm Charts
+helmfile                  0.143.4    Deploy Kubernetes Helm Charts
 htmltest                  0.15.0     :white_check_mark: Test generated HTML for problems
 hugo                      0.95.0     The world’s fastest framework for building websites.
 jp                        0.2.1      Command line interface to JMESPath
