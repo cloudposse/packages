@@ -21,7 +21,7 @@ codefresh                 0.78.5     Codefresh CLI
 conftest                  0.30.0     Test your configuration files using Open Policy Agent
 consul                    1.11.4     Hashicorp consul
 ctop                      0.7.7      Top-like interface for container metrics
-direnv                    2.30.3     Unclutter your .profile
+direnv                    2.31.0     Unclutter your .profile
 doctl                     1.71.1     A command line tool for DigitalOcean services
 duffle                    0.3.5b1    CNAB installer
 ec2-instance-selector     2.1.0      A CLI tool and go library which recommends instance types based on resource criteria like vcpus and memory
@@ -134,7 +134,7 @@ tfenv                     0.4.0      Transform environment variables for use wit
 tflint                    0.34.1     A Pluggable Terraform Linter
 tfmask                    0.7.0      Terraform utility to mask select output from `terraform plan` and `terraform apply`
 tfschema                  0.7.2      A schema inspector for Terraform providers
-tfsec                     1.15.0     Security scanner for your Terraform code
+tfsec                     1.13.1     Security scanner for your Terraform code
 thanos                    0.25.2     Highly available Prometheus setup with long term storage capabilities. CNCF Sandbox project.
 trivy                     0.24.4     A Simple and Comprehensive Vulnerability Scanner for Containers, Suitable for CI
 turf                      0.17.0     Turf is Cloud Posse's command-line automation helper.
