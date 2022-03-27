@@ -2,8 +2,8 @@
 ## Makefile Targets
 ```text
 amazon-ecr-credential-helper 0.6.0      Automatically gets credentials for Amazon ECR on docker push/docker pull
-amtool                    0.23.0     Tool for interacting with the Alertmanager API
-argocd                    2.3.1      Declarative GitOpts for Kubernetes
+amtool                    0.24.0     Tool for interacting with the Alertmanager API
+argocd                    2.3.2      Declarative GitOpts for Kubernetes
 assume-role               0.3.2      Easily assume AWS roles in your terminal.
 atlantis                  0.19.2     Terraform For Teams
 atmos                     1.4.0      Universal Tool for DevOps and Cloud Automation
@@ -15,7 +15,7 @@ cfssl                     1.6.1      Cloudflare's PKI and TLS toolkit
 cfssljson                 1.6.1      Cloudflare's PKI and TLS toolkit json parser
 chamber                   2.10.8     CLI for managing secrets
 cli53                     0.8.18     Command line tool for Amazon Route 53
-cloudflared               2022.3.3   Argo Tunnel client
+cloudflared               2022.3.4   Argo Tunnel client
 cloudposse-atlantis       0.9.0.3    Terraform For Teams, enhanced by Cloud Posse
 codefresh                 0.78.5     Codefresh CLI
 conftest                  0.30.0     Test your configuration files using Open Policy Agent
@@ -48,14 +48,14 @@ hcledit                   0.2.3      A command line editor for HCL
 helm                      3.8.1      The Kubernetes Package Manager
 helm2                     2.17.0     The Kubernetes Package Manager
 helm3                     3.8.1      The Kubernetes Package Manager
-helmfile                  0.143.1    Deploy Kubernetes Helm Charts
+helmfile                  0.143.4    Deploy Kubernetes Helm Charts
 htmltest                  0.15.0     :white_check_mark: Test generated HTML for problems
-hugo                      0.95.0     The world’s fastest framework for building websites.
+hugo                      0.96.0     The world’s fastest framework for building websites.
 jp                        0.2.1      Command line interface to JMESPath
 jq                        1.6.0      Command-line JSON processor
 json2hcl                  0.0.6      Convert JSON to HCL, and vice versa
-jx                        3.2.266    Jenkins-X
-k3d                       5.3.0      Little helper to run Rancher Lab's k3s in Docker
+jx                        3.2.270    Jenkins-X
+k3d                       5.4.0      Little helper to run Rancher Lab's k3s in Docker
 k6                        0.37.0     A modern load testing tool, using Go and JavaScript - https://k6.io
 k9s                       0.25.18    Kubernetes CLI To Manage Your Clusters In Style
 katafygio                 0.8.3      K8s continuous backup to git
@@ -89,12 +89,12 @@ pack                      0.24.0     Create cloud native Buildpacks
 packer                    1.8.0      Packer is a tool for creating identical machine images for multiple platforms from a single source configuration.
 pandoc                    2.17.1.1   Universal markup converter
 pgmetrics                 1.12.0     Postgres metrics
-pluto                     5.6.0      A cli tool to help discover deprecated apiVersions in Kubernetes
+pluto                     5.7.0      A cli tool to help discover deprecated apiVersions in Kubernetes
 popeye                    0.9.8      A Kubernetes cluster resource sanitizer
 promtool                  2.34.0     Prometheus CLI tool
 rainbow-text              1.2.1      Tasty rainbows for your terminal! (lolcat clone)
 rakkess                   0.5.0      Review Access - kubectl plugin to show an access matrix for all available resources
-rancher                   2.6.0      Rancher CLI
+rancher                   2.6.4      Rancher CLI
 rbac-lookup               0.8.3      Find Kubernetes roles and cluster roles bound to any user, service account, or group name.
 retry                     OBSOLETE   ♻️ Functional mechanism based on channels to perform actions repetitively until successful.
 saml2aws                  2.34.0     CLI tool which enables you to login and retrieve AWS temporary credentials using a SAML IDP
@@ -110,7 +110,7 @@ spotctl                   0.25.0     A unified CLI to manage your [Spot](https:/
 sshm                      1.2.2      Easy connect on EC2 instances thanks to AWS System Manager Agent
 stern                     1.11.0     ⎈ Multi pod and container log tailing for Kubernetes
 sudosh                    0.3.0      Shell wrapper to run a login shell with `sudo` as the current user for the purpose of audit logging
-teleport                  9.0.1      Secure Access for Developers that doesn't get in the way.
+teleport                  9.0.2      Secure Access for Developers that doesn't get in the way.
 teleport-4.2              4.2.12     Privileged access management for elastic infrastructure.
 teleport-4.3              4.3.10     Privileged access management for elastic infrastructure.
 teleport-4.4              4.4.12     Privileged access management for elastic infrastructure.
@@ -134,13 +134,13 @@ tfenv                     0.4.0      Transform environment variables for use wit
 tflint                    0.34.1     A Pluggable Terraform Linter
 tfmask                    0.7.0      Terraform utility to mask select output from `terraform plan` and `terraform apply`
 tfschema                  0.7.2      A schema inspector for Terraform providers
-tfsec                     1.13.1     Security scanner for your Terraform code
-thanos                    0.25.1     Highly available Prometheus setup with long term storage capabilities. CNCF Sandbox project.
+tfsec                     1.15.0     Security scanner for your Terraform code
+thanos                    0.25.2     Highly available Prometheus setup with long term storage capabilities. CNCF Sandbox project.
 trivy                     0.24.4     A Simple and Comprehensive Vulnerability Scanner for Containers, Suitable for CI
 turf                      0.17.0     Turf is Cloud Posse's command-line automation helper.
 variant                   0.38.0     Variant is a Universal CLI tool that works like a task runner
 variant2                  0.38.0     Second major version of Variant, a Universal CLI tool that works like a task runner
-vault                     1.9.4      Hashicorp vault
+vault                     1.10.0     Hashicorp vault
 vendir                    0.26.0      Easy way to vendor portions of git repos, github releases, helm charts, docker image contents, etc. declaratively.
 venona                    1.7.1      Codefresh runtime-environment agent
 vert                      0.1.0      Simple CLI for comparing two or more versions
