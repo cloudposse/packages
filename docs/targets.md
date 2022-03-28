@@ -134,7 +134,7 @@ tfenv                     0.4.0      Transform environment variables for use wit
 tflint                    0.35.0     A Pluggable Terraform Linter
 tfmask                    0.7.0      Terraform utility to mask select output from `terraform plan` and `terraform apply`
 tfschema                  0.7.2      A schema inspector for Terraform providers
-tfsec                     1.13.1     Security scanner for your Terraform code
+tfsec                     1.15.0     Security scanner for your Terraform code
 thanos                    0.25.2     Highly available Prometheus setup with long term storage capabilities. CNCF Sandbox project.
 trivy                     0.24.4     A Simple and Comprehensive Vulnerability Scanner for Containers, Suitable for CI
 turf                      0.17.0     Turf is Cloud Posse's command-line automation helper.
@@ -145,6 +145,6 @@ vendir                    0.26.0      Easy way to vendor portions of git repos, 
 venona                    1.7.1      Codefresh runtime-environment agent
 vert                      0.1.0      Simple CLI for comparing two or more versions
 yajsv                     1.4.0      Yet Another JSON Schema Validator [CLI]
-yq                        4.23.1     yq is a portable command-line YAML processor
+yq                        4.24.2     yq is a portable command-line YAML processor
 ```
 <!-- markdownlint-restore -->
