@@ -1,3 +1,8 @@
+# Krew no longer recommends installation via artifact,
+# So we are no longer publishing this package.
+# See https://github.com/kubernetes-sigs/krew/releases/tag/v0.4.3
+export AUTO_UPDATE_ENABLED := false
+
 ## Package template for non-github tarball
 
 ## Package details 

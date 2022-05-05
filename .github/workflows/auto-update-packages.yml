@@ -18,6 +18,7 @@ jobs:
       fail-fast: false
       matrix:
         package-name:
+        - amazon-ecr-credential-helper
         - amtool
         - argocd
         - assume-role
@@ -76,7 +77,6 @@ jobs:
         - kfctl
         - kind
         - kops
-        - krew
         - kubecron
         - kubectl
         - kubectl-1.15
@@ -85,6 +85,8 @@ jobs:
         - kubectl-1.18
         - kubectl-1.19
         - kubectl-1.20
+        - kubectl-1.21
+        - kubectl-1.22
         - kubectx
         - kubens
         - kubeval
@@ -141,6 +143,7 @@ jobs:
         - tflint
         - tfmask
         - tfschema
+        - tfsec
         - thanos
         - trivy
         - turf

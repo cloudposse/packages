@@ -20,6 +20,9 @@ scripts:
 # suppress individual package labels when scripts change,
 # because they affect all packages, we have more than 100 packages,
 # and there is a limit of 100 labels on a PR.
+vendor/amazon-ecr-credential-helper:
+- any: ["vendor/amazon-ecr-credential-helper/**"]
+  all: ["!bin/**", "!tasks/**"]
 vendor/amtool:
 - any: ["vendor/amtool/**"]
   all: ["!bin/**", "!tasks/**"]
@@ -233,6 +236,12 @@ vendor/kubectl-1.19:
 vendor/kubectl-1.20:
 - any: ["vendor/kubectl-1.20/**"]
   all: ["!bin/**", "!tasks/**"]
+vendor/kubectl-1.21:
+- any: ["vendor/kubectl-1.21/**"]
+  all: ["!bin/**", "!tasks/**"]
+vendor/kubectl-1.22:
+- any: ["vendor/kubectl-1.22/**"]
+  all: ["!bin/**", "!tasks/**"]
 vendor/kubectl:
 - any: ["vendor/kubectl/**"]
   all: ["!bin/**", "!tasks/**"]
@@ -412,6 +421,9 @@ vendor/tfmask:
   all: ["!bin/**", "!tasks/**"]
 vendor/tfschema:
 - any: ["vendor/tfschema/**"]
+  all: ["!bin/**", "!tasks/**"]
+vendor/tfsec:
+- any: ["vendor/tfsec/**"]
   all: ["!bin/**", "!tasks/**"]
 vendor/thanos:
 - any: ["vendor/thanos/**"]
