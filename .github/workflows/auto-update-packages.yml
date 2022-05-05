@@ -66,6 +66,7 @@ jobs:
         - helmfile
         - htmltest
         - hugo
+        - infracost
         - jp
         - jq
         - json2hcl

@@ -170,6 +170,9 @@ vendor/htmltest:
 vendor/hugo:
 - any: ["vendor/hugo/**"]
   all: ["!bin/**", "!tasks/**"]
+vendor/infracost:
+- any: ["vendor/infracost/**"]
+  all: ["!bin/**", "!tasks/**"]
 vendor/jp:
 - any: ["vendor/jp/**"]
   all: ["!bin/**", "!tasks/**"]
