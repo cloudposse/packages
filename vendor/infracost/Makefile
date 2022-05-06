@@ -10,6 +10,8 @@ export DOWNLOAD_URL ?= $(PACKAGE_REPO_URL)/releases/download/v$(PACKAGE_VERSION)
 export CHECK_COMMAND_ARGUMENTS ?= --version
 export CHECK_COMMAND_ENV ?= HOME=./
 
+export APKBUILD_DEPENDS += libc6-compat
+
 include ../../tasks/Makefile.vendor_includes
 
 install:
