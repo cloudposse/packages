@@ -13,7 +13,7 @@ export CHECK_COMMAND_ENV ?= HOME=./
 include ../../tasks/Makefile.vendor_includes
 
 install:
-	$(call download_tarball)
+	$(call download_tar_gz)
 
 test:
 	$(PACKAGE_EXE) --version | grep -F $(PACKAGE_VERSION)
