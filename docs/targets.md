@@ -87,7 +87,7 @@ nomad                     OBSOLETE   Hashicorp nomad
 opa                       0.40.0     An open source project to policy-enable your service.
 pack                      0.26.0     Create cloud native Buildpacks
 packer                    1.8.0      Packer is a tool for creating identical machine images for multiple platforms from a single source configuration.
-pandoc                    2.18       Universal markup converter
+pandoc                    2.17.1.1   Universal markup converter
 pgmetrics                 1.12.0     Postgres metrics
 pluto                     5.7.0      A cli tool to help discover deprecated apiVersions in Kubernetes
 popeye                    0.10.0     A Kubernetes cluster resource sanitizer
