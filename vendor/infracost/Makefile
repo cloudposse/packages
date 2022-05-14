@@ -10,8 +10,6 @@ export DOWNLOAD_URL ?= $(PACKAGE_REPO_URL)/releases/download/v$(PACKAGE_VERSION)
 export CHECK_COMMAND_ARGUMENTS ?= --version
 export CHECK_COMMAND_ENV ?= HOME=./
 
-export APKBUILD_DEPENDS += libc6-compat
-
 include ../../tasks/Makefile.vendor_includes
 
 install:
@@ -19,3 +17,8 @@ install:
 
 test:
 	$(PACKAGE_EXE) --version | grep -F $(PACKAGE_VERSION)
+
+# The tarball contains an executable named $(PACKAGE_NAME)-$(OS)-$(ARCH)
+# but apk builder expects the tarball to contain an executable named $(PACKAGE_NAME)
+package/prepare::
+	mv $${APK_TMP_DIR}/src/$(PACKAGE_NAME)-$(OS)-$(ARCH) $${APK_TMP_DIR}/src/$(PACKAGE_NAME)
