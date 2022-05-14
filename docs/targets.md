@@ -5,7 +5,7 @@ amazon-ecr-credential-helper 0.6.0      Automatically gets credentials for Amazo
 amtool                    0.24.0     Tool for interacting with the Alertmanager API
 argocd                    2.3.3      Declarative GitOpts for Kubernetes
 assume-role               0.3.2      Easily assume AWS roles in your terminal.
-atlantis                  0.19.2     Terraform For Teams
+atlantis                  0.19.3     Terraform For Teams
 atmos                     1.4.14     Universal Tool for DevOps and Cloud Automation
 awless                    0.1.11     A Mighty CLI for AWS
 aws-iam-authenticator     0.5.7      A tool to use AWS IAM credentials to authenticate to a Kubernetes cluster
