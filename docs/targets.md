@@ -135,7 +135,7 @@ tfenv                     0.4.0      Transform environment variables for use wit
 tflint                    0.36.2     A Pluggable Terraform Linter
 tfmask                    0.7.0      Terraform utility to mask select output from `terraform plan` and `terraform apply`
 tfschema                  0.7.2      A schema inspector for Terraform providers
-tfsec                     1.21.0     Security scanner for your Terraform code
+tfsec                     1.21.1     Security scanner for your Terraform code
 thanos                    0.26.0     Highly available Prometheus setup with long term storage capabilities. CNCF Sandbox project.
 trivy                     0.28.0     A Simple and Comprehensive Vulnerability Scanner for Containers, Suitable for CI
 turf                      0.17.0     Turf is Cloud Posse's command-line automation helper.
