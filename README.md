@@ -428,7 +428,7 @@ Here are some solutions to several common problems that may occur when adding a 
 [![venona](https://github.com/cloudposse/packages/workflows/venona/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Avenona) | 1.7.4      | Codefresh runtime-environment agent
 [![vert](https://github.com/cloudposse/packages/workflows/vert/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Avert) | 0.1.0      | Simple CLI for comparing two or more versions
 [![yajsv](https://github.com/cloudposse/packages/workflows/yajsv/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ayajsv) | 1.4.0      | Yet Another JSON Schema Validator [CLI]
-[![yq](https://github.com/cloudposse/packages/workflows/yq/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ayq) | 4.25.1     | yq is a portable command-line YAML processor
+[![yq](https://github.com/cloudposse/packages/workflows/yq/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ayq) | 4.25.2     | yq is a portable command-line YAML processor
 
 
 
