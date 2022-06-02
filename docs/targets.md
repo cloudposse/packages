@@ -18,7 +18,7 @@ cli53                     0.8.18     Command line tool for Amazon Route 53
 cloudflared               2022.5.3   Argo Tunnel client
 cloudposse-atlantis       0.9.0.3    Terraform For Teams, enhanced by Cloud Posse
 codefresh                 0.79.1     Codefresh CLI
-conftest                  0.32.0     Test your configuration files using Open Policy Agent
+conftest                  0.32.1     Test your configuration files using Open Policy Agent
 consul                    1.12.1     Hashicorp consul
 ctop                      0.7.7      Top-like interface for container metrics
 direnv                    2.31.0     Unclutter your .profile
