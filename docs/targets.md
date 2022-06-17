@@ -15,7 +15,7 @@ cfssl                     1.6.1      Cloudflare's PKI and TLS toolkit
 cfssljson                 1.6.1      Cloudflare's PKI and TLS toolkit json parser
 chamber                   2.10.10    CLI for managing secrets
 cli53                     0.8.18     Command line tool for Amazon Route 53
-cloudflared               2022.6.1   Argo Tunnel client
+cloudflared               2022.6.2   Argo Tunnel client
 cloudposse-atlantis       0.9.0.3    Terraform For Teams, enhanced by Cloud Posse
 codefresh                 0.79.1     Codefresh CLI
 conftest                  0.32.1     Test your configuration files using Open Policy Agent
