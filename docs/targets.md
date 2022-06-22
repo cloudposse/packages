@@ -87,7 +87,7 @@ misspell                  0.3.4      Correct commonly misspelled English words i
 nomad                     OBSOLETE   Hashicorp nomad
 opa                       0.41.0     An open source project to policy-enable your service.
 pack                      0.26.0     Create cloud native Buildpacks
-packer                    1.8.1      Packer is a tool for creating identical machine images for multiple platforms from a single source configuration.
+packer                    1.8.2      Packer is a tool for creating identical machine images for multiple platforms from a single source configuration.
 pandoc                    2.18       Universal markup converter
 pgmetrics                 1.13.0     Postgres metrics
 pluto                     5.8.0      A cli tool to help discover deprecated apiVersions in Kubernetes
