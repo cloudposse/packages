@@ -341,7 +341,7 @@ Here are some solutions to several common problems that may occur when adding a 
 [![jp](https://github.com/cloudposse/packages/workflows/jp/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ajp) | 0.2.1      | Command line interface to JMESPath
 [![jq](https://github.com/cloudposse/packages/workflows/jq/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ajq) | 1.6.0      | Command-line JSON processor
 [![json2hcl](https://github.com/cloudposse/packages/workflows/json2hcl/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ajson2hcl) | 0.0.6      | Convert JSON to HCL, and vice versa
-[![jx](https://github.com/cloudposse/packages/workflows/jx/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ajx) | 3.2.383    | Jenkins-X
+[![jx](https://github.com/cloudposse/packages/workflows/jx/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ajx) | 3.2.385    | Jenkins-X
 [![k3d](https://github.com/cloudposse/packages/workflows/k3d/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ak3d) | 5.4.3      | Little helper to run Rancher Lab's k3s in Docker
 [![k6](https://github.com/cloudposse/packages/workflows/k6/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ak6) | 0.38.3     | A modern load testing tool, using Go and JavaScript - https://k6.io
 [![k9s](https://github.com/cloudposse/packages/workflows/k9s/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ak9s) | 0.25.18    | Kubernetes CLI To Manage Your Clusters In Style
