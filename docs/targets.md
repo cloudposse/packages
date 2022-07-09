@@ -51,7 +51,7 @@ helm3                     3.9.0      The Kubernetes Package Manager
 helmfile                  0.144.0    Deploy Kubernetes Helm Charts
 htmltest                  0.16.0     :white_check_mark: Test generated HTML for problems
 hugo                      0.101.0    The world’s fastest framework for building websites.
-infracost                 0.10.6     Cloud cost estimates for Terraform
+infracost                 0.10.7     Cloud cost estimates for Terraform
 jp                        0.2.1      Command line interface to JMESPath
 jq                        1.6.0      Command-line JSON processor
 json2hcl                  0.0.6      Convert JSON to HCL, and vice versa
