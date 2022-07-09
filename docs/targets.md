@@ -55,7 +55,7 @@ infracost                 0.10.6     Cloud cost estimates for Terraform
 jp                        0.2.1      Command line interface to JMESPath
 jq                        1.6.0      Command-line JSON processor
 json2hcl                  0.0.6      Convert JSON to HCL, and vice versa
-jx                        3.2.406    Jenkins-X
+jx                        3.3.2      Jenkins-X
 k3d                       5.4.3      Little helper to run Rancher Lab's k3s in Docker
 k6                        0.39.0     A modern load testing tool, using Go and JavaScript - https://k6.io
 k9s                       0.25.21    Kubernetes CLI To Manage Your Clusters In Style
