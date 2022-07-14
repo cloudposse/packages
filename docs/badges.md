@@ -44,7 +44,7 @@
 [![gotop](https://github.com/cloudposse/packages/workflows/gotop/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Agotop) | 3.0.0      | A terminal based graphical activity monitor inspired by gtop and vtop
 [![grpcurl](https://github.com/cloudposse/packages/workflows/grpcurl/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Agrpcurl) | 1.8.6      | Like cURL, but for gRPC: Command-line tool for interacting with gRPC servers
 [![hcledit](https://github.com/cloudposse/packages/workflows/hcledit/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ahcledit) | 0.2.5      | A command line editor for HCL
-[![helm](https://github.com/cloudposse/packages/workflows/helm/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ahelm) | 3.9.0      | The Kubernetes Package Manager
+[![helm](https://github.com/cloudposse/packages/workflows/helm/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ahelm) | 3.9.1      | The Kubernetes Package Manager
 [![helm2](https://github.com/cloudposse/packages/workflows/helm2/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ahelm2) | 2.17.0     | The Kubernetes Package Manager
 [![helm3](https://github.com/cloudposse/packages/workflows/helm3/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ahelm3) | 3.9.1      | The Kubernetes Package Manager
 [![helmfile](https://github.com/cloudposse/packages/workflows/helmfile/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ahelmfile) | 0.144.0    | Deploy Kubernetes Helm Charts
