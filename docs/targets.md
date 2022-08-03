@@ -141,7 +141,7 @@ trivy                     0.30.4     A Simple and Comprehensive Vulnerability Sc
 turf                      0.18.0     Turf is Cloud Posse's command-line automation helper.
 variant                   0.38.0     Variant is a Universal CLI tool that works like a task runner
 variant2                  0.38.0     Second major version of Variant, a Universal CLI tool that works like a task runner
-vault                     1.11.1     Hashicorp vault
+vault                     1.11.2     Hashicorp vault
 vendir                    0.29.0      Easy way to vendor portions of git repos, github releases, helm charts, docker image contents, etc. declaratively.
 venona                    1.7.4      Codefresh runtime-environment agent
 vert                      0.1.0      Simple CLI for comparing two or more versions
