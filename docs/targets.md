@@ -134,7 +134,7 @@ terrahelp                 0.7.5      Terrahelp is as a command line utility that
 tfenv                     0.4.0      Transform environment variables for use with Terraform (e.g. `HOSTNAME` ⇨ `TF_VAR_hostname`)
 tflint                    0.39.3     A Pluggable Terraform Linter
 tfmask                    0.7.0      Terraform utility to mask select output from `terraform plan` and `terraform apply`
-tfschema                  0.7.4      A schema inspector for Terraform providers
+tfschema                  0.7.5      A schema inspector for Terraform providers
 tfsec                     1.27.1     Security scanner for your Terraform code
 thanos                    0.27.0     Highly available Prometheus setup with long term storage capabilities. CNCF Sandbox project.
 trivy                     0.30.4     A Simple and Comprehensive Vulnerability Scanner for Containers, Suitable for CI
