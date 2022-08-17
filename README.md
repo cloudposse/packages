@@ -301,7 +301,7 @@ Here are some solutions to several common problems that may occur when adding a 
 [![cfssljson](https://github.com/cloudposse/packages/workflows/cfssljson/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Acfssljson) | 1.6.1      | Cloudflare's PKI and TLS toolkit json parser
 [![chamber](https://github.com/cloudposse/packages/workflows/chamber/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Achamber) | 2.10.12    | CLI for managing secrets
 [![cli53](https://github.com/cloudposse/packages/workflows/cli53/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Acli53) | 0.8.18     | Command line tool for Amazon Route 53
-[![cloudflared](https://github.com/cloudposse/packages/workflows/cloudflared/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Acloudflared) | 2022.8.1   | Argo Tunnel client
+[![cloudflared](https://github.com/cloudposse/packages/workflows/cloudflared/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Acloudflared) | 2022.8.2   | Argo Tunnel client
 [![cloudposse-atlantis](https://github.com/cloudposse/packages/workflows/cloudposse-atlantis/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Acloudposse-atlantis) | 0.9.0.3    | Terraform For Teams, enhanced by Cloud Posse
 [![codefresh](https://github.com/cloudposse/packages/workflows/codefresh/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Acodefresh) | 0.79.2     | Codefresh CLI
 [![conftest](https://github.com/cloudposse/packages/workflows/conftest/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aconftest) | 0.34.0     | Test your configuration files using Open Policy Agent
@@ -589,7 +589,7 @@ Check out [our other projects][github], [follow us on twitter][twitter], [apply 
 
 [![README Footer][readme_footer_img]][readme_footer_link]
 [![Beacon][beacon]][website]
-
+<!-- markdownlint-disable -->
   [logo]: https://cloudposse.com/logo-300x69.svg
   [docs]: https://cpco.io/docs?utm_source=github&utm_medium=readme&utm_campaign=cloudposse/packages&utm_content=docs
   [website]: https://cpco.io/homepage?utm_source=github&utm_medium=readme&utm_campaign=cloudposse/packages&utm_content=website
@@ -620,3 +620,4 @@ Check out [our other projects][github], [follow us on twitter][twitter], [apply 
   [share_googleplus]: https://plus.google.com/share?url=https://github.com/cloudposse/packages
   [share_email]: mailto:?subject=Packages&body=https://github.com/cloudposse/packages
   [beacon]: https://ga-beacon.cloudposse.com/UA-76589703-4/cloudposse/packages?pixel&cs=github&cm=readme&an=packages
+<!-- markdownlint-restore -->
