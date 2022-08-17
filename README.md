@@ -292,7 +292,7 @@ Here are some solutions to several common problems that may occur when adding a 
 [![amtool](https://github.com/cloudposse/packages/workflows/amtool/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aamtool) | 0.24.0     | Tool for interacting with the Alertmanager API
 [![argocd](https://github.com/cloudposse/packages/workflows/argocd/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aargocd) | 2.4.9      | Declarative GitOpts for Kubernetes
 [![assume-role](https://github.com/cloudposse/packages/workflows/assume-role/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aassume-role) | 0.3.2      | Easily assume AWS roles in your terminal.
-[![atlantis](https://github.com/cloudposse/packages/workflows/atlantis/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aatlantis) | 0.19.7     | Terraform For Teams
+[![atlantis](https://github.com/cloudposse/packages/workflows/atlantis/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aatlantis) | 0.19.8     | Terraform For Teams
 [![atmos](https://github.com/cloudposse/packages/workflows/atmos/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aatmos) | 1.4.25     | Universal Tool for DevOps and Cloud Automation
 [![awless](https://github.com/cloudposse/packages/workflows/awless/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aawless) | 0.1.11     | A Mighty CLI for AWS
 [![aws-iam-authenticator](https://github.com/cloudposse/packages/workflows/aws-iam-authenticator/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aaws-iam-authenticator) | 0.5.9      | A tool to use AWS IAM credentials to authenticate to a Kubernetes cluster
@@ -589,7 +589,7 @@ Check out [our other projects][github], [follow us on twitter][twitter], [apply 
 
 [![README Footer][readme_footer_img]][readme_footer_link]
 [![Beacon][beacon]][website]
-
+<!-- markdownlint-disable -->
   [logo]: https://cloudposse.com/logo-300x69.svg
   [docs]: https://cpco.io/docs?utm_source=github&utm_medium=readme&utm_campaign=cloudposse/packages&utm_content=docs
   [website]: https://cpco.io/homepage?utm_source=github&utm_medium=readme&utm_campaign=cloudposse/packages&utm_content=website
@@ -620,3 +620,4 @@ Check out [our other projects][github], [follow us on twitter][twitter], [apply 
   [share_googleplus]: https://plus.google.com/share?url=https://github.com/cloudposse/packages
   [share_email]: mailto:?subject=Packages&body=https://github.com/cloudposse/packages
   [beacon]: https://ga-beacon.cloudposse.com/UA-76589703-4/cloudposse/packages?pixel&cs=github&cm=readme&an=packages
+<!-- markdownlint-restore -->
