@@ -376,7 +376,7 @@ Here are some solutions to several common problems that may occur when adding a 
 [![pgmetrics](https://github.com/cloudposse/packages/workflows/pgmetrics/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Apgmetrics) | 1.13.1     | Postgres metrics
 [![pluto](https://github.com/cloudposse/packages/workflows/pluto/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Apluto) | 5.10.3     | A cli tool to help discover deprecated apiVersions in Kubernetes
 [![popeye](https://github.com/cloudposse/packages/workflows/popeye/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Apopeye) | 0.10.1     | A Kubernetes cluster resource sanitizer
-[![promtool](https://github.com/cloudposse/packages/workflows/promtool/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Apromtool) | 2.37.0     | Prometheus CLI tool
+[![promtool](https://github.com/cloudposse/packages/workflows/promtool/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Apromtool) | 2.38.0     | Prometheus CLI tool
 [![rainbow-text](https://github.com/cloudposse/packages/workflows/rainbow-text/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Arainbow-text) | 1.2.1      | Tasty rainbows for your terminal! (lolcat clone)
 [![rakkess](https://github.com/cloudposse/packages/workflows/rakkess/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Arakkess) | 0.5.0      | Review Access - kubectl plugin to show an access matrix for all available resources
 [![rancher](https://github.com/cloudposse/packages/workflows/rancher/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Arancher) | 2.6.5      | Rancher CLI
@@ -589,7 +589,7 @@ Check out [our other projects][github], [follow us on twitter][twitter], [apply 
 
 [![README Footer][readme_footer_img]][readme_footer_link]
 [![Beacon][beacon]][website]
-
+<!-- markdownlint-disable -->
   [logo]: https://cloudposse.com/logo-300x69.svg
   [docs]: https://cpco.io/docs?utm_source=github&utm_medium=readme&utm_campaign=cloudposse/packages&utm_content=docs
   [website]: https://cpco.io/homepage?utm_source=github&utm_medium=readme&utm_campaign=cloudposse/packages&utm_content=website
@@ -620,3 +620,4 @@ Check out [our other projects][github], [follow us on twitter][twitter], [apply 
   [share_googleplus]: https://plus.google.com/share?url=https://github.com/cloudposse/packages
   [share_email]: mailto:?subject=Packages&body=https://github.com/cloudposse/packages
   [beacon]: https://ga-beacon.cloudposse.com/UA-76589703-4/cloudposse/packages?pixel&cs=github&cm=readme&an=packages
+<!-- markdownlint-restore -->
