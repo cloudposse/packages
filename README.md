@@ -419,7 +419,7 @@ Here are some solutions to several common problems that may occur when adding a 
 [![tfschema](https://github.com/cloudposse/packages/workflows/tfschema/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Atfschema) | 0.7.5      | A schema inspector for Terraform providers
 [![tfsec](https://github.com/cloudposse/packages/workflows/tfsec/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Atfsec) | 1.27.1     | Security scanner for your Terraform code
 [![thanos](https://github.com/cloudposse/packages/workflows/thanos/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Athanos) | 0.27.0     | Highly available Prometheus setup with long term storage capabilities. CNCF Sandbox project.
-[![trivy](https://github.com/cloudposse/packages/workflows/trivy/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Atrivy) | 0.31.0     | A Simple and Comprehensive Vulnerability Scanner for Containers, Suitable for CI
+[![trivy](https://github.com/cloudposse/packages/workflows/trivy/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Atrivy) | 0.31.2     | A Simple and Comprehensive Vulnerability Scanner for Containers, Suitable for CI
 [![turf](https://github.com/cloudposse/packages/workflows/turf/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aturf) | 0.18.0     | Turf is Cloud Posse's command-line automation helper.
 [![variant](https://github.com/cloudposse/packages/workflows/variant/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Avariant) | 0.38.0     | Variant is a Universal CLI tool that works like a task runner
 [![variant2](https://github.com/cloudposse/packages/workflows/variant2/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Avariant2) | 0.38.0     | Second major version of Variant, a Universal CLI tool that works like a task runner
@@ -589,7 +589,7 @@ Check out [our other projects][github], [follow us on twitter][twitter], [apply 
 
 [![README Footer][readme_footer_img]][readme_footer_link]
 [![Beacon][beacon]][website]
-
+<!-- markdownlint-disable -->
   [logo]: https://cloudposse.com/logo-300x69.svg
   [docs]: https://cpco.io/docs?utm_source=github&utm_medium=readme&utm_campaign=cloudposse/packages&utm_content=docs
   [website]: https://cpco.io/homepage?utm_source=github&utm_medium=readme&utm_campaign=cloudposse/packages&utm_content=website
@@ -620,3 +620,4 @@ Check out [our other projects][github], [follow us on twitter][twitter], [apply 
   [share_googleplus]: https://plus.google.com/share?url=https://github.com/cloudposse/packages
   [share_email]: mailto:?subject=Packages&body=https://github.com/cloudposse/packages
   [beacon]: https://ga-beacon.cloudposse.com/UA-76589703-4/cloudposse/packages?pixel&cs=github&cm=readme&an=packages
+<!-- markdownlint-restore -->
