@@ -57,7 +57,7 @@ jq                        1.6.0      Command-line JSON processor
 json2hcl                  0.0.6      Convert JSON to HCL, and vice versa
 jx                        3.4.19     Jenkins-X
 k3d                       5.4.6      Little helper to run Rancher Lab's k3s in Docker
-k6                        0.39.0     A modern load testing tool, using Go and JavaScript - https://k6.io
+k6                        0.40.0     A modern load testing tool, using Go and JavaScript - https://k6.io
 k9s                       0.26.3     Kubernetes CLI To Manage Your Clusters In Style
 katafygio                 0.8.3      K8s continuous backup to git
 kfctl                     1.2.0      Machine Learning Toolkit for Kubernetes
