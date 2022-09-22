@@ -40,5 +40,5 @@ apk/prepare:: $(INSTALL_PATH)/$(PACKAGE_EXE)
 install: $(INSTALL_PATH)/$(PACKAGE_EXE)
 
 go-update:
-	go get -u github.com/hashicorp/terraform-config-inspect
+	go get github.com/hashicorp/terraform-config-inspect
 	printf "%s" $$(grep -F github.com/hashicorp/terraform-config-inspect go.mod| sed -e 's/.* v//' -e 's/\.0-/./' -e 's/-/+git/') > VERSION
