@@ -11,6 +11,11 @@ jobs:
     steps:
     - name: "Checkout source code at current commit"
       uses: actions/checkout@v2
+    - name: "Configure go version"
+      uses: actions/setup-go@v3
+      with:
+        go-version: '~1.19.1' # The Go version to download (if necessary) and use.
+    - run: go version
     - name: Prepare tags for Docker image
       if: (github.event_name == 'release' && github.event.action == 'created')
       id: prepare
