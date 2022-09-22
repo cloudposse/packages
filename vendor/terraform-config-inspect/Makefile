@@ -21,7 +21,7 @@ version.go: VERSION
 $(INSTALL_PATH)/$(PACKAGE_EXE): main.go version.go VERSION
 	go generate
 	mkdir -p $(INSTALL_PATH)
-	go build -o $(INSTALL_PATH)/$(PACKAGE_EXE)
+	go build -buildvcs=false -o $(INSTALL_PATH)/$(PACKAGE_EXE)
 
 test:
 	@echo Test: expecting exe version like $(APK_PACKAGE_VERSION) or $(DEB_PACKAGE_VERSION) from VERSION $(shell cat VERSION)
@@ -40,5 +40,5 @@ apk/prepare:: $(INSTALL_PATH)/$(PACKAGE_EXE)
 install: $(INSTALL_PATH)/$(PACKAGE_EXE)
 
 go-update:
-	go get -u github.com/hashicorp/terraform-config-inspect
+	go get github.com/hashicorp/terraform-config-inspect
 	printf "%s" $$(grep -F github.com/hashicorp/terraform-config-inspect go.mod| sed -e 's/.* v//' -e 's/\.0-/./' -e 's/-/+git/') > VERSION

@@ -26,7 +26,7 @@ version.go: VERSION
 $(INSTALL_PATH)/$(PACKAGE_EXE): main.go version.go VERSION
 	go generate
 	mkdir -p $(INSTALL_PATH)
-	go build -o $(INSTALL_PATH)/$(PACKAGE_EXE)
+	go build -buildvcs=false -o $(INSTALL_PATH)/$(PACKAGE_EXE)
 
 test:
 	@printf '%s\n' 'TESTING binary by executing >>>: $(PACKAGE_EXE) --version | grep -F $(PACKAGE_VERSION)'
