@@ -75,8 +75,8 @@ docker/build/apk/all:
 		-v $$(pwd):/packages cloudposse/apkbuild:$(ALPINE_VERSION) \
 		sh -c "make -C /packages/vendor build"
 
-## Build alpine packages for testing
-docker/build/apk/shell:
+## Run alpine builder interactively
+docker/build/apk/shell run/apk:
 	rm -rf tmp/*
 	[ -n "$(ls tmp/)" ] && sudo rm -rf tmp/* || true
 	docker build -t cloudposse/apkbuild:$(ALPINE_VERSION) -f apk/Dockerfile-$(ALPINE_VERSION) .
@@ -95,9 +95,9 @@ docker/build/apk/shell:
 		-v $$(pwd):/packages cloudposse/apkbuild:$(ALPINE_VERSION)
 
 # MATRIX BUILD
-docker/build/deb/shell docker/build/deb/test : BUILDER_VERSION=stable-slim
+docker/build/deb/shell docker/build/deb/test run/deb : BUILDER_VERSION=stable-slim
 
-docker/build/rpm/shell docker/build/rpm/test : BUILDER_VERSION=centos8
+docker/build/rpm/shell docker/build/rpm/test run/rpm : BUILDER_VERSION=centos8
 
 ## Build package as a test
 docker/build/%/test:
@@ -111,7 +111,7 @@ docker/build/%/test:
 		sh -c "make -C /packages/vendor/github-commenter $*"
 
 ## Build package builder shell
-docker/build/%/shell:
+docker/build/%/shell run/%:
 	rm -rf tmp/*
 	[ -n "$(ls tmp/)" ] && sudo rm -rf tmp/* || true
 	mkdir -p tmp/$*
