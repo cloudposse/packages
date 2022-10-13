@@ -45,9 +45,9 @@ gosu                      1.14.0     Simple Go-based setuid+setgid+setgroups+exe
 gotop                     3.0.0      A terminal based graphical activity monitor inspired by gtop and vtop
 grpcurl                   1.8.7      Like cURL, but for gRPC: Command-line tool for interacting with gRPC servers
 hcledit                   0.2.6      A command line editor for HCL
-helm                      3.10.0     The Kubernetes Package Manager
+helm                      3.10.1     The Kubernetes Package Manager
 helm2                     2.17.0     The Kubernetes Package Manager
-helm3                     3.10.0     The Kubernetes Package Manager
+helm3                     3.10.1     The Kubernetes Package Manager
 helmfile                  0.144.0    Deploy Kubernetes Helm Charts
 htmltest                  0.16.0     :white_check_mark: Test generated HTML for problems
 hugo                      0.104.3    The world’s fastest framework for building websites.
@@ -77,6 +77,9 @@ kubectl-1.19              1.19.16    Production-Grade Container Scheduling and M
 kubectl-1.20              1.20.15    Production-Grade Container Scheduling and Management (v1.20)
 kubectl-1.21              1.21.14    Production-Grade Container Scheduling and Management (v1.21)
 kubectl-1.22              1.22.15    Production-Grade Container Scheduling and Management (v1.22)
+kubectl-1.23              1.23.13    Production-Grade Container Scheduling and Management (v1.23)
+kubectl-1.24              1.24.7     Production-Grade Container Scheduling and Management (v1.24)
+kubectl-1.25              1.25.3     Production-Grade Container Scheduling and Management (v1.25)
 kubectx                   0.9.4      Switch faster between clusters and namespaces in kubectl
 kubens                    0.9.4      Switch faster between clusters and namespaces in kubectl
 kubeval                   0.16.1     Validate your Kubernetes configuration files, supports multiple Kubernetes versions
@@ -107,7 +110,7 @@ shfmt                     3.5.1      A shell parser, formatter and interpreter (
 slack-notifier            0.4.0      Command line utility to send messages with attachments to Slack channels via Incoming Webhooks
 sops                      3.7.3      Secrets management stinks, use some sops!
 spacectl                  0.14.0     [Spacelift.io](https://spacelift.io/) client and CLI
-spotctl                   0.25.0     A unified CLI to manage your [Spot](https://spot.io/) resources.
+spotctl                   0.26.0     A unified CLI to manage your [Spot](https://spot.io/) resources.
 sshm                      1.2.2      Easy connect on EC2 instances thanks to AWS System Manager Agent
 stern                     1.11.0     ⎈ Multi pod and container log tailing for Kubernetes
 sudosh                    0.3.0      Shell wrapper to run a login shell with `sudo` as the current user for the purpose of audit logging
@@ -141,7 +144,7 @@ trivy                     0.32.1     A Simple and Comprehensive Vulnerability Sc
 turf                      0.18.0     Turf is Cloud Posse's command-line automation helper.
 variant                   0.38.0     Variant is a Universal CLI tool that works like a task runner
 variant2                  0.38.0     Second major version of Variant, a Universal CLI tool that works like a task runner
-vault                     1.11.4     Hashicorp vault
+vault                     1.12.0     Hashicorp vault
 vendir                    0.31.0      Easy way to vendor portions of git repos, github releases, helm charts, docker image contents, etc. declaratively.
 venona                    1.7.8      Codefresh runtime-environment agent
 vert                      0.1.0      Simple CLI for comparing two or more versions
