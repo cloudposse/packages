@@ -82,8 +82,6 @@ jobs:
         - kops
         - kubecron
         - kubectl
-        - kubectl-1.15
-        - kubectl-1.16
         - kubectl-1.17
         - kubectl-1.18
         - kubectl-1.19
