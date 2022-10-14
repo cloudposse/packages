@@ -6,7 +6,7 @@ amtool                    0.24.0     Tool for interacting with the Alertmanager 
 argocd                    2.4.14     Declarative GitOpts for Kubernetes
 assume-role               0.3.2      Easily assume AWS roles in your terminal.
 atlantis                  0.20.1     Terraform For Teams
-atmos                     1.10.1     Universal Tool for DevOps and Cloud Automation
+atmos                     1.10.3     Universal Tool for DevOps and Cloud Automation
 awless                    0.1.11     A Mighty CLI for AWS
 aws-iam-authenticator     0.5.9      A tool to use AWS IAM credentials to authenticate to a Kubernetes cluster
 aws-okta                  OBSOLETE   aws-okta allows users to authenticate with AWS using Okta credentials
@@ -79,7 +79,7 @@ kubectl-1.21              1.21.14    Production-Grade Container Scheduling and M
 kubectl-1.22              1.22.15    Production-Grade Container Scheduling and Management (v1.22)
 kubectl-1.23              1.23.13    Production-Grade Container Scheduling and Management (v1.23)
 kubectl-1.24              1.24.7     Production-Grade Container Scheduling and Management (v1.24)
-kubectl-1.25              1.25.1     Production-Grade Container Scheduling and Management (v1.25)
+kubectl-1.25              1.25.3     Production-Grade Container Scheduling and Management (v1.25)
 kubectx                   0.9.4      Switch faster between clusters and namespaces in kubectl
 kubens                    0.9.4      Switch faster between clusters and namespaces in kubectl
 kubeval                   0.16.1     Validate your Kubernetes configuration files, supports multiple Kubernetes versions
