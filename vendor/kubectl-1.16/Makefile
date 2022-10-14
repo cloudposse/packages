@@ -2,6 +2,7 @@ export MASTER_PACKAGE_NAME = kubectl
 export MAJOR_VERSION = 1.16
 export PACKAGE_NAME = $(MASTER_PACKAGE_NAME)-$(MAJOR_VERSION)
 export PACKAGE_REPO_NAME = kubernetes
+export AUTO_UPDATE_ENABLED = false
 
 include ../../tasks/Makefile.vendor_includes
 
