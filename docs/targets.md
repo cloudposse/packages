@@ -37,7 +37,7 @@ github-commenter          0.14.1     Command line utility for creating GitHub co
 github-release            0.10.0     Commandline app to create and edit releases on Github (and upload artifacts)
 github-status-updater     0.7.0      Command line utility for updating GitHub commit statuses and enabling required status checks for pull requests
 gitleaks                  1.2.0      Audit git repos for secrets 🔑
-go-jsonnet                0.18.0     This an implementation of Jsonnet in pure Go.
+go-jsonnet                0.19.0     This an implementation of Jsonnet in pure Go.
 gomplate                  3.11.3     A flexible commandline tool for template rendering. Supports lots of local and remote datasources.
 gonsul                    1.0.2      A stand-alone alternative to git2consul 
 goofys                    0.24.0     a high-performance, POSIX-ish Amazon S3 file system written in Go
