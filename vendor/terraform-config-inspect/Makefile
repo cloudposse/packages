@@ -21,7 +21,7 @@ version.go: VERSION
 $(INSTALL_PATH)/$(PACKAGE_EXE): main.go version.go VERSION
 	go generate
 	mkdir -p $(INSTALL_PATH)
-	go build -o $(INSTALL_PATH)/$(PACKAGE_EXE)
+	go build -buildvcs=false -o $(INSTALL_PATH)/$(PACKAGE_EXE)
 
 test:
 	@echo Test: expecting exe version like $(APK_PACKAGE_VERSION) or $(DEB_PACKAGE_VERSION) from VERSION $(shell cat VERSION)

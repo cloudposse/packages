@@ -1,5 +1,5 @@
 # Need to use version number so that it gets updated here and triggers a build
-FROM debian:11.2-slim
+FROM debian:11.4-slim
 
 ENV LC_ALL=C.UTF-8
 ENV PS1="(deb) \w \$ "
@@ -10,7 +10,7 @@ RUN apt-get update && \
 RUN gem install --no-document backports -v 3.15.0
 RUN gem install --no-document fpm
 
-ARG GO_INSTALL_VERSION=1.16.7
+ARG GO_INSTALL_VERSION=1.19.1
 
 # Install go
 RUN echo downloading go${GO_INSTALL_VERSION} && \

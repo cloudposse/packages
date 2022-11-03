@@ -140,6 +140,10 @@ auto-update:
 	@if [ "$${AUTO_UPDATE_ENABLED:-true}" == "true" ]; then \
 		$(MAKE) --quiet --silent --no-print-directory update; \
 		exit $?; \
+	elif [ "$${AUTO_UPDATE_ENABLED}" == "softfail" ]; then \
+		$(MAKE) --quiet --silent --no-print-directory update || \
+			printf "\n^^^Automatic updates allowed to fail for %s^^^\n\n" "$${PACKAGE_NAME}"; \
+		exit 0; \
 	else \
 		echo "Automatic updates disabled for $${PACKAGE_NAME}"; \
 		exit 0; \
@@ -174,7 +178,7 @@ _version_by_semver: TARGET_VERSION_PIN = $(or $(PACKAGE_VERSION_PIN),$(DEFAULT_V
 # release version format into something semver compliant.
 _version_by_semver: VERSION_XFORM = $(if $(PACKAGE_VERSION_SEMVER_XFORM), | $(PACKAGE_VERSION_SEMVER_XFORM))
 _version_by_semver: $(LOCAL_BIN)/vert
-	@if [ "$${AUTO_UPDATE_ENABLED:-true}" == "true" ]; then \
+	@if [[ "$${AUTO_UPDATE_ENABLED:-true}" == "true" ]] || [[ "$${AUTO_UPDATE_ENABLED}" == "softfail" ]]; then \
 		local_version=$$(cat VERSION || echo 0); version_pin='$(TARGET_VERSION_PIN)'; \
 		version_pin="$${version_pin:-$(DEFAULT_PIN_PREFIX)$$local_version$(DEFAULT_PIN_SUFFIX)}"; \
 		releases=($$(env PATH='$(PATH)' github-repo-metadata $(VENDOR) $(PACKAGE_REPO_NAME) '$(API)' '$(QUERY)'$(VERSION_XFORM))); \
@@ -201,7 +205,7 @@ _version_by_semver: $(LOCAL_BIN)/vert
 GITHUB_LATEST_RELEASE: API=releases?per_page=100
 GITHUB_LATEST_RELEASE: QUERY=.[] | select(.prerelease == false or .prerelease == $(PACKAGE_PRERELEASE_ENABLED)) | .tag_name
 GITHUB_LATEST_RELEASE:
-	@if [ "$${AUTO_UPDATE_ENABLED:-true}" == "true" ]; then \
+	@if [[ "$${AUTO_UPDATE_ENABLED:-true}" == "true" ]] || [[ "$${AUTO_UPDATE_ENABLED:-true}" == "softfail" ]]; then \
 		local_version=$$(cat VERSION || echo 0); \
 		releases=($$(env PATH='$(PATH)' github-repo-metadata $(VENDOR) $(PACKAGE_REPO_NAME) '$(API)' '$(QUERY)')); \
 		current_version="$${releases[0]}"; \

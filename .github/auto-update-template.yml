@@ -5,6 +5,8 @@
 
 name: "auto-update-packages"
 on:
+  workflow_dispatch:
+
   schedule:
     # See cron format at https://docs.github.com/en/free-pro-team@latest/actions/reference/events-that-trigger-workflows#scheduled-events
     # Update packages 5am and 4pm PST
