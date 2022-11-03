@@ -54,7 +54,7 @@ hugo                      0.105.0    The world’s fastest framework for buildin
 infracost                 0.10.13    Cloud cost estimates for Terraform
 jp                        0.2.1      Command line interface to JMESPath
 jq                        1.6.0      Command-line JSON processor
-json2hcl                  0.0.6      Convert JSON to HCL, and vice versa
+json2hcl                  0.1.1      Convert JSON to HCL, and vice versa
 jx                        3.10.3     Jenkins-X
 k3d                       5.4.6      Little helper to run Rancher Lab's k3s in Docker
 k6                        0.41.0     A modern load testing tool, using Go and JavaScript - https://k6.io
@@ -83,7 +83,7 @@ kubectl-1.25              1.25.3     Production-Grade Container Scheduling and M
 kubectx                   0.9.4      Switch faster between clusters and namespaces in kubectl
 kubens                    0.9.4      Switch faster between clusters and namespaces in kubectl
 kubeval                   0.16.1     Validate your Kubernetes configuration files, supports multiple Kubernetes versions
-lazydocker                0.18.1     The lazier way to manage everything docker
+lazydocker                0.19.0     The lazier way to manage everything docker
 lectl                     0.21.0     Script to check issued certificates by Let's Encrypt on CTL (Certificate Transparency Log) using https://crt.sh
 minikube                  1.27.1     Run Kubernetes locally
 misspell                  0.3.4      Correct commonly misspelled English words in source files
