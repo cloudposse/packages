@@ -31,7 +31,7 @@ fargate                   0.3.2      CLI for AWS Fargate
 fetch                     0.4.5      fetch makes it easy to download files, folders, and release assets from a specific public git commit, branch, or tag
 figurine                  1.2.0      Print your name in style
 fzf                       0.23.1     A command-line fuzzy finder
-gh                        2.18.1     The GitHub CLI
+gh                        2.19.0     The GitHub CLI
 ghr                       0.16.0     Upload multiple artifacts to GitHub Releases in parallel
 github-commenter          0.14.1     Command line utility for creating GitHub comments on Commits, Pull Request Reviews or Issues
 github-release            0.10.0     Commandline app to create and edit releases on Github (and upload artifacts)
@@ -140,7 +140,7 @@ tfmask                    0.7.0      Terraform utility to mask select output fro
 tfschema                  0.7.5      A schema inspector for Terraform providers
 tfsec                     1.28.1     Security scanner for your Terraform code
 thanos                    0.28.1     Highly available Prometheus setup with long term storage capabilities. CNCF Sandbox project.
-trivy                     0.30.3     A Simple and Comprehensive Vulnerability Scanner for Containers, Suitable for CI
+trivy                     0.34.0     A Simple and Comprehensive Vulnerability Scanner for Containers, Suitable for CI
 turf                      0.18.0     Turf is Cloud Posse's command-line automation helper.
 variant                   0.38.0     Variant is a Universal CLI tool that works like a task runner
 variant2                  0.38.0     Second major version of Variant, a Universal CLI tool that works like a task runner
