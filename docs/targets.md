@@ -6,7 +6,7 @@ amtool                    0.24.0     Tool for interacting with the Alertmanager 
 argocd                    2.5.1      Declarative GitOpts for Kubernetes
 assume-role               0.3.2      Easily assume AWS roles in your terminal.
 atlantis                  0.20.1     Terraform For Teams
-atmos                     1.11.0     Universal Tool for DevOps and Cloud Automation
+atmos                     1.11.1     Universal Tool for DevOps and Cloud Automation
 awless                    0.1.11     A Mighty CLI for AWS
 aws-iam-authenticator     0.5.9      A tool to use AWS IAM credentials to authenticate to a Kubernetes cluster
 aws-okta                  OBSOLETE   aws-okta allows users to authenticate with AWS using Okta credentials
@@ -140,7 +140,7 @@ tfmask                    0.7.0      Terraform utility to mask select output fro
 tfschema                  0.7.5      A schema inspector for Terraform providers
 tfsec                     1.28.1     Security scanner for your Terraform code
 thanos                    0.28.1     Highly available Prometheus setup with long term storage capabilities. CNCF Sandbox project.
-trivy                     0.30.3     A Simple and Comprehensive Vulnerability Scanner for Containers, Suitable for CI
+trivy                     0.34.0     A Simple and Comprehensive Vulnerability Scanner for Containers, Suitable for CI
 turf                      0.18.0     Turf is Cloud Posse's command-line automation helper.
 variant                   0.38.0     Variant is a Universal CLI tool that works like a task runner
 variant2                  0.38.0     Second major version of Variant, a Universal CLI tool that works like a task runner
