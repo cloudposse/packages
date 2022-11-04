@@ -55,7 +55,7 @@ infracost                 0.10.13    Cloud cost estimates for Terraform
 jp                        0.2.1      Command line interface to JMESPath
 jq                        1.6.0      Command-line JSON processor
 json2hcl                  0.1.1      Convert JSON to HCL, and vice versa
-jx                        3.10.3     Jenkins-X
+jx                        3.10.9     Jenkins-X
 k3d                       5.4.6      Little helper to run Rancher Lab's k3s in Docker
 k6                        0.41.0     A modern load testing tool, using Go and JavaScript - https://k6.io
 k9s                       0.26.7     Kubernetes CLI To Manage Your Clusters In Style
@@ -140,7 +140,7 @@ tfmask                    0.7.0      Terraform utility to mask select output fro
 tfschema                  0.7.5      A schema inspector for Terraform providers
 tfsec                     1.28.1     Security scanner for your Terraform code
 thanos                    0.28.1     Highly available Prometheus setup with long term storage capabilities. CNCF Sandbox project.
-trivy                     0.30.3     A Simple and Comprehensive Vulnerability Scanner for Containers, Suitable for CI
+trivy                     0.34.0     A Simple and Comprehensive Vulnerability Scanner for Containers, Suitable for CI
 turf                      0.18.0     Turf is Cloud Posse's command-line automation helper.
 variant                   0.38.0     Variant is a Universal CLI tool that works like a task runner
 variant2                  0.38.0     Second major version of Variant, a Universal CLI tool that works like a task runner
