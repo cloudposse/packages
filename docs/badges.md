@@ -46,7 +46,7 @@
 [![hcledit](https://github.com/cloudposse/packages/workflows/hcledit/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ahcledit) | 0.2.6      | A command line editor for HCL
 [![helm](https://github.com/cloudposse/packages/workflows/helm/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ahelm) | 3.10.1     | The Kubernetes Package Manager
 [![helm2](https://github.com/cloudposse/packages/workflows/helm2/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ahelm2) | 2.17.0     | The Kubernetes Package Manager
-[![helm3](https://github.com/cloudposse/packages/workflows/helm3/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ahelm3) | 3.10.1     | The Kubernetes Package Manager
+[![helm3](https://github.com/cloudposse/packages/workflows/helm3/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ahelm3) | 3.10.2     | The Kubernetes Package Manager
 [![helmfile](https://github.com/cloudposse/packages/workflows/helmfile/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ahelmfile) | 0.144.0    | Deploy Kubernetes Helm Charts
 [![htmltest](https://github.com/cloudposse/packages/workflows/htmltest/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ahtmltest) | 0.17.0     | :white_check_mark: Test generated HTML for problems
 [![hugo](https://github.com/cloudposse/packages/workflows/hugo/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ahugo) | 0.105.0    | The world’s fastest framework for building websites.
