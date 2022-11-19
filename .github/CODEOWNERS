@@ -1,43 +1,25 @@
 # Use this file to define individuals or teams that are responsible for code in a repository.
 # Read more: <https://help.github.com/articles/about-codeowners/>
+#
+# Order is important: the last matching pattern has the highest precedence
 
-# To allow mergify to auto-merge, we must in general not assign code owners to files
+# These owners will be the default owners for everything
+*             @cloudposse/engineering @cloudposse/contributors
 
-# With exceptions, engineering or admin must approve changes to workflow configuration files
-.github/*.yml                                      @cloudposse/engineering @cloudposse/admins
+# Cloud Posse must review any changes to Makefiles
+**/Makefile   @cloudposse/engineering
+**/Makefile.* @cloudposse/engineering
 
-# The auto-update-packages.yml is auto-generated along with README, but it should not change unless
-# a package was enabled or disabled for auto-update, and that should be done by engineering.
-.github/workflows/auto-update-packages.yml          @cloudposse/engineering @cloudposse/admins
+# Cloud Posse must review any changes to GitHub actions
+.github/*     @cloudposse/engineering
 
-# engineering or admin must approve changes to non-package workflows
-.github/workflows/apkbuild.yml                      @cloudposse/engineering @cloudposse/admins
-.github/workflows/auto-greet.yml                    @cloudposse/engineering @cloudposse/admins
-.github/workflows/auto-label.yml                    @cloudposse/engineering @cloudposse/admins
-.github/workflows/debbuild.yml                      @cloudposse/engineering @cloudposse/admins
-.github/workflows/docker.yml                        @cloudposse/engineering @cloudposse/admins
-.github/workflows/rebuild-readme-command.yml        @cloudposse/engineering @cloudposse/admins
-.github/workflows/rpmbuild.yml                      @cloudposse/engineering @cloudposse/admins
-.github/workflows/slash-command-dispatch.yml        @cloudposse/engineering @cloudposse/admins
+# Cloud Posse must review any changes to standard context definition,
+# but some changes can be rubber-stamped.
+**/*.tf       @cloudposse/engineering @cloudposse/contributors @cloudposse/approvers
+README.yaml   @cloudposse/engineering @cloudposse/contributors @cloudposse/approvers
+README.md     @cloudposse/engineering @cloudposse/contributors @cloudposse/approvers
+docs/*.md     @cloudposse/engineering @cloudposse/contributors @cloudposse/approvers
 
-# Cloud Posse Admins must review all changes to the mergify configuration
+# Cloud Posse Admins must review all changes to CODEOWNERS or the mergify configuration
 .github/mergify.yml @cloudposse/admins
-
-# engineering or admin must approve changes to scripts
-bin/**      @cloudposse/engineering @cloudposse/admins
-contrib/**  @cloudposse/engineering @cloudposse/admins
-
-# Cloud Posse Admins must review all changes to templated build configuration except auto-update
-.github/package-template.yml @cloudposse/admins
-apk/**              @cloudposse/admins
-deb/**              @cloudposse/admins
-rpm/**              @cloudposse/admins
-tasks/*             @cloudposse/admins
-**/Makefile         @cloudposse/admins
-
-# Of course, admins must approve changes to CODEOWNERS itself
-.github/CODEOWNERS                         @cloudposse/admins
-.github/workflows/validate-codeowners.yml  @cloudposse/admins
-
-# Cloud Posse Engineering can update individual package Makefiles, but auto-update should not
-vendor/*/Makefile   @cloudposse/engineering
+.github/CODEOWNERS  @cloudposse/admins
