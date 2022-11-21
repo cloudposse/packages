@@ -93,7 +93,7 @@ pack                      0.27.0     Create cloud native Buildpacks
 packer                    1.8.4      Packer is a tool for creating identical machine images for multiple platforms from a single source configuration.
 pandoc                    2.19.2     Universal markup converter
 pgmetrics                 1.14.0     Postgres metrics
-pluto                     5.11.1     A cli tool to help discover deprecated apiVersions in Kubernetes
+pluto                     5.11.2     A cli tool to help discover deprecated apiVersions in Kubernetes
 popeye                    0.10.1     A Kubernetes cluster resource sanitizer
 promtool                  2.40.1     Prometheus CLI tool
 rainbow-text              1.2.1      Tasty rainbows for your terminal! (lolcat clone)
