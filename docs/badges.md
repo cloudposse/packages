@@ -16,7 +16,7 @@
 [![cli53](https://github.com/cloudposse/packages/workflows/cli53/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Acli53) | 0.8.18     | Command line tool for Amazon Route 53
 [![cloudflared](https://github.com/cloudposse/packages/workflows/cloudflared/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Acloudflared) | 2022.10.3  | Argo Tunnel client
 [![cloudposse-atlantis](https://github.com/cloudposse/packages/workflows/cloudposse-atlantis/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Acloudposse-atlantis) | 0.9.0.3    | Terraform For Teams, enhanced by Cloud Posse
-[![codefresh](https://github.com/cloudposse/packages/workflows/codefresh/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Acodefresh) | 0.80.3     | Codefresh CLI
+[![codefresh](https://github.com/cloudposse/packages/workflows/codefresh/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Acodefresh) | 0.80.4     | Codefresh CLI
 [![conftest](https://github.com/cloudposse/packages/workflows/conftest/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aconftest) | 0.35.0     | Test your configuration files using Open Policy Agent
 [![consul](https://github.com/cloudposse/packages/workflows/consul/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aconsul) | 1.13.3     | Hashicorp consul
 [![ctop](https://github.com/cloudposse/packages/workflows/ctop/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Actop) | 0.7.7      | Top-like interface for container metrics
