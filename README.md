@@ -308,7 +308,7 @@ Here are some solutions to several common problems that may occur when adding a 
 [![consul](https://github.com/cloudposse/packages/workflows/consul/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aconsul) | 1.14.0     | Hashicorp consul
 [![ctop](https://github.com/cloudposse/packages/workflows/ctop/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Actop) | 0.7.7      | Top-like interface for container metrics
 [![direnv](https://github.com/cloudposse/packages/workflows/direnv/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Adirenv) | 2.32.1     | Unclutter your .profile
-[![doctl](https://github.com/cloudposse/packages/workflows/doctl/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Adoctl) | 1.86.0     | A command line tool for DigitalOcean services
+[![doctl](https://github.com/cloudposse/packages/workflows/doctl/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Adoctl) | 1.87.0     | A command line tool for DigitalOcean services
 [![duffle](https://github.com/cloudposse/packages/workflows/duffle/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aduffle) | 0.3.5b1    | CNAB installer
 [![ec2-instance-selector](https://github.com/cloudposse/packages/workflows/ec2-instance-selector/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aec2-instance-selector) | 2.4.0      | A CLI tool and go library which recommends instance types based on resource criteria like vcpus and memory
 [![emailcli](https://github.com/cloudposse/packages/workflows/emailcli/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aemailcli) | 1.0.3      | Command line email sending client written in Go.
@@ -431,7 +431,7 @@ Here are some solutions to several common problems that may occur when adding a 
 [![venona](https://github.com/cloudposse/packages/workflows/venona/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Avenona) | 1.7.8      | Codefresh runtime-environment agent
 [![vert](https://github.com/cloudposse/packages/workflows/vert/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Avert) | 0.1.0      | Simple CLI for comparing two or more versions
 [![yajsv](https://github.com/cloudposse/packages/workflows/yajsv/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ayajsv) | 1.4.1      | Yet Another JSON Schema Validator [CLI]
-[![yq](https://github.com/cloudposse/packages/workflows/yq/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ayq) | 4.30.4     | yq is a portable command-line YAML processor
+[![yq](https://github.com/cloudposse/packages/workflows/yq/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ayq) | 4.30.3     | yq is a portable command-line YAML processor
 
 
 
