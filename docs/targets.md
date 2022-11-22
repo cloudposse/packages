@@ -22,7 +22,7 @@ conftest                  0.35.0     Test your configuration files using Open Po
 consul                    1.14.0     Hashicorp consul
 ctop                      0.7.7      Top-like interface for container metrics
 direnv                    2.32.1     Unclutter your .profile
-doctl                     1.86.0     A command line tool for DigitalOcean services
+doctl                     1.87.0     A command line tool for DigitalOcean services
 duffle                    0.3.5b1    CNAB installer
 ec2-instance-selector     2.4.0      A CLI tool and go library which recommends instance types based on resource criteria like vcpus and memory
 emailcli                  1.0.3      Command line email sending client written in Go.
@@ -149,6 +149,6 @@ vendir                    0.32.0      Easy way to vendor portions of git repos, 
 venona                    1.7.8      Codefresh runtime-environment agent
 vert                      0.1.0      Simple CLI for comparing two or more versions
 yajsv                     1.4.1      Yet Another JSON Schema Validator [CLI]
-yq                        4.30.4     yq is a portable command-line YAML processor
+yq                        4.30.3     yq is a portable command-line YAML processor
 ```
 <!-- markdownlint-restore -->
