@@ -55,7 +55,7 @@ infracost                 0.10.13    Cloud cost estimates for Terraform
 jp                        0.2.1      Command line interface to JMESPath
 jq                        1.6.0      Command-line JSON processor
 json2hcl                  0.1.1      Convert JSON to HCL, and vice versa
-jx                        3.10.12    Jenkins-X
+jx                        3.10.14    Jenkins-X
 k3d                       5.4.6      Little helper to run Rancher Lab's k3s in Docker
 k6                        0.41.0     A modern load testing tool, using Go and JavaScript - https://k6.io
 k9s                       0.26.7     Kubernetes CLI To Manage Your Clusters In Style
@@ -149,6 +149,6 @@ vendir                    0.32.0      Easy way to vendor portions of git repos, 
 venona                    1.7.8      Codefresh runtime-environment agent
 vert                      0.1.0      Simple CLI for comparing two or more versions
 yajsv                     1.4.1      Yet Another JSON Schema Validator [CLI]
-yq                        4.30.3     yq is a portable command-line YAML processor
+yq                        4.30.4     yq is a portable command-line YAML processor
 ```
 <!-- markdownlint-restore -->
