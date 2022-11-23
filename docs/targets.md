@@ -8,7 +8,7 @@ assume-role               0.3.2      Easily assume AWS roles in your terminal.
 atlantis                  0.20.1     Terraform For Teams
 atmos                     1.15.0     Universal Tool for DevOps and Cloud Automation
 awless                    0.1.11     A Mighty CLI for AWS
-aws-iam-authenticator     0.5.11     A tool to use AWS IAM credentials to authenticate to a Kubernetes cluster
+aws-iam-authenticator     0.5.10     A tool to use AWS IAM credentials to authenticate to a Kubernetes cluster
 aws-okta                  OBSOLETE   aws-okta allows users to authenticate with AWS using Okta credentials
 aws-vault                 6.6.0      A vault for securely storing and accessing AWS credentials in development environments
 cfssl                     1.6.3      Cloudflare's PKI and TLS toolkit
