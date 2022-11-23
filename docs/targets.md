@@ -29,7 +29,7 @@ emailcli                  1.0.3      Command line email sending client written i
 envcli                    0.7.1      A simple wrapper that allows you to run commands within ethereal docker containers
 fargate                   0.3.2      CLI for AWS Fargate
 fetch                     0.4.5      fetch makes it easy to download files, folders, and release assets from a specific public git commit, branch, or tag
-figurine                  1.2.0      Print your name in style
+figurine                  1.2.1      Print your name in style
 fzf                       0.23.1     A command-line fuzzy finder
 gh                        2.20.2     The GitHub CLI
 ghr                       0.16.0     Upload multiple artifacts to GitHub Releases in parallel
