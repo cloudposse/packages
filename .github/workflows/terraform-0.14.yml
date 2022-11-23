@@ -37,7 +37,7 @@ jobs:
       package-matrix:  ${{steps.info.outputs.package_matrix}}
       apk-enabled: ${{ steps.info.outputs.package_enabled == 'true' && steps.info.outputs.apk_package_enabled == 'true' }}
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
 
     - name: Export package build matrix
       shell: bash
@@ -49,7 +49,6 @@ jobs:
         make -C vendor/terraform-0.14 info/github
         echo
         echo outputs set
-        make -C vendor/terraform-0.14 info/github | sed s'/::set-output name=//' | sed 's/::/=/'
 
 
   # Build for alpine linux
@@ -76,7 +75,7 @@ jobs:
     steps:
       # Checkout the packages repo so we can build the packages as a monorepo
       - name: "Checkout source code at current commit"
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       # Export the apk keys as files from secrets
       - name: "Export keys"
@@ -97,8 +96,7 @@ jobs:
         shell: bash
         run: |
           artifact=$(find artifacts/${{matrix.alpine}} -type f -name \*.apk)
-          echo "::set-output name=path::$artifact"
-          echo "set output path=$artifact"
+          echo "path=$artifact" | tee -a $GITHUB_OUTPUT
           echo creating '"pip"' cache directory for Cloudsmith
           mkdir -p $HOME/.cache/pip && chmod -R 777 $HOME/.cache || echo Ignoring error creating '"pip"' cache directory
 
@@ -109,9 +107,9 @@ jobs:
         id: repo
         run: |
           if [[ ${GITHUB_REF} == 'refs/heads/master' ]]; then
-              echo "::set-output name=org::${{github.repository_owner}}"
+              echo "org=${{github.repository_owner}}" | tee -a $GITHUB_OUTPUT
           else
-              echo "::set-output name=org::${{github.repository_owner}}-dev"
+              echo "org=${{github.repository_owner}}-dev" | tee -a $GITHUB_OUTPUT
           fi
         env:
           GITHUB_REF: ${{ github.ref }}
@@ -165,7 +163,7 @@ jobs:
     steps:
       # Checkout the packages repo so we can build the packages as a monorepo
       - name: "Checkout source code at current commit"
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       # Build the packages for the matrix version
       - name: "Build ${{matrix.package-type}} packages"
@@ -187,8 +185,8 @@ jobs:
           echo Error if not exactly 1 package found
           (( ${#packages[@]} == 1 )) || { echo "Error: other than 1 package found (${#packages[@]})" >&2; exit 1; }
 
-          echo "setting output name=path::$packages"
-          echo "::set-output name=path::$packages"
+          echo "setting output"
+          echo "path=$packages" | tee -a $GITHUB_OUTPUT
 
           echo creating '"pip"' cache directory for Cloudsmith
           mkdir -p $HOME/.cache/pip && chmod -R 777 $HOME/.cache || echo Ignoring error creating '"pip"' cache directory
@@ -199,16 +197,16 @@ jobs:
         id: repo
         run: |
           if [[ ${GITHUB_REF} == 'refs/heads/master' ]]; then
-              echo "::set-output name=org::${{github.repository_owner}}"
+              echo "org=${{github.repository_owner}}" | tee -a $GITHUB_OUTPUT
           else
-              echo "::set-output name=org::${{github.repository_owner}}-dev"
+              echo "org=${{github.repository_owner}}-dev" | tee -a $GITHUB_OUTPUT
           fi
         env:
           GITHUB_REF: ${{ github.ref }}
 
       # Publish the artifacts
       - name: "Push artifact to package repository"
-        uses: cloudsmith-io/action@v0.5.1
+        uses: cloudsmith-io/action@v0.5.2
         with:
           api-key: ${{ secrets.CLOUDSMITH_API_KEY }}
           command: 'push'
