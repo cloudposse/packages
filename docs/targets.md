@@ -22,7 +22,7 @@ conftest                  0.35.0     Test your configuration files using Open Po
 consul                    1.14.1     Hashicorp consul
 ctop                      0.7.7      Top-like interface for container metrics
 direnv                    2.32.1     Unclutter your .profile
-doctl                     1.87.0     A command line tool for DigitalOcean services
+doctl                     1.88.0     A command line tool for DigitalOcean services
 duffle                    0.3.5b1    CNAB installer
 ec2-instance-selector     2.4.0      A CLI tool and go library which recommends instance types based on resource criteria like vcpus and memory
 emailcli                  1.0.3      Command line email sending client written in Go.
@@ -33,7 +33,7 @@ figurine                  1.2.1      Print your name in style
 fzf                       0.23.1     A command-line fuzzy finder
 gh                        2.20.2     The GitHub CLI
 ghr                       0.16.0     Upload multiple artifacts to GitHub Releases in parallel
-github-commenter          0.14.1     Command line utility for creating GitHub comments on Commits, Pull Request Reviews or Issues
+github-commenter          0.16.0     Command line utility for creating GitHub comments on Commits, Pull Request Reviews or Issues
 github-release            0.10.0     Commandline app to create and edit releases on Github (and upload artifacts)
 github-status-updater     0.7.0      Command line utility for updating GitHub commit statuses and enabling required status checks for pull requests
 gitleaks                  1.2.0      Audit git repos for secrets 🔑
