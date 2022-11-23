@@ -46,7 +46,7 @@ jobs:
         GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
       run: |
         echo setting ouputs
-        make -C vendor/scenery info/github | tee -a $GITHUB_OUTPUT
+        make -C vendor/scenery info/github
         echo
         echo outputs set
 
