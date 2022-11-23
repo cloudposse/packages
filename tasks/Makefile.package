@@ -260,20 +260,20 @@ info/md:
 	fi
 
 # info/github is used to configure GitHub Actions, particularly build and auto-update
-info/github: FORMAT="::set-output name=%s::%s\n"
+info/github: FORMAT="%s=%s\n"
 info/github:
-	@printf $(FORMAT) "vendor" "$(VENDOR)"
-	@printf $(FORMAT) "package_name" "$(PACKAGE_NAME)"
-	@$(LOCAL_BIN)/package-filter info/github "$(APK_PACKAGE_ENABLED)" "$(PACKAGE_TYPES_DISABLED)"
-	@printf $(FORMAT) "package_enabled" "$(PACKAGE_ENABLED)"
-	@printf $(FORMAT) "package_version" "$(PACKAGE_VERSION)"
-	@printf $(FORMAT) "package_license" "$(PACKAGE_LICENSE)"
-	@printf $(FORMAT) "arch" "$(DIST_ARCH)"
-	@printf $(FORMAT) "os" "$(DIST_OS)"
-	@printf $(FORMAT) "package_homepage_url" "$(PACKAGE_HOMEPAGE_URL)"
-	@printf $(FORMAT) "package_repo_url" "$(PACKAGE_REPO_URL)"
-	@printf $(FORMAT) "download_url" "$(DOWNLOAD_URL)"
-	@printf $(FORMAT) "install_path" "$(INSTALL_PATH)"
+	@printf $(FORMAT) "vendor" "$(VENDOR)"  >> $$GITHUB_OUTPUT
+	@printf $(FORMAT) "package_name" "$(PACKAGE_NAME)"  >> $$GITHUB_OUTPUT
+	@$(LOCAL_BIN)/package-filter info/github "$(APK_PACKAGE_ENABLED)" "$(PACKAGE_TYPES_DISABLED)" >> $$GITHUB_OUTPUT
+	@printf $(FORMAT) "package_enabled" "$(PACKAGE_ENABLED)"  >> $$GITHUB_OUTPUT
+	@printf $(FORMAT) "package_version" "$(PACKAGE_VERSION)"  >> $$GITHUB_OUTPUT
+	@printf $(FORMAT) "package_license" "$(PACKAGE_LICENSE)"  >> $$GITHUB_OUTPUT
+	@printf $(FORMAT) "arch" "$(DIST_ARCH)"  >> $$GITHUB_OUTPUT
+	@printf $(FORMAT) "os" "$(DIST_OS)"  >> $$GITHUB_OUTPUT
+	@printf $(FORMAT) "package_homepage_url" "$(PACKAGE_HOMEPAGE_URL)"  >> $$GITHUB_OUTPUT
+	@printf $(FORMAT) "package_repo_url" "$(PACKAGE_REPO_URL)"  >> $$GITHUB_OUTPUT
+	@printf $(FORMAT) "download_url" "$(DOWNLOAD_URL)"  >> $$GITHUB_OUTPUT
+	@printf $(FORMAT) "install_path" "$(INSTALL_PATH)"  >> $$GITHUB_OUTPUT
 
 # info/package-enabled outputs "true" if the package is enabled, "false" if it is not.
 # Used by scripts and other info targets to toggle behaviors such as creating or not creating a build action workflow.

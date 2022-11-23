@@ -76,8 +76,8 @@ function apk_enabled() {
   fi
 }
 
-GITHUB_FORMAT_PACKAGE="::set-output name=%s_package_enabled::%s\n"
-GITHUB_FORMAT_MATRIX="::set-output name=package_matrix::%s\n"
+GITHUB_FORMAT_PACKAGE="%s_package_enabled=%s\n"
+GITHUB_FORMAT_MATRIX="package_matrix=%s\n"
 
 function info_github() {
   local apk_package_enabled=${1:-true}
