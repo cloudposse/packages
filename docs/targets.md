@@ -76,7 +76,7 @@ kubectl-1.18              1.18.20    Production-Grade Container Scheduling and M
 kubectl-1.19              1.19.16    Production-Grade Container Scheduling and Management (v1.19)
 kubectl-1.20              1.20.15    Production-Grade Container Scheduling and Management (v1.20)
 kubectl-1.21              1.21.14    Production-Grade Container Scheduling and Management (v1.21)
-kubectl-1.22              1.22.16    Production-Grade Container Scheduling and Management (v1.22)
+kubectl-1.22              1.22.17    Production-Grade Container Scheduling and Management (v1.22)
 kubectl-1.23              1.23.15    Production-Grade Container Scheduling and Management (v1.23)
 kubectl-1.24              1.24.8     Production-Grade Container Scheduling and Management (v1.24)
 kubectl-1.25              1.25.5     Production-Grade Container Scheduling and Management (v1.25)
