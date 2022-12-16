@@ -137,3 +137,4 @@ update/%:
 	rm -f vendor/$*/VERSION
 	make -C vendor/$* update
 	make readme
+
