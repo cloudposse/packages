@@ -3,7 +3,7 @@
 | ------------ | ------- | ----------- |
 [![amazon-ecr-credential-helper](https://github.com/cloudposse/packages/workflows/amazon-ecr-credential-helper/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aamazon-ecr-credential-helper) | 0.6.0      | Automatically gets credentials for Amazon ECR on docker push/docker pull
 [![amtool](https://github.com/cloudposse/packages/workflows/amtool/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aamtool) | 0.24.0     | Tool for interacting with the Alertmanager API
-[![argocd](https://github.com/cloudposse/packages/workflows/argocd/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aargocd) | 2.5.4      | Declarative GitOpts for Kubernetes
+[![argocd](https://github.com/cloudposse/packages/workflows/argocd/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aargocd) | 2.5.5      | Declarative GitOpts for Kubernetes
 [![assume-role](https://github.com/cloudposse/packages/workflows/assume-role/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aassume-role) | 0.3.2      | Easily assume AWS roles in your terminal.
 [![atlantis](https://github.com/cloudposse/packages/workflows/atlantis/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aatlantis) | 0.21.0     | Terraform For Teams
 [![atmos](https://github.com/cloudposse/packages/workflows/atmos/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aatmos) | 1.18.0     | Universal Tool for DevOps and Cloud Automation
@@ -21,7 +21,7 @@
 [![consul](https://github.com/cloudposse/packages/workflows/consul/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aconsul) | 1.14.3     | Hashicorp consul
 [![ctop](https://github.com/cloudposse/packages/workflows/ctop/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Actop) | 0.7.7      | Top-like interface for container metrics
 [![direnv](https://github.com/cloudposse/packages/workflows/direnv/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Adirenv) | 2.32.2     | Unclutter your .profile
-[![doctl](https://github.com/cloudposse/packages/workflows/doctl/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Adoctl) | 1.90.0     | A command line tool for DigitalOcean services
+[![doctl](https://github.com/cloudposse/packages/workflows/doctl/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Adoctl) | 1.91.0     | A command line tool for DigitalOcean services
 [![duffle](https://github.com/cloudposse/packages/workflows/duffle/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aduffle) | 0.3.5b1    | CNAB installer
 [![ec2-instance-selector](https://github.com/cloudposse/packages/workflows/ec2-instance-selector/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aec2-instance-selector) | 2.4.0      | A CLI tool and go library which recommends instance types based on resource criteria like vcpus and memory
 [![emailcli](https://github.com/cloudposse/packages/workflows/emailcli/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aemailcli) | 1.0.3      | Command line email sending client written in Go.
@@ -54,7 +54,7 @@
 [![jp](https://github.com/cloudposse/packages/workflows/jp/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ajp) | 0.2.1      | Command line interface to JMESPath
 [![jq](https://github.com/cloudposse/packages/workflows/jq/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ajq) | 1.6.0      | Command-line JSON processor
 [![json2hcl](https://github.com/cloudposse/packages/workflows/json2hcl/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ajson2hcl) | 0.1.1      | Convert JSON to HCL, and vice versa
-[![jx](https://github.com/cloudposse/packages/workflows/jx/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ajx) | 3.10.19    | Jenkins-X
+[![jx](https://github.com/cloudposse/packages/workflows/jx/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ajx) | 3.10.20    | Jenkins-X
 [![k3d](https://github.com/cloudposse/packages/workflows/k3d/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ak3d) | 5.4.6      | Little helper to run Rancher Lab's k3s in Docker
 [![k6](https://github.com/cloudposse/packages/workflows/k6/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ak6) | 0.41.0     | A modern load testing tool, using Go and JavaScript - https://k6.io
 [![k9s](https://github.com/cloudposse/packages/workflows/k9s/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ak9s) | 0.26.7     | Kubernetes CLI To Manage Your Clusters In Style
