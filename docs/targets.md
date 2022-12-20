@@ -41,7 +41,7 @@ go-jsonnet                0.19.1     This an implementation of Jsonnet in pure G
 gomplate                  3.11.3     A flexible commandline tool for template rendering. Supports lots of local and remote datasources.
 gonsul                    1.0.2      A stand-alone alternative to git2consul 
 goofys                    0.24.0     a high-performance, POSIX-ish Amazon S3 file system written in Go
-gosu                      1.14.0     Simple Go-based setuid+setgid+setgroups+exec
+gosu                      1.15.0     Simple Go-based setuid+setgid+setgroups+exec
 gotop                     3.0.0      A terminal based graphical activity monitor inspired by gtop and vtop
 grpcurl                   1.8.7      Like cURL, but for gRPC: Command-line tool for interacting with gRPC servers
 hcledit                   0.2.6      A command line editor for HCL
