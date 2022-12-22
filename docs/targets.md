@@ -3,26 +3,26 @@
 ```text
 amazon-ecr-credential-helper 0.6.0      Automatically gets credentials for Amazon ECR on docker push/docker pull
 amtool                    0.24.0     Tool for interacting with the Alertmanager API
-argocd                    2.5.4      Declarative GitOpts for Kubernetes
+argocd                    2.5.5      Declarative GitOpts for Kubernetes
 assume-role               0.3.2      Easily assume AWS roles in your terminal.
 atlantis                  0.21.0     Terraform For Teams
-atmos                     1.16.0     Universal Tool for DevOps and Cloud Automation
+atmos                     1.18.0     Universal Tool for DevOps and Cloud Automation
 awless                    0.1.11     A Mighty CLI for AWS
-aws-iam-authenticator     0.5.12     A tool to use AWS IAM credentials to authenticate to a Kubernetes cluster
+aws-iam-authenticator     0.6.2      A tool to use AWS IAM credentials to authenticate to a Kubernetes cluster
 aws-okta                  OBSOLETE   aws-okta allows users to authenticate with AWS using Okta credentials
-aws-vault                 6.6.0      A vault for securely storing and accessing AWS credentials in development environments
+aws-vault                 6.6.1      A vault for securely storing and accessing AWS credentials in development environments
 cfssl                     1.6.3      Cloudflare's PKI and TLS toolkit
 cfssljson                 1.6.3      Cloudflare's PKI and TLS toolkit json parser
 chamber                   2.11.0     CLI for managing secrets
 cli53                     0.8.18     Command line tool for Amazon Route 53
-cloudflared               2022.11.1  Argo Tunnel client
+cloudflared               2022.12.1  Argo Tunnel client
 cloudposse-atlantis       0.9.0.3    Terraform For Teams, enhanced by Cloud Posse
 codefresh                 0.81.4     Codefresh CLI
-conftest                  0.36.0     Test your configuration files using Open Policy Agent
+conftest                  0.37.0     Test your configuration files using Open Policy Agent
 consul                    1.14.3     Hashicorp consul
 ctop                      0.7.7      Top-like interface for container metrics
 direnv                    2.32.2     Unclutter your .profile
-doctl                     1.90.0     A command line tool for DigitalOcean services
+doctl                     1.91.0     A command line tool for DigitalOcean services
 duffle                    0.3.5b1    CNAB installer
 ec2-instance-selector     2.4.0      A CLI tool and go library which recommends instance types based on resource criteria like vcpus and memory
 emailcli                  1.0.3      Command line email sending client written in Go.
@@ -41,7 +41,7 @@ go-jsonnet                0.19.1     This an implementation of Jsonnet in pure G
 gomplate                  3.11.3     A flexible commandline tool for template rendering. Supports lots of local and remote datasources.
 gonsul                    1.0.2      A stand-alone alternative to git2consul 
 goofys                    0.24.0     a high-performance, POSIX-ish Amazon S3 file system written in Go
-gosu                      1.14.0     Simple Go-based setuid+setgid+setgroups+exec
+gosu                      1.16.0     Simple Go-based setuid+setgid+setgroups+exec
 gotop                     3.0.0      A terminal based graphical activity monitor inspired by gtop and vtop
 grpcurl                   1.8.7      Like cURL, but for gRPC: Command-line tool for interacting with gRPC servers
 hcledit                   0.2.6      A command line editor for HCL
@@ -55,9 +55,9 @@ infracost                 0.10.15    Cloud cost estimates for Terraform
 jp                        0.2.1      Command line interface to JMESPath
 jq                        1.6.0      Command-line JSON processor
 json2hcl                  0.1.1      Convert JSON to HCL, and vice versa
-jx                        3.10.19    Jenkins-X
+jx                        3.10.21    Jenkins-X
 k3d                       5.4.6      Little helper to run Rancher Lab's k3s in Docker
-k6                        0.41.0     A modern load testing tool, using Go and JavaScript - https://k6.io
+k6                        0.42.0     A modern load testing tool, using Go and JavaScript - https://k6.io
 k9s                       0.26.7     Kubernetes CLI To Manage Your Clusters In Style
 katafygio                 0.8.3      K8s continuous backup to git
 kfctl                     1.2.0      Machine Learning Toolkit for Kubernetes
@@ -88,14 +88,14 @@ lectl                     0.21.0     Script to check issued certificates by Let'
 minikube                  1.28.0     Run Kubernetes locally
 misspell                  0.3.4      Correct commonly misspelled English words in source files
 nomad                     OBSOLETE   Hashicorp nomad
-opa                       0.47.3     An open source project to policy-enable your service.
+opa                       0.47.4     An open source project to policy-enable your service.
 pack                      0.28.0     Create cloud native Buildpacks
 packer                    1.8.5      Packer is a tool for creating identical machine images for multiple platforms from a single source configuration.
 pandoc                    2.19.2     Universal markup converter
 pgmetrics                 1.14.0     Postgres metrics
 pluto                     5.11.2     A cli tool to help discover deprecated apiVersions in Kubernetes
 popeye                    0.10.1     A Kubernetes cluster resource sanitizer
-promtool                  2.40.7     Prometheus CLI tool
+promtool                  2.41.0     Prometheus CLI tool
 rainbow-text              1.2.1      Tasty rainbows for your terminal! (lolcat clone)
 rakkess                   0.5.0      Review Access - kubectl plugin to show an access matrix for all available resources
 rancher                   2.7.0      Rancher CLI
@@ -104,12 +104,12 @@ retry                     OBSOLETE   ♻️ Functional mechanism based on channe
 saml2aws                  2.36.2     CLI tool which enables you to login and retrieve AWS temporary credentials using a SAML IDP
 scenery                   0.1.5      A Terraform plan output prettifier
 sentinel                  OBSOLETE   Hashicorp sentinel
-sentry-cli                2.10.0     A command line utility to work with Sentry.
+sentry-cli                2.11.0     A command line utility to work with Sentry.
 shellcheck                0.9.0      ShellCheck, a static analysis tool for shell scripts
 shfmt                     3.6.0      A shell parser, formatter and interpreter (POSIX/Bash/mksh)
 slack-notifier            0.4.0      Command line utility to send messages with attachments to Slack channels via Incoming Webhooks
 sops                      3.7.3      Secrets management stinks, use some sops!
-spacectl                  0.15.1     [Spacelift.io](https://spacelift.io/) client and CLI
+spacectl                  0.16.0     [Spacelift.io](https://spacelift.io/) client and CLI
 spotctl                   0.26.0     A unified CLI to manage your [Spot](https://spot.io/) resources.
 sshm                      1.2.2      Easy connect on EC2 instances thanks to AWS System Manager Agent
 stern                     1.22.0     ⎈ Multi pod and container log tailing for Kubernetes
@@ -146,9 +146,9 @@ variant                   0.38.0     Variant is a Universal CLI tool that works 
 variant2                  0.38.0     Second major version of Variant, a Universal CLI tool that works like a task runner
 vault                     1.12.2     Hashicorp vault
 vendir                    0.32.2      Easy way to vendor portions of git repos, github releases, helm charts, docker image contents, etc. declaratively.
-venona                    1.9.2      Codefresh runtime-environment agent
+venona                    1.9.4      Codefresh runtime-environment agent
 vert                      0.1.0      Simple CLI for comparing two or more versions
 yajsv                     1.4.1      Yet Another JSON Schema Validator [CLI]
-yq                        4.30.5     yq is a portable command-line YAML processor
+yq                        4.30.6     yq is a portable command-line YAML processor
 ```
 <!-- markdownlint-restore -->
