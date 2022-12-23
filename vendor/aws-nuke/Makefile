@@ -12,4 +12,4 @@ test:
 	$(PACKAGE_EXE) version
 
 package/prepare::
-	mv src/$(PACKAGE_REPO_NAME)-v$(PACKAGE_VERSION)-$(OS)-$(ARCH)/$(PACKAGE_EXE) src
+	mv $${APK_TMP_DIR}/src/$(PACKAGE_REPO_NAME)-v$(PACKAGE_VERSION)-$(OS)-$(ARCH) $${APK_TMP_DIR}/src/$(PACKAGE_NAME)
