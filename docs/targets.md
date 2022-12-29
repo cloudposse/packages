@@ -9,12 +9,14 @@ atlantis                  0.21.0     Terraform For Teams
 atmos                     1.18.0     Universal Tool for DevOps and Cloud Automation
 awless                    0.1.11     A Mighty CLI for AWS
 aws-iam-authenticator     0.6.2      A tool to use AWS IAM credentials to authenticate to a Kubernetes cluster
+aws-nuke                  2.21.2     A highly configurable way to wipe non-prod aws accounts. WARNING do not use in prod
 aws-okta                  OBSOLETE   aws-okta allows users to authenticate with AWS using Okta credentials
 aws-vault                 6.6.1      A vault for securely storing and accessing AWS credentials in development environments
 cfssl                     1.6.3      Cloudflare's PKI and TLS toolkit
 cfssljson                 1.6.3      Cloudflare's PKI and TLS toolkit json parser
 chamber                   2.11.0     CLI for managing secrets
 cli53                     0.8.18     Command line tool for Amazon Route 53
+cloud-nuke                0.22.1     Tool for wiping an aws account DANGER absolutely do not use in production
 cloudflared               2022.12.1  Argo Tunnel client
 cloudposse-atlantis       0.9.0.3    Terraform For Teams, enhanced by Cloud Posse
 codefresh                 0.81.4     Codefresh CLI

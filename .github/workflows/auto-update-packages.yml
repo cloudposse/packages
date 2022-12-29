@@ -28,11 +28,13 @@ jobs:
         - atmos
         - awless
         - aws-iam-authenticator
+        - aws-nuke
         - aws-vault
         - cfssl
         - cfssljson
         - chamber
         - cli53
+        - cloud-nuke
         - cloudflared
         - codefresh
         - conftest
