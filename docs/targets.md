@@ -2,19 +2,21 @@
 ## Makefile Targets
 ```text
 amazon-ecr-credential-helper 0.6.0      Automatically gets credentials for Amazon ECR on docker push/docker pull
-amtool                    0.24.0     Tool for interacting with the Alertmanager API
+amtool                    0.25.0     Tool for interacting with the Alertmanager API
 argocd                    2.5.5      Declarative GitOpts for Kubernetes
 assume-role               0.3.2      Easily assume AWS roles in your terminal.
 atlantis                  0.21.0     Terraform For Teams
 atmos                     1.18.0     Universal Tool for DevOps and Cloud Automation
 awless                    0.1.11     A Mighty CLI for AWS
 aws-iam-authenticator     0.6.2      A tool to use AWS IAM credentials to authenticate to a Kubernetes cluster
+aws-nuke                  2.21.2     A highly configurable way to wipe non-prod aws accounts. WARNING do not use in prod
 aws-okta                  OBSOLETE   aws-okta allows users to authenticate with AWS using Okta credentials
 aws-vault                 6.6.1      A vault for securely storing and accessing AWS credentials in development environments
 cfssl                     1.6.3      Cloudflare's PKI and TLS toolkit
 cfssljson                 1.6.3      Cloudflare's PKI and TLS toolkit json parser
 chamber                   2.11.0     CLI for managing secrets
 cli53                     0.8.18     Command line tool for Amazon Route 53
+cloud-nuke                0.22.1     Tool for wiping an aws account DANGER absolutely do not use in production
 cloudflared               2022.12.1  Argo Tunnel client
 cloudposse-atlantis       0.9.0.3    Terraform For Teams, enhanced by Cloud Posse
 codefresh                 0.81.4     Codefresh CLI
@@ -31,9 +33,9 @@ fargate                   0.3.2      CLI for AWS Fargate
 fetch                     0.4.5      fetch makes it easy to download files, folders, and release assets from a specific public git commit, branch, or tag
 figurine                  1.3.0      Print your name in style
 fzf                       0.23.1     A command-line fuzzy finder
-gh                        2.20.2     The GitHub CLI
+gh                        2.21.1     The GitHub CLI
 ghr                       0.16.0     Upload multiple artifacts to GitHub Releases in parallel
-github-commenter          0.16.1     Command line utility for creating GitHub comments on Commits, Pull Request Reviews or Issues
+github-commenter          0.16.2     Command line utility for creating GitHub comments on Commits, Pull Request Reviews or Issues
 github-release            0.10.0     Commandline app to create and edit releases on Github (and upload artifacts)
 github-status-updater     0.7.0      Command line utility for updating GitHub commit statuses and enabling required status checks for pull requests
 gitleaks                  1.2.0      Audit git repos for secrets 🔑
@@ -50,12 +52,12 @@ helm2                     2.17.0     The Kubernetes Package Manager
 helm3                     3.10.3     The Kubernetes Package Manager
 helmfile                  0.144.0    Deploy Kubernetes Helm Charts
 htmltest                  0.17.0     :white_check_mark: Test generated HTML for problems
-hugo                      0.108.0    The world’s fastest framework for building websites.
+hugo                      0.109.0    The world’s fastest framework for building websites.
 infracost                 0.10.15    Cloud cost estimates for Terraform
 jp                        0.2.1      Command line interface to JMESPath
 jq                        1.6.0      Command-line JSON processor
 json2hcl                  0.1.1      Convert JSON to HCL, and vice versa
-jx                        3.10.21    Jenkins-X
+jx                        3.10.30    Jenkins-X
 k3d                       5.4.6      Little helper to run Rancher Lab's k3s in Docker
 k6                        0.42.0     A modern load testing tool, using Go and JavaScript - https://k6.io
 k9s                       0.26.7     Kubernetes CLI To Manage Your Clusters In Style
@@ -109,12 +111,12 @@ shellcheck                0.9.0      ShellCheck, a static analysis tool for shel
 shfmt                     3.6.0      A shell parser, formatter and interpreter (POSIX/Bash/mksh)
 slack-notifier            0.4.0      Command line utility to send messages with attachments to Slack channels via Incoming Webhooks
 sops                      3.7.3      Secrets management stinks, use some sops!
-spacectl                  0.16.0     [Spacelift.io](https://spacelift.io/) client and CLI
+spacectl                  0.17.1     [Spacelift.io](https://spacelift.io/) client and CLI
 spotctl                   0.26.0     A unified CLI to manage your [Spot](https://spot.io/) resources.
 sshm                      1.2.2      Easy connect on EC2 instances thanks to AWS System Manager Agent
 stern                     1.22.0     ⎈ Multi pod and container log tailing for Kubernetes
 sudosh                    0.3.0      Shell wrapper to run a login shell with `sudo` as the current user for the purpose of audit logging
-teleport                  11.1.2     Secure Access for Developers that doesn't get in the way.
+teleport                  11.1.4     Secure Access for Developers that doesn't get in the way.
 teleport-4.2              4.2.12     Privileged access management for elastic infrastructure.
 teleport-4.3              4.3.10     Privileged access management for elastic infrastructure.
 teleport-4.4              4.4.12     Privileged access management for elastic infrastructure.
@@ -135,18 +137,18 @@ terraform_0.13            0.13.7     Terraform (Deprecated package. Use terrafor
 terragrunt                0.42.5     Terragrunt is a thin wrapper for Terraform that provides extra tools for working with multiple Terraform modules.
 terrahelp                 0.7.5      Terrahelp is as a command line utility that provides useful tricks like masking of terraform output.
 tfenv                     0.4.0      Transform environment variables for use with Terraform (e.g. `HOSTNAME` ⇨ `TF_VAR_hostname`)
-tflint                    0.43.0     A Pluggable Terraform Linter
+tflint                    0.44.1     A Pluggable Terraform Linter
 tfmask                    0.7.0      Terraform utility to mask select output from `terraform plan` and `terraform apply`
 tfschema                  0.7.5      A schema inspector for Terraform providers
 tfsec                     1.28.1     Security scanner for your Terraform code
 thanos                    0.29.0     Highly available Prometheus setup with long term storage capabilities. CNCF Sandbox project.
-trivy                     0.35.0     A Simple and Comprehensive Vulnerability Scanner for Containers, Suitable for CI
+trivy                     0.36.0     A Simple and Comprehensive Vulnerability Scanner for Containers, Suitable for CI
 turf                      0.18.0     Turf is Cloud Posse's command-line automation helper.
 variant                   0.38.0     Variant is a Universal CLI tool that works like a task runner
 variant2                  0.38.0     Second major version of Variant, a Universal CLI tool that works like a task runner
 vault                     1.12.2     Hashicorp vault
 vendir                    0.32.2      Easy way to vendor portions of git repos, github releases, helm charts, docker image contents, etc. declaratively.
-venona                    1.9.4      Codefresh runtime-environment agent
+venona                    1.9.5      Codefresh runtime-environment agent
 vert                      0.1.0      Simple CLI for comparing two or more versions
 yajsv                     1.4.1      Yet Another JSON Schema Validator [CLI]
 yq                        4.30.6     yq is a portable command-line YAML processor

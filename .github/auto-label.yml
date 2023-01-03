@@ -44,6 +44,9 @@ vendor/awless:
 vendor/aws-iam-authenticator:
 - any: ["vendor/aws-iam-authenticator/**"]
   all: ["!bin/**", "!tasks/**"]
+vendor/aws-nuke:
+- any: ["vendor/aws-nuke/**"]
+  all: ["!bin/**", "!tasks/**"]
 vendor/aws-okta:
 - any: ["vendor/aws-okta/**"]
   all: ["!bin/**", "!tasks/**"]
@@ -61,6 +64,9 @@ vendor/chamber:
   all: ["!bin/**", "!tasks/**"]
 vendor/cli53:
 - any: ["vendor/cli53/**"]
+  all: ["!bin/**", "!tasks/**"]
+vendor/cloud-nuke:
+- any: ["vendor/cloud-nuke/**"]
   all: ["!bin/**", "!tasks/**"]
 vendor/cloudflared:
 - any: ["vendor/cloudflared/**"]
