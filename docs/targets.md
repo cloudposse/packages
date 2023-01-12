@@ -3,10 +3,10 @@
 ```text
 amazon-ecr-credential-helper 0.6.0      Automatically gets credentials for Amazon ECR on docker push/docker pull
 amtool                    0.25.0     Tool for interacting with the Alertmanager API
-argocd                    2.5.5      Declarative GitOpts for Kubernetes
+argocd                    2.5.6      Declarative GitOpts for Kubernetes
 assume-role               0.3.2      Easily assume AWS roles in your terminal.
-atlantis                  0.21.0     Terraform For Teams
-atmos                     1.18.0     Universal Tool for DevOps and Cloud Automation
+atlantis                  0.22.2     Terraform For Teams
+atmos                     1.21.0     Universal Tool for DevOps and Cloud Automation
 awless                    0.1.11     A Mighty CLI for AWS
 aws-iam-authenticator     0.6.2      A tool to use AWS IAM credentials to authenticate to a Kubernetes cluster
 aws-nuke                  2.21.2     A highly configurable way to wipe non-prod aws accounts. WARNING do not use in prod
@@ -19,12 +19,12 @@ cli53                     0.8.18     Command line tool for Amazon Route 53
 cloud-nuke                0.22.1     Tool for wiping an aws account DANGER absolutely do not use in production
 cloudflared               2022.12.1  Argo Tunnel client
 cloudposse-atlantis       0.9.0.3    Terraform For Teams, enhanced by Cloud Posse
-codefresh                 0.81.4     Codefresh CLI
-conftest                  0.37.0     Test your configuration files using Open Policy Agent
+codefresh                 0.81.5     Codefresh CLI
+conftest                  0.38.0     Test your configuration files using Open Policy Agent
 consul                    1.14.3     Hashicorp consul
 ctop                      0.7.7      Top-like interface for container metrics
 direnv                    2.32.2     Unclutter your .profile
-doctl                     1.91.0     A command line tool for DigitalOcean services
+doctl                     1.92.0     A command line tool for DigitalOcean services
 duffle                    0.3.5b1    CNAB installer
 ec2-instance-selector     2.4.0      A CLI tool and go library which recommends instance types based on resource criteria like vcpus and memory
 emailcli                  1.0.3      Command line email sending client written in Go.
@@ -33,7 +33,7 @@ fargate                   0.3.2      CLI for AWS Fargate
 fetch                     0.4.5      fetch makes it easy to download files, folders, and release assets from a specific public git commit, branch, or tag
 figurine                  1.3.0      Print your name in style
 fzf                       0.23.1     A command-line fuzzy finder
-gh                        2.21.1     The GitHub CLI
+gh                        2.21.2     The GitHub CLI
 ghr                       0.16.0     Upload multiple artifacts to GitHub Releases in parallel
 github-commenter          0.16.2     Command line utility for creating GitHub comments on Commits, Pull Request Reviews or Issues
 github-release            0.10.0     Commandline app to create and edit releases on Github (and upload artifacts)
@@ -57,7 +57,7 @@ infracost                 0.10.15    Cloud cost estimates for Terraform
 jp                        0.2.1      Command line interface to JMESPath
 jq                        1.6.0      Command-line JSON processor
 json2hcl                  0.1.1      Convert JSON to HCL, and vice versa
-jx                        3.10.30    Jenkins-X
+jx                        3.10.37    Jenkins-X
 k3d                       5.4.6      Little helper to run Rancher Lab's k3s in Docker
 k6                        0.42.0     A modern load testing tool, using Go and JavaScript - https://k6.io
 k9s                       0.26.7     Kubernetes CLI To Manage Your Clusters In Style
@@ -90,12 +90,12 @@ lectl                     0.21.0     Script to check issued certificates by Let'
 minikube                  1.28.0     Run Kubernetes locally
 misspell                  0.3.4      Correct commonly misspelled English words in source files
 nomad                     OBSOLETE   Hashicorp nomad
-opa                       0.47.4     An open source project to policy-enable your service.
+opa                       0.48.0     An open source project to policy-enable your service.
 pack                      0.28.0     Create cloud native Buildpacks
 packer                    1.8.5      Packer is a tool for creating identical machine images for multiple platforms from a single source configuration.
 pandoc                    2.19.2     Universal markup converter
 pgmetrics                 1.14.0     Postgres metrics
-pluto                     5.11.2     A cli tool to help discover deprecated apiVersions in Kubernetes
+pluto                     5.12.0     A cli tool to help discover deprecated apiVersions in Kubernetes
 popeye                    0.10.1     A Kubernetes cluster resource sanitizer
 promtool                  2.41.0     Prometheus CLI tool
 rainbow-text              1.2.1      Tasty rainbows for your terminal! (lolcat clone)
@@ -116,39 +116,39 @@ spotctl                   0.26.0     A unified CLI to manage your [Spot](https:/
 sshm                      1.2.2      Easy connect on EC2 instances thanks to AWS System Manager Agent
 stern                     1.22.0     ⎈ Multi pod and container log tailing for Kubernetes
 sudosh                    0.3.0      Shell wrapper to run a login shell with `sudo` as the current user for the purpose of audit logging
-teleport                  11.1.4     Secure Access for Developers that doesn't get in the way.
+teleport                  11.2.1     Secure Access for Developers that doesn't get in the way.
 teleport-4.2              4.2.12     Privileged access management for elastic infrastructure.
 teleport-4.3              4.3.10     Privileged access management for elastic infrastructure.
 teleport-4.4              4.4.12     Privileged access management for elastic infrastructure.
 teleport-5.0              5.0.2      Secure Access for Developers that doesn't get in the way.
-terraform                 1.3.6      Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
+terraform                 1.3.7      Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-0.11            0.11.15    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-0.12            0.12.31    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-0.13            0.13.7     Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-0.14            0.14.11    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-0.15            0.15.5     Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
-terraform-1               1.3.6      Terraform enables you to safely and predictably create, change, and improve infrastructure.
+terraform-1               1.3.7      Terraform enables you to safely and predictably create, change, and improve infrastructure.
 terraform-config-inspect  0.0.20211115214459+git90acf1ca460f A helper library for shallow inspection of Terraform configurations
 terraform-docs            0.16.0     Generate docs from terraform modules
 terraform-module-versions 3.1.13     CLI tool that checks Terraform code for module updates. Single binary, no dependencies. linux, osx, windows.
 terraform_0.11            0.11.15    Terraform (Deprecated package. Use terraform-0.11 instead)
 terraform_0.12            0.12.31    Terraform (Deprecated package. Use terraform-0.12 instead)
 terraform_0.13            0.13.7     Terraform (Deprecated package. Use terraform-0.13 instead)
-terragrunt                0.42.5     Terragrunt is a thin wrapper for Terraform that provides extra tools for working with multiple Terraform modules.
+terragrunt                0.42.7     Terragrunt is a thin wrapper for Terraform that provides extra tools for working with multiple Terraform modules.
 terrahelp                 0.7.5      Terrahelp is as a command line utility that provides useful tricks like masking of terraform output.
 tfenv                     0.4.0      Transform environment variables for use with Terraform (e.g. `HOSTNAME` ⇨ `TF_VAR_hostname`)
 tflint                    0.44.1     A Pluggable Terraform Linter
 tfmask                    0.7.0      Terraform utility to mask select output from `terraform plan` and `terraform apply`
 tfschema                  0.7.5      A schema inspector for Terraform providers
 tfsec                     1.28.1     Security scanner for your Terraform code
-thanos                    0.29.0     Highly available Prometheus setup with long term storage capabilities. CNCF Sandbox project.
-trivy                     0.36.0     A Simple and Comprehensive Vulnerability Scanner for Containers, Suitable for CI
+thanos                    0.30.1     Highly available Prometheus setup with long term storage capabilities. CNCF Sandbox project.
+trivy                     0.36.1     A Simple and Comprehensive Vulnerability Scanner for Containers, Suitable for CI
 turf                      0.18.0     Turf is Cloud Posse's command-line automation helper.
 variant                   0.38.0     Variant is a Universal CLI tool that works like a task runner
 variant2                  0.38.0     Second major version of Variant, a Universal CLI tool that works like a task runner
 vault                     1.12.2     Hashicorp vault
 vendir                    0.32.2      Easy way to vendor portions of git repos, github releases, helm charts, docker image contents, etc. declaratively.
-venona                    1.9.5      Codefresh runtime-environment agent
+venona                    1.9.6      Codefresh runtime-environment agent
 vert                      0.1.0      Simple CLI for comparing two or more versions
 yajsv                     1.4.1      Yet Another JSON Schema Validator [CLI]
 yq                        4.30.6     yq is a portable command-line YAML processor
