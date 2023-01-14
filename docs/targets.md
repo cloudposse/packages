@@ -14,7 +14,7 @@ aws-okta                  OBSOLETE   aws-okta allows users to authenticate with 
 aws-vault                 6.6.1      A vault for securely storing and accessing AWS credentials in development environments
 cfssl                     1.6.3      Cloudflare's PKI and TLS toolkit
 cfssljson                 1.6.3      Cloudflare's PKI and TLS toolkit json parser
-chamber                   2.11.0     CLI for managing secrets
+chamber                   2.11.1     CLI for managing secrets
 cli53                     0.8.18     Command line tool for Amazon Route 53
 cloud-nuke                0.22.1     Tool for wiping an aws account DANGER absolutely do not use in production
 cloudflared               2022.12.1  Argo Tunnel client
