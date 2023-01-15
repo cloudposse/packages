@@ -151,6 +151,6 @@ vendir                    0.32.2      Easy way to vendor portions of git repos, 
 venona                    1.9.6      Codefresh runtime-environment agent
 vert                      0.1.0      Simple CLI for comparing two or more versions
 yajsv                     1.4.1      Yet Another JSON Schema Validator [CLI]
-yq                        4.30.7     yq is a portable command-line YAML processor
+yq                        4.30.8     yq is a portable command-line YAML processor
 ```
 <!-- markdownlint-restore -->
