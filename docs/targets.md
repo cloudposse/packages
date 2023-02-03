@@ -58,7 +58,7 @@ jp                        0.2.1      Command line interface to JMESPath
 jq                        1.6.0      Command-line JSON processor
 json2hcl                  0.1.1      Convert JSON to HCL, and vice versa
 jx                        3.10.41    Jenkins-X
-k3d                       5.4.6      Little helper to run Rancher Lab's k3s in Docker
+k3d                       5.4.7      Little helper to run Rancher Lab's k3s in Docker
 k6                        0.42.0     A modern load testing tool, using Go and JavaScript - https://k6.io
 k9s                       0.26.7     Kubernetes CLI To Manage Your Clusters In Style
 katafygio                 0.8.3      K8s continuous backup to git
