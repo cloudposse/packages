@@ -290,7 +290,7 @@ Here are some solutions to several common problems that may occur when adding a 
 | ------------ | ------- | ----------- |
 [![amazon-ecr-credential-helper](https://github.com/cloudposse/packages/workflows/amazon-ecr-credential-helper/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aamazon-ecr-credential-helper) | 0.6.0      | Automatically gets credentials for Amazon ECR on docker push/docker pull
 [![amtool](https://github.com/cloudposse/packages/workflows/amtool/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aamtool) | 0.25.0     | Tool for interacting with the Alertmanager API
-[![argocd](https://github.com/cloudposse/packages/workflows/argocd/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aargocd) | 2.6.0      | Declarative GitOpts for Kubernetes
+[![argocd](https://github.com/cloudposse/packages/workflows/argocd/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aargocd) | 2.6.1      | Declarative GitOpts for Kubernetes
 [![assume-role](https://github.com/cloudposse/packages/workflows/assume-role/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aassume-role) | 0.3.2      | Easily assume AWS roles in your terminal.
 [![atlantis](https://github.com/cloudposse/packages/workflows/atlantis/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aatlantis) | 0.22.3     | Terraform For Teams
 [![atmos](https://github.com/cloudposse/packages/workflows/atmos/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aatmos) | 1.26.1     | Universal Tool for DevOps and Cloud Automation
