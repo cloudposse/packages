@@ -95,7 +95,7 @@ pack                      0.28.0     Create cloud native Buildpacks
 packer                    1.8.5      Packer is a tool for creating identical machine images for multiple platforms from a single source configuration.
 pandoc                    3.0.1      Universal markup converter
 pgmetrics                 1.14.1     Postgres metrics
-pluto                     5.13.0     A cli tool to help discover deprecated apiVersions in Kubernetes
+pluto                     5.13.2     A cli tool to help discover deprecated apiVersions in Kubernetes
 popeye                    0.10.1     A Kubernetes cluster resource sanitizer
 promtool                  2.42.0     Prometheus CLI tool
 rainbow-text              1.2.1      Tasty rainbows for your terminal! (lolcat clone)
@@ -121,13 +121,13 @@ teleport-4.2              4.2.12     Privileged access management for elastic in
 teleport-4.3              4.3.10     Privileged access management for elastic infrastructure.
 teleport-4.4              4.4.12     Privileged access management for elastic infrastructure.
 teleport-5.0              5.0.2      Secure Access for Developers that doesn't get in the way.
-terraform                 1.3.7      Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
+terraform                 1.3.8      Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-0.11            0.11.15    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-0.12            0.12.31    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-0.13            0.13.7     Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-0.14            0.14.11    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-0.15            0.15.5     Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
-terraform-1               1.3.7      Terraform enables you to safely and predictably create, change, and improve infrastructure.
+terraform-1               1.3.8      Terraform enables you to safely and predictably create, change, and improve infrastructure.
 terraform-config-inspect  0.0.20211115214459+git90acf1ca460f A helper library for shallow inspection of Terraform configurations
 terraform-docs            0.16.0     Generate docs from terraform modules
 terraform-module-versions 3.1.13     CLI tool that checks Terraform code for module updates. Single binary, no dependencies. linux, osx, windows.
