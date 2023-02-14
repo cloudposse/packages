@@ -6,7 +6,7 @@ amtool                    0.25.0     Tool for interacting with the Alertmanager 
 argocd                    2.6.1      Declarative GitOpts for Kubernetes
 assume-role               0.3.2      Easily assume AWS roles in your terminal.
 atlantis                  0.22.3     Terraform For Teams
-atmos                     1.28.0     Universal Tool for DevOps and Cloud Automation
+atmos                     1.29.0     Universal Tool for DevOps and Cloud Automation
 awless                    0.1.11     A Mighty CLI for AWS
 aws-iam-authenticator     0.6.2      A tool to use AWS IAM credentials to authenticate to a Kubernetes cluster
 aws-nuke                  2.21.2     A highly configurable way to wipe non-prod aws accounts. WARNING do not use in prod
