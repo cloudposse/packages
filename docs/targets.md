@@ -19,7 +19,7 @@ cli53                     0.8.18     Command line tool for Amazon Route 53
 cloud-nuke                0.25.0     Tool for wiping an aws account DANGER absolutely do not use in production
 cloudflared               2023.2.1   Argo Tunnel client
 cloudposse-atlantis       0.9.0.3    Terraform For Teams, enhanced by Cloud Posse
-codefresh                 0.82.1     Codefresh CLI
+codefresh                 0.82.2     Codefresh CLI
 conftest                  0.39.0     Test your configuration files using Open Policy Agent
 consul                    1.14.4     Hashicorp consul
 ctop                      0.7.7      Top-like interface for container metrics
