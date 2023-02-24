@@ -15,7 +15,7 @@ aws-vault                 6.6.2      A vault for securely storing and accessing 
 cfssl                     1.6.3      Cloudflare's PKI and TLS toolkit
 cfssljson                 1.6.3      Cloudflare's PKI and TLS toolkit json parser
 chamber                   2.11.1     CLI for managing secrets
-cli53                     0.8.21     Command line tool for Amazon Route 53
+cli53                     0.8.22     Command line tool for Amazon Route 53
 cloud-nuke                0.25.0     Tool for wiping an aws account DANGER absolutely do not use in production
 cloudflared               2023.2.1   Argo Tunnel client
 cloudposse-atlantis       0.9.0.3    Terraform For Teams, enhanced by Cloud Posse
