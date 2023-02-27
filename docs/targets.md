@@ -6,7 +6,7 @@ amtool                    0.25.0     Tool for interacting with the Alertmanager 
 argocd                    2.6.2      Declarative GitOpts for Kubernetes
 assume-role               0.3.2      Easily assume AWS roles in your terminal.
 atlantis                  0.22.3     Terraform For Teams
-atmos                     1.29.0     Universal Tool for DevOps and Cloud Automation
+atmos                     1.30.0     Universal Tool for DevOps and Cloud Automation
 awless                    0.1.11     A Mighty CLI for AWS
 aws-iam-authenticator     0.6.2      A tool to use AWS IAM credentials to authenticate to a Kubernetes cluster
 aws-nuke                  2.21.2     A highly configurable way to wipe non-prod aws accounts. WARNING do not use in prod
@@ -15,13 +15,13 @@ aws-vault                 6.6.2      A vault for securely storing and accessing 
 cfssl                     1.6.3      Cloudflare's PKI and TLS toolkit
 cfssljson                 1.6.3      Cloudflare's PKI and TLS toolkit json parser
 chamber                   2.11.1     CLI for managing secrets
-cli53                     0.8.19     Command line tool for Amazon Route 53
+cli53                     0.8.22     Command line tool for Amazon Route 53
 cloud-nuke                0.25.0     Tool for wiping an aws account DANGER absolutely do not use in production
 cloudflared               2023.2.1   Argo Tunnel client
 cloudposse-atlantis       0.9.0.3    Terraform For Teams, enhanced by Cloud Posse
 codefresh                 0.82.3     Codefresh CLI
-conftest                  0.39.0     Test your configuration files using Open Policy Agent
-consul                    1.14.4     Hashicorp consul
+conftest                  0.39.1     Test your configuration files using Open Policy Agent
+consul                    1.15.0     Hashicorp consul
 ctop                      0.7.7      Top-like interface for container metrics
 direnv                    2.32.2     Unclutter your .profile
 doctl                     1.92.1     A command line tool for DigitalOcean services
@@ -40,7 +40,7 @@ github-release            0.10.0     Commandline app to create and edit releases
 github-status-updater     0.7.0      Command line utility for updating GitHub commit statuses and enabling required status checks for pull requests
 gitleaks                  1.2.0      Audit git repos for secrets 🔑
 go-jsonnet                0.19.1     This an implementation of Jsonnet in pure Go.
-gomplate                  3.11.3     A flexible commandline tool for template rendering. Supports lots of local and remote datasources.
+gomplate                  3.11.4     A flexible commandline tool for template rendering. Supports lots of local and remote datasources.
 gonsul                    1.0.2      A stand-alone alternative to git2consul 
 goofys                    0.24.0     a high-performance, POSIX-ish Amazon S3 file system written in Go
 gosu                      1.16.0     Simple Go-based setuid+setgid+setgroups+exec
@@ -57,9 +57,9 @@ infracost                 0.10.17    Cloud cost estimates for Terraform
 jp                        0.2.1      Command line interface to JMESPath
 jq                        1.6.0      Command-line JSON processor
 json2hcl                  0.1.1      Convert JSON to HCL, and vice versa
-jx                        3.10.45    Jenkins-X
+jx                        3.10.50    Jenkins-X
 k3d                       5.4.7      Little helper to run Rancher Lab's k3s in Docker
-k6                        0.43.0     A modern load testing tool, using Go and JavaScript - https://k6.io
+k6                        0.43.1     A modern load testing tool, using Go and JavaScript - https://k6.io
 k9s                       0.26.7     Kubernetes CLI To Manage Your Clusters In Style
 katafygio                 0.8.3      K8s continuous backup to git
 kfctl                     1.2.0      Machine Learning Toolkit for Kubernetes
@@ -90,7 +90,7 @@ lectl                     0.21.0     Script to check issued certificates by Let'
 minikube                  1.29.0     Run Kubernetes locally
 misspell                  0.3.4      Correct commonly misspelled English words in source files
 nomad                     OBSOLETE   Hashicorp nomad
-opa                       0.49.1     An open source project to policy-enable your service.
+opa                       0.49.2     An open source project to policy-enable your service.
 pack                      0.28.0     Create cloud native Buildpacks
 packer                    1.8.6      Packer is a tool for creating identical machine images for multiple platforms from a single source configuration.
 pandoc                    3.1        Universal markup converter
@@ -103,7 +103,7 @@ rakkess                   0.5.0      Review Access - kubectl plugin to show an a
 rancher                   2.7.0      Rancher CLI
 rbac-lookup               0.10.0     Find Kubernetes roles and cluster roles bound to any user, service account, or group name.
 retry                     OBSOLETE   ♻️ Functional mechanism based on channels to perform actions repetitively until successful.
-saml2aws                  2.36.3     CLI tool which enables you to login and retrieve AWS temporary credentials using a SAML IDP
+saml2aws                  2.36.4     CLI tool which enables you to login and retrieve AWS temporary credentials using a SAML IDP
 scenery                   0.1.5      A Terraform plan output prettifier
 sentinel                  OBSOLETE   Hashicorp sentinel
 sentry-cli                2.13.0     A command line utility to work with Sentry.
@@ -148,7 +148,7 @@ variant                   0.38.0     Variant is a Universal CLI tool that works 
 variant2                  0.38.0     Second major version of Variant, a Universal CLI tool that works like a task runner
 vault                     1.12.3     Hashicorp vault
 vendir                    0.32.5      Easy way to vendor portions of git repos, github releases, helm charts, docker image contents, etc. declaratively.
-venona                    1.9.9      Codefresh runtime-environment agent
+venona                    1.9.10     Codefresh runtime-environment agent
 vert                      0.1.0      Simple CLI for comparing two or more versions
 yajsv                     1.4.1      Yet Another JSON Schema Validator [CLI]
 yq                        4.31.1     yq is a portable command-line YAML processor
