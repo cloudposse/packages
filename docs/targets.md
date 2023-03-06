@@ -11,7 +11,7 @@ awless                    0.1.11     A Mighty CLI for AWS
 aws-iam-authenticator     0.6.2      A tool to use AWS IAM credentials to authenticate to a Kubernetes cluster
 aws-nuke                  2.21.2     A highly configurable way to wipe non-prod aws accounts. WARNING do not use in prod
 aws-okta                  OBSOLETE   aws-okta allows users to authenticate with AWS using Okta credentials
-aws-vault                 6.6.2      A vault for securely storing and accessing AWS credentials in development environments
+aws-vault                 7.0.0      A vault for securely storing and accessing AWS credentials in development environments
 cfssl                     1.6.3      Cloudflare's PKI and TLS toolkit
 cfssljson                 1.6.3      Cloudflare's PKI and TLS toolkit json parser
 chamber                   2.12.0     CLI for managing secrets
