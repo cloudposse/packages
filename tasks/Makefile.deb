@@ -27,9 +27,9 @@ $(DEB_PACKAGE): $(DEB_TMP_DIR)/$(PACKAGE_NAME)
 		-v $(DEB_PACKAGE_VERSION) --iteration $(DEB_PACKAGE_RELEASE) -C $(DEB_TMP_DIR) \
 		--prefix $${INSTALL_DIR:-/usr/bin} --deb-no-default-config-files $(DEB_FPM_EXTRA_ARGS) --package $@ .
 	@echo "Testing installation of $@"
-	apt-get install -y $@
+	apt-get install -y -q $@
 	$(MAKE) test
-	apt-get remove -y $(PACKAGE_NAME)
+	apt-get remove -y -q $(PACKAGE_NAME)
 
 .PHONY: deb deb_make_package deb_skip_package _deb_target _deb_settings/% deb/%
 
