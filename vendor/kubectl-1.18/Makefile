@@ -3,6 +3,9 @@ export MAJOR_VERSION = 1.18
 export PACKAGE_NAME = $(MASTER_PACKAGE_NAME)-$(MAJOR_VERSION)
 export PACKAGE_REPO_NAME = kubernetes
 
+# This version is past end-of-life and will no longer be updated
+export AUTO_UPDATE_ENABLED = false
+
 include ../../tasks/Makefile.vendor_includes
 
 # Package details

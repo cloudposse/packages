@@ -60,7 +60,7 @@ json2hcl                  0.1.1      Convert JSON to HCL, and vice versa
 jx                        3.10.69    Jenkins-X
 k3d                       5.4.8      Little helper to run Rancher Lab's k3s in Docker
 k6                        0.43.1     A modern load testing tool, using Go and JavaScript - https://k6.io
-k9s                       0.26.7     Kubernetes CLI To Manage Your Clusters In Style
+k9s                       0.27.0     Kubernetes CLI To Manage Your Clusters In Style
 katafygio                 0.8.3      K8s continuous backup to git
 kfctl                     1.2.0      Machine Learning Toolkit for Kubernetes
 kind                      0.17.0     A tool for running local Kubernetes clusters using Docker
@@ -82,6 +82,7 @@ kubectl-1.22              1.22.17    Production-Grade Container Scheduling and M
 kubectl-1.23              1.23.17    Production-Grade Container Scheduling and Management (v1.23)
 kubectl-1.24              1.24.11    Production-Grade Container Scheduling and Management (v1.24)
 kubectl-1.25              1.25.7     Production-Grade Container Scheduling and Management (v1.25)
+kubectl-1.26              1.26.0     Production-Grade Container Scheduling and Management (v1.26)
 kubectx                   0.9.4      Switch faster between clusters and namespaces in kubectl
 kubens                    0.9.4      Switch faster between clusters and namespaces in kubectl
 kubeval                   0.16.1     Validate your Kubernetes configuration files, supports multiple Kubernetes versions
