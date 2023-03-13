@@ -84,15 +84,13 @@ jobs:
         - kops
         - kubecron
         - kubectl
-        - kubectl-1.17
-        - kubectl-1.18
-        - kubectl-1.19
         - kubectl-1.20
         - kubectl-1.21
         - kubectl-1.22
         - kubectl-1.23
         - kubectl-1.24
         - kubectl-1.25
+        - kubectl-1.26
         - kubectx
         - kubens
         - kubeval
@@ -125,10 +123,6 @@ jobs:
         - stern
         - sudosh
         - teleport
-        - teleport-4.2
-        - teleport-4.3
-        - teleport-4.4
-        - teleport-5.0
         - terraform
         - terraform-0.11
         - terraform-0.12
@@ -193,7 +187,7 @@ jobs:
           make readme
 
       - name: Create Pull Request
-        uses: cloudposse/actions/github/create-pull-request@0.30.0
+        uses: cloudposse/actions/github/create-pull-request@0.32.0
         if: steps.update.outputs.package_version != steps.current.outputs.package_version
         with:
           token: ${{ secrets.GITHUB_BOT_TOKEN }}

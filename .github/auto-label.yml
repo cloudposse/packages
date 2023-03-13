@@ -260,6 +260,9 @@ vendor/kubectl-1.24:
 vendor/kubectl-1.25:
 - any: ["vendor/kubectl-1.25/**"]
   all: ["!bin/**", "!tasks/**"]
+vendor/kubectl-1.26:
+- any: ["vendor/kubectl-1.26/**"]
+  all: ["!bin/**", "!tasks/**"]
 vendor/kubectl:
 - any: ["vendor/kubectl/**"]
   all: ["!bin/**", "!tasks/**"]

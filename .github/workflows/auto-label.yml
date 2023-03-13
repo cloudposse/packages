@@ -5,8 +5,10 @@ jobs:
   components:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/labeler@v3
+    - uses: actions/labeler@v4
       with:
         repo-token: "${{ secrets.GITHUB_TOKEN }}"
         configuration-path: '.github/auto-label.yml'
-        sync-labels: true
+        # Set sync-labels to false, working around #112
+        # See https://github.com/actions/labeler/issues/112#issuecomment-1000491676
+        sync-labels: ''
