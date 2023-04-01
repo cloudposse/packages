@@ -5,25 +5,32 @@ DEB_PACKAGE_VERSION = $(subst -,~,$(PACKAGE_VERSION))
 # By convention, the first release of a Debian package is 1, not zero
 DEB_PACKAGE_RELEASE = $(shell echo $$(($(PACKAGE_RELEASE) + 1)))
 # Package managers require that every package file have a unique name.
-DEB_PACKAGE ?= $(DEB_PACKAGES_PATH)/$(PACKAGE_NAME)_$(DEB_PACKAGE_VERSION)-$(DEB_PACKAGE_RELEASE)_$(ARCH).deb
+DEB_PACKAGE ?= $(DEB_PACKAGES_PATH)/$(PACKAGE_NAME)_$(DEB_PACKAGE_VERSION)-$(DEB_PACKAGE_RELEASE)_$(DEB_DIST_ARCH).deb
 DEB_MAINTAINER ?= Cloud Posse <packages@cloudposse.com>
 DEB_FPM_EXTRA_ARGS ?=
 DEB_FPM_EXTRA_FILES ?=
 
 export DEB_TMP_DIR := $(realpath $(shell mktemp -d ../../tmp/build.XXXXXX))
+export DEB_OUT_TMP_DIR := $(realpath $(shell mktemp -d ../../tmp/build.XXXXXX))
+
+# MAKEFILE NOTE: Variable target names are evaluated at the time the target is read, not when it is invoked.
+# Therefore, since we need to use the architecture (and other dynamic variables) in the eventual
+# package name, we need to use a fixed target name for the build file and then rename it later.
 
 $(DEB_TMP_DIR)/$(PACKAGE_NAME): INSTALL_PATH=$(DEB_TMP_DIR)
 $(DEB_TMP_DIR)/$(PACKAGE_NAME): PATH:=$(DEB_TMP_DIR):$(PATH)
 $(DEB_TMP_DIR)/$(PACKAGE_NAME): install
 
-$(DEB_PACKAGE): DEB_FPM_EXTRA_ARGS += $(if $(wildcard $(PACKAGE_NAME).post-install),--after-install $(PACKAGE_NAME).post-install)
-$(DEB_PACKAGE): DEB_FPM_EXTRA_ARGS += $(if $(wildcard $(PACKAGE_NAME).post-deinstall),--after-remove $(PACKAGE_NAME).post-deinstall)
-$(DEB_PACKAGE): $(DEB_TMP_DIR)/$(PACKAGE_NAME)
-	mkdir -p $(DEB_PACKAGES_PATH)
+# MAKEFILE NOTE: Variable target names are evaluated at the time the target is read, not when it is invoked.
+# Therefore, since we need to use the architecture (and other dynamic variables) in the eventual
+# package name, we need to use a fixed target name for the build file and then rename it later.
+$(DEB_OUT_TMP_DIR)/package-tmp.deb: DEB_FPM_EXTRA_ARGS += $(if $(wildcard $(PACKAGE_NAME).post-install),--after-install $(PACKAGE_NAME).post-install)
+$(DEB_OUT_TMP_DIR)/package-tmp.deb: DEB_FPM_EXTRA_ARGS += $(if $(wildcard $(PACKAGE_NAME).post-deinstall),--after-remove $(PACKAGE_NAME).post-deinstall)
+$(DEB_OUT_TMP_DIR)/package-tmp.deb: $(DEB_TMP_DIR)/$(PACKAGE_NAME)
 	# Directory created on install will have permissions copied from source directory, so set source dir perms
 	chmod 755 $(DEB_TMP_DIR)
 	[ -z "$(DEB_FPM_EXTRA_FILES)" ] || cp -a $(DEB_FPM_EXTRA_FILES) $(DEB_TMP_DIR)
-	set -x; fpm --force -t deb --maintainer '$(DEB_MAINTAINER)' -s dir -a $(DIST_ARCH) -n $(PACKAGE_NAME) \
+	set -x; fpm --force -t deb --maintainer '$(DEB_MAINTAINER)' -s dir -a $(DEB_DIST_ARCH) -n $(PACKAGE_NAME) \
 		-v $(DEB_PACKAGE_VERSION) --iteration $(DEB_PACKAGE_RELEASE) -C $(DEB_TMP_DIR) \
 		--prefix $${INSTALL_DIR:-/usr/bin} --deb-no-default-config-files $(DEB_FPM_EXTRA_ARGS) --package $@ .
 	@echo "Testing installation of $@"
@@ -34,14 +41,19 @@ $(DEB_PACKAGE): $(DEB_TMP_DIR)/$(PACKAGE_NAME)
 
 .PHONY: deb deb_make_package deb_skip_package _deb_target _deb_settings/% deb/%
 
-deb-make-package: $(DEB_PACKAGE)
+deb-make-package: $(DEB_OUT_TMP_DIR)/package-tmp.deb
+	mkdir -p $(DEB_PACKAGES_PATH)
+	mv $(DEB_OUT_TMP_DIR)/package-tmp.deb $(DEB_PACKAGE)
 	@echo "Wrote $(DEB_PACKAGE)"
+	@[[ -f $(DEB_PACKAGE) ]] || echo 'ERROR: file $(DEB_PACKAGE) is missing!' >&2
+	@echo cleaning up temp dirs
+	rm -rf $(DEB_TMP_DIR) $(DEB_OUT_TMP_DIR)
 
 deb-skip-package:
-	@echo Debian packages disabled for $(PACKAGE_NAME)
+	@echo Debian $(DEB_DIST_ARCH) packages disabled for $(PACKAGE_NAME) build on $(HOST_GOARCH)
 
 # Pick which target to make (make, skip, disabled) based on settings
-_deb_target: $(shell $(LOCAL_BIN)/package-filter make-target deb $(PACKAGE_ENABLED) "$(PACKAGE_TYPES_DISABLED)")
+_deb_target: $(shell $(LOCAL_BIN)/package-filter make-target deb $(PACKAGE_ENABLED) "$(PACKAGE_TYPES_DISABLED)" "unknown" "$(HOST_GOARCH)" "$(PACKAGE_ARCHS_DISABLED)")
 
 # use _deb_settings to set Debian-specific settings, then _deb_target to find the right build target
 deb: _deb_settings/_deb_target
@@ -51,12 +63,13 @@ deb: _deb_settings/_deb_target
 deb/%: _deb_settings/%
 	@exit 0
 
-_deb_settings/%: DIST_ARCH_DETECTED = $(or $(PACKAGE_DIST_ARCH),$(ARCH))
-_deb_settings/%: DIST_ARCH = $(if $(subst x86_64,,$(DIST_ARCH_DETECTED)),$(DIST_ARCH_DETECTED),amd64)
+# Debian packages use the same architecture names as GOARCH, either amd64 or arm64
+_deb_settings/%: DEB_DIST_ARCH = $(or $(PACKAGE_DIST_ARCH),$(HOST_GOARCH))
 _deb_settings/%: DIST_PACKAGE_TYPE = deb
 _deb_settings/%: DIST_DISTRIBUTION = debian
 _deb_settings/%: %
 	@exit 0
 
+clean:: DEB_DIST_ARCH = $(or $(PACKAGE_DIST_ARCH),$(HOST_GOARCH))
 clean::
 	rm -f $(DEB_PACKAGE)

@@ -6,6 +6,9 @@ export DOWNLOAD_URL ?= https://github.com/$(VENDOR)/fargatecli/releases/download
 export APK_BUILD_TEMPLATE ?= APKBUILD.github-binary
 export APKBUILD_DEPENDS += libc6-compat
 
+# Package has been abandoned in favor of aws/copilot-cli
+
+export AUTO_UPDATE_ENABLED = false
 install:
 	$(CURL) -o - $(DOWNLOAD_URL) > $(TMP)/$(PACKAGE_NAME).zip
 	unzip -p $(TMP)/$(PACKAGE_NAME).zip $(PACKAGE_NAME) > $(INSTALL_PATH)/$(PACKAGE_NAME)

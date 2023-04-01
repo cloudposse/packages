@@ -1,5 +1,9 @@
 # Build Environment
 
+# As a rule, we build packages on the target platform (OS and CPU architecture)
+# so that we can test the installation of the packages and verify the executable works.
+
+
 # This gets the directory of the last Makefile opened, which here is the current one
 SELF_DIR := $(dir $(lastword $(MAKEFILE_LIST)))
 
@@ -29,14 +33,15 @@ SELF_DIR := $(dir $(lastword $(MAKEFILE_LIST)))
 #
 # Note: "?=" means set if unset and will not modify a variable that has been set, even if it is empty.
 # To allow a variable that has already been set to be set with ?= you must `undefine` it.
-export ARCH ?= amd64
+
 # Note: := means left hand var gets the value of the right hand vars as they are right now.
 # Setting HOST_* using := prevents a shell from being spawned every time it is referenced.
 # HOST_DISTRIBUTION is the distribution (e.g. alpine, debian, centos) of the running Docker image
 export HOST_DISTRIBUTION := $(shell [ -r /etc/os-release ] && . /etc/os-release || ID=darwin; echo $$ID)
 # DIST_DISTRIBUTION is the target distribution of the package. Default to host
 export DIST_DISTRIBUTION ?= $(HOST_DISTRIBUTION)
-# HOST_OS is the OS of the packaging Docker container
+# HOST_OS is the OS of the packaging Docker container forced to lower case,
+# which is same as Go language's GOOS and Docker's platform.os
 export HOST_OS := $(shell uname -s | tr '[:upper:]' '[:lower:'])
 # Setting OS = $(HOST_OS) gives us a way to conditionally set OS based on HOST_OS
 # while avoiding a recursive OS = $(OS) situation.
@@ -44,9 +49,16 @@ export HOST_OS := $(shell uname -s | tr '[:upper:]' '[:lower:'])
 export OS ?= $(HOST_OS)
 # DIST_OS is the designation of the target OS as specified in the package we create
 export DIST_OS ?= $(HOST_OS)
-export HOST_OS_ARCH := $(shell uname -m)
-export OS_ARCH ?= $(HOST_OS_ARCH)
-export DIST_ARCH ?= $(if $(subst alpine,,$(HOST_DISTRIBUTION)),$(HOST_OS_ARCH),amd64)
+# "Native" is whatever uname -m returns. On Macs, it is x86_64 or arm64,
+# but on Linux it is x86_64 or aarch64.
+export HOST_NATIVE_ARCH := $(shell uname -m)
+# Go lang supplies GOARCH which is arm64 for aarch64 and amd64 for x86_64.
+# We calculate GOARCH from HOST_NATIVE_ARCH so that we do not depend on having Go installed.
+# Debian packages use the same architecture names as GOARCH.
+export HOST_GOARCH := $(shell uname -m | sed 's/aarch64/arm64/' | sed 's/x86_64/amd64/')
+# ARCH is the architecture of the release artifact to download
+export ARCH ?= $(HOST_GOARCH)
+export OS_ARCH ?= $(HOST_NATIVE_ARCH)
 export INSTALL_PATH ?= /usr/local/bin
 export CURL ?= curl --retry 3 --retry-delay 5 --fail -sSL
 export LOCAL_BIN ?= ../../bin
@@ -237,7 +249,7 @@ info:
 		printf "%-20s %s\n" "Version:" "OBSOLETE"; \
 	fi
 	@printf "%-20s %s\n" "License:" "$(PACKAGE_LICENSE)"
-	@printf "%-20s %s\n" "Arch:" "$(DIST_ARCH)"
+	@printf "%-20s %s\n" "Arch:" "$(if $(subst rhel,,$(DIST_DISTRIBUTION)),$(HOST_GOARCH),$(HOST_NATIVE_ARCH))"
 	@printf "%-20s %s\n" "OS:" "$(DIST_OS)"
 	@printf "%-20s %s\n" "Distribution:" "$(DIST_DISTRIBUTION)"
 	@printf "%-20s %s\n" "Homepage URL:" "$(PACKAGE_HOMEPAGE_URL)"
@@ -268,8 +280,8 @@ info/github:
 	@printf $(FORMAT) "package_enabled" "$(PACKAGE_ENABLED)"  >> $$GITHUB_OUTPUT
 	@printf $(FORMAT) "package_version" "$(PACKAGE_VERSION)"  >> $$GITHUB_OUTPUT
 	@printf $(FORMAT) "package_license" "$(PACKAGE_LICENSE)"  >> $$GITHUB_OUTPUT
-	@printf $(FORMAT) "arch" "$(DIST_ARCH)"  >> $$GITHUB_OUTPUT
-	@printf $(FORMAT) "os" "$(DIST_OS)"  >> $$GITHUB_OUTPUT
+	@$(LOCAL_BIN)/arch-filter info/github "$(PACKAGE_ARCHS_DISABLED)" >> $$GITHUB_OUTPUT
+	@# @printf $(FORMAT) "os" "$(DIST_OS)"  >> $$GITHUB_OUTPUT
 	@printf $(FORMAT) "package_homepage_url" "$(PACKAGE_HOMEPAGE_URL)"  >> $$GITHUB_OUTPUT
 	@printf $(FORMAT) "package_repo_url" "$(PACKAGE_REPO_URL)"  >> $$GITHUB_OUTPUT
 	@printf $(FORMAT) "download_url" "$(DOWNLOAD_URL)"  >> $$GITHUB_OUTPUT

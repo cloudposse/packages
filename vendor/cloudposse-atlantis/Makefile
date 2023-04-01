@@ -14,6 +14,8 @@ export PACKAGE_EXE = atlantis
 
 # This pacakge does not use semver, cannot be auto-updated
 export AUTO_UPDATE_ENABLED = false
+# arm64 not supported
+export PACKAGE_ARCHS_DISABLED = arm64
 
 install:
 	$(call download_binary)

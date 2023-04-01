@@ -6,6 +6,9 @@ export APKBUILD_DEPENDS += libc6-compat
 
 include ../../tasks/Makefile.vendor_includes
 
+# arm64 not supported
+export PACKAGE_ARCHS_DISABLED = arm64
+
 install:
 	$(call download_tarball)
 
