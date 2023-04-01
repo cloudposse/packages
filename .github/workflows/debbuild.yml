@@ -5,11 +5,13 @@ on:
       - master
     paths:
       - deb/**
+      - .github/workflows/debbuild.yml
 
   pull_request: 
     types: [opened, synchronize, reopened]
     paths:
       - deb/**
+      - .github/workflows/debbuild.yml
 
 jobs:
   build-and-push:

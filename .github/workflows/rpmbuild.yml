@@ -5,11 +5,13 @@ on:
     - master
     paths:
     - rpm/**
+    - .github/workflows/rpmbuild.yml
 
   pull_request:
     types: [opened, synchronize, reopened]
     paths:
     - rpm/**
+    - .github/workflows/rpmbuild.yml
 
 jobs:
   build-and-push:
