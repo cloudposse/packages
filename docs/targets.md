@@ -143,7 +143,7 @@ tfmask                    0.7.0      Terraform utility to mask select output fro
 tfschema                  0.7.5      A schema inspector for Terraform providers
 tfsec                     1.28.1     Security scanner for your Terraform code
 thanos                    0.31.0     Highly available Prometheus setup with long term storage capabilities. CNCF Sandbox project.
-trivy                     0.38.3     A Simple and Comprehensive Vulnerability Scanner for Containers, Suitable for CI
+trivy                     0.39.0     A Simple and Comprehensive Vulnerability Scanner for Containers, Suitable for CI
 turf                      0.18.0     Turf is Cloud Posse's command-line automation helper.
 variant                   0.38.0     Variant is a Universal CLI tool that works like a task runner
 variant2                  0.38.0     Second major version of Variant, a Universal CLI tool that works like a task runner
