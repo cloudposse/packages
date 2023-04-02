@@ -2,8 +2,11 @@ include ../../tasks/Makefile.vendor_includes
 
 ifeq ($(OS), darwin)
   OS=Darwin
-else
+else ifeq ($(OS), linux)
   OS=Linux
+  ifeq ($(ARCH), arm64)
+    ARCH=aarch64
+  endif
 endif
 
 ifeq ($(ARCH), amd64)

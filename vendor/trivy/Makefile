@@ -1,6 +1,19 @@
 ## Package - trivy
 include ../../tasks/Makefile.vendor_includes
 
+ifeq ($(ARCH), amd64)
+  ARCH=64bit
+else ifeq ($(ARCH), arm64)
+  ARCH=ARM
+endif
+
+ifeq ($(OS), darwin)
+  OS=macOS
+else ifeq ($(OS), linux)
+  OS=Linux
+endif
+
+
 export VENDOR = aquasecurity
 export PACKAGE_NAME = trivy
 export PACKAGE_REPO_NAME = trivy

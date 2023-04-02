@@ -56,7 +56,7 @@ htmltest                  0.17.0     :white_check_mark: Test generated HTML for 
 hugo                      0.111.3    The world’s fastest framework for building websites.
 infracost                 0.10.19    Cloud cost estimates for Terraform
 jp                        0.2.1      Command line interface to JMESPath
-jq                        1.6.0      Command-line JSON processor
+jq                        OBSOLETE   Command-line JSON processor
 json2hcl                  0.1.1      Convert JSON to HCL, and vice versa
 jx                        3.10.81    Jenkins-X
 k3d                       5.4.9      Little helper to run Rancher Lab's k3s in Docker

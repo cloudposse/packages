@@ -3,6 +3,9 @@ export PACKAGE_REPO_NAME ?= kfctl
 export APK_BUILD_TEMPLATE ?= APKBUILD.github-binary
 export APKBUILD_DEPENDS += libc6-compat
 
+# arm64 not supported
+export PACKAGE_ARCHS_DISABLED = arm64
+
 include ../../tasks/Makefile.vendor_includes
 
 # Package details

@@ -71,7 +71,6 @@ jobs:
         - hugo
         - infracost
         - jp
-        - jq
         - json2hcl
         - jx
         - k3d
