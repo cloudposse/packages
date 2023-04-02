@@ -5,12 +5,20 @@ export VENDOR = rancher
 export PACKAGE_NAME = rancher
 # Folder which package is extracted into
 export PACKAGE_REPO_NAME = cli
-export DOWNLOAD_URL ?= $(PACKAGE_REPO_URL)/releases/download/v$(PACKAGE_VERSION)/rancher-$(OS)-$(ARCH)-v$(PACKAGE_VERSION).tar.gz
+export DOWNLOAD_URL ?= $(PACKAGE_REPO_URL)/releases/download/v$(PACKAGE_VERSION)/rancher-$(OS)-$(DL_ARCH)-v$(PACKAGE_VERSION).tar.gz
 
 ## APK build specific requirements
 export APK_BUILD_TEMPLATE ?= APKBUILD.github-binary
 
 include ../../tasks/Makefile.vendor_includes
+
+ifeq ($(OS),darwin)
+  # arm64 not supported
+  export PACKAGE_ARCHS_DISABLED = arm64
+  export DL_ARCH = $(ARCH)
+else ifeq ($(ARCH),arm64)
+  export DL_ARCH = arm
+endif
 
 install:
 	$(call download_tarball)

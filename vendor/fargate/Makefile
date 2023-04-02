@@ -1,4 +1,3 @@
-include ../../tasks/Makefile.vendor_includes
 
 # Package details
 export VENDOR ?= awslabs
@@ -10,6 +9,9 @@ export APKBUILD_DEPENDS += libc6-compat
 export PACKAGE_ENABLED = false
 
 export AUTO_UPDATE_ENABLED = false
+
+include ../../tasks/Makefile.vendor_includes
+
 install:
 	$(CURL) -o - $(DOWNLOAD_URL) > $(TMP)/$(PACKAGE_NAME).zip
 	unzip -p $(TMP)/$(PACKAGE_NAME).zip $(PACKAGE_NAME) > $(INSTALL_PATH)/$(PACKAGE_NAME)
