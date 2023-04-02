@@ -15,9 +15,11 @@ include ../../tasks/Makefile.vendor_includes
 ifeq ($(OS),darwin)
   # arm64 not supported
   export PACKAGE_ARCHS_DISABLED = arm64
-  export DL_ARCH = $(ARCH)
-else ifeq ($(ARCH),arm64)
+endif
+ifeq ($(ARCH),arm64)
   export DL_ARCH = arm
+else
+  export DL_ARCH = $(ARCH)
 endif
 
 install:
