@@ -32,7 +32,8 @@ $(DEB_OUT_TMP_DIR)/package-tmp.deb: $(DEB_TMP_DIR)/$(PACKAGE_NAME)
 	[ -z "$(DEB_FPM_EXTRA_FILES)" ] || cp -a $(DEB_FPM_EXTRA_FILES) $(DEB_TMP_DIR)
 	set -x; fpm --force -t deb --maintainer '$(DEB_MAINTAINER)' -s dir -a $(DEB_DIST_ARCH) -n $(PACKAGE_NAME) \
 		-v $(DEB_PACKAGE_VERSION) --iteration $(DEB_PACKAGE_RELEASE) -C $(DEB_TMP_DIR) \
-		--prefix $${INSTALL_DIR:-/usr/bin} --deb-no-default-config-files $(DEB_FPM_EXTRA_ARGS) --package $@ .
+		--prefix $${INSTALL_DIR:-/usr/bin} --deb-no-default-config-files $(DEB_FPM_EXTRA_ARGS) \
+		--description "$(PACKAGE_DESCRIPTION)" --package $@ .
 	@echo "Testing installation of $@"
 	# Suppress progress and "Reading database" logging. See https://askubuntu.com/a/668859
 	apt-get -yq -o=Dpkg::Use-Pty=0 install $@

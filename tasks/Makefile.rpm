@@ -34,7 +34,9 @@ endif
 $(RPM_OUT_TMP_DIR)/package-tmp.rpm: $(RPM_TMP_DIR)/$(PACKAGE_NAME)
 	[ -z "$(RPM_FPM_EXTRA_FILES)" ] || cp -a $(RPM_FPM_EXTRA_FILES) $(RPM_TMP_DIR)
 	[ -z "$(RPM_DEINSTALL)" ] || sed -i 's/\(update-alternatives .*\) --quiet/\1/' "$(RPM_TMP_DIR)/$(RPM_DEINSTALL)"
-	set -x; fpm --force -t rpm --maintainer '$(RPM_MAINTAINER)' -s dir -a $(RPM_DIST_ARCH) -n $(PACKAGE_NAME) -v $(RPM_PACKAGE_VERSION) --iteration $(RPM_PACKAGE_RELEASE) -C $(RPM_TMP_DIR) --prefix $${INSTALL_DIR:-/usr/bin} $(RPM_FPM_EXTRA_ARGS) --package $@ .
+	set -x; fpm --force -t rpm --maintainer '$(RPM_MAINTAINER)' -s dir -a $(RPM_DIST_ARCH) -n $(PACKAGE_NAME) -v $(RPM_PACKAGE_VERSION) \
+	  --iteration $(RPM_PACKAGE_RELEASE) -C $(RPM_TMP_DIR) --prefix $${INSTALL_DIR:-/usr/bin} $(RPM_FPM_EXTRA_ARGS) \
+	  --description "$(PACKAGE_DESCRIPTION)" --package $@ .
 	@echo "Testing installation of $@"
 	yum install -y --allowerasing -C $@
 	$(MAKE) test

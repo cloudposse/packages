@@ -28,6 +28,22 @@ on:
       - vendor/%PACKAGE_NAME%/**
       - .github/workflows/%PACKAGE_NAME%.yml
 
+  #bridgecrew:skip=BC_REPO_GITHUB_ACTION_7:The whole point of the workflow dispatch is to feed in a version
+  workflow_dispatch:
+    inputs:
+      package_version_override:
+        description: 'Version of %PACKAGE_NAME% package to build. Defaults to vendor/%PACKAGE_NAME%/VERSION.'
+        required: false
+        type: string
+      release_number_override:
+        description: 'Zero-based release number of %PACKAGE_NAME% package to publish. Defaults to vendor/%PACKAGE_NAME%/RELEASE.'
+        required: false
+        type: string
+
+env:
+  %PACKAGE_NAME%_VERSION: ${{ github.event.inputs.package_version_override }}
+  %PACKAGE_NAME%_RELEASE: ${{ github.event.inputs.release_number_override }}
+
 jobs:
   matrix:
     if: github.event_name != 'schedule'
