@@ -5,11 +5,13 @@ on:
     - master
     paths:
     - rpm/**
+    - .github/workflows/rpmbuild.yml
 
   pull_request:
     types: [opened, synchronize, reopened]
     paths:
     - rpm/**
+    - .github/workflows/rpmbuild.yml
 
 jobs:
   build-and-push:
@@ -41,6 +43,8 @@ jobs:
           TAGS="$TAGS,${DOCKER_IMAGE}:${VERSION}"
         fi
         echo "tags=${TAGS}" >> $GITHUB_OUTPUT
+    - name: Set up QEMU
+      uses: docker/setup-qemu-action@v2
     - name: Set up Docker Buildx
       uses: docker/setup-buildx-action@v2
     - name: Login to DockerHub
@@ -53,5 +57,6 @@ jobs:
       uses: docker/build-push-action@v3
       with:
         push: true
+        platforms: linux/amd64,linux/arm64
         tags: ${{ steps.prepare.outputs.tags }}
         file: rpm/Dockerfile.${{matrix.centos}}
