@@ -84,20 +84,21 @@ Package repository hosting is graciously provided by [cloudsmith](https://clouds
 
 
 
-### Alpine Repository (recommended)
+## Debian Repository (recommended)
 
-A public Alpine repository is provided by [Cloud Posse](https://cloudposse.com). The repository is hosted on Amazon S3 and fronted by [CloudFlare's CDN](http://cloudflare.com) with end-to-end TLS. This ensures insane availability with DDoS mitigation and low-cost hosting. Using this alpine repository is ultimately more reliable than depending on [GitHub for availability](https://twitter.com/githubstatus) and provides an easier way to manage dependencies pinned at multiple versions. 
+A public Debian repository is provided by [Cloud Posse](https://cloudposse.com). 
+The repository is hosted by [Cloudsmith](https://cloudsmith.com/)
+Using this Debian repository is ultimately more reliable than depending on [GitHub for availability](https://twitter.com/githubstatus)
+and provides an easier way to manage dependencies pinned at multiple versions. 
 
-The repository itself is managed using [`alpinist`](https://github.com/cloudposse/alpinist), which takes care of the heavy lifting of building repository indexes. You can self-host your own Alpine repository using this strategy.
-
-### Configure the alpine repository:
+### Configure the Debian repository:
 
 #### The Easy Way
 
-We provide a bootstrap script to configure the alpine repository for your version of alpine. 
+Cloudsmith provides an installation script to configure the Debian repository for your version of Debian. 
 
 ```
-curl -sSL https://apk.cloudposse.com/install.sh | bash
+curl -1sLf 'https://dl.cloudsmith.io/public/cloudposse/packages/cfg/setup/bash.deb.sh' | bash
 ```
 __NOTE__: Requires `bash` and `curl` to run:
 
@@ -105,11 +106,70 @@ __NOTE__: Requires `bash` and `curl` to run:
 
 Add the following to your `Dockerfile` near the top.
 ```
-# Install the cloudposse alpine repository
-ADD https://apk.cloudposse.com/ops@cloudposse.com.rsa.pub /etc/apk/keys/
-RUN echo "@cloudposse https://apk.cloudposse.com/3.11/vendor" >> /etc/apk/repositories
+# Install the cloudposse Debian repository
+RUN apt-get update && apt-get install -y apt-utils curl
+RUN curl -1sLf 'https://dl.cloudsmith.io/public/cloudposse/packages/cfg/setup/bash.deb.sh' | bash
 ```
-__NOTE__: we support alpine `3.7`, `3.8`, `3.9`, `3.10`, and `3.11` packages at this time
+
+### Installing Debian Packages
+
+When adding packages, we recommend using `apt-get update && apt-get install -yq $package` to update the repository index before installing packages.
+
+Simply install any package as normal:
+```
+apk-get install -y terraform
+```
+
+But we recommend that you use version pinning (the `-\*` is important, as it gets you the latest version of the package):
+```
+apt-get install gomplate=3.0.0-\*
+```
+
+## RPM Repository
+
+We publish RPM packages corresponding to all the Debian packages we publish. Installing the repository is almost the same as above.
+
+```
+curl -1sLf 'https://dl.cloudsmith.io/public/cloudposse/packages/cfg/setup/bash.rpm.sh' | bash
+```
+
+Install packages as normal. `yum` automatically updates the repository index before installing packages.
+```
+yum install -y terraform
+```
+
+Note that unlike other package systems, `yum` automatically updates the repository index before installing packages.
+
+We still recommend version pinning, but `yum` makes it hard. You can use this command to list all the available versions of a package:
+```
+yum --showduplicate list $package
+```
+Then you can install the package with a version pinning:
+```
+VERSION=1.3.0
+RELEASE=1
+yum install -y $package-$VERSION-$RELEASE.$(uname -m)
+```
+
+## Alpine Repository 
+
+A public Alpine repository is provided by [Cloud Posse](https://cloudposse.com). 
+The repository is hosted by [Cloudsmith](https://cloudsmith.com/)
+Using this Alpine repository is ultimately more reliable than depending on [GitHub for availability](https://twitter.com/githubstatus)
+and provides an easier way to manage dependencies pinned at multiple versions. 
+
+### Configure the Alpine repository:
+
+#### The Easy Way
+
+Cloudsmith provides an installation script to configure the Alpine repository for your version of Alpine. 
+
+```
+apk add --no-cache bash curl
+curl -1sLf \
+'https://dl.cloudsmith.io/public/cloudposse/packages/setup.alpine.sh' \
+| bash  
+```
 
 ### Installing Alpine Packages
 
@@ -117,20 +177,20 @@ When adding packages, we recommend using `apk add --update $package` to update t
 
 Simply install any package as normal:
 ```
-apk add gomplate
+apk add --update terraform
 ```
 
 But we recommend that you use version pinning:
 ```
-apk add gomplate==3.0.0-r0
+apk add --update terraform==1.0.0-r0
 ```
 
 And maybe even repository pinning, so you know that you get our versions:
 ```
-apk add gomplate@cloudposse==3.0.0-r0
+apk add --update terraform@cloudposse==1.0.0-r0
 ```
 
-### Makefile Interface
+## Makefile Interface
 
 The `Makefile` interface works on OSX and Linux. It's a great way to distribute binaries in an OS-agnostic way which does not depend on a package manager (e.g. no `brew` or `apt-get`). 
 
@@ -185,6 +245,13 @@ $ make -C vendor/<package> apk
 ```sh
 $ make docker/build/deb/shell
 $ make -C vendor/<package> deb
+```
+
+#### RPM
+
+```sh
+$ make docker/build/rpm/shell
+$ make -C vendor/<package> rpm
 ```
 
 ### Mac
@@ -396,7 +463,6 @@ Here are some solutions to several common problems that may occur when adding a 
 [![stern](https://github.com/cloudposse/packages/workflows/stern/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Astern) | 1.24.0     | ⎈ Multi pod and container log tailing for Kubernetes
 [![sudosh](https://github.com/cloudposse/packages/workflows/sudosh/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Asudosh) | 0.3.0      | Shell wrapper to run a login shell with `sudo` as the current user for the purpose of audit logging
 [![teleport](https://github.com/cloudposse/packages/workflows/teleport/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ateleport) | 12.1.5     | Secure Access for Developers that doesn't get in the way.
-[![teleport-4.2](https://github.com/cloudposse/packages/workflows/teleport-4.2/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ateleport-4.2) | 4.2.12     | Privileged access management for elastic infrastructure.
 [![teleport-4.3](https://github.com/cloudposse/packages/workflows/teleport-4.3/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ateleport-4.3) | 4.3.10     | Privileged access management for elastic infrastructure.
 [![teleport-4.4](https://github.com/cloudposse/packages/workflows/teleport-4.4/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ateleport-4.4) | 4.4.12     | Privileged access management for elastic infrastructure.
 [![teleport-5.0](https://github.com/cloudposse/packages/workflows/teleport-5.0/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ateleport-5.0) | 5.0.2      | Secure Access for Developers that doesn't get in the way.

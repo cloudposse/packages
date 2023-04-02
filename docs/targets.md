@@ -4,23 +4,23 @@
 amazon-ecr-credential-helper 0.6.0      Automatically gets credentials for Amazon ECR on docker push/docker pull
 amtool                    0.25.0     Tool for interacting with the Alertmanager API
 argocd                    2.6.7      Declarative GitOpts for Kubernetes
-assume-role               0.3.2      Easily assume AWS roles in your terminal.
+assume-role*              0.3.2      Easily assume AWS roles in your terminal.
 atlantis                  0.23.3     Terraform For Teams
 atmos                     1.32.4     Universal Tool for DevOps and Cloud Automation
-awless                    0.1.11     A Mighty CLI for AWS
+awless*                   0.1.11     A Mighty CLI for AWS
 aws-copilot-cli           1.27.0     Tool for developers to build, release and operate containerized applications on AWS App Runner or Amazon ECS on AWS Fargate.
 aws-iam-authenticator     0.6.2      A tool to use AWS IAM credentials to authenticate to a Kubernetes cluster
 aws-nuke                  2.22.0     A highly configurable way to wipe non-prod aws accounts. WARNING do not use in prod
 aws-okta                  OBSOLETE   aws-okta allows users to authenticate with AWS using Okta credentials
 aws-vault                 7.2.0      A vault for securely storing and accessing AWS credentials in development environments
-cfssl                     1.6.3      Cloudflare's PKI and TLS toolkit
-cfssljson                 1.6.3      Cloudflare's PKI and TLS toolkit json parser
+cfssl*                    1.6.3      Cloudflare's PKI and TLS toolkit
+cfssljson*                1.6.3      Cloudflare's PKI and TLS toolkit json parser
 chamber                   2.12.0     CLI for managing secrets
 cli53                     0.8.22     Command line tool for Amazon Route 53
 cloud-nuke                0.27.1     Tool for wiping an aws account DANGER absolutely do not use in production
 cloudflared               2023.3.1   Argo Tunnel client
 cloudposse-atlantis       OBSOLETE   Terraform For Teams, enhanced by Cloud Posse
-codefresh                 0.82.5     Codefresh CLI
+codefresh*                0.82.5     Codefresh CLI
 conftest                  0.40.0     Test your configuration files using Open Policy Agent
 consul                    1.15.2     Hashicorp consul
 ctop                      0.7.7      Top-like interface for container metrics
@@ -28,8 +28,8 @@ direnv                    2.32.2     Unclutter your .profile
 doctl                     1.93.1     A command line tool for DigitalOcean services
 duffle                    OBSOLETE   CNAB installer
 ec2-instance-selector     2.4.1      A CLI tool and go library which recommends instance types based on resource criteria like vcpus and memory
-emailcli                  1.0.3      Command line email sending client written in Go.
-envcli                    0.7.1      A simple wrapper that allows you to run commands within ethereal docker containers
+emailcli*                 1.0.3      Command line email sending client written in Go.
+envcli*                   0.7.1      A simple wrapper that allows you to run commands within ethereal docker containers
 fargate                   OBSOLETE   (OBSOLETE, use aws/copilot-cli instead) CLI for AWS Fargate
 fetch                     0.4.5      fetch makes it easy to download files, folders, and release assets from a specific public git commit, branch, or tag
 figurine                  1.3.0      Print your name in style
@@ -37,15 +37,15 @@ fzf                       0.23.1     A command-line fuzzy finder
 gh                        2.25.1     The GitHub CLI
 ghr                       0.16.0     Upload multiple artifacts to GitHub Releases in parallel
 github-commenter          0.17.0     Command line utility for creating GitHub comments on Commits, Pull Request Reviews or Issues
-github-release            0.10.0     Commandline app to create and edit releases on Github (and upload artifacts)
-github-status-updater     0.7.0      Command line utility for updating GitHub commit statuses and enabling required status checks for pull requests
+github-release*           0.10.0     Commandline app to create and edit releases on Github (and upload artifacts)
+github-status-updater*    0.7.0      Command line utility for updating GitHub commit statuses and enabling required status checks for pull requests
 gitleaks                  8.16.2     Audit git repos for secrets 🔑
 go-jsonnet                0.19.1     This an implementation of Jsonnet in pure Go.
 gomplate                  3.11.4     A flexible commandline tool for template rendering. Supports lots of local and remote datasources.
 gonsul                    1.0.2      A stand-alone alternative to git2consul 
 goofys                    0.24.0     a high-performance, POSIX-ish Amazon S3 file system written in Go
 gosu                      1.16.0     Simple Go-based setuid+setgid+setgroups+exec
-gotop                     3.0.0      A terminal based graphical activity monitor inspired by gtop and vtop
+gotop*                    3.0.0      A terminal based graphical activity monitor inspired by gtop and vtop
 grpcurl                   1.8.7      Like cURL, but for gRPC: Command-line tool for interacting with gRPC servers
 hcledit                   0.2.6      A command line editor for HCL
 helm                      3.11.2     The Kubernetes Package Manager
@@ -63,7 +63,7 @@ k3d                       5.4.9      Little helper to run Rancher Lab's k3s in D
 k6                        0.43.1     A modern load testing tool, using Go and JavaScript - https://k6.io
 k9s                       0.27.3     Kubernetes CLI To Manage Your Clusters In Style
 katafygio                 0.8.3      K8s continuous backup to git
-kfctl                     1.2.0      Machine Learning Toolkit for Kubernetes
+kfctl*                    1.2.0      Machine Learning Toolkit for Kubernetes
 kind                      0.18.0     A tool for running local Kubernetes clusters using Docker
 kops                      1.26.2     Kubernetes Operations (kops) - Production Grade K8s Installation, Upgrades, and Management
 kops-1.12                 OBSOLETE   Kubernetes Operations (kops) - Production Grade K8s Installation, Upgrades, and Management
@@ -86,11 +86,11 @@ kubectl-1.25              1.25.7     Production-Grade Container Scheduling and M
 kubectl-1.26              1.26.3     Production-Grade Container Scheduling and Management (v1.26)
 kubectx                   0.9.4      Switch faster between clusters and namespaces in kubectl
 kubens                    0.9.4      Switch faster between clusters and namespaces in kubectl
-kubeval                   0.16.1     Validate your Kubernetes configuration files, supports multiple Kubernetes versions
+kubeval*                  0.16.1     Validate your Kubernetes configuration files, supports multiple Kubernetes versions
 lazydocker                0.20.0     The lazier way to manage everything docker
-lectl                     0.21.0     Script to check issued certificates by Let's Encrypt on CTL (Certificate Transparency Log) using https://crt.sh
+lectl*                    0.21.0     Script to check issued certificates by Let's Encrypt on CTL (Certificate Transparency Log) using https://crt.sh
 minikube                  1.29.0     Run Kubernetes locally
-misspell                  0.3.4      Correct commonly misspelled English words in source files
+misspell*                 0.3.4      Correct commonly misspelled English words in source files
 nomad                     OBSOLETE   Hashicorp nomad
 opa                       0.51.0     An open source project to policy-enable your service.
 pack                      0.29.0     Create cloud native Buildpacks
@@ -101,8 +101,8 @@ pluto                     5.16.0     A cli tool to help discover deprecated apiV
 popeye                    0.11.1     A Kubernetes cluster resource sanitizer
 promtool                  2.43.0     Prometheus CLI tool
 rainbow-text              1.2.1      Tasty rainbows for your terminal! (lolcat clone)
-rakkess                   0.5.0      Review Access - kubectl plugin to show an access matrix for all available resources
-rancher                   2.7.0      Rancher CLI
+rakkess*                  0.5.0      Review Access - kubectl plugin to show an access matrix for all available resources
+rancher*                  2.7.0      Rancher CLI
 rbac-lookup               0.10.1     Find Kubernetes roles and cluster roles bound to any user, service account, or group name.
 retry                     OBSOLETE   ♻️ Functional mechanism based on channels to perform actions repetitively until successful.
 saml2aws                  2.36.4     CLI tool which enables you to login and retrieve AWS temporary credentials using a SAML IDP
@@ -115,11 +115,11 @@ slack-notifier            0.4.0      Command line utility to send messages with 
 sops                      3.7.3      Secrets management stinks, use some sops!
 spacectl                  0.18.1     [Spacelift.io](https://spacelift.io/) client and CLI
 spotctl                   0.29.0     A unified CLI to manage your [Spot](https://spot.io/) resources.
-sshm                      1.2.2      Easy connect on EC2 instances thanks to AWS System Manager Agent
+sshm*                     1.2.2      Easy connect on EC2 instances thanks to AWS System Manager Agent
 stern                     1.24.0     ⎈ Multi pod and container log tailing for Kubernetes
 sudosh                    0.3.0      Shell wrapper to run a login shell with `sudo` as the current user for the purpose of audit logging
 teleport                  12.1.5     Secure Access for Developers that doesn't get in the way.
-teleport-4.2              4.2.12     Privileged access management for elastic infrastructure.
+teleport-4.2              OBSOLETE   Privileged access management for elastic infrastructure.
 teleport-4.3              4.3.10     Privileged access management for elastic infrastructure.
 teleport-4.4              4.4.12     Privileged access management for elastic infrastructure.
 teleport-5.0              5.0.2      Secure Access for Developers that doesn't get in the way.
@@ -150,7 +150,7 @@ variant                   0.38.0     Variant is a Universal CLI tool that works 
 variant2                  0.38.0     Second major version of Variant, a Universal CLI tool that works like a task runner
 vault                     1.13.1     Hashicorp vault
 vendir                    0.33.1      Easy way to vendor portions of git repos, github releases, helm charts, docker image contents, etc. declaratively.
-venona                    1.9.14     Codefresh runtime-environment agent
+venona*                   1.9.14     Codefresh runtime-environment agent
 vert                      0.1.0      Simple CLI for comparing two or more versions
 yajsv                     1.4.1      Yet Another JSON Schema Validator [CLI]
 yq                        4.33.2     yq is a portable command-line YAML processor
