@@ -88,7 +88,12 @@ jobs:
       PACKAGER_PRIVKEY: /dev/shm/ops@cloudposse.com.rsa
       PACKAGER_PUBKEY: ${{github.workspace}}/artifacts/ops@cloudposse.com.rsa.pub
 
-    container: cloudposse/packages-apkbuild:${{matrix.alpine}}
+    container:
+      image: cloudposse/packages-apkbuild:${{matrix.alpine}}
+      credentials:
+        username: ${{ secrets.DOCKERHUB_USERNAME }}
+        password: ${{ secrets.DOCKERHUB_PASSWORD }}
+
     steps:
       # Checkout the packages repo so we can build the packages as a monorepo
       - name: "Checkout source code at current commit"
@@ -162,15 +167,17 @@ jobs:
         exclude:
         - package-type: 'apk'
         include:
-        # Default value for runs-on. Original matrix values will not be overridden, but added ones can be.
+        # Default value for runs-on. Original matrix values will not be overridden, but added ones (like runs-on) can be.
         # See https://docs.github.com/en/actions/using-jobs/using-a-matrix-for-your-jobs#expanding-or-adding-matrix-configurations
         - runs-on:
-          - "ubuntu-latest"
-        # Override value for runs-on when arch is arm64
-        - arch: arm64
-          runs-on:
           - "self-hosted"
           - "arm64"
+        # By including `arch: amd64` here, we override the `runs-on` value `arch` is `amd64`.
+        # This also forces the matrix to include `arch: amd64` even if it is not in the original matrix.
+        # This is why we do not default for amd64 and then override for arm64.
+        - arch: amd64
+          runs-on:
+          - "ubuntu-latest"
     runs-on: ${{ matrix.runs-on }}
     env:
       # We are in a bit of a bind here because of how GitHub actions work as of 2020-11-19
@@ -187,7 +194,12 @@ jobs:
       PACKAGE_RELPATH: artifacts/${{matrix.package-type}}/any-version
 
     # Unfortunately, there is no reasonable way to configure the docker image tag based on the package-type
-    container: cloudposse/packages-${{matrix.package-type}}build:latest
+    container:
+      image: cloudposse/packages-${{matrix.package-type}}build:latest
+      credentials:
+        username: ${{ secrets.DOCKERHUB_USERNAME }}
+        password: ${{ secrets.DOCKERHUB_PASSWORD }}
+
     steps:
       # Checkout the packages repo so we can build the packages as a monorepo
       - name: "Checkout source code at current commit"

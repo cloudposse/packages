@@ -55,7 +55,7 @@ export HOST_NATIVE_ARCH := $(shell uname -m)
 # Go lang supplies GOARCH which is arm64 for aarch64 and amd64 for x86_64.
 # We calculate GOARCH from HOST_NATIVE_ARCH so that we do not depend on having Go installed.
 # Debian packages use the same architecture names as GOARCH.
-export HOST_GOARCH := $(shell uname -m | sed 's/aarch64/arm64/' | sed 's/x86_64/amd64/')
+export HOST_GOARCH := $(shell printf "%s" "$${HOST_GOARCH:-$$(uname -m)}" | sed 's/aarch64/arm64/' | sed 's/x86_64/amd64/')
 # ARCH is the architecture of the release artifact to download
 export ARCH ?= $(HOST_GOARCH)
 export OS_ARCH ?= $(HOST_NATIVE_ARCH)
@@ -300,6 +300,9 @@ info/github:
 # Used by scripts and other info targets to toggle behaviors such as creating or not creating a build action workflow.
 info/package-enabled:
 	@status="$${PACKAGE_ENABLED:-true}"; echo "$${status}"
+
+info/arch-enabled:
+	@$(LOCAL_BIN)/arch-filter arch-enabled "$(HOST_GOARCH)" "$(PACKAGE_ARCHS_DISABLED)"
 
 # info/auto-update-enabled outputs "true" if auto-updates for the package are enabled, "false" if they are not.
 # Used by scripts and other info targets to toggle behaviors such as creating or not creating an update workflow.
