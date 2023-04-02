@@ -8,6 +8,8 @@ build-harness
 *.iml
 *.rsa*
 artifacts/
+logs/
+arm-status
 *.swp
 
 # bin/vert is a binary automatically downloaded and should not be checked in

@@ -20,6 +20,9 @@ ifeq ($(DIST_DISTRIBUTION),alpine)
 	OS=alpine
 endif
 
+# arm64 not supported
+export PACKAGE_ARCHS_DISABLED = arm64
+
 install:
 	$(call download_tarball)
 

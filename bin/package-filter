@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# TODO: Disable package if package host arch is disabled
+# Will require a new arg for _rpm_target and _deb_target: ARCH_TYPES_DISABLED
+# Might not be strictly necessary, since we should exclude arch build in first place.
+
 # This is a utility script to extend the package makefiles with some
 # intelligence around whether or not to make a package for a given package type.
 # It is not intended for human usage.
@@ -46,6 +50,8 @@ function make_target() {
   local package_enabled=$(lc_package_type "$2")
   local package_types_disabled=$(lc_package_type "$3")
   local legacy_package_enabled=$(lc_package_type "$4")
+  local arch="$5"
+  local arch_types_disabled="$6"
 
   if [[ ! " ${SUPPORTED_PACKAGE_TYPES[@]} " =~ " $package_type " ]]; then
     echo Unsupported package type \"$package_type\" >&2
@@ -56,14 +62,15 @@ function make_target() {
 
   if [[ $package_enabled == "false" ]]; then
     echo $SKIP_TARGET
-  elif [[ $(package_type_enabled "$package_type" "$package_types_disabled") == "true" ]]; then
+  elif [[ $(package_type_enabled "$package_type" "$package_types_disabled") == "true" ]] && \
+       [[ $($(dirname $0)/arch-filter arch-enabled "$arch" "$arch_types_disabled") == "true" ]]; then
     printf "%s%s\n" $package_type $MAKE_PACKAGE_TARGET
   else
     printf "%s%s\n" $package_type $SKIP_PACKAGE_TARGET
   fi
 }
 
-# We will support legacy APK_PACKAGE_ENABLED var as wel as PACKAGE_DISABLED_TYPES for apk
+# We will support legacy APK_PACKAGE_ENABLED var as well as PACKAGE_DISABLED_TYPES for apk
 # apk package is disabled if APK_PACKAGE_ENABLED is not empty or "true" or "apk" is included in PACKAGE_DISABLED_TYPES
 function apk_enabled() {
   local apk_package_enabled=${1:-true}

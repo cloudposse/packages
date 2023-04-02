@@ -2,8 +2,6 @@ include ../../tasks/Makefile.vendor_includes
 
 ifeq ($(OS), darwin)
   OS=mac
-else
-  ARCH=amd64
 endif
 
 # Package details

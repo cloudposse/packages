@@ -5,6 +5,10 @@ export DOWNLOAD_URL ?= $(PACKAGE_REPO_URL)/releases/download/$(PACKAGE_VERSION)/
 
 include ../../tasks/Makefile.vendor_includes
 
+# project is abandoned
+export PACKAGE_ENABLED = false
+export AUTO_UPDATE_ENABLED = false
+
 install:
 	$(call download_binary)
 

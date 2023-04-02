@@ -2,6 +2,9 @@ include ../../tasks/Makefile.vendor_includes
 
 OS=$(shell uname -s)
 
+# arm64 not supported
+export PACKAGE_ARCHS_DISABLED = arm64
+
 # Package details
 
 export VENDOR ?= remind101

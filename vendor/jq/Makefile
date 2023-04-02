@@ -1,5 +1,11 @@
 ## jq
 
+# jq is now disabled because the GitHub repo does not publish arm64 binaries
+# and the mainstream repos all have jq packages now.
+
+export PACKAGE_ENABLED = false
+
+
 export PACKAGE_VERSION_SEMVER_XFORM = sed -E  's/\bjq-([.0-9]+)/\1/g'
 
 include ../../tasks/Makefile.vendor_includes

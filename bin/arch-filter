@@ -1,0 +1,64 @@
+#!/bin/bash
+
+# This is a utility script to extend the package makefiles with some
+# intelligence around whether or not to make a package for a given CPU Architecture.
+# It is not intended for human usage.
+
+# We use GOARCH internally wherever possible
+SUPPORTED_ARCH_TYPES=(amd64 arm64)
+
+# TODO:
+# Create ARCH_TYPES_DISABLED variable analogous to PACKAGE_TYPES_DISABLED
+# By default, packages are build with both arch types
+# A noarch package disables arm64
+# We create the arch matrix in the Makefile and output it in GitHub Actions.
+# We filter arm64 build support in the workflow using `excludes` filter.
+
+
+function arch_type_enabled() {
+  local arch_type="$1"
+  local arch_types_disabled="$2"
+
+  if [[ ! " ${SUPPORTED_ARCH_TYPES[@]} " =~ " $arch_type " ]]; then
+    echo Unsupported arch type \"$arch_type\" >&2
+    exit 1
+  fi
+
+  if [[ $arch_types_disabled =~ $arch_type ]]; then
+    echo false
+  else
+    echo true
+  fi
+}
+
+GITHUB_FORMAT_ARCH="%s_arch_enabled=%s\n"
+GITHUB_FORMAT_MATRIX="arch_matrix=%s\n"
+
+function info_github() {
+  local arch_types_disabled="$1"
+
+  local matrix="["
+  local enabled
+
+  for arch in "${SUPPORTED_ARCH_TYPES[@]}"; do
+    enabled=$(arch_type_enabled "$arch" "$arch_types_disabled")
+    if [[ $enabled == "true" ]]; then
+      [[ $matrix == "[" ]] || matrix+=","
+      matrix+="\"$arch\""
+    fi
+    printf "$GITHUB_FORMAT_ARCH" "$arch" "$enabled"
+  done
+  matrix+="]"
+  printf "$GITHUB_FORMAT_MATRIX" "$matrix"
+}
+
+case "$1" in
+  arch-enabled)
+    shift
+    arch_type_enabled "$@"
+    ;;
+  info/github)
+    shift
+    info_github "$@"
+    ;;
+esac
