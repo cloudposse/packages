@@ -7,6 +7,7 @@ export APK_BUILD_TEMPLATE ?= APKBUILD.github-binary
 export APKBUILD_DEPENDS += libc6-compat
 
 # Package has been abandoned in favor of aws/copilot-cli
+export PACKAGE_ENABLED = false
 
 export AUTO_UPDATE_ENABLED = false
 install:
