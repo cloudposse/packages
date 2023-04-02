@@ -27,6 +27,7 @@ jobs:
         - atlantis
         - atmos
         - awless
+        - aws-copilot-cli
         - aws-iam-authenticator
         - aws-nuke
         - aws-vault
@@ -42,11 +43,9 @@ jobs:
         - ctop
         - direnv
         - doctl
-        - duffle
         - ec2-instance-selector
         - emailcli
         - envcli
-        - fargate
         - fetch
         - figurine
         - fzf
@@ -111,7 +110,6 @@ jobs:
         - rancher
         - rbac-lookup
         - saml2aws
-        - scenery
         - sentry-cli
         - shellcheck
         - shfmt
@@ -138,14 +136,11 @@ jobs:
         - terraform_0.13
         - terragrunt
         - terrahelp
-        - tfenv
         - tflint
-        - tfmask
         - tfschema
         - tfsec
         - thanos
         - trivy
-        - turf
         - variant
         - variant2
         - vault

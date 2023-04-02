@@ -28,6 +28,22 @@ on:
       - vendor/gosu/**
       - .github/workflows/gosu.yml
 
+  #bridgecrew:skip=BC_REPO_GITHUB_ACTION_7:The whole point of the workflow dispatch is to feed in a version
+  workflow_dispatch:
+    inputs:
+      package_version_override:
+        description: 'Version of gosu package to build. Defaults to vendor/gosu/VERSION.'
+        required: false
+        type: string
+      release_number_override:
+        description: 'Zero-based release number of gosu package to publish. Defaults to vendor/gosu/RELEASE.'
+        required: false
+        type: string
+
+env:
+  gosu_VERSION: ${{ github.event.inputs.package_version_override }}
+  gosu_RELEASE: ${{ github.event.inputs.release_number_override }}
+
 jobs:
   matrix:
     if: github.event_name != 'schedule'
@@ -35,6 +51,7 @@ jobs:
     outputs:
       package-enabled: ${{ steps.info.outputs.package_enabled }}
       package-matrix:  ${{steps.info.outputs.package_matrix}}
+      arch-matrix:  ${{steps.info.outputs.arch_matrix}}
       apk-enabled: ${{ steps.info.outputs.package_enabled == 'true' && steps.info.outputs.apk_package_enabled == 'true' }}
     steps:
     - uses: actions/checkout@v3
@@ -138,12 +155,23 @@ jobs:
       github.event_name != 'schedule' && needs.matrix.outputs.package-enabled != 'false'
       && needs.matrix.outputs.package-matrix != '[]' && needs.matrix.outputs.package-matrix != '["apk"]'
 
-    runs-on: ubuntu-latest
     strategy:
       matrix:
         package-type: ${{ fromJSON(needs.matrix.outputs.package-matrix) }}
+        arch: ${{ fromJSON(needs.matrix.outputs.arch-matrix) }}
         exclude:
         - package-type: 'apk'
+        include:
+        # Default value for runs-on. Original matrix values will not be overridden, but added ones can be.
+        # See https://docs.github.com/en/actions/using-jobs/using-a-matrix-for-your-jobs#expanding-or-adding-matrix-configurations
+        - runs-on:
+          - "ubuntu-latest"
+        # Override value for runs-on when arch is arm64
+        - arch: arm64
+          runs-on:
+          - "self-hosted"
+          - "arm64"
+    runs-on: ${{ matrix.runs-on }}
     env:
       # We are in a bit of a bind here because of how GitHub actions work as of 2020-11-19
       # Although the "workspace" is mounted to the container, it is not mounted

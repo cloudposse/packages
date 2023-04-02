@@ -41,6 +41,9 @@ vendor/atmos:
 vendor/awless:
 - any: ["vendor/awless/**"]
   all: ["!bin/**", "!tasks/**"]
+vendor/aws-copilot-cli:
+- any: ["vendor/aws-copilot-cli/**"]
+  all: ["!bin/**", "!tasks/**"]
 vendor/aws-iam-authenticator:
 - any: ["vendor/aws-iam-authenticator/**"]
   all: ["!bin/**", "!tasks/**"]
