@@ -16,14 +16,14 @@ export PACKAGE_VERSION = $(shell cat VERSION 2>/dev/null)
 export DOWNLOAD_URL = $(PACKAGE_REPO_URL)/releases/download/v$(PACKAGE_VERSION)/$(PACKAGE_NAME)-v$(PACKAGE_VERSION)-linux-amd64
 export APK_BUILD_TEMPLATE = APKBUILD.github-binary
 
-ifeq ($(OS)-$(ARCH),linux-amd64)
+ifeq ($(HOST_OS)-$(HOST_GOARCH),linux-amd64)
   # We can use the official release
 install:
 	$(call download_binary)
 else
 install:
 	mkdir -p -m a+rX $(INSTALL_PATH)
-	cp ./bin/vert-v$(PACKAGE_VERSION)-$(OS).$(ARCH) $(INSTALL_PATH)/$(PACKAGE_EXE) && chmod +x $(INSTALL_PATH)/$(PACKAGE_EXE)
+	cp ./bin/vert-v$(PACKAGE_VERSION)-$(HOST_OS).$(HOST_GOARCH) $(INSTALL_PATH)/$(PACKAGE_EXE) && chmod +x $(INSTALL_PATH)/$(PACKAGE_EXE)
 endif
 
 test:
