@@ -6,11 +6,12 @@ all: $(shell find $(VENDOR_PATH) -maxdepth 1 -mindepth 1 -type d | xargs -n 1 ba
 
 ## Install a specific package
 %:
-	@if [[ -d $(VENDOR_PATH)/$@ ]]; then \
-  	  if [[ "$$(make -C $(VENDOR_PATH)/$@ info/package-enabled)" != "true" ]]; then \
+	# This needs to be compatible with /bin/sh and not just bash
+	@if [ -d $(VENDOR_PATH)/$@ ]; then \
+  	  if [ "$$(make -C $(VENDOR_PATH)/$@ info/package-enabled)" != "true" ]; then \
   	    echo "Package $@ no longer supported. Skipping"; \
   	    exit 0; \
-  	  elif [[ "$$(make -C $(VENDOR_PATH)/$@ info/arch-enabled)" != "true" ]]; then \
+  	  elif [ "$$(make -C $(VENDOR_PATH)/$@ info/arch-enabled)" != "true" ]; then \
   	    echo "Package $@ not supported on this CPU. Skipping"; \
   	    exit 0; \
   	  fi; \
