@@ -89,12 +89,12 @@ apk-make-package: $(PACKAGER_PRIVKEY) $(PACKAGER_PUBKEY_INSTALLED) $(APK_PACKAGE
 	@echo "Wrote $(APK_PACKAGE)"
 
 apk-skip-package:
-	@echo $(PACKAGE_NAME) is disabled for alpine $(shell cat /etc/alpine-release 2>/dev/null).
+	@echo Alpine package disabled for $(PACKAGE_NAME) for Alpine $(shell cat /etc/alpine-release 2>/dev/null).
 
 # Pick which target to make (make, skip, disabled) based on settings
 # APK_PACKAGE_ENABLED is legacy support. If APK_PACKAGE_ENABLED == true
 # and PACKAGE_TYPES_DISABLED contains "apk" the packge will be disabled.
-_apk_target: $(shell $(LOCAL_BIN)/package-filter make-target apk $(PACKAGE_ENABLED) "$(PACKAGE_TYPES_DISABLED)" "$(APK_PACKAGE_ENABLED)")
+_apk_target: $(shell $(LOCAL_BIN)/package-filter make-target apk $(PACKAGE_ENABLED) "$(PACKAGE_TYPES_DISABLED)" "$(APK_PACKAGE_ENABLED)" "$(HOST_GOARCH)" "$(PACKAGE_ARCHS_DISABLED)")
 
 # use _apk_settings to set Alpine-specific settings, then _apk_target to find the right build target
 apk: _apk_settings/_apk_target
@@ -104,8 +104,7 @@ apk: _apk_settings/_apk_target
 apk/%: _apk_settings/%
 	@exit 0
 
-_apk_settings/%: DIST_ARCH_DETECTED = $(or $(PACKAGE_DIST_ARCH),$(ARCH))
-_apk_settings/%: DIST_ARCH = $(if $(subst x86_64,,$(DIST_ARCH_DETECTED)),$(DIST_ARCH_DETECTED),amd64)
+_apk_settings/%: DIST_ARCH = $(or $(PACKAGE_DIST_ARCH),$(HOST_GOARCH))
 _apk_settings/%: DIST_PACKAGE_TYPE = apk
 _apk_settings/%: DIST_DISTRIBUTION = alpine
 _apk_settings/%: %

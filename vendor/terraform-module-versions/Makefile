@@ -4,6 +4,7 @@ export APK_BUILD_TEMPLATE ?= APKBUILD.github-binary
 export PACKAGE_NAME ?= terraform-module-versions
 export PACKAGE_REPO_NAME ?= terraform-module-versions
 export PACKAGE_ARCH_amd64 ?= x86_64
+export PACKAGE_ARCH_arm64 ?= arm64
 export PACKAGE_ARCH ?= ${PACKAGE_ARCH_${ARCH}}
 
 include ../../tasks/Makefile.vendor_includes

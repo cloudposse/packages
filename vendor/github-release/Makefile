@@ -7,6 +7,9 @@ export DOWNLOAD_URL ?= $(PACKAGE_REPO_URL)/releases/download/v$(PACKAGE_VERSION)
 export APK_BUILD_TEMPLATE ?= APKBUILD.github-binary
 export APKBUILD_DEPENDS += libc6-compat
 
+# arm64 not supported
+export PACKAGE_ARCHS_DISABLED = arm64
+
 install:
 	$(call download_binary_bz2)
 

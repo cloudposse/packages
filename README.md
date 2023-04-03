@@ -84,20 +84,21 @@ Package repository hosting is graciously provided by [cloudsmith](https://clouds
 
 
 
-### Alpine Repository (recommended)
+## Debian Repository (recommended)
 
-A public Alpine repository is provided by [Cloud Posse](https://cloudposse.com). The repository is hosted on Amazon S3 and fronted by [CloudFlare's CDN](http://cloudflare.com) with end-to-end TLS. This ensures insane availability with DDoS mitigation and low-cost hosting. Using this alpine repository is ultimately more reliable than depending on [GitHub for availability](https://twitter.com/githubstatus) and provides an easier way to manage dependencies pinned at multiple versions. 
+A public Debian repository is provided by [Cloud Posse](https://cloudposse.com). 
+The repository is hosted by [Cloudsmith](https://cloudsmith.com/)
+Using this Debian repository is ultimately more reliable than depending on [GitHub for availability](https://twitter.com/githubstatus)
+and provides an easier way to manage dependencies pinned at multiple versions. 
 
-The repository itself is managed using [`alpinist`](https://github.com/cloudposse/alpinist), which takes care of the heavy lifting of building repository indexes. You can self-host your own Alpine repository using this strategy.
-
-### Configure the alpine repository:
+### Configure the Debian repository:
 
 #### The Easy Way
 
-We provide a bootstrap script to configure the alpine repository for your version of alpine. 
+Cloudsmith provides an installation script to configure the Debian repository for your version of Debian. 
 
 ```
-curl -sSL https://apk.cloudposse.com/install.sh | bash
+curl -1sLf 'https://dl.cloudsmith.io/public/cloudposse/packages/cfg/setup/bash.deb.sh' | bash
 ```
 __NOTE__: Requires `bash` and `curl` to run:
 
@@ -105,11 +106,70 @@ __NOTE__: Requires `bash` and `curl` to run:
 
 Add the following to your `Dockerfile` near the top.
 ```
-# Install the cloudposse alpine repository
-ADD https://apk.cloudposse.com/ops@cloudposse.com.rsa.pub /etc/apk/keys/
-RUN echo "@cloudposse https://apk.cloudposse.com/3.11/vendor" >> /etc/apk/repositories
+# Install the cloudposse Debian repository
+RUN apt-get update && apt-get install -y apt-utils curl
+RUN curl -1sLf 'https://dl.cloudsmith.io/public/cloudposse/packages/cfg/setup/bash.deb.sh' | bash
 ```
-__NOTE__: we support alpine `3.7`, `3.8`, `3.9`, `3.10`, and `3.11` packages at this time
+
+### Installing Debian Packages
+
+When adding packages, we recommend using `apt-get update && apt-get install -yq $package` to update the repository index before installing packages.
+
+Simply install any package as normal:
+```
+apk-get install -y terraform
+```
+
+But we recommend that you use version pinning (the `-\*` is important, as it gets you the latest version of the package):
+```
+apt-get install gomplate=3.0.0-\*
+```
+
+## RPM Repository
+
+We publish RPM packages corresponding to all the Debian packages we publish. Installing the repository is almost the same as above.
+
+```
+curl -1sLf 'https://dl.cloudsmith.io/public/cloudposse/packages/cfg/setup/bash.rpm.sh' | bash
+```
+
+Install packages as normal. `yum` automatically updates the repository index before installing packages.
+```
+yum install -y terraform
+```
+
+Note that unlike other package systems, `yum` automatically updates the repository index before installing packages.
+
+We still recommend version pinning, but `yum` makes it hard. You can use this command to list all the available versions of a package:
+```
+yum --showduplicate list $package
+```
+Then you can install the package with a version pinning:
+```
+VERSION=1.3.0
+RELEASE=1
+yum install -y $package-$VERSION-$RELEASE.$(uname -m)
+```
+
+## Alpine Repository 
+
+A public Alpine repository is provided by [Cloud Posse](https://cloudposse.com). 
+The repository is hosted by [Cloudsmith](https://cloudsmith.com/)
+Using this Alpine repository is ultimately more reliable than depending on [GitHub for availability](https://twitter.com/githubstatus)
+and provides an easier way to manage dependencies pinned at multiple versions. 
+
+### Configure the Alpine repository:
+
+#### The Easy Way
+
+Cloudsmith provides an installation script to configure the Alpine repository for your version of Alpine. 
+
+```
+apk add --no-cache bash curl
+curl -1sLf \
+'https://dl.cloudsmith.io/public/cloudposse/packages/setup.alpine.sh' \
+| bash  
+```
 
 ### Installing Alpine Packages
 
@@ -117,20 +177,20 @@ When adding packages, we recommend using `apk add --update $package` to update t
 
 Simply install any package as normal:
 ```
-apk add gomplate
+apk add --update terraform
 ```
 
 But we recommend that you use version pinning:
 ```
-apk add gomplate==3.0.0-r0
+apk add --update terraform==1.0.0-r0
 ```
 
 And maybe even repository pinning, so you know that you get our versions:
 ```
-apk add gomplate@cloudposse==3.0.0-r0
+apk add --update terraform@cloudposse==1.0.0-r0
 ```
 
-### Makefile Interface
+## Makefile Interface
 
 The `Makefile` interface works on OSX and Linux. It's a great way to distribute binaries in an OS-agnostic way which does not depend on a package manager (e.g. no `brew` or `apt-get`). 
 
@@ -185,6 +245,13 @@ $ make -C vendor/<package> apk
 ```sh
 $ make docker/build/deb/shell
 $ make -C vendor/<package> deb
+```
+
+#### RPM
+
+```sh
+$ make docker/build/rpm/shell
+$ make -C vendor/<package> rpm
 ```
 
 ### Mac
@@ -295,6 +362,7 @@ Here are some solutions to several common problems that may occur when adding a 
 [![atlantis](https://github.com/cloudposse/packages/workflows/atlantis/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aatlantis) | 0.23.3     | Terraform For Teams
 [![atmos](https://github.com/cloudposse/packages/workflows/atmos/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aatmos) | 1.32.4     | Universal Tool for DevOps and Cloud Automation
 [![awless](https://github.com/cloudposse/packages/workflows/awless/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aawless) | 0.1.11     | A Mighty CLI for AWS
+[![aws-copilot-cli](https://github.com/cloudposse/packages/workflows/aws-copilot-cli/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aaws-copilot-cli) | 1.27.0     | Tool for developers to build, release and operate containerized applications on AWS App Runner or Amazon ECS on AWS Fargate.
 [![aws-iam-authenticator](https://github.com/cloudposse/packages/workflows/aws-iam-authenticator/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aaws-iam-authenticator) | 0.6.2      | A tool to use AWS IAM credentials to authenticate to a Kubernetes cluster
 [![aws-nuke](https://github.com/cloudposse/packages/workflows/aws-nuke/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aaws-nuke) | 2.22.0     | A highly configurable way to wipe non-prod aws accounts. WARNING do not use in prod
 [![aws-vault](https://github.com/cloudposse/packages/workflows/aws-vault/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aaws-vault) | 7.2.0      | A vault for securely storing and accessing AWS credentials in development environments
@@ -304,18 +372,15 @@ Here are some solutions to several common problems that may occur when adding a 
 [![cli53](https://github.com/cloudposse/packages/workflows/cli53/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Acli53) | 0.8.22     | Command line tool for Amazon Route 53
 [![cloud-nuke](https://github.com/cloudposse/packages/workflows/cloud-nuke/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Acloud-nuke) | 0.27.1     | Tool for wiping an aws account DANGER absolutely do not use in production
 [![cloudflared](https://github.com/cloudposse/packages/workflows/cloudflared/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Acloudflared) | 2023.3.1   | Argo Tunnel client
-[![cloudposse-atlantis](https://github.com/cloudposse/packages/workflows/cloudposse-atlantis/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Acloudposse-atlantis) | 0.9.0.3    | Terraform For Teams, enhanced by Cloud Posse
 [![codefresh](https://github.com/cloudposse/packages/workflows/codefresh/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Acodefresh) | 0.82.5     | Codefresh CLI
 [![conftest](https://github.com/cloudposse/packages/workflows/conftest/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aconftest) | 0.40.0     | Test your configuration files using Open Policy Agent
 [![consul](https://github.com/cloudposse/packages/workflows/consul/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aconsul) | 1.15.2     | Hashicorp consul
 [![ctop](https://github.com/cloudposse/packages/workflows/ctop/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Actop) | 0.7.7      | Top-like interface for container metrics
 [![direnv](https://github.com/cloudposse/packages/workflows/direnv/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Adirenv) | 2.32.2     | Unclutter your .profile
 [![doctl](https://github.com/cloudposse/packages/workflows/doctl/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Adoctl) | 1.93.1     | A command line tool for DigitalOcean services
-[![duffle](https://github.com/cloudposse/packages/workflows/duffle/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aduffle) | 0.3.5b1    | CNAB installer
 [![ec2-instance-selector](https://github.com/cloudposse/packages/workflows/ec2-instance-selector/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aec2-instance-selector) | 2.4.1      | A CLI tool and go library which recommends instance types based on resource criteria like vcpus and memory
 [![emailcli](https://github.com/cloudposse/packages/workflows/emailcli/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aemailcli) | 1.0.3      | Command line email sending client written in Go.
 [![envcli](https://github.com/cloudposse/packages/workflows/envcli/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aenvcli) | 0.7.1      | A simple wrapper that allows you to run commands within ethereal docker containers
-[![fargate](https://github.com/cloudposse/packages/workflows/fargate/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Afargate) | 0.3.2      | CLI for AWS Fargate
 [![fetch](https://github.com/cloudposse/packages/workflows/fetch/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Afetch) | 0.4.5      | fetch makes it easy to download files, folders, and release assets from a specific public git commit, branch, or tag
 [![figurine](https://github.com/cloudposse/packages/workflows/figurine/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Afigurine) | 1.3.0      | Print your name in style
 [![fzf](https://github.com/cloudposse/packages/workflows/fzf/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Afzf) | 0.23.1     | A command-line fuzzy finder
@@ -324,7 +389,7 @@ Here are some solutions to several common problems that may occur when adding a 
 [![github-commenter](https://github.com/cloudposse/packages/workflows/github-commenter/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Agithub-commenter) | 0.17.0     | Command line utility for creating GitHub comments on Commits, Pull Request Reviews or Issues
 [![github-release](https://github.com/cloudposse/packages/workflows/github-release/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Agithub-release) | 0.10.0     | Commandline app to create and edit releases on Github (and upload artifacts)
 [![github-status-updater](https://github.com/cloudposse/packages/workflows/github-status-updater/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Agithub-status-updater) | 0.7.0      | Command line utility for updating GitHub commit statuses and enabling required status checks for pull requests
-[![gitleaks](https://github.com/cloudposse/packages/workflows/gitleaks/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Agitleaks) | 1.2.0      | Audit git repos for secrets 🔑
+[![gitleaks](https://github.com/cloudposse/packages/workflows/gitleaks/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Agitleaks) | 8.16.2     | Audit git repos for secrets 🔑
 [![go-jsonnet](https://github.com/cloudposse/packages/workflows/go-jsonnet/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ago-jsonnet) | 0.19.1     | This an implementation of Jsonnet in pure Go.
 [![gomplate](https://github.com/cloudposse/packages/workflows/gomplate/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Agomplate) | 3.11.4     | A flexible commandline tool for template rendering. Supports lots of local and remote datasources.
 [![gonsul](https://github.com/cloudposse/packages/workflows/gonsul/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Agonsul) | 1.0.2      | A stand-alone alternative to git2consul 
@@ -341,7 +406,6 @@ Here are some solutions to several common problems that may occur when adding a 
 [![hugo](https://github.com/cloudposse/packages/workflows/hugo/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ahugo) | 0.111.3    | The world’s fastest framework for building websites.
 [![infracost](https://github.com/cloudposse/packages/workflows/infracost/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ainfracost) | 0.10.19    | Cloud cost estimates for Terraform
 [![jp](https://github.com/cloudposse/packages/workflows/jp/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ajp) | 0.2.1      | Command line interface to JMESPath
-[![jq](https://github.com/cloudposse/packages/workflows/jq/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ajq) | 1.6.0      | Command-line JSON processor
 [![json2hcl](https://github.com/cloudposse/packages/workflows/json2hcl/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ajson2hcl) | 0.1.1      | Convert JSON to HCL, and vice versa
 [![jx](https://github.com/cloudposse/packages/workflows/jx/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ajx) | 3.10.81    | Jenkins-X
 [![k3d](https://github.com/cloudposse/packages/workflows/k3d/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ak3d) | 5.4.9      | Little helper to run Rancher Lab's k3s in Docker
@@ -388,7 +452,6 @@ Here are some solutions to several common problems that may occur when adding a 
 [![rancher](https://github.com/cloudposse/packages/workflows/rancher/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Arancher) | 2.7.0      | Rancher CLI
 [![rbac-lookup](https://github.com/cloudposse/packages/workflows/rbac-lookup/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Arbac-lookup) | 0.10.1     | Find Kubernetes roles and cluster roles bound to any user, service account, or group name.
 [![saml2aws](https://github.com/cloudposse/packages/workflows/saml2aws/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Asaml2aws) | 2.36.4     | CLI tool which enables you to login and retrieve AWS temporary credentials using a SAML IDP
-[![scenery](https://github.com/cloudposse/packages/workflows/scenery/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ascenery) | 0.1.5      | A Terraform plan output prettifier
 [![sentry-cli](https://github.com/cloudposse/packages/workflows/sentry-cli/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Asentry-cli) | 2.16.1     | A command line utility to work with Sentry.
 [![shellcheck](https://github.com/cloudposse/packages/workflows/shellcheck/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ashellcheck) | 0.9.0      | ShellCheck, a static analysis tool for shell scripts
 [![shfmt](https://github.com/cloudposse/packages/workflows/shfmt/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ashfmt) | 3.6.0      | A shell parser, formatter and interpreter (POSIX/Bash/mksh)
@@ -400,7 +463,6 @@ Here are some solutions to several common problems that may occur when adding a 
 [![stern](https://github.com/cloudposse/packages/workflows/stern/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Astern) | 1.24.0     | ⎈ Multi pod and container log tailing for Kubernetes
 [![sudosh](https://github.com/cloudposse/packages/workflows/sudosh/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Asudosh) | 0.3.0      | Shell wrapper to run a login shell with `sudo` as the current user for the purpose of audit logging
 [![teleport](https://github.com/cloudposse/packages/workflows/teleport/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ateleport) | 12.1.5     | Secure Access for Developers that doesn't get in the way.
-[![teleport-4.2](https://github.com/cloudposse/packages/workflows/teleport-4.2/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ateleport-4.2) | 4.2.12     | Privileged access management for elastic infrastructure.
 [![teleport-4.3](https://github.com/cloudposse/packages/workflows/teleport-4.3/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ateleport-4.3) | 4.3.10     | Privileged access management for elastic infrastructure.
 [![teleport-4.4](https://github.com/cloudposse/packages/workflows/teleport-4.4/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ateleport-4.4) | 4.4.12     | Privileged access management for elastic infrastructure.
 [![teleport-5.0](https://github.com/cloudposse/packages/workflows/teleport-5.0/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ateleport-5.0) | 5.0.2      | Secure Access for Developers that doesn't get in the way.
@@ -419,14 +481,11 @@ Here are some solutions to several common problems that may occur when adding a 
 [![terraform_0.13](https://github.com/cloudposse/packages/workflows/terraform_0.13/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aterraform_0.13) | 0.13.7     | Terraform (Deprecated package. Use terraform-0.13 instead)
 [![terragrunt](https://github.com/cloudposse/packages/workflows/terragrunt/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aterragrunt) | 0.45.0     | Terragrunt is a thin wrapper for Terraform that provides extra tools for working with multiple Terraform modules.
 [![terrahelp](https://github.com/cloudposse/packages/workflows/terrahelp/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aterrahelp) | 0.7.5      | Terrahelp is as a command line utility that provides useful tricks like masking of terraform output.
-[![tfenv](https://github.com/cloudposse/packages/workflows/tfenv/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Atfenv) | 0.4.0      | Transform environment variables for use with Terraform (e.g. `HOSTNAME` ⇨ `TF_VAR_hostname`)
 [![tflint](https://github.com/cloudposse/packages/workflows/tflint/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Atflint) | 0.45.0     | A Pluggable Terraform Linter
-[![tfmask](https://github.com/cloudposse/packages/workflows/tfmask/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Atfmask) | 0.7.0      | Terraform utility to mask select output from `terraform plan` and `terraform apply`
 [![tfschema](https://github.com/cloudposse/packages/workflows/tfschema/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Atfschema) | 0.7.5      | A schema inspector for Terraform providers
 [![tfsec](https://github.com/cloudposse/packages/workflows/tfsec/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Atfsec) | 1.28.1     | Security scanner for your Terraform code
 [![thanos](https://github.com/cloudposse/packages/workflows/thanos/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Athanos) | 0.31.0     | Highly available Prometheus setup with long term storage capabilities. CNCF Sandbox project.
 [![trivy](https://github.com/cloudposse/packages/workflows/trivy/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Atrivy) | 0.39.0     | A Simple and Comprehensive Vulnerability Scanner for Containers, Suitable for CI
-[![turf](https://github.com/cloudposse/packages/workflows/turf/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aturf) | 0.18.0     | Turf is Cloud Posse's command-line automation helper.
 [![variant](https://github.com/cloudposse/packages/workflows/variant/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Avariant) | 0.38.0     | Variant is a Universal CLI tool that works like a task runner
 [![variant2](https://github.com/cloudposse/packages/workflows/variant2/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Avariant2) | 0.38.0     | Second major version of Variant, a Universal CLI tool that works like a task runner
 [![vault](https://github.com/cloudposse/packages/workflows/vault/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Avault) | 1.13.1     | Hashicorp vault

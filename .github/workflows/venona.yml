@@ -28,6 +28,22 @@ on:
       - vendor/venona/**
       - .github/workflows/venona.yml
 
+  #bridgecrew:skip=BC_REPO_GITHUB_ACTION_7:The whole point of the workflow dispatch is to feed in a version
+  workflow_dispatch:
+    inputs:
+      package_version_override:
+        description: 'Version of venona package to build. Defaults to vendor/venona/VERSION.'
+        required: false
+        type: string
+      release_number_override:
+        description: 'Zero-based release number of venona package to publish. Defaults to vendor/venona/RELEASE.'
+        required: false
+        type: string
+
+env:
+  venona_VERSION: ${{ github.event.inputs.package_version_override }}
+  venona_RELEASE: ${{ github.event.inputs.release_number_override }}
+
 jobs:
   matrix:
     if: github.event_name != 'schedule'
@@ -35,6 +51,7 @@ jobs:
     outputs:
       package-enabled: ${{ steps.info.outputs.package_enabled }}
       package-matrix:  ${{steps.info.outputs.package_matrix}}
+      arch-matrix:  ${{steps.info.outputs.arch_matrix}}
       apk-enabled: ${{ steps.info.outputs.package_enabled == 'true' && steps.info.outputs.apk_package_enabled == 'true' }}
     steps:
     - uses: actions/checkout@v3
@@ -71,7 +88,12 @@ jobs:
       PACKAGER_PRIVKEY: /dev/shm/ops@cloudposse.com.rsa
       PACKAGER_PUBKEY: ${{github.workspace}}/artifacts/ops@cloudposse.com.rsa.pub
 
-    container: cloudposse/packages-apkbuild:${{matrix.alpine}}
+    container:
+      image: cloudposse/packages-apkbuild:${{matrix.alpine}}
+      credentials:
+        username: ${{ secrets.DOCKERHUB_USERNAME }}
+        password: ${{ secrets.DOCKERHUB_PASSWORD }}
+
     steps:
       # Checkout the packages repo so we can build the packages as a monorepo
       - name: "Checkout source code at current commit"
@@ -138,12 +160,25 @@ jobs:
       github.event_name != 'schedule' && needs.matrix.outputs.package-enabled != 'false'
       && needs.matrix.outputs.package-matrix != '[]' && needs.matrix.outputs.package-matrix != '["apk"]'
 
-    runs-on: ubuntu-latest
     strategy:
       matrix:
         package-type: ${{ fromJSON(needs.matrix.outputs.package-matrix) }}
+        arch: ${{ fromJSON(needs.matrix.outputs.arch-matrix) }}
         exclude:
         - package-type: 'apk'
+        include:
+        # Default value for runs-on. Original matrix values will not be overridden, but added ones (like runs-on) can be.
+        # See https://docs.github.com/en/actions/using-jobs/using-a-matrix-for-your-jobs#expanding-or-adding-matrix-configurations
+        - runs-on:
+          - "self-hosted"
+          - "arm64"
+        # By including `arch: amd64` here, we override the `runs-on` value `arch` is `amd64`.
+        # This also forces the matrix to include `arch: amd64` even if it is not in the original matrix.
+        # This is why we do not default for amd64 and then override for arm64.
+        - arch: amd64
+          runs-on:
+          - "ubuntu-latest"
+    runs-on: ${{ matrix.runs-on }}
     env:
       # We are in a bit of a bind here because of how GitHub actions work as of 2020-11-19
       # Although the "workspace" is mounted to the container, it is not mounted
@@ -159,7 +194,12 @@ jobs:
       PACKAGE_RELPATH: artifacts/${{matrix.package-type}}/any-version
 
     # Unfortunately, there is no reasonable way to configure the docker image tag based on the package-type
-    container: cloudposse/packages-${{matrix.package-type}}build:latest
+    container:
+      image: cloudposse/packages-${{matrix.package-type}}build:latest
+      credentials:
+        username: ${{ secrets.DOCKERHUB_USERNAME }}
+        password: ${{ secrets.DOCKERHUB_PASSWORD }}
+
     steps:
       # Checkout the packages repo so we can build the packages as a monorepo
       - name: "Checkout source code at current commit"

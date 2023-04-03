@@ -7,9 +7,10 @@ export PACKAGE_NAME = $(MASTER_PACKAGE_NAME)-$(MAJOR_VERSION)
 export PACKAGE_VERSION_PIN = $(MAJOR_VERSION).x
 
 export PACKAGE_TYPES_DISABLED = apk
+export PACKAGE_ARCHS_DISABLED = arm64
 
-# This version is past end-of-life and will no longer be updated
-export AUTO_UPDATE_ENABLED = false
+# This version is past end-of-life and will no longer be published
+export PACKAGE_ENABLED = false
 
 include ../../tasks/Makefile.vendor_includes
 

@@ -5,32 +5,38 @@ RPM_PACKAGE_VERSION = $(subst -,~,$(PACKAGE_VERSION))
 # By convention, the first release of an RPM package is 1, not zero
 RPM_PACKAGE_RELEASE = $(shell echo $$(($(PACKAGE_RELEASE) + 1)))
 # Package managers require that every package file have a unique name.
-RPM_PACKAGE ?= $(RPM_PACKAGES_PATH)/$(PACKAGE_NAME)_$(RPM_PACKAGE_VERSION)-$(RPM_PACKAGE_RELEASE)_$(DIST_ARCH).rpm
+RPM_PACKAGE ?= $(RPM_PACKAGES_PATH)/$(PACKAGE_NAME)-$(RPM_PACKAGE_VERSION)-$(RPM_PACKAGE_RELEASE).$(RPM_DIST_ARCH).rpm
 RPM_MAINTAINER ?= Cloud Posse <packages@cloudposse.com>
 RPM_FPM_EXTRA_ARGS ?=
 RPM_FPM_EXTRA_FILES ?=
 
 export RPM_TMP_DIR := $(realpath $(shell mktemp -d ../../tmp/build.XXXXXX))
+export RPM_OUT_TMP_DIR := $(realpath $(shell mktemp -d ../../tmp/build.XXXXXX))
 
 $(RPM_TMP_DIR)/$(PACKAGE_NAME): INSTALL_PATH=$(RPM_TMP_DIR)
 $(RPM_TMP_DIR)/$(PACKAGE_NAME): PATH:=$(RPM_TMP_DIR):$(PATH)
 $(RPM_TMP_DIR)/$(PACKAGE_NAME): install
 
+# MAKEFILE NOTE: Variable target names are evaluated at the time the target is read, not when it is invoked.
+# Therefore, since we need to use the architecture (and other dynamic variables) in the eventual
+# package name, we need to use a fixed target name for the build file and then rename it later.
+
 ifneq ($(wildcard $(PACKAGE_NAME).post-install),)
-$(RPM_PACKAGE): RPM_FPM_EXTRA_ARGS += --after-install $(RPM_TMP_DIR)/$(PACKAGE_NAME).post-install
-$(RPM_PACKAGE): RPM_FPM_EXTRA_FILES += $(PACKAGE_NAME).post-install
+$(RPM_OUT_TMP_DIR)/package-tmp.rpm: RPM_FPM_EXTRA_ARGS += --after-install $(RPM_TMP_DIR)/$(PACKAGE_NAME).post-install
+$(RPM_OUT_TMP_DIR)/package-tmp.rpm: RPM_FPM_EXTRA_FILES += $(PACKAGE_NAME).post-install
 endif
 ifneq ($(wildcard $(PACKAGE_NAME).post-deinstall),)
-$(RPM_PACKAGE): RPM_FPM_EXTRA_ARGS += --after-remove $(RPM_TMP_DIR)/$(PACKAGE_NAME).post-deinstall
-$(RPM_PACKAGE): RPM_FPM_EXTRA_FILES += $(PACKAGE_NAME).post-deinstall
-$(RPM_PACKAGE): RPM_DEINSTALL = $(PACKAGE_NAME).post-deinstall
+$(RPM_OUT_TMP_DIR)/package-tmp.rpm: RPM_FPM_EXTRA_ARGS += --after-remove $(RPM_TMP_DIR)/$(PACKAGE_NAME).post-deinstall
+$(RPM_OUT_TMP_DIR)/package-tmp.rpm: RPM_FPM_EXTRA_FILES += $(PACKAGE_NAME).post-deinstall
+$(RPM_OUT_TMP_DIR)/package-tmp.rpm: RPM_DEINSTALL = $(PACKAGE_NAME).post-deinstall
 endif
 # update-alternatives on Centos does not have a --quiet flag, so we edit it out of the deinstall script
-$(RPM_PACKAGE): $(RPM_TMP_DIR)/$(PACKAGE_NAME)
-	mkdir -p $(RPM_PACKAGES_PATH)
+$(RPM_OUT_TMP_DIR)/package-tmp.rpm: $(RPM_TMP_DIR)/$(PACKAGE_NAME)
 	[ -z "$(RPM_FPM_EXTRA_FILES)" ] || cp -a $(RPM_FPM_EXTRA_FILES) $(RPM_TMP_DIR)
 	[ -z "$(RPM_DEINSTALL)" ] || sed -i 's/\(update-alternatives .*\) --quiet/\1/' "$(RPM_TMP_DIR)/$(RPM_DEINSTALL)"
-	set -x; fpm --force -t rpm --maintainer '$(RPM_MAINTAINER)' -s dir -a $(DIST_ARCH) -n $(PACKAGE_NAME) -v $(RPM_PACKAGE_VERSION) --iteration $(RPM_PACKAGE_RELEASE) -C $(RPM_TMP_DIR) --prefix $${INSTALL_DIR:-/usr/bin} $(RPM_FPM_EXTRA_ARGS) --package $@ .
+	set -x; fpm --force -t rpm --maintainer '$(RPM_MAINTAINER)' -s dir -a $(RPM_DIST_ARCH) -n $(PACKAGE_NAME) -v $(RPM_PACKAGE_VERSION) \
+	  --iteration $(RPM_PACKAGE_RELEASE) -C $(RPM_TMP_DIR) --prefix $${INSTALL_DIR:-/usr/bin} $(RPM_FPM_EXTRA_ARGS) \
+	  --description "$(PACKAGE_DESCRIPTION)" --package $@ .
 	@echo "Testing installation of $@"
 	yum install -y --allowerasing -C $@
 	$(MAKE) test
@@ -39,14 +45,19 @@ $(RPM_PACKAGE): $(RPM_TMP_DIR)/$(PACKAGE_NAME)
 .PHONY: rpm rpm_make_package rpm_skip_package _rpm_target _rpm_settings/% rpm/%
 
 
-rpm-make-package: $(RPM_PACKAGE)
+rpm-make-package: $(RPM_OUT_TMP_DIR)/package-tmp.rpm
+	mkdir -p $(RPM_PACKAGES_PATH)
+	mv $(RPM_OUT_TMP_DIR)/package-tmp.rpm $(RPM_PACKAGE)
 	@echo "Wrote $(RPM_PACKAGE)"
+	@[[ -f $(RPM_PACKAGE) ]] || echo 'ERROR: file $(RPM_PACKAGE) is missing!' >&2
+	@echo cleaning up temp dirs
+	rm -rf $(RPM_TMP_DIR) $(RPM_OUT_TMP_DIR)
 
 rpm-skip-package:
-	@echo RPM packages disabled for $(PACKAGE_NAME)
+	@echo RPM $(RPM_DIST_ARCH) packages disabled for $(PACKAGE_NAME) build on $(HOST_GOARCH)
 
 # Pick which target to make (make, skip, disabled) based on settings
-_rpm_target: $(shell $(LOCAL_BIN)/package-filter make-target rpm $(PACKAGE_ENABLED) "$(PACKAGE_TYPES_DISABLED)")
+_rpm_target: $(shell $(LOCAL_BIN)/package-filter make-target rpm $(PACKAGE_ENABLED) "$(PACKAGE_TYPES_DISABLED)" "unknown" "$(HOST_GOARCH)" "$(PACKAGE_ARCHS_DISABLED)")
 
 # use _rpm_settings to set RPM-specific settings, then _rpm_target to find the right build target
 rpm: _rpm_settings/_rpm_target
@@ -56,12 +67,12 @@ rpm: _rpm_settings/_rpm_target
 rpm/%: _rpm_settings/%
 	@exit 0
 
-_rpm_settings/%: DIST_ARCH_DETECTED = $(or $(PACKAGE_DIST_ARCH),$(ARCH))
-_rpm_settings/%: DIST_ARCH = $(if $(subst amd64,,$(DIST_ARCH_DETECTED)),$(DIST_ARCH_DETECTED),x86_64)
+_rpm_settings/%: RPM_DIST_ARCH = $(or $(PACKAGE_DIST_ARCH),$(HOST_NATIVE_ARCH))
 _rpm_settings/%: DIST_PACKAGE_TYPE = rpm
 _rpm_settings/%: DIST_DISTRIBUTION = centos
 _rpm_settings/%: %
 	@exit 0
 
+clean:: RPM_DIST_ARCH = $(or $(PACKAGE_DIST_ARCH),$(HOST_NATIVE_ARCH))
 clean::
 	rm -f $(RPM_PACKAGE)

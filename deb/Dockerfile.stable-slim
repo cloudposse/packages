@@ -11,10 +11,11 @@ RUN gem install --no-document backports -v 3.15.0
 RUN gem install --no-document fpm
 
 ARG GO_INSTALL_VERSION=1.19.1
+ARG TARGETARCH
 
 # Install go
 RUN echo downloading go${GO_INSTALL_VERSION} && \
-    curl -sSL --retry 3 -o golang.tar.gz https://golang.org/dl/go${GO_INSTALL_VERSION}.linux-amd64.tar.gz && \
+    curl -sSL --retry 3 -o golang.tar.gz https://golang.org/dl/go${GO_INSTALL_VERSION}.linux-${TARGETARCH}.tar.gz && \
     tar xzf golang.tar.gz && \
     mv go /usr/lib/ && rm golang.tar.gz && \
     ln -s /usr/lib/go/bin/go /usr/bin/go

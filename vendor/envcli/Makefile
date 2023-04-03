@@ -10,6 +10,9 @@ export DOWNLOAD_URL ?= $(PACKAGE_REPO_URL)/releases/download/v$(PACKAGE_VERSION)
 export CHECK_COMMAND_ARGUMENTS ?= --version
 export CHECK_COMMAND_ENV ?= HOME=./
 
+# arm64 not supported
+export PACKAGE_ARCHS_DISABLED = arm64
+
 include ../../tasks/Makefile.vendor_includes
 
 install:
