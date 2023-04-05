@@ -1,14 +1,19 @@
 # Need to use version number so that it gets updated here and triggers a build
-FROM alpine:3.16.3
+FROM alpine:3.17.3
 
 ENV LC_ALL=C.UTF-8
 ENV PS1="(apk) \w \$ "
 
-# Install the cloudposse alpine repository
-ADD https://apk.cloudposse.com/ops@cloudposse.com.rsa.pub /etc/apk/keys/
-RUN echo "https://apk.cloudposse.com/3.13/vendor" >> /etc/apk/repositories
-RUN echo "https://alpine.global.ssl.fastly.net/alpine/edge/testing" >> /etc/apk/repositories
-RUN echo "https://alpine.global.ssl.fastly.net/alpine/edge/community" >> /etc/apk/repositories
+# install the cloudposse alpine repository
+RUN apk add --no-cache bash curl && \
+  curl -1sLf \
+  'https://dl.cloudsmith.io/public/cloudposse/packages/setup.alpine.sh' \
+  | bash && \
+  printf "@cloudposse %s\n\n" "$(grep -h -v '^[@#]' /etc/apk/repositories | grep -F "public/cloudposse/packages" | head -1)" \
+  >> /etc/apk/repositories
+
+# Install and tag the @testing repo
+RUN echo "@testing https://dl-cdn.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositories
 
 RUN apk update && \
     apk add make curl alpine-sdk shadow bash jq sudo go
