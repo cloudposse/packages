@@ -17,7 +17,7 @@ cfssl*                    1.6.3      Cloudflare's PKI and TLS toolkit
 cfssljson*                1.6.3      Cloudflare's PKI and TLS toolkit json parser
 chamber                   2.12.0     CLI for managing secrets
 cli53                     0.8.22     Command line tool for Amazon Route 53
-cloud-nuke                0.27.1     Tool for wiping an aws account DANGER absolutely do not use in production
+cloud-nuke                0.28.1     Tool for wiping an aws account DANGER absolutely do not use in production
 cloudflared               2023.3.1   Argo Tunnel client
 cloudposse-atlantis       OBSOLETE   Terraform For Teams, enhanced by Cloud Posse
 codefresh*                0.82.5     Codefresh CLI
@@ -34,7 +34,7 @@ fargate                   OBSOLETE   (OBSOLETE, use aws/copilot-cli instead) CLI
 fetch                     0.4.5      fetch makes it easy to download files, folders, and release assets from a specific public git commit, branch, or tag
 figurine                  1.3.0      Print your name in style
 fzf                       0.23.1     A command-line fuzzy finder
-gh                        2.25.1     The GitHub CLI
+gh                        2.26.1     The GitHub CLI
 ghr                       0.16.0     Upload multiple artifacts to GitHub Releases in parallel
 github-commenter          0.17.0     Command line utility for creating GitHub comments on Commits, Pull Request Reviews or Issues
 github-release*           0.10.0     Commandline app to create and edit releases on Github (and upload artifacts)
@@ -58,7 +58,7 @@ infracost                 0.10.19    Cloud cost estimates for Terraform
 jp                        0.2.1      Command line interface to JMESPath
 jq                        OBSOLETE   Command-line JSON processor
 json2hcl                  0.1.1      Convert JSON to HCL, and vice versa
-jx                        3.10.81    Jenkins-X
+jx                        3.10.83    Jenkins-X
 k3d                       5.4.9      Little helper to run Rancher Lab's k3s in Docker
 k6                        0.43.1     A modern load testing tool, using Go and JavaScript - https://k6.io
 k9s                       0.27.3     Kubernetes CLI To Manage Your Clusters In Style
@@ -105,7 +105,7 @@ rakkess*                  0.5.0      Review Access - kubectl plugin to show an a
 rancher                   2.7.0      Rancher CLI
 rbac-lookup               0.10.1     Find Kubernetes roles and cluster roles bound to any user, service account, or group name.
 retry                     OBSOLETE   ♻️ Functional mechanism based on channels to perform actions repetitively until successful.
-saml2aws                  2.36.4     CLI tool which enables you to login and retrieve AWS temporary credentials using a SAML IDP
+saml2aws                  2.36.6     CLI tool which enables you to login and retrieve AWS temporary credentials using a SAML IDP
 scenery                   OBSOLETE   A Terraform plan output prettifier
 sentinel                  OBSOLETE   Hashicorp sentinel
 sentry-cli                2.16.1     A command line utility to work with Sentry.
@@ -113,7 +113,7 @@ shellcheck                0.9.0      ShellCheck, a static analysis tool for shel
 shfmt                     3.6.0      A shell parser, formatter and interpreter (POSIX/Bash/mksh)
 slack-notifier            0.4.0      Command line utility to send messages with attachments to Slack channels via Incoming Webhooks
 sops                      3.7.3      Secrets management stinks, use some sops!
-spacectl                  0.18.1     [Spacelift.io](https://spacelift.io/) client and CLI
+spacectl                  0.19.0     [Spacelift.io](https://spacelift.io/) client and CLI
 spotctl                   0.29.0     A unified CLI to manage your [Spot](https://spot.io/) resources.
 sshm*                     1.2.2      Easy connect on EC2 instances thanks to AWS System Manager Agent
 stern                     1.24.0     ⎈ Multi pod and container log tailing for Kubernetes
