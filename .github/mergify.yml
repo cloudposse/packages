@@ -4,7 +4,13 @@ pull_request_rules:
       - "-check-failure~=.*alpine.*"
       - "-check-failure~=.*package.*"
       - "-check-failure~=.*matrix.*"
+      # We cannot wait for "all the checks" because at the start of a PR, there are no checks:
+      # checks get added dynamically. See https://docs.mergify.com/conditions/#validating-all-status-checks
+      # So we wait for one long check (build-and-push) and one late-starting check (package) to succeed,
+      # and then wait for any checks that have started to finish. That is as close to "all the checks" as we are going to get.
       - "check-success~=.*build-and-push.*"
+      - "check-success~=.*package.*"
+      - "#check-pending=0"
       - "#files<=6"
       - "base=master"
       - "author=cloudpossebot"
@@ -22,6 +28,8 @@ pull_request_rules:
       - "-check-failure~=.*package.*"
       - "-check-failure~=.*matrix.*"
       - "check-success~=.*build-and-push.*"
+      - "check-success~=.*package.*"
+      - "#check-pending=0"
       - "#approved-reviews-by>=1"
       - "#changes-requested-reviews-by=0"
       - "#commented-reviews-by=0"
