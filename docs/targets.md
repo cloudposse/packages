@@ -18,7 +18,7 @@ cfssljson*                1.6.4      Cloudflare's PKI and TLS toolkit json parse
 chamber                   2.12.0     CLI for managing secrets
 cli53                     0.8.22     Command line tool for Amazon Route 53
 cloud-nuke                0.29.4     Tool for wiping an aws account DANGER absolutely do not use in production
-cloudflared               2023.4.0   Argo Tunnel client
+cloudflared               2023.4.1   Argo Tunnel client
 cloudposse-atlantis       OBSOLETE   Terraform For Teams, enhanced by Cloud Posse
 codefresh*                0.82.7     Codefresh CLI
 conftest                  0.41.0     Test your configuration files using Open Policy Agent
