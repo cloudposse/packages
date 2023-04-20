@@ -1,12 +1,10 @@
 
 # Package details
 export VENDOR ?= cloudposse
-export DOWNLOAD_URL ?= $(PACKAGE_REPO_URL)/releases/download/$(PACKAGE_VERSION)/$(PACKAGE_NAME)_$(OS)_$(ARCH)
+# https://github.com/cloudposse/github-status-updater/releases/download/0.9.0/github-status-updater_0.9.0_linux_amd64
+export DOWNLOAD_URL ?= $(PACKAGE_REPO_URL)/releases/download/$(PACKAGE_VERSION)/$(PACKAGE_NAME)_$(PACKAGE_VERSION)_$(OS)_$(ARCH)
 export APK_BUILD_TEMPLATE ?= APKBUILD.github-binary
 export APKBUILD_DEPENDS += libc6-compat
-
-# arm64 not supported
-export PACKAGE_ARCHS_DISABLED = arm64
 
 include ../../tasks/Makefile.vendor_includes
 
