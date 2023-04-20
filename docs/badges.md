@@ -43,7 +43,7 @@
 [![gosu](https://github.com/cloudposse/packages/workflows/gosu/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Agosu) | 1.16.0     | Simple Go-based setuid+setgid+setgroups+exec
 [![gotop](https://github.com/cloudposse/packages/workflows/gotop/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Agotop) | 3.0.0      | A terminal based graphical activity monitor inspired by gtop and vtop
 [![grpcurl](https://github.com/cloudposse/packages/workflows/grpcurl/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Agrpcurl) | 1.8.7      | Like cURL, but for gRPC: Command-line tool for interacting with gRPC servers
-[![hcledit](https://github.com/cloudposse/packages/workflows/hcledit/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ahcledit) | 0.2.6      | A command line editor for HCL
+[![hcledit](https://github.com/cloudposse/packages/workflows/hcledit/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ahcledit) | 0.2.7      | A command line editor for HCL
 [![helm](https://github.com/cloudposse/packages/workflows/helm/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ahelm) | 3.11.3     | The Kubernetes Package Manager
 [![helm2](https://github.com/cloudposse/packages/workflows/helm2/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ahelm2) | 2.17.0     | The Kubernetes Package Manager
 [![helm3](https://github.com/cloudposse/packages/workflows/helm3/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ahelm3) | 3.11.3     | The Kubernetes Package Manager
