@@ -176,6 +176,7 @@ jobs:
         - runs-on:
           - "self-hosted"
           - "arm64"
+          - "packages"
         # By including `arch: amd64` here, we override the `runs-on` value `arch` is `amd64`.
         # This also forces the matrix to include `arch: amd64` even if it is not in the original matrix.
         # This is why we do not default for amd64 and then override for arm64.
