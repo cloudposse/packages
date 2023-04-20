@@ -38,14 +38,14 @@ gh                        2.27.0     The GitHub CLI
 ghr                       0.16.0     Upload multiple artifacts to GitHub Releases in parallel
 github-commenter          0.17.0     Command line utility for creating GitHub comments on Commits, Pull Request Reviews or Issues
 github-release*           0.10.0     Commandline app to create and edit releases on Github (and upload artifacts)
-github-status-updater*    0.9.0      Command line utility for updating GitHub commit statuses and enabling required status checks for pull requests
+github-status-updater     0.9.0      Command line utility for updating GitHub commit statuses and enabling required status checks for pull requests
 gitleaks                  8.16.3     Audit git repos for secrets 🔑
 go-jsonnet                0.20.0     This an implementation of Jsonnet in pure Go.
 gomplate                  3.11.5     A flexible commandline tool for template rendering. Supports lots of local and remote datasources.
-gonsul                    1.0.2      A stand-alone alternative to git2consul 
+gonsul*                   1.0.2      A stand-alone alternative to git2consul 
 goofys*                   0.24.0     a high-performance, POSIX-ish Amazon S3 file system written in Go
 gosu                      1.16.0     Simple Go-based setuid+setgid+setgroups+exec
-gotop*                    3.0.0      A terminal based graphical activity monitor inspired by gtop and vtop
+gotop                     3.0.0      A terminal based graphical activity monitor inspired by gtop and vtop
 grpcurl                   1.8.7      Like cURL, but for gRPC: Command-line tool for interacting with gRPC servers
 hcledit                   0.2.7      A command line editor for HCL
 helm                      3.11.3     The Kubernetes Package Manager
@@ -102,7 +102,7 @@ popeye                    0.11.1     A Kubernetes cluster resource sanitizer
 promtool                  2.43.0     Prometheus CLI tool
 rainbow-text              1.2.1      Tasty rainbows for your terminal! (lolcat clone)
 rakkess*                  0.5.0      Review Access - kubectl plugin to show an access matrix for all available resources
-rancher*                  2.7.0      Rancher CLI
+rancher                   2.7.0      Rancher CLI
 rbac-lookup               0.10.1     Find Kubernetes roles and cluster roles bound to any user, service account, or group name.
 retry                     OBSOLETE   ♻️ Functional mechanism based on channels to perform actions repetitively until successful.
 saml2aws                  2.36.6     CLI tool which enables you to login and retrieve AWS temporary credentials using a SAML IDP
@@ -118,7 +118,7 @@ spotctl                   0.29.0     A unified CLI to manage your [Spot](https:/
 sshm*                     1.2.2      Easy connect on EC2 instances thanks to AWS System Manager Agent
 stern                     1.25.0     ⎈ Multi pod and container log tailing for Kubernetes
 sudosh                    0.3.0      Shell wrapper to run a login shell with `sudo` as the current user for the purpose of audit logging
-teleport                  12.2.3     Secure Access for Developers that doesn't get in the way.
+teleport                  12.2.4     Secure Access for Developers that doesn't get in the way.
 teleport-4.2              OBSOLETE   Privileged access management for elastic infrastructure.
 teleport-4.3              4.3.10     Privileged access management for elastic infrastructure.
 teleport-4.4              4.4.12     Privileged access management for elastic infrastructure.
@@ -152,7 +152,7 @@ vault                     1.13.1     Hashicorp vault
 vendir                    0.33.1      Easy way to vendor portions of git repos, github releases, helm charts, docker image contents, etc. declaratively.
 venona*                   1.9.14     Codefresh runtime-environment agent
 vert                      0.1.0      Simple CLI for comparing two or more versions
-yajsv                     1.4.1      Yet Another JSON Schema Validator [CLI]
+yajsv*                    1.4.1      Yet Another JSON Schema Validator [CLI]
 yq                        4.33.3     yq is a portable command-line YAML processor
 ```
 <!-- markdownlint-restore -->
