@@ -45,7 +45,11 @@ env:
   kind_RELEASE: ${{ github.event.inputs.release_number_override }}
 
 jobs:
-  matrix:
+  # Mergify cannot distinguish between 2 jobs with the same name run from different workflows,
+  # so each job must have a unique name for the rules to work properly.
+  # See https://github.com/Mergifyio/mergify/discussions/5082
+  # and https://github.com/Mergifyio/mergify/issues/5083
+  matrix-kind:
     if: github.event_name != 'schedule'
     runs-on: ubuntu-latest
     outputs:
@@ -70,9 +74,9 @@ jobs:
 
   # Build for alpine linux
   # Kept separate because it is old and slightly different than the other package builds
-  alpine:
-    needs: matrix
-    if: github.event_name != 'schedule' && needs.matrix.outputs.apk-enabled != 'false'
+  alpine-kind:
+    needs: matrix-kind
+    if: github.event_name != 'schedule' && needs.matrix-kind.outputs.apk-enabled != 'false'
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -152,18 +156,18 @@ jobs:
           no-wait-for-sync: 'true'                          # Skip the waiting for package synchronisation (i.e. upload only)
 
   # Build packages with fpm package manager
-  package:
-    needs: matrix
+  package-kind:
+    needs: matrix-kind
     # Should not be needed, but without these conditions, this job would fail with an error if the matrix is []
     # and would run with package-type empty if matrix is ["apk"]
     if: >
-      github.event_name != 'schedule' && needs.matrix.outputs.package-enabled != 'false'
-      && needs.matrix.outputs.package-matrix != '[]' && needs.matrix.outputs.package-matrix != '["apk"]'
+      github.event_name != 'schedule' && needs.matrix-kind.outputs.package-enabled != 'false'
+      && needs.matrix-kind.outputs.package-matrix != '[]' && needs.matrix-kind.outputs.package-matrix != '["apk"]'
 
     strategy:
       matrix:
-        package-type: ${{ fromJSON(needs.matrix.outputs.package-matrix) }}
-        arch: ${{ fromJSON(needs.matrix.outputs.arch-matrix) }}
+        package-type: ${{ fromJSON(needs.matrix-kind.outputs.package-matrix) }}
+        arch: ${{ fromJSON(needs.matrix-kind.outputs.arch-matrix) }}
         exclude:
         - package-type: 'apk'
         include:
@@ -172,6 +176,7 @@ jobs:
         - runs-on:
           - "self-hosted"
           - "arm64"
+          - "packages"
         # By including `arch: amd64` here, we override the `runs-on` value `arch` is `amd64`.
         # This also forces the matrix to include `arch: amd64` even if it is not in the original matrix.
         # This is why we do not default for amd64 and then override for arm64.
