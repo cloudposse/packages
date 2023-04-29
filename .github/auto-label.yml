@@ -101,6 +101,9 @@ vendor/duffle:
 vendor/ec2-instance-selector:
 - any: ["vendor/ec2-instance-selector/**"]
   all: ["!bin/**", "!tasks/**"]
+vendor/ecspresso:
+- any: ["vendor/ecspresso/**"]
+  all: ["!bin/**", "!tasks/**"]
 vendor/emailcli:
 - any: ["vendor/emailcli/**"]
   all: ["!bin/**", "!tasks/**"]
