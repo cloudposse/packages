@@ -44,6 +44,7 @@ jobs:
         - direnv
         - doctl
         - ec2-instance-selector
+        - ecspresso
         - emailcli
         - envcli
         - fetch
