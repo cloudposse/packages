@@ -5,7 +5,7 @@ amazon-ecr-credential-helper 0.7.0      Automatically gets credentials for Amazo
 amtool                    0.25.0     Tool for interacting with the Alertmanager API
 argocd                    2.7.2      Declarative GitOpts for Kubernetes
 assume-role*              0.3.2      Easily assume AWS roles in your terminal.
-atlantis                  0.24.0     Terraform For Teams
+atlantis                  0.24.1     Terraform For Teams
 atmos                     1.35.0     Universal Tool for DevOps and Cloud Automation
 awless*                   0.1.11     A Mighty CLI for AWS
 aws-copilot-cli           1.27.0     Tool for developers to build, release and operate containerized applications on AWS App Runner or Amazon ECS on AWS Fargate.
