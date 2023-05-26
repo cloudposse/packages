@@ -8,7 +8,7 @@ assume-role*              0.3.2      Easily assume AWS roles in your terminal.
 atlantis                  0.24.1     Terraform For Teams
 atmos                     1.35.0     Universal Tool for DevOps and Cloud Automation
 awless*                   0.1.11     A Mighty CLI for AWS
-aws-copilot-cli           1.27.0     Tool for developers to build, release and operate containerized applications on AWS App Runner or Amazon ECS on AWS Fargate.
+aws-copilot-cli           1.28.0     Tool for developers to build, release and operate containerized applications on AWS App Runner or Amazon ECS on AWS Fargate.
 aws-iam-authenticator     0.6.2      A tool to use AWS IAM credentials to authenticate to a Kubernetes cluster
 aws-nuke                  2.22.1     A highly configurable way to wipe non-prod aws accounts. WARNING do not use in prod
 aws-okta                  OBSOLETE   aws-okta allows users to authenticate with AWS using Okta credentials
