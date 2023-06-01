@@ -18,7 +18,7 @@ cfssljson*                1.6.4      Cloudflare's PKI and TLS toolkit json parse
 chamber                   2.13.0     CLI for managing secrets
 cli53                     0.8.22     Command line tool for Amazon Route 53
 cloud-nuke                0.31.1     Tool for wiping an aws account DANGER absolutely do not use in production
-cloudflared               2023.5.0   Argo Tunnel client
+cloudflared               2023.5.1   Argo Tunnel client
 cloudposse-atlantis       OBSOLETE   Terraform For Teams, enhanced by Cloud Posse
 codefresh*                0.84.2     Codefresh CLI
 conftest                  0.42.1     Test your configuration files using Open Policy Agent
@@ -82,9 +82,9 @@ kubectl-1.20              1.20.15    Production-Grade Container Scheduling and M
 kubectl-1.21              1.21.14    Production-Grade Container Scheduling and Management (v1.21)
 kubectl-1.22              1.22.17    Production-Grade Container Scheduling and Management (v1.22)
 kubectl-1.23              1.23.17    Production-Grade Container Scheduling and Management (v1.23)
-kubectl-1.24              1.24.13    Production-Grade Container Scheduling and Management (v1.24)
+kubectl-1.24              1.24.14    Production-Grade Container Scheduling and Management (v1.24)
 kubectl-1.25              1.25.10    Production-Grade Container Scheduling and Management (v1.25)
-kubectl-1.26              1.26.4     Production-Grade Container Scheduling and Management (v1.26)
+kubectl-1.26              1.26.5     Production-Grade Container Scheduling and Management (v1.26)
 kubectx                   0.9.4      Switch faster between clusters and namespaces in kubectl
 kubens                    0.9.4      Switch faster between clusters and namespaces in kubectl
 kubeval*                  0.16.1     Validate your Kubernetes configuration files, supports multiple Kubernetes versions
@@ -95,7 +95,7 @@ misspell*                 0.3.4      Correct commonly misspelled English words i
 nomad                     OBSOLETE   Hashicorp nomad
 opa                       0.53.0     An open source project to policy-enable your service.
 pack                      0.29.0     Create cloud native Buildpacks
-packer                    1.8.7      Packer is a tool for creating identical machine images for multiple platforms from a single source configuration.
+packer                    1.9.0      Packer is a tool for creating identical machine images for multiple platforms from a single source configuration.
 pandoc                    3.1.2      Universal markup converter
 pgmetrics                 1.15.0     Postgres metrics
 pluto                     5.16.4     A cli tool to help discover deprecated apiVersions in Kubernetes
