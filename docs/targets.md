@@ -3,14 +3,14 @@
 ```text
 amazon-ecr-credential-helper 0.7.1      Automatically gets credentials for Amazon ECR on docker push/docker pull
 amtool                    0.25.0     Tool for interacting with the Alertmanager API
-argocd                    2.7.5      Declarative GitOpts for Kubernetes
+argocd                    2.7.6      Declarative GitOpts for Kubernetes
 assume-role*              0.3.2      Easily assume AWS roles in your terminal.
-atlantis                  0.24.2     Terraform For Teams
+atlantis                  0.24.3     Terraform For Teams
 atmos                     1.36.0     Universal Tool for DevOps and Cloud Automation
 awless*                   0.1.11     A Mighty CLI for AWS
 aws-copilot-cli           1.28.0     Tool for developers to build, release and operate containerized applications on AWS App Runner or Amazon ECS on AWS Fargate.
 aws-iam-authenticator     0.6.2      A tool to use AWS IAM credentials to authenticate to a Kubernetes cluster
-aws-nuke                  2.22.1     A highly configurable way to wipe non-prod aws accounts. WARNING do not use in prod
+aws-nuke                  2.23.0     A highly configurable way to wipe non-prod aws accounts. WARNING do not use in prod
 aws-okta                  OBSOLETE   aws-okta allows users to authenticate with AWS using Okta credentials
 aws-vault                 7.2.0      A vault for securely storing and accessing AWS credentials in development environments
 cfssl*                    1.6.4      Cloudflare's PKI and TLS toolkit
@@ -18,7 +18,7 @@ cfssljson*                1.6.4      Cloudflare's PKI and TLS toolkit json parse
 chamber                   2.13.0     CLI for managing secrets
 cli53                     0.8.22     Command line tool for Amazon Route 53
 cloud-nuke                0.31.2     Tool for wiping an aws account DANGER absolutely do not use in production
-cloudflared               2023.5.1   Argo Tunnel client
+cloudflared               2023.6.1   Argo Tunnel client
 cloudposse-atlantis       OBSOLETE   Terraform For Teams, enhanced by Cloud Posse
 codefresh*                0.84.2     Codefresh CLI
 conftest                  0.43.1     Test your configuration files using Open Policy Agent
@@ -82,8 +82,8 @@ kubectl-1.20              1.20.15    Production-Grade Container Scheduling and M
 kubectl-1.21              1.21.14    Production-Grade Container Scheduling and Management (v1.21)
 kubectl-1.22              1.22.17    Production-Grade Container Scheduling and Management (v1.22)
 kubectl-1.23              1.23.17    Production-Grade Container Scheduling and Management (v1.23)
-kubectl-1.24              1.24.14    Production-Grade Container Scheduling and Management (v1.24)
-kubectl-1.25              1.25.10    Production-Grade Container Scheduling and Management (v1.25)
+kubectl-1.24              1.24.15    Production-Grade Container Scheduling and Management (v1.24)
+kubectl-1.25              1.25.11    Production-Grade Container Scheduling and Management (v1.25)
 kubectl-1.26              1.26.6     Production-Grade Container Scheduling and Management (v1.26)
 kubectx                   0.9.4      Switch faster between clusters and namespaces in kubectl
 kubens                    0.9.4      Switch faster between clusters and namespaces in kubectl
@@ -149,7 +149,7 @@ trivy                     0.42.1     A Simple and Comprehensive Vulnerability Sc
 turf                      OBSOLETE   Turf is Cloud Posse's command-line automation helper.
 variant                   0.38.0     Variant is a Universal CLI tool that works like a task runner
 variant2                  0.38.0     Second major version of Variant, a Universal CLI tool that works like a task runner
-vault                     1.13.3     Hashicorp vault
+vault                     1.14.0     Hashicorp vault
 vendir                    0.34.3      Easy way to vendor portions of git repos, github releases, helm charts, docker image contents, etc. declaratively.
 venona*                   1.9.16     Codefresh runtime-environment agent
 vert                      0.1.0      Simple CLI for comparing two or more versions
