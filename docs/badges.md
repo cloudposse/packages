@@ -51,7 +51,7 @@
 [![helmfile](https://github.com/cloudposse/packages/workflows/helmfile/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ahelmfile) | 0.144.0    | Deploy Kubernetes Helm Charts
 [![htmltest](https://github.com/cloudposse/packages/workflows/htmltest/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ahtmltest) | 0.17.0     | :white_check_mark: Test generated HTML for problems
 [![hugo](https://github.com/cloudposse/packages/workflows/hugo/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ahugo) | 0.115.3    | The world’s fastest framework for building websites.
-[![infracost](https://github.com/cloudposse/packages/workflows/infracost/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ainfracost) | 0.10.24    | Cloud cost estimates for Terraform
+[![infracost](https://github.com/cloudposse/packages/workflows/infracost/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ainfracost) | 0.10.25    | Cloud cost estimates for Terraform
 [![jp](https://github.com/cloudposse/packages/workflows/jp/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ajp) | 0.2.1      | Command line interface to JMESPath
 [![json2hcl](https://github.com/cloudposse/packages/workflows/json2hcl/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ajson2hcl) | 0.1.1      | Convert JSON to HCL, and vice versa
 [![jx](https://github.com/cloudposse/packages/workflows/jx/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ajx) | 3.10.86    | Jenkins-X
