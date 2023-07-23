@@ -18,7 +18,7 @@ cfssljson*                1.6.4      Cloudflare's PKI and TLS toolkit json parse
 chamber                   2.13.2     CLI for managing secrets
 cli53                     0.8.22     Command line tool for Amazon Route 53
 cloud-nuke                0.32.0     Tool for wiping an aws account DANGER absolutely do not use in production
-cloudflared               2023.6.1   Argo Tunnel client
+cloudflared               2023.7.1   Argo Tunnel client
 cloudposse-atlantis       OBSOLETE   Terraform For Teams, enhanced by Cloud Posse
 codefresh*                0.84.7     Codefresh CLI
 conftest                  0.44.1     Test your configuration files using Open Policy Agent
@@ -88,7 +88,7 @@ kubectl-1.26              1.26.7     Production-Grade Container Scheduling and M
 kubectx                   0.9.5      Switch faster between clusters and namespaces in kubectl
 kubens                    0.9.5      Switch faster between clusters and namespaces in kubectl
 kubeval*                  0.16.1     Validate your Kubernetes configuration files, supports multiple Kubernetes versions
-lazydocker                0.20.0     The lazier way to manage everything docker
+lazydocker                0.21.0     The lazier way to manage everything docker
 lectl*                    0.21.0     Script to check issued certificates by Let's Encrypt on CTL (Certificate Transparency Log) using https://crt.sh
 minikube                  1.31.1     Run Kubernetes locally
 misspell*                 0.3.4      Correct commonly misspelled English words in source files
