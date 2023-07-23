@@ -3,12 +3,12 @@
 ```text
 amazon-ecr-credential-helper 0.7.1      Automatically gets credentials for Amazon ECR on docker push/docker pull
 amtool                    0.25.0     Tool for interacting with the Alertmanager API
-argocd                    2.7.7      Declarative GitOpts for Kubernetes
+argocd                    2.7.8      Declarative GitOpts for Kubernetes
 assume-role*              0.3.2      Easily assume AWS roles in your terminal.
 atlantis                  0.24.4     Terraform For Teams
 atmos                     1.41.0     Universal Tool for DevOps and Cloud Automation
 awless*                   0.1.11     A Mighty CLI for AWS
-aws-copilot-cli           1.28.0     Tool for developers to build, release and operate containerized applications on AWS App Runner or Amazon ECS on AWS Fargate.
+aws-copilot-cli           1.29.0     Tool for developers to build, release and operate containerized applications on AWS App Runner or Amazon ECS on AWS Fargate.
 aws-iam-authenticator     0.6.10     A tool to use AWS IAM credentials to authenticate to a Kubernetes cluster
 aws-nuke                  2.23.0     A highly configurable way to wipe non-prod aws accounts. WARNING do not use in prod
 aws-okta                  OBSOLETE   aws-okta allows users to authenticate with AWS using Okta credentials
@@ -20,15 +20,15 @@ cli53                     0.8.22     Command line tool for Amazon Route 53
 cloud-nuke                0.32.0     Tool for wiping an aws account DANGER absolutely do not use in production
 cloudflared               2023.7.0   Argo Tunnel client
 cloudposse-atlantis       OBSOLETE   Terraform For Teams, enhanced by Cloud Posse
-codefresh*                0.84.6     Codefresh CLI
+codefresh*                0.84.7     Codefresh CLI
 conftest                  0.44.1     Test your configuration files using Open Policy Agent
 consul                    1.16.0     Hashicorp consul
 ctop                      0.7.7      Top-like interface for container metrics
 direnv                    2.32.3     Unclutter your .profile
-doctl                     1.97.0     A command line tool for DigitalOcean services
+doctl                     1.97.1     A command line tool for DigitalOcean services
 duffle                    OBSOLETE   CNAB installer
 ec2-instance-selector     2.4.1      A CLI tool and go library which recommends instance types based on resource criteria like vcpus and memory
-ecspresso                 2.2.1      Ecspresso is a deployment tool for Amazon ECS
+ecspresso                 2.2.2      Ecspresso is a deployment tool for Amazon ECS
 emailcli*                 1.0.3      Command line email sending client written in Go.
 envcli*                   0.7.1      A simple wrapper that allows you to run commands within ethereal docker containers
 fargate                   OBSOLETE   (OBSOLETE, use aws/copilot-cli instead) CLI for AWS Fargate
@@ -54,8 +54,8 @@ helm2                     2.17.0     The Kubernetes Package Manager
 helm3                     3.12.2     The Kubernetes Package Manager
 helmfile                  0.144.0    Deploy Kubernetes Helm Charts
 htmltest                  0.17.0     :white_check_mark: Test generated HTML for problems
-hugo                      0.115.3    The world’s fastest framework for building websites.
-infracost                 0.10.24    Cloud cost estimates for Terraform
+hugo                      0.115.4    The world’s fastest framework for building websites.
+infracost                 0.10.26    Cloud cost estimates for Terraform
 jp                        0.2.1      Command line interface to JMESPath
 jq                        OBSOLETE   Command-line JSON processor
 json2hcl                  0.1.1      Convert JSON to HCL, and vice versa
@@ -66,11 +66,11 @@ k9s                       0.27.4     Kubernetes CLI To Manage Your Clusters In S
 katafygio                 0.8.3      K8s continuous backup to git
 kfctl*                    1.2.0      Machine Learning Toolkit for Kubernetes
 kind                      0.20.0     A tool for running local Kubernetes clusters using Docker
-kops                      1.26.5     Kubernetes Operations (kops) - Production Grade K8s Installation, Upgrades, and Management
+kops                      1.27.0     Kubernetes Operations (kops) - Production Grade K8s Installation, Upgrades, and Management
 kops-1.12                 OBSOLETE   Kubernetes Operations (kops) - Production Grade K8s Installation, Upgrades, and Management
 krew                      0.4.1      Kubectl plugin manager
 kubecron*                 2.0.0      Utilities to manage kubernetes cronjobs. Run a CronJob manually for test purposes. Suspend/unsuspend a CronJob
-kubectl                   1.27.3     Production-Grade Container Scheduling and Management
+kubectl                   1.27.4     Production-Grade Container Scheduling and Management
 kubectl-1.13              1.13.12    Production-Grade Container Scheduling and Management (v1.13)
 kubectl-1.14              1.14.10    Production-Grade Container Scheduling and Management (v1.14)
 kubectl-1.15              1.15.12    Production-Grade Container Scheduling and Management (v1.15)
@@ -88,16 +88,16 @@ kubectl-1.26              1.26.6     Production-Grade Container Scheduling and M
 kubectx                   0.9.5      Switch faster between clusters and namespaces in kubectl
 kubens                    0.9.5      Switch faster between clusters and namespaces in kubectl
 kubeval*                  0.16.1     Validate your Kubernetes configuration files, supports multiple Kubernetes versions
-lazydocker                0.20.0     The lazier way to manage everything docker
+lazydocker                0.21.0     The lazier way to manage everything docker
 lectl*                    0.21.0     Script to check issued certificates by Let's Encrypt on CTL (Certificate Transparency Log) using https://crt.sh
-minikube                  1.30.1     Run Kubernetes locally
+minikube                  1.31.1     Run Kubernetes locally
 misspell*                 0.3.4      Correct commonly misspelled English words in source files
 nomad                     OBSOLETE   Hashicorp nomad
 opa                       0.54.0     An open source project to policy-enable your service.
 pack                      0.29.0     Create cloud native Buildpacks
-packer                    1.9.1      Packer is a tool for creating identical machine images for multiple platforms from a single source configuration.
-pandoc                    3.1.5      Universal markup converter
-pgmetrics                 1.15.0     Postgres metrics
+packer                    1.9.2      Packer is a tool for creating identical machine images for multiple platforms from a single source configuration.
+pandoc                    3.1.6      Universal markup converter
+pgmetrics                 1.15.1     Postgres metrics
 pluto                     5.18.1     A cli tool to help discover deprecated apiVersions in Kubernetes
 popeye                    0.11.1     A Kubernetes cluster resource sanitizer
 promtool                  2.45.0     Prometheus CLI tool
@@ -114,12 +114,12 @@ shellcheck                0.9.0      ShellCheck, a static analysis tool for shel
 shfmt                     3.7.0      A shell parser, formatter and interpreter (POSIX/Bash/mksh)
 slack-notifier            0.5.1      Command line utility to send messages with attachments to Slack channels via Incoming Webhooks
 sops                      3.7.3      Secrets management stinks, use some sops!
-spacectl                  0.24.2     [Spacelift.io](https://spacelift.io/) client and CLI
+spacectl                  0.24.3     [Spacelift.io](https://spacelift.io/) client and CLI
 spotctl                   0.31.0     A unified CLI to manage your [Spot](https://spot.io/) resources.
 sshm*                     1.2.2      Easy connect on EC2 instances thanks to AWS System Manager Agent
 stern                     1.25.0     ⎈ Multi pod and container log tailing for Kubernetes
 sudosh                    0.3.0      Shell wrapper to run a login shell with `sudo` as the current user for the purpose of audit logging
-teleport                  13.2.1     Secure Access for Developers that doesn't get in the way.
+teleport                  13.2.3     Secure Access for Developers that doesn't get in the way.
 teleport-4.2              OBSOLETE   Privileged access management for elastic infrastructure.
 teleport-4.3              4.3.10     Privileged access management for elastic infrastructure.
 teleport-4.4              4.4.12     Privileged access management for elastic infrastructure.
@@ -137,7 +137,7 @@ terraform-module-versions 3.1.13     CLI tool that checks Terraform code for mod
 terraform_0.11            0.11.15    Terraform (Deprecated package. Use terraform-0.11 instead)
 terraform_0.12            0.12.31    Terraform (Deprecated package. Use terraform-0.12 instead)
 terraform_0.13            0.13.7     Terraform (Deprecated package. Use terraform-0.13 instead)
-terragrunt                0.48.1     Terragrunt is a thin wrapper for Terraform that provides extra tools for working with multiple Terraform modules.
+terragrunt                0.48.4     Terragrunt is a thin wrapper for Terraform that provides extra tools for working with multiple Terraform modules.
 terrahelp                 0.7.5      Terrahelp is as a command line utility that provides useful tricks like masking of terraform output.
 tfenv                     OBSOLETE   Transform environment variables for use with Terraform (e.g. `HOSTNAME` ⇨ `TF_VAR_hostname`)
 tflint                    0.47.0     A Pluggable Terraform Linter
