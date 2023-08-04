@@ -9,7 +9,9 @@ pull_request_rules:
       # So we wait for one long check (build-and-push) and one late-starting check (package) to succeed,
       # and then wait for any checks that have started to finish. That is as close to "all the checks" as we are going to get.
       - "check-success~=.*build-and-push.*"
-      - "check-success~=.*package.*"
+      - or:
+        - "check-success~=.*package.*"
+        - "check-skipped~=.*package.*"
       - "#check-pending=0"
       - "#files<=6"
       - "base=master"
