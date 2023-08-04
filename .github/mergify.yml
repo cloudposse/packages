@@ -12,6 +12,9 @@ pull_request_rules:
       - or:
         - "check-success~=.*package.*"
         - "check-skipped~=.*package.*"
+      - or:
+        - "check-success~=.*alpine.*"
+        - "check-skipped~=.*alpine.*"
       - "#check-pending=0"
       - "#files<=6"
       - "base=master"
@@ -30,7 +33,12 @@ pull_request_rules:
       - "-check-failure~=.*package.*"
       - "-check-failure~=.*matrix.*"
       - "check-success~=.*build-and-push.*"
-      - "check-success~=.*package.*"
+      - or:
+        - "check-success~=.*package.*"
+        - "check-skipped~=.*package.*"
+      - or:
+        - "check-success~=.*alpine.*"
+        - "check-skipped~=.*alpine.*"
       - "#check-pending=0"
       - "#approved-reviews-by>=1"
       - "#changes-requested-reviews-by=0"
