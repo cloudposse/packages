@@ -47,6 +47,8 @@ github.com/hashicorp/terraform-config-inspect v0.0.0-20230522202058-dbe9bfcbfe7a
 github.com/hashicorp/terraform-config-inspect v0.0.0-20230522202058-dbe9bfcbfe7a/go.mod h1:l8HcFPm9cQh6Q0KSWoYPiePqMvRFenybP1CH2MjKdlg=
 github.com/hashicorp/terraform-config-inspect v0.0.0-20230614215431-f32df32a01cd h1:1uPcotqoL4TjcGKlgIe7OFSRplf7BMVtUjekwmCrvuM=
 github.com/hashicorp/terraform-config-inspect v0.0.0-20230614215431-f32df32a01cd/go.mod h1:l8HcFPm9cQh6Q0KSWoYPiePqMvRFenybP1CH2MjKdlg=
+github.com/hashicorp/terraform-config-inspect v0.0.0-20230808231734-f15f31bf62b3 h1:1uP3RA50ayEcTrHJtHaqubpW66KkXKIYXHP1+79dbMc=
+github.com/hashicorp/terraform-config-inspect v0.0.0-20230808231734-f15f31bf62b3/go.mod h1:l8HcFPm9cQh6Q0KSWoYPiePqMvRFenybP1CH2MjKdlg=
 github.com/kr/pretty v0.1.0 h1:L/CwN0zerZDmRFUapSPitk6f+Q3+0za1rQkzVuMiMFI=
 github.com/kr/pretty v0.1.0/go.mod h1:dAy3ld7l9f0ibDNOQOHHMYYIIbhfbHSm3C4ZsoJORNo=
 github.com/kr/pty v1.1.1/go.mod h1:pFQYn66WHrOpPYNljwOMqo10TkYh1fy3cYio2l3bCsQ=
@@ -99,6 +101,8 @@ golang.org/x/text v0.9.0 h1:2sjJmO8cDvYveuX97RDLsxlyUxLl+GHoLxBiRdHllBE=
 golang.org/x/text v0.9.0/go.mod h1:e1OnstbJyHTd6l/uOt8jFFHp6TRDWZR/bV3emEE/zU8=
 golang.org/x/text v0.10.0 h1:UpjohKhiEgNc0CSauXmwYftY1+LlaC75SJwh0SgCX58=
 golang.org/x/text v0.10.0/go.mod h1:TvPlkZtksWOMsz7fbANvkp4WM8x/WCo/om8BMLbz+aE=
+golang.org/x/text v0.12.0 h1:k+n5B8goJNdU7hSvEtMUz3d1Q6D/XW4COJSJR6fN0mc=
+golang.org/x/text v0.12.0/go.mod h1:TvPlkZtksWOMsz7fbANvkp4WM8x/WCo/om8BMLbz+aE=
 golang.org/x/tools v0.0.0-20180917221912-90fa682c2a6e/go.mod h1:n7NCudcB/nEzxVGmLbDWY5pfWTLqBcC2KZ6jyYvM4mQ=
 google.golang.org/appengine v1.1.0/go.mod h1:EbEs0AVv82hx2wNQdGPgUI5lhzA/G0D9YwlJXL52JkM=
 gopkg.in/check.v1 v1.0.0-20180628173108-788fd7840127/go.mod h1:Co6ibVJAznAaIkqp8huTwlJQCZ016jof/cbN4VW5Yz0=
