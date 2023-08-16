@@ -49,7 +49,7 @@ jobs:
   # so each job must have a unique name for the rules to work properly.
   # See https://github.com/Mergifyio/mergify/discussions/5082
   # and https://github.com/Mergifyio/mergify/issues/5083
-  matrix-kubectl-1.21:
+  matrix-kubectl-1_21:
     if: github.event_name != 'schedule'
     runs-on: ubuntu-latest
     outputs:
@@ -75,8 +75,8 @@ jobs:
   # Build for alpine linux
   # Kept separate because it is old and slightly different than the other package builds
   alpine-kubectl-1.21:
-    needs: matrix-kubectl-1.21
-    if: github.event_name != 'schedule' && needs.matrix-kubectl-1.21.outputs.apk-enabled != 'false'
+    needs: matrix-kubectl-1_21
+    if: github.event_name != 'schedule' && needs.matrix-kubectl-1_21.outputs.apk-enabled != 'false'
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -157,17 +157,17 @@ jobs:
 
   # Build packages with fpm package manager
   package-kubectl-1.21:
-    needs: matrix-kubectl-1.21
+    needs: matrix-kubectl-1_21
     # Should not be needed, but without these conditions, this job would fail with an error if the matrix is []
     # and would run with package-type empty if matrix is ["apk"]
     if: >
-      github.event_name != 'schedule' && needs.matrix-kubectl-1.21.outputs.package-enabled != 'false'
-      && needs.matrix-kubectl-1.21.outputs.package-matrix != '[]' && needs.matrix-kubectl-1.21.outputs.package-matrix != '["apk"]'
+      github.event_name != 'schedule' && needs.matrix-kubectl-1_21.outputs.package-enabled != 'false'
+      && needs.matrix-kubectl-1_21.outputs.package-matrix != '[]' && needs.matrix-kubectl-1_21.outputs.package-matrix != '["apk"]'
 
     strategy:
       matrix:
-        package-type: ${{ fromJSON(needs.matrix-kubectl-1.21.outputs.package-matrix) }}
-        arch: ${{ fromJSON(needs.matrix-kubectl-1.21.outputs.arch-matrix) }}
+        package-type: ${{ fromJSON(needs.matrix-kubectl-1_21.outputs.package-matrix) }}
+        arch: ${{ fromJSON(needs.matrix-kubectl-1_21.outputs.arch-matrix) }}
         exclude:
         - package-type: 'apk'
         include:

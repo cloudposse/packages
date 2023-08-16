@@ -15,6 +15,9 @@ export APKBUILD_DEPENDS += dpkg
 export APKBUILD_INSTALL_SCRIPTS = $(PACKAGE_NAME).post-install $(PACKAGE_NAME).post-deinstall
 export INSTALL_DIR = /usr/share/${MASTER_PACKAGE_NAME}/${MAJOR_VERSION}/bin
 
+# terraform 0.11 is past end-of-life and no updates should be attempted.
+export AUTO_UPDATE_ENABLED = false
+
 install:
 	mkdir -p $(TMP)/$(PACKAGE_NAME)
 	$(CURL) -o $(TMP)/$(PACKAGE_NAME)/$(PACKAGE_NAME).zip $(DOWNLOAD_URL)
