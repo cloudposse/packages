@@ -10,7 +10,7 @@ atmos                     1.43.0     Universal Tool for DevOps and Cloud Automat
 awless*                   0.1.11     A Mighty CLI for AWS
 aws-copilot-cli           1.29.1     Tool for developers to build, release and operate containerized applications on AWS App Runner or Amazon ECS on AWS Fargate.
 aws-iam-authenticator     0.6.11     A tool to use AWS IAM credentials to authenticate to a Kubernetes cluster
-aws-nuke                  2.24.0     A highly configurable way to wipe non-prod aws accounts. WARNING do not use in prod
+aws-nuke                  2.24.1     A highly configurable way to wipe non-prod aws accounts. WARNING do not use in prod
 aws-okta                  OBSOLETE   aws-okta allows users to authenticate with AWS using Okta credentials
 aws-vault                 7.2.0      A vault for securely storing and accessing AWS credentials in development environments
 cfssl*                    1.6.4      Cloudflare's PKI and TLS toolkit
