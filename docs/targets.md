@@ -43,10 +43,10 @@ github-status-updater     0.9.0      Command line utility for updating GitHub co
 gitleaks                  8.17.0     Audit git repos for secrets 🔑
 go-jsonnet                0.20.0     This an implementation of Jsonnet in pure Go.
 gomplate                  3.11.5     A flexible commandline tool for template rendering. Supports lots of local and remote datasources.
-gonsul                    1.0.2      A stand-alone alternative to git2consul 
+gonsul*                   1.0.2      A stand-alone alternative to git2consul 
 goofys*                   0.24.0     a high-performance, POSIX-ish Amazon S3 file system written in Go
 gosu                      1.16.0     Simple Go-based setuid+setgid+setgroups+exec
-gotop*                    3.0.0      A terminal based graphical activity monitor inspired by gtop and vtop
+gotop                     3.0.0      A terminal based graphical activity monitor inspired by gtop and vtop
 grpcurl                   1.8.7      Like cURL, but for gRPC: Command-line tool for interacting with gRPC servers
 hcledit                   0.2.9      A command line editor for HCL
 helm                      3.12.3     The Kubernetes Package Manager
@@ -92,7 +92,7 @@ kubens                    0.9.5      Switch faster between clusters and namespac
 kubeval*                  0.16.1     Validate your Kubernetes configuration files, supports multiple Kubernetes versions
 lazydocker                0.21.1     The lazier way to manage everything docker
 lectl*                    0.22.1     Script to check issued certificates by Let's Encrypt on CTL (Certificate Transparency Log) using https://crt.sh
-minikube                  1.31.1     Run Kubernetes locally
+minikube                  1.31.2     Run Kubernetes locally
 misspell*                 0.3.4      Correct commonly misspelled English words in source files
 nomad                     OBSOLETE   Hashicorp nomad
 opa                       0.55.0     An open source project to policy-enable your service.
@@ -105,7 +105,7 @@ popeye                    0.11.1     A Kubernetes cluster resource sanitizer
 promtool                  2.46.0     Prometheus CLI tool
 rainbow-text              1.2.1      Tasty rainbows for your terminal! (lolcat clone)
 rakkess*                  0.5.0      Review Access - kubectl plugin to show an access matrix for all available resources
-rancher*                  2.7.0      Rancher CLI
+rancher                   2.7.0      Rancher CLI
 rbac-lookup               0.10.1     Find Kubernetes roles and cluster roles bound to any user, service account, or group name.
 retry                     OBSOLETE   ♻️ Functional mechanism based on channels to perform actions repetitively until successful.
 saml2aws                  2.36.10    CLI tool which enables you to login and retrieve AWS temporary credentials using a SAML IDP
@@ -155,7 +155,7 @@ vault                     1.14.1     Hashicorp vault
 vendir                    0.34.3      Easy way to vendor portions of git repos, github releases, helm charts, docker image contents, etc. declaratively.
 venona*                   1.9.17     Codefresh runtime-environment agent
 vert                      0.1.0      Simple CLI for comparing two or more versions
-yajsv                     1.4.1      Yet Another JSON Schema Validator [CLI]
+yajsv*                    1.4.1      Yet Another JSON Schema Validator [CLI]
 yq                        4.35.1     yq is a portable command-line YAML processor
 ```
 <!-- markdownlint-restore -->
