@@ -11,6 +11,9 @@ include ../../tasks/Makefile.vendor_includes
 export APK_BUILD_TEMPLATE ?= APKBUILD.github-binary
 export DOWNLOAD_URL ?= https://releases.hashicorp.com/terraform/$(PACKAGE_VERSION)/terraform_$(PACKAGE_VERSION)_$(OS)_$(ARCH).zip
 
+# terraform 0.11 is past end-of-life and no updates should be attempted.
+export AUTO_UPDATE_ENABLED = false
+
 install:
 	mkdir -p $(TMP)/$(PACKAGE_NAME)
 	$(CURL) -o $(TMP)/$(PACKAGE_NAME)/$(PACKAGE_NAME).zip $(DOWNLOAD_URL)

@@ -31,7 +31,7 @@ workflows/%.yml: .ALWAYS
 	@set -e; enabled=$$(make -sC ../vendor/$* info/package-enabled); \
 	if [[ $$enabled != "false" ]]; then \
   		echo updating $@; \
-		sed 's/%PACKAGE_NAME%/$*/g' package-template.yml > $@; \
+		sed 's/%PACKAGE_NAME%/$*/g' package-template.yml | sed 's/%PACKAGE_JSON_NAME%/$(subst .,_,$*)/g' > $@; \
 	else \
 		echo DELETING workflow $@ because package is disabled; \
 		rm -f $@; \
