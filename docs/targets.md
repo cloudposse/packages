@@ -119,7 +119,7 @@ sops                      3.7.3      Secrets management stinks, use some sops!
 spacectl                  0.26.0     [Spacelift.io](https://spacelift.io/) client and CLI
 spotctl                   0.32.0     A unified CLI to manage your [Spot](https://spot.io/) resources.
 sshm*                     1.2.2      Easy connect on EC2 instances thanks to AWS System Manager Agent
-stern                     1.25.0     ⎈ Multi pod and container log tailing for Kubernetes
+stern                     1.26.0     ⎈ Multi pod and container log tailing for Kubernetes
 sudosh                    0.3.0      Shell wrapper to run a login shell with `sudo` as the current user for the purpose of audit logging
 teleport                  13.3.4     Secure Access for Developers that doesn't get in the way.
 teleport-4.2              OBSOLETE   Privileged access management for elastic infrastructure.
