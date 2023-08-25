@@ -84,7 +84,7 @@ kubectl-1.22              1.22.17    Production-Grade Container Scheduling and M
 kubectl-1.23              1.23.17    Production-Grade Container Scheduling and Management (v1.23)
 kubectl-1.24              1.24.16    Production-Grade Container Scheduling and Management (v1.24)
 kubectl-1.25              1.25.13    Production-Grade Container Scheduling and Management (v1.25)
-kubectl-1.26              1.26.7     Production-Grade Container Scheduling and Management (v1.26)
+kubectl-1.26              1.26.8     Production-Grade Container Scheduling and Management (v1.26)
 kubectl-1.27              1.27.5     Production-Grade Container Scheduling and Management (v1.27)
 kubectl-1.28              1.28.1     Production-Grade Container Scheduling and Management (v1.28)
 kubectx                   0.9.5      Switch faster between clusters and namespaces in kubectl
