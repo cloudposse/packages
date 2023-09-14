@@ -3,7 +3,7 @@
 ```text
 amazon-ecr-credential-helper 0.7.1      Automatically gets credentials for Amazon ECR on docker push/docker pull
 amtool                    0.26.0     Tool for interacting with the Alertmanager API
-argocd                    2.8.3      Declarative GitOpts for Kubernetes
+argocd                    2.8.4      Declarative GitOpts for Kubernetes
 assume-role*              0.3.2      Easily assume AWS roles in your terminal.
 atlantis                  0.25.0     Terraform For Teams
 atmos                     1.45.3     Universal Tool for DevOps and Cloud Automation
