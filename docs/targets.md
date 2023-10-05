@@ -35,7 +35,7 @@ fargate                   OBSOLETE   (OBSOLETE, use aws/copilot-cli instead) CLI
 fetch                     0.4.6      fetch makes it easy to download files, folders, and release assets from a specific public git commit, branch, or tag
 figurine                  1.3.0      Print your name in style
 fzf                       0.23.1     A command-line fuzzy finder
-gh                        2.35.0     The GitHub CLI
+gh                        2.36.0     The GitHub CLI
 ghr                       0.16.0     Upload multiple artifacts to GitHub Releases in parallel
 github-commenter          0.19.0     Command line utility for creating GitHub comments on Commits, Pull Request Reviews or Issues
 github-release*           0.10.0     Commandline app to create and edit releases on Github (and upload artifacts)
@@ -43,10 +43,10 @@ github-status-updater     0.9.0      Command line utility for updating GitHub co
 gitleaks                  8.18.0     Audit git repos for secrets 🔑
 go-jsonnet                0.20.0     This an implementation of Jsonnet in pure Go.
 gomplate                  3.11.5     A flexible commandline tool for template rendering. Supports lots of local and remote datasources.
-gonsul*                   1.0.2      A stand-alone alternative to git2consul 
+gonsul                    1.0.2      A stand-alone alternative to git2consul 
 goofys*                   0.24.0     a high-performance, POSIX-ish Amazon S3 file system written in Go
 gosu                      1.16.0     Simple Go-based setuid+setgid+setgroups+exec
-gotop                     3.0.0      A terminal based graphical activity monitor inspired by gtop and vtop
+gotop*                    3.0.0      A terminal based graphical activity monitor inspired by gtop and vtop
 grpcurl                   1.8.8      Like cURL, but for gRPC: Command-line tool for interacting with gRPC servers
 hcledit                   0.2.10     A command line editor for HCL
 helm                      3.13.0     The Kubernetes Package Manager
@@ -102,10 +102,10 @@ pandoc                    3.1.8      Universal markup converter
 pgmetrics                 1.16.0     Postgres metrics
 pluto                     5.18.4     A cli tool to help discover deprecated apiVersions in Kubernetes
 popeye                    0.11.1     A Kubernetes cluster resource sanitizer
-promtool                  2.47.0     Prometheus CLI tool
+promtool                  2.47.1     Prometheus CLI tool
 rainbow-text              1.2.1      Tasty rainbows for your terminal! (lolcat clone)
 rakkess*                  0.5.0      Review Access - kubectl plugin to show an access matrix for all available resources
-rancher                   2.7.7      Rancher CLI
+rancher*                  2.7.7      Rancher CLI
 rbac-lookup               0.10.2     Find Kubernetes roles and cluster roles bound to any user, service account, or group name.
 retry                     OBSOLETE   ♻️ Functional mechanism based on channels to perform actions repetitively until successful.
 saml2aws                  2.36.11    CLI tool which enables you to login and retrieve AWS temporary credentials using a SAML IDP
@@ -132,7 +132,7 @@ terraform-0.12            0.12.31    Terraform is a tool for building, changing,
 terraform-0.13            0.13.7     Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-0.14            0.14.11    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-0.15            0.15.5     Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
-terraform-1               1.5.7      Terraform enables you to safely and predictably create, change, and improve infrastructure.
+terraform-1               1.6.0      Terraform enables you to safely and predictably create, change, and improve infrastructure.
 terraform-config-inspect  0.0.20230925220900+git5a6f8d18746d A helper library for shallow inspection of Terraform configurations
 terraform-docs            0.16.0     Generate docs from terraform modules
 terraform-module-versions 3.1.13     CLI tool that checks Terraform code for module updates. Single binary, no dependencies. linux, osx, windows.
@@ -146,7 +146,7 @@ tflint                    0.48.0     A Pluggable Terraform Linter
 tfmask                    OBSOLETE   Terraform utility to mask select output from `terraform plan` and `terraform apply`
 tfschema                  0.7.5      A schema inspector for Terraform providers
 tfsec                     1.28.4     Security scanner for your Terraform code
-thanos                    0.32.3     Highly available Prometheus setup with long term storage capabilities. CNCF Sandbox project.
+thanos                    0.32.4     Highly available Prometheus setup with long term storage capabilities. CNCF Sandbox project.
 trivy                     0.45.1     A Simple and Comprehensive Vulnerability Scanner for Containers, Suitable for CI
 turf                      OBSOLETE   Turf is Cloud Posse's command-line automation helper.
 variant                   0.38.0     Variant is a Universal CLI tool that works like a task runner
@@ -155,7 +155,7 @@ vault                     1.15.0     Hashicorp vault
 vendir                    0.35.0      Easy way to vendor portions of git repos, github releases, helm charts, docker image contents, etc. declaratively.
 venona*                   1.10.1     Codefresh runtime-environment agent
 vert                      0.1.0      Simple CLI for comparing two or more versions
-yajsv*                    1.4.1      Yet Another JSON Schema Validator [CLI]
+yajsv                     1.4.1      Yet Another JSON Schema Validator [CLI]
 yq                        4.35.2     yq is a portable command-line YAML processor
 ```
 <!-- markdownlint-restore -->
