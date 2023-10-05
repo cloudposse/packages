@@ -21,7 +21,7 @@ cloud-nuke                0.32.0     Tool for wiping an aws account DANGER absol
 cloudflared               2023.8.2   Argo Tunnel client
 cloudposse-atlantis       OBSOLETE   Terraform For Teams, enhanced by Cloud Posse
 codefresh*                0.87.0     Codefresh CLI
-conftest                  0.45.0     Test your configuration files using Open Policy Agent
+conftest                  0.46.0     Test your configuration files using Open Policy Agent
 consul                    1.16.1     Hashicorp consul
 ctop                      0.7.7      Top-like interface for container metrics
 direnv                    2.32.3     Unclutter your .profile
