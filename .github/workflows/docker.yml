@@ -44,4 +44,5 @@ jobs:
       with:
         push: ${{ (github.event_name == 'release' && github.event.action == 'created') }}
         platforms: linux/amd64,linux/arm64
+        provenance: false
         tags: ${{ steps.prepare.outputs.tags }}
