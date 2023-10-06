@@ -8,7 +8,7 @@ assume-role*              0.3.2      Easily assume AWS roles in your terminal.
 atlantis                  0.25.0     Terraform For Teams
 atmos                     1.45.3     Universal Tool for DevOps and Cloud Automation
 awless*                   0.1.11     A Mighty CLI for AWS
-aws-copilot-cli           1.30.1     Tool for developers to build, release and operate containerized applications on AWS App Runner or Amazon ECS on AWS Fargate.
+aws-copilot-cli           1.31.0     Tool for developers to build, release and operate containerized applications on AWS App Runner or Amazon ECS on AWS Fargate.
 aws-iam-authenticator     0.6.11     A tool to use AWS IAM credentials to authenticate to a Kubernetes cluster
 aws-nuke                  2.25.0     A highly configurable way to wipe non-prod aws accounts. WARNING do not use in prod
 aws-okta                  OBSOLETE   aws-okta allows users to authenticate with AWS using Okta credentials
@@ -111,7 +111,7 @@ retry                     OBSOLETE   ♻️ Functional mechanism based on channe
 saml2aws                  2.36.11    CLI tool which enables you to login and retrieve AWS temporary credentials using a SAML IDP
 scenery                   OBSOLETE   A Terraform plan output prettifier
 sentinel                  OBSOLETE   Hashicorp sentinel
-sentry-cli                2.21.2     A command line utility to work with Sentry.
+sentry-cli                2.21.1     A command line utility to work with Sentry.
 shellcheck                0.9.0      ShellCheck, a static analysis tool for shell scripts
 shfmt                     3.7.0      A shell parser, formatter and interpreter (POSIX/Bash/mksh)
 slack-notifier            0.5.1      Command line utility to send messages with attachments to Slack channels via Incoming Webhooks
