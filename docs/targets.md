@@ -28,7 +28,7 @@ direnv                    2.32.3     Unclutter your .profile
 doctl                     1.99.0     A command line tool for DigitalOcean services
 duffle                    OBSOLETE   CNAB installer
 ec2-instance-selector     2.4.1      A CLI tool and go library which recommends instance types based on resource criteria like vcpus and memory
-ecspresso                 2.2.3      Ecspresso is a deployment tool for Amazon ECS
+ecspresso                 2.2.4      Ecspresso is a deployment tool for Amazon ECS
 emailcli*                 1.0.3      Command line email sending client written in Go.
 envcli*                   0.7.1      A simple wrapper that allows you to run commands within ethereal docker containers
 fargate                   OBSOLETE   (OBSOLETE, use aws/copilot-cli instead) CLI for AWS Fargate
@@ -111,7 +111,7 @@ retry                     OBSOLETE   ♻️ Functional mechanism based on channe
 saml2aws                  2.36.11    CLI tool which enables you to login and retrieve AWS temporary credentials using a SAML IDP
 scenery                   OBSOLETE   A Terraform plan output prettifier
 sentinel                  OBSOLETE   Hashicorp sentinel
-sentry-cli                2.21.1     A command line utility to work with Sentry.
+sentry-cli                2.21.2     A command line utility to work with Sentry.
 shellcheck                0.9.0      ShellCheck, a static analysis tool for shell scripts
 shfmt                     3.7.0      A shell parser, formatter and interpreter (POSIX/Bash/mksh)
 slack-notifier            0.5.1      Command line utility to send messages with attachments to Slack channels via Incoming Webhooks
