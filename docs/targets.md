@@ -8,7 +8,7 @@ assume-role*              0.3.2      Easily assume AWS roles in your terminal.
 atlantis                  0.25.0     Terraform For Teams
 atmos                     1.45.3     Universal Tool for DevOps and Cloud Automation
 awless*                   0.1.11     A Mighty CLI for AWS
-aws-copilot-cli           1.30.1     Tool for developers to build, release and operate containerized applications on AWS App Runner or Amazon ECS on AWS Fargate.
+aws-copilot-cli           1.31.0     Tool for developers to build, release and operate containerized applications on AWS App Runner or Amazon ECS on AWS Fargate.
 aws-iam-authenticator     0.6.11     A tool to use AWS IAM credentials to authenticate to a Kubernetes cluster
 aws-nuke                  2.25.0     A highly configurable way to wipe non-prod aws accounts. WARNING do not use in prod
 aws-okta                  OBSOLETE   aws-okta allows users to authenticate with AWS using Okta credentials
@@ -139,7 +139,6 @@ terraform-module-versions 3.1.13     CLI tool that checks Terraform code for mod
 terraform_0.11            0.11.15    Terraform (Deprecated package. Use terraform-0.11 instead)
 terraform_0.12            0.12.31    Terraform (Deprecated package. Use terraform-0.12 instead)
 terraform_0.13            0.13.7     Terraform (Deprecated package. Use terraform-0.13 instead)
-terragrunt                0.51.3     Terragrunt is a thin wrapper for Terraform that provides extra tools for working with multiple Terraform modules.
 terrahelp                 0.7.5      Terrahelp is as a command line utility that provides useful tricks like masking of terraform output.
 tfenv                     OBSOLETE   Transform environment variables for use with Terraform (e.g. `HOSTNAME` ⇨ `TF_VAR_hostname`)
 tflint                    0.48.0     A Pluggable Terraform Linter
