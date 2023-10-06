@@ -8,7 +8,7 @@ assume-role*              0.3.2      Easily assume AWS roles in your terminal.
 atlantis                  0.25.0     Terraform For Teams
 atmos                     1.45.3     Universal Tool for DevOps and Cloud Automation
 awless*                   0.1.11     A Mighty CLI for AWS
-aws-copilot-cli           1.30.1     Tool for developers to build, release and operate containerized applications on AWS App Runner or Amazon ECS on AWS Fargate.
+aws-copilot-cli           1.31.0     Tool for developers to build, release and operate containerized applications on AWS App Runner or Amazon ECS on AWS Fargate.
 aws-iam-authenticator     0.6.11     A tool to use AWS IAM credentials to authenticate to a Kubernetes cluster
 aws-nuke                  2.25.0     A highly configurable way to wipe non-prod aws accounts. WARNING do not use in prod
 aws-okta                  OBSOLETE   aws-okta allows users to authenticate with AWS using Okta credentials
@@ -59,7 +59,7 @@ infracost                 0.10.29    Cloud cost estimates for Terraform
 jp                        0.2.1      Command line interface to JMESPath
 jq                        OBSOLETE   Command-line JSON processor
 json2hcl                  0.1.1      Convert JSON to HCL, and vice versa
-jx                        3.10.112   Jenkins-X
+jx                        3.10.114   Jenkins-X
 k3d                       5.6.0      Little helper to run Rancher Lab's k3s in Docker
 k6                        0.46.0     A modern load testing tool, using Go and JavaScript - https://k6.io
 k9s                       0.27.4     Kubernetes CLI To Manage Your Clusters In Style
@@ -152,7 +152,7 @@ turf                      OBSOLETE   Turf is Cloud Posse's command-line automati
 variant                   0.38.0     Variant is a Universal CLI tool that works like a task runner
 variant2                  0.38.0     Second major version of Variant, a Universal CLI tool that works like a task runner
 vault                     1.15.0     Hashicorp vault
-vendir                    0.34.6      Easy way to vendor portions of git repos, github releases, helm charts, docker image contents, etc. declaratively.
+vendir                    0.35.0      Easy way to vendor portions of git repos, github releases, helm charts, docker image contents, etc. declaratively.
 venona*                   1.10.1     Codefresh runtime-environment agent
 vert                      0.1.0      Simple CLI for comparing two or more versions
 yajsv*                    1.4.1      Yet Another JSON Schema Validator [CLI]
