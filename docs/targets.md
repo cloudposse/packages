@@ -36,7 +36,7 @@ fetch                     0.4.6      fetch makes it easy to download files, fold
 figurine                  1.3.0      Print your name in style
 fzf                       0.23.1     A command-line fuzzy finder
 gh                        2.36.0     The GitHub CLI
-ghr                       0.16.0     Upload multiple artifacts to GitHub Releases in parallel
+ghr                       0.16.1     Upload multiple artifacts to GitHub Releases in parallel
 github-commenter          0.19.0     Command line utility for creating GitHub comments on Commits, Pull Request Reviews or Issues
 github-release*           0.10.0     Commandline app to create and edit releases on Github (and upload artifacts)
 github-status-updater     0.9.0      Command line utility for updating GitHub commit statuses and enabling required status checks for pull requests
