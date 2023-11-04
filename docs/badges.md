@@ -20,7 +20,7 @@
 [![cloudflared](https://github.com/cloudposse/packages/workflows/cloudflared/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Acloudflared) | 2023.10.0  | Argo Tunnel client
 [![codefresh](https://github.com/cloudposse/packages/workflows/codefresh/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Acodefresh) | 0.87.1     | Codefresh CLI
 [![conftest](https://github.com/cloudposse/packages/workflows/conftest/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aconftest) | 0.46.0     | Test your configuration files using Open Policy Agent
-[![consul](https://github.com/cloudposse/packages/workflows/consul/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aconsul) | 1.16.3     | Hashicorp consul
+[![consul](https://github.com/cloudposse/packages/workflows/consul/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aconsul) | 1.17.0     | Hashicorp consul
 [![ctop](https://github.com/cloudposse/packages/workflows/ctop/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Actop) | 0.7.7      | Top-like interface for container metrics
 [![direnv](https://github.com/cloudposse/packages/workflows/direnv/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Adirenv) | 2.32.3     | Unclutter your .profile
 [![doctl](https://github.com/cloudposse/packages/workflows/doctl/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Adoctl) | 1.100.0    | A command line tool for DigitalOcean services
