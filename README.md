@@ -35,8 +35,6 @@ Cloud Posse distribution of awesome apps.
 This project is part of our comprehensive ["SweetOps"](https://cpco.io/sweetops) approach towards DevOps.
 
 
-
-
 It's 100% Open Source and licensed under the [APACHE2](LICENSE).
 
 
@@ -68,8 +66,6 @@ Open up an [issue](https://github.com/cloudposse/packages/issues) or submit a PR
 ## Sponsorship [<img src="https://cloudposse.com/wp-content/uploads/2020/10/cloudsmith.svg" width="250" align="right" />](https://cloudsmith.io/)
 
 Package repository hosting is graciously provided by [cloudsmith](https://cloudsmith.io/). Cloudsmith is the only fully hosted, cloud-native, universal package management solution, that enables your organization to create, store and share packages in any format, to any place, with total confidence. We believe there’s a better way to manage software assets and packages, and they’re making it happen!
-
-
 
 
 
@@ -351,7 +347,7 @@ Here are some solutions to several common problems that may occur when adding a 
 | ------------ | ------- | ----------- |
 [![amazon-ecr-credential-helper](https://github.com/cloudposse/packages/workflows/amazon-ecr-credential-helper/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aamazon-ecr-credential-helper) | 0.7.1      | Automatically gets credentials for Amazon ECR on docker push/docker pull
 [![amtool](https://github.com/cloudposse/packages/workflows/amtool/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aamtool) | 0.26.0     | Tool for interacting with the Alertmanager API
-[![argocd](https://github.com/cloudposse/packages/workflows/argocd/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aargocd) | 2.9.0      | Declarative GitOpts for Kubernetes
+[![argocd](https://github.com/cloudposse/packages/workflows/argocd/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aargocd) | 2.9.1      | Declarative GitOpts for Kubernetes
 [![assume-role](https://github.com/cloudposse/packages/workflows/assume-role/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aassume-role) | 0.3.2      | Easily assume AWS roles in your terminal.
 [![atlantis](https://github.com/cloudposse/packages/workflows/atlantis/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aatlantis) | 0.26.0     | Terraform For Teams
 [![atmos](https://github.com/cloudposse/packages/workflows/atmos/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aatmos) | 1.50.0     | Universal Tool for DevOps and Cloud Automation
@@ -493,13 +489,6 @@ Here are some solutions to several common problems that may occur when adding a 
 [![yq](https://github.com/cloudposse/packages/workflows/yq/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ayq) | 4.35.2     | yq is a portable command-line YAML processor
 
 
-
-## Share the Love
-
-Like this project? Please give it a ★ on [our GitHub](https://github.com/cloudposse/packages)! (it helps us **a lot**)
-
-
-
 ## Related Projects
 
 Check out these related projects.
@@ -507,16 +496,49 @@ Check out these related projects.
 - [build-harness](https://github.com/cloudposse/build-harness) - Collection of Makefiles to facilitate building Golang projects, Dockerfiles, Helm charts, and more
 - [geodesic](https://github.com/cloudposse/geodesic) - Geodesic is the fastest way to get up and running with a rock solid, production grade cloud platform built on strictly Open Source tools.
 
-## Help
+## ✨ Contributing
 
-**Got a question?** We got answers.
+This project is under active development, and we encourage contributions from our community. 
+Many thanks to our outstanding contributors:
 
-File a GitHub [issue](https://github.com/cloudposse/packages/issues), send us an [email][email] or join our [Slack Community][slack].
+<a href="https://github.com/cloudposse/packages/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=cloudposse/packages&max=24" />
+</a>
 
-[![README Commercial Support][readme_commercial_support_img]][readme_commercial_support_link]
+### 🐛 Bug Reports & Feature Requests
 
-## DevOps Accelerator for Startups
+Please use the [issue tracker](https://github.com/cloudposse/packages/issues) to report any bugs or file feature requests.
 
+### 💻 Developing
+
+If you are interested in being a contributor and want to get involved in developing this project or [help out](https://cpco.io/help-out) with our other projects, we would love to hear from you! Shoot us an [email][email].
+
+In general, PRs are welcome. We follow the typical "fork-and-pull" Git workflow.
+
+ 1. **Fork** the repo on GitHub
+ 2. **Clone** the project to your own machine
+ 3. **Commit** changes to your own branch
+ 4. **Push** your work back up to your fork
+ 5. Submit a **Pull Request** so that we can review your changes
+
+**NOTE:** Be sure to merge the latest changes from "upstream" before making a pull request!
+
+### 🌎 Slack Community
+
+Join our [Open Source Community][slack] on Slack. It's **FREE** for everyone! Our "SweetOps" community is where you get to talk with others who share a similar vision for how to rollout and manage infrastructure. This is the best place to talk shop, ask questions, solicit feedback, and work together as a community to build totally *sweet* infrastructure.
+
+### 📰 Newsletter
+
+Sign up for [our newsletter][newsletter] that covers everything on our technology radar.  Receive updates on what we're up to on GitHub as well as awesome new projects we discover.
+
+### 📆 Office Hours <img src="https://img.cloudposse.com/fit-in/200x200/https://cloudposse.com/wp-content/uploads/2019/08/Powered-by-Zoom.png" align="right" />
+
+[Join us every Wednesday via Zoom][office_hours] for our weekly "Lunch & Learn" sessions. It's **FREE** for everyone!
+
+## About 
+
+This project is maintained and funded by [Cloud Posse, LLC][website]. 
+<a href="https://cpco.io/homepage"><img src="https://cloudposse.com/logo-300x69.svg" align="right" /></a>
 
 We are a [**DevOps Accelerator**][commercial_support]. We'll help you build your cloud infrastructure from the ground up so you can own it. Then we'll show you how to operate it and stick around for as long as you need us.
 
@@ -537,58 +559,7 @@ We deliver 10x the value for a fraction of the cost of a full-time engineer. Our
 - **Code Reviews.** You'll receive constructive feedback on Pull Requests.
 - **Bug Fixes.** We'll rapidly work with you to fix any bugs in our projects.
 
-## Slack Community
-
-Join our [Open Source Community][slack] on Slack. It's **FREE** for everyone! Our "SweetOps" community is where you get to talk with others who share a similar vision for how to rollout and manage infrastructure. This is the best place to talk shop, ask questions, solicit feedback, and work together as a community to build totally *sweet* infrastructure.
-
-## Newsletter
-
-Sign up for [our newsletter][newsletter] that covers everything on our technology radar.  Receive updates on what we're up to on GitHub as well as awesome new projects we discover.
-
-## Office Hours
-
-[Join us every Wednesday via Zoom][office_hours] for our weekly "Lunch & Learn" sessions. It's **FREE** for everyone!
-
-[![zoom](https://img.cloudposse.com/fit-in/200x200/https://cloudposse.com/wp-content/uploads/2019/08/Powered-by-Zoom.png")][office_hours]
-
-## ✨ Contributing
-
-
-
-This project is under active development, and we encourage contributions from our community. 
-Many thanks to our outstanding contributors:
-
-<a href="https://github.com/cloudposse/packages/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=cloudposse/packages&max=24" />
-</a>
-
-
-
-### Bug Reports & Feature Requests
-
-Please use the [issue tracker](https://github.com/cloudposse/packages/issues) to report any bugs or file feature requests.
-
-### Developing
-
-If you are interested in being a contributor and want to get involved in developing this project or [help out](https://cpco.io/help-out) with our other projects, we would love to hear from you! Shoot us an [email][email].
-
-In general, PRs are welcome. We follow the typical "fork-and-pull" Git workflow.
-
- 1. **Fork** the repo on GitHub
- 2. **Clone** the project to your own machine
- 3. **Commit** changes to your own branch
- 4. **Push** your work back up to your fork
- 5. Submit a **Pull Request** so that we can review your changes
-
-**NOTE:** Be sure to merge the latest changes from "upstream" before making a pull request!
-
-
-## Copyright
-
-Copyright © 2017-2023 [Cloud Posse, LLC](https://cpco.io/copyright)
-
-
-
+[![README Commercial Support][readme_commercial_support_img]][readme_commercial_support_link]
 ## License
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
@@ -614,29 +585,12 @@ specific language governing permissions and limitations
 under the License.
 ```
 
-
-
-
-
-
-
-
-
 ## Trademarks
 
 All other trademarks referenced herein are the property of their respective owners.
-
-## About
-
-This project is maintained and funded by [Cloud Posse, LLC][website]. Like it? Please let us know by [leaving a testimonial][testimonial]!
-
-[![Cloud Posse][logo]][website]
-
-We're a [DevOps Professional Services][hire] company based in Los Angeles, CA. We ❤️  [Open Source Software][we_love_open_source].
-
-We offer [paid support][commercial_support] on all of our projects.
-
-Check out [our other projects][github], [follow us on twitter][twitter], [apply for a job][jobs], or [hire us][hire] to help with your cloud strategy and implementation.[![README Footer][readme_footer_img]][readme_footer_link]
+---
+Copyright © 2017-2023 [Cloud Posse, LLC](https://cpco.io/copyright)
+[![README Footer][readme_footer_img]][readme_footer_link]
 [![Beacon][beacon]][website]
 <!-- markdownlint-disable -->
   [logo]: https://cloudposse.com/logo-300x69.svg
@@ -647,7 +601,6 @@ Check out [our other projects][github], [follow us on twitter][twitter], [apply 
   [hire]: https://cpco.io/hire?utm_source=github&utm_medium=readme&utm_campaign=cloudposse/packages&utm_content=hire
   [slack]: https://cpco.io/slack?utm_source=github&utm_medium=readme&utm_campaign=cloudposse/packages&utm_content=slack
   [twitter]: https://cpco.io/twitter?utm_source=github&utm_medium=readme&utm_campaign=cloudposse/packages&utm_content=twitter
-  [testimonial]: https://cpco.io/leave-testimonial?utm_source=github&utm_medium=readme&utm_campaign=cloudposse/packages&utm_content=testimonial
   [office_hours]: https://cloudposse.com/office-hours?utm_source=github&utm_medium=readme&utm_campaign=cloudposse/packages&utm_content=office_hours
   [newsletter]: https://cpco.io/newsletter?utm_source=github&utm_medium=readme&utm_campaign=cloudposse/packages&utm_content=newsletter
   [email]: https://cpco.io/email?utm_source=github&utm_medium=readme&utm_campaign=cloudposse/packages&utm_content=email
