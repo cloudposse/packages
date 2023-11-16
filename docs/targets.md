@@ -83,10 +83,10 @@ kubectl-1.21              1.21.14    Production-Grade Container Scheduling and M
 kubectl-1.22              1.22.17    Production-Grade Container Scheduling and Management (v1.22)
 kubectl-1.23              1.23.17    Production-Grade Container Scheduling and Management (v1.23)
 kubectl-1.24              1.24.17    Production-Grade Container Scheduling and Management (v1.24)
-kubectl-1.25              1.25.15    Production-Grade Container Scheduling and Management (v1.25)
+kubectl-1.25              1.25.16    Production-Grade Container Scheduling and Management (v1.25)
 kubectl-1.26              1.26.11    Production-Grade Container Scheduling and Management (v1.26)
 kubectl-1.27              1.27.8     Production-Grade Container Scheduling and Management (v1.27)
-kubectl-1.28              1.28.3     Production-Grade Container Scheduling and Management (v1.28)
+kubectl-1.28              1.28.4     Production-Grade Container Scheduling and Management (v1.28)
 kubectx                   0.9.5      Switch faster between clusters and namespaces in kubectl
 kubens                    0.9.5      Switch faster between clusters and namespaces in kubectl
 kubeval*                  0.16.1     Validate your Kubernetes configuration files, supports multiple Kubernetes versions
@@ -102,7 +102,7 @@ pandoc                    3.1.9      Universal markup converter
 pgmetrics                 1.16.0     Postgres metrics
 pluto                     5.18.6     A cli tool to help discover deprecated apiVersions in Kubernetes
 popeye                    0.11.1     A Kubernetes cluster resource sanitizer
-promtool                  2.47.2     Prometheus CLI tool
+promtool                  2.48.0     Prometheus CLI tool
 rainbow-text              1.2.1      Tasty rainbows for your terminal! (lolcat clone)
 rakkess*                  0.5.0      Review Access - kubectl plugin to show an access matrix for all available resources
 rancher                   2.8.0      Rancher CLI
@@ -121,7 +121,7 @@ spotctl                   0.35.0     A unified CLI to manage your [Spot](https:/
 sshm*                     1.2.2      Easy connect on EC2 instances thanks to AWS System Manager Agent
 stern                     1.27.0     ⎈ Multi pod and container log tailing for Kubernetes
 sudosh                    0.3.0      Shell wrapper to run a login shell with `sudo` as the current user for the purpose of audit logging
-teleport                  14.1.1     Secure Access for Developers that doesn't get in the way.
+teleport                  14.1.3     Secure Access for Developers that doesn't get in the way.
 teleport-4.2              OBSOLETE   Privileged access management for elastic infrastructure.
 teleport-4.3              4.3.10     Privileged access management for elastic infrastructure.
 teleport-4.4              4.4.12     Privileged access management for elastic infrastructure.
