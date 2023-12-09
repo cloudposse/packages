@@ -141,4 +141,3 @@ update/%:
 nuru/%.yaml:
 	@echo "* is $*"
 	@echo "subst is $(subst .,_,$*)"
-
