@@ -104,8 +104,10 @@ ifneq ($(strip $($(VERSION_ENV))),)
 	PACKAGE_VERSION_OVERRIDE = $() (overridden by $(VERSION_ENV) environment variable)
 	ifneq ($(strip $($(RELEASE_ENV))),)
     	PACKAGE_RELEASE=$(strip $($(RELEASE_ENV)))
-    	# $() is hack to include leading space in variable assignment
     	PACKAGE_RELEASE_OVERRIDE = $() (overridden by $(RELEASE_ENV) environment variable)
+    else # If the package version is overridden, but the release is not, then set the release to 0
+		PACKAGE_RELEASE=0
+		PACKAGE_RELEASE_OVERRIDE = $() (because version overridden by $(VERSION_ENV) environment variable)
     endif
 endif
 

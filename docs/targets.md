@@ -9,7 +9,7 @@ atlantis                  0.26.0     Terraform For Teams
 atmos                     1.50.0     Universal Tool for DevOps and Cloud Automation
 awless*                   0.1.11     A Mighty CLI for AWS
 aws-copilot-cli           1.32.0     Tool for developers to build, release and operate containerized applications on AWS App Runner or Amazon ECS on AWS Fargate.
-aws-iam-authenticator     0.6.11     A tool to use AWS IAM credentials to authenticate to a Kubernetes cluster
+aws-iam-authenticator     0.6.14     A tool to use AWS IAM credentials to authenticate to a Kubernetes cluster
 aws-nuke                  2.25.0     A highly configurable way to wipe non-prod aws accounts. WARNING do not use in prod
 aws-okta                  OBSOLETE   aws-okta allows users to authenticate with AWS using Okta credentials
 aws-vault                 7.2.0      A vault for securely storing and accessing AWS credentials in development environments
@@ -25,7 +25,7 @@ conftest                  0.47.0     Test your configuration files using Open Po
 consul                    1.17.0     Hashicorp consul
 ctop                      0.7.7      Top-like interface for container metrics
 direnv                    2.33.0     Unclutter your .profile
-doctl                     1.100.0    A command line tool for DigitalOcean services
+doctl                     1.101.0    A command line tool for DigitalOcean services
 duffle                    OBSOLETE   CNAB installer
 ec2-instance-selector     2.4.1      A CLI tool and go library which recommends instance types based on resource criteria like vcpus and memory
 ecspresso                 2.2.4      Ecspresso is a deployment tool for Amazon ECS
@@ -35,7 +35,7 @@ fargate                   OBSOLETE   (OBSOLETE, use aws/copilot-cli instead) CLI
 fetch                     0.4.6      fetch makes it easy to download files, folders, and release assets from a specific public git commit, branch, or tag
 figurine                  1.3.0      Print your name in style
 fzf                       0.23.1     A command-line fuzzy finder
-gh                        2.39.2     The GitHub CLI
+gh                        2.40.0     The GitHub CLI
 ghr                       0.16.2     Upload multiple artifacts to GitHub Releases in parallel
 github-commenter          0.19.0     Command line utility for creating GitHub comments on Commits, Pull Request Reviews or Issues
 github-release*           0.10.0     Commandline app to create and edit releases on Github (and upload artifacts)
@@ -54,7 +54,7 @@ helm2                     2.17.0     The Kubernetes Package Manager
 helm3                     3.13.2     The Kubernetes Package Manager
 helmfile                  0.144.0    Deploy Kubernetes Helm Charts
 htmltest                  0.17.0     :white_check_mark: Test generated HTML for problems
-hugo                      0.121.0    The world’s fastest framework for building websites.
+hugo                      0.121.1    The world’s fastest framework for building websites.
 infracost                 0.10.31    Cloud cost estimates for Terraform
 jp                        0.2.1      Command line interface to JMESPath
 jq                        OBSOLETE   Command-line JSON processor
@@ -62,7 +62,7 @@ json2hcl                  0.1.1      Convert JSON to HCL, and vice versa
 jx                        3.10.125   Jenkins-X
 k3d                       5.6.0      Little helper to run Rancher Lab's k3s in Docker
 k6                        0.48.0     A modern load testing tool, using Go and JavaScript - https://k6.io
-k9s                       0.29.0     Kubernetes CLI To Manage Your Clusters In Style
+k9s                       0.29.1     Kubernetes CLI To Manage Your Clusters In Style
 katafygio                 0.8.3      K8s continuous backup to git
 kfctl*                    1.2.0      Machine Learning Toolkit for Kubernetes
 kind                      0.20.0     A tool for running local Kubernetes clusters using Docker
@@ -102,7 +102,7 @@ pandoc                    3.1.9      Universal markup converter
 pgmetrics                 1.16.0     Postgres metrics
 pluto                     5.18.6     A cli tool to help discover deprecated apiVersions in Kubernetes
 popeye                    0.11.1     A Kubernetes cluster resource sanitizer
-promtool                  2.48.0     Prometheus CLI tool
+promtool                  2.48.1     Prometheus CLI tool
 rainbow-text              1.2.1      Tasty rainbows for your terminal! (lolcat clone)
 rakkess*                  0.5.0      Review Access - kubectl plugin to show an access matrix for all available resources
 rancher                   2.8.0      Rancher CLI
@@ -121,7 +121,7 @@ spotctl                   0.35.0     A unified CLI to manage your [Spot](https:/
 sshm*                     1.2.2      Easy connect on EC2 instances thanks to AWS System Manager Agent
 stern                     1.27.0     ⎈ Multi pod and container log tailing for Kubernetes
 sudosh                    0.3.0      Shell wrapper to run a login shell with `sudo` as the current user for the purpose of audit logging
-teleport                  14.2.1     Secure Access for Developers that doesn't get in the way.
+teleport                  14.2.2     Secure Access for Developers that doesn't get in the way.
 teleport-4.2              OBSOLETE   Privileged access management for elastic infrastructure.
 teleport-4.3              4.3.10     Privileged access management for elastic infrastructure.
 teleport-4.4              4.4.12     Privileged access management for elastic infrastructure.
@@ -139,7 +139,7 @@ terraform-module-versions 3.1.13     CLI tool that checks Terraform code for mod
 terraform_0.11            0.11.15    Terraform (Deprecated package. Use terraform-0.11 instead)
 terraform_0.12            0.12.31    Terraform (Deprecated package. Use terraform-0.12 instead)
 terraform_0.13            0.13.7     Terraform (Deprecated package. Use terraform-0.13 instead)
-terragrunt                0.53.8     Terragrunt is a thin wrapper for Terraform that provides extra tools for working with multiple Terraform modules.
+terragrunt                0.54.0     Terragrunt is a thin wrapper for Terraform that provides extra tools for working with multiple Terraform modules.
 terrahelp                 0.7.5      Terrahelp is as a command line utility that provides useful tricks like masking of terraform output.
 tfenv                     OBSOLETE   Transform environment variables for use with Terraform (e.g. `HOSTNAME` ⇨ `TF_VAR_hostname`)
 tflint                    0.49.0     A Pluggable Terraform Linter
