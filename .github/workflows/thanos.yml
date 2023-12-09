@@ -4,6 +4,9 @@
 #
 
 name: "thanos"
+concurrency:
+  group: ${{ github.workflow }} @ ${{ github.event.pull_request.head.label || github.head_ref || github.ref }} (${{ inputs.package_version_override || 'LATEST' }}_r${{ inputs.release_number_override || '0' }})
+  cancel-in-progress: true
 on:
   push:
     branches:
@@ -36,13 +39,13 @@ on:
         required: false
         type: string
       release_number_override:
-        description: 'Zero-based release number of thanos package to publish. Defaults to vendor/thanos/RELEASE.'
+        description: 'Zero-based release number of thanos package to publish. Defaults to 0 (zero) when version is specified, ignored if not.'
         required: false
         type: string
 
 env:
-  thanos_VERSION: ${{ github.event.inputs.package_version_override }}
-  thanos_RELEASE: ${{ github.event.inputs.release_number_override }}
+  thanos_VERSION: ${{ inputs.package_version_override }}
+  thanos_RELEASE: ${{ inputs.release_number_override }}
 
 jobs:
   # Mergify cannot distinguish between 2 jobs with the same name run from different workflows,
@@ -101,7 +104,7 @@ jobs:
     steps:
       # Checkout the packages repo so we can build the packages as a monorepo
       - name: "Checkout source code at current commit"
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       # Export the apk keys as files from secrets
       - name: "Export keys"
@@ -173,16 +176,12 @@ jobs:
         include:
         # Default value for runs-on. Original matrix values will not be overridden, but added ones (like runs-on) can be.
         # See https://docs.github.com/en/actions/using-jobs/using-a-matrix-for-your-jobs#expanding-or-adding-matrix-configurations
-        - runs-on:
-          - "self-hosted"
-          - "arm64"
-          - "packages"
-        # By including `arch: amd64` here, we override the `runs-on` value `arch` is `amd64`.
+        - runs-on: "self-hosted-arm64-large"
+        # By including `arch: amd64` here, we override the `runs-on` value when the matrix `arch` is `amd64`.
         # This also forces the matrix to include `arch: amd64` even if it is not in the original matrix.
-        # This is why we do not default for amd64 and then override for arm64.
+        # This is why we do not default for amd64 and then override for arm64. (Because it would force arm64 to be included, and some tools are not available for arm64.)
         - arch: amd64
-          runs-on:
-          - "ubuntu-latest"
+          runs-on: "ubuntu-latest"
     runs-on: ${{ matrix.runs-on }}
     env:
       # We are in a bit of a bind here because of how GitHub actions work as of 2020-11-19
@@ -208,7 +207,7 @@ jobs:
     steps:
       # Checkout the packages repo so we can build the packages as a monorepo
       - name: "Checkout source code at current commit"
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       # Build the packages for the matrix version
       - name: "Build ${{matrix.package-type}} packages"
