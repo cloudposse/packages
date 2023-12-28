@@ -1,11 +1,8 @@
 
 <!-- markdownlint-disable -->
-# Packages [![Auto Update Status](https://github.com/cloudposse/packages/workflows/auto-update/badge.svg)](https://github.com/cloudposse/packages/actions?query=workflow%3Aauto-update) [![Latest Release](https://img.shields.io/github/release/cloudposse/packages.svg)](https://github.com/cloudposse/packages/releases/latest) [![Slack Community](https://slack.cloudposse.com/badge.svg)](https://slack.cloudposse.com)
+# Packages<a href="https://cpco.io/homepage"><img align="right" src="https://cloudposse.com/logo-300x69.svg" width="150" /></a> [![Auto Update Status](https://github.com/cloudposse/packages/workflows/auto-update/badge.svg)](https://github.com/cloudposse/packages/actions?query=workflow%3Aauto-update) [![Latest Release](https://img.shields.io/github/release/cloudposse/packages.svg)](https://github.com/cloudposse/packages/releases/latest) [![Slack Community](https://slack.cloudposse.com/badge.svg)](https://slack.cloudposse.com)
 <!-- markdownlint-restore -->
 
-[![README Header][readme_header_img]][readme_header_link]
-
-[![Cloud Posse][logo]](https://cpco.io/homepage)
 
 <!--
 
@@ -31,18 +28,13 @@
 Cloud Posse distribution of awesome apps.
 
 ---
+> [!NOTE]
+> This project is part of Cloud Posse's comprehensive ["SweetOps"](https://cpco.io/sweetops) approach towards DevOps.
+>
+> It's 100% Open Source and licensed under the [APACHE2](LICENSE).
+>
 
-This project is part of our comprehensive ["SweetOps"](https://cpco.io/sweetops) approach towards DevOps.
-
-
-It's 100% Open Source and licensed under the [APACHE2](LICENSE).
-
-
-
-
-
-
-
+[![README Header][readme_header_img]][readme_header_link]
 
 
 
@@ -401,7 +393,7 @@ Here are some solutions to several common problems that may occur when adding a 
 [![jx](https://github.com/cloudposse/packages/workflows/jx/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ajx) | 3.10.126   | Jenkins-X
 [![k3d](https://github.com/cloudposse/packages/workflows/k3d/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ak3d) | 5.6.0      | Little helper to run Rancher Lab's k3s in Docker
 [![k6](https://github.com/cloudposse/packages/workflows/k6/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ak6) | 0.48.0     | A modern load testing tool, using Go and JavaScript - https://k6.io
-[![k9s](https://github.com/cloudposse/packages/workflows/k9s/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ak9s) | 0.30.4     | Kubernetes CLI To Manage Your Clusters In Style
+[![k9s](https://github.com/cloudposse/packages/workflows/k9s/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ak9s) | 0.30.5     | Kubernetes CLI To Manage Your Clusters In Style
 [![katafygio](https://github.com/cloudposse/packages/workflows/katafygio/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Akatafygio) | 0.8.3      | K8s continuous backup to git
 [![kfctl](https://github.com/cloudposse/packages/workflows/kfctl/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Akfctl) | 1.2.0      | Machine Learning Toolkit for Kubernetes
 [![kind](https://github.com/cloudposse/packages/workflows/kind/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Akind) | 0.20.0     | A tool for running local Kubernetes clusters using Docker
@@ -511,7 +503,7 @@ Please use the [issue tracker](https://github.com/cloudposse/packages/issues) to
 
 ### 💻 Developing
 
-If you are interested in being a contributor and want to get involved in developing this project or [help out](https://cpco.io/help-out) with our other projects, we would love to hear from you! Shoot us an [email][email].
+If you are interested in being a contributor and want to get involved in developing this project or [help out](https://cpco.io/help-out) with Cloud Posse's other projects, we would love to hear from you! Shoot us an [email][email].
 
 In general, PRs are welcome. We follow the typical "fork-and-pull" Git workflow.
 
