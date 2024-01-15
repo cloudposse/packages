@@ -144,7 +144,7 @@ terrahelp                 0.7.5      Terrahelp is as a command line utility that
 tfenv                     OBSOLETE   Transform environment variables for use with Terraform (e.g. `HOSTNAME` ⇨ `TF_VAR_hostname`)
 tflint                    0.50.1     A Pluggable Terraform Linter
 tfmask                    OBSOLETE   Terraform utility to mask select output from `terraform plan` and `terraform apply`
-tfschema                  0.7.7      A schema inspector for Terraform providers
+tfschema                  0.7.8      A schema inspector for Terraform providers
 tfsec                     1.28.4     Security scanner for your Terraform code
 thanos                    0.33.0     Highly available Prometheus setup with long term storage capabilities. CNCF Sandbox project.
 trivy                     0.48.3     A Simple and Comprehensive Vulnerability Scanner for Containers, Suitable for CI
