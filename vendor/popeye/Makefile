@@ -1,10 +1,6 @@
 
 include ../../tasks/Makefile.vendor_includes
 
-ifeq ($(ARCH), amd64)
-	ARCH=x86_64
-endif
-
 ifeq ($(OS), darwin)
   OS=Darwin
 else
