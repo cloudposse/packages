@@ -30,8 +30,8 @@ github_repo: cloudposse/packages
 # Badges to display
 badges:
   - name: "Auto Update Status"
-    image: "https://github.com/cloudposse/packages/workflows/auto-update/badge.svg"
-    url: "https://github.com/cloudposse/packages/actions?query=workflow%3Aauto-update"
+    image: "https://github.com/cloudposse/packages/actions/workflows/auto-update-packages.yml/badge.svg"
+    url: "https://github.com/cloudposse/packages/actions/workflows/auto-update-packages.yml"
   - name: "Latest Release"
     image: "https://img.shields.io/github/release/cloudposse/packages.svg"
     url: "https://github.com/cloudposse/packages/releases/latest"

@@ -1,6 +1,7 @@
 
 <!-- markdownlint-disable -->
-# Packages<a href="https://cpco.io/homepage"><img align="right" src="https://cloudposse.com/logo-300x69.svg" width="150" /></a> [![Auto Update Status](https://github.com/cloudposse/packages/workflows/auto-update/badge.svg)](https://github.com/cloudposse/packages/actions?query=workflow%3Aauto-update) [![Latest Release](https://img.shields.io/github/release/cloudposse/packages.svg)](https://github.com/cloudposse/packages/releases/latest) [![Slack Community](https://slack.cloudposse.com/badge.svg)](https://slack.cloudposse.com)
+[![Project Banner](.github/banner.png?raw=true)](https://cpco.io/homepage)
+ [![Auto Update Status](https://github.com/cloudposse/packages/actions/workflows/auto-update-packages.yml/badge.svg)](https://github.com/cloudposse/packages/actions/workflows/auto-update-packages.yml) [![Latest Release](https://img.shields.io/github/release/cloudposse/packages.svg)](https://github.com/cloudposse/packages/releases/latest) [![Slack Community](https://slack.cloudposse.com/badge.svg)](https://slack.cloudposse.com)
 <!-- markdownlint-restore -->
 
 
