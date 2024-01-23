@@ -1,7 +1,7 @@
 
 <!-- markdownlint-disable -->
 [![Project Banner](.github/banner.png?raw=true)](https://cpco.io/homepage)
- [![Auto Update Status](https://github.com/cloudposse/packages/actions/workflows/auto-update-packages.yml/badge.svg)](https://github.com/cloudposse/packages/actions/workflows/auto-update-packages.yml) [![Latest Release](https://img.shields.io/github/release/cloudposse/packages.svg)](https://github.com/cloudposse/packages/releases/latest) [![Slack Community](https://slack.cloudposse.com/badge.svg)](https://slack.cloudposse.com)
+ [![Auto Update Status](https://github.com/cloudposse/packages/actions/workflows/auto-update-packages.yml/badge.svg)](https://github.com/cloudposse/packages/actions/workflows/auto-update-packages.yml) [![Slack Community](https://slack.cloudposse.com/badge.svg)](https://slack.cloudposse.com)
 <!-- markdownlint-restore -->
 
 
