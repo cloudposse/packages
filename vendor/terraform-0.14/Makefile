@@ -7,8 +7,9 @@ export MAJOR_VERSION = 0.14
 export PACKAGE_PRERELEASE_ENABLED = false
 export PACKAGE_NAME = $(MASTER_PACKAGE_NAME)-$(MAJOR_VERSION)
 
-# Package is well past EOL
-export AUTO_UPDATE_ENABLED = false
+# This version is technically past end-of-life, so we allow updates to fail,
+# but we keep checking anyway in case there is a security patch.
+export AUTO_UPDATE_ENABLED = softfail
 
 include ../../tasks/Makefile.vendor_includes
 

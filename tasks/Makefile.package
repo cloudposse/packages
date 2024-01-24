@@ -293,7 +293,11 @@ info/md:
 		else \
 			truncated_version='%-10s'; \
 		fi; \
-		printf "[![%s](https://github.com/cloudposse/packages/workflows/%s/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%%3A%s)$${package_arch_incomplete} | $${truncated_version} | %s\n" "$${PACKAGE_NAME}" "$${PACKAGE_NAME}" "$${PACKAGE_NAME}" "$${PACKAGE_VERSION}" "$${PACKAGE_DESCRIPTION}"; \
+		if [[ "$${AUTO_UPDATE_ENABLED:-true}" == "true" ]] || [[ "$${AUTO_UPDATE_ENABLED:-true}" == "softfail" ]]; then \
+			printf "[![%s](https://github.com/cloudposse/packages/actions/workflows/%s.yml/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%%3A%s)$${package_arch_incomplete} | $${truncated_version} | %s\n" "$${PACKAGE_NAME}" "$${PACKAGE_NAME}" "$${PACKAGE_NAME}" "$${PACKAGE_VERSION}" "$${PACKAGE_DESCRIPTION}"; \
+		else \
+			printf "%s$${package_arch_incomplete} \[frozen\] | $${truncated_version} | %s\n" "$${PACKAGE_NAME}" "$${PACKAGE_VERSION}" "$${PACKAGE_DESCRIPTION}"; \
+		fi; \
 	fi
 
 # info/github is used to configure GitHub Actions, particularly build and auto-update
