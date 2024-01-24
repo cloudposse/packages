@@ -7,6 +7,9 @@ export MAJOR_VERSION = 0.15
 export PACKAGE_PRERELEASE_ENABLED = true
 export PACKAGE_NAME = $(MASTER_PACKAGE_NAME)-$(MAJOR_VERSION)
 
+# Package is well past EOL
+export AUTO_UPDATE_ENABLED = false
+
 include ../../tasks/Makefile.vendor_includes
 
 # NOTE: This build uses a custom build template ./APKBUILD

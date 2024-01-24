@@ -123,8 +123,6 @@ jobs:
         - sudosh
         - teleport
         - terraform
-        - terraform-0.14
-        - terraform-0.15
         - terraform-1
         - terraform-config-inspect
         - terraform-docs
