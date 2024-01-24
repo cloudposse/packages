@@ -283,13 +283,15 @@ info/short:
 	fi
 
 # info/md is used to make docs/badges.md
+# We truncate long versions to 9 characters to avoid making the version column too wide.
+# We use GitHub-flavored Markdown special format [text](## "hover text") to make the truncated version accessible via hover.
 info/md:
 	@if [[ $${PACKAGE_ENABLED:-true} != "false" ]]; then \
 		if [[ "$(PACKAGE_ARCHS_DISABLED)" != "" ]] && ! [[ "$(PACKAGE_ARCHS_DISABLED)" =~ "no-linux" ]]; then \
     		package_arch_incomplete='*'; \
     	fi; \
     	if (( $${#PACKAGE_VERSION} > 9 )); then \
-			truncated_version='%-9.9s…'; \
+			truncated_version='[%-9.9s…](## "$(subst %,,$(subst ',,$(subst ",,$(PACKAGE_VERSION))))")'; \
 		else \
 			truncated_version='%-10s'; \
 		fi; \
