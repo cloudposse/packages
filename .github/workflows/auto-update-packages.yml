@@ -61,7 +61,6 @@ jobs:
         - gonsul
         - goofys
         - gosu
-        - gotop
         - grpcurl
         - hcledit
         - helm

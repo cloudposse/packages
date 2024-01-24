@@ -1,6 +1,10 @@
 <!-- markdownlint-disable -->
 ## Makefile Targets
 ```text
+
+
+Packages marked with * are not available on some architectures (usually missing `arm64`)
+
 amazon-ecr-credential-helper 0.7.1      Automatically gets credentials for Amazon ECR on docker push/docker pull
 amtool                    0.26.0     Tool for interacting with the Alertmanager API
 argocd                    2.9.5      Declarative GitOpts for Kubernetes

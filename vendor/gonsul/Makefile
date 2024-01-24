@@ -18,7 +18,8 @@ include ../../tasks/Makefile.vendor_includes
 ifeq ($(OS),darwin)
  export OS = osx
  export DL_ARCH = -$(ARCH)
- export PACKAGE_ARCHS_DISABLED :=
+ # Set PACKAGE_ARCHS_DISABLED to "other" to indicate that this package is not available for some architectures on other OSes
+ export PACKAGE_ARCHS_DISABLED := "other"
 else
  export DL_ARCH =
 endif

@@ -13,8 +13,8 @@ export APK_BUILD_TEMPLATE ?= APKBUILD.github-binary
 include ../../tasks/Makefile.vendor_includes
 
 ifeq ($(OS),darwin)
-  # arm64 not supported
-  export PACKAGE_ARCHS_DISABLED = arm64
+  # arm64 not supported on macOS, but add "no-linux" to say no linux architectures are disabled
+  export PACKAGE_ARCHS_DISABLED = arm64 no-linux
 endif
 ifeq ($(ARCH),arm64)
   export DL_ARCH = arm
