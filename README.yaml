@@ -318,6 +318,8 @@ examples: |-
 contributors:
   - name: "Erik Osterman"
     github: "osterman"
+  - name: "Nuru"
+    github: "Nuru"
   - name: "Igor Rodionov"
     github: "goruha"
   - name: "Andriy Knysh"
