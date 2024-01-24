@@ -8,12 +8,15 @@ export DOWNLOAD_URL = $(PACKAGE_REPO_URL)/releases/download/v$(PACKAGE_VERSION)/
 export APK_BUILD_TEMPLATE = APKBUILD.github-binary
 export APKBUILD_DEPENDS += libc6-compat
 
-include ../../tasks/Makefile.vendor_includes
-
 # https://github.com/neilpa/yajsv/issues/24
-ifneq ($(OS),darwin)
+ifeq ($(OS),darwin)
+  # Set PACKAGE_ARCHS_DISABLED to "other" to indicate that this package is not available for some architectures on other OSes
+  export PACKAGE_ARCHS_DISABLED := "other"
+else
   export PACKAGE_ARCHS_DISABLED = arm64
 endif
+
+include ../../tasks/Makefile.vendor_includes
 
 install:
 	$(call download_binary)

@@ -50,9 +50,9 @@ run:
 ## Update `docs/badges.md` from `make help`
 docs/badges.md: docs/deps
 	@( \
-		echo "## Package Build Status"; \
-		echo "| Build Status | Version | Description |"; \
-		echo "| ------------ | ------- | ----------- |"; \
+		echo '## Package Build Status'; \
+		echo '| Build Status (* means `amd64` only) | Version | Description |'; \
+		echo '| ----------------------------------- | ------- | ----------- |'; \
 		$(SELF) --no-print-directory --quiet --silent help/md | sed $$'s,\x1b\\[[0-9;]*[a-zA-Z],,g'; \
 	) > $@
 
@@ -128,6 +128,7 @@ docker/build/%/shell run/%:
 
 
 help/vendor:
+	printf '\n\nPackages marked with * are not available on some architectures (usually missing `arm64`)\n\n'
 	@$(MAKE) --no-print-directory -s -C vendor help
 
 help/md:
