@@ -24,7 +24,7 @@ jobs:
           - 'alpine'
     steps:
       - name: "Checkout source code at current commit"
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: Prepare tags for Docker image
         id: prepare
         env:
