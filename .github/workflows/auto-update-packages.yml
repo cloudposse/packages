@@ -139,6 +139,7 @@ jobs:
         - variant
         - variant2
         - vault
+        - velero
         - vendir
         - venona
         - vert
