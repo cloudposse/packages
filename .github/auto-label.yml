@@ -473,6 +473,9 @@ vendor/variant2:
 vendor/vault:
 - any: ["vendor/vault/**"]
   all: ["!bin/**", "!tasks/**"]
+vendor/velero:
+- any: ["vendor/velero/**"]
+  all: ["!bin/**", "!tasks/**"]
 vendor/vendir:
 - any: ["vendor/vendir/**"]
   all: ["!bin/**", "!tasks/**"]

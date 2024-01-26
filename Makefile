@@ -58,7 +58,7 @@ docs/badges.md: docs/deps
 
 ## Build alpine packages for testing
 docker/build/apk:
-	docker build -t cloudposse/apkbuild:$(ALPINE_VERSION) -f apk/Dockerfile-$(ALPINE_VERSION) .
+	docker build --load --platform=linux/amd64 -t cloudposse/apkbuild:$(ALPINE_VERSION) -f apk/Dockerfile-$(ALPINE_VERSION) .
 	docker run \
 		--name apkbuild \
 		--rm \
@@ -67,7 +67,7 @@ docker/build/apk:
 		sh -c "make -C /packages/vendor build"
 
 docker/build/apk/all:
-	docker build -t cloudposse/apkbuild:$(ALPINE_VERSION) -f apk/Dockerfile-$(ALPINE_VERSION) .
+	docker build --load --platform=linux/amd64 -t cloudposse/apkbuild:$(ALPINE_VERSION) -f apk/Dockerfile-$(ALPINE_VERSION) .
 	docker run \
 		--name apkbuild \
 		--rm \
@@ -79,7 +79,7 @@ docker/build/apk/all:
 docker/build/apk/shell run/apk:
 	rm -rf tmp/*
 	[ -n "$(ls tmp/)" ] && sudo rm -rf tmp/* || true
-	docker build -t cloudposse/apkbuild:$(ALPINE_VERSION) -f apk/Dockerfile-$(ALPINE_VERSION) .
+	docker build --load --platform=linux/amd64 -t cloudposse/apkbuild:$(ALPINE_VERSION) -f apk/Dockerfile-$(ALPINE_VERSION) .
 	docker run \
 		--name apkbuild \
 		--rm \

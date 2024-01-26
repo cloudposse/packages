@@ -22,7 +22,7 @@ cfssljson*                1.6.4      Cloudflare's PKI and TLS toolkit json parse
 chamber                   2.13.6     CLI for managing secrets
 cli53                     0.8.22     Command line tool for Amazon Route 53
 cloud-nuke                0.33.0     Tool for wiping an aws account DANGER absolutely do not use in production
-cloudflared               2024.1.4   Argo Tunnel client
+cloudflared               2024.1.5   Argo Tunnel client
 cloudposse-atlantis       OBSOLETE   Terraform For Teams, enhanced by Cloud Posse
 codefresh*                0.87.2     Codefresh CLI
 conftest                  0.48.0     Test your configuration files using Open Policy Agent
@@ -99,7 +99,7 @@ lectl*                    0.22.1     Script to check issued certificates by Let'
 minikube                  1.32.0     Run Kubernetes locally
 misspell*                 0.3.4      Correct commonly misspelled English words in source files
 nomad                     OBSOLETE   Hashicorp nomad
-opa                       0.60.0     An open source project to policy-enable your service.
+opa                       0.61.0     An open source project to policy-enable your service.
 pack                      0.32.1     Create cloud native Buildpacks
 packer                    1.10.0     Packer is a tool for creating identical machine images for multiple platforms from a single source configuration.
 pandoc                    3.1.11.1   Universal markup converter
@@ -156,7 +156,8 @@ turf                      OBSOLETE   Turf is Cloud Posse's command-line automati
 variant                   0.38.0     Variant is a Universal CLI tool that works like a task runner
 variant2                  0.38.0     Second major version of Variant, a Universal CLI tool that works like a task runner
 vault                     1.15.4     Hashicorp vault
-vendir                    0.39.0      Easy way to vendor portions of git repos, github releases, helm charts, docker image contents, etc. declaratively.
+velero                    1.12.3     Backup and migrate Kubernetes applications and their persistent volumes
+vendir                    0.39.0     Easy way to vendor portions of git repos, github releases, helm charts, docker image contents, etc. declaratively.
 venona*                   1.10.4     Codefresh runtime-environment agent
 vert                      0.1.0      Simple CLI for comparing two or more versions
 yajsv*                    1.4.1      Yet Another JSON Schema Validator [CLI]
