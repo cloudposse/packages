@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: "Checkout source code at current commit"
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
     - uses: mszostok/codeowners-validator@v0.7.1
       with:
         checks: "files,syntax,owners,duppatterns"
