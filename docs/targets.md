@@ -22,7 +22,7 @@ cfssljson*                1.6.4      Cloudflare's PKI and TLS toolkit json parse
 chamber                   2.13.6     CLI for managing secrets
 cli53                     0.8.22     Command line tool for Amazon Route 53
 cloud-nuke                0.33.0     Tool for wiping an aws account DANGER absolutely do not use in production
-cloudflared               2024.1.4   Argo Tunnel client
+cloudflared               2024.1.5   Argo Tunnel client
 cloudposse-atlantis       OBSOLETE   Terraform For Teams, enhanced by Cloud Posse
 codefresh*                0.87.2     Codefresh CLI
 conftest                  0.48.0     Test your configuration files using Open Policy Agent
@@ -99,7 +99,7 @@ lectl*                    0.22.1     Script to check issued certificates by Let'
 minikube                  1.32.0     Run Kubernetes locally
 misspell*                 0.3.4      Correct commonly misspelled English words in source files
 nomad                     OBSOLETE   Hashicorp nomad
-opa                       0.60.0     An open source project to policy-enable your service.
+opa                       0.61.0     An open source project to policy-enable your service.
 pack                      0.32.1     Create cloud native Buildpacks
 packer                    1.10.0     Packer is a tool for creating identical machine images for multiple platforms from a single source configuration.
 pandoc                    3.1.11.1   Universal markup converter
