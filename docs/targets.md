@@ -108,7 +108,7 @@ pluto                     5.19.0     A cli tool to help discover deprecated apiV
 popeye                    0.11.2     A Kubernetes cluster resource sanitizer
 promtool                  2.49.1     Prometheus CLI tool
 rainbow-text              1.2.1      Tasty rainbows for your terminal! (lolcat clone)
-rakkess*                  0.5.0      Review Access - kubectl plugin to show an access matrix for all available resources
+rakkess*                  0.5.1      Review Access - kubectl plugin to show an access matrix for all available resources
 rancher                   2.8.0      Rancher CLI
 rbac-lookup               0.10.2     Find Kubernetes roles and cluster roles bound to any user, service account, or group name.
 retry                     OBSOLETE   ♻️ Functional mechanism based on channels to perform actions repetitively until successful.
