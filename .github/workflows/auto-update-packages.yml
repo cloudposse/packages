@@ -147,7 +147,7 @@ jobs:
         - yq
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v3
 
       - name: Get current package information
         shell: bash
@@ -178,7 +178,7 @@ jobs:
           make readme
 
       - name: Create Pull Request
-        uses: peter-evans/create-pull-request@v5
+        uses: cloudposse/actions/github/create-pull-request@0.32.0
         if: steps.update.outputs.package_version != steps.current.outputs.package_version
         with:
           token: ${{ secrets.GITHUB_BOT_TOKEN }}
