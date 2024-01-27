@@ -99,14 +99,14 @@ export AUTO_UPDATE_ENABLED ?= true
 VERSION_ENV = $(PACKAGE_NAME)_VERSION
 RELEASE_ENV = $(PACKAGE_NAME)_RELEASE
 ifneq ($(strip $($(VERSION_ENV))),)
-	PACKAGE_VERSION=$(strip $($(VERSION_ENV)))
+	export PACKAGE_VERSION=$(strip $($(VERSION_ENV)))
 	# $() is hack to include leading space in variable assignment
 	PACKAGE_VERSION_OVERRIDE = $() (overridden by $(VERSION_ENV) environment variable)
 	ifneq ($(strip $($(RELEASE_ENV))),)
-    	PACKAGE_RELEASE=$(strip $($(RELEASE_ENV)))
+    	export PACKAGE_RELEASE=$(strip $($(RELEASE_ENV)))
     	PACKAGE_RELEASE_OVERRIDE = $() (overridden by $(RELEASE_ENV) environment variable)
     else # If the package version is overridden, but the release is not, then set the release to 0
-		PACKAGE_RELEASE=0
+		export PACKAGE_RELEASE=0
 		PACKAGE_RELEASE_OVERRIDE = $() (because version overridden by $(VERSION_ENV) environment variable)
     endif
 endif
@@ -212,7 +212,9 @@ _version_by_semver: $(LOCAL_BIN)/vert
 			echo "ERROR: failed to obtain version matching '$${version_pin}' for $(VENDOR)/$(PACKAGE_REPO_NAME) (got: $${releases[@]:0:10}...)" >&2; \
 			exit 1; \
 		elif [ "$${local_version}" != "$${current_version}" ]; then \
-			if ! env PATH='$(PATH)' vert ">$${local_version}$(DEFAULT_PIN_SUFFIX)" "$${current_version}" >/dev/null; then \
+			if [ -f VERSIONS-SKIP ] && grep -qFx "$${current_version}" VERSIONS-SKIP; then \
+				echo "NOT UPGRADING $(PACKAGE_NAME) from $${local_version} to $${current_version} because $${current_version} is disallowed by VERSIONS-SKIP" >&2; \
+			elif ! env PATH='$(PATH)' vert ">$${local_version}$(DEFAULT_PIN_SUFFIX)" "$${current_version}" >/dev/null; then \
 				echo "NOT \"Upgrading\" $(PACKAGE_NAME) from $${local_version} to OLDER $${current_version}" >&2; \
 				exit 1; \
 			else \
@@ -238,8 +240,12 @@ GITHUB_LATEST_RELEASE:
 			echo "ERROR: failed to obtain version matching '$${version_pin}' for $(VENDOR)/$(PACKAGE_REPO_NAME) (got: $${releases[@]:0:10}...)" >&2; \
 			exit 1; \
 		elif [ "$${local_version}" != "$${current_version}" ]; then \
-			echo "Upgrading $(PACKAGE_NAME) from $${local_version} to $${current_version}"; \
-			echo "$${current_version}" > VERSION; \
+			if [ -f VERSIONS-SKIP ] && grep -qFx "$${current_version}" VERSIONS-SKIP; then \
+				echo "NOT UPGRADING $(PACKAGE_NAME) from $${local_version} to $${current_version} because $${current_version} is disallowed by VERSIONS-SKIP" >&2; \
+			else \
+				echo "Upgrading $(PACKAGE_NAME) from $${local_version} to $${current_version}"; \
+				echo "$${current_version}" > VERSION; \
+			fi; \
 		fi; \
 	else \
 		echo "NOT \"Upgrading\" $(PACKAGE_NAME) from $${local_version} to $${current_version} because auto-update is disabled" >&2; \
