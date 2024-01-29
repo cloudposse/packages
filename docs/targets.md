@@ -29,7 +29,7 @@ conftest                  0.48.0     Test your configuration files using Open Po
 consul                    1.17.2     Hashicorp consul
 ctop                      0.7.7      Top-like interface for container metrics
 direnv                    2.33.0     Unclutter your .profile
-doctl                     1.103.0    A command line tool for DigitalOcean services
+doctl                     1.104.0    A command line tool for DigitalOcean services
 duffle                    OBSOLETE   CNAB installer
 ec2-instance-selector     2.4.1      A CLI tool and go library which recommends instance types based on resource criteria like vcpus and memory
 ecspresso                 2.3.2      Ecspresso is a deployment tool for Amazon ECS
@@ -58,7 +58,7 @@ helm2                     2.17.0     The Kubernetes Package Manager
 helm3                     3.14.0     The Kubernetes Package Manager
 helmfile                  0.144.0    Deploy Kubernetes Helm Charts
 htmltest                  0.17.0     :white_check_mark: Test generated HTML for problems
-hugo                      0.121.2    The world’s fastest framework for building websites.
+hugo                      0.122.0    The world’s fastest framework for building websites.
 infracost                 0.10.32    Cloud cost estimates for Terraform
 jp                        0.2.1      Command line interface to JMESPath
 jq                        OBSOLETE   Command-line JSON processor
@@ -70,7 +70,7 @@ k9s                       0.31.7     Kubernetes CLI To Manage Your Clusters In S
 katafygio                 0.8.3      K8s continuous backup to git
 kfctl*                    1.2.0      Machine Learning Toolkit for Kubernetes
 kind                      0.20.0     A tool for running local Kubernetes clusters using Docker
-kops                      1.28.2     Kubernetes Operations (kops) - Production Grade K8s Installation, Upgrades, and Management
+kops                      1.28.3     Kubernetes Operations (kops) - Production Grade K8s Installation, Upgrades, and Management
 kops-1.12                 OBSOLETE   Kubernetes Operations (kops) - Production Grade K8s Installation, Upgrades, and Management
 krew                      0.4.1      Kubectl plugin manager
 kubecron*                 2.0.0      Utilities to manage kubernetes cronjobs. Run a CronJob manually for test purposes. Suspend/unsuspend a CronJob
