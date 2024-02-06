@@ -19,7 +19,7 @@ aws-okta                  OBSOLETE   aws-okta allows users to authenticate with 
 aws-vault                 7.2.0      A vault for securely storing and accessing AWS credentials in development environments
 cfssl*                    1.6.4      Cloudflare's PKI and TLS toolkit
 cfssljson*                1.6.4      Cloudflare's PKI and TLS toolkit json parser
-chamber                   2.13.6     CLI for managing secrets
+chamber                   2.14.0     CLI for managing secrets
 cli53                     0.8.22     Command line tool for Amazon Route 53
 cloud-nuke                0.33.0     Tool for wiping an aws account DANGER absolutely do not use in production
 cloudflared               2024.1.5   Argo Tunnel client
@@ -115,7 +115,7 @@ retry                     OBSOLETE   ♻️ Functional mechanism based on channe
 saml2aws                  2.36.13    CLI tool which enables you to login and retrieve AWS temporary credentials using a SAML IDP
 scenery                   OBSOLETE   A Terraform plan output prettifier
 sentinel                  OBSOLETE   Hashicorp sentinel
-sentry-cli                2.27.0     A command line utility to work with Sentry.
+sentry-cli                2.28.0     A command line utility to work with Sentry.
 shellcheck                0.9.0      ShellCheck, a static analysis tool for shell scripts
 shfmt                     3.7.0      A shell parser, formatter and interpreter (POSIX/Bash/mksh)
 slack-notifier            0.8.0      Command line utility to send messages with attachments to Slack channels via Incoming Webhooks
@@ -146,7 +146,7 @@ terraform_0.13            0.13.7     Terraform (Deprecated package. Use terrafor
 terragrunt                0.55.1     Terragrunt is a thin wrapper for Terraform that provides extra tools for working with multiple Terraform modules.
 terrahelp                 0.7.5      Terrahelp is as a command line utility that provides useful tricks like masking of terraform output.
 tfenv                     OBSOLETE   Transform environment variables for use with Terraform (e.g. `HOSTNAME` ⇨ `TF_VAR_hostname`)
-tflint                    0.50.2     A Pluggable Terraform Linter
+tflint                    0.50.3     A Pluggable Terraform Linter
 tfmask                    OBSOLETE   Terraform utility to mask select output from `terraform plan` and `terraform apply`
 tfschema                  0.7.8      A schema inspector for Terraform providers
 tfsec                     1.28.5     Security scanner for your Terraform code
