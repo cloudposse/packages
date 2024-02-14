@@ -342,7 +342,7 @@ Here are some solutions to several common problems that may occur when adding a 
 [![argocd](https://github.com/cloudposse/packages/actions/workflows/argocd.yml/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aargocd) | 2.10.0     | Declarative GitOpts for Kubernetes
 [![assume-role](https://github.com/cloudposse/packages/actions/workflows/assume-role.yml/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aassume-role)* | 0.3.2      | Easily assume AWS roles in your terminal.
 [![atlantis](https://github.com/cloudposse/packages/actions/workflows/atlantis.yml/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aatlantis) | 0.27.1     | Terraform For Teams
-[![atmos](https://github.com/cloudposse/packages/actions/workflows/atmos.yml/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aatmos) | 1.60.0     | Universal Tool for DevOps and Cloud Automation
+[![atmos](https://github.com/cloudposse/packages/actions/workflows/atmos.yml/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aatmos) | 1.61.0     | Universal Tool for DevOps and Cloud Automation
 [![awless](https://github.com/cloudposse/packages/actions/workflows/awless.yml/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aawless)* | 0.1.11     | A Mighty CLI for AWS
 [![aws-copilot-cli](https://github.com/cloudposse/packages/actions/workflows/aws-copilot-cli.yml/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aaws-copilot-cli) | 1.33.1     | Tool for developers to build, release and operate containerized applications on AWS App Runner or Amazon ECS on AWS Fargate.
 [![aws-iam-authenticator](https://github.com/cloudposse/packages/actions/workflows/aws-iam-authenticator.yml/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aaws-iam-authenticator) | 0.6.14     | A tool to use AWS IAM credentials to authenticate to a Kubernetes cluster
@@ -571,7 +571,9 @@ Ensure that your team succeeds by using our proven process and turnkey blueprint
 <summary>Preamble to the Apache License, Version 2.0</summary>
 <br/>
 <br/>
+
 Complete license is available in the [`LICENSE`](LICENSE) file.
+
 ```text
 Licensed to the Apache Software Foundation (ASF) under one
 or more contributor license agreements.  See the NOTICE file
