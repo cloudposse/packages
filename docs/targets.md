@@ -91,7 +91,7 @@ kubectl-1.25              1.25.16    Production-Grade Container Scheduling and M
 kubectl-1.26              1.26.13    Production-Grade Container Scheduling and Management (v1.26)
 kubectl-1.27              1.27.10    Production-Grade Container Scheduling and Management (v1.27)
 kubectl-1.28              1.28.6     Production-Grade Container Scheduling and Management (v1.28)
-kubectl-1.29              1.29.1     Production-Grade Container Scheduling and Management (v1.29)
+kubectl-1.29              1.29.2     Production-Grade Container Scheduling and Management (v1.29)
 kubectx                   0.9.5      Switch faster between clusters and namespaces in kubectl
 kubens                    0.9.5      Switch faster between clusters and namespaces in kubectl
 kubeval*                  0.16.1     Validate your Kubernetes configuration files, supports multiple Kubernetes versions
