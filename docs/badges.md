@@ -2,7 +2,7 @@
 | Build Status (* means `amd64` only) | Version | Description |
 | ----------------------------------- | ------- | ----------- |
 [![amazon-ecr-credential-helper](https://github.com/cloudposse/packages/actions/workflows/amazon-ecr-credential-helper.yml/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aamazon-ecr-credential-helper) | 0.7.1      | Automatically gets credentials for Amazon ECR on docker push/docker pull
-[![amtool](https://github.com/cloudposse/packages/actions/workflows/amtool.yml/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aamtool) | 0.26.0     | Tool for interacting with the Alertmanager API
+[![amtool](https://github.com/cloudposse/packages/actions/workflows/amtool.yml/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aamtool) | 0.27.0     | Tool for interacting with the Alertmanager API
 [![argocd](https://github.com/cloudposse/packages/actions/workflows/argocd.yml/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aargocd) | 2.10.1     | Declarative GitOpts for Kubernetes
 [![assume-role](https://github.com/cloudposse/packages/actions/workflows/assume-role.yml/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aassume-role)* | 0.3.2      | Easily assume AWS roles in your terminal.
 [![atlantis](https://github.com/cloudposse/packages/actions/workflows/atlantis.yml/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aatlantis) | 0.27.1     | Terraform For Teams
