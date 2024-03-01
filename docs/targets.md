@@ -28,7 +28,7 @@ codefresh*                0.87.3     Codefresh CLI
 conftest                  0.49.1     Test your configuration files using Open Policy Agent
 consul                    1.18.0     Hashicorp consul
 ctop                      0.7.7      Top-like interface for container metrics
-direnv                    2.33.0     Unclutter your .profile
+direnv                    2.34.0     Unclutter your .profile
 doctl                     1.104.0    A command line tool for DigitalOcean services
 duffle                    OBSOLETE   CNAB installer
 ec2-instance-selector     2.4.1      A CLI tool and go library which recommends instance types based on resource criteria like vcpus and memory
@@ -126,7 +126,7 @@ spotctl                   0.35.0     A unified CLI to manage your [Spot](https:/
 sshm*                     1.2.2      Easy connect on EC2 instances thanks to AWS System Manager Agent
 stern                     1.28.0     ⎈ Multi pod and container log tailing for Kubernetes
 sudosh                    0.3.0      Shell wrapper to run a login shell with `sudo` as the current user for the purpose of audit logging
-teleport                  15.0.2     Secure Access for Developers that doesn't get in the way.
+teleport                  15.1.0     Secure Access for Developers that doesn't get in the way.
 teleport-4.2              OBSOLETE   Privileged access management for elastic infrastructure.
 teleport-4.3              4.3.10     Privileged access management for elastic infrastructure.
 teleport-4.4              4.4.12     Privileged access management for elastic infrastructure.
