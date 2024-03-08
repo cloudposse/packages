@@ -1,3 +1,5 @@
+
+
 <!-- markdownlint-disable -->
 <a href="https://cpco.io/homepage"><img src=".github/banner.png?raw=true" alt="Project Banner"/></a><br/>
     <p align="right">
@@ -28,16 +30,7 @@
 Cloud Posse distribution of awesome apps.
 
 
----
-> [!NOTE]
-> This project is part of Cloud Posse's comprehensive ["SweetOps"](https://cpco.io/homepage?utm_source=github&utm_medium=readme&utm_campaign=cloudposse/packages&utm_content=) approach towards DevOps.
-> <details><summary><strong>Learn More</strong></summary>
->
-> It's 100% Open Source and licensed under the [APACHE2](LICENSE).
->
-> </details>
 
-<a href="https://cloudposse.com/readme/header/link?utm_source=github&utm_medium=readme&utm_campaign=cloudposse/packages&utm_content=readme_header_link"><img src="https://cloudposse.com/readme/header/img"/></a>
 
 
 ## Introduction
@@ -61,9 +54,10 @@ Package repository hosting is graciously provided by [cloudsmith](https://clouds
 
 
 
+
+
+
 ## Usage
-
-
 
 
 ## Debian Repository (recommended)
@@ -241,6 +235,8 @@ $ make -C vendor/<package> rpm
 ```sh
 $ make -C vendor/<package> install
 ```
+
+
 
 
 
@@ -439,7 +435,7 @@ kubectl-1.19 \[frozen\] | 1.19.16    | Production-Grade Container Scheduling and
 [![rbac-lookup](https://github.com/cloudposse/packages/actions/workflows/rbac-lookup.yml/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Arbac-lookup) | 0.10.2     | Find Kubernetes roles and cluster roles bound to any user, service account, or group name.
 [![saml2aws](https://github.com/cloudposse/packages/actions/workflows/saml2aws.yml/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Asaml2aws) | 2.36.13    | CLI tool which enables you to login and retrieve AWS temporary credentials using a SAML IDP
 [![sentry-cli](https://github.com/cloudposse/packages/actions/workflows/sentry-cli.yml/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Asentry-cli) | 2.30.0     | A command line utility to work with Sentry.
-[![shellcheck](https://github.com/cloudposse/packages/actions/workflows/shellcheck.yml/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ashellcheck) | 0.9.0      | ShellCheck, a static analysis tool for shell scripts
+[![shellcheck](https://github.com/cloudposse/packages/actions/workflows/shellcheck.yml/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ashellcheck) | 0.10.0     | ShellCheck, a static analysis tool for shell scripts
 [![shfmt](https://github.com/cloudposse/packages/actions/workflows/shfmt.yml/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ashfmt) | 3.8.0      | A shell parser, formatter and interpreter (POSIX/Bash/mksh)
 [![slack-notifier](https://github.com/cloudposse/packages/actions/workflows/slack-notifier.yml/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Aslack-notifier) | 0.8.0      | Command line utility to send messages with attachments to Slack channels via Incoming Webhooks
 [![sops](https://github.com/cloudposse/packages/actions/workflows/sops.yml/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Asops) | 3.8.1      | Secrets management stinks, use some sops!
@@ -505,7 +501,7 @@ Please use the [issue tracker](https://github.com/cloudposse/packages/issues) to
 
 ### 💻 Developing
 
-If you are interested in being a contributor and want to get involved in developing this project or help out with Cloud Posse's other projects, we would love to hear from you! 
+If you are interested in being a contributor and want to get involved in developing this project or help out with Cloud Posse's other projects, we would love to hear from you!
 Hit us up in [Slack](https://cpco.io/slack?utm_source=github&utm_medium=readme&utm_campaign=cloudposse/packages&utm_content=slack), in the `#cloudposse` channel.
 
 In general, PRs are welcome. We follow the typical "fork-and-pull" Git workflow.
@@ -531,38 +527,6 @@ Dropped straight into your Inbox every week — and usually a 5-minute read.
 
 [Join us every Wednesday via Zoom](https://cloudposse.com/office-hours?utm_source=github&utm_medium=readme&utm_campaign=cloudposse/packages&utm_content=office_hours) for your weekly dose of insider DevOps trends, AWS news and Terraform insights, all sourced from our SweetOps community, plus a _live Q&A_ that you can’t find anywhere else.
 It's **FREE** for everyone!
-
-## About
-
-This project is maintained by <a href="https://cpco.io/homepage?utm_source=github&utm_medium=readme&utm_campaign=cloudposse/packages&utm_content=">Cloud Posse, LLC</a>.
-<a href="https://cpco.io/homepage?utm_source=github&utm_medium=readme&utm_campaign=cloudposse/packages&utm_content="><img src="https://cloudposse.com/logo-300x69.svg" align="right" /></a>
-
-We are a [**DevOps Accelerator**](https://cpco.io/commercial-support?utm_source=github&utm_medium=readme&utm_campaign=cloudposse/packages&utm_content=commercial_support) for funded startups and enterprises.
-Use our ready-to-go terraform architecture blueprints for AWS to get up and running quickly.
-We build it with you. You own everything. Your team wins. Plus, we stick around until you succeed.
-
-<a href="https://cpco.io/commercial-support?utm_source=github&utm_medium=readme&utm_campaign=cloudposse/packages&utm_content=commercial_support"><img alt="Learn More" src="https://img.shields.io/badge/learn%20more-success.svg?style=for-the-badge"/></a>
-
-*Your team can operate like a pro today.*
-
-Ensure that your team succeeds by using our proven process and turnkey blueprints. Plus, we stick around until you succeed.
-
-<details>
-  <summary>📚 <strong>See What's Included</strong></summary>
-
-- **Reference Architecture.** You'll get everything you need from the ground up built using 100% infrastructure as code.
-- **Deployment Strategy.** You'll have a battle-tested deployment strategy using GitHub Actions that's automated and repeatable.
-- **Site Reliability Engineering.** You'll have total visibility into your apps and microservices.
-- **Security Baseline.** You'll have built-in governance with accountability and audit logs for all changes.
-- **GitOps.** You'll be able to operate your infrastructure via Pull Requests.
-- **Training.** You'll receive hands-on training so your team can operate what we build.
-- **Questions.** You'll have a direct line of communication between our teams via a Shared Slack channel.
-- **Troubleshooting.** You'll get help to triage when things aren't working.
-- **Code Reviews.** You'll receive constructive feedback on Pull Requests.
-- **Bug Fixes.** We'll rapidly work with you to fix any bugs in our projects.
-</details>
-
-<a href="https://cloudposse.com/readme/commercial-support/link?utm_source=github&utm_medium=readme&utm_campaign=cloudposse/packages&utm_content=readme_commercial_support_link"><img src="https://cloudposse.com/readme/commercial-support/img"/></a>
 ## License
 
 <a href="https://opensource.org/licenses/Apache-2.0"><img src="https://img.shields.io/badge/License-Apache%202.0-blue.svg?style=for-the-badge" alt="License"></a>
@@ -597,6 +561,8 @@ under the License.
 ## Trademarks
 
 All other trademarks referenced herein are the property of their respective owners.
+
+
 ---
 Copyright © 2017-2024 [Cloud Posse, LLC](https://cpco.io/copyright)
 
