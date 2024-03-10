@@ -32,7 +32,6 @@ Cloud Posse distribution of awesome apps.
 
 
 
-
 ## Introduction
 
 
@@ -51,8 +50,6 @@ Open up an [issue](https://github.com/cloudposse/packages/issues) or submit a PR
 ## Sponsorship [<img src="https://cloudposse.com/wp-content/uploads/2020/10/cloudsmith.svg" width="250" align="right" />](https://cloudsmith.io/)
 
 Package repository hosting is graciously provided by [cloudsmith](https://cloudsmith.io/). Cloudsmith is the only fully hosted, cloud-native, universal package management solution, that enables your organization to create, store and share packages in any format, to any place, with total confidence. We believe there’s a better way to manage software assets and packages, and they’re making it happen!
-
-
 
 
 
@@ -238,9 +235,6 @@ $ make -C vendor/<package> install
 
 
 
-
-
-
 ## Examples
 
 ### Docker Multi-stage Build
@@ -327,6 +321,7 @@ Here are some solutions to several common problems that may occur when adding a 
 
     This can occur when you have the `cloudposse/build-harness` repository checked out somewhere on your machine. `make builder TARGETS=readme` will end up looking for a docker image tagged with the SHA that the `HEAD` ref of your `buld-harness` points to. To correct this behavior, just run `make init` in the `cloudposse/packages` directory prior to running `make builder TARGETS=readme`.
     </details>
+
 
 
 
@@ -427,7 +422,7 @@ kubectl-1.19 \[frozen\] | 1.19.16    | Production-Grade Container Scheduling and
 [![pandoc](https://github.com/cloudposse/packages/actions/workflows/pandoc.yml/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Apandoc) | 3.1.12.2   | Universal markup converter
 [![pgmetrics](https://github.com/cloudposse/packages/actions/workflows/pgmetrics.yml/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Apgmetrics) | 1.16.0     | Postgres metrics
 [![pluto](https://github.com/cloudposse/packages/actions/workflows/pluto.yml/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Apluto) | 5.19.0     | A cli tool to help discover deprecated apiVersions in Kubernetes
-[![popeye](https://github.com/cloudposse/packages/actions/workflows/popeye.yml/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Apopeye) | 0.20.5     | A Kubernetes cluster resource sanitizer
+[![popeye](https://github.com/cloudposse/packages/actions/workflows/popeye.yml/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Apopeye) | 0.21.0     | A Kubernetes cluster resource sanitizer
 [![promtool](https://github.com/cloudposse/packages/actions/workflows/promtool.yml/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Apromtool) | 2.50.1     | Prometheus CLI tool
 [![rainbow-text](https://github.com/cloudposse/packages/actions/workflows/rainbow-text.yml/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Arainbow-text) | 1.2.1      | Tasty rainbows for your terminal! (lolcat clone)
 [![rakkess](https://github.com/cloudposse/packages/actions/workflows/rakkess.yml/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Arakkess)* | 0.5.0      | Review Access - kubectl plugin to show an access matrix for all available resources
@@ -486,23 +481,21 @@ Check out these related projects.
 - [build-harness](https://github.com/cloudposse/build-harness) - Collection of Makefiles to facilitate building Golang projects, Dockerfiles, Helm charts, and more
 - [geodesic](https://github.com/cloudposse/geodesic) - Geodesic is the fastest way to get up and running with a rock solid, production grade cloud platform built on strictly Open Source tools.
 
+
+
 ## ✨ Contributing
 
 This project is under active development, and we encourage contributions from our community.
+
+
+
 Many thanks to our outstanding contributors:
 
 <a href="https://github.com/cloudposse/packages/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=cloudposse/packages&max=24" />
 </a>
 
-### 🐛 Bug Reports & Feature Requests
-
-Please use the [issue tracker](https://github.com/cloudposse/packages/issues) to report any bugs or file feature requests.
-
-### 💻 Developing
-
-If you are interested in being a contributor and want to get involved in developing this project or help out with Cloud Posse's other projects, we would love to hear from you!
-Hit us up in [Slack](https://cpco.io/slack?utm_source=github&utm_medium=readme&utm_campaign=cloudposse/packages&utm_content=slack), in the `#cloudposse` channel.
+For 🐛 bug reports & feature requests, please use the [issue tracker](https://github.com/cloudposse/packages/issues).
 
 In general, PRs are welcome. We follow the typical "fork-and-pull" Git workflow.
  1. Review our [Code of Conduct](https://github.com/cloudposse/packages/?tab=coc-ov-file#code-of-conduct) and [Contributor Guidelines](https://github.com/cloudposse/.github/blob/main/CONTRIBUTING.md).
