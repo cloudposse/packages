@@ -64,7 +64,7 @@ gotop \[frozen\] | 3.0.0      | A terminal based graphical activity monitor insp
 [![kops](https://github.com/cloudposse/packages/actions/workflows/kops.yml/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Akops) | 1.28.4     | Kubernetes Operations (kops) - Production Grade K8s Installation, Upgrades, and Management
 krew \[frozen\] | 0.4.1      | Kubectl plugin manager
 [![kubecron](https://github.com/cloudposse/packages/actions/workflows/kubecron.yml/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Akubecron)* | 2.0.0      | Utilities to manage kubernetes cronjobs. Run a CronJob manually for test purposes. Suspend/unsuspend a CronJob
-[![kubectl](https://github.com/cloudposse/packages/actions/workflows/kubectl.yml/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Akubectl) | 1.29.2     | Production-Grade Container Scheduling and Management
+[![kubectl](https://github.com/cloudposse/packages/actions/workflows/kubectl.yml/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Akubectl) | 1.29.3     | Production-Grade Container Scheduling and Management
 kubectl-1.13 \[frozen\] | 1.13.12    | Production-Grade Container Scheduling and Management (v1.13)
 kubectl-1.14 \[frozen\] | 1.14.10    | Production-Grade Container Scheduling and Management (v1.14)
 kubectl-1.15 \[frozen\] | 1.15.12    | Production-Grade Container Scheduling and Management (v1.15)
