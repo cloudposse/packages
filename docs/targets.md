@@ -41,7 +41,7 @@ figurine                  1.3.0      Print your name in style
 fzf                       0.23.1     A command-line fuzzy finder
 gh                        2.46.0     The GitHub CLI
 ghr                       0.16.2     Upload multiple artifacts to GitHub Releases in parallel
-github-commenter          0.19.0     Command line utility for creating GitHub comments on Commits, Pull Request Reviews or Issues
+github-commenter          0.27.0     Command line utility for creating GitHub comments on Commits, Pull Request Reviews or Issues
 github-release*           0.10.0     Commandline app to create and edit releases on Github (and upload artifacts)
 github-status-updater     0.9.0      Command line utility for updating GitHub commit statuses and enabling required status checks for pull requests
 gitleaks                  8.18.2     Audit git repos for secrets 🔑
