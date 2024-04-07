@@ -8,5 +8,5 @@ INSTALL_DIR=/usr/share/${MASTER_PACKAGE_NAME}/${MAJOR_VERSION}/bin
 
 mkdir -p ${INSTALL_DIR}
 update-alternatives --install /usr/bin/${PACKAGE_NAME} ${PACKAGE_NAME} ${INSTALL_DIR}/${PACKAGE_NAME} 1
-update-alternatives --install /usr/bin/${MASTER_PACKAGE_NAME} ${MASTER_PACKAGE_NAME} ${INSTALL_DIR}/${PACKAGE_NAME} 26
+update-alternatives --install /usr/bin/${MASTER_PACKAGE_NAME} ${MASTER_PACKAGE_NAME} ${INSTALL_DIR}/${PACKAGE_NAME} 28
 exit 0
