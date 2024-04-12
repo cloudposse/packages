@@ -112,7 +112,7 @@ kubectl-1.19 \[frozen\] | 1.19.16    | Production-Grade Container Scheduling and
 [![sshm](https://github.com/cloudposse/packages/actions/workflows/sshm.yml/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Asshm)* | 1.2.2      | Easy connect on EC2 instances thanks to AWS System Manager Agent
 [![stern](https://github.com/cloudposse/packages/actions/workflows/stern.yml/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Astern) | 1.28.0     | ⎈ Multi pod and container log tailing for Kubernetes
 [![sudosh](https://github.com/cloudposse/packages/actions/workflows/sudosh.yml/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Asudosh) | 0.3.0      | Shell wrapper to run a login shell with `sudo` as the current user for the purpose of audit logging
-[![teleport](https://github.com/cloudposse/packages/actions/workflows/teleport.yml/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ateleport) | 15.2.1     | Secure Access for Developers that doesn't get in the way.
+[![teleport](https://github.com/cloudposse/packages/actions/workflows/teleport.yml/badge.svg?branch=master)](https://github.com/cloudposse/packages/actions?query=workflow%3Ateleport) | 15.2.2     | Secure Access for Developers that doesn't get in the way.
 teleport-4.3 \[frozen\] | 4.3.10     | Privileged access management for elastic infrastructure.
 teleport-4.4 \[frozen\] | 4.4.12     | Privileged access management for elastic infrastructure.
 teleport-5.0 \[frozen\] | 5.0.2      | Secure Access for Developers that doesn't get in the way.
