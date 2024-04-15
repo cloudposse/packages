@@ -52,7 +52,7 @@ goofys*                   0.24.0     a high-performance, POSIX-ish Amazon S3 fil
 gosu                      1.17.0     Simple Go-based setuid+setgid+setgroups+exec
 gotop                     3.0.0      A terminal based graphical activity monitor inspired by gtop and vtop
 grpcurl                   1.9.1      Like cURL, but for gRPC: Command-line tool for interacting with gRPC servers
-hcledit                   0.2.10     A command line editor for HCL
+hcledit                   0.2.11     A command line editor for HCL
 helm                      3.14.4     The Kubernetes Package Manager
 helm2                     2.17.0     The Kubernetes Package Manager
 helm3                     3.14.4     The Kubernetes Package Manager
