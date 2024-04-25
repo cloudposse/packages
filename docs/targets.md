@@ -119,7 +119,7 @@ sentinel                  OBSOLETE   Hashicorp sentinel
 sentry-cli                2.31.0     A command line utility to work with Sentry.
 shellcheck                0.10.0     ShellCheck, a static analysis tool for shell scripts
 shfmt                     3.8.0      A shell parser, formatter and interpreter (POSIX/Bash/mksh)
-slack-notifier            0.9.0      Command line utility to send messages with attachments to Slack channels via Incoming Webhooks
+slack-notifier            0.10.0     Command line utility to send messages with attachments to Slack channels via Incoming Webhooks
 sops                      3.8.1      Secrets management stinks, use some sops!
 spacectl                  0.30.0     [Spacelift.io](https://spacelift.io/) client and CLI
 spotctl                   0.35.0     A unified CLI to manage your [Spot](https://spot.io/) resources.
