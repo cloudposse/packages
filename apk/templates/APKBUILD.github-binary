@@ -35,6 +35,7 @@ source="${DOWNLOAD_URL}"
 source_filename="$(basename $DOWNLOAD_URL)"
 
 unpack() {
+  echo "Unpack"
 	## default_unpack does not handle gzipped binaries
 	## Copy liberally from https://github.com/alpinelinux/abuild/blob/v3.1.0/abuild.in#L403-L442
 	## to preserve invariants
@@ -129,6 +130,7 @@ prepare() {
 # This is the compilation stage. 
 # Function will be called as the current user
 build() {
+  echo "Build"
 	cd "$builddir"
 	echo "Build dir: ls -l $(pwd)"
 	ls -l $(pwd)
@@ -139,12 +141,14 @@ build() {
 # This function is called right after the build stage. 
 # It should check that the packaged thing is actually working
 check() {
+  echo "Check"
 	make -C ${APK_TMP_DIR} --no-print-directory -s test PATH="$PATH:$srcdir" HOME=/tmp
 }
 
 # This is the packaging stage. 
 # The built application and support files should be installed into $pkgdir.
 package() {
+  echo "Package"
 	echo "Installing packges to ${pkgdir}"
 	mkdir -p "${pkgdir}/${installdir}"
 	for cmd in ${exe}; do 
