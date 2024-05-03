@@ -209,7 +209,7 @@ jobs:
             Publish the latest release of `${{ steps.update.outputs.package_name }}` to our package repository.
 
           branch: auto-update/${{ steps.update.outputs.package_name }}-${{ steps.update.outputs.package_version }}
-          base: master
+          base: main
           delete-branch: true
           labels: |
             auto-update

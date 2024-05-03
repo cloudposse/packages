@@ -242,7 +242,7 @@ examples: |-
 
   Or... add this to a `Dockerfile` to easily install packages on-demand:
   ```
-  RUN git clone --depth=1 -b master https://github.com/cloudposse/packages.git /packages && \
+  RUN git clone --depth=1 -b main https://github.com/cloudposse/packages.git /packages && \
       rm -rf /packages/.git && \
       make -C /packages/install kubectl
   ```
@@ -255,7 +255,7 @@ examples: |-
   Here's a stub you can include into a `Makefile` to make it easier to install binary dependencies.
 
   ```
-  export PACKAGES_VERSION ?= master
+  export PACKAGES_VERSION ?= main
   export PACKAGES_PATH ?= packages/
   export INSTALL_PATH ?= $(PACKAGES_PATH)/bin
 

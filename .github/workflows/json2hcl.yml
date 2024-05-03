@@ -10,7 +10,7 @@ concurrency:
 on:
   push:
     branches:
-      - master
+      - main
 
     paths:
       - apk/**
@@ -135,7 +135,7 @@ jobs:
         shell: bash
         id: repo
         run: |
-          if [[ ${GITHUB_REF} == 'refs/heads/master' ]]; then
+          if [[ ${GITHUB_REF} == 'refs/heads/main' ]]; then
               echo "org=${{github.repository_owner}}" | tee -a $GITHUB_OUTPUT
           else
               echo "org=${{github.repository_owner}}-dev" | tee -a $GITHUB_OUTPUT
@@ -240,7 +240,7 @@ jobs:
         shell: bash
         id: repo
         run: |
-          if [[ ${GITHUB_REF} == 'refs/heads/master' ]]; then
+          if [[ ${GITHUB_REF} == 'refs/heads/main' ]]; then
               echo "org=${{github.repository_owner}}" | tee -a $GITHUB_OUTPUT
           else
               echo "org=${{github.repository_owner}}-dev" | tee -a $GITHUB_OUTPUT
