@@ -7,9 +7,17 @@ RUN yum clean all && yum -y install ruby-devel gcc make rpm-build rubygems git z
 # install sudo, needed by package sudosh, and protected, so it is nearly impossible to remove
 RUN yum -y install sudo
 
-RUN gem install --no-document fpm
 # https://github.com/jordansissel/fpm/issues/1663
-RUN gem uninstall --all --ignore-dependencies --force backports
-RUN gem install --no-document backports -v 3.15.0
+#  # # RUN gem install  --no-document backports -v 3.15.0
+
+# https://github.com/jordansissel/fpm/issues/2048#issuecomment-1972257508
+RUN gem install --no-document dotenv -v 2.8.1 -N
+RUN gem install --no-document clamp -v 1.0.1 -N
+RUN gem install --no-document mustache -v 0.99.8 -N
+RUN gem install --no-document backports -v 3.15.0 -N
+RUN gem install --no-document cabin insist stud arr-pm rexml -N
+RUN gem install --no-document pleaserun --ignore-dependencies -N
+RUN gem install --no-document fpm --ignore-dependencies -N
+
 
 WORKDIR /packages
