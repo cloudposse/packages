@@ -17,7 +17,7 @@ pull_request_rules:
         - "check-skipped~=.*alpine.*"
       - "#check-pending=0"
       - "#files<=6"
-      - "base=master"
+      - "base=main"
       - "author=cloudpossebot"
       - "head~=auto-update/.*"
     actions:
@@ -43,7 +43,7 @@ pull_request_rules:
       - "#approved-reviews-by>=1"
       - "#changes-requested-reviews-by=0"
       - "#commented-reviews-by=0"
-      - "base=master"
+      - "base=main"
       - "head~=auto-update/.*"
       - "author=cloudpossebot"
     actions:
@@ -65,7 +65,7 @@ pull_request_rules:
 
   - name: "remove outdated reviews"
     conditions:
-      - "base=master"
+      - "base=main"
     actions:
       dismiss_reviews:
         changes_requested: true

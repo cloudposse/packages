@@ -1,5 +1,5 @@
-# https://github.com/peter-evans/slash-command-dispatch/blob/master/docs/getting-started.md
-# https://github.com/peter-evans/slash-command-dispatch/blob/master/docs/examples.md
+# https://github.com/peter-evans/slash-command-dispatch/blob/main/docs/getting-started.md
+# https://github.com/peter-evans/slash-command-dispatch/blob/main/docs/examples.md
 # https://help.github.com/en/actions/automating-your-workflow-with-github-actions/events-that-trigger-workflows
 
 name: Slash Command Dispatch
