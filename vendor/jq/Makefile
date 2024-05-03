@@ -1,7 +1,7 @@
 ## jq
 
-# jq is now disabled because the GitHub repo does not publish arm64 binaries
-# and the mainstream repos all have jq packages now.
+# jq is now disabled because the GitHub repo did not publish arm64 binaries
+# for v1.6.0 and the mainstream repos all have jq packages now.
 
 export PACKAGE_ENABLED = false
 
