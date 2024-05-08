@@ -444,7 +444,7 @@ kubectl-1.19 \[frozen\] | 1.19.16    | Production-Grade Container Scheduling and
 teleport-4.3 \[frozen\] | 4.3.10     | Privileged access management for elastic infrastructure.
 teleport-4.4 \[frozen\] | 4.4.12     | Privileged access management for elastic infrastructure.
 teleport-5.0 \[frozen\] | 5.0.2      | Secure Access for Developers that doesn't get in the way.
-[![terraform](https://github.com/cloudposse/packages/actions/workflows/terraform.yml/badge.svg?branch=main)](https://github.com/cloudposse/packages/actions?query=workflow%3Aterraform) | 1.8.2      | Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
+[![terraform](https://github.com/cloudposse/packages/actions/workflows/terraform.yml/badge.svg?branch=main)](https://github.com/cloudposse/packages/actions?query=workflow%3Aterraform) | 1.8.3      | Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-0.11 \[frozen\] | 0.11.15    | Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-0.12 \[frozen\] | 0.12.31    | Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-0.13 \[frozen\] | 0.13.7     | Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
