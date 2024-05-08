@@ -3,7 +3,7 @@ module github.com/cloudposse/packages
 go 1.19
 
 require (
-	github.com/hashicorp/terraform-config-inspect v0.0.0-20240507135902-21dcc2942448
+	github.com/hashicorp/terraform-config-inspect v0.0.0-20240508105306-75f2724ffd72
 	github.com/spf13/pflag v1.0.5
 )
 
