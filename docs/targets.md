@@ -108,7 +108,7 @@ pandoc                    3.1.13     Universal markup converter
 pgmetrics                 1.16.0     Postgres metrics
 pluto                     5.19.1     A cli tool to help discover deprecated apiVersions in Kubernetes
 popeye                    0.21.3     A Kubernetes cluster resource sanitizer
-promtool                  2.51.2     Prometheus CLI tool
+promtool                  2.52.0     Prometheus CLI tool
 rainbow-text              1.2.1      Tasty rainbows for your terminal! (lolcat clone)
 rakkess*                  0.5.0      Review Access - kubectl plugin to show an access matrix for all available resources
 rancher                   2.8.3      Rancher CLI
