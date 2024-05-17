@@ -111,7 +111,7 @@ popeye                    0.21.3     A Kubernetes cluster resource sanitizer
 promtool                  2.52.0     Prometheus CLI tool
 rainbow-text              1.2.1      Tasty rainbows for your terminal! (lolcat clone)
 rakkess*                  0.5.0      Review Access - kubectl plugin to show an access matrix for all available resources
-rancher                   2.8.3      Rancher CLI
+rancher                   2.8.4      Rancher CLI
 rbac-lookup               0.10.2     Find Kubernetes roles and cluster roles bound to any user, service account, or group name.
 retry                     OBSOLETE   ♻️ Functional mechanism based on channels to perform actions repetitively until successful.
 saml2aws                  2.36.15    CLI tool which enables you to login and retrieve AWS temporary credentials using a SAML IDP
