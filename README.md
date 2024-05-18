@@ -1,7 +1,7 @@
 
 
 <!-- markdownlint-disable -->
-<a href="https://cpco.io/homepage"><img src=".github/banner.png?raw=true" alt="Project Banner"/></a><br/>
+<a href="https://cpco.io/homepage"><img src="https://github.com/cloudposse/packages/blob/main/.github/banner.png?raw=true" alt="Project Banner"/></a><br/>
     <p align="right">
 <a href="https://github.com/cloudposse/packages/actions/workflows/auto-update-packages.yml"><img src="https://github.com/cloudposse/packages/actions/workflows/auto-update-packages.yml/badge.svg" alt="Auto Update Status"/></a><a href="https://slack.cloudposse.com"><img src="https://slack.cloudposse.com/badge.svg" alt="Slack Community"/></a></p>
 <!-- markdownlint-restore -->
@@ -347,7 +347,7 @@ Here are some solutions to several common problems that may occur when adding a 
 [![cloudflared](https://github.com/cloudposse/packages/actions/workflows/cloudflared.yml/badge.svg?branch=main)](https://github.com/cloudposse/packages/actions?query=workflow%3Acloudflared) | 2024.5.0   | Argo Tunnel client
 [![codefresh](https://github.com/cloudposse/packages/actions/workflows/codefresh.yml/badge.svg?branch=main)](https://github.com/cloudposse/packages/actions?query=workflow%3Acodefresh)* | 0.87.4     | Codefresh CLI
 [![conftest](https://github.com/cloudposse/packages/actions/workflows/conftest.yml/badge.svg?branch=main)](https://github.com/cloudposse/packages/actions?query=workflow%3Aconftest) | 0.52.0     | Test your configuration files using Open Policy Agent
-[![consul](https://github.com/cloudposse/packages/actions/workflows/consul.yml/badge.svg?branch=main)](https://github.com/cloudposse/packages/actions?query=workflow%3Aconsul) | 1.18.1     | Hashicorp consul
+[![consul](https://github.com/cloudposse/packages/actions/workflows/consul.yml/badge.svg?branch=main)](https://github.com/cloudposse/packages/actions?query=workflow%3Aconsul) | 1.18.2     | Hashicorp consul
 [![ctop](https://github.com/cloudposse/packages/actions/workflows/ctop.yml/badge.svg?branch=main)](https://github.com/cloudposse/packages/actions?query=workflow%3Actop) | 0.7.7      | Top-like interface for container metrics
 [![direnv](https://github.com/cloudposse/packages/actions/workflows/direnv.yml/badge.svg?branch=main)](https://github.com/cloudposse/packages/actions?query=workflow%3Adirenv) | 2.34.0     | Unclutter your .profile
 [![doctl](https://github.com/cloudposse/packages/actions/workflows/doctl.yml/badge.svg?branch=main)](https://github.com/cloudposse/packages/actions?query=workflow%3Adoctl) | 1.106.0    | A command line tool for DigitalOcean services
