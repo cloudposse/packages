@@ -34,6 +34,7 @@ jobs:
         - cfssl
         - cfssljson
         - chamber
+        - cilium-cli
         - cli53
         - cloud-nuke
         - cloudflared
