@@ -148,7 +148,6 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.9'
-          cache: 'pip' # caching pip dependencies
 
       - name: "Push artifact to package repository"
         uses: cloudsmith-io/action@v0.6.7
@@ -259,7 +258,6 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.9'
-          cache: 'pip' # caching pip dependencies
 
       - name: "Push artifact to package repository"
         uses: cloudsmith-io/action@v0.6.7
