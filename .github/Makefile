@@ -32,9 +32,10 @@ workflows/%.yml: .ALWAYS
 	if [[ $$enabled != "false" ]]; then \
   		echo updating $@; \
 		sed 's/%PACKAGE_NAME%/$*/g' package-template.yml | sed 's/%PACKAGE_JSON_NAME%/$(subst .,_,$*)/g' > $@; \
+		@git ls-files --error-unmatch $@ &> /dev/null || git add $@; \
 	else \
 		echo DELETING workflow $@ because package is disabled; \
-		rm -f $@; \
+		git rm -f --ignore-unmatch $@; \
 	fi
 
 .PHONY : workflows .ALWAYS

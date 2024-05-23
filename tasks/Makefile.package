@@ -124,14 +124,16 @@ $(LOCAL_BIN)/vert:
 
 DESCRIPTION:
 	@# Use `tr -d '\"$'` to help guard against malicious input
-	@github-repo-metadata $(VENDOR) $(PACKAGE_REPO_NAME) "index" .description | tr -d '\"$$' | tee DESCRIPTION
+	@github-repo-metadata $(VENDOR) $(PACKAGE_REPO_NAME) "index" .description | tr -d '\"$$' | tee $@
+	git add $@
 
 # In order to support static configuration of version, the VERSION file should be
 # considered up-to-date unless explicitly updated via the "update" target
 # VERSION:
 
 LICENSE:
-	@github-repo-metadata $(VENDOR) $(PACKAGE_REPO_NAME) "license" .license.spdx_id | tr '[:lower:]' '[:upper:]' | tee LICENSE
+	@github-repo-metadata $(VENDOR) $(PACKAGE_REPO_NAME) "license" .license.spdx_id | tr '[:lower:]' '[:upper:]' | tee $@
+	git add $@
 
 RELEASE: VERSION LICENSE DESCRIPTION
 	@if [ ! -f RELEASE ]; then \
@@ -149,6 +151,7 @@ RELEASE: VERSION LICENSE DESCRIPTION
 
 init: AUTO_UPDATE_ENABLED=true
 init: LICENSE DESCRIPTION $(PACKAGE_VERSION_TARGET) RELEASE
+	@git ls-files --error-unmatch "VERSION" &> /dev/null || git add VERSION
 
 update: $(PACKAGE_VERSION_TARGET) RELEASE
 

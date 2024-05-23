@@ -65,6 +65,9 @@ vendor/cfssljson:
 vendor/chamber:
 - any: ["vendor/chamber/**"]
   all: ["!bin/**", "!tasks/**"]
+vendor/cilium-cli:
+- any: ["vendor/cilium-cli/**"]
+  all: ["!bin/**", "!tasks/**"]
 vendor/cli53:
 - any: ["vendor/cli53/**"]
   all: ["!bin/**", "!tasks/**"]
