@@ -144,13 +144,8 @@ jobs:
           GITHUB_REF: ${{ github.ref }}
 
       # Publish the artifacts
-      # Something is wrong with the Cloudsmith action's python install, so we install it ourselves
-      - uses: actions/setup-python@v5
-        with:
-          python-version: '3.9'
-
       - name: "Push artifact to package repository"
-        uses: cloudsmith-io/action@v0.6.7
+        uses: cloudsmith-io/action@v0.5.4
         with:
           api-key: ${{ secrets.CLOUDSMITH_API_KEY }}
           command: 'push'
@@ -254,13 +249,8 @@ jobs:
           GITHUB_REF: ${{ github.ref }}
 
       # Publish the artifacts
-      # Something is wrong with the Cloudsmith action's python install, so we install it ourselves
-      - uses: actions/setup-python@v5
-        with:
-          python-version: '3.9'
-
       - name: "Push artifact to package repository"
-        uses: cloudsmith-io/action@v0.6.7
+        uses: cloudsmith-io/action@v0.5.4
         with:
           api-key: ${{ secrets.CLOUDSMITH_API_KEY }}
           command: 'push'
