@@ -40,7 +40,6 @@ jobs:
         - cloudflared
         - codefresh
         - conftest
-        - consul
         - ctop
         - direnv
         - doctl
@@ -103,7 +102,6 @@ jobs:
         - misspell
         - opa
         - pack
-        - packer
         - pandoc
         - pgmetrics
         - pluto
@@ -125,10 +123,8 @@ jobs:
         - stern
         - sudosh
         - teleport
-        - terraform
         - terraform-0.14
         - terraform-0.15
-        - terraform-1
         - terraform-config-inspect
         - terraform-docs
         - terraform-module-versions
@@ -141,7 +137,6 @@ jobs:
         - trivy
         - variant
         - variant2
-        - vault
         - velero
         - vendir
         - venona
