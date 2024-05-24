@@ -126,9 +126,9 @@ sops                      3.8.1      Secrets management stinks, use some sops!
 spacectl                  1.0.0      [Spacelift.io](https://spacelift.io/) client and CLI
 spotctl                   0.35.0     A unified CLI to manage your [Spot](https://spot.io/) resources.
 sshm*                     1.2.2      Easy connect on EC2 instances thanks to AWS System Manager Agent
-stern                     1.29.0     ⎈ Multi pod and container log tailing for Kubernetes
+stern                     1.30.0     ⎈ Multi pod and container log tailing for Kubernetes
 sudosh                    0.3.0      Shell wrapper to run a login shell with `sudo` as the current user for the purpose of audit logging
-teleport                  15.3.6     Secure Access for Developers that doesn't get in the way.
+teleport                  15.3.7     Secure Access for Developers that doesn't get in the way.
 teleport-4.2              OBSOLETE   Privileged access management for elastic infrastructure.
 teleport-4.3              4.3.10     Privileged access management for elastic infrastructure.
 teleport-4.4              4.4.12     Privileged access management for elastic infrastructure.
@@ -154,7 +154,7 @@ tfmask                    OBSOLETE   Terraform utility to mask select output fro
 tfschema                  0.7.8      A schema inspector for Terraform providers
 tfsec                     1.28.6     Security scanner for your Terraform code
 thanos                    0.35.0     Highly available Prometheus setup with long term storage capabilities. CNCF Sandbox project.
-trivy                     0.51.2     A Simple and Comprehensive Vulnerability Scanner for Containers, Suitable for CI
+trivy                     0.51.4     A Simple and Comprehensive Vulnerability Scanner for Containers, Suitable for CI
 turf                      OBSOLETE   Turf is Cloud Posse's command-line automation helper.
 variant                   0.38.0     Variant is a Universal CLI tool that works like a task runner
 variant2                  0.38.0     Second major version of Variant, a Universal CLI tool that works like a task runner
