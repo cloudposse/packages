@@ -1,3 +1,7 @@
+# Do not publish BSL licensed software
+
+export AUTO_UPDATE_ENABLED := false
+
 ## Package - nomad
 # Hashicorp publishes packages for nomad: https://learn.hashicorp.com/tutorials/nomad/get-started-install
 export PACKAGE_ENABLED = false

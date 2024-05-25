@@ -1,3 +1,7 @@
+# Do not publish BSL licensed software
+
+export AUTO_UPDATE_ENABLED := false
+
 # Package details
 export VENDOR ?= hashicorp
 export PACKAGE_REPO_NAME = terraform
