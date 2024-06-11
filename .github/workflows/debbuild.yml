@@ -16,6 +16,12 @@ on:
       - deb/**
       - .github/workflows/debbuild.yml
 
+permissions:
+  contents: read
+  packages: write
+  attestations: write
+  id-token: write
+
 jobs:
   build-and-push:
     runs-on: ubuntu-latest
