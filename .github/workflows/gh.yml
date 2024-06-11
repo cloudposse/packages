@@ -129,6 +129,12 @@ jobs:
           echo "path=$artifact" | tee -a $GITHUB_OUTPUT
           #  echo creating '"pip"' cache directory for Cloudsmith
           #  mkdir -p $HOME/.cache/pip && chmod -R 777 $HOME/.cache || echo Ignoring error creating '"pip"' cache directory
+          echo "AGENT_TOOLSDIRECTORY is $AGENT_TOOLSDIRECTORY"
+          echo "RUNNER_TOOL_CACHE is $RUNNER_TOOL_CACHE"
+          echo "HOME is $HOME"
+          ls /
+          ls /opt || true
+          
 
 
       # Determine which package organization we should use (e.g. dev or prod)
@@ -186,6 +192,8 @@ jobs:
           runs-on: "ubuntu-latest"
     runs-on: ${{ matrix.runs-on }}
     env:
+      AGENT_TOOLSDIRECTORY: "/__t"
+
       # We are in a bit of a bind here because of how GitHub actions work as of 2020-11-19
       # Although the "workspace" is mounted to the container, it is not mounted
       # at `/github/workspace` or ${{github.workspace}}, although through some
@@ -274,7 +282,7 @@ jobs:
 
       # Publish the artifacts
       - name: "Push artifact to package repository"
-        uses: BartoszBlizniak/action@master
+        uses: cloudsmith-io/action@master
         with:
           api-key: ${{ secrets.CLOUDSMITH_API_KEY }}
           command: 'push'
