@@ -97,7 +97,7 @@ docker/build/apk/shell run/apk:
 # MATRIX BUILD
 docker/build/deb/shell docker/build/deb/test run/deb : BUILDER_VERSION=stable-slim
 
-docker/build/rpm/shell docker/build/rpm/test run/rpm : BUILDER_VERSION=centos8
+docker/build/rpm/shell docker/build/rpm/test run/rpm : BUILDER_VERSION=ubi
 
 ## Build package as a test
 docker/build/%/test:

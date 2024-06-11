@@ -1,5 +1,8 @@
 # Need to use version number so that it gets updated here and triggers a build
-FROM debian:11.5-slim
+ARG PYTHON_VERSION=3.12.3
+ARG DEBIAN_CODENAME=bookworm
+
+FROM python:${PYTHON_VERSION}-slim-${DEBIAN_CODENAME}
 
 ENV LC_ALL=C.UTF-8
 ENV PS1="(deb) \w \$ "

@@ -1,5 +1,5 @@
 # Need to use version number so that it gets updated here and triggers a build
-FROM alpine:3.17.3
+FROM alpine:3.19.1
 
 ENV LC_ALL=C.UTF-8
 ENV PS1="(apk) \w \$ "
@@ -16,6 +16,7 @@ RUN apk add --no-cache bash curl && \
 RUN echo "@testing https://dl-cdn.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositories
 
 RUN apk update && \
-    apk add make curl alpine-sdk shadow bash jq sudo go
+    apk add make curl alpine-sdk shadow bash jq sudo go  && \
+    apk add --update -U python3 python3-dev py3-pip libffi-dev gcc linux-headers musl-dev openssl-dev
 
 RUN echo "auth       sufficient   pam_shells.so" > /etc/pam.d/chsh

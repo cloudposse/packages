@@ -22,7 +22,7 @@ jobs:
     strategy:
       matrix:
         centos:
-        - 'centos8'
+        - 'ubi'
     steps:
     - name: "Checkout source code at current commit"
       uses: actions/checkout@v4
