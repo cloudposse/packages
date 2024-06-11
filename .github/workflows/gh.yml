@@ -266,6 +266,10 @@ jobs:
           ls -l ${pythonLocation}/bin
           find / -name pip 2>/dev/null
           echo $PATH
+          ls -ld /opt/hostedtoolcache
+          ls -ld /opt/hostedtoolcache/*
+          
+          [ /opt/hostedtoolcache -ef /__t ] || ln -sfTv /__t /opt/hostedtoolcache
           
 
       # Publish the artifacts
