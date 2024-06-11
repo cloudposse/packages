@@ -82,6 +82,7 @@ jobs:
     if: github.event_name != 'schedule' && needs.matrix-gh.outputs.apk-enabled != 'false'
     runs-on: ubuntu-latest
     strategy:
+      fail-fast: false
       matrix:
         # These versions must be strings. E.g. Otherwise `3.10` -> `3.1`
         alpine:
@@ -126,8 +127,8 @@ jobs:
         run: |
           artifact=$(find artifacts/${{matrix.alpine}} -type f -name \*.apk)
           echo "path=$artifact" | tee -a $GITHUB_OUTPUT
-          echo creating '"pip"' cache directory for Cloudsmith
-          mkdir -p $HOME/.cache/pip && chmod -R 777 $HOME/.cache || echo Ignoring error creating '"pip"' cache directory
+          #  echo creating '"pip"' cache directory for Cloudsmith
+          #  mkdir -p $HOME/.cache/pip && chmod -R 777 $HOME/.cache || echo Ignoring error creating '"pip"' cache directory
 
 
       # Determine which package organization we should use (e.g. dev or prod)
@@ -168,6 +169,7 @@ jobs:
       && needs.matrix-gh.outputs.package-matrix != '[]' && needs.matrix-gh.outputs.package-matrix != '["apk"]'
 
     strategy:
+      fail-fast: false
       matrix:
         package-type: ${{ fromJSON(needs.matrix-gh.outputs.package-matrix) }}
         arch: ${{ fromJSON(needs.matrix-gh.outputs.arch-matrix) }}
@@ -232,8 +234,8 @@ jobs:
           echo "setting output"
           echo "path=$packages" | tee -a $GITHUB_OUTPUT
 
-          echo creating '"pip"' cache directory for Cloudsmith
-          mkdir -p $HOME/.cache/pip && chmod -R 777 $HOME/.cache || echo Ignoring error creating '"pip"' cache directory
+          #  echo creating '"pip"' cache directory for Cloudsmith
+          #  mkdir -p $HOME/.cache/pip && chmod -R 777 $HOME/.cache || echo Ignoring error creating '"pip"' cache directory
 
       # Determine which package organization we should use (e.g. dev or prod)
       - name: "Determine package repo"
@@ -247,6 +249,24 @@ jobs:
           fi
         env:
           GITHUB_REF: ${{ github.ref }}
+
+      - name: Pre-install Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+          check-latest: true
+          update-environment: true
+
+      - name: Verify Python
+        shell: base
+        run: |-
+          set +e -x
+          env | grep -i python
+          which pip
+          ls -l ${pythonLocation}/bin
+          find / -name pip 2>/dev/null
+          echo $PATH
+          
 
       # Publish the artifacts
       - name: "Push artifact to package repository"
