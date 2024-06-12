@@ -75,7 +75,7 @@ kops                      1.29.0     Kubernetes Operations (kops) - Production G
 kops-1.12                 OBSOLETE   Kubernetes Operations (kops) - Production Grade K8s Installation, Upgrades, and Management
 krew                      0.4.1      Kubectl plugin manager
 kubecron*                 2.0.0      Utilities to manage kubernetes cronjobs. Run a CronJob manually for test purposes. Suspend/unsuspend a CronJob
-kubectl                   1.30.1     Production-Grade Container Scheduling and Management
+kubectl                   1.30.2     Production-Grade Container Scheduling and Management
 kubectl-1.13              1.13.12    Production-Grade Container Scheduling and Management (v1.13)
 kubectl-1.14              1.14.10    Production-Grade Container Scheduling and Management (v1.14)
 kubectl-1.15              1.15.12    Production-Grade Container Scheduling and Management (v1.15)
