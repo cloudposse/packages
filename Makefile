@@ -1,5 +1,5 @@
 export DOCKER_ORG ?= cloudposse
-export DOCKER_IMAGE ?= $(DOCKER_ORG)/packages
+export DOCKER_IMAGE ?= ghcr.io/$(DOCKER_ORG)/packages
 export DOCKER_TAG ?= latest
 export DOCKER_IMAGE_NAME ?= $(DOCKER_IMAGE):$(DOCKER_TAG)
 export DOCKER_BUILD_FLAGS =
@@ -58,28 +58,28 @@ docs/badges.md: docs/deps
 
 ## Build alpine packages for testing
 docker/build/apk:
-	docker build --load --platform=linux/amd64 -t cloudposse/apkbuild:$(ALPINE_VERSION) -f apk/Dockerfile-$(ALPINE_VERSION) .
+	docker build --load --platform=linux/amd64 -t $(DOCKER_IMAGE)-apkbuild:$(ALPINE_VERSION) -f apk/Dockerfile-$(ALPINE_VERSION) .
 	docker run \
 		--name apkbuild \
 		--rm \
 		-e APK_PACKAGES_PATH=/packages/artifacts/$(ALPINE_VERSION) \
-		-v $$(pwd):/packages cloudposse/apkbuild:$(ALPINE_VERSION) \
+		-v $$(pwd):/packages $(DOCKER_IMAGE)-apkbuild:$(ALPINE_VERSION) \
 		sh -c "make -C /packages/vendor build"
 
 docker/build/apk/all:
-	docker build --load --platform=linux/amd64 -t cloudposse/apkbuild:$(ALPINE_VERSION) -f apk/Dockerfile-$(ALPINE_VERSION) .
+	docker build --load --platform=linux/amd64 -t $(DOCKER_IMAGE)-apkbuild:$(ALPINE_VERSION) -f apk/Dockerfile-$(ALPINE_VERSION) .
 	docker run \
 		--name apkbuild \
 		--rm \
 		-e APK_PACKAGES_PATH=/packages/artifacts/$(ALPINE_VERSION) \
-		-v $$(pwd):/packages cloudposse/apkbuild:$(ALPINE_VERSION) \
+		-v $$(pwd):/packages $(DOCKER_IMAGE)-apkbuild:$(ALPINE_VERSION) \
 		sh -c "make -C /packages/vendor build"
 
 ## Run alpine builder interactively
 docker/build/apk/shell run/apk:
 	rm -rf tmp/*
 	[ -n "$(ls tmp/)" ] && sudo rm -rf tmp/* || true
-	docker build --load --platform=linux/amd64 -t cloudposse/apkbuild:$(ALPINE_VERSION) -f apk/Dockerfile-$(ALPINE_VERSION) .
+	docker build --load --platform=linux/amd64 -t $(DOCKER_IMAGE)-apkbuild:$(ALPINE_VERSION) -f apk/Dockerfile-$(ALPINE_VERSION) .
 	docker run \
 		--name apkbuild \
 		--rm \
@@ -92,7 +92,7 @@ docker/build/apk/shell run/apk:
 		-e APK_PACKAGES_PATH=/packages/artifacts/$(ALPINE_VERSION) \
 		--privileged \
 		-w /packages \
-		-v $$(pwd):/packages cloudposse/apkbuild:$(ALPINE_VERSION)
+		-v $$(pwd):/packages $(DOCKER_IMAGE)-apkbuild:$(ALPINE_VERSION)
 
 # MATRIX BUILD
 docker/build/deb/shell docker/build/deb/test run/deb : BUILDER_VERSION=stable-slim
@@ -101,13 +101,13 @@ docker/build/rpm/shell docker/build/rpm/test run/rpm : BUILDER_VERSION=ubi
 
 ## Build package as a test
 docker/build/%/test:
-	docker build -t cloudposse/packages-$*build:$(BUILDER_VERSION) -f $*/Dockerfile.$(BUILDER_VERSION) .
+	docker build -t $(DOCKER_IMAGE)-$*build:$(BUILDER_VERSION) -f $*/Dockerfile.$(BUILDER_VERSION) .
 	docker run \
 		--name $*build \
 		--rm \
 		-e TMP=/packages/tmp/$* \
 		-e PACKAGES_PATH=/packages/artifacts/$*/$(BUILDER_VERSION) \
-		-v $$(pwd):/packages cloudposse/packages-$*build:$(BUILDER_VERSION) \
+		-v $$(pwd):/packages $(DOCKER_IMAGE)-$*build:$(BUILDER_VERSION) \
 		sh -c "make -C /packages/vendor/github-commenter $*"
 
 ## Build package builder shell
@@ -115,14 +115,14 @@ docker/build/%/shell run/%:
 	rm -rf tmp/*
 	[ -n "$(ls tmp/)" ] && sudo rm -rf tmp/* || true
 	mkdir -p tmp/$*
-	docker build -t cloudposse/packages-$*build:$(BUILDER_VERSION) -f $*/Dockerfile.$(BUILDER_VERSION) .
+	docker build -t $(DOCKER_IMAGE)-$*build:$(BUILDER_VERSION) -f $*/Dockerfile.$(BUILDER_VERSION) .
 	docker run \
 		-it \
 		--name $*build \
 		--rm \
 		-e TMP=/packages/tmp/$* \
 		-e PACKAGES_PATH=/packages/artifacts/$*/$(BUILDER_VERSION) \
-		-v $$(pwd):/packages cloudposse/packages-$*build:$(BUILDER_VERSION) \
+		-v $$(pwd):/packages $(DOCKER_IMAGE)-$*build:$(BUILDER_VERSION) \
 		bash
 
 
