@@ -4,7 +4,7 @@ FROM registry.access.redhat.com/ubi9/ubi
 ENV LC_ALL=C.UTF-8
 ENV PS1="(rpm) \w \$ "
 
-RUN yum clean all && yum -y install ruby-devel gcc make rpm-build rubygems git zip bzip2 jq which
+RUN yum clean all && yum -y install ruby-devel gcc make rpm-build rubygems git zip bzip2 jq which wget
 # install sudo, needed by package sudosh, and protected, so it is nearly impossible to remove
 RUN yum -y install sudo
 
