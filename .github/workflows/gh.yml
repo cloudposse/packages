@@ -46,7 +46,6 @@ on:
 env:
   gh_VERSION: ${{ inputs.package_version_override }}
   gh_RELEASE: ${{ inputs.release_number_override }}
-  AGENT_TOOLSDIRECTORY: "/__t"
 
 permissions:
   contents: read
@@ -107,7 +106,7 @@ jobs:
       image: ghcr.io/cloudposse/packages-apkbuild:${{matrix.alpine}}
       credentials:
         username: ${{ github.actor }}
-        password: ${{ secrets.github_token }}
+        password: "${{ secrets.GITHUB_TOKEN }}"
 
     steps:
       # Checkout the packages repo so we can build the packages as a monorepo
@@ -217,8 +216,8 @@ jobs:
     container:
       image: ghcr.io/cloudposse/packages-${{matrix.package-type}}build:latest
       credentials:
-        username: ${{ secrets.DOCKERHUB_USERNAME }}
-        password: ${{ secrets.DOCKERHUB_PASSWORD }}
+        username: "${{ github.actor }}"
+        password: "${{ secrets.GITHUB_TOKEN }}"
 
     steps:
       # Checkout the packages repo so we can build the packages as a monorepo
