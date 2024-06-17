@@ -160,7 +160,7 @@ jobs:
 
       # Publish the artifacts
       - name: "Push artifact to package repository"
-        uses: cloudsmith-io/action@v0.6.9
+        uses: BartoszBlizniak/action@master # cloudsmith-io/action@v0.6.10
         with:
           api-key: ${{ secrets.CLOUDSMITH_API_KEY }}
           command: 'push'
@@ -215,7 +215,7 @@ jobs:
 
     # Unfortunately, there is no reasonable way to configure the docker image tag based on the package-type
     container:
-      image: cloudposse/packages-${{matrix.package-type}}build:latest
+      image: ghcr.io/cloudposse/packages-${{matrix.package-type}}build:latest
       credentials:
         username: ${{ secrets.DOCKERHUB_USERNAME }}
         password: ${{ secrets.DOCKERHUB_PASSWORD }}
@@ -287,7 +287,7 @@ jobs:
 
       # Publish the artifacts
       - name: "Push artifact to package repository"
-        uses: cloudsmith-io/action@v0.6.9
+        uses: BartoszBlizniak/action@master # cloudsmith-io/action@v0.6.10
         with:
           api-key: ${{ secrets.CLOUDSMITH_API_KEY }}
           command: 'push'
