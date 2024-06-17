@@ -133,16 +133,6 @@ jobs:
         run: |
           artifact=$(find artifacts/${{matrix.alpine}} -type f -name \*.apk)
           echo "path=$artifact" | tee -a $GITHUB_OUTPUT
-          #  echo creating '"pip"' cache directory for Cloudsmith
-          #  mkdir -p $HOME/.cache/pip && chmod -R 777 $HOME/.cache || echo Ignoring error creating '"pip"' cache directory
-          echo "AGENT_TOOLSDIRECTORY is $AGENT_TOOLSDIRECTORY"
-          echo "RUNNER_TOOL_CACHE is $RUNNER_TOOL_CACHE"
-          echo "HOME is $HOME"
-          set -x
-          ls /
-          ls /opt || true
-          [ -n "$AGENT_TOOLSDIRECTORY" ] && mkdir -p $AGENT_TOOLSDIRECTORY
-
 
       # Determine which package organization we should use (e.g. dev or prod)
       - name: "Determine package repo"
@@ -247,15 +237,6 @@ jobs:
           echo "setting output"
           echo "path=$packages" | tee -a $GITHUB_OUTPUT
 
-          #  echo creating '"pip"' cache directory for Cloudsmith
-          #  mkdir -p $HOME/.cache/pip && chmod -R 777 $HOME/.cache || echo Ignoring error creating '"pip"' cache directory
-          echo "AGENT_TOOLSDIRECTORY is $AGENT_TOOLSDIRECTORY"
-          echo "RUNNER_TOOL_CACHE is $RUNNER_TOOL_CACHE"
-          echo "HOME is $HOME"
-          set -x
-          ls /
-          ls /opt || true
-
       # Determine which package organization we should use (e.g. dev or prod)
       - name: "Determine package repo"
         shell: bash
@@ -268,21 +249,6 @@ jobs:
           fi
         env:
           GITHUB_REF: ${{ github.ref }}
-
-      - name: Verify Python
-        shell: bash
-        run: |-
-          set +e -x
-          env | grep -i python
-          which pip
-          ls -l ${pythonLocation}/bin
-          find / -name pip 2>/dev/null
-          echo $PATH
-          ls -ld /opt/hostedtoolcache
-          ls -ld /opt/hostedtoolcache/*
-          
-          [ /opt/hostedtoolcache -ef /__t ] || ln -sfTv /__t /opt/hostedtoolcache
-          
 
       # Publish the artifacts
       - name: "Push artifact to package repository"
