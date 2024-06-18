@@ -25,10 +25,7 @@ on:
 
   pull_request:
     types: [opened, synchronize, reopened]
-    # Ignore pulls on branches that start with "mass-update/"
-    # for when we make changes that do not require a new package build, like updating the action
-    branches-ignore:
-      - 'mass-update/**'
+    # Include '[no ci]' in the commit message to keep the workflow from running on that commit in the PR.
     paths:
       - apk/**
       - deb/**
