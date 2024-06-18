@@ -18,11 +18,14 @@ on:
       - rpm/**
       - tasks/**
       - vendor/variant/**
-      - .github/workflows/variant.yml
+      # Do not automatically trigger a build when the workflow file is changed, because we often make mass updates.
+      # If we need to run all the workflows, we can just uncomment the line below and make new workflows.
+      # - .github/workflows/variant.yml
 
 
   pull_request:
     types: [opened, synchronize, reopened]
+    # Include '[no ci]' in the commit message to keep the workflow from running on that commit in the PR.
     paths:
       - apk/**
       - deb/**
@@ -31,7 +34,6 @@ on:
       - vendor/variant/**
       - .github/workflows/variant.yml
 
-  #bridgecrew:skip=BC_REPO_GITHUB_ACTION_7:The whole point of the workflow dispatch is to feed in a version
   workflow_dispatch:
     inputs:
       package_version_override:
@@ -46,6 +48,12 @@ on:
 env:
   variant_VERSION: ${{ inputs.package_version_override }}
   variant_RELEASE: ${{ inputs.release_number_override }}
+
+permissions:
+  contents: read
+  packages: write
+  attestations: write
+  id-token: write
 
 jobs:
   # Mergify cannot distinguish between 2 jobs with the same name run from different workflows,
@@ -76,7 +84,7 @@ jobs:
 
 
   # Build for alpine linux
-  # Kept separate because it is old and slightly different than the other package builds
+  # Kept separate because it is old and slightly different from the other package builds
   alpine-variant:
     needs: matrix-variant
     if: github.event_name != 'schedule' && needs.matrix-variant.outputs.apk-enabled != 'false'
@@ -96,10 +104,10 @@ jobs:
       PACKAGER_PUBKEY: ${{github.workspace}}/artifacts/ops@cloudposse.com.rsa.pub
 
     container:
-      image: cloudposse/packages-apkbuild:${{matrix.alpine}}
+      image: ghcr.io/cloudposse/packages-apkbuild:${{matrix.alpine}}
       credentials:
-        username: ${{ secrets.DOCKERHUB_USERNAME }}
-        password: ${{ secrets.DOCKERHUB_PASSWORD }}
+        username: ${{ github.actor }}
+        password: "${{ secrets.GITHUB_TOKEN }}"
 
     steps:
       # Checkout the packages repo so we can build the packages as a monorepo
@@ -118,17 +126,14 @@ jobs:
       - name: "List packages"
         run: 'find ${APK_PACKAGES_PATH} -type f -name \*.apk | xargs --no-run-if-empty ls -l | grep .'
 
-      # Export the artifact filename including path
-      # Path must be relative to workdir for Cloudsmith action to be able to find it
+      # Export the artifact filename including path.
+      # Path must be relative to workdir for Cloudsmith action to be able to find it.
       - name: "Set output path to artifact"
         id: artifact
         shell: bash
         run: |
           artifact=$(find artifacts/${{matrix.alpine}} -type f -name \*.apk)
           echo "path=$artifact" | tee -a $GITHUB_OUTPUT
-          echo creating '"pip"' cache directory for Cloudsmith
-          mkdir -p $HOME/.cache/pip && chmod -R 777 $HOME/.cache || echo Ignoring error creating '"pip"' cache directory
-
 
       # Determine which package organization we should use (e.g. dev or prod)
       - name: "Determine package repo"
@@ -145,7 +150,7 @@ jobs:
 
       # Publish the artifacts
       - name: "Push artifact to package repository"
-        uses: cloudsmith-io/action@v0.5.4
+        uses: cloudsmith-io/action@v0.6.10
         with:
           api-key: ${{ secrets.CLOUDSMITH_API_KEY }}
           command: 'push'
@@ -199,10 +204,10 @@ jobs:
 
     # Unfortunately, there is no reasonable way to configure the docker image tag based on the package-type
     container:
-      image: cloudposse/packages-${{matrix.package-type}}build:latest
+      image: ghcr.io/cloudposse/packages-${{matrix.package-type}}build:latest
       credentials:
-        username: ${{ secrets.DOCKERHUB_USERNAME }}
-        password: ${{ secrets.DOCKERHUB_PASSWORD }}
+        username: "${{ github.actor }}"
+        password: "${{ secrets.GITHUB_TOKEN }}"
 
     steps:
       # Checkout the packages repo so we can build the packages as a monorepo
@@ -232,9 +237,6 @@ jobs:
           echo "setting output"
           echo "path=$packages" | tee -a $GITHUB_OUTPUT
 
-          echo creating '"pip"' cache directory for Cloudsmith
-          mkdir -p $HOME/.cache/pip && chmod -R 777 $HOME/.cache || echo Ignoring error creating '"pip"' cache directory
-
       # Determine which package organization we should use (e.g. dev or prod)
       - name: "Determine package repo"
         shell: bash
@@ -250,7 +252,7 @@ jobs:
 
       # Publish the artifacts
       - name: "Push artifact to package repository"
-        uses: cloudsmith-io/action@v0.5.4
+        uses: cloudsmith-io/action@v0.6.10
         with:
           api-key: ${{ secrets.CLOUDSMITH_API_KEY }}
           command: 'push'
