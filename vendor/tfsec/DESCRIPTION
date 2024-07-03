@@ -1,1 +1,1 @@
-Security scanner for your Terraform code
+(DEPRECATED: use Trivy instead) Security scanner for your Terraform code
