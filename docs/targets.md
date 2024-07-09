@@ -22,11 +22,11 @@ cfssljson*                1.6.5      Cloudflare's PKI and TLS toolkit json parse
 chamber                   2.14.1     CLI for managing secrets
 cilium-cli                0.16.11    CLI to install, manage & troubleshoot Kubernetes clusters running Cilium
 cli53                     0.8.22     Command line tool for Amazon Route 53
-cloud-nuke                0.36.0     Tool for wiping an aws account DANGER absolutely do not use in production
+cloud-nuke                0.37.1     Tool for wiping an aws account DANGER absolutely do not use in production
 cloudflared               2024.6.1   Argo Tunnel client
 cloudposse-atlantis       OBSOLETE   Terraform For Teams, enhanced by Cloud Posse
 codefresh*                0.87.4     Codefresh CLI
-conftest                  0.53.0     Test your configuration files using Open Policy Agent
+conftest                  0.54.0     Test your configuration files using Open Policy Agent
 consul                    1.16.4     Hashicorp consul
 ctop                      0.7.7      Top-like interface for container metrics
 direnv                    2.34.0     Unclutter your .profile
@@ -47,7 +47,7 @@ github-release*           0.10.0     Commandline app to create and edit releases
 github-status-updater     0.11.0     Command line utility for updating GitHub commit statuses and enabling required status checks for pull requests
 gitleaks                  8.18.4     Audit git repos for secrets 🔑
 go-jsonnet                0.20.0     This an implementation of Jsonnet in pure Go.
-gomplate                  4.0.1      A flexible commandline tool for template rendering. Supports lots of local and remote datasources.
+gomplate                  4.1.0      A flexible commandline tool for template rendering. Supports lots of local and remote datasources.
 gonsul*                   1.0.2      A stand-alone alternative to git2consul 
 goofys*                   0.24.0     a high-performance, POSIX-ish Amazon S3 file system written in Go
 gosu                      1.17.0     Simple Go-based setuid+setgid+setgroups+exec
@@ -59,13 +59,13 @@ helm2                     2.17.0     The Kubernetes Package Manager
 helm3                     3.15.2     The Kubernetes Package Manager
 helmfile                  0.144.0    Deploy Kubernetes Helm Charts
 htmltest                  0.17.0     :white_check_mark: Test generated HTML for problems
-hugo                      0.128.1    The world’s fastest framework for building websites.
+hugo                      0.128.2    The world’s fastest framework for building websites.
 infracost                 0.10.38    Cloud cost estimates for Terraform
 jp                        0.2.1      Command line interface to JMESPath
 jq                        OBSOLETE   Command-line JSON processor
 json2hcl                  0.1.1      Convert JSON to HCL, and vice versa
 jx                        3.10.152   Jenkins-X
-k3d                       5.6.3      Little helper to run Rancher Lab's k3s in Docker
+k3d                       5.7.0      Little helper to run Rancher Lab's k3s in Docker
 k6                        0.52.0     A modern load testing tool, using Go and JavaScript - https://k6.io
 k9s                       0.32.5     Kubernetes CLI To Manage Your Clusters In Style
 katafygio                 0.8.3      K8s continuous backup to git
@@ -128,7 +128,7 @@ spotctl                   0.35.0     A unified CLI to manage your [Spot](https:/
 sshm*                     1.2.2      Easy connect on EC2 instances thanks to AWS System Manager Agent
 stern                     1.30.0     ⎈ Multi pod and container log tailing for Kubernetes
 sudosh                    0.3.0      Shell wrapper to run a login shell with `sudo` as the current user for the purpose of audit logging
-teleport                  16.0.3     Secure Access for Developers that doesn't get in the way.
+teleport                  16.0.4     Secure Access for Developers that doesn't get in the way.
 teleport-4.2              OBSOLETE   Privileged access management for elastic infrastructure.
 teleport-4.3              4.3.10     Privileged access management for elastic infrastructure.
 teleport-4.4              4.4.12     Privileged access management for elastic infrastructure.
@@ -146,7 +146,7 @@ terraform-module-versions 3.1.13     CLI tool that checks Terraform code for mod
 terraform_0.11            0.11.15    Terraform (Deprecated package. Use terraform-0.11 instead)
 terraform_0.12            0.12.31    Terraform (Deprecated package. Use terraform-0.12 instead)
 terraform_0.13            0.13.7     Terraform (Deprecated package. Use terraform-0.13 instead)
-terragrunt                0.59.6     Terragrunt is a thin wrapper for Terraform that provides extra tools for working with multiple Terraform modules.
+terragrunt                0.59.7     Terragrunt is a thin wrapper for Terraform that provides extra tools for working with multiple Terraform modules.
 terrahelp                 0.7.5      Terrahelp is as a command line utility that provides useful tricks like masking of terraform output.
 tfenv                     OBSOLETE   Transform environment variables for use with Terraform (e.g. `HOSTNAME` ⇨ `TF_VAR_hostname`)
 tflint                    0.52.0     A Pluggable Terraform Linter
