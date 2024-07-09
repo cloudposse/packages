@@ -9,7 +9,9 @@ include ../../tasks/Makefile.vendor_includes
 
 # Package details
 export VENDOR ?= gravitational
-export DOWNLOAD_URL ?= https://get.gravitational.com/teleport/$(PACKAGE_VERSION)/teleport-v$(PACKAGE_VERSION)-$(OS)-$(ARCH)-bin.tar.gz
+# By version 16, we could just download and republish the packages, but that is extra work for us.
+# https://cdn.teleport.dev/teleport-v16.0.3-linux-arm64-bin.tar.gz
+export DOWNLOAD_URL ?= https://cdn.teleport.dev/teleport-v$(PACKAGE_VERSION)-$(OS)-$(ARCH)-bin.tar.gz
 # so we disable updates
 # export AUTO_UPDATE_ENABLED = false
 export APK_BUILD_TEMPLATE ?= APKBUILD.github-binary

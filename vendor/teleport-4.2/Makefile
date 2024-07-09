@@ -14,7 +14,10 @@ export PACKAGE_ENABLED = false
 
 include ../../tasks/Makefile.vendor_includes
 
-export DOWNLOAD_URL = https://get.gravitational.com/teleport/$(PACKAGE_VERSION)/teleport-v$(PACKAGE_VERSION)-$(OS)-$(ARCH)-bin.tar.gz
+# Approx July 1, 2024, Download URL changed from
+# from https://get.gravitational.com/teleport/$(PACKAGE_VERSION)/teleport-v$(PACKAGE_VERSION)-$(OS)-$(ARCH)-bin.tar.gz
+# to   https://cdn.teleport.dev/teleport-v$(PACKAGE_VERSION)-$(OS)-$(ARCH)-bin.tar.gz
+export DOWNLOAD_URL = https://cdn.teleport.dev/teleport-v$(PACKAGE_VERSION)-$(OS)-$(ARCH)-bin.tar.gz
 # Starting with version 4.3, Teleport is not compatible with Alpine
 # so we disable updates
 # export AUTO_UPDATE_ENABLED = false
