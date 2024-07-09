@@ -9,13 +9,17 @@ export PACKAGE_PRERELEASE_ENABLED = false
 
 # Starting with version 4.3, Teleport is not compatible with Alpine
 export PACKAGE_TYPES_DISABLED = apk
+export PACKAGE_ARCHS_DISABLED = arm64
 
 # This version is past end-of-life and will no longer be updated
 export AUTO_UPDATE_ENABLED = false
 
 include ../../tasks/Makefile.vendor_includes
 
-export DOWNLOAD_URL ?= https://get.gravitational.com/teleport/$(PACKAGE_VERSION)/teleport-v$(PACKAGE_VERSION)-$(OS)-$(ARCH)-bin.tar.gz
+# Approx July 1, 2024, Download URL changed from
+# from https://get.gravitational.com/teleport/$(PACKAGE_VERSION)/teleport-v$(PACKAGE_VERSION)-$(OS)-$(ARCH)-bin.tar.gz
+# to   https://cdn.teleport.dev/teleport-v$(PACKAGE_VERSION)-$(OS)-$(ARCH)-bin.tar.gz
+export DOWNLOAD_URL = https://cdn.teleport.dev/teleport-v$(PACKAGE_VERSION)-$(OS)-$(ARCH)-bin.tar.gz
 export PACKAGE_EXE = teleport tctl tsh
 export INSTALL_DIR = /usr/share/${MASTER_PACKAGE_NAME}/${MAJOR_VERSION}/bin
 
