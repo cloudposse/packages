@@ -15,7 +15,7 @@
 [![cfssl](https://github.com/cloudposse/packages/actions/workflows/cfssl.yml/badge.svg?branch=main)](https://github.com/cloudposse/packages/actions?query=workflow%3Acfssl)* | 1.6.5      | Cloudflare's PKI and TLS toolkit
 [![cfssljson](https://github.com/cloudposse/packages/actions/workflows/cfssljson.yml/badge.svg?branch=main)](https://github.com/cloudposse/packages/actions?query=workflow%3Acfssljson)* | 1.6.5      | Cloudflare's PKI and TLS toolkit json parser
 [![chamber](https://github.com/cloudposse/packages/actions/workflows/chamber.yml/badge.svg?branch=main)](https://github.com/cloudposse/packages/actions?query=workflow%3Achamber) | 2.14.1     | CLI for managing secrets
-[![cilium-cli](https://github.com/cloudposse/packages/actions/workflows/cilium-cli.yml/badge.svg?branch=main)](https://github.com/cloudposse/packages/actions?query=workflow%3Acilium-cli) | 0.16.11    | CLI to install, manage & troubleshoot Kubernetes clusters running Cilium
+[![cilium-cli](https://github.com/cloudposse/packages/actions/workflows/cilium-cli.yml/badge.svg?branch=main)](https://github.com/cloudposse/packages/actions?query=workflow%3Acilium-cli) | 0.16.12    | CLI to install, manage & troubleshoot Kubernetes clusters running Cilium
 [![cli53](https://github.com/cloudposse/packages/actions/workflows/cli53.yml/badge.svg?branch=main)](https://github.com/cloudposse/packages/actions?query=workflow%3Acli53) | 0.8.22     | Command line tool for Amazon Route 53
 [![cloud-nuke](https://github.com/cloudposse/packages/actions/workflows/cloud-nuke.yml/badge.svg?branch=main)](https://github.com/cloudposse/packages/actions?query=workflow%3Acloud-nuke) | 0.37.1     | Tool for wiping an aws account DANGER absolutely do not use in production
 [![cloudflared](https://github.com/cloudposse/packages/actions/workflows/cloudflared.yml/badge.svg?branch=main)](https://github.com/cloudposse/packages/actions?query=workflow%3Acloudflared) | 2024.6.1   | Argo Tunnel client
@@ -115,9 +115,9 @@ packer \[frozen\] | 1.9.5      | Packer is a tool for creating identical machine
 [![stern](https://github.com/cloudposse/packages/actions/workflows/stern.yml/badge.svg?branch=main)](https://github.com/cloudposse/packages/actions?query=workflow%3Astern) | 1.30.0     | ⎈ Multi pod and container log tailing for Kubernetes
 [![sudosh](https://github.com/cloudposse/packages/actions/workflows/sudosh.yml/badge.svg?branch=main)](https://github.com/cloudposse/packages/actions?query=workflow%3Asudosh) | 0.3.0      | Shell wrapper to run a login shell with `sudo` as the current user for the purpose of audit logging
 [![teleport](https://github.com/cloudposse/packages/actions/workflows/teleport.yml/badge.svg?branch=main)](https://github.com/cloudposse/packages/actions?query=workflow%3Ateleport) | 16.0.4     | Secure Access for Developers that doesn't get in the way.
-teleport-4.3 \[frozen\] | 4.3.10     | Privileged access management for elastic infrastructure.
-teleport-4.4 \[frozen\] | 4.4.12     | Privileged access management for elastic infrastructure.
-teleport-5.0 \[frozen\] | 5.0.2      | Secure Access for Developers that doesn't get in the way.
+teleport-4.3* \[frozen\] | 4.3.10     | Privileged access management for elastic infrastructure.
+teleport-4.4* \[frozen\] | 4.4.12     | Privileged access management for elastic infrastructure.
+teleport-5.0* \[frozen\] | 5.0.2      | Secure Access for Developers that doesn't get in the way.
 terraform \[frozen\] | 1.5.7      | Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-0.11 \[frozen\] | 0.11.15    | Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-0.12 \[frozen\] | 0.12.31    | Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.

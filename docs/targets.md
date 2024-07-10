@@ -20,7 +20,7 @@ aws-vault                 7.2.0      A vault for securely storing and accessing 
 cfssl*                    1.6.5      Cloudflare's PKI and TLS toolkit
 cfssljson*                1.6.5      Cloudflare's PKI and TLS toolkit json parser
 chamber                   2.14.1     CLI for managing secrets
-cilium-cli                0.16.11    CLI to install, manage & troubleshoot Kubernetes clusters running Cilium
+cilium-cli                0.16.12    CLI to install, manage & troubleshoot Kubernetes clusters running Cilium
 cli53                     0.8.22     Command line tool for Amazon Route 53
 cloud-nuke                0.37.1     Tool for wiping an aws account DANGER absolutely do not use in production
 cloudflared               2024.6.1   Argo Tunnel client
@@ -130,9 +130,9 @@ stern                     1.30.0     ⎈ Multi pod and container log tailing for
 sudosh                    0.3.0      Shell wrapper to run a login shell with `sudo` as the current user for the purpose of audit logging
 teleport                  16.0.4     Secure Access for Developers that doesn't get in the way.
 teleport-4.2              OBSOLETE   Privileged access management for elastic infrastructure.
-teleport-4.3              4.3.10     Privileged access management for elastic infrastructure.
-teleport-4.4              4.4.12     Privileged access management for elastic infrastructure.
-teleport-5.0              5.0.2      Secure Access for Developers that doesn't get in the way.
+teleport-4.3*             4.3.10     Privileged access management for elastic infrastructure.
+teleport-4.4*             4.4.12     Privileged access management for elastic infrastructure.
+teleport-5.0*             5.0.2      Secure Access for Developers that doesn't get in the way.
 terraform                 1.5.7      Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-0.11            0.11.15    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-0.12            0.12.31    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
