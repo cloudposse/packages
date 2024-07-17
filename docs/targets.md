@@ -33,7 +33,7 @@ direnv                    2.34.0     Unclutter your .profile
 doctl                     1.109.1    A command line tool for DigitalOcean services
 duffle                    OBSOLETE   CNAB installer
 ec2-instance-selector     2.4.1      A CLI tool and go library which recommends instance types based on resource criteria like vcpus and memory
-ecspresso                 2.3.5      Ecspresso is a deployment tool for Amazon ECS
+ecspresso                 2.3.6      Ecspresso is a deployment tool for Amazon ECS
 emailcli*                 1.0.3      Command line email sending client written in Go.
 envcli*                   0.7.1      A simple wrapper that allows you to run commands within ethereal docker containers
 fargate                   OBSOLETE   (OBSOLETE, use aws/copilot-cli instead) CLI for AWS Fargate
