@@ -19,7 +19,7 @@
 [![cli53](https://github.com/cloudposse/packages/actions/workflows/cli53.yml/badge.svg?branch=main)](https://github.com/cloudposse/packages/actions?query=workflow%3Acli53) | 0.8.22     | Command line tool for Amazon Route 53
 [![cloud-nuke](https://github.com/cloudposse/packages/actions/workflows/cloud-nuke.yml/badge.svg?branch=main)](https://github.com/cloudposse/packages/actions?query=workflow%3Acloud-nuke) | 0.37.1     | Tool for wiping an aws account DANGER absolutely do not use in production
 [![cloudflared](https://github.com/cloudposse/packages/actions/workflows/cloudflared.yml/badge.svg?branch=main)](https://github.com/cloudposse/packages/actions?query=workflow%3Acloudflared) | 2024.6.1   | Argo Tunnel client
-[![codefresh](https://github.com/cloudposse/packages/actions/workflows/codefresh.yml/badge.svg?branch=main)](https://github.com/cloudposse/packages/actions?query=workflow%3Acodefresh)* | 0.87.4     | Codefresh CLI
+[![codefresh](https://github.com/cloudposse/packages/actions/workflows/codefresh.yml/badge.svg?branch=main)](https://github.com/cloudposse/packages/actions?query=workflow%3Acodefresh)* | 0.87.5     | Codefresh CLI
 [![conftest](https://github.com/cloudposse/packages/actions/workflows/conftest.yml/badge.svg?branch=main)](https://github.com/cloudposse/packages/actions?query=workflow%3Aconftest) | 0.54.0     | Test your configuration files using Open Policy Agent
 consul \[frozen\] | 1.16.4     | Hashicorp consul
 [![ctop](https://github.com/cloudposse/packages/actions/workflows/ctop.yml/badge.svg?branch=main)](https://github.com/cloudposse/packages/actions?query=workflow%3Actop) | 0.7.7      | Top-like interface for container metrics
