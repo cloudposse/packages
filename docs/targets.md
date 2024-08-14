@@ -153,7 +153,7 @@ tflint                    0.52.0     A Pluggable Terraform Linter
 tfmask                    OBSOLETE   Terraform utility to mask select output from `terraform plan` and `terraform apply`
 tfschema                  0.7.8      A schema inspector for Terraform providers
 tfsec                     1.28.10    (DEPRECATED: use Trivy instead) Security scanner for your Terraform code
-thanos                    0.36.0     Highly available Prometheus setup with long term storage capabilities. CNCF Sandbox project.
+thanos                    0.36.1     Highly available Prometheus setup with long term storage capabilities. CNCF Sandbox project.
 trivy                     0.54.1     A Simple and Comprehensive Vulnerability Scanner for Containers, Suitable for CI
 turf                      OBSOLETE   Turf is Cloud Posse's command-line automation helper.
 variant                   0.38.0     Variant is a Universal CLI tool that works like a task runner
