@@ -19,3 +19,6 @@ install:
 test:
 	@echo -n "Testing $$(basename $(PACKAGE_EXE))... "
 	@$(PACKAGE_EXE) test@example.com --version 2>&1 | grep -q -F $(PACKAGE_VERSION) && echo Pass || { printf "\n\nERROR: %s not found in version output '%s'\n\n" "$(PACKAGE_VERSION)" "$$($(PACKAGE_EXE) test@example.com --version)"; exit 1; }
+
+package/prepare::
+	mv src/emailcli_v$(PACKAGE_VERSION)_$(OS)-$(ARCH)/email src/email
