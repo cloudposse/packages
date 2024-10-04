@@ -122,7 +122,7 @@ sentry-cli                2.36.6     A command line utility to work with Sentry.
 shellcheck                0.10.0     ShellCheck, a static analysis tool for shell scripts
 shfmt                     3.9.0      A shell parser, formatter and interpreter (POSIX/Bash/mksh)
 slack-notifier            0.10.0     Command line utility to send messages with attachments to Slack channels via Incoming Webhooks
-sops                      3.9.0      Secrets management stinks, use some sops!
+sops                      3.9.1      Secrets management stinks, use some sops!
 spacectl                  1.5.0      [Spacelift.io](https://spacelift.io/) client and CLI
 spotctl                   0.35.0     A unified CLI to manage your [Spot](https://spot.io/) resources.
 sshm*                     1.2.2      Easy connect on EC2 instances thanks to AWS System Manager Agent
