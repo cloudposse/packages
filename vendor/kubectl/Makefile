@@ -1,7 +1,7 @@
 # Package details
 export VENDOR = kubernetes
 export PACKAGE_REPO_NAME = kubernetes
-export DOWNLOAD_URL = https://storage.googleapis.com/kubernetes-release/release/v$(PACKAGE_VERSION)/bin/$(OS)/$(ARCH)/$(PACKAGE_NAME)
+export DOWNLOAD_URL = https://dl.k8s.io/v$(PACKAGE_VERSION)/bin/$(OS)/$(ARCH)/kubectl
 export APK_BUILD_TEMPLATE = APKBUILD.github-binary
 export APKBUILD_DEPENDS += dpkg
 export APKBUILD_INSTALL_SCRIPTS = $(PACKAGE_NAME).post-install $(PACKAGE_NAME).post-deinstall
