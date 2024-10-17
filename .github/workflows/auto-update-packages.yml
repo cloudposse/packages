@@ -93,6 +93,7 @@ jobs:
         - kubectl-1.28
         - kubectl-1.29
         - kubectl-1.30
+        - kubectl-1.31
         - kubectx
         - kubens
         - kubeval
