@@ -1,5 +1,5 @@
 # Need to use version number so that it gets updated here and triggers a build
-FROM alpine:3.19.1
+FROM alpine:3.20.3
 
 ENV LC_ALL=C.UTF-8
 ENV PS1="(apk) \w \$ "

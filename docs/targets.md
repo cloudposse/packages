@@ -59,7 +59,7 @@ helm2                     2.17.0     The Kubernetes Package Manager
 helm3                     3.16.2     The Kubernetes Package Manager
 helmfile                  0.144.0    Deploy Kubernetes Helm Charts
 htmltest                  0.17.0     :white_check_mark: Test generated HTML for problems
-hugo                      0.136.1    The world’s fastest framework for building websites.
+hugo                      0.136.2    The world’s fastest framework for building websites.
 infracost                 0.10.39    Cloud cost estimates for Terraform
 jp                        0.2.1      Command line interface to JMESPath
 jq                        OBSOLETE   Command-line JSON processor
@@ -92,9 +92,9 @@ kubectl-1.25              1.25.16    Production-Grade Container Scheduling and M
 kubectl-1.26              1.26.15    Production-Grade Container Scheduling and Management (v1.26)
 kubectl-1.27              1.27.16    Production-Grade Container Scheduling and Management (v1.27)
 kubectl-1.28              1.28.14    Production-Grade Container Scheduling and Management (v1.28)
-kubectl-1.29              1.29.8     Production-Grade Container Scheduling and Management (v1.29)
+kubectl-1.29              1.29.9     Production-Grade Container Scheduling and Management (v1.29)
 kubectl-1.30              1.30.5     Production-Grade Container Scheduling and Management (v1.30)
-kubectl-1.31              1.31.0     Production-Grade Container Scheduling and Management (v1.31)
+kubectl-1.31              1.31.1     Production-Grade Container Scheduling and Management (v1.31)
 kubectx                   0.9.5      Switch faster between clusters and namespaces in kubectl
 kubens                    0.9.5      Switch faster between clusters and namespaces in kubectl
 kubeval*                  0.16.1     Validate your Kubernetes configuration files, supports multiple Kubernetes versions
@@ -147,7 +147,7 @@ terraform-module-versions 3.1.13     CLI tool that checks Terraform code for mod
 terraform_0.11            0.11.15    Terraform (Deprecated package. Use terraform-0.11 instead)
 terraform_0.12            0.12.31    Terraform (Deprecated package. Use terraform-0.12 instead)
 terraform_0.13            0.13.7     Terraform (Deprecated package. Use terraform-0.13 instead)
-terragrunt                0.68.3     Terragrunt is a thin wrapper for Terraform that provides extra tools for working with multiple Terraform modules.
+terragrunt                0.68.4     Terragrunt is a thin wrapper for Terraform that provides extra tools for working with multiple Terraform modules.
 terrahelp                 0.7.5      Terrahelp is as a command line utility that provides useful tricks like masking of terraform output.
 tfenv                     OBSOLETE   Transform environment variables for use with Terraform (e.g. `HOSTNAME` ⇨ `TF_VAR_hostname`)
 tflint                    0.53.0     A Pluggable Terraform Linter

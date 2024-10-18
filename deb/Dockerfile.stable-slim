@@ -14,7 +14,7 @@ RUN apt-get update && \
 RUN gem install --no-document backports -v 3.15.0
 RUN gem install --no-document fpm
 
-ARG GO_INSTALL_VERSION=1.19.1
+ARG GO_INSTALL_VERSION=1.23.2
 ARG TARGETARCH
 
 # Install go

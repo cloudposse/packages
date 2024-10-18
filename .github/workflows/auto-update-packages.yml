@@ -147,6 +147,10 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
+      # Use updated `go` version because some packages are compiled or fetched with `go`
+      - uses: actions/setup-go@v5
+        with:
+          go-version: 'stable'
 
       - name: Get current package information
         shell: bash
