@@ -116,7 +116,7 @@ rakkess*                  0.5.0      Review Access - kubectl plugin to show an a
 rancher                   2.9.2      Rancher CLI
 rbac-lookup               0.10.2     Find Kubernetes roles and cluster roles bound to any user, service account, or group name.
 retry                     OBSOLETE   ♻️ Functional mechanism based on channels to perform actions repetitively until successful.
-saml2aws                  2.36.17    CLI tool which enables you to login and retrieve AWS temporary credentials using a SAML IDP
+saml2aws                  2.36.18    CLI tool which enables you to login and retrieve AWS temporary credentials using a SAML IDP
 scenery                   OBSOLETE   A Terraform plan output prettifier
 sentinel                  OBSOLETE   Hashicorp sentinel
 sentry-cli                2.37.0     A command line utility to work with Sentry.
