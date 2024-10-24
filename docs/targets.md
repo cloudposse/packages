@@ -129,7 +129,7 @@ spotctl                   0.35.0     A unified CLI to manage your [Spot](https:/
 sshm*                     1.2.2      Easy connect on EC2 instances thanks to AWS System Manager Agent
 stern                     1.31.0     ⎈ Multi pod and container log tailing for Kubernetes
 sudosh                    0.3.0      Shell wrapper to run a login shell with `sudo` as the current user for the purpose of audit logging
-teleport                  16.4.3     Secure Access for Developers that doesn't get in the way.
+teleport                  16.4.6     Secure Access for Developers that doesn't get in the way.
 teleport-4.2              OBSOLETE   Privileged access management for elastic infrastructure.
 teleport-4.3*             4.3.10     Privileged access management for elastic infrastructure.
 teleport-4.4*             4.4.12     Privileged access management for elastic infrastructure.
