@@ -40,7 +40,7 @@ fargate                   OBSOLETE   (OBSOLETE, use aws/copilot-cli instead) CLI
 fetch                     0.4.6      fetch makes it easy to download files, folders, and release assets from a specific public git commit, branch, or tag
 figurine                  1.3.0      Print your name in style
 fzf                       0.23.1     A command-line fuzzy finder
-gh                        2.60.0     The GitHub CLI
+gh                        2.60.1     The GitHub CLI
 ghr                       0.17.0     Upload multiple artifacts to GitHub Releases in parallel
 github-commenter          0.28.0     Command line utility for creating GitHub comments on Commits, Pull Request Reviews or Issues
 github-release*           0.10.0     Commandline app to create and edit releases on Github (and upload artifacts)
