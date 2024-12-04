@@ -71,7 +71,7 @@ k9s                       0.32.7     Kubernetes CLI To Manage Your Clusters In S
 katafygio                 0.8.3      K8s continuous backup to git
 kfctl*                    1.2.0      Machine Learning Toolkit for Kubernetes
 kind                      0.25.0     A tool for running local Kubernetes clusters using Docker
-kops                      1.30.2     Kubernetes Operations (kops) - Production Grade K8s Installation, Upgrades, and Management
+kops                      1.30.3     Kubernetes Operations (kops) - Production Grade K8s Installation, Upgrades, and Management
 kops-1.12                 OBSOLETE   Kubernetes Operations (kops) - Production Grade K8s Installation, Upgrades, and Management
 krew                      0.4.1      Kubectl plugin manager
 kubecron*                 2.0.0      Utilities to manage kubernetes cronjobs. Run a CronJob manually for test purposes. Suspend/unsuspend a CronJob
