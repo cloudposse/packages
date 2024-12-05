@@ -3,7 +3,7 @@
 FROM cfssl/cfssl:v1.6.5 AS cfssl
 
 # Install remaining packages
-FROM alpine:3.19.4
+FROM alpine:3.20.3
 ENV INSTALL_PATH=/packages/bin
 ENV PATH=${INSTALL_PATH}:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 RUN mkdir -p ${INSTALL_PATH}
