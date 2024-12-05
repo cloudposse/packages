@@ -2,8 +2,6 @@ module github.com/cloudposse/packages
 
 go 1.22.0
 
-toolchain go1.23.3
-
 require (
 	github.com/hashicorp/terraform-config-inspect v0.0.0-20241107133921-3adb156ecfe2
 	github.com/spf13/pflag v1.0.5
