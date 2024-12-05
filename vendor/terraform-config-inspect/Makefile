@@ -14,6 +14,9 @@ export PACKAGE_VERSION_TARGET := go-update
 
 include ../../tasks/Makefile.vendor_includes
 
+# Prevent build errors because of different versions of go in different workflows
+export GOTOOLCHAIN := local
+
 version.go: VERSION
 	go generate
 
