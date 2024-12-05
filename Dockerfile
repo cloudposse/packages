@@ -1,8 +1,9 @@
 # Install CFSSL from official cfssl.org binaries
-FROM cfssl/cfssl:1.5.0 AS cfssl
+# https://hub.docker.com/r/cfssl/cfssl/tags
+FROM cfssl/cfssl:v1.6.5 AS cfssl
 
 # Install remaining packages
-FROM alpine:3.16.2
+FROM alpine:3.20.3
 ENV INSTALL_PATH=/packages/bin
 ENV PATH=${INSTALL_PATH}:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 RUN mkdir -p ${INSTALL_PATH}
