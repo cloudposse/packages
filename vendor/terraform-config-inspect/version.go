@@ -1,5 +1,5 @@
 package main 
 
 const (
-Version = `0.0.20240801114854+git6714b46f5fe4`
+	Version = `0.0.20241107133921+git3adb156ecfe2`
 )
