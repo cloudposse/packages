@@ -17,8 +17,8 @@ aws-iam-authenticator     0.6.28     A tool to use AWS IAM credentials to authen
 aws-nuke                  2.25.0     A highly configurable way to wipe non-prod aws accounts. WARNING do not use in prod
 aws-okta                  OBSOLETE   aws-okta allows users to authenticate with AWS using Okta credentials
 aws-vault                 7.2.0      A vault for securely storing and accessing AWS credentials in development environments
-cfssl*                    1.6.5      Cloudflare's PKI and TLS toolkit
-cfssljson*                1.6.5      Cloudflare's PKI and TLS toolkit json parser
+cfssl                     1.6.5      Cloudflare's PKI and TLS toolkit
+cfssljson                 1.6.5      Cloudflare's PKI and TLS toolkit json parser
 chamber                   3.1.0      CLI for managing secrets
 cilium-cli                0.16.21    CLI to install, manage & troubleshoot Kubernetes clusters running Cilium
 cli53                     0.8.23     Command line tool for Amazon Route 53
@@ -161,7 +161,7 @@ variant                   0.38.0     Variant is a Universal CLI tool that works 
 variant2                  0.38.0     Second major version of Variant, a Universal CLI tool that works like a task runner
 vault                     1.14.8     Hashicorp vault
 velero                    1.15.0     Backup and migrate Kubernetes applications and their persistent volumes
-vendir                    0.42.0     Easy way to vendor portions of git repos, github releases, helm charts, docker image contents, etc. declaratively.
+vendir                    0.43.0     Easy way to vendor portions of git repos, github releases, helm charts, docker image contents, etc. declaratively.
 venona*                   1.10.5     Codefresh runtime-environment agent
 vert                      0.1.0      Simple CLI for comparing two or more versions
 yajsv*                    1.4.1      Yet Another JSON Schema Validator [CLI]
