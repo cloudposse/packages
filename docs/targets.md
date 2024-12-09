@@ -17,8 +17,8 @@ aws-iam-authenticator     0.6.28     A tool to use AWS IAM credentials to authen
 aws-nuke                  2.25.0     A highly configurable way to wipe non-prod aws accounts. WARNING do not use in prod
 aws-okta                  OBSOLETE   aws-okta allows users to authenticate with AWS using Okta credentials
 aws-vault                 7.2.0      A vault for securely storing and accessing AWS credentials in development environments
-cfssl*                    1.6.5      Cloudflare's PKI and TLS toolkit
-cfssljson*                1.6.5      Cloudflare's PKI and TLS toolkit json parser
+cfssl                     1.6.5      Cloudflare's PKI and TLS toolkit
+cfssljson                 1.6.5      Cloudflare's PKI and TLS toolkit json parser
 chamber                   3.1.0      CLI for managing secrets
 cilium-cli                0.16.21    CLI to install, manage & troubleshoot Kubernetes clusters running Cilium
 cli53                     0.8.23     Command line tool for Amazon Route 53
@@ -33,7 +33,7 @@ direnv                    2.35.0     Unclutter your .profile
 doctl                     1.119.1    A command line tool for DigitalOcean services
 duffle                    OBSOLETE   CNAB installer
 ec2-instance-selector     3.0.0      A CLI tool and go library which recommends instance types based on resource criteria like vcpus and memory
-ecspresso                 2.4.4      Ecspresso is a deployment tool for Amazon ECS
+ecspresso                 2.4.5      Ecspresso is a deployment tool for Amazon ECS
 emailcli                  1.1.0      Command line email sending client written in Go.
 envcli*                   0.7.1      A simple wrapper that allows you to run commands within ethereal docker containers
 fargate                   OBSOLETE   (OBSOLETE, use aws/copilot-cli instead) CLI for AWS Fargate
