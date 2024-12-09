@@ -17,8 +17,8 @@ aws-iam-authenticator     0.6.28     A tool to use AWS IAM credentials to authen
 aws-nuke                  2.25.0     A highly configurable way to wipe non-prod aws accounts. WARNING do not use in prod
 aws-okta                  OBSOLETE   aws-okta allows users to authenticate with AWS using Okta credentials
 aws-vault                 7.2.0      A vault for securely storing and accessing AWS credentials in development environments
-cfssl*                    1.6.5      Cloudflare's PKI and TLS toolkit
-cfssljson*                1.6.5      Cloudflare's PKI and TLS toolkit json parser
+cfssl                     1.6.5      Cloudflare's PKI and TLS toolkit
+cfssljson                 1.6.5      Cloudflare's PKI and TLS toolkit json parser
 chamber                   3.1.0      CLI for managing secrets
 cilium-cli                0.16.21    CLI to install, manage & troubleshoot Kubernetes clusters running Cilium
 cli53                     0.8.23     Command line tool for Amazon Route 53
@@ -141,7 +141,7 @@ terraform-0.13            0.13.7     Terraform is a tool for building, changing,
 terraform-0.14            0.14.11    Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-0.15            0.15.5     Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-1               1.5.7      Terraform enables you to safely and predictably create, change, and improve infrastructure.
-terraform-config-inspect  0.0.20241107133921+git3adb156ecfe2 A helper library for shallow inspection of Terraform configurations
+terraform-config-inspect  0.0.20241129133400+gitc404f8227ea6 A helper library for shallow inspection of Terraform configurations
 terraform-docs            0.19.0     Generate docs from terraform modules
 terraform-module-versions 3.1.13     CLI tool that checks Terraform code for module updates. Single binary, no dependencies. linux, osx, windows.
 terraform_0.11            0.11.15    Terraform (Deprecated package. Use terraform-0.11 instead)
