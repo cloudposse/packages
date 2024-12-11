@@ -18,7 +18,7 @@
 [![cilium-cli](https://github.com/cloudposse/packages/actions/workflows/cilium-cli.yml/badge.svg?branch=main)](https://github.com/cloudposse/packages/actions?query=workflow%3Acilium-cli) | 0.16.21    | CLI to install, manage & troubleshoot Kubernetes clusters running Cilium
 [![cli53](https://github.com/cloudposse/packages/actions/workflows/cli53.yml/badge.svg?branch=main)](https://github.com/cloudposse/packages/actions?query=workflow%3Acli53) | 0.8.23     | Command line tool for Amazon Route 53
 [![cloud-nuke](https://github.com/cloudposse/packages/actions/workflows/cloud-nuke.yml/badge.svg?branch=main)](https://github.com/cloudposse/packages/actions?query=workflow%3Acloud-nuke) | 0.37.2     | Tool for wiping an aws account DANGER absolutely do not use in production
-[![cloudflared](https://github.com/cloudposse/packages/actions/workflows/cloudflared.yml/badge.svg?branch=main)](https://github.com/cloudposse/packages/actions?query=workflow%3Acloudflared) | 2024.12.0  | Argo Tunnel client
+[![cloudflared](https://github.com/cloudposse/packages/actions/workflows/cloudflared.yml/badge.svg?branch=main)](https://github.com/cloudposse/packages/actions?query=workflow%3Acloudflared) | 2024.12.1  | Argo Tunnel client
 [![codefresh](https://github.com/cloudposse/packages/actions/workflows/codefresh.yml/badge.svg?branch=main)](https://github.com/cloudposse/packages/actions?query=workflow%3Acodefresh)* | 0.88.5     | Codefresh CLI
 [![conftest](https://github.com/cloudposse/packages/actions/workflows/conftest.yml/badge.svg?branch=main)](https://github.com/cloudposse/packages/actions?query=workflow%3Aconftest) | 0.56.0     | Test your configuration files using Open Policy Agent
 consul \[frozen\] | 1.16.4     | Hashicorp consul
