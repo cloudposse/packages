@@ -20,7 +20,7 @@ aws-vault                 7.2.0      A vault for securely storing and accessing 
 cfssl                     1.6.5      Cloudflare's PKI and TLS toolkit
 cfssljson                 1.6.5      Cloudflare's PKI and TLS toolkit json parser
 chamber                   3.1.1      CLI for managing secrets
-cilium-cli                0.16.22    CLI to install, manage & troubleshoot Kubernetes clusters running Cilium
+cilium-cli                0.16.23    CLI to install, manage & troubleshoot Kubernetes clusters running Cilium
 cli53                     0.8.23     Command line tool for Amazon Route 53
 cloud-nuke                0.38.1     Tool for wiping an aws account DANGER absolutely do not use in production
 cloudflared               2025.1.0   Argo Tunnel client
