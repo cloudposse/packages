@@ -160,7 +160,7 @@ turf                      OBSOLETE   Turf is Cloud Posse's command-line automati
 variant                   0.38.0     Variant is a Universal CLI tool that works like a task runner
 variant2                  0.38.0     Second major version of Variant, a Universal CLI tool that works like a task runner
 vault                     1.14.8     Hashicorp vault
-velero                    1.15.1     Backup and migrate Kubernetes applications and their persistent volumes
+velero                    1.15.2     Backup and migrate Kubernetes applications and their persistent volumes
 vendir                    0.43.0     Easy way to vendor portions of git repos, github releases, helm charts, docker image contents, etc. declaratively.
 venona*                   1.10.5     Codefresh runtime-environment agent
 vert                      0.1.0      Simple CLI for comparing two or more versions
