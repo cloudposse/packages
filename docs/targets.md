@@ -100,7 +100,7 @@ kubens                    0.9.5      Switch faster between clusters and namespac
 kubeval*                  0.16.1     Validate your Kubernetes configuration files, supports multiple Kubernetes versions
 lazydocker                0.24.1     The lazier way to manage everything docker
 lectl*                    0.22.1     Script to check issued certificates by Let's Encrypt on CTL (Certificate Transparency Log) using https://crt.sh
-minikube                  1.34.0     Run Kubernetes locally
+minikube                  1.35.0     Run Kubernetes locally
 misspell*                 0.3.4      Correct commonly misspelled English words in source files
 nomad                     OBSOLETE   Hashicorp nomad
 opa                       1.0.0      An open source project to policy-enable your service.
