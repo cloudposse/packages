@@ -344,8 +344,8 @@ Here are some solutions to several common problems that may occur when adding a 
 [![chamber](https://github.com/cloudposse/packages/actions/workflows/chamber.yml/badge.svg?branch=main)](https://github.com/cloudposse/packages/actions?query=workflow%3Achamber) | 3.1.1      | CLI for managing secrets
 [![cilium-cli](https://github.com/cloudposse/packages/actions/workflows/cilium-cli.yml/badge.svg?branch=main)](https://github.com/cloudposse/packages/actions?query=workflow%3Acilium-cli) | 0.16.24    | CLI to install, manage & troubleshoot Kubernetes clusters running Cilium
 [![cli53](https://github.com/cloudposse/packages/actions/workflows/cli53.yml/badge.svg?branch=main)](https://github.com/cloudposse/packages/actions?query=workflow%3Acli53) | 0.8.23     | Command line tool for Amazon Route 53
-[![cloud-nuke](https://github.com/cloudposse/packages/actions/workflows/cloud-nuke.yml/badge.svg?branch=main)](https://github.com/cloudposse/packages/actions?query=workflow%3Acloud-nuke) | 0.38.1     | Tool for wiping an aws account DANGER absolutely do not use in production
 [![cloudflared](https://github.com/cloudposse/packages/actions/workflows/cloudflared.yml/badge.svg?branch=main)](https://github.com/cloudposse/packages/actions?query=workflow%3Acloudflared) | 2025.1.1   | Argo Tunnel client
+[![cloud-nuke](https://github.com/cloudposse/packages/actions/workflows/cloud-nuke.yml/badge.svg?branch=main)](https://github.com/cloudposse/packages/actions?query=workflow%3Acloud-nuke) | 0.38.1     | Tool for wiping an aws account DANGER absolutely do not use in production
 [![codefresh](https://github.com/cloudposse/packages/actions/workflows/codefresh.yml/badge.svg?branch=main)](https://github.com/cloudposse/packages/actions?query=workflow%3Acodefresh)* | 0.88.5     | Codefresh CLI
 [![conftest](https://github.com/cloudposse/packages/actions/workflows/conftest.yml/badge.svg?branch=main)](https://github.com/cloudposse/packages/actions?query=workflow%3Aconftest) | 0.56.0     | Test your configuration files using Open Policy Agent
 consul \[frozen\] | 1.16.4     | Hashicorp consul
@@ -373,6 +373,7 @@ consul \[frozen\] | 1.16.4     | Hashicorp consul
 gotop \[frozen\] | 3.0.0      | A terminal based graphical activity monitor inspired by gtop and vtop
 [![grpcurl](https://github.com/cloudposse/packages/actions/workflows/grpcurl.yml/badge.svg?branch=main)](https://github.com/cloudposse/packages/actions?query=workflow%3Agrpcurl) | 1.9.2      | Like cURL, but for gRPC: Command-line tool for interacting with gRPC servers
 [![hcledit](https://github.com/cloudposse/packages/actions/workflows/hcledit.yml/badge.svg?branch=main)](https://github.com/cloudposse/packages/actions?query=workflow%3Ahcledit) | 0.2.15     | A command line editor for HCL
+[![hcloud](https://github.com/cloudposse/packages/actions/workflows/hcloud.yml/badge.svg?branch=main)](https://github.com/cloudposse/packages/actions?query=workflow%3Ahcloud) | 1.50.0     | A command-line interface for Hetzner Cloud
 [![helm](https://github.com/cloudposse/packages/actions/workflows/helm.yml/badge.svg?branch=main)](https://github.com/cloudposse/packages/actions?query=workflow%3Ahelm) | 3.17.0     | The Kubernetes Package Manager
 [![helm2](https://github.com/cloudposse/packages/actions/workflows/helm2.yml/badge.svg?branch=main)](https://github.com/cloudposse/packages/actions?query=workflow%3Ahelm2) | 2.17.0     | The Kubernetes Package Manager
 [![helm3](https://github.com/cloudposse/packages/actions/workflows/helm3.yml/badge.svg?branch=main)](https://github.com/cloudposse/packages/actions?query=workflow%3Ahelm3) | 3.17.0     | The Kubernetes Package Manager
@@ -448,17 +449,17 @@ teleport-4.4* \[frozen\] | 4.4.12     | Privileged access management for elastic
 teleport-5.0* \[frozen\] | 5.0.2      | Secure Access for Developers that doesn't get in the way.
 terraform \[frozen\] | 1.5.7      | Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-0.11 \[frozen\] | 0.11.15    | Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
+terraform_0.11 \[frozen\] | 0.11.15    | Terraform (Deprecated package. Use terraform-0.11 instead)
 terraform-0.12 \[frozen\] | 0.12.31    | Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
+terraform_0.12 \[frozen\] | 0.12.31    | Terraform (Deprecated package. Use terraform-0.12 instead)
 terraform-0.13 \[frozen\] | 0.13.7     | Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
+terraform_0.13 \[frozen\] | 0.13.7     | Terraform (Deprecated package. Use terraform-0.13 instead)
 [![terraform-0.14](https://github.com/cloudposse/packages/actions/workflows/terraform-0.14.yml/badge.svg?branch=main)](https://github.com/cloudposse/packages/actions?query=workflow%3Aterraform-0.14) | 0.14.11    | Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 [![terraform-0.15](https://github.com/cloudposse/packages/actions/workflows/terraform-0.15.yml/badge.svg?branch=main)](https://github.com/cloudposse/packages/actions?query=workflow%3Aterraform-0.15) | 0.15.5     | Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-1 \[frozen\] | 1.5.7      | Terraform enables you to safely and predictably create, change, and improve infrastructure.
 [![terraform-config-inspect](https://github.com/cloudposse/packages/actions/workflows/terraform-config-inspect.yml/badge.svg?branch=main)](https://github.com/cloudposse/packages/actions?query=workflow%3Aterraform-config-inspect) | <details><summary>show</summary>0.0.20241129133400+gitc404f8227ea6</details> | A helper library for shallow inspection of Terraform configurations
 [![terraform-docs](https://github.com/cloudposse/packages/actions/workflows/terraform-docs.yml/badge.svg?branch=main)](https://github.com/cloudposse/packages/actions?query=workflow%3Aterraform-docs) | 0.19.0     | Generate docs from terraform modules
 [![terraform-module-versions](https://github.com/cloudposse/packages/actions/workflows/terraform-module-versions.yml/badge.svg?branch=main)](https://github.com/cloudposse/packages/actions?query=workflow%3Aterraform-module-versions) | 3.1.13     | CLI tool that checks Terraform code for module updates. Single binary, no dependencies. linux, osx, windows.
-terraform_0.11 \[frozen\] | 0.11.15    | Terraform (Deprecated package. Use terraform-0.11 instead)
-terraform_0.12 \[frozen\] | 0.12.31    | Terraform (Deprecated package. Use terraform-0.12 instead)
-terraform_0.13 \[frozen\] | 0.13.7     | Terraform (Deprecated package. Use terraform-0.13 instead)
 [![terragrunt](https://github.com/cloudposse/packages/actions/workflows/terragrunt.yml/badge.svg?branch=main)](https://github.com/cloudposse/packages/actions?query=workflow%3Aterragrunt) | 0.72.5     | Terragrunt is a thin wrapper for Terraform that provides extra tools for working with multiple Terraform modules.
 [![terrahelp](https://github.com/cloudposse/packages/actions/workflows/terrahelp.yml/badge.svg?branch=main)](https://github.com/cloudposse/packages/actions?query=workflow%3Aterrahelp) | 0.7.5      | Terrahelp is as a command line utility that provides useful tricks like masking of terraform output.
 [![tflint](https://github.com/cloudposse/packages/actions/workflows/tflint.yml/badge.svg?branch=main)](https://github.com/cloudposse/packages/actions?query=workflow%3Atflint) | 0.55.0     | A Pluggable Terraform Linter
