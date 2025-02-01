@@ -392,6 +392,9 @@ vendor/stern:
 vendor/sudosh:
 - any: ["vendor/sudosh/**"]
   all: ["!bin/**", "!tasks/**"]
+vendor/talosctl:
+- any: ["vendor/talosctl/**"]
+  all: ["!bin/**", "!tasks/**"]
 vendor/teleport-4.2:
 - any: ["vendor/teleport-4.2/**"]
   all: ["!bin/**", "!tasks/**"]
