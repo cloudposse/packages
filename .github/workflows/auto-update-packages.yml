@@ -123,6 +123,7 @@ jobs:
         - sshm
         - stern
         - sudosh
+        - talosctl
         - teleport
         - terraform-0.14
         - terraform-0.15
