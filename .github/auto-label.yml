@@ -167,6 +167,9 @@ vendor/grpcurl:
 vendor/hcledit:
 - any: ["vendor/hcledit/**"]
   all: ["!bin/**", "!tasks/**"]
+vendor/hcloud:
+- any: ["vendor/hcloud/**"]
+  all: ["!bin/**", "!tasks/**"]
 vendor/helm:
 - any: ["vendor/helm/**"]
   all: ["!bin/**", "!tasks/**"]

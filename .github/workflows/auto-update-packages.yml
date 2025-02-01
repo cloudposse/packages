@@ -63,6 +63,7 @@ jobs:
         - gosu
         - grpcurl
         - hcledit
+        - hcloud
         - helm
         - helm2
         - helm3
