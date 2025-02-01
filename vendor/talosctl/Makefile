@@ -15,4 +15,4 @@ install:
 
 test:
 	printf 'TESTING binary by executing >>>: %s\n' '$(PACKAGE_EXE) version | grep -F $(PACKAGE_VERSION)'
-	$(PACKAGE_EXE) version | grep -F $(PACKAGE_VERSION)
+	$(PACKAGE_EXE) version --client | grep -F $(PACKAGE_VERSION)
