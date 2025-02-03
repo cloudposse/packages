@@ -3,8 +3,8 @@ module github.com/cloudposse/packages
 go 1.22.0
 
 require (
-	github.com/hashicorp/terraform-config-inspect v0.0.0-20241129133400-c404f8227ea6
-	github.com/spf13/pflag v1.0.5
+	github.com/hashicorp/terraform-config-inspect v0.0.0-20250203082807-efaa306e97b4
+	github.com/spf13/pflag v1.0.6
 )
 
 require (
@@ -15,10 +15,10 @@ require (
 	github.com/hashicorp/hcl v1.0.0 // indirect
 	github.com/hashicorp/hcl/v2 v2.23.0 // indirect
 	github.com/mitchellh/go-wordwrap v1.0.1 // indirect
-	github.com/zclconf/go-cty v1.15.1 // indirect
+	github.com/zclconf/go-cty v1.16.2 // indirect
 	golang.org/x/mod v0.22.0 // indirect
 	golang.org/x/sync v0.10.0 // indirect
-	golang.org/x/sys v0.28.0 // indirect
+	golang.org/x/sys v0.29.0 // indirect
 	golang.org/x/text v0.21.0 // indirect
-	golang.org/x/tools v0.28.0 // indirect
+	golang.org/x/tools v0.29.0 // indirect
 )
