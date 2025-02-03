@@ -16,6 +16,8 @@ include ../../tasks/Makefile.vendor_includes
 
 # Prevent build errors because of different versions of go in different workflows
 export GOTOOLCHAIN := local
+# Ensure binary is statically linked
+export CGOENABLED = 0
 
 version.go: VERSION
 	go generate
