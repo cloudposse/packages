@@ -33,5 +33,5 @@ RUN mkdir -p /packages/tmp
 RUN make -C /packages/install/ all
 
 WORKDIR /packages
-ENTRYPOINT ["/bin/bash"]
-CMD ["-l"]
+ENTRYPOINT []
+CMD ["/bin/bash"]
