@@ -28,5 +28,5 @@ RUN echo downloading go${GO_INSTALL_VERSION} && \
 WORKDIR /packages
 
 # Our base image is Python, with entrypoint into a Python shell, so we need to override the entrypoint
-ENTRYPOINT ["/bin/bash"]
-CMD ["-l"]
+ENTRYPOINT []
+CMD ["/bin/bash"]
