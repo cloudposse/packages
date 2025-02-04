@@ -7,7 +7,7 @@ Packages marked with * are not available on some architectures (usually missing 
 
 amazon-ecr-credential-helper 0.9.0      Automatically gets credentials for Amazon ECR on docker push/docker pull
 amtool                    0.28.0     Tool for interacting with the Alertmanager API
-argocd                    2.13.4     Declarative GitOpts for Kubernetes
+argocd                    2.14.1     Declarative GitOpts for Kubernetes
 assume-role*              0.3.2      Easily assume AWS roles in your terminal.
 atlantis                  0.32.0     Terraform For Teams
 atmos                     1.158.0    Universal Tool for DevOps and Cloud Automation
@@ -95,6 +95,7 @@ kubectl-1.28              1.28.15    Production-Grade Container Scheduling and M
 kubectl-1.29              1.29.13    Production-Grade Container Scheduling and Management (v1.29)
 kubectl-1.30              1.30.9     Production-Grade Container Scheduling and Management (v1.30)
 kubectl-1.31              1.31.5     Production-Grade Container Scheduling and Management (v1.31)
+kubectl-1.32              1.32.1     Production-Grade Container Scheduling and Management (v1.32)
 kubectx                   0.9.5      Switch faster between clusters and namespaces in kubectl
 kubens                    0.9.5      Switch faster between clusters and namespaces in kubectl
 kubeval*                  0.16.1     Validate your Kubernetes configuration files, supports multiple Kubernetes versions

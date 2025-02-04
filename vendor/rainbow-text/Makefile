@@ -12,7 +12,7 @@ export APK_PACKAGE_VERSION := $(shell cat VERSION | sed s/\+.*//)
 export INSTALL_PATH=/usr/local/bin
 
 # Ensure binary is statically linked
-export CGOENABLED = 0
+export CGO_ENABLED = 0
 
 # RPM should be relatively easy, but we will get to it later
 export PACKAGE_TYPES_DISABLED = rpm
