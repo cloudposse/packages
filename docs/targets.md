@@ -7,7 +7,7 @@ Packages marked with * are not available on some architectures (usually missing 
 
 amazon-ecr-credential-helper 0.9.0      Automatically gets credentials for Amazon ECR on docker push/docker pull
 amtool                    0.28.0     Tool for interacting with the Alertmanager API
-argocd                    2.13.4     Declarative GitOpts for Kubernetes
+argocd                    2.14.1     Declarative GitOpts for Kubernetes
 assume-role*              0.3.2      Easily assume AWS roles in your terminal.
 atlantis                  0.32.0     Terraform For Teams
 atmos                     1.157.0    Universal Tool for DevOps and Cloud Automation
