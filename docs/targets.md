@@ -22,7 +22,7 @@ cfssljson                 1.6.5      Cloudflare's PKI and TLS toolkit json parse
 chamber                   3.1.1      CLI for managing secrets
 cilium-cli                0.16.24    CLI to install, manage & troubleshoot Kubernetes clusters running Cilium
 cli53                     0.8.23     Command line tool for Amazon Route 53
-cloud-nuke                0.38.1     Tool for wiping an aws account DANGER absolutely do not use in production
+cloud-nuke                0.38.2     Tool for wiping an aws account DANGER absolutely do not use in production
 cloudflared               2025.2.0   Argo Tunnel client
 cloudposse-atlantis       OBSOLETE   Terraform For Teams, enhanced by Cloud Posse
 codefresh*                0.88.5     Codefresh CLI
