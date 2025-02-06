@@ -24,3 +24,10 @@ RUN gem install --no-document fpm --ignore-dependencies -N
 
 
 WORKDIR /packages
+
+COPY bin/curl-auth /usr/local/bin/curl-auth
+RUN real_curl="$(which curl)" && \
+    mv "${real_curl}" "${real_curl}".real && \
+    mv /usr/local/bin/curl-auth "${real_curl}" && \
+    chmod +x "${real_curl}"
+

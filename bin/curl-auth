@@ -1,0 +1,26 @@
+#!/bin/bash
+
+# Authenticate with GitHub using a token when calling the API via curl
+# Needed to get past rate limits with Cloudsmith GitHub action
+
+curl_wrapper() {
+  local args=("$@")
+  local url=""
+
+  # Find the URL argument
+  for arg in "${args[@]}"; do
+    if [[ "$arg" =~ ^https?:// ]]; then
+      url="$arg"
+      break
+    fi
+  done
+
+  # Check if URL is for api.github.com and GITHUB_TOKEN is set
+  if [[ -n "$GITHUB_TOKEN" && -n "$url" && "$url" =~ ^https?://api\.github\.com ]]; then
+    exec curl.real -H "Authorization: Bearer $GITHUB_TOKEN" "${args[@]}"
+  else
+    exec curl.real "${args[@]}"
+  fi
+}
+
+curl_wrapper "$@"
