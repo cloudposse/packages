@@ -181,7 +181,7 @@ jobs:
         include:
         # Default value for runs-on. Original matrix values will not be overridden, but added ones (like runs-on) can be.
         # See https://docs.github.com/en/actions/using-jobs/using-a-matrix-for-your-jobs#expanding-or-adding-matrix-configurations
-        - runs-on: "runs-on=${{ github.run_id }}/runner=2cpu-linux-arm64"
+        - runs-on: "runs-on=${{ github.run_id }}/runner=packages-arm64"
         # By including `arch: amd64` here, we override the `runs-on` value when the matrix `arch` is `amd64`.
         # This also forces the matrix to include `arch: amd64` even if it is not in the original matrix.
         # This is why we do not default for amd64 and then override for arm64. (Because it would force arm64 to be included, and some tools are not available for arm64.)
