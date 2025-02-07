@@ -1,8 +1,0 @@
-# This file, VERSIONS-SKIP, is optional and rarely needed.
-# It contains a list of versions to skip when updating
-# the current version (auto-update), usually because there is
-# something wrong with the release. Each version must be on a
-# separate line with no leading or trailing spaces.
-# Blank lines are ignored.
-
-3.1.14
