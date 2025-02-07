@@ -27,6 +27,13 @@ RUN echo downloading go${GO_INSTALL_VERSION} && \
 
 WORKDIR /packages
 
+# Add a wrapper script to authenticate curl requests when directed to GitHub API
+COPY bin/curl-auth /usr/local/bin/curl-auth
+RUN real_curl="$(which curl)" && \
+    mv "${real_curl}" "${real_curl}".real && \
+    mv /usr/local/bin/curl-auth "${real_curl}" && \
+    chmod +x "${real_curl}"
+
 # Our base image is Python, with entrypoint into a Python shell, so we need to override the entrypoint
 ENTRYPOINT []
 CMD ["/bin/bash"]
