@@ -10,7 +10,7 @@ amtool                    0.28.0     Tool for interacting with the Alertmanager 
 argocd                    2.14.2     Declarative GitOpts for Kubernetes
 assume-role*              0.3.2      Easily assume AWS roles in your terminal.
 atlantis                  0.33.0     Terraform For Teams
-atmos                     1.160.4    Universal Tool for DevOps and Cloud Automation
+atmos                     1.160.5    Universal Tool for DevOps and Cloud Automation
 awless*                   0.1.11     A Mighty CLI for AWS
 aws-copilot-cli           1.34.0     Tool for developers to build, release and operate containerized applications on AWS App Runner or Amazon ECS on AWS Fargate.
 aws-iam-authenticator     0.6.30     A tool to use AWS IAM credentials to authenticate to a Kubernetes cluster
