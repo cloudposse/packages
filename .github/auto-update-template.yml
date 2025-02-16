@@ -23,10 +23,12 @@ jobs:
 %PACKAGE_LIST%
     steps:
       - uses: actions/checkout@v4
-      # Use updated `go` version because some packages are compiled or fetched with `go`
-      - uses: actions/setup-go@v5
+      # Use specific `go` version when packages updates are fetched with `go`
+      - if: matrix.package-name == 'terraform-config-inspect'
+        uses: actions/setup-go@v5
         with:
-          go-version: 'stable'
+          cache: false
+          go-version-file: 'vendor/${{matrix.package-name}}/go.mod'
 
       - name: Get current package information
         shell: bash
