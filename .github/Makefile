@@ -29,12 +29,17 @@ workflows/auto-update-packages.yml: auto-update-template.yml .ALWAYS
 # It is not practical to use `envsubst` or `gomplate` if we need to escape every interpolation.
 workflows/%.yml: .ALWAYS
 	@set -e; enabled=$$(make -sC ../vendor/$* info/package-enabled); \
-	if [[ $$enabled != "false" ]]; then \
-  		echo updating $@; \
+	updating=$$(make -sC ../vendor/$* info/auto-update-enabled); \
+	if [[ $$enabled != "false" ]] && [[ $$updating == "true" ]]; then \
+		echo updating $@; \
 		sed 's/%PACKAGE_NAME%/$*/g' package-template.yml | sed 's/%PACKAGE_JSON_NAME%/$(subst .,_,$*)/g' > $@; \
 		@git ls-files --error-unmatch $@ &> /dev/null || git add $@; \
 	else \
-		echo DELETING workflow $@ because package is disabled; \
+		if [[ $$updating != "true" ]]; then \
+			echo DELETING workflow $@ because auto-update is disabled; \
+		else \
+			echo DELETING workflow $@ because package is disabled; \
+		fi; \
 		git rm -f --ignore-unmatch $@; \
 	fi
 

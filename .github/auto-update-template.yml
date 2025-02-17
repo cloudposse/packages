@@ -55,8 +55,8 @@ jobs:
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
         run: |
           make init
-          make readme/deps
-          make readme
+          make readme/deps || { printenv; printf "\n^^^env above, vvv make readme/deps debug below\n\n"; make -d readme/deps; }
+          make readme || { printenv; printf "\n^^^env above, vvv make readme debug below\n\n"; make -d readme; }
 
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v6

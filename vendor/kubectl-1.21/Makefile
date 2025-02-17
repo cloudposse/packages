@@ -4,10 +4,8 @@ export PACKAGE_NAME = $(MASTER_PACKAGE_NAME)-$(MAJOR_VERSION)
 export PACKAGE_REPO_NAME = kubernetes
 export INSTALL_DIR = /usr/share/${MASTER_PACKAGE_NAME}/${MAJOR_VERSION}/bin
 
-# This version is technically past end-of-life, so we allow updates to fail,
-# but we keep checking anyway in case there is a security patch.
-# See https://kubernetes.io/releases/patch-releases/#non-active-branch-history
-export AUTO_UPDATE_ENABLED = softfail
+# This version is past end-of-life and will no longer be updated
+export AUTO_UPDATE_ENABLED = false
 
 include ../../tasks/Makefile.vendor_includes
 
