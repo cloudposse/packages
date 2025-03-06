@@ -12,7 +12,8 @@ export VENDOR ?= sahsanu
 export APK_BUILD_TEMPLATE ?= APKBUILD.github-binary
 export APKBUILD_DEPENDS += util-linux bash
 export DEB_FPM_EXTRA_ARGS += --depends bsdmainutils
-GITHUB_VERSION = $(shell echo $(PACKAGE_VERSION) | sed -E 's/\.0$$//')
+# prior to v0.23.0, versions did not have a trailing .0, they were like v0.22
+# GITHUB_VERSION = $(shell echo $(PACKAGE_VERSION) | sed -E 's/\.0$$//')
 export DOWNLOAD_URL ?= https://raw.githubusercontent.com/sahsanu/lectl/v$(GITHUB_VERSION)/lectl
 
 include ../../tasks/Makefile.vendor_includes
