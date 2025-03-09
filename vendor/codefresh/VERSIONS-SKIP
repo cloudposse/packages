@@ -1,0 +1,11 @@
+# This file, VERSIONS-SKIP, is optional and rarely needed.
+# It contains a list of versions to skip when updating
+# the current version (auto-update), usually because there is
+# something wrong with the release. Each version must be on a
+# separate line with no leading or trailing spaces.
+# Blank lines are ignored.
+
+# Codefresh has not published a working ARM release since 0.87.6
+# See https://github.com/codefresh-io/cli/issues/877
+
+0.88.5
