@@ -133,7 +133,7 @@ terraform-1 \[frozen\] | 1.5.7      | Terraform enables you to safely and predic
 terraform_0.11 \[frozen\] | 0.11.15    | Terraform (Deprecated package. Use terraform-0.11 instead)
 terraform_0.12 \[frozen\] | 0.12.31    | Terraform (Deprecated package. Use terraform-0.12 instead)
 terraform_0.13 \[frozen\] | 0.13.7     | Terraform (Deprecated package. Use terraform-0.13 instead)
-[![terragrunt](https://github.com/cloudposse/packages/actions/workflows/terragrunt.yml/badge.svg?branch=main)](https://github.com/cloudposse/packages/actions?query=workflow%3Aterragrunt) | 0.76.1     | Terragrunt is a thin wrapper for Terraform that provides extra tools for working with multiple Terraform modules.
+[![terragrunt](https://github.com/cloudposse/packages/actions/workflows/terragrunt.yml/badge.svg?branch=main)](https://github.com/cloudposse/packages/actions?query=workflow%3Aterragrunt) | 0.76.2     | Terragrunt is a thin wrapper for Terraform that provides extra tools for working with multiple Terraform modules.
 [![terrahelp](https://github.com/cloudposse/packages/actions/workflows/terrahelp.yml/badge.svg?branch=main)](https://github.com/cloudposse/packages/actions?query=workflow%3Aterrahelp) | 0.7.5      | Terrahelp is as a command line utility that provides useful tricks like masking of terraform output.
 [![tflint](https://github.com/cloudposse/packages/actions/workflows/tflint.yml/badge.svg?branch=main)](https://github.com/cloudposse/packages/actions?query=workflow%3Atflint) | 0.55.1     | A Pluggable Terraform Linter
 [![tfschema](https://github.com/cloudposse/packages/actions/workflows/tfschema.yml/badge.svg?branch=main)](https://github.com/cloudposse/packages/actions?query=workflow%3Atfschema) | 0.7.9      | A schema inspector for Terraform providers
