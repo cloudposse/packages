@@ -13,7 +13,7 @@ atlantis                  0.34.0     Terraform For Teams
 atmos                     1.169.0    Universal Tool for DevOps and Cloud Automation
 awless*                   0.1.11     A Mighty CLI for AWS
 aws-copilot-cli           1.34.0     Tool for developers to build, release and operate containerized applications on AWS App Runner or Amazon ECS on AWS Fargate.
-aws-iam-authenticator     0.6.30     A tool to use AWS IAM credentials to authenticate to a Kubernetes cluster
+aws-iam-authenticator     0.6.31     A tool to use AWS IAM credentials to authenticate to a Kubernetes cluster
 aws-nuke                  2.25.0     A highly configurable way to wipe non-prod aws accounts. WARNING do not use in prod
 aws-okta                  OBSOLETE   aws-okta allows users to authenticate with AWS using Okta credentials
 aws-vault                 7.2.0      A vault for securely storing and accessing AWS credentials in development environments
