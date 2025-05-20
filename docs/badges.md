@@ -1,5 +1,5 @@
 ## Package Build Status
-| Build Status (* means `amd64` only) | Version | Description |
+| Build Status (* means `amd64` only) | Version | Description |
 | ----------------------------------- | ------- | ----------- |
 [![amazon-ecr-credential-helper](https://github.com/cloudposse/packages/actions/workflows/amazon-ecr-credential-helper.yml/badge.svg?branch=main)](https://github.com/cloudposse/packages/actions?query=workflow%3Aamazon-ecr-credential-helper) | 0.9.1      | Automatically gets credentials for Amazon ECR on docker push/docker pull
 [![amtool](https://github.com/cloudposse/packages/actions/workflows/amtool.yml/badge.svg?branch=main)](https://github.com/cloudposse/packages/actions?query=workflow%3Aamtool) | 0.28.1     | Tool for interacting with the Alertmanager API
