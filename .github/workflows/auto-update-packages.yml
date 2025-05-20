@@ -30,6 +30,7 @@ jobs:
         - aws-copilot-cli
         - aws-iam-authenticator
         - aws-nuke
+        - aws-okta
         - aws-vault
         - cfssl
         - cfssljson
@@ -38,15 +39,19 @@ jobs:
         - cli53
         - cloud-nuke
         - cloudflared
+        - cloudposse-atlantis
         - codefresh
         - conftest
+        - consul
         - ctop
         - direnv
         - doctl
+        - duffle
         - ec2-instance-selector
         - ecspresso
         - emailcli
         - envcli
+        - fargate
         - fetch
         - figurine
         - fzf
@@ -61,6 +66,7 @@ jobs:
         - gonsul
         - goofys
         - gosu
+        - gotop
         - grpcurl
         - hcledit
         - helm
@@ -71,6 +77,7 @@ jobs:
         - hugo
         - infracost
         - jp
+        - jq
         - json2hcl
         - jx
         - k3d
@@ -80,8 +87,20 @@ jobs:
         - kfctl
         - kind
         - kops
+        - kops-1.12
+        - krew
         - kubecron
         - kubectl
+        - kubectl-1.13
+        - kubectl-1.14
+        - kubectl-1.15
+        - kubectl-1.16
+        - kubectl-1.17
+        - kubectl-1.18
+        - kubectl-1.19
+        - kubectl-1.20
+        - kubectl-1.21
+        - kubectl-1.22
         - kubectl-1.23
         - kubectl-1.24
         - kubectl-1.25
@@ -99,8 +118,10 @@ jobs:
         - lectl
         - minikube
         - misspell
+        - nomad
         - opa
         - pack
+        - packer
         - pandoc
         - pgmetrics
         - pluto
@@ -110,7 +131,10 @@ jobs:
         - rakkess
         - rancher
         - rbac-lookup
+        - retry
         - saml2aws
+        - scenery
+        - sentinel
         - sentry-cli
         - shellcheck
         - shfmt
@@ -122,20 +146,36 @@ jobs:
         - stern
         - sudosh
         - teleport
+        - teleport-4.2
+        - teleport-4.3
+        - teleport-4.4
+        - teleport-5.0
+        - terraform
+        - terraform-0.11
+        - terraform-0.12
+        - terraform-0.13
         - terraform-0.14
         - terraform-0.15
+        - terraform-1
         - terraform-config-inspect
         - terraform-docs
         - terraform-module-versions
+        - terraform_0.11
+        - terraform_0.12
+        - terraform_0.13
         - terragrunt
         - terrahelp
+        - tfenv
         - tflint
+        - tfmask
         - tfschema
         - tfsec
         - thanos
         - trivy
+        - turf
         - variant
         - variant2
+        - vault
         - velero
         - vendir
         - venona
