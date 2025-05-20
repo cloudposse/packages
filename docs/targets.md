@@ -54,7 +54,7 @@ gosu                      1.17.0     Simple Go-based setuid+setgid+setgroups+exe
 gotop                     3.0.0      A terminal based graphical activity monitor inspired by gtop and vtop
 grpcurl                   1.9.3      Like cURL, but for gRPC: Command-line tool for interacting with gRPC servers
 hcledit                   0.2.17     A command line editor for HCL
-helm                      3.17.3     The Kubernetes Package Manager
+helm                      3.18.0     The Kubernetes Package Manager
 helm2                     2.17.0     The Kubernetes Package Manager
 helm3                     3.17.3     The Kubernetes Package Manager
 helmfile                  0.144.0    Deploy Kubernetes Helm Charts
