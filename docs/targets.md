@@ -70,7 +70,7 @@ k6                        1.0.0      A modern load testing tool, using Go and Ja
 k9s                       0.50.6     Kubernetes CLI To Manage Your Clusters In Style
 katafygio                 0.8.3      K8s continuous backup to git
 kfctl*                    1.2.0      Machine Learning Toolkit for Kubernetes
-kind                      0.28.0     A tool for running local Kubernetes clusters using Docker
+kind                      0.29.0     A tool for running local Kubernetes clusters using Docker
 kops                      1.32.0     Kubernetes Operations (kops) - Production Grade K8s Installation, Upgrades, and Management
 kops-1.12                 OBSOLETE   Kubernetes Operations (kops) - Production Grade K8s Installation, Upgrades, and Management
 krew                      0.4.1      Kubectl plugin manager
