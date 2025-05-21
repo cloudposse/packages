@@ -1,12 +1,12 @@
 ## Package Build Status
-| Build Status (* means `amd64` only) | Version | Description |
+| Build Status (* means `amd64` only) | Version | Description |
 | ----------------------------------- | ------- | ----------- |
 [![amazon-ecr-credential-helper](https://github.com/cloudposse/packages/actions/workflows/amazon-ecr-credential-helper.yml/badge.svg?branch=main)](https://github.com/cloudposse/packages/actions?query=workflow%3Aamazon-ecr-credential-helper) | 0.9.1      | Automatically gets credentials for Amazon ECR on docker push/docker pull
 [![amtool](https://github.com/cloudposse/packages/actions/workflows/amtool.yml/badge.svg?branch=main)](https://github.com/cloudposse/packages/actions?query=workflow%3Aamtool) | 0.28.1     | Tool for interacting with the Alertmanager API
 [![argocd](https://github.com/cloudposse/packages/actions/workflows/argocd.yml/badge.svg?branch=main)](https://github.com/cloudposse/packages/actions?query=workflow%3Aargocd) | 3.0.2      | Declarative GitOpts for Kubernetes
 [![assume-role](https://github.com/cloudposse/packages/actions/workflows/assume-role.yml/badge.svg?branch=main)](https://github.com/cloudposse/packages/actions?query=workflow%3Aassume-role)* | 0.3.2      | Easily assume AWS roles in your terminal.
 [![atlantis](https://github.com/cloudposse/packages/actions/workflows/atlantis.yml/badge.svg?branch=main)](https://github.com/cloudposse/packages/actions?query=workflow%3Aatlantis) | 0.34.0     | Terraform For Teams
-[![atmos](https://github.com/cloudposse/packages/actions/workflows/atmos.yml/badge.svg?branch=main)](https://github.com/cloudposse/packages/actions?query=workflow%3Aatmos) | 1.175.0    | Universal Tool for DevOps and Cloud Automation
+[![atmos](https://github.com/cloudposse/packages/actions/workflows/atmos.yml/badge.svg?branch=main)](https://github.com/cloudposse/packages/actions?query=workflow%3Aatmos) | 1.176.0    | Universal Tool for DevOps and Cloud Automation
 [![awless](https://github.com/cloudposse/packages/actions/workflows/awless.yml/badge.svg?branch=main)](https://github.com/cloudposse/packages/actions?query=workflow%3Aawless)* | 0.1.11     | A Mighty CLI for AWS
 [![aws-copilot-cli](https://github.com/cloudposse/packages/actions/workflows/aws-copilot-cli.yml/badge.svg?branch=main)](https://github.com/cloudposse/packages/actions?query=workflow%3Aaws-copilot-cli) | 1.34.1     | Tool for developers to build, release and operate containerized applications on AWS App Runner or Amazon ECS on AWS Fargate.
 [![aws-iam-authenticator](https://github.com/cloudposse/packages/actions/workflows/aws-iam-authenticator.yml/badge.svg?branch=main)](https://github.com/cloudposse/packages/actions?query=workflow%3Aaws-iam-authenticator) | 0.7.2      | A tool to use AWS IAM credentials to authenticate to a Kubernetes cluster
@@ -133,7 +133,7 @@ terraform-1 \[frozen\] | 1.5.7      | Terraform enables you to safely and predic
 terraform_0.11 \[frozen\] | 0.11.15    | Terraform (Deprecated package. Use terraform-0.11 instead)
 terraform_0.12 \[frozen\] | 0.12.31    | Terraform (Deprecated package. Use terraform-0.12 instead)
 terraform_0.13 \[frozen\] | 0.13.7     | Terraform (Deprecated package. Use terraform-0.13 instead)
-[![terragrunt](https://github.com/cloudposse/packages/actions/workflows/terragrunt.yml/badge.svg?branch=main)](https://github.com/cloudposse/packages/actions?query=workflow%3Aterragrunt) | 0.78.4     | Terragrunt is a thin wrapper for Terraform that provides extra tools for working with multiple Terraform modules.
+[![terragrunt](https://github.com/cloudposse/packages/actions/workflows/terragrunt.yml/badge.svg?branch=main)](https://github.com/cloudposse/packages/actions?query=workflow%3Aterragrunt) | 0.79.0     | Terragrunt is a thin wrapper for Terraform that provides extra tools for working with multiple Terraform modules.
 [![terrahelp](https://github.com/cloudposse/packages/actions/workflows/terrahelp.yml/badge.svg?branch=main)](https://github.com/cloudposse/packages/actions?query=workflow%3Aterrahelp) | 0.7.5      | Terrahelp is as a command line utility that provides useful tricks like masking of terraform output.
 [![tflint](https://github.com/cloudposse/packages/actions/workflows/tflint.yml/badge.svg?branch=main)](https://github.com/cloudposse/packages/actions?query=workflow%3Atflint) | 0.57.0     | A Pluggable Terraform Linter
 [![tfschema](https://github.com/cloudposse/packages/actions/workflows/tfschema.yml/badge.svg?branch=main)](https://github.com/cloudposse/packages/actions?query=workflow%3Atfschema) | 0.7.9      | A schema inspector for Terraform providers
