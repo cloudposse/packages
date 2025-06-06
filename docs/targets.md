@@ -21,7 +21,7 @@ cfssl                     1.6.5      Cloudflare's PKI and TLS toolkit
 cfssljson                 1.6.5      Cloudflare's PKI and TLS toolkit json parser
 chamber                   3.1.2      CLI for managing secrets
 cilium-cli                0.18.4     CLI to install, manage & troubleshoot Kubernetes clusters running Cilium
-cli53                     0.8.23     Command line tool for Amazon Route 53
+cli53                     0.8.24     Command line tool for Amazon Route 53
 cloud-nuke                0.40.0     Tool for wiping an aws account DANGER absolutely do not use in production
 cloudflared               2025.5.0   Argo Tunnel client
 cloudposse-atlantis       OBSOLETE   Terraform For Teams, enhanced by Cloud Posse
