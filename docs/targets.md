@@ -29,7 +29,7 @@ codefresh                 0.89.2     Codefresh CLI
 conftest                  0.62.0     Test your configuration files using Open Policy Agent
 consul                    1.16.4     Hashicorp consul
 ctop                      0.7.7      Top-like interface for container metrics
-direnv                    2.37.0     Unclutter your .profile
+direnv                    2.37.1     Unclutter your .profile
 doctl                     1.133.0    A command line tool for DigitalOcean services
 duffle                    OBSOLETE   CNAB installer
 ec2-instance-selector     3.1.1      A CLI tool and go library which recommends instance types based on resource criteria like vcpus and memory
