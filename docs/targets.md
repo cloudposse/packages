@@ -30,7 +30,7 @@ conftest                  0.62.0     Test your configuration files using Open Po
 consul                    1.16.4     Hashicorp consul
 ctop                      0.7.7      Top-like interface for container metrics
 direnv                    2.37.1     Unclutter your .profile
-doctl                     1.134.0    A command line tool for DigitalOcean services
+doctl                     1.135.0    A command line tool for DigitalOcean services
 duffle                    OBSOLETE   CNAB installer
 ec2-instance-selector     3.1.1      A CLI tool and go library which recommends instance types based on resource criteria like vcpus and memory
 ecspresso                 2.5.0      Ecspresso is a deployment tool for Amazon ECS
