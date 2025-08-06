@@ -116,7 +116,7 @@ packer \[frozen\] | 1.9.5      | Packer is a tool for creating identical machine
 [![sshm](https://github.com/cloudposse/packages/actions/workflows/sshm.yml/badge.svg?branch=main)](https://github.com/cloudposse/packages/actions?query=workflow%3Asshm)* | 1.2.2      | Easy connect on EC2 instances thanks to AWS System Manager Agent
 [![stern](https://github.com/cloudposse/packages/actions/workflows/stern.yml/badge.svg?branch=main)](https://github.com/cloudposse/packages/actions?query=workflow%3Astern) | 1.32.0     | ⎈ Multi pod and container log tailing for Kubernetes
 [![sudosh](https://github.com/cloudposse/packages/actions/workflows/sudosh.yml/badge.svg?branch=main)](https://github.com/cloudposse/packages/actions?query=workflow%3Asudosh) | 0.3.0      | Shell wrapper to run a login shell with `sudo` as the current user for the purpose of audit logging
-[![teleport](https://github.com/cloudposse/packages/actions/workflows/teleport.yml/badge.svg?branch=main)](https://github.com/cloudposse/packages/actions?query=workflow%3Ateleport) | 18.1.1     | Secure Access for Developers that doesn't get in the way.
+[![teleport](https://github.com/cloudposse/packages/actions/workflows/teleport.yml/badge.svg?branch=main)](https://github.com/cloudposse/packages/actions?query=workflow%3Ateleport) | 18.1.2     | Secure Access for Developers that doesn't get in the way.
 teleport-4.3* \[frozen\] | 4.3.10     | Privileged access management for elastic infrastructure.
 teleport-4.4* \[frozen\] | 4.4.12     | Privileged access management for elastic infrastructure.
 teleport-5.0* \[frozen\] | 5.0.2      | Secure Access for Developers that doesn't get in the way.
