@@ -482,7 +482,7 @@ vault \[frozen\] | 1.14.8     | Hashicorp vault
 [![venona](https://github.com/cloudposse/packages/actions/workflows/venona.yml/badge.svg?branch=main)](https://github.com/cloudposse/packages/actions?query=workflow%3Avenona)* | 1.10.5     | Codefresh runtime-environment agent
 [![vert](https://github.com/cloudposse/packages/actions/workflows/vert.yml/badge.svg?branch=main)](https://github.com/cloudposse/packages/actions?query=workflow%3Avert) | 0.1.0      | Simple CLI for comparing two or more versions
 [![yajsv](https://github.com/cloudposse/packages/actions/workflows/yajsv.yml/badge.svg?branch=main)](https://github.com/cloudposse/packages/actions?query=workflow%3Ayajsv)* | 1.4.1      | Yet Another JSON Schema Validator [CLI]
-[![yq](https://github.com/cloudposse/packages/actions/workflows/yq.yml/badge.svg?branch=main)](https://github.com/cloudposse/packages/actions?query=workflow%3Ayq) | 4.47.2     | yq is a portable command-line YAML processor
+[![yq](https://github.com/cloudposse/packages/actions/workflows/yq.yml/badge.svg?branch=main)](https://github.com/cloudposse/packages/actions?query=workflow%3Ayq) | 4.48.1     | yq is a portable command-line YAML processor
 
 
 ## Related Projects
