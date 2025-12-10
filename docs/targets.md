@@ -9,7 +9,7 @@ amazon-ecr-credential-helper 0.11.0     Automatically gets credentials for Amazo
 amtool                    0.29.0     Tool for interacting with the Alertmanager API
 argocd                    3.2.1      Declarative GitOpts for Kubernetes
 assume-role*              0.3.2      Easily assume AWS roles in your terminal.
-atlantis                  0.37.1     Terraform For Teams
+atlantis                  0.38.0     Terraform For Teams
 atmos                     1.201.0    Universal Tool for DevOps and Cloud Automation
 awless*                   0.1.11     A Mighty CLI for AWS
 aws-copilot-cli           1.34.1     Tool for developers to build, release and operate containerized applications on AWS App Runner or Amazon ECS on AWS Fargate.
@@ -75,7 +75,7 @@ kops                      1.34.1     Kubernetes Operations (kops) - Production G
 kops-1.12                 OBSOLETE   Kubernetes Operations (kops) - Production Grade K8s Installation, Upgrades, and Management
 krew                      0.4.1      Kubectl plugin manager
 kubecron*                 2.0.0      Utilities to manage kubernetes cronjobs. Run a CronJob manually for test purposes. Suspend/unsuspend a CronJob
-kubectl                   1.34.2     Production-Grade Container Scheduling and Management
+kubectl                   1.34.3     Production-Grade Container Scheduling and Management
 kubectl-1.13              1.13.12    Production-Grade Container Scheduling and Management (v1.13)
 kubectl-1.14              1.14.10    Production-Grade Container Scheduling and Management (v1.14)
 kubectl-1.15              1.15.12    Production-Grade Container Scheduling and Management (v1.15)

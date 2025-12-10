@@ -5,7 +5,7 @@
 [![amtool](https://github.com/cloudposse/packages/actions/workflows/amtool.yml/badge.svg?branch=main)](https://github.com/cloudposse/packages/actions?query=workflow%3Aamtool) | 0.29.0     | Tool for interacting with the Alertmanager API
 [![argocd](https://github.com/cloudposse/packages/actions/workflows/argocd.yml/badge.svg?branch=main)](https://github.com/cloudposse/packages/actions?query=workflow%3Aargocd) | 3.2.1      | Declarative GitOpts for Kubernetes
 [![assume-role](https://github.com/cloudposse/packages/actions/workflows/assume-role.yml/badge.svg?branch=main)](https://github.com/cloudposse/packages/actions?query=workflow%3Aassume-role)* | 0.3.2      | Easily assume AWS roles in your terminal.
-[![atlantis](https://github.com/cloudposse/packages/actions/workflows/atlantis.yml/badge.svg?branch=main)](https://github.com/cloudposse/packages/actions?query=workflow%3Aatlantis) | 0.37.1     | Terraform For Teams
+[![atlantis](https://github.com/cloudposse/packages/actions/workflows/atlantis.yml/badge.svg?branch=main)](https://github.com/cloudposse/packages/actions?query=workflow%3Aatlantis) | 0.38.0     | Terraform For Teams
 [![atmos](https://github.com/cloudposse/packages/actions/workflows/atmos.yml/badge.svg?branch=main)](https://github.com/cloudposse/packages/actions?query=workflow%3Aatmos) | 1.201.0    | Universal Tool for DevOps and Cloud Automation
 [![awless](https://github.com/cloudposse/packages/actions/workflows/awless.yml/badge.svg?branch=main)](https://github.com/cloudposse/packages/actions?query=workflow%3Aawless)* | 0.1.11     | A Mighty CLI for AWS
 [![aws-copilot-cli](https://github.com/cloudposse/packages/actions/workflows/aws-copilot-cli.yml/badge.svg?branch=main)](https://github.com/cloudposse/packages/actions?query=workflow%3Aaws-copilot-cli) | 1.34.1     | Tool for developers to build, release and operate containerized applications on AWS App Runner or Amazon ECS on AWS Fargate.
@@ -65,7 +65,7 @@ gotop \[frozen\] | 3.0.0      | A terminal based graphical activity monitor insp
 [![kops](https://github.com/cloudposse/packages/actions/workflows/kops.yml/badge.svg?branch=main)](https://github.com/cloudposse/packages/actions?query=workflow%3Akops) | 1.34.1     | Kubernetes Operations (kops) - Production Grade K8s Installation, Upgrades, and Management
 krew \[frozen\] | 0.4.1      | Kubectl plugin manager
 [![kubecron](https://github.com/cloudposse/packages/actions/workflows/kubecron.yml/badge.svg?branch=main)](https://github.com/cloudposse/packages/actions?query=workflow%3Akubecron)* | 2.0.0      | Utilities to manage kubernetes cronjobs. Run a CronJob manually for test purposes. Suspend/unsuspend a CronJob
-[![kubectl](https://github.com/cloudposse/packages/actions/workflows/kubectl.yml/badge.svg?branch=main)](https://github.com/cloudposse/packages/actions?query=workflow%3Akubectl) | 1.34.2     | Production-Grade Container Scheduling and Management
+[![kubectl](https://github.com/cloudposse/packages/actions/workflows/kubectl.yml/badge.svg?branch=main)](https://github.com/cloudposse/packages/actions?query=workflow%3Akubectl) | 1.34.3     | Production-Grade Container Scheduling and Management
 kubectl-1.13 \[frozen\] | 1.13.12    | Production-Grade Container Scheduling and Management (v1.13)
 kubectl-1.14 \[frozen\] | 1.14.10    | Production-Grade Container Scheduling and Management (v1.14)
 kubectl-1.15 \[frozen\] | 1.15.12    | Production-Grade Container Scheduling and Management (v1.15)
