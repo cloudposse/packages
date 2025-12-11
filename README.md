@@ -380,7 +380,7 @@ consul \[frozen\] | 1.16.4     | Hashicorp consul
 gotop \[frozen\] | 3.0.0      | A terminal based graphical activity monitor inspired by gtop and vtop
 [![grpcurl](https://github.com/cloudposse/packages/actions/workflows/grpcurl.yml/badge.svg?branch=main)](https://github.com/cloudposse/packages/actions?query=workflow%3Agrpcurl) | 1.9.3      | Like cURL, but for gRPC: Command-line tool for interacting with gRPC servers
 [![hcledit](https://github.com/cloudposse/packages/actions/workflows/hcledit.yml/badge.svg?branch=main)](https://github.com/cloudposse/packages/actions?query=workflow%3Ahcledit) | 0.2.17     | A command line editor for HCL
-[![helm](https://github.com/cloudposse/packages/actions/workflows/helm.yml/badge.svg?branch=main)](https://github.com/cloudposse/packages/actions?query=workflow%3Ahelm) | 4.0.1      | The Kubernetes Package Manager
+[![helm](https://github.com/cloudposse/packages/actions/workflows/helm.yml/badge.svg?branch=main)](https://github.com/cloudposse/packages/actions?query=workflow%3Ahelm) | 4.0.2      | The Kubernetes Package Manager
 [![helm2](https://github.com/cloudposse/packages/actions/workflows/helm2.yml/badge.svg?branch=main)](https://github.com/cloudposse/packages/actions?query=workflow%3Ahelm2) | 2.17.0     | The Kubernetes Package Manager
 [![helm3](https://github.com/cloudposse/packages/actions/workflows/helm3.yml/badge.svg?branch=main)](https://github.com/cloudposse/packages/actions?query=workflow%3Ahelm3) | 3.19.3     | The Kubernetes Package Manager
 [![helmfile](https://github.com/cloudposse/packages/actions/workflows/helmfile.yml/badge.svg?branch=main)](https://github.com/cloudposse/packages/actions?query=workflow%3Ahelmfile) | 0.144.0    | Deploy Kubernetes Helm Charts
