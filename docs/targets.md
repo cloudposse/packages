@@ -99,7 +99,7 @@ kubectl-1.32              1.32.11    Production-Grade Container Scheduling and M
 kubectx                   0.9.5      Switch faster between clusters and namespaces in kubectl
 kubens                    0.9.5      Switch faster between clusters and namespaces in kubectl
 kubeval*                  0.16.1     Validate your Kubernetes configuration files, supports multiple Kubernetes versions
-lazydocker                0.24.2     The lazier way to manage everything docker
+lazydocker                0.24.3     The lazier way to manage everything docker
 lectl*                    0.23.0     Script to check issued certificates by Let's Encrypt on CTL (Certificate Transparency Log) using https://crt.sh
 minikube                  1.37.0     Run Kubernetes locally
 misspell*                 0.3.4      Correct commonly misspelled English words in source files
