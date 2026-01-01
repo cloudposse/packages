@@ -385,7 +385,7 @@ gotop \[frozen\] | 3.0.0      | A terminal based graphical activity monitor insp
 [![helm3](https://github.com/cloudposse/packages/actions/workflows/helm3.yml/badge.svg?branch=main)](https://github.com/cloudposse/packages/actions?query=workflow%3Ahelm3) | 3.19.4     | The Kubernetes Package Manager
 [![helmfile](https://github.com/cloudposse/packages/actions/workflows/helmfile.yml/badge.svg?branch=main)](https://github.com/cloudposse/packages/actions?query=workflow%3Ahelmfile) | 0.144.0    | Deploy Kubernetes Helm Charts
 [![htmltest](https://github.com/cloudposse/packages/actions/workflows/htmltest.yml/badge.svg?branch=main)](https://github.com/cloudposse/packages/actions?query=workflow%3Ahtmltest) | 0.17.0     | :white_check_mark: Test generated HTML for problems
-[![hugo](https://github.com/cloudposse/packages/actions/workflows/hugo.yml/badge.svg?branch=main)](https://github.com/cloudposse/packages/actions?query=workflow%3Ahugo) | 0.153.5    | The world’s fastest framework for building websites.
+[![hugo](https://github.com/cloudposse/packages/actions/workflows/hugo.yml/badge.svg?branch=main)](https://github.com/cloudposse/packages/actions?query=workflow%3Ahugo) | 0.154.0    | The world’s fastest framework for building websites.
 [![infracost](https://github.com/cloudposse/packages/actions/workflows/infracost.yml/badge.svg?branch=main)](https://github.com/cloudposse/packages/actions?query=workflow%3Ainfracost) | 0.10.43    | Cloud cost estimates for Terraform
 [![jp](https://github.com/cloudposse/packages/actions/workflows/jp.yml/badge.svg?branch=main)](https://github.com/cloudposse/packages/actions?query=workflow%3Ajp) | 0.2.1      | Command line interface to JMESPath
 [![json2hcl](https://github.com/cloudposse/packages/actions/workflows/json2hcl.yml/badge.svg?branch=main)](https://github.com/cloudposse/packages/actions?query=workflow%3Ajson2hcl) | 0.2.0      | Convert JSON to HCL, and vice versa
@@ -568,7 +568,7 @@ All other trademarks referenced herein are the property of their respective owne
 
 
 ---
-Copyright © 2017-2025 [Cloud Posse, LLC](https://cpco.io/copyright)
+Copyright © 2017-2026 [Cloud Posse, LLC](https://cpco.io/copyright)
 
 
 <a href="https://cloudposse.com/readme/footer/link?utm_source=github&utm_medium=readme&utm_campaign=cloudposse/packages&utm_content=readme_footer_link"><img alt="README footer" src="https://cloudposse.com/readme/footer/img"/></a>
