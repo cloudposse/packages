@@ -37,7 +37,7 @@ ecspresso                 2.7.0      Ecspresso is a deployment tool for Amazon E
 emailcli                  1.1.0      Command line email sending client written in Go.
 envcli*                   0.7.1      A simple wrapper that allows you to run commands within ethereal docker containers
 fargate                   OBSOLETE   (OBSOLETE, use aws/copilot-cli instead) CLI for AWS Fargate
-fetch                     0.4.6      fetch makes it easy to download files, folders, and release assets from a specific public git commit, branch, or tag
+fetch                     0.4.8      fetch makes it easy to download files, folders, and release assets from a specific public git commit, branch, or tag
 figurine                  1.3.0      Print your name in style
 fzf                       0.23.1     A command-line fuzzy finder
 gh                        2.83.2     The GitHub CLI
