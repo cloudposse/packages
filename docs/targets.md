@@ -23,7 +23,7 @@ chamber                   3.1.4      CLI for managing secrets
 cilium-cli                0.19.0     CLI to install, manage & troubleshoot Kubernetes clusters running Cilium
 cli53                     0.8.25     Command line tool for Amazon Route 53
 cloud-nuke                0.46.0     Tool for wiping an aws account DANGER absolutely do not use in production
-cloudflared               2025.11.1  Argo Tunnel client
+cloudflared               2026.1.1   Argo Tunnel client
 cloudposse-atlantis       OBSOLETE   Terraform For Teams, enhanced by Cloud Posse
 codefresh                 0.89.3     Codefresh CLI
 conftest                  0.66.0     Test your configuration files using Open Policy Agent
