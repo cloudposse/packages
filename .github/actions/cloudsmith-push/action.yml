@@ -1,0 +1,104 @@
+# action.yml
+#
+# Minimal, self-contained replacement for `cloudsmith-io/action@v0.6.10`.
+#
+# That action's install step downloads whatever GitHub currently reports as
+# `assets[0]` of cloudsmith-cli's "latest" release and executes it directly.
+# That worked only because cloudsmith-cli used to publish a single raw binary;
+# it now publishes separate per-platform `.tar.gz` archives, so `assets[0]` is
+# no longer guaranteed to be the right platform (or even an executable), which
+# breaks the build with "Exec format error". Newer versions of the upstream
+# action (v0.6.14) switch to a Python-based install that requires
+# `actions/setup-python`, which does not support the Alpine/musl containers
+# used in this repo.
+#
+# This action installs a pinned, known-good cloudsmith-cli release directly
+# (the statically-linked musl build, which runs unmodified on both musl and
+# glibc systems) and invokes `cloudsmith push` itself.
+name: "Cloudsmith Push"
+description: "Install a pinned cloudsmith-cli and push a package to Cloudsmith"
+
+inputs:
+  api-key:
+    description: "The Cloudsmith API key."
+    required: true
+  format:
+    description: "The package format (alpine, deb, rpm, etc)."
+    required: true
+  owner:
+    description: "The Cloudsmith account/org name (namespace)."
+    required: true
+  repo:
+    description: "The Cloudsmith repository slug."
+    required: true
+  distro:
+    description: "The distribution (alpine/deb/rpm formats only)."
+    required: false
+    default: ""
+  release:
+    description: "The release/version (alpine/deb/rpm formats only)."
+    required: false
+    default: ""
+  republish:
+    description: "If 'true', overwrite an existing package with the same attributes."
+    required: false
+    default: "false"
+  file:
+    description: "Path to the package file to push."
+    required: true
+  no-wait-for-sync:
+    description: "If 'true', don't wait for package synchronization before exiting."
+    required: false
+    default: "false"
+
+runs:
+  using: "composite"
+  steps:
+    - name: Install cloudsmith CLI
+      shell: bash
+      env:
+        CLOUDSMITH_CLI_VERSION: "1.21.0"
+        RUNNER_ARCH: ${{ runner.arch }}
+      run: |
+        set -euo pipefail
+        arch="x86_64"
+        [[ "$RUNNER_ARCH" == "ARM64" ]] && arch="aarch64"
+        # The musl build is dynamically linked against musl (needs
+        # /lib/ld-musl-*.so.1, present only on Alpine) -- it is NOT portable
+        # to glibc systems. Pick the variant that matches the container.
+        libc="gnu"
+        [[ -f /etc/alpine-release ]] && libc="musl"
+        url="https://github.com/cloudsmith-io/cloudsmith-cli/releases/download/v${CLOUDSMITH_CLI_VERSION}/cloudsmith-${CLOUDSMITH_CLI_VERSION}-linux-${arch}-${libc}.tar.gz"
+        archive=/tmp/cloudsmith-cli.tar.gz
+        curl -fsSL "$url" -o "$archive"
+        sudo mkdir -p /opt/cloudsmith-cli
+        # The tarball is a PyInstaller onedir bundle: cloudsmith/cloudsmith
+        # plus a required sibling cloudsmith/_internal/ directory.
+        sudo tar -xzf "$archive" -C /opt/cloudsmith-cli
+        sudo ln -sf /opt/cloudsmith-cli/cloudsmith/cloudsmith /usr/local/bin/cloudsmith
+        rm -f "$archive"
+        cloudsmith --version
+
+    - name: Push artifact to package repository
+      shell: bash
+      env:
+        CLOUDSMITH_API_KEY: ${{ inputs.api-key }}
+        CS_FORMAT: ${{ inputs.format }}
+        CS_OWNER: ${{ inputs.owner }}
+        CS_REPO: ${{ inputs.repo }}
+        CS_DISTRO: ${{ inputs.distro }}
+        CS_RELEASE: ${{ inputs.release }}
+        CS_REPUBLISH: ${{ inputs.republish }}
+        CS_FILE: ${{ inputs.file }}
+        CS_NO_WAIT_FOR_SYNC: ${{ inputs.no-wait-for-sync }}
+      run: |
+        set -euo pipefail
+        context="${CS_OWNER}/${CS_REPO}"
+        if [[ -n "$CS_DISTRO" ]]; then
+          context+="/${CS_DISTRO}/${CS_RELEASE}"
+        fi
+        args=(push "$CS_FORMAT" "$context" "$CS_FILE")
+        [[ "$CS_REPUBLISH" == "true" ]] && args+=(--republish)
+        [[ "$CS_NO_WAIT_FOR_SYNC" == "true" ]] && args+=(--no-wait-for-sync)
+        echo "Running: cloudsmith ${args[*]}"
+        cloudsmith "${args[@]}"
