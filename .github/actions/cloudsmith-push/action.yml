@@ -63,9 +63,12 @@ runs:
         set -euo pipefail
         arch="x86_64"
         [[ "$RUNNER_ARCH" == "ARM64" ]] && arch="aarch64"
-        # Always use the musl build: it's statically linked so it runs
-        # unmodified on both musl (Alpine) and glibc (Debian/RedHat) containers.
-        url="https://github.com/cloudsmith-io/cloudsmith-cli/releases/download/v${CLOUDSMITH_CLI_VERSION}/cloudsmith-${CLOUDSMITH_CLI_VERSION}-linux-${arch}-musl.tar.gz"
+        # The musl build is dynamically linked against musl (needs
+        # /lib/ld-musl-*.so.1, present only on Alpine) -- it is NOT portable
+        # to glibc systems. Pick the variant that matches the container.
+        libc="gnu"
+        [[ -f /etc/alpine-release ]] && libc="musl"
+        url="https://github.com/cloudsmith-io/cloudsmith-cli/releases/download/v${CLOUDSMITH_CLI_VERSION}/cloudsmith-${CLOUDSMITH_CLI_VERSION}-linux-${arch}-${libc}.tar.gz"
         archive=/tmp/cloudsmith-cli.tar.gz
         curl -fsSL "$url" -o "$archive"
         sudo mkdir -p /opt/cloudsmith-cli
