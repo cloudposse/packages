@@ -69,7 +69,7 @@ jobs:
       arch-matrix:  ${{steps.info.outputs.arch_matrix}}
       apk-enabled: ${{ steps.info.outputs.package_enabled == 'true' && steps.info.outputs.apk_package_enabled == 'true' }}
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
 
     - name: Export package build matrix
       shell: bash
@@ -112,7 +112,7 @@ jobs:
     steps:
       # Checkout the packages repo so we can build the packages as a monorepo
       - name: "Checkout source code at current commit"
-        uses: actions/checkout@v4
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
 
       # Export the apk keys as files from secrets
       - name: "Export keys"
@@ -211,7 +211,7 @@ jobs:
     steps:
       # Checkout the packages repo so we can build the packages as a monorepo
       - name: "Checkout source code at current commit"
-        uses: actions/checkout@v4
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
 
       # Build the packages for the matrix version
       - name: "Build ${{matrix.package-type}} packages"
